@@ -571,6 +571,11 @@ angular
         alert("Please input language");
         return;
       }
+      if (typeof document.getElementById("myImage").src == "undefined" || document.getElementById("myImage").src == "") {
+        alert("Please select a image");
+        return;
+      }
+
 
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
@@ -675,14 +680,12 @@ angular
         function(imageData) {
           console.log("get picture success");
           var image = document.getElementById("myImage");
-          //image.src = "data:image/jpeg;base64," + imageData;
           image.src = imageData;
           $scope.selectedImageUrl = imageData;
           $scope.myImageData = imageData;
         },
         function(err) {
           console.log("get picture fail" + JSON.stringify(err));
-          // error
         }
       );
     };
