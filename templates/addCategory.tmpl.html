@@ -1,0 +1,41 @@
+<ion-view cache-view="false" view-title= "Add Category">
+        <ion-content>
+          <div ng-controller="AddCategoryCtrl" class="md-padding" ng-cloak> <div>
+              <md-card>
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">Add Category</span>
+                  </md-card-title-text>
+                </md-card-title>
+      
+                <md-card-content>
+                  <div layout="row">
+                    <md-input-container>
+                      <label>DisplayName:</label>
+                      <input type="text" ng-model="categoryName" required/>
+                    </md-input-container>
+      
+                    <md-input-container>
+                      <label>Input Language</label>
+                      <md-select ng-model="inputLanguage">
+                        <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
+                      </md-select>
+                    </md-input-container>
+                  </div>
+                  <div layout="row">
+                    <md-button ng-click='onTakeImageButtonClicked("camera")'>Camera Image</md-button>
+                    <md-button ng-click='onTakeImageButtonClicked("album")'>Album Image</md-button>
+                  </div>
+                  <div layout="row">
+                    <img id='myImage' />
+                  </div>
+                  <div layout="row">
+                    <md-button ng-click=onAddCategoryConfirmClicked()>Confirm. Add Category!</md-button>
+                  </div>
+                </md-card-content>
+              </md-card>
+      
+            </div>
+          </div>
+        </ion-content>
+      </ion-view>

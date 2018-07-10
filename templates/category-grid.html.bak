@@ -1,0 +1,14 @@
+
+
+<div id="grid-container" class="container-fluid" ng-controller="GridController" style="overflow:auto:height:auto">
+    <div class="row">
+        <div class="col-md-1 grid-column" as-sortable="sortableOptions" ng-model="category.Items" is-disabled="true" >
+            <div ng-repeat="item in category.Items" as-sortable-item style="float:left;width:32%">
+                <div as-sortable-item-handle>
+                    <img width="100%" src='http://sepc155.se.cuhk.edu.hk:8080/ECommuBook2-2.0.0-SNAPSHOT/image/{{item.ID}}.jpg' />
+                    {{item.DisplayName}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<ion-view cache-view="false" view-title="Delete Item">
+  <ion-content>
+
+
+    <div ng-controller="DeleteItemCtrl" class="md-padding" ng-cloak>
+      <div>
+
+
+        <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">Delete Item</span>
+              <!--<span class="md-subhead">Select your language preference</span>-->
+            </md-card-title-text>
+          </md-card-title>
+
+          <md-card-content>
+            <!--<h1 class="md-title">Select Category</h1>-->
+            <div layout="row">
+              <!--<div>-->
+              <md-input-container>
+
+                <label>Select Category:</label>
+                <md-select ng-model="selectedCategoryId" ng-change="onSelectedCategoryChanged()">
+                  <md-option ng-value="category.ID" ng-repeat="category in categories">{{category.DisplayName}}</md-option>
+                </md-select>
+              </md-input-container>
+
+              <md-input-container>
+                <label>Select Item:</label>
+                <md-select ng-model="selectedItemId" ng-change="onSelectedItemChanged()">
+                  <md-option ng-value="item.ID" ng-repeat="item in category.Items">{{item.DisplayName}}</md-option>
+                </md-select>
+              </md-input-container>
+            </div>
+            <div layout="row">
+              <img ng-if="selectedItemId" class='addDeleteImagePreview' style="width: 500px; height: 500px;" src="{{ImagePath}}/{{selectedItemId}}.jpg"
+              />
+            </div>
+
+            <div layout="row">
+              <md-button ng-click=onDeleteItemConfirmClicked()>Confirm. Delete Item!</md-button>
+            </div>
+          </md-card-content>
+        </md-card>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

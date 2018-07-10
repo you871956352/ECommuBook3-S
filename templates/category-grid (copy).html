@@ -1,0 +1,16 @@
+<ion-view view-title="Category-Grid">
+  <ion-content>
+    <div id="grid-container" class="container-fluid" ng-controller="GridController">
+        <div class="row">
+            <div class="col-md-1 grid-column" longTouch="true" containerPositioning="relative" as-sortable="sortableOptions" is-disabled="true" ng-model="category.Items">
+                <div ng-repeat="item in category.Items" as-sortable-item style="float:left;width:32%">
+                    <div as-sortable-item-handle>
+                        <img width="100%" src='http://sepc155.se.cuhk.edu.hk:8080/ECommuBook2-2.0.0-SNAPSHOT/image/{{item.ID}}.jpg' />
+                        {{item.DisplayName}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

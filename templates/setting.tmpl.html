@@ -1,0 +1,89 @@
+<ion-view view-title="Setting">
+  <ion-content>
+
+<div ng-controller="SettingCtrl" class="md-padding" ng-cloak>
+  <div>
+
+
+	<md-card>
+	    <md-card-title>
+	      <md-card-title-text>
+	        <span class="md-headline">Language</span>
+	        <span class="md-subhead">Select your language preference</span>
+	      </md-card-title-text>
+	    </md-card-title>
+
+	    <md-card-content>
+
+		    <h1 class="md-title">Display Language</h1>
+		    <div layout="row">
+		      <md-input-container>
+		        <md-select ng-model="selectedDisplayLanguage" ng-change="onSelectedDisplayLanguageChanged()">
+		            <md-option ng-value="displayLanguage.value" ng-repeat="displayLanguage in displayLanguageList">{{displayLanguage.name}}</md-option>
+		        </md-select>
+		      </md-input-container>
+		    </div>
+
+		    <h1 class="md-title">Speech Language</h1>
+		    <div layout="row">
+		      <md-input-container>
+		        <md-select ng-model="selectedSpeechLanguage" ng-change="onSelectedSpeechLanguageChanged()">
+		            <md-option ng-value="speechLanguage.value" ng-repeat="speechLanguage in speechLanguageListOption">{{speechLanguage.name}}</md-option>
+		        </md-select>
+		      </md-input-container>
+		    </div>
+
+
+		    <h1 class="md-title">Speaker Gender</h1>
+		    <div layout="row">
+		      <md-input-container>
+		        <md-select ng-model="selectedSpeechGender" ng-change="onSelectedSpeechGenderChanged()">
+		            <md-option ng-value="speechGender.value" ng-repeat="speechGender in speechGenderOptions">{{speechGender.name}}</md-option>
+		        </md-select>
+		      </md-input-container>
+		    </div>
+
+			<md-button ng-click=onConfirmLanguageButtonClicked()>Set Language</md-button>
+
+	    </md-card-content>
+	</md-card>
+
+	<md-card>
+	    <md-card-title>
+	      <md-card-title-text>
+	        <span class="md-headline">Appearance</span>
+	        <span class="md-subhead">Adjust the appearance</span>
+	      </md-card-title-text>
+	    </md-card-title>
+
+	    <md-card-content>
+	    	<h1 class="md-title">Normal Item Font Size</h1>
+	    	<md-slider ng-model="itemNormalFontSize" min="12" max="108" ng-change="onItemNormalFontSizeChanged()">
+			</md-slider>
+			<span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Example</span>
+
+			<md-button ng-click=onConfirmAppearanceButtonClicked()>Confirm</md-button>
+	    </md-card-content>
+	</md-card>
+
+	<md-card>
+	    <md-card-title>
+	      <md-card-title-text>
+	        <span class="md-headline">Reset Application</span>
+	        <span class="md-subhead">Reset the application</span>
+	      </md-card-title-text>
+	    </md-card-title>
+
+	    <md-card-content>
+	    <h1 class="md-title">Confirm reset userprofile? All your personal setting will be reset.</h1>
+
+			<md-button ng-click=onConfirmResetUserprofileButtonClicked()>Confirm reset userprofile</md-button>
+	    </md-card-content>
+	</md-card>
+
+
+  </div>
+</div>
+
+  </ion-content>
+</ion-view>
