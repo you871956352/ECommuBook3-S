@@ -320,8 +320,6 @@ LoadingDialog.Controller = function($scope, $mdDialog, $ionicSideMenuDelegate) {
 
   console.log(GlobalVariable.DownloadProgress.GetText());
   var loop = setInterval(function() {
-
-
     $scope.downloaded = GlobalVariable.DownloadProgress.GetDownloaded();
     $scope.total = GlobalVariable.DownloadProgress.GetTotal();
     if($scope.total > 0)
@@ -329,8 +327,6 @@ LoadingDialog.Controller = function($scope, $mdDialog, $ionicSideMenuDelegate) {
     else
       $scope.precentage = 0;
     $scope.message = "Now Loading, please wait";
-    
-    //console.log(GlobalVariable.DownloadProgress.GetText());
 
     if (($scope.downloaded == $scope.total && $scope.total > 0) || GlobalVariable.DownloadProgress.IsNoDownload == 1) {
       clearInterval(loop);

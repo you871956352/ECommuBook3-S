@@ -17,7 +17,7 @@
       
                     <md-input-container>
                       <label>Input Language</label>
-                      <md-select ng-model="inputLanguage">
+                      <md-select ng-model="inputLanguage" required>
                         <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
                       </md-select>
                     </md-input-container>
@@ -27,7 +27,7 @@
                     <md-button ng-click='onTakeImageButtonClicked("album")'>Album Image</md-button>
                   </div>
                   <div layout="row">
-                    <img id='myImage' />
+                    <img id='myImage' ng-model= "imageUploaded"/>
                   </div>
                   <div layout="row">
                     <md-button ng-click=onAddCategoryConfirmClicked()>Confirm. Add Category!</md-button>

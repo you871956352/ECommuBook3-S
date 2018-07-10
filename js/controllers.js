@@ -576,8 +576,6 @@ angular
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
 
       console.log("new guid:" + $scope.uuid);
-
-
       console.log("displayname:" + displayName);
       console.log("inputLanguage:" + inputLanguage);
 
