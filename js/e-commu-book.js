@@ -275,28 +275,23 @@ LoadingDialog.showLoadingPopup = function($mdDialog, $ionicSideMenuDelegate) {
 LoadingDialog.hideLoadingPopup = function($mdDialog) {
   $mdDialog.hide();
 };
-LoadingDialog.Controller = function($scope, $mdDialog, $ionicSideMenuDelegate) {
-  $scope.downloaded = -1;
-  $scope.total = 0;
-  $scope.hide = function() {
-    $mdDialog.hide();
-  };
-  $scope.cancel = function() {
-    $mdDialog.cancel();
-  };
-  $scope.answer = function(answer) {
-    $mdDialog.hide(answer);
-  };
+LoadingDialog.Controller = function ($scope, $mdDialog, $ionicSideMenuDelegate) {
+  $scope.downloaded = NaN;
+  $scope.total = NaN;
+  $scope.hide = function () { $mdDialog.hide(); };
+  $scope.cancel = function () { $mdDialog.cancel(); };
+  $scope.answer = function (answer) { $mdDialog.hide(answer); };
 
-  console.log(GlobalVariable.DownloadProgress.GetText());
   var loop = setInterval(function() {
     $scope.downloaded = GlobalVariable.DownloadProgress.GetDownloaded();
     $scope.total = GlobalVariable.DownloadProgress.GetTotal();
-    if($scope.total > 0)
+    if ($scope.total > 0) {
       $scope.precentage = Math.round(100.0 * $scope.downloaded / $scope.total);
-    else
+    }
+    else {
       $scope.precentage = 0;
-    $scope.message = "Now Loading, please wait";
+    }
+    $scope.message = "Loading, Please wait";
 
     if (($scope.downloaded == $scope.total && $scope.total > 0) || GlobalVariable.DownloadProgress.IsNoDownload == 1) {
       clearInterval(loop);
@@ -314,18 +309,5 @@ function guid() {
       .toString(16)
       .substring(1);
   }
-  return (
-    s4() +
-    s4() +
-    "-" +
-    s4() +
-    "-" +
-    s4() +
-    "-" +
-    s4() +
-    "-" +
-    s4() +
-    s4() +
-    s4()
-  );
+  return ( s4() +  s4() +  "-" + s4() +  "-" +  s4() +  "-" + s4() +  "-" +  s4() +  s4() +  s4() );
 }
