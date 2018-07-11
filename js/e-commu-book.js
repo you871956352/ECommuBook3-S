@@ -1,11 +1,7 @@
 function ServerPathVariable() {}
 ServerPathVariable.hostname = "http://sepc155.se.cuhk.edu.hk:8080/";
 ServerPathVariable.path = "ECommuBook2-2.0.3-SNAPSHOT/";
-ServerPathVariable.GetBingAudioPath = function(
-  speechLanguageCode,
-  speechGender,
-  text
-) {
+ServerPathVariable.GetBingAudioPath = function(speechLanguageCode,speechGender,text) {
   text = text.replace("/", " ");
   return (
     ServerPathVariable.hostname +
@@ -19,10 +15,7 @@ ServerPathVariable.GetBingAudioPath = function(
     ".mp3"
   );
 };
-ServerPathVariable.GetBingAudioPathWithUserProfile = function(
-  userProfile,
-  text
-) {
+ServerPathVariable.GetBingAudioPathWithUserProfile = function(userProfile,text) {
   return (
     ServerPathVariable.hostname +
     ServerPathVariable.path +
@@ -91,20 +84,19 @@ ServerPathVariable.getTranslationsPath = function(sourceLanguage, sourceText) {
 
 function GlobalVariable() {}
 GlobalVariable.DownloadProgress = {};
-
 GlobalVariable.DownloadProgress.Reset = function() {
   GlobalVariable.DownloadProgress.Downloaded = 0;
   GlobalVariable.DownloadProgress.Total = 0;
   GlobalVariable.DownloadProgress.IsNoDownload = 0;
 };
 GlobalVariable.DownloadProgress.AddDownloaded = function() {
-  ++GlobalVariable.DownloadProgress.Downloaded;
+  GlobalVariable.DownloadProgress.Downloade++;
 };
 GlobalVariable.DownloadProgress.AddTotal = function() {
-  ++GlobalVariable.DownloadProgress.Total;
+  GlobalVariable.DownloadProgress.Total++;
 };
 GlobalVariable.DownloadProgress.ReduceTotal = function() {
-  --GlobalVariable.DownloadProgress.Total;
+  GlobalVariable.DownloadProgress.Total--;
 };
 GlobalVariable.DownloadProgress.GetText = function() {
   return [
@@ -112,22 +104,18 @@ GlobalVariable.DownloadProgress.GetText = function() {
     GlobalVariable.DownloadProgress.Total
   ];
 };
-
 GlobalVariable.DownloadProgress.GetDownloaded = function() {
   return GlobalVariable.DownloadProgress.Downloaded;
 };
-
 GlobalVariable.DownloadProgress.GetTotal = function() {
   return GlobalVariable.DownloadProgress.Total;
 };
-
 GlobalVariable.LocalCacheDirectory = function() {
   return window.cordova.file.dataDirectory;
 };
 
 GlobalVariable.Appearance = {};
 GlobalVariable.Appearance.itemNormalFontSize = 24;
-
 GlobalVariable.LanguageList = [
   { name: "粵語", value: "yue" },
   { name: "简体中文", value: "zh-CHS" },
@@ -154,24 +142,19 @@ GlobalCacheVariable.FileCheck.Reset = function() {
   GlobalCacheVariable.FileCheck.TotalImageFile = 0;
 };
 
+
 function updateDisplayName(userProfile) {
   targetLanguage = userProfile.DISPLAY_LANGUAGE;
-  //console.log('target language:' + targetLanguage);
   for (i = 0; i < userProfile.Categories.length; i++) {
-    //console.log('i:' + i);
     category = userProfile.Categories[i];
     category.DisplayName = getObjectTranslation(category, targetLanguage);
-    //console.log('category.DisplayName' + category.DisplayName);
     for (j = 0; j < category.Items.length; j++) {
       item = category.Items[j];
       item.DisplayName = getObjectTranslation(item, targetLanguage);
-      //console.log(item.DisplayName);
-      //console.log('i,j:' + i + ',' + j);
     }
   }
   return userProfile;
 }
-
 function getObjectTranslation(itemObject, targetLanguage) {
   translationText = "";
   for (var k = 0; k < itemObject.DisplayMultipleLanguage.length; k++) {
@@ -183,7 +166,6 @@ function getObjectTranslation(itemObject, targetLanguage) {
   }
   return translationText;
 }
-
 function getItemObjectByItemId(userProfile, itemId) {
   for (i = 0; i < userProfile.Categories.length; i++) {
     category = userProfile.Categories[i];
@@ -196,7 +178,6 @@ function getItemObjectByItemId(userProfile, itemId) {
   }
   return null;
 }
-
 function getObjectById(userProfile, id) {
   for (i = 0; i < userProfile.Categories.length; i++) {
     category = userProfile.Categories[i];
@@ -212,7 +193,6 @@ function getObjectById(userProfile, id) {
   }
   return null;
 }
-
 function getCategoryIndexById(userProfile, categoryid) {
   for(var i = 0; i < userProfile.Categories.length; i++) {
     if(userProfile.Categories[i].ID == categoryid) {
@@ -221,7 +201,6 @@ function getCategoryIndexById(userProfile, categoryid) {
   }
   return -1;
 }
-
 function getCategoryById(userProfile, categoryid) {
   for(var i = 0; i < userProfile.Categories.length; i++) {
     if(userProfile.Categories[i].ID == categoryid) {
@@ -230,7 +209,6 @@ function getCategoryById(userProfile, categoryid) {
   }
   return null;
 }
-
 function getItemIndexByItemId(category, itemId) {
   for(var i = 0; i< category.Items.length; i++) {
     if(category.Items[i].ID == itemId) {
@@ -239,19 +217,18 @@ function getItemIndexByItemId(category, itemId) {
   }
   return -1;
 }
-
 function normalizeDisplayName(text) {
   return text
     .replace("/", " ")
     .replace(".", " ")
     .replace(",", " ");
 }
-
 function playAudio(src) {
   console.log("play audio:" + src);
   var media = new Media(encodeURI(src), null, null, null);
   media.play();
 }
+
 
 function MediaPlayer() {}
 MediaPlayer.media = {};
@@ -276,44 +253,37 @@ function playSpeechAudio($cordovaMedia, src) {
   media.play();
 }
 
+
 function LoadingDialog() {}
 LoadingDialog.showLoadingPopup = function($mdDialog, $ionicSideMenuDelegate) {
-  $mdDialog
-    .show({
+  $mdDialog.show({
       controller: LoadingDialog.Controller,
       templateUrl: "templates/popup-loading.tmpl.html",
       parent: angular.element(document.body),
-      //targetEvent: ev,
       clickOutsideToClose: false,
-      //scope : targetScope,
       fullscreen: false // Only for -xs, -sm breakpoints.
     })
     .then(
       function(answer) {
-        //$scope.status = 'You said the information was "' + answer + '".';
+
       },
       function() {
         //$scope.status = 'You cancelled the dialog.';
       }
     );
 };
-
 LoadingDialog.hideLoadingPopup = function($mdDialog) {
   $mdDialog.hide();
 };
-
 LoadingDialog.Controller = function($scope, $mdDialog, $ionicSideMenuDelegate) {
   $scope.downloaded = -1;
   $scope.total = 0;
-
   $scope.hide = function() {
     $mdDialog.hide();
   };
-
   $scope.cancel = function() {
     $mdDialog.cancel();
   };
-
   $scope.answer = function(answer) {
     $mdDialog.hide(answer);
   };
