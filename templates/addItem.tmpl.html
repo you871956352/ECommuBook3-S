@@ -34,7 +34,7 @@
 
 			      <md-input-container>
 			      	<label>Input Language</label>
-			        <md-select ng-model="inputLanguage">
+			        <md-select ng-model="inputLanguage" required>
 			            <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
 			        </md-select>
 			      </md-input-container>

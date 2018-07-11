@@ -773,15 +773,24 @@ angular
       console.log("displayname:" + displayName);
       console.log("selectedCategoryId:" + selectedCategoryId);
       console.log("inputLanguage:" + inputLanguage);
-
-      if (
-        typeof displayName == "undefined" ||
-        typeof selectedCategoryId == "undefined" ||
-        typeof inputLanguage == "undefined"
-      ) {
-        alert("Please input all the information");
+      if (typeof selectedCategoryId == "undefined" || selectedCategoryId == "") {
+        alert("Please select a category");
         return;
       }
+      if (typeof displayName == "undefined" || displayName == "") {
+        alert("Please input display name!");
+        return;
+      }
+      if (typeof inputLanguage == "undefined" || inputLanguage == "") {
+        alert("Please input language");
+        return;
+      }
+      if (typeof document.getElementById("myImage").src == "undefined" || document.getElementById("myImage").src == "") {
+        alert("Please select a image");
+        return;
+      }
+
+
 
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
