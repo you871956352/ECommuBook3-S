@@ -46,7 +46,6 @@ angular
       $scope.data = $localStorage.message;
       return $scope.data;
     };
-    // when they are recreated or on app start, instead of every page change.
   })
 
   .controller("CategoryCtrl", function( $rootScope,$scope,$stateParams,$mdDialog, $cordovaMedia, UserProfileService) {
