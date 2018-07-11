@@ -4,17 +4,7 @@
 
 angular
   .module("starter.controllers", [])
-  .controller("AppCtrl", function(
-    $rootScope,
-    $scope,
-    $ionicModal,
-    $timeout,
-    $localStorage,
-    $http,
-    $cordovaMedia,
-    UserProfileService,
-    LocalCacheService
-  ) {
+  .controller("AppCtrl", function ($rootScope, $scope, $ionicModal, $timeout, $localStorage,$http,$cordovaMedia, UserProfileService, LocalCacheService) {
     $scope.$on("$ionicView.enter", function(e) {
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
       $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
@@ -24,24 +14,14 @@ angular
       if(typeof $rootScope.isShowDisplayName == 'undefined') {
         $rootScope.isShowDisplayName = { checked: true };
       }
-
-      console.log(
-        "Language Selected3:" +
-          userProfile.DISPLAY_LANGUAGE +
-          "/" +
-          userProfile.SPEECH_LANGUAGE_CODE +
-          "/" +
-          userProfile.SPEECH_GENDER
-      );
+      console.log( "Language Selected3:" + userProfile.DISPLAY_LANGUAGE +  "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
       $scope.userProfile = userProfile;
       console.log(userProfile);
     });
-
     $scope.onShowDisplayNameChanged = function() {
       console.log('onShowDisplayNameChanged');
       console.log('$rootScope.isShowDisplayName:' + $rootScope.isShowDisplayName.checked);
     }
-
     $scope.onCategoryClicked = function (categoryId) {
       var userProfile = UserProfileService.getLatest();
       var targetCategory = getObjectById(userProfile, categoryId);
@@ -59,11 +39,9 @@ angular
       //alert(src);
       MediaPlayer.play($cordovaMedia, src);
     };
-
     $scope.save = function() {
       $localStorage.message = "this is my message";
     };
-
     $scope.load = function() {
       $scope.data = $localStorage.message;
       return $scope.data;
@@ -120,15 +98,8 @@ angular
       });
     };
   })
-  .controller("CategoryCtrl", function(
-    $rootScope,
-    $scope,
-    $stateParams,
-    $mdDialog,
-    $cordovaMedia,
-    UserProfileService
-  ) {
-    //$scope.ImagePath = 'file:///storage/emulated/0/Android/data/com.ionicframework.ecommubook3587471/cache/images/';
+
+  .controller("CategoryCtrl", function( $rootScope,$scope,$stateParams,$mdDialog, $cordovaMedia, UserProfileService) {
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
     var userProfile = UserProfileService.getLatest();
@@ -138,26 +109,20 @@ angular
     for (var i = 0; i < userProfile.Categories.length; i++) {
       if (userProfile.Categories[i].ID == $stateParams.categoryId) {
         $scope.category = userProfile.Categories[i];
-
         for (i = 0; i < $scope.category.DisplayMultipleLanguage.length; i++) {
           translation = $scope.category.DisplayMultipleLanguage[i];
           if (translation.Language == userProfile.DISPLAY_LANGUAGE) {
             $scope.categoryDisplayName = translation.Text;
           }
         }
-
         break;
       }
     }
-
     $scope.width = 1;
-
     console.log('isShowDisplayName.checked:' + $rootScope.isShowDisplayName.checked);
-
     $scope.onItemClicked = function(ev, itemId) {
       $scope.showEnlargeItemPopup(ev, itemId);
     };
-
     $scope.showAlert = function(ev, itemId) {
       // Appending dialog to document.body to cover sidenav in docs app
       // Modal dialogs should fully cover application
@@ -240,64 +205,24 @@ angular
         );
     };
 
-    function DialogController(
-      $scope,
-      $mdDialog,
-      $cordovaMedia,
-      $cordovaFileTransfer
-    ) {
+    function DialogController( $scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer) {
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
-
       $scope.hide = function() {
         $mdDialog.hide();
       };
-
       $scope.cancel = function() {
         $mdDialog.cancel();
       };
-
       $scope.answer = function(answer) {
         $mdDialog.hide(answer);
       };
 
       $scope.onItemClicked = function(ev) {
-        console.log("item clicked");
         console.log("item name:" + $scope.selectedItemName);
-        //var src = 'http://sepc155.se.cuhk.edu.hk:8080/ECommuBook2-2.0.0-SNAPSHOT/audio/bing/ja-JP/female/' + $scope.selectedItemName + '.mp3';
-        var src =
-          $scope.AudioDirectory +
-          normalizeDisplayName($scope.selectedItemName) +
-          ".mp3";
-        //playAudio(src);
+        var src = $scope.AudioDirectory +  normalizeDisplayName($scope.selectedItemName) + ".mp3";
         MediaPlayer.play($cordovaMedia, src);
-        //$scope.media = $cordovaMedia.newMedia(encodeURI(src), null, null, null);
-        //$scope.media.play();
       };
     }
-    /*
-    $scope.sortableOptions = {
-        containment: '#grid-container',
-        accept: function(sourceItemHandleScope, destSortableScope) {
-            return false;
-        }, //override to determine drag is allowed or not. default is true.
-        itemMoved: function(event) {
-            console.log('itemMoved:' + JSON.stringify( $scope.category));
-        },
-        orderChanged: function(event) {
-            console.log('orderChanged:' + JSON.stringify( $scope.category));
-        }
-    };
-    */
-
-    /*
-    $scope.onDropComplete = function (index, obj, evt) {
-        console.log(index + '/' + obj + '/' + evt);
-        var otherObj = $scope.draggableObjects[index];
-        var otherIndex = $scope.draggableObjects.indexOf(obj);
-        $scope.draggableObjects[index] = obj;
-        $scope.draggableObjects[otherIndex] = otherObj;
-    };
-    */
   })
   .controller("SettingCtrl", function(
     $scope,
@@ -545,19 +470,16 @@ angular
     $scope.uuid = guid();
     $scope.inputLanguage = "";
     $scope.selectedImageUrl = "";
-    
 
     $scope.inputLanguageList = GlobalVariable.LanguageList;
 
-    $scope.onAddCategoryConfirmClicked = function() {
+    $scope.onAddCategoryConfirmClicked = function () {
+      var displayName = $scope.categoryName;
+      var inputLanguage = $scope.inputLanguage;
       if($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
       }
-
-      var displayName = $scope.categoryName;
-      var inputLanguage = $scope.inputLanguage;
-
       if (typeof displayName == "undefined" || displayName == "") {
         alert("Please input category name!");
         return;
@@ -570,7 +492,6 @@ angular
         alert("Please select a image");
         return;
       }
-
 
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
