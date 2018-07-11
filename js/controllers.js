@@ -366,9 +366,6 @@ angular
 
     $scope.onConfirmAppearanceButtonClicked = function() {
       setTimeout(function() {
-        //$state.go('setting-ok');
-        //$state.go($state.current, {}, {reload: true});
-        //$state.go("app.setting-ok",{}, {reload: true});
         $state.go("app.setting", {}, { reload: true });
         $ionicSideMenuDelegate.toggleLeft();
       }, 500);

@@ -102,15 +102,6 @@ angular
             controller: "WelcomeCtrl"
           }
         }
-      })
-      .state("app.setting-ok", {
-        url: "/setting-ok",
-        views: {
-          menuContent: {
-            templateUrl: "templates/setting-ok.tmpl.html",
-            controller: "SettingOKCtrl"
-          }
-        }
       });
     // if none of the above states are matched, use this as the fallback
     // $urlRouterProvider.otherwise('/app/browse');
