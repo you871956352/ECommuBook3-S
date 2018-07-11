@@ -47,7 +47,6 @@ angular
       return $scope.data;
     };
   })
-
   .controller("CategoryCtrl", function( $rootScope,$scope,$stateParams,$mdDialog, $cordovaMedia, UserProfileService) {
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
@@ -893,15 +892,4 @@ angular
       $scope.draggableObjects[index] = obj;
       $scope.draggableObjects[otherIndex] = otherObj;
     };
-  })
-  .controller("PlaylistsCtrl", function($scope) {
-    $scope.playlists = [
-      { title: "Reggae", id: 1 },
-      { title: "Chill", id: 2 },
-      { title: "Dubstep", id: 3 },
-      { title: "Indie", id: 4 },
-      { title: "Rap", id: 5 },
-      { title: "Cowbell", id: 6 }
-    ];
-  })
-  .controller("PlaylistCtrl", function($scope, $stateParams) {});
+  });
