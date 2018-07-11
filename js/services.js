@@ -112,16 +112,8 @@ myModule.factory("UserProfileService", function($http, $localStorage) {
   };
 });
 
-myModule.factory("LocalCacheService", function(
-  $ionicPlatform,
-  $cordovaFile,
-  $cordovaFileTransfer
-) {
+myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cordovaFileTransfer) {
   return {
-    test: function() {
-      return "test";
-    },
-
     downloadImageToLocal: function(targetDirectory, targetName, itemId) {
       var self = this;
       var a = $cordovaFile.checkFile(targetDirectory, targetName).then(
@@ -158,13 +150,7 @@ myModule.factory("LocalCacheService", function(
         }
       );
     },
-    downloadAudioToLocal: function(
-      targetDirectory,
-      speechProvider,
-      speechLanguageCode,
-      speechGender,
-      displayText
-    ) {
+    downloadAudioToLocal: function(targetDirectory,speechProvider, speechLanguageCode,speechGender,displayText) {
       var self = this;
       displayText = normalizeDisplayName(displayText);
       var targetName =
@@ -221,7 +207,6 @@ myModule.factory("LocalCacheService", function(
         }
       );
     },
-
     prepareCache: function(userProfile) {
       console.log("Start prepare cache");
       var self = this;

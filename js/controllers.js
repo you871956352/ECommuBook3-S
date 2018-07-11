@@ -42,26 +42,21 @@ angular
       console.log('$rootScope.isShowDisplayName:' + $rootScope.isShowDisplayName.checked);
     }
 
-    $scope.onCategoryClicked = function(categoryId) {
+    $scope.onCategoryClicked = function (categoryId) {
       var userProfile = UserProfileService.getLatest();
-      targetCategory = getObjectById(userProfile, categoryId);
+      var targetCategory = getObjectById(userProfile, categoryId);
+      var targetDisplayName = targetCategory.DisplayName;
+      //Bug: new added category has no display multiple language
       for (i = 0; i < targetCategory.DisplayMultipleLanguage.length; i++) {
-        translation = targetCategory.DisplayMultipleLanguage[i];
+        var translation = targetCategory.DisplayMultipleLanguage[i];
         if (translation.Language == userProfile.DISPLAY_LANGUAGE) {
           targetDisplayName = translation.Text;
         }
       }
-      //targetDisplayName = targetCategory.DisplayName;
-      var AudioDirectory =
-        GlobalVariable.LocalCacheDirectory() +
-        "audio/bing/" +
-        userProfile.SPEECH_LANGUAGE_CODE +
-        "/" +
-        userProfile.SPEECH_GENDER +
-        "/";
-      var src =
-        AudioDirectory + normalizeDisplayName(targetDisplayName) + ".mp3";
-      //playAudio(src);
+      var AudioDirectory = GlobalVariable.LocalCacheDirectory() + "audio/bing/" +
+        userProfile.SPEECH_LANGUAGE_CODE +  "/" + userProfile.SPEECH_GENDER + "/";
+      var src = AudioDirectory + normalizeDisplayName(targetDisplayName) + ".mp3";
+      //alert(src);
       MediaPlayer.play($cordovaMedia, src);
     };
 
@@ -980,7 +975,6 @@ angular
     UserProfileService,
     LocalCacheService
   ) {
-
   })
   .controller("GridController", [
     "$scope",

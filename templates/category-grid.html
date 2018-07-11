@@ -3,15 +3,10 @@
     <div id="grid-container" class="container-fluid" ng-controller="GridController" ng-cloak>
       <div class="row">
         <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="category.Items">
+
           <div ng-repeat="item in category.Items" style="float:left;width:32%">
             <div ng-click="onItemClicked($event, item.ID);" style="text-align:center;border:2px blue dashed;">
-              <!--
-                            <img width="100%" src='file:///data/user/0/com.ionicframework.ecommubook3587471/files//test/testImage.png' />
-                            -->
-              <!--<img width="100%" src='http://sepc155.se.cuhk.edu.hk:8080/ECommuBook2-2.0.0-SNAPSHOT/image/{{item.ID}}.jpg' />-->
               <img width="100%" src='{{ImagePath}}/{{item.ID}}.jpg' />
-
-
               <div class='itemNormalContainer' style="line-height: {{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">
                 <!--<span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;">{{item.DisplayName}}</span>-->
                 <div ng-repeat="translation in item.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
