@@ -90,7 +90,7 @@ GlobalVariable.DownloadProgress.Reset = function() {
   GlobalVariable.DownloadProgress.IsNoDownload = 0;
 };
 GlobalVariable.DownloadProgress.AddDownloaded = function() {
-  GlobalVariable.DownloadProgress.Downloade++;
+  GlobalVariable.DownloadProgress.Downloaded++;
 };
 GlobalVariable.DownloadProgress.AddTotal = function() {
   GlobalVariable.DownloadProgress.Total++;
