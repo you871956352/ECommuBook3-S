@@ -24,7 +24,6 @@ angular
       if(typeof $rootScope.isShowDisplayName == 'undefined') {
         $rootScope.isShowDisplayName = { checked: true };
       }
-
       console.log(
         "Language Selected3:" +
           userProfile.DISPLAY_LANGUAGE +
@@ -68,57 +67,6 @@ angular
       $scope.data = $localStorage.message;
       return $scope.data;
     };
-
-    // With the new view caching in Ionic, Controllers are only called
-    // when they are recreated or on app start, instead of every page change.
-    // To listen for when this page is active (for example, to refresh data),
-    // listen for the $ionicView.enter event:
-    //$scope.$on('$ionicView.enter', function(e) {
-    //});
-
-    // Form data for the login modal
-    $scope.loginData = {};
-
-    // Create the login modal that we will use later
-    $ionicModal
-      .fromTemplateUrl("templates/login.html", {
-        scope: $scope
-      })
-      .then(function(modal) {
-        $scope.modal = modal;
-      });
-
-    // Triggered in the login modal to close it
-    $scope.closeLogin = function() {
-      $scope.modal.hide();
-    };
-
-    // Open the login modal
-    $scope.login = function() {
-      $scope.modal.show();
-    };
-
-    // Perform the login action when the user submits the login form
-    $scope.doLogin = function() {
-      console.log("Doing login", $scope.loginData);
-
-      // Simulate a login delay. Remove this and replace with your login
-      // code if using a login system
-      $timeout(function() {
-        $scope.closeLogin();
-      }, 1000);
-    };
-  })
-  .controller("PopupCtrl", function($scope, $mdDialog, ngDialog) {
-    $scope.clickToOpen = function() {
-      ngDialog.open({
-        showClose: true,
-        height: "100%",
-        width: "80%",
-        template: "templates/browse.html"
-        //className: 'ngdialog-theme-default'
-      });
-    };
   })
   .controller("CategoryCtrl", function(
     $rootScope,
@@ -149,9 +97,7 @@ angular
         break;
       }
     }
-
     $scope.width = 1;
-
     console.log('isShowDisplayName.checked:' + $rootScope.isShowDisplayName.checked);
 
     $scope.onItemClicked = function(ev, itemId) {
@@ -239,7 +185,6 @@ angular
           }
         );
     };
-
     function DialogController(
       $scope,
       $mdDialog,
@@ -274,30 +219,6 @@ angular
         //$scope.media.play();
       };
     }
-    /*
-    $scope.sortableOptions = {
-        containment: '#grid-container',
-        accept: function(sourceItemHandleScope, destSortableScope) {
-            return false;
-        }, //override to determine drag is allowed or not. default is true.
-        itemMoved: function(event) {
-            console.log('itemMoved:' + JSON.stringify( $scope.category));
-        },
-        orderChanged: function(event) {
-            console.log('orderChanged:' + JSON.stringify( $scope.category));
-        }
-    };
-    */
-
-    /*
-    $scope.onDropComplete = function (index, obj, evt) {
-        console.log(index + '/' + obj + '/' + evt);
-        var otherObj = $scope.draggableObjects[index];
-        var otherIndex = $scope.draggableObjects.indexOf(obj);
-        $scope.draggableObjects[index] = obj;
-        $scope.draggableObjects[otherIndex] = otherObj;
-    };
-    */
   })
   .controller("SettingCtrl", function(
     $scope,
@@ -545,7 +466,7 @@ angular
     $scope.uuid = guid();
     $scope.inputLanguage = "";
     $scope.selectedImageUrl = "";
-    
+
 
     $scope.inputLanguageList = GlobalVariable.LanguageList;
 

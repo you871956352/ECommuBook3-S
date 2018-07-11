@@ -121,15 +121,6 @@ angular
           }
         }
       })
-      .state("app.popup", {
-        url: "/popup",
-        views: {
-          menuContent: {
-            templateUrl: "templates/popup.html",
-            controller: "PopupCtrl"
-          }
-        }
-      })
       .state("app.search", {
         url: "/search",
         views: {
