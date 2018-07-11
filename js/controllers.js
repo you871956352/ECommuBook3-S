@@ -586,10 +586,7 @@ angular
       newCategory.DisplayName = displayName;
       newCategory.DisplayMultipleLanguage = [];
 
-      var url = ServerPathVariable.getTranslationsPath(
-        inputLanguage,
-        newCategory.DisplayName
-      );
+      var url = ServerPathVariable.getTranslationsPath(inputLanguage,newCategory.DisplayName );
       $http({
         url: url,
         method: "GET"

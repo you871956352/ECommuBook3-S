@@ -1,6 +1,6 @@
 function ServerPathVariable() {}
 ServerPathVariable.hostname = "http://sepc155.se.cuhk.edu.hk:8080/";
-ServerPathVariable.path = "ECommuBook2-2.0.1-SNAPSHOT/";
+ServerPathVariable.path = "ECommuBook2-2.0.3-SNAPSHOT/";
 ServerPathVariable.GetBingAudioPath = function(
   speechLanguageCode,
   speechGender,
