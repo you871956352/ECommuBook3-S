@@ -22,8 +22,6 @@ angular
     "ngMaterial",
     "ngDialog"
   ])
-  //  'ngDraggable',
-
   .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
       if (window.StatusBar) {
@@ -31,7 +29,6 @@ angular
       }
     });
   })
-
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state("app", {

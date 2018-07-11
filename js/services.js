@@ -179,7 +179,6 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
       GlobalCacheVariable.FileCheck.Reset();
       // image cache
       var idList = [];
-
       for (var i = 0; i < userProfile.Categories.length; i++) {
         category = userProfile.Categories[i];
         idList.push(category.ID);

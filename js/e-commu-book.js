@@ -113,7 +113,6 @@ GlobalVariable.DownloadProgress.GetTotal = function() {
 GlobalVariable.LocalCacheDirectory = function() {
   return window.cordova.file.dataDirectory;
 };
-
 GlobalVariable.Appearance = {};
 GlobalVariable.Appearance.itemNormalFontSize = 24;
 GlobalVariable.LanguageList = [
@@ -141,7 +140,6 @@ GlobalCacheVariable.FileCheck.Reset = function() {
   GlobalCacheVariable.FileCheck.TotalAudioFile = 0;
   GlobalCacheVariable.FileCheck.TotalImageFile = 0;
 };
-
 
 function updateDisplayName(userProfile) {
   targetLanguage = userProfile.DISPLAY_LANGUAGE;
@@ -252,8 +250,6 @@ function playSpeechAudio($cordovaMedia, src) {
   media = $cordovaMedia.newMedia(src);
   media.play();
 }
-
-
 function LoadingDialog() {}
 LoadingDialog.showLoadingPopup = function($mdDialog, $ionicSideMenuDelegate) {
   $mdDialog.show({
