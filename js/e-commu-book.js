@@ -142,7 +142,7 @@ GlobalCacheVariable.FileCheck.Reset = function() {
 };
 
 function updateDisplayName(userProfile) {
-  targetLanguage = userProfile.DISPLAY_LANGUAGE;
+  var category, item, targetLanguage = userProfile.DISPLAY_LANGUAGE;
   for (i = 0; i < userProfile.Categories.length; i++) {
     category = userProfile.Categories[i];
     category.DisplayName = getObjectTranslation(category, targetLanguage);
@@ -154,9 +154,9 @@ function updateDisplayName(userProfile) {
   return userProfile;
 }
 function getObjectTranslation(itemObject, targetLanguage) {
-  translationText = "";
+  var translationText = "";
   for (var k = 0; k < itemObject.DisplayMultipleLanguage.length; k++) {
-    translationObject = itemObject.DisplayMultipleLanguage[k];
+    var translationObject = itemObject.DisplayMultipleLanguage[k];
     if (translationObject.Language == targetLanguage) {
       translationText = translationObject.Text;
       break;

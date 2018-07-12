@@ -20,6 +20,9 @@ angular
       console.log('onShowDisplayNameChanged');
       console.log('$rootScope.isShowDisplayName:' + $rootScope.isShowDisplayName.checked);
     }
+    $scope.updateUserProfileScope = function (userProfile) {
+      updateDisplayName(userProfile);
+    }
     $scope.onCategoryClicked = function (categoryId) {
       var userProfile = UserProfileService.getLatest();
       var targetCategory = getObjectById(userProfile, categoryId);
