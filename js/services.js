@@ -1,10 +1,9 @@
 var myModule = angular.module("starter.services", []);
 
-myModule.factory("UserProfileService", function($http, $localStorage) {
+myModule.factory("UserProfileService", function($http, $localStorage) { //Store User Prefile
   return {
     getOnline: function(userUuid, completeCallback) {
-      url = ServerPathVariable.GetUserProfilePath(userUuid);
-      $http.get(url).then(function(data) {
+      $http.get(ServerPathVariable.GetUserProfilePath(userUuid)).then(function(data) {
         $localStorage.userProfile = data.data;
         if (typeof completeCallback == "function") {
           completeCallback();
@@ -12,19 +11,14 @@ myModule.factory("UserProfileService", function($http, $localStorage) {
       });
     },
     getLatest: function() {
-      console.log("Get userprofile latest");
-      var userprofile = [];
       if ($localStorage.userProfile) {
-        console.log("Get userprofile from local");
-        userprofile = $localStorage.userProfile;
+        console.log("LocalStorage user profile exist, just use it");
       }
       else {
-        console.log("Get userprofile from tmp");
-        var json = this.getDefault();
-        $localStorage.userProfile = json;
-        userprofile = $localStorage.userProfile;
+        console.log("LocalStorage user profile do not exist, use templete");
+        $localStorage.userProfile = this.getDefault();
       }
-      return userprofile;
+      return $localStorage.userProfile;
     },
     getDefault: function() {
       return getSampleUserProfile();
@@ -33,8 +27,7 @@ myModule.factory("UserProfileService", function($http, $localStorage) {
       $localStorage.userProfile = newUserProfile;
     },
     cloneItem: function(userUuid, completeCallback) { //for reset initial state
-      var url = ServerPathVariable.GetUserProfileCloneItemPath(userUuid);
-      $http.get(url).then(function(data) {
+      $http.get(ServerPathVariable.GetUserProfileCloneItemPath(userUuid)).then(function(data) {
         $localStorage.userProfile = data.data;
         if (typeof completeCallback == "function") {
           completeCallback();
@@ -42,9 +35,7 @@ myModule.factory("UserProfileService", function($http, $localStorage) {
       });
     },
     postToServerCallback: function(successCallback) {
-      var userProfile = this.getLatest();
-      var url = ServerPathVariable.PostUserProfilePath();
-      $http.post(url, userProfile)
+      $http.post(ServerPathVariable.PostUserProfilePath(), this.getLatest())
         .success(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
           console.log("post userprofile success:" + JSON.stringify(data));
           if (typeof successCallback == "function") {
@@ -58,11 +49,11 @@ myModule.factory("UserProfileService", function($http, $localStorage) {
   };
 });
 
-myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cordovaFileTransfer) {
+myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cordovaFileTransfer) { //Used for store user audio and image
   return {
     downloadImageToLocal: function(targetDirectory, targetName, itemId) {
       var self = this;
-      var a = $cordovaFile.checkFile(targetDirectory, targetName).then(
+      $cordovaFile.checkFile(targetDirectory, targetName).then(
         function(result) {
           GlobalCacheVariable.FileCheck.ExistImageFile++;
         },
@@ -72,15 +63,19 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
           var targetPath = targetDirectory + "/" + targetName;
           var trustHosts = true;
           var options = { timeout: 10000 };
-          $cordovaFileTransfer.download(url, targetPath, options, trustHosts)
-            .then(
+          $cordovaFileTransfer.download(url, targetPath, options, trustHosts).then(
               function (result) {  // Success!       
                 GlobalVariable.DownloadProgress.AddDownloaded(); 
               },
               function (err) { // Error
-                console.log("download err:" + JSON.stringify(err)); 
-                GlobalVariable.DownloadProgress.ReduceTotal();
-                self.downloadImageToLocal(targetDirectory, targetName, itemId);
+                console.log("download err:" + JSON.stringify(err));
+                $cordovaFile.checkFile(targetDirectory, targetName).then(
+                  function (result) {
+                    GlobalVariable.DownloadProgress.ReduceTotal();
+                  },
+                  function (err) {
+                    self.downloadImageToLocal(targetDirectory, targetName, itemId);
+                  });         
               },
               function(progress) {}
             );
@@ -108,10 +103,15 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
               },
               function (err) {  //download error
                 console.log("download err:" + JSON.stringify(err));
-                GlobalVariable.DownloadProgress.ReduceTotal();
-                self.downloadAudioToLocal( targetDirectory, speechProvider, speechLanguageCode, speechGender, displayText);
-              },
-              function(progress) {}
+                $cordovaFile.checkFile(targetDirectory, targetName).then(
+                  function (result) {
+                    GlobalVariable.DownloadProgress.ReduceTotal();
+                  },
+                  function (err) {
+                    self.downloadAudioToLocal(targetDirectory, speechProvider, speechLanguageCode, speechGender, displayText);
+                  });                  
+                },
+                function(progress) {}
             );
         }
       );

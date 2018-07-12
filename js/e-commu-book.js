@@ -3,47 +3,20 @@ ServerPathVariable.hostname = "http://sepc155.se.cuhk.edu.hk:8080/";
 ServerPathVariable.path = "ECommuBook2-2.0.3-SNAPSHOT/";
 ServerPathVariable.GetBingAudioPath = function(speechLanguageCode,speechGender,text) {
   text = text.replace("/", " ");
-  return (
-    ServerPathVariable.hostname +
-    ServerPathVariable.path +
-    "audio/bing/" +
-    speechLanguageCode +
-    "/" +
-    speechGender +
-    "/" +
-    text +
-    ".mp3"
-  );
+  return (ServerPathVariable.hostname + ServerPathVariable.path + "audio/bing/" + speechLanguageCode +  "/" + speechGender +  "/" + text + ".mp3" );
 };
 ServerPathVariable.GetBingAudioPathWithUserProfile = function(userProfile,text) {
-  return (
-    ServerPathVariable.hostname +
-    ServerPathVariable.path +
-    "audio/bing/" +
-    userProfile.SPEECH_LANGUAGE_CODE +
-    "/" +
-    userProfile.SPEECH_GENDER +
-    "/" +
-    text +
-    ".mp3"
-  );
+  return (ServerPathVariable.hostname + ServerPathVariable.path + "audio/bing/" + userProfile.SPEECH_LANGUAGE_CODE + "/" +
+    userProfile.SPEECH_GENDER + "/" + text + ".mp3");
 };
 ServerPathVariable.GetImagePath = function(itemId) {
-  return (
-    ServerPathVariable.hostname +
-    ServerPathVariable.path +
-    "image/" +
-    itemId +
-    ".jpg"
-  );
+  return (ServerPathVariable.hostname + ServerPathVariable.path + "image/" + itemId + ".jpg");
 };
 ServerPathVariable.GetPostImagePath = function() {
   return ServerPathVariable.hostname + ServerPathVariable.path + "image/post";
 };
 ServerPathVariable.PostUserProfilePath = function() {
-  return (
-    ServerPathVariable.hostname + ServerPathVariable.path + "userProfile/post"
-  );
+  return (ServerPathVariable.hostname + ServerPathVariable.path + "userProfile/post");
 };
 ServerPathVariable.GetUserProfileCloneItemPath = function(userUuid) {
   return (ServerPathVariable.hostname + ServerPathVariable.path + "userProfile/" + userUuid + '/' +  '/cloneItem');
@@ -52,23 +25,10 @@ ServerPathVariable.GetUserProfilePath = function(userUuid) {
   return (ServerPathVariable.hostname + ServerPathVariable.path + "userProfile/" + userUuid);
 };
 ServerPathVariable.GetTranslationPath = function(sourceLanguage, sourceText, targetLanguage) {
-  return (
-    ServerPathVariable.hostname +
-    ServerPathVariable.path +
-    'translation/' + 
-    sourceLanguage + '/' + 
-    sourceText + '/' + 
-    targetLanguage
-  );
+  return (ServerPathVariable.hostname + ServerPathVariable.path + 'translation/' +  sourceLanguage + '/' +  sourceText + '/' + targetLanguage);
 }
 ServerPathVariable.getTranslationsPath = function(sourceLanguage, sourceText) {
-  return (
-    ServerPathVariable.hostname +
-    ServerPathVariable.path +
-    'translations/' + 
-    sourceLanguage + '/' + 
-    sourceText
-  );
+  return (ServerPathVariable.hostname + ServerPathVariable.path + 'translations/' + sourceLanguage + '/' +  sourceText);
 }
 
 function GlobalVariable() {}
