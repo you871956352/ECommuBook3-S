@@ -99,6 +99,15 @@ angular
             controller: "WelcomeCtrl"
           }
         }
+      })
+      .state("app.test", {
+        url: "/test",
+        views: {
+          menuContent: {
+            templateUrl: "templates/test.html",
+            controller: "TestCtrl"
+          }
+        }
       });
     // if none of the above states are matched, use this as the fallback
     // $urlRouterProvider.otherwise('/app/browse');

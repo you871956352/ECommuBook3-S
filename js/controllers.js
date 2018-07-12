@@ -756,9 +756,7 @@ angular
       });
     };
   })
-  .controller("WelcomeCtrl", function( $scope, $mdDialog, $http, $ionicSideMenuDelegate, UserProfileService, LocalCacheService) {
-
-   })
+  .controller("WelcomeCtrl", function( $scope, $mdDialog, $http, $ionicSideMenuDelegate, UserProfileService, LocalCacheService) {})
   .controller("GridController", [
     "$scope",
     function($scope) {
@@ -807,4 +805,10 @@ angular
       $scope.draggableObjects[index] = obj;
       $scope.draggableObjects[otherIndex] = otherObj;
     };
+  })
+  .controller("TestCtrl", function($scope) {
+    $scope.count = 0;
+    $scope.testClick = function() {
+      $scope.count += 1;
+    }
   });
