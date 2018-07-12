@@ -182,9 +182,7 @@ angular
         "/" +
         userProfile.SPEECH_GENDER
     );
-
     $scope.displayLanguageList = GlobalVariable.LanguageList;
-
     $scope.speechLanguageList = [
       { name: "[ar-EG]Arabic (Egypt)", value: "ar-EG", language: "ar" },
       { name: "[de-DE]German (Germany)", value: "de-DE", language: "de" },
@@ -315,7 +313,6 @@ angular
     $scope.onSelectedSpeechGenderChanged = function() {
       console.log("gender:" + $scope.selectedSpeechGender);
     };
-
     $scope.onConfirmLanguageButtonClicked = function() {
       if($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
@@ -331,7 +328,9 @@ angular
         console.log("Language Selected:" + userProfile.DISPLAY_LANGUAGE + "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
         UserProfileService.saveLocal(userProfile);
         LocalCacheService.prepareCache(userProfile);
-        UserProfileService.postToServer(userProfile);
+        UserProfileService.postToServerCallback(function () {
+          console.log("Post to Server when onConfirmLanguageButtonClicked ");
+        });
       }
     };
 
@@ -353,7 +352,7 @@ angular
       }
       console.log('onConfirmResetUserprofileButtonClicked');
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-      var userProfile = UserProfileService.sample();
+      var userProfile = UserProfileService.getDefault();
       userProfile.ID = guid();
       UserProfileService.saveLocal(userProfile);
       UserProfileService.postToServerCallback(function() {

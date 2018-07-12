@@ -2,18 +2,8 @@ var myModule = angular.module("starter.services", []);
 
 myModule.factory("UserProfileService", function($http, $localStorage) {
   return {
-    online: function() {
-      console.log("Get userprofile online");
-      json = $http.get(
-        "http://sepc155.se.cuhk.edu.hk:8080/ECommuBook2-2.0.0-SNAPSHOT/userProfile/00000000-0000-0000-0001-000000000000"
-      );
-      //console.log(JSON.stringify(json));
-      $localStorage.userProfile = json;
-      return json;
-    },
     getOnline: function(userUuid, completeCallback) {
       url = ServerPathVariable.GetUserProfilePath(userUuid);
-      console.log(url);
       $http.get(url).then(function(data) {
         $localStorage.userProfile = data.data;
         if (typeof completeCallback == "function") {
@@ -27,60 +17,22 @@ myModule.factory("UserProfileService", function($http, $localStorage) {
       if ($localStorage.userProfile) {
         console.log("Get userprofile from local");
         userprofile = $localStorage.userProfile;
-      } else {
+      }
+      else {
         console.log("Get userprofile from tmp");
-        var json = this.tmp();
+        var json = this.getDefault();
         $localStorage.userProfile = json;
         userprofile = $localStorage.userProfile;
       }
-      try {
-        //onlineUserProfile = this.getOnline(userprofile.ID);
-        //userProfile = onlineUserProfile;
-        //this.saveLocal(userProfile);
-        //console.log('Get online userProfile success');
-      } catch (err) {
-        //console.log('Get online userProfile err:' + JSON.stringify(err));
-      } finally {
-      }
-      console.log("user id:" + userprofile.ID);
       return userprofile;
     },
-    local: function() {
-      console.log("Get userprofile local");
-      json = $localStorage.userProfile;
-      return json;
-    },
-    tmp: function() {
-      console.log("Get userprofile tmp");
-      json = getSampleUserProfile();
-      return json;
-    },
-    sample: function() {
-      json = getSampleUserProfile();
-      return json;
+    getDefault: function() {
+      return getSampleUserProfile();
     },
     saveLocal: function(newUserProfile) {
-      console.log("Save userprofile local");
       $localStorage.userProfile = newUserProfile;
     },
-    postToServer: function() {
-      var userProfile = this.getLatest();
-      var url = ServerPathVariable.PostUserProfilePath();
-
-      $http
-        .post(url, userProfile)
-        .success(function(data, status, headers, config) {
-          // this callback will be called asynchronously
-          // when the response is available
-          console.log("post userprofile success:" + JSON.stringify(data));
-        })
-        .error(function(data, status, headers, config) {
-          // called asynchronously if an error occurs
-          // or server returns response with an error status.
-          console.log("post userprofile error :" + JSON.stringify(data));
-        });
-    },
-    cloneItem: function(userUuid, completeCallback) {
+    cloneItem: function(userUuid, completeCallback) { //for reset initial state
       var url = ServerPathVariable.GetUserProfileCloneItemPath(userUuid);
       $http.get(url).then(function(data) {
         $localStorage.userProfile = data.data;
@@ -92,20 +44,14 @@ myModule.factory("UserProfileService", function($http, $localStorage) {
     postToServerCallback: function(successCallback) {
       var userProfile = this.getLatest();
       var url = ServerPathVariable.PostUserProfilePath();
-
-      $http
-        .post(url, userProfile)
-        .success(function(data, status, headers, config) {
-          // this callback will be called asynchronously
-          // when the response is available
+      $http.post(url, userProfile)
+        .success(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
           console.log("post userprofile success:" + JSON.stringify(data));
           if (typeof successCallback == "function") {
             successCallback();
           }
         })
-        .error(function(data, status, headers, config) {
-          // called asynchronously if an error occurs
-          // or server returns response with an error status.
+        .error(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
           console.log("post userprofile error :" + JSON.stringify(data));
         });
     }

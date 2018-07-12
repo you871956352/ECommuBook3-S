@@ -46,21 +46,10 @@ ServerPathVariable.PostUserProfilePath = function() {
   );
 };
 ServerPathVariable.GetUserProfileCloneItemPath = function(userUuid) {
-  return (
-    ServerPathVariable.hostname +
-    ServerPathVariable.path +
-    "userProfile/" +
-    userUuid + '/' + 
-    '/cloneItem'
-  );
+  return (ServerPathVariable.hostname + ServerPathVariable.path + "userProfile/" + userUuid + '/' +  '/cloneItem');
 };
 ServerPathVariable.GetUserProfilePath = function(userUuid) {
-  return (
-    ServerPathVariable.hostname +
-    ServerPathVariable.path +
-    "userProfile/" +
-    userUuid
-  );
+  return (ServerPathVariable.hostname + ServerPathVariable.path + "userProfile/" + userUuid);
 };
 ServerPathVariable.GetTranslationPath = function(sourceLanguage, sourceText, targetLanguage) {
   return (
