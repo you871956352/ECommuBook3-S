@@ -69,13 +69,8 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
               },
               function (err) { // Error
                 console.log("download err:" + JSON.stringify(err));
-                $cordovaFile.checkFile(targetDirectory, targetName).then(
-                  function (result) {
-                    GlobalVariable.DownloadProgress.ReduceTotal();
-                  },
-                  function (err) {
-                    self.downloadImageToLocal(targetDirectory, targetName, itemId);
-                  });         
+                GlobalVariable.DownloadProgress.ReduceTotal();
+                self.downloadImageToLocal(targetDirectory, targetName, itemId);       
               },
               function(progress) {}
             );
@@ -103,15 +98,10 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
               },
               function (err) {  //download error
                 console.log("download err:" + JSON.stringify(err));
-                $cordovaFile.checkFile(targetDirectory, targetName).then(
-                  function (result) {
-                    GlobalVariable.DownloadProgress.ReduceTotal();
-                  },
-                  function (err) {
-                    self.downloadAudioToLocal(targetDirectory, speechProvider, speechLanguageCode, speechGender, displayText);
-                  });                  
-                },
-                function(progress) {}
+                GlobalVariable.DownloadProgress.ReduceTotal();
+                self.downloadAudioToLocal(targetDirectory, speechProvider, speechLanguageCode, speechGender, displayText);               
+               },
+               function(progress) {}
             );
         }
       );

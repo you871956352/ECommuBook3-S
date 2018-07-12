@@ -440,9 +440,8 @@ angular
           console.log("Category Option: " + JSON.stringify(options));
           $cordovaFileTransfer.upload(ServerPathVariable.GetPostImagePath(), filePath, options).then(
             function(result) {
-              console.log(JSON.stringify(result));
-              UserProfileService.getOnline(UserProfileService.getLatest().ID, function() {
-                console.log("Image upload Success");
+              console.log("Image upload Success");
+              UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
                 LocalCacheService.prepareCache(UserProfileService.getLatest());
               });
             },
