@@ -377,8 +377,7 @@ angular
     $scope.inputLanguageList = GlobalVariable.LanguageList;
 
     $scope.onAddCategoryConfirmClicked = function () {
-      var displayName = $scope.categoryName;
-      var inputLanguage = $scope.inputLanguage;
+      var displayName = $scope.categoryName, inputLanguage = $scope.inputLanguage;
       if($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
@@ -395,16 +394,11 @@ angular
         alert("Please select a image");
         return;
       }
-
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-
-      console.log("new guid:" + $scope.uuid);
-      console.log("displayname:" + displayName);
-      console.log("inputLanguage:" + inputLanguage);
+      console.log("new guid:" + $scope.uuid + "displayname:" + displayName + "inputLanguage:" + inputLanguage);
 
       var userProfile = UserProfileService.getLatest();
-
       var newCategory = {};
       newCategory.ID = $scope.uuid;
       newCategory.DisplayName = displayName;
@@ -417,32 +411,26 @@ angular
       }).then(function(data) {
         newCategory.DisplayMultipleLanguage = data.data;
         console.log(JSON.stringify(newCategory));
-
         userProfile.Categories.push(newCategory);
-
         UserProfileService.saveLocal(userProfile);
+
         UserProfileService.postToServerCallback(function() {
           var filePath = $scope.selectedImageUrl;
           var server = ServerPathVariable.GetPostImagePath();
-
           var options = new FileUploadOptions();
           options.fileKey = "file";
           options.fileName = filePath.substr(filePath.lastIndexOf("/") + 1);
           options.mimeType = "image/jpeg";
           options.httpMethod = "POST";
-
           var params = {};
           params.uuid = newCategory.ID;
           options.params = params;
 
           console.log(JSON.stringify(options));
-
           $cordovaFileTransfer.upload(server, filePath, options).then(
             function(result) {
               console.log(JSON.stringify(result));
-              var userProfile = UserProfileService.getLatest();
-
-              UserProfileService.getOnline(userProfile.ID, function() {
+              UserProfileService.getOnline(UserProfileService.getLatest().ID, function() {
                 console.log("------------------------------------");
                 LocalCacheService.prepareCache(UserProfileService.getLatest());
               });
@@ -559,14 +547,8 @@ angular
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
       }
-
-      var displayName = $scope.itemName;
-      var selectedCategoryId = $scope.selectedCategoryId;
-      var inputLanguage = $scope.inputLanguage;
-
-      console.log("displayname:" + displayName);
-      console.log("selectedCategoryId:" + selectedCategoryId);
-      console.log("inputLanguage:" + inputLanguage);
+      var displayName = $scope.itemName, selectedCategoryId = $scope.selectedCategoryId, inputLanguage = $scope.inputLanguage;
+      console.log("displayname:" + displayName + "selectedCategoryId:" + selectedCategoryId + "inputLanguage:" + inputLanguage);
       if (typeof selectedCategoryId == "undefined" || selectedCategoryId == "") {
         alert("Please select a category");
         return;
@@ -584,21 +566,15 @@ angular
         return;
       }
 
-
-
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
 
       console.log("new guid:" + $scope.uuid);
-
-
       var userProfile = UserProfileService.getLatest();
-
       var newItem = {};
       newItem.ID = $scope.uuid;
       newItem.DisplayName = displayName;
       newItem.DisplayMultipleLanguage = [];
-
       var url = ServerPathVariable.getTranslationsPath(
         inputLanguage,
         newItem.DisplayName
@@ -640,20 +616,15 @@ angular
             function(result) {
               console.log(JSON.stringify(result));
               var userProfile = UserProfileService.getLatest();
-
               UserProfileService.getOnline(userProfile.ID, function() {
                 console.log("------------------------------------");
-                //console.log(JSON.stringify(UserProfileService.getLatest()));
                 LocalCacheService.prepareCache(UserProfileService.getLatest());
               });
             },
-            function(err) {
-              console.log(JSON.stringify(err));
-              // Error
+            function (err) { // Error
+              console.log(JSON.stringify(err));         
             },
-            function(progress) {
-              // constant progress updates
-            }
+            function(progress) { }
           );
         });
       });
