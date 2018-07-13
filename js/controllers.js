@@ -21,18 +21,7 @@ angular
     }
     $scope.onCategoryClicked = function (categoryId) {
       var userProfile = UserProfileService.getLatest();
-      var targetCategory = getObjectById(userProfile, categoryId);
-      var targetDisplayName = targetCategory.DisplayName;
-      for (i = 0; i < targetCategory.DisplayMultipleLanguage.length; i++) {
-        var translation = targetCategory.DisplayMultipleLanguage[i];
-        if (translation.Language == userProfile.DISPLAY_LANGUAGE) {
-          targetDisplayName = translation.Text;
-        }
-      }
-      alert("displaynamePath" + targetDisplayName);
-      var AudioDirectory = GlobalVariable.LocalCacheDirectory() + "audio/bing/" +
-        userProfile.SPEECH_LANGUAGE_CODE +  "/" + userProfile.SPEECH_GENDER + "/";
-      var src = AudioDirectory + normalizeDisplayName(targetDisplayName) + ".mp3";
+      var src = GlobalVariable.GetLocalAudioDirectory(userProfile) + categoryId + ".mp3";
       MediaPlayer.play($cordovaMedia, src);
     };
   })
@@ -55,47 +44,13 @@ angular
       }
     }
     $scope.width = 1;
-    console.log('isShowDisplayName.checked:' + $rootScope.isShowDisplayName.checked);
     $scope.onItemClicked = function(ev, itemId) {
       $scope.showEnlargeItemPopup(ev, itemId);
     };
-    $scope.showAlert = function(ev, itemId) {
-      // Appending dialog to document.body to cover sidenav in docs app
-      // Modal dialogs should fully cover application
-      // to prevent interaction outside of dialog
-
-      var parentEl = angular.element(document.body);
-      $mdDialog.show(
-        $mdDialog
-          .alert()
-          //.parent(angular.element(document.querySelector('#grid-container')))
-          .parent(angular.element(document.body))
-          .clickOutsideToClose(true)
-          .title("This is an alert title")
-          .textContent(
-            "You can specify some description text in here." + itemId
-          )
-          .ariaLabel("Alert Dialog Demo")
-          .ok("Got it!")
-          .targetEvent(ev)
-      );
-    };
     $scope.showEnlargeItemPopup = function(ev, itemId) {
-      console.log(
-        "GlobalVariable.Appearance.itemNormalFontSize :" +
-          GlobalVariable.Appearance.itemNormalFontSize
-      );
       userProfile = UserProfileService.getLatest();
-      console.log(
-        "Language Selected2:" +
-          userProfile.DISPLAY_LANGUAGE +
-          "/" +
-          userProfile.SPEECH_LANGUAGE_CODE +
-          "/" +
-          userProfile.SPEECH_GENDER
-      );
       targetItem = getItemObjectByItemId(userProfile, itemId);
-      targetScope = $scope.$new();
+      var targetScope = $scope.$new();
       targetScope.selectedItemId = targetItem.ID;
       targetScope.selectedItemName = targetItem.DisplayName;
       for (i = 0; i < targetItem.DisplayMultipleLanguage.length; i++) {
@@ -104,24 +59,11 @@ angular
           targetScope.selectedItemName = translation.Text;
         }
       }
-
       targetScope.ImagePath = $scope.ImagePath;
-      targetScope.AudioDirectory =
-        GlobalVariable.LocalCacheDirectory() +
-        "audio/bing/" +
-        userProfile.SPEECH_LANGUAGE_CODE +
-        "/" +
-        userProfile.SPEECH_GENDER +
-        "/";
-      var src =
-        targetScope.AudioDirectory +
-        normalizeDisplayName(targetScope.selectedItemName) +
-        ".mp3";
-      console.log("Audio src:" + src);
-      //playAudio(src);
+      targetScope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory(userProfile)
+      var src = targetScope.AudioDirectory + targetScope.selectedItemId + ".mp3";
       MediaPlayer.play($cordovaMedia, src);
-      $mdDialog
-        .show({
+      $mdDialog.show({
           controller: DialogController,
           templateUrl: "templates/popup-item.tmpl.html",
           parent: angular.element(document.body),
@@ -139,7 +81,7 @@ angular
           }
         );
     };
-    function DialogController( $scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer) {
+    function DialogController($scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer) {
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
       $scope.hide = function() {
         $mdDialog.hide();
@@ -152,8 +94,7 @@ angular
       };
 
       $scope.onItemClicked = function(ev) {
-        console.log("item name:" + $scope.selectedItemName);
-        var src = $scope.AudioDirectory +  normalizeDisplayName($scope.selectedItemName) + ".mp3";
+        var src = $scope.AudioDirectory + $scope.selectedItemId + ".mp3";
         MediaPlayer.play($cordovaMedia, src);
       };
     }

@@ -64,6 +64,9 @@ var GlobalVariable = new function () { //User to store some global variable
   this.LocalCacheDirectory = function () {
     return window.cordova.file.dataDirectory;
   };
+  this.GetLocalAudioDirectory = function (userProfile) {
+    return this.LocalCacheDirectory() + "audio/bing/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER + "/";
+  };
   this.Appearance = new function () {
     this.itemNormalFontSize = 24;
   };

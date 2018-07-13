@@ -73,10 +73,9 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
         }
       );
     },
-    downloadAudioToLocal: function(targetDirectory,speechProvider, speechLanguageCode,speechGender,displayText) {
-      var self = this;
-      displayText = normalizeDisplayName(displayText);
-      var targetName = "audio/" + speechProvider +  "/" + speechLanguageCode +  "/" + speechGender +  "/" + displayText +  ".mp3";
+    downloadAudioToLocal: function(targetDirectory,speechProvider, speechLanguageCode,speechGender,displayText, audioID) {
+      var self = this; 
+      var targetName = "audio/" + speechProvider + "/" + speechLanguageCode + "/" + speechGender + "/" + audioID +  ".mp3";
       var a = $cordovaFile.checkFile(targetDirectory, targetName).then(
         function (success) { //file exist
           GlobalCacheVariable.FileCheck.AddExistAudioFile();
@@ -84,14 +83,14 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
         function (error) { //file not exist     
           GlobalVariable.DownloadProgress.AddTotal();
           $cordovaFileTransfer
-            .download(ServerPathVariable.GetBingAudioPath(speechLanguageCode, speechGender, displayText), (targetDirectory + "/" + targetName), { timeout: 10000 }, true).then(
+            .download(ServerPathVariable.GetBingAudioPath(speechLanguageCode, speechGender, normalizeDisplayName(displayText)), (targetDirectory + "/" + targetName), { timeout: 10000 }, true).then(
               function (result) { //download ok    
                 GlobalVariable.DownloadProgress.AddDownloaded();
               },
               function (err) {  //download error
                 console.log("download err:" + JSON.stringify(err));
                 GlobalVariable.DownloadProgress.ReduceTotal();
-                self.downloadAudioToLocal(targetDirectory, speechProvider, speechLanguageCode, speechGender, displayText);               
+                self.downloadAudioToLocal(targetDirectory, speechProvider, speechLanguageCode, speechGender, displayText, audioID);               
                },
                function(progress) {}
             );
@@ -126,21 +125,23 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
       var currentSpeechGender = userProfile.SPEECH_GENDER;
 
       var displayTextList = [];
+      var audioIDList = [];
       for (var i = 0; i < userProfile.Categories.length; i++) {
         var category = userProfile.Categories[i];
         displayTextList.push(getObjectTranslation(category, currentDisplayLanguage));
+        audioIDList.push(category.ID);
         for (var j = 0; j < category.Items.length; j++) {
           item = category.Items[j];
           displayTextList.push(getObjectTranslation(item, currentDisplayLanguage));
+          audioIDList.push(item.ID);
         }
       }
       $cordovaFile.createDir(targetDirectory, "bing", false);
       $cordovaFile.createDir(targetDirectory, "bing/" + currentSpeechLanguageCode, false);
       $cordovaFile.createDir(targetDirectory, "bing/" + currentSpeechLanguageCode + "/" + currentSpeechGender,false);
-      GlobalCacheVariable.FileCheck.SetTotalAudioFile(displayTextList.length);
-      for (var i = 0; i < displayTextList.length; i++) {
-        var displayText = displayTextList[i];
-        self.downloadAudioToLocal(targetDirectory, "bing", currentSpeechLanguageCode, currentSpeechGender, displayText);
+      GlobalCacheVariable.FileCheck.SetTotalAudioFile(audioIDList.length);
+      for (var i = 0; i < audioIDList.length; i++) {
+        self.downloadAudioToLocal(targetDirectory, "bing", currentSpeechLanguageCode, currentSpeechGender, displayTextList[i], audioIDList[i]);
       }
 
       setTimeout(function() {
