@@ -1,8 +1,6 @@
 <ion-side-menus enable-menu-with-back-views="true">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-stable">
-
-
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
@@ -17,7 +15,6 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-
         <ion-item ng-repeat="category in userProfile.Categories" href="#/app/category/{{category.ID}}" ng-click="onCategoryClicked(category.ID)">
           <img width="80%; padding-top: 75%;" src='{{ImagePath}}/{{category.ID}}.jpg' />
           <div ng-repeat="translation in category.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE && isShowDisplayName.checked">

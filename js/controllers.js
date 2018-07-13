@@ -11,7 +11,7 @@ angular
       if(typeof $rootScope.isShowDisplayName == 'undefined') {
         $rootScope.isShowDisplayName = { checked: true };
       }
-      console.log( "Language Selected3:" + userProfile.DISPLAY_LANGUAGE +  "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
+      console.log( "Language Selected:" + userProfile.DISPLAY_LANGUAGE +  "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
       $scope.userProfile = userProfile;
       console.log(userProfile);
     });
@@ -23,17 +23,16 @@ angular
       var userProfile = UserProfileService.getLatest();
       var targetCategory = getObjectById(userProfile, categoryId);
       var targetDisplayName = targetCategory.DisplayName;
-      //Bug: new added category has no display multiple language
       for (i = 0; i < targetCategory.DisplayMultipleLanguage.length; i++) {
         var translation = targetCategory.DisplayMultipleLanguage[i];
         if (translation.Language == userProfile.DISPLAY_LANGUAGE) {
           targetDisplayName = translation.Text;
         }
       }
+      alert("displaynamePath" + targetDisplayName);
       var AudioDirectory = GlobalVariable.LocalCacheDirectory() + "audio/bing/" +
         userProfile.SPEECH_LANGUAGE_CODE +  "/" + userProfile.SPEECH_GENDER + "/";
       var src = AudioDirectory + normalizeDisplayName(targetDisplayName) + ".mp3";
-      //alert(src);
       MediaPlayer.play($cordovaMedia, src);
     };
   })
@@ -275,7 +274,6 @@ angular
           break;
       }
     };
-
     $scope.onSelectedDisplayLanguageChanged = function() {
       console.log("display language:" + $scope.selectedDisplayLanguage);
 
@@ -287,7 +285,6 @@ angular
         }
       }
     };
-
     $scope.onSelectedSpeechGenderChanged = function() {
       console.log("gender:" + $scope.selectedSpeechGender);
     };
@@ -311,18 +308,15 @@ angular
         });
       }
     };
-
     $scope.onItemNormalFontSizeChanged = function() {
       GlobalVariable.Appearance.itemNormalFontSize = $scope.itemNormalFontSize;
     };
-
     $scope.onConfirmAppearanceButtonClicked = function() {
       setTimeout(function() {
         $state.go("app.setting", {}, { reload: true });
         $ionicSideMenuDelegate.toggleLeft();
       }, 500);
     };
-
     $scope.onConfirmResetUserprofileButtonClicked = function() {
       if($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
@@ -469,7 +463,6 @@ angular
         $scope.selectedCategoryId
       );
     };
-
     $scope.onDeleteCategoryConfirmClicked = function() {
       if($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
@@ -498,13 +491,7 @@ angular
     $scope.categories = $scope.userProfile.Categories;
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.uuid = guid();
-
     $scope.inputLanguageList = GlobalVariable.LanguageList;
-
-    $scope.onSelectedCategoryChanged = function() {
-
-    };
-
     $scope.onAddItemConfirmClicked = function() {
       if($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
@@ -597,7 +584,6 @@ angular
 
       return;
     };
-
     $scope.onTakeImageButtonClicked = function(mode) {
       console.log("onTakeImageButtonClicked");
       var options = {};
@@ -742,9 +728,9 @@ angular
       $scope.draggableObjects[otherIndex] = otherObj;
     };
   })
-  .controller("TestCtrl", function ($scope) { //Test Ctrl, for logging
-    $scope.count = 0;
-    $scope.testClick = function() {
-      $scope.count += 1;
+  .controller("TestCtrl", function ($scope, UserProfileService, $mdDialog) { //Test Ctrl, for logging
+    $scope.uid = 0;
+    $scope.testClick = function () {
+      alert( UserProfileService.getLatest().ID);
     }
   });

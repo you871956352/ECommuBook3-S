@@ -1,27 +1,22 @@
 <ion-view cache-view="false" view-title="Add Item">
   <ion-content>
-
-
 	<div ng-controller="AddItemCtrl" class="md-padding" ng-cloak>
 	  <div>
-
-
 		<md-card>
 		    <md-card-title>
 		      <md-card-title-text>
 		        <span class="md-headline">Add Item</span>
-		        <!--<span class="md-subhead">Select your language preference</span>-->
 		      </md-card-title-text>
 		    </md-card-title>
 
 		    <md-card-content>
-			    <!--<h1 class="md-title">Select Category</h1>-->
 			    <div layout="row">
-			    <!--<div>-->
 			      <md-input-container>
 			      	<label>Select Category:</label>
-              <md-select ng-model="selectedCategoryId" ng-change="onSelectedCategoryChanged()">
-                <md-option ng-value="category.ID" ng-repeat="category in categories">{{category.DisplayName}}</md-option>
+              <md-select ng-model="selectedCategoryId">
+                <md-option ng-value="category.ID" ng-repeat="category in categories">
+                  <div ng-repeat="translation in category.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">{{translation.Text}}</div>
+                </md-option>
               </md-select>
 			        <img style="width: 30%" src="{{ImagePath}}/{{selectedCategoryId}}.jpg"/>
 			      </md-input-container>

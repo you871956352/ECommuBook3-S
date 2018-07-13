@@ -59,11 +59,7 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
         },
         function(err) {
           GlobalVariable.DownloadProgress.AddTotal();
-          var url = ServerPathVariable.GetImagePath(itemId);
-          var targetPath = targetDirectory + "/" + targetName;
-          var trustHosts = true;
-          var options = { timeout: 10000 };
-          $cordovaFileTransfer.download(url, targetPath, options, trustHosts).then(
+          $cordovaFileTransfer.download(ServerPathVariable.GetImagePath(itemId), (targetDirectory + "/" + targetName), { timeout: 10000 }, true).then(
               function (result) {  // Success!       
                 GlobalVariable.DownloadProgress.AddDownloaded(); 
               },
@@ -87,12 +83,8 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
         },
         function (error) { //file not exist     
           GlobalVariable.DownloadProgress.AddTotal();
-          var url = ServerPathVariable.GetBingAudioPath( speechLanguageCode, speechGender, displayText);
-          var targetPath = targetDirectory + "/" + targetName;
-          var trustHosts = true;
-          var options = { timeout: 10000 };
           $cordovaFileTransfer
-            .download(url, targetPath, options, trustHosts).then(
+            .download(ServerPathVariable.GetBingAudioPath(speechLanguageCode, speechGender, displayText), (targetDirectory + "/" + targetName), { timeout: 10000 }, true).then(
               function (result) { //download ok    
                 GlobalVariable.DownloadProgress.AddDownloaded();
               },
@@ -110,7 +102,7 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
       console.log("Start prepare cache");
       var self = this;
       GlobalCacheVariable.FileCheck.Reset();
-      // image cache
+      //image cache
       var idList = [];
       for (var i = 0; i < userProfile.Categories.length; i++) {
         var category = userProfile.Categories[i];
@@ -125,9 +117,7 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
       $cordovaFile.createDir(targetDirectory, "images", false);
       GlobalCacheVariable.FileCheck.SetTotalImageFile(idList.length);
       for (var i = 0; i < idList.length; i++) {
-        var itemId = idList[i];
-        var targetName = "images/" + itemId + ".jpg";
-        self.downloadImageToLocal(targetDirectory, targetName, itemId);
+        self.downloadImageToLocal(targetDirectory, ("images/" + idList[i] + ".jpg"), idList[i]);
       }
 
       // audio cache
@@ -162,6 +152,11 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
           GlobalVariable.DownloadProgress.IsNoDownload = 1;
         }
       }, 2000); //delay 2 seconds
+    },
+    clearAllCache: function () {
+      console.log("Start clear all cache");
+      var targetDirectory = GlobalVariable.LocalCacheDirectory();
+      $cordovaFile.removeRecursively()
     }
   };
 });
