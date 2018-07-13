@@ -55,7 +55,7 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
       var self = this;
       $cordovaFile.checkFile(targetDirectory, targetName).then(
         function(result) {
-          GlobalCacheVariable.FileCheck.ExistImageFile++;
+          GlobalCacheVariable.FileCheck.AddExistImageFile();
         },
         function(err) {
           GlobalVariable.DownloadProgress.AddTotal();
@@ -83,7 +83,7 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
       var targetName = "audio/" + speechProvider +  "/" + speechLanguageCode +  "/" + speechGender +  "/" + displayText +  ".mp3";
       var a = $cordovaFile.checkFile(targetDirectory, targetName).then(
         function (success) { //file exist
-          GlobalCacheVariable.FileCheck.ExistAudioFile++;
+          GlobalCacheVariable.FileCheck.AddExistAudioFile();
         },
         function (error) { //file not exist     
           GlobalVariable.DownloadProgress.AddTotal();
@@ -123,7 +123,7 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
       GlobalVariable.DownloadProgress.Reset();
       var targetDirectory = GlobalVariable.LocalCacheDirectory();
       $cordovaFile.createDir(targetDirectory, "images", false);
-      GlobalCacheVariable.FileCheck.TotalImageFile = idList.length;
+      GlobalCacheVariable.FileCheck.SetTotalImageFile(idList.length);
       for (var i = 0; i < idList.length; i++) {
         var itemId = idList[i];
         var targetName = "images/" + itemId + ".jpg";
@@ -147,7 +147,7 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
       $cordovaFile.createDir(targetDirectory, "bing", false);
       $cordovaFile.createDir(targetDirectory, "bing/" + currentSpeechLanguageCode, false);
       $cordovaFile.createDir(targetDirectory, "bing/" + currentSpeechLanguageCode + "/" + currentSpeechGender,false);
-      GlobalCacheVariable.FileCheck.TotalAudioFile = displayTextList.length;
+      GlobalCacheVariable.FileCheck.SetTotalAudioFile(displayTextList.length);
       for (var i = 0; i < displayTextList.length; i++) {
         var displayText = displayTextList[i];
         self.downloadAudioToLocal(targetDirectory, "bing", currentSpeechLanguageCode, currentSpeechGender, displayText);
