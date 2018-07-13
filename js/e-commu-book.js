@@ -70,7 +70,7 @@ var GlobalVariable = new function () { //User to store some global variable
   this.Appearance = new function () {
     this.itemNormalFontSize = 24;
   };
-  this.LanguageList = [
+  this.DisplayLanguageList = [
     { name: "粵語", value: "yue" },
     { name: "简体中文", value: "zh-CHS" },
     { name: "繁體中文(台灣)", value: "zh-CHT" },
@@ -84,6 +84,28 @@ var GlobalVariable = new function () { //User to store some global variable
     { name: "русский", value: "ru" },
     { name: "한국어", value: "ko" },
     { name: "N/A", value: "xx" }
+  ];
+  this.SpeechLanguageList = [
+    { name: "[ar-EG]Arabic (Egypt)", value: "ar-EG", language: "ar" },
+    { name: "[de-DE]German (Germany)", value: "de-DE", language: "de" },
+    { name: "[en-AU]English (Australia)", value: "en-AU", language: "en" },
+    { name: "[en-CA]English (Canada)", value: "en-CA", language: "en" },
+    { name: "[en-GB]English (United Kingdom)", value: "en-GB", language: "en" },
+    { name: "[en-IN]English (India)", value: "en-IN", language: "en" },
+    { name: "[en-US]English (United States)", value: "en-US", language: "en" },
+    { name: "[es-ES]Spanish (Spain)", value: "es-ES", language: "es" },
+    { name: "[es-MX]Spanish (Mexico)", value: "es-MX", language: "es" },
+    { name: "[fr-CA]French (Canada)", value: "fr-CA", language: "fr" },
+    { name: "[fr-FR]French (France)", value: "fr-FR", language: "fr" },
+    { name: "[it-IT]Italian (Italy)", value: "it-IT", language: "it" },
+    { name: "[ja-JP]Japanese (Japan)", value: "ja-JP", language: "ja" },
+    { name: "[pt-BR]Portuguese (Brazil)", value: "pt-BR", language: "pt" },
+    { name: "[ru-RU]Russian (Russia)", value: "ru-RU", language: "ru" },
+    { name: "[zh-CN]中文 (普通话)", value: "zh-CN", language: "zh-CHS" },
+    { name: "[zh-HK]中文 (粤语)", value: "zh-HK", language: "zh-CHS" },
+    { name: "[zh-TW]中文 (國語)", value: "zh-TW", language: "zh-CHT" },
+    { name: "[zh-HK]中文 (粵語)", value: "zh-HK", language: "yue" },
+    { name: "[ko-KR]Korean (Korea)", value: "ko-KR", language: "ko" }
   ];
 };
 
@@ -191,15 +213,12 @@ function updateDisplayName(userProfile) { //Current not used
   return userProfile;
 }
 function getObjectTranslation(itemObject, targetLanguage) {
-  var translationText = "";
   for (var k = 0; k < itemObject.DisplayMultipleLanguage.length; k++) {
-    var translationObject = itemObject.DisplayMultipleLanguage[k];
-    if (translationObject.Language == targetLanguage) {
-      translationText = translationObject.Text;
-      break;
+    if (itemObject.DisplayMultipleLanguage[k].Language == targetLanguage) {
+      return itemObject.DisplayMultipleLanguage[k].Text;
     }
   }
-  return translationText;
+  return "";
 }
 function getItemObjectByItemId(userProfile, itemId) {
   for (i = 0; i < userProfile.Categories.length; i++) {

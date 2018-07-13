@@ -102,37 +102,8 @@ angular
   .controller("SettingCtrl", function(  $scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService) {
     var userProfile = UserProfileService.getLatest();
     console.log("start:" +  userProfile.DISPLAY_LANGUAGE + "/" +  userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
-    $scope.displayLanguageList = GlobalVariable.LanguageList;
-    $scope.speechLanguageList = [
-      { name: "[ar-EG]Arabic (Egypt)", value: "ar-EG", language: "ar" },
-      { name: "[de-DE]German (Germany)", value: "de-DE", language: "de" },
-      { name: "[en-AU]English (Australia)", value: "en-AU", language: "en" },
-      { name: "[en-CA]English (Canada)", value: "en-CA", language: "en" },
-      {
-        name: "[en-GB]English (United Kingdom)",
-        value: "en-GB",
-        language: "en"
-      },
-      { name: "[en-IN]English (India)", value: "en-IN", language: "en" },
-      {
-        name: "[en-US]English (United States)",
-        value: "en-US",
-        language: "en"
-      },
-      { name: "[es-ES]Spanish (Spain)", value: "es-ES", language: "es" },
-      { name: "[es-MX]Spanish (Mexico)", value: "es-MX", language: "es" },
-      { name: "[fr-CA]French (Canada)", value: "fr-CA", language: "fr" },
-      { name: "[fr-FR]French (France)", value: "fr-FR", language: "fr" },
-      { name: "[it-IT]Italian (Italy)", value: "it-IT", language: "it" },
-      { name: "[ja-JP]Japanese (Japan)", value: "ja-JP", language: "ja" },
-      { name: "[pt-BR]Portuguese (Brazil)", value: "pt-BR", language: "pt" },
-      { name: "[ru-RU]Russian (Russia)", value: "ru-RU", language: "ru" },
-      { name: "[zh-CN]中文 (普通话)", value: "zh-CN", language: "zh-CHS" },
-      { name: "[zh-HK]中文 (粤语)", value: "zh-HK", language: "zh-CHS" },
-      { name: "[zh-TW]中文 (國語)", value: "zh-TW", language: "zh-CHT" },
-      { name: "[zh-HK]中文 (粵語)", value: "zh-HK", language: "yue" },
-      { name: "[ko-KR]Korean (Korea)", value: "ko-KR", language: "ko" }
-    ];
+    $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
+    $scope.speechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.selectedDisplayLanguage;
     $scope.selectedSpeechLanguage;
     $scope.selectedSpeechGender;
@@ -287,7 +258,7 @@ angular
     $scope.uuid = guid();
     $scope.inputLanguage = "";
     $scope.selectedImageUrl = "";
-    $scope.inputLanguageList = GlobalVariable.LanguageList;
+    $scope.inputLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.onTakeImageButtonClicked = function (mode) {
       console.log("onTakeImageButtonClicked");
       var options = {};
@@ -355,11 +326,11 @@ angular
       var newCategory = {};
       newCategory.ID = $scope.uuid;
       newCategory.DisplayName = $scope.categoryName;
+      newCategory.DisplayNameLanguage = $scope.inputLanguage;
       newCategory.DisplayMultipleLanguage = [];
 
       $http({url: ServerPathVariable.getTranslationsPath($scope.inputLanguage, newCategory.DisplayName), method: "GET" }).then(function (data) {
         newCategory.DisplayMultipleLanguage = data.data;
-        console.log("Add new category: " + JSON.stringify(newCategory));
         $scope.userProfile.Categories.push(newCategory);
         UserProfileService.saveLocal($scope.userProfile);
 
@@ -432,7 +403,7 @@ angular
     $scope.categories = $scope.userProfile.Categories;
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.uuid = guid();
-    $scope.inputLanguageList = GlobalVariable.LanguageList;
+    $scope.inputLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.onAddItemConfirmClicked = function() {
       if($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
