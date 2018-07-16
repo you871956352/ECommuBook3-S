@@ -12,10 +12,10 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
     },
     getLatest: function() {
       if ($localStorage.userProfile) {
-        console.log("LocalStorage user profile exist, just use it");
+        console.log("Read userProfile from LocalStorage.");
       }
       else {
-        console.log("LocalStorage user profile do not exist, use templete");
+        console.log("No userProfile in LocalStorage. Read sample userProfile.");
         $localStorage.userProfile = this.getDefault();
       }
       return $localStorage.userProfile;
@@ -60,13 +60,13 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
         function(err) {
           GlobalVariable.DownloadProgress.AddTotal();
           $cordovaFileTransfer.download(ServerPathVariable.GetImagePath(itemId), (targetDirectory + "/" + targetName), { timeout: 10000 }, true).then(
-              function (result) {  // Success!       
-                GlobalVariable.DownloadProgress.AddDownloaded(); 
+              function (result) {  // Success!
+                GlobalVariable.DownloadProgress.AddDownloaded();
               },
               function (err) { // Error
                 console.log("download err:" + JSON.stringify(err));
                 GlobalVariable.DownloadProgress.ReduceTotal();
-                self.downloadImageToLocal(targetDirectory, targetName, itemId);       
+                self.downloadImageToLocal(targetDirectory, targetName, itemId);
               },
               function(progress) {}
             );
@@ -74,23 +74,23 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
       );
     },
     downloadAudioToLocal: function(targetDirectory,speechProvider, speechLanguageCode,speechGender,displayText, audioID) {
-      var self = this; 
+      var self = this;
       var targetName = "audio/" + speechProvider + "/" + speechLanguageCode + "/" + speechGender + "/" + audioID +  ".mp3";
       var a = $cordovaFile.checkFile(targetDirectory, targetName).then(
         function (success) { //file exist
           GlobalCacheVariable.FileCheck.AddExistAudioFile();
         },
-        function (error) { //file not exist     
+        function (error) { //file not exist
           GlobalVariable.DownloadProgress.AddTotal();
           $cordovaFileTransfer
             .download(ServerPathVariable.GetBingAudioPath(speechLanguageCode, speechGender, normalizeDisplayName(displayText)), (targetDirectory + "/" + targetName), { timeout: 10000 }, true).then(
-              function (result) { //download ok    
+              function (result) { //download ok
                 GlobalVariable.DownloadProgress.AddDownloaded();
               },
               function (err) {  //download error
                 console.log("download err:" + JSON.stringify(err));
                 GlobalVariable.DownloadProgress.ReduceTotal();
-                self.downloadAudioToLocal(targetDirectory, speechProvider, speechLanguageCode, speechGender, displayText, audioID);               
+                self.downloadAudioToLocal(targetDirectory, speechProvider, speechLanguageCode, speechGender, displayText, audioID);
                },
                function(progress) {}
             );

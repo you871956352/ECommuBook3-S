@@ -11,14 +11,10 @@ angular
       if(typeof $rootScope.isShowDisplayName == 'undefined') {
         $rootScope.isShowDisplayName = { checked: true };
       }
-      console.log( "Language Selected:" + userProfile.DISPLAY_LANGUAGE +  "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
       $scope.userProfile = userProfile;
-      console.log(userProfile);
+      console.log( "Language Selected:" + userProfile.DISPLAY_LANGUAGE +  "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
+      //console.log(userProfile);
     });
-    $scope.onShowDisplayNameChanged = function() {
-      console.log('onShowDisplayNameChanged');
-      console.log('$rootScope.isShowDisplayName:' + $rootScope.isShowDisplayName.checked);
-    }
     $scope.onCategoryClicked = function (categoryId) {
       var userProfile = UserProfileService.getLatest();
       var src = GlobalVariable.GetLocalAudioDirectory(userProfile) + categoryId + ".mp3";
@@ -104,13 +100,30 @@ angular
     console.log("start:" +  userProfile.DISPLAY_LANGUAGE + "/" +  userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
     $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.speechLanguageList = GlobalVariable.SpeechLanguageList;
+    $scope.genderList = GlobalVariable.GenderList;
     $scope.selectedDisplayLanguage;
     $scope.selectedSpeechLanguage;
     $scope.selectedSpeechGender;
+    $scope.onSelectedDisplayLanguageChanged = function() {
+      console.log("display language:" + $scope.selectedDisplayLanguage);
+      $scope.speechLanguageListOption = [];
+      for (var i = 0; i < $scope.speechLanguageList.length; i++) {
+        var speechLanguage = $scope.speechLanguageList[i];
+        if (speechLanguage.language == $scope.selectedDisplayLanguage) {
+          $scope.speechLanguageListOption.push(speechLanguage);
+        }
+      }
+    };
     $scope.onSelectedSpeechLanguageChanged = function() {
-      $scope.speechGenderOptions = [];
       console.log("speech language:" + $scope.selectedSpeechLanguage);
-      switch ($scope.selectedSpeechLanguage) {
+      $scope.speechGenderOptions = [];
+      for (var i = 0; i < $scope.genderList.length; i++) {
+        var gender = $scope.genderList[i];
+        if (gender.language == $scope.selectedSpeechLanguage) {
+          $scope.speechGenderOptions.push(gender);
+        }
+      }
+      /*switch ($scope.selectedSpeechLanguage) {
         case "ar-EG":
           $scope.speechGenderOptions.push({ value: "female", name: "أنثى" });
           break;
@@ -184,18 +197,7 @@ angular
         case "ko-KR":
           $scope.speechGenderOptions.push({ value: "female", name: "女" });
           break;
-      }
-    };
-    $scope.onSelectedDisplayLanguageChanged = function() {
-      console.log("display language:" + $scope.selectedDisplayLanguage);
-
-      $scope.speechLanguageListOption = [];
-      for (var i = 0; i < $scope.speechLanguageList.length; i++) {
-        var speechLanguage = $scope.speechLanguageList[i];
-        if (speechLanguage.language == $scope.selectedDisplayLanguage) {
-          $scope.speechLanguageListOption.push(speechLanguage);
-        }
-      }
+      }*/
     };
     $scope.onSelectedSpeechGenderChanged = function() {
       console.log("gender:" + $scope.selectedSpeechGender);
@@ -248,9 +250,6 @@ angular
         });
       });
     }
-  })
-  .controller("SettingOKCtrl", function($scope, $ionicSideMenuDelegate) {
-    $ionicSideMenuDelegate.toggleLeft();
   })
   .controller("AddCategoryCtrl", function( $rootScope,  $scope,  $cordovaCamera, $cordovaFileTransfer, $mdDialog,$http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
@@ -352,7 +351,7 @@ angular
               });
             },
             function (err) { // Error
-              console.log("Image upload Error: " + JSON.stringify(err));   
+              console.log("Image upload Error: " + JSON.stringify(err));
             },
             function(progress) { }
           );
@@ -370,10 +369,7 @@ angular
     $scope.selectedCategoryId = "";
     $scope.onSelectedCategoryChanged = function() {
       console.log("$scope.selectedCategoryId" + $scope.selectedCategoryId);
-      $scope.category = getCategoryById(
-        $scope.userProfile,
-        $scope.selectedCategoryId
-      );
+      $scope.category = getCategoryById($scope.userProfile,$scope.selectedCategoryId);
     };
     $scope.onDeleteCategoryConfirmClicked = function() {
       if($cordovaNetwork.isOffline()) {
@@ -382,7 +378,7 @@ angular
       }
       var categoryIndex = getCategoryIndexById($scope.userProfile, $scope.selectedCategoryId);
       if (categoryIndex == -1) {
-        console.log('categoryIndex = -1, categoryId:' + $scope.selectedCategoryId);
+        //console.log('categoryIndex = -1, categoryId:' + $scope.selectedCategoryId);
         alert("Please select category");
         return;
       }
@@ -436,15 +432,10 @@ angular
       var newItem = {};
       newItem.ID = $scope.uuid;
       newItem.DisplayName = displayName;
+      newItem.DisplayNameLanguage = $scope.inputLanguage;
       newItem.DisplayMultipleLanguage = [];
-      var url = ServerPathVariable.getTranslationsPath(
-        inputLanguage,
-        newItem.DisplayName
-      );
-      $http({
-        url: url,
-        method: "GET"
-      }).then(function(data) {
+      var url = ServerPathVariable.getTranslationsPath(inputLanguage,newItem.DisplayName);
+      $http({url: url,method: "GET"}).then(function(data) {
         newItem.DisplayMultipleLanguage = data.data;
         console.log(JSON.stringify(newItem));
 
@@ -484,7 +475,7 @@ angular
               });
             },
             function (err) { // Error
-              console.log(JSON.stringify(err));         
+              console.log(JSON.stringify(err));
             },
             function(progress) { }
           );
@@ -549,17 +540,10 @@ angular
     var userProfile = UserProfileService.getLatest();
     $scope.categories = userProfile.Categories;
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
-
-
     $scope.onSelectedCategoryChanged = function() {
-      console.log("$scope.selectedCategoryId" + $scope.selectedCategoryId);
-      $scope.category = getCategoryById(
-        $scope.userProfile,
-        $scope.selectedCategoryId
-      );
+      console.log("$scope.selectedCategoryId: " + $scope.selectedCategoryId);
+      $scope.category = getCategoryById($scope.userProfile,$scope.selectedCategoryId);
     };
-    $scope.onSelectedItemChanged = function() {};
-
     $scope.onDeleteItemConfirmClicked = function() {
       console.log("onDeleteItemConfirmClicked");
       if($cordovaNetwork.isOffline()) {

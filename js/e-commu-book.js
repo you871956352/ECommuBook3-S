@@ -107,6 +107,37 @@ var GlobalVariable = new function () { //User to store some global variable
     { name: "[zh-HK]中文 (粵語)", value: "zh-HK", language: "yue" },
     { name: "[ko-KR]Korean (Korea)", value: "ko-KR", language: "ko" }
   ];
+  this.GenderList = [
+    { name: "أنثى", value: "female", language: "ar-EG" },
+    { name: "weiblich", value: "female", language: "de-DE" },
+    { name: "männlich", value: "male", language: "de-DE"},
+    { name: "Female", value: "female", language: "en-AU"},
+    { name: "Female", value: "female", language: "en-CA"},
+    { name: "Female", value: "female", language: "en-GB"},
+    { name: "Male", value: "male", language: "en-GB"},
+    { name: "Male", value: "male", language: "en-IN"},
+    { name: "Female", value: "female", language: "en-US"},
+    { name: "Male", value: "male", language: "en-US"},
+    { name: "hembra", value: "female", language: "es-ES"},
+    { name: "masculino", value: "male", language: "es-ES"},
+    { name: "masculino", value: "male", language: "es-MX"},
+    { name: "femelle", value: "female", language: "fr-CA"},
+    { name: "femelle", value: "female", language: "fr-FR"},
+    { name: "mâle", value: "male", language: "fr-FR"},
+    { name: "maschio", value: "male", language: "it-IT"},
+    { name: "女性", value: "female", language: "ja-JP"},
+    { name: "男性", value: "male", language: "ja-JP"},
+    { name: "masculino", value: "male", language: "pt-BR"},
+    { name: "женский пол", value: "female", language: "ru-RU"},
+    { name: "мужской", value: "male", language: "ru-RU"},
+    { name: "女", value: "female", language: "zh-CN"},
+    { name: "男", value: "male", language: "zh-CN"},
+    { name: "女", value: "female", language: "zh-HK"},
+    { name: "男", value: "male", language: "zh-HK"},
+    { name: "女", value: "female", language: "zh-TW"},
+    { name: "男", value: "male", language: "zh-TW"},
+    { name: "女", value: "female", language: "ko-KR"}
+  ];
 };
 
 var GlobalCacheVariable = new function () { //

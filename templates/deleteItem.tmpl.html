@@ -22,7 +22,7 @@
 
               <md-input-container>
                 <label>Select Item:</label>
-                <md-select ng-model="selectedItemId" ng-change="onSelectedItemChanged()">
+                <md-select ng-model="selectedItemId">
                   <md-option ng-value="item.ID" ng-repeat="item in category.Items">
                     <div ng-repeat="translation in item.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">{{translation.Text}}</div>
                   </md-option>
