@@ -154,10 +154,86 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
         }
       }, 2000); //delay 2 seconds
     },
+    deleteLocalImage: function(targetDirectory, targetID) {
+      var targetName = targetID + ".jpg";
+      console.log("Start remove local image: " + targetID);
+      console.log("TargetDirectory: " + targetDirectory + "\nTargetName:" + targetName);
+      $cordovaFile.removeFile(targetDirectory, targetName).then(
+        function(result) {
+          console.log("Remove image: Success");
+          $cordovaFile.checkFile(targetDirectory, targetName).then(
+            function(result) {
+              console.log("Check file: Image still exist");
+            },
+            function(err) {
+              console.log("Check file: Image removed.");
+            }
+          );
+        },
+        function(err) {
+          console.log("Remove image: Error.");
+        }
+      );
+    },
+    deleteLocalAudio: function(userProfile,targetDirectory, targetID) {
+      var speechProvider = "bing";
+      var currentSpeechLanguageCode = userProfile.SPEECH_LANGUAGE_CODE;
+      var currentSpeechGender = userProfile.SPEECH_GENDER;
+      var targetName = speechProvider + "/" + currentSpeechLanguageCode + "/" + currentSpeechGender + "/" + targetID +  ".mp3";
+      console.log("Start remove local audio: " + targetID);
+      console.log("TargetDirectory: " + targetDirectory + "\nTargetName:" + targetName);
+      $cordovaFile.removeFile(targetDirectory, targetName).then(
+        function(result) {
+          console.log("Remove audio: Success");
+          $cordovaFile.checkFile(targetDirectory, targetName).then(
+            function(result) {
+              console.log("Check file: Audio still exist");
+            },
+            function(err) {
+              console.log("Check file: Audio removed.");
+            }
+          );
+        },
+        function(err) {
+          console.log("Remove Audio: Error.");
+        }
+      );
+    },
     clearAllCache: function () {
-      console.log("Start clear all cache");
-      var targetDirectory = GlobalVariable.LocalCacheDirectory();
-      $cordovaFile.removeRecursively()
+      console.log("Reset: Start clear local cache");
+      var path = GlobalVariable.LocalCacheDirectory();
+      $cordovaFile.removeRecursively(path,"images").then(
+        function(result) {
+          console.log("Clear image: Success");
+          $cordovaFile.checkDir(path, "images").then(
+            function(result) {
+              console.log("Check clear: Image still exist");
+            },
+            function(err) {
+              console.log("Check clear: Image removed");
+            }
+          );
+        },
+        function(err) {
+          console.log("Clear image: Error");
+        }
+      );
+      $cordovaFile.removeRecursively(path,"audio").then(
+        function(result) {
+          console.log("Clear audio: Success");
+          $cordovaFile.checkDir(path, "audio").then(
+            function(result) {
+              console.log("Check clear: Audio still exist");
+            },
+            function(err) {
+              console.log("Check clear: Audio removed");
+            }
+          );
+        },
+        function(err) {
+          console.log("Clear audio: Error");
+        }
+      );
     }
   };
 });

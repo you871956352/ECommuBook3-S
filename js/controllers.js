@@ -96,8 +96,6 @@ angular
     }
   })
   .controller("SettingCtrl", function(  $scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService) {
-    var userProfile = UserProfileService.getLatest();
-    console.log("start:" +  userProfile.DISPLAY_LANGUAGE + "/" +  userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
     $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.speechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.genderList = GlobalVariable.GenderList;
@@ -236,15 +234,15 @@ angular
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
       }
-      console.log('onConfirmResetUserprofileButtonClicked');
+      LocalCacheService.clearAllCache();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       var userProfile = UserProfileService.getDefault();
       userProfile.ID = guid();
       UserProfileService.saveLocal(userProfile);
       UserProfileService.postToServerCallback(function() {
-        console.log('new userprofile has been posted, userid:' + userProfile.ID);
+        console.log('Setting: reset userProfile and uploaded. UserID: ' + userProfile.ID);
         UserProfileService.cloneItem(userProfile.ID, function() {
-          console.log('uuuuu:' + JSON.stringify(UserProfileService.getLatest()));
+          console.log('UserProfile:' + JSON.stringify(UserProfileService.getLatest()));
           GlobalVariable.DownloadProgress.Reset();
           LocalCacheService.prepareCache(UserProfileService.getLatest());
         });
@@ -363,12 +361,13 @@ angular
     };
   })
   .controller("DeleteCategoryCtrl", function($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService,LocalCacheService) {
-    var userProfile = UserProfileService.getLatest();
-    $scope.categories = userProfile.Categories;
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.categories = $scope.userProfile.Categories;
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
+    $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
     $scope.selectedCategoryId = "";
     $scope.onSelectedCategoryChanged = function() {
-      console.log("$scope.selectedCategoryId" + $scope.selectedCategoryId);
+      console.log("$scope.selectedCategoryId: " + $scope.selectedCategoryId);
       $scope.category = getCategoryById($scope.userProfile,$scope.selectedCategoryId);
     };
     $scope.onDeleteCategoryConfirmClicked = function() {
@@ -376,18 +375,28 @@ angular
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
       }
+      var idList = [];
       var categoryIndex = getCategoryIndexById($scope.userProfile, $scope.selectedCategoryId);
       if (categoryIndex == -1) {
-        //console.log('categoryIndex = -1, categoryId:' + $scope.selectedCategoryId);
         alert("Please select category");
         return;
+      } else {
+        idList.push($scope.selectedCategoryId);
+        var category = $scope.categories[categoryIndex];
+        for (i = 0; i < category.Items.length; i++) {
+          var item = category.Items[i];
+          idList.push(item.ID);
+        }
       }
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       $scope.userProfile.Categories.splice(categoryIndex, 1);
-
       UserProfileService.saveLocal($scope.userProfile);
       UserProfileService.postToServerCallback(function () {
-        console.log('delete complete, user profile uploaded');
+        console.log("Deleted in userProfile and uploaded.");
+        for (i = 0; i < idList.length; i++) {
+          LocalCacheService.deleteLocalImage($scope.ImagePath,idList[i]);
+          LocalCacheService.deleteLocalAudio($scope.userProfile,$scope.AudioPath,idList[i]);
+        }
         LoadingDialog.hideLoadingPopup($mdDialog);
         $ionicSideMenuDelegate.toggleLeft();
         alert("Category Deleted");
@@ -537,9 +546,10 @@ angular
     };
   })
   .controller("DeleteItemCtrl", function($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
-    var userProfile = UserProfileService.getLatest();
-    $scope.categories = userProfile.Categories;
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.categories = $scope.userProfile.Categories;
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
+    $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
     $scope.onSelectedCategoryChanged = function() {
       console.log("$scope.selectedCategoryId: " + $scope.selectedCategoryId);
       $scope.category = getCategoryById($scope.userProfile,$scope.selectedCategoryId);
@@ -563,11 +573,12 @@ angular
         return;
       }
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-
       $scope.userProfile.Categories[categoryIndex] = $scope.category;
       UserProfileService.saveLocal($scope.userProfile);
       UserProfileService.postToServerCallback(function () {
-        console.log('delete complete, user profile uploaded');
+        console.log("Deleted in userProfile and uploaded.");
+        LocalCacheService.deleteLocalImage($scope.ImagePath,$scope.selectedItemId);
+        LocalCacheService.deleteLocalAudio($scope.userProfile,$scope.AudioPath,$scope.selectedItemId);
         $ionicSideMenuDelegate.toggleLeft();
         LoadingDialog.hideLoadingPopup($mdDialog);
         alert("Item Deleted");
@@ -628,5 +639,6 @@ angular
     $scope.uid = 0;
     $scope.testClick = function () {
       alert( UserProfileService.getLatest().ID);
+      console.log("UserID: " + UserProfileService.getLatest().ID);
     }
   });
