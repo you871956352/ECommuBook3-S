@@ -2,7 +2,7 @@
 /* global console */
 angular
   .module("starter.controllers", [])
-  .controller("AppCtrl", function ($rootScope, $scope, $ionicModal, $timeout, $localStorage,$http,$cordovaMedia, UserProfileService, LocalCacheService) {
+  .controller("AppCtrl", function ($rootScope, $scope,$mdDialog,$ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage,$http,$cordovaMedia,$cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.$on("$ionicView.enter", function(e) {
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
       $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
@@ -13,7 +13,18 @@ angular
       }
       $scope.userProfile = userProfile;
       console.log( "Language Selected:" + userProfile.DISPLAY_LANGUAGE +  "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
-      //console.log(userProfile);
+      if(window.localStorage.getItem("loggedIn") != 1) {
+        if($cordovaNetwork.isOffline()) {
+          alert("Please connect to the Internet for app initilization.");
+          return;
+        }else{
+          window.localStorage.setItem("loggedIn", 1);
+          console.log("First run: initialization");
+          GlobalVariable.DownloadProgress.Reset();
+          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+          LocalCacheService.prepareCache(userProfile);
+        }
+      }
     });
     $scope.onCategoryClicked = function (categoryId) {
       var userProfile = UserProfileService.getLatest();
@@ -325,12 +336,10 @@ angular
       newCategory.DisplayName = $scope.categoryName;
       newCategory.DisplayNameLanguage = $scope.inputLanguage;
       newCategory.DisplayMultipleLanguage = [];
-
       $http({url: ServerPathVariable.getTranslationsPath($scope.inputLanguage, newCategory.DisplayName), method: "GET" }).then(function (data) {
         newCategory.DisplayMultipleLanguage = data.data;
         $scope.userProfile.Categories.push(newCategory);
         UserProfileService.saveLocal($scope.userProfile);
-
         UserProfileService.postToServerCallback(function() {
           var filePath = $scope.selectedImageUrl;
           var options = new FileUploadOptions();
@@ -339,11 +348,9 @@ angular
           options.mimeType = "image/jpeg";
           options.httpMethod = "POST";
           options.params = { uuid: newCategory.ID };
-
           console.log("Category Option: " + JSON.stringify(options));
           $cordovaFileTransfer.upload(ServerPathVariable.GetPostImagePath(), filePath, options).then(
             function(result) {
-              console.log("Image upload Success");
               UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
                 LocalCacheService.prepareCache(UserProfileService.getLatest());
               });
@@ -357,7 +364,6 @@ angular
       }, function errorCallback(response) {
         alert("Server is not avaliable: " + response);
       });
-      return;
     };
   })
   .controller("DeleteCategoryCtrl", function($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService,LocalCacheService) {
@@ -432,11 +438,9 @@ angular
         alert("Please select a image");
         return;
       }
-
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-
-      console.log("new guid:" + $scope.uuid);
+      console.log("Item ID:" + $scope.uuid);
       var userProfile = UserProfileService.getLatest();
       var newItem = {};
       newItem.ID = $scope.uuid;
@@ -447,7 +451,6 @@ angular
       $http({url: url,method: "GET"}).then(function(data) {
         newItem.DisplayMultipleLanguage = data.data;
         console.log(JSON.stringify(newItem));
-
         var categoryIndex = getCategoryIndexById(
           UserProfileService.getLatest(),
           selectedCategoryId
@@ -461,25 +464,20 @@ angular
         UserProfileService.postToServerCallback(function() {
           var filePath = $scope.selectedImageUrl;
           var server = ServerPathVariable.GetPostImagePath();
-
           var options = new FileUploadOptions();
           options.fileKey = "file";
           options.fileName = filePath.substr(filePath.lastIndexOf("/") + 1);
           options.mimeType = "image/jpeg";
           options.httpMethod = "POST";
-
           var params = {};
           params.uuid = newItem.ID;
           options.params = params;
-
           console.log(JSON.stringify(options));
-
           $cordovaFileTransfer.upload(server, filePath, options).then(
             function(result) {
               console.log(JSON.stringify(result));
               var userProfile = UserProfileService.getLatest();
               UserProfileService.getOnline(userProfile.ID, function() {
-                console.log("------------------------------------");
                 LocalCacheService.prepareCache(UserProfileService.getLatest());
               });
             },
@@ -490,11 +488,6 @@ angular
           );
         });
       });
-
-      console.log("return reach");
-      return;
-
-      return;
     };
     $scope.onTakeImageButtonClicked = function(mode) {
       console.log("onTakeImageButtonClicked");

@@ -10808,85 +10808,7 @@ function getSampleUserProfile() {
     ],
     Sentences: [],
     deletionLog: -1,
-    log: [
-      {
-        userId: "00000000-0000-0000-0000-000000000000",
-        type: "Scroll",
-        subject: "Menu",
-        message: "ScrollTop:931",
-        logTime: "20170203075811807"
-      },
-      {
-        userId: "00000000-0000-0000-0000-000000000000",
-        type: "Scroll",
-        subject: "Thumb",
-        message: "ScrollLeft:262",
-        logTime: "20161221113446796"
-      },
-      {
-        userId: "00000000-0000-0000-0000-000000000000",
-        type: "Scroll",
-        subject: "Thumb",
-        message: "ScrollLeft:245",
-        logTime: "20161221113446827"
-      },
-      {
-        userId: "00000000-0000-0000-0000-000000000000",
-        type: "Scroll",
-        subject: "Thumb",
-        message: "ScrollLeft:167",
-        logTime: "20161221113446835"
-      },
-      {
-        userId: "00000000-0000-0000-0000-000000000000",
-        type: "Scroll",
-        subject: "Thumb",
-        message: "ScrollLeft:128",
-        logTime: "20161221113446845"
-      },
-      {
-        userId: "00000000-0000-0000-0000-000000000000",
-        type: "Scroll",
-        subject: "Thumb",
-        message: "ScrollLeft:97",
-        logTime: "20161221113446862"
-      },
-      {
-        userId: "00000000-0000-0000-0000-000000000000",
-        type: "Scroll",
-        subject: "Thumb",
-        message: "ScrollLeft:71",
-        logTime: "20161221113446878"
-      },
-      {
-        userId: "00000000-0000-0000-0000-000000000000",
-        type: "Scroll",
-        subject: "Thumb",
-        message: "ScrollLeft:60",
-        logTime: "20161221113446896"
-      },
-      {
-        userId: "00000000-0000-0000-0000-000000000000",
-        type: "Scroll",
-        subject: "Thumb",
-        message: "ScrollLeft:29",
-        logTime: "20161221113447534"
-      },
-      {
-        userId: "00000000-0000-0000-0000-000000000000",
-        type: "Scroll",
-        subject: "Thumb",
-        message: "ScrollLeft:0",
-        logTime: "20161221113447608"
-      },
-      {
-        userId: "00000000-0000-0000-0000-000000000000",
-        type: "Scroll",
-        subject: "Menu",
-        message: "ScrollTop:18",
-        logTime: "20161221113448987"
-      }
-    ],
+    log: [],
     lastUploadedLog: 0,
     SignAgreement: true,
     ItemText: "SHOWN",
@@ -10896,6 +10818,5 @@ function getSampleUserProfile() {
     SPEECH_GENDER: "female",
     SPEECH_LANGUAGE_CODE: "zh-HK"
   };
-
   return json;
 }
