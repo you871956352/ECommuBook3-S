@@ -18,18 +18,20 @@
         <ion-item ng-repeat="category in userProfile.Categories" href="#/app/category/{{category.ID}}" ng-click="onCategoryClicked(category.ID)">
           <img width="80%; padding-top: 75%;" src='{{ImagePath}}/{{category.ID}}.jpg' />
           <div ng-repeat="translation in category.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE && isShowDisplayName.checked">
-            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}}
-            </span>
+            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
           </div>
         </ion-item>
 
+        <ion-item menu-close href="#/app/share">
+          <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Download</span>
+        </ion-item>
         <ion-item menu-close href="#/app/addCategory">
           <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Add Category</span>
         </ion-item>
         <ion-item menu-close href="#/app/deleteCategory">
           <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Delete Category</span>
         </ion-item>
-        <ion-item menu-close href="#/app/addItem" >
+        <ion-item menu-close href="#/app/addItem">
           <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Add Item</span>
         </ion-item>
         <ion-item menu-close href="#/app/deleteItem">

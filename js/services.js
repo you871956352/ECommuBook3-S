@@ -49,7 +49,7 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
   };
 });
 
-myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cordovaFileTransfer) { //Used for store user audio and image
+myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $cordovaFileTransfer) { //Used for store user audio and image
   return {
     downloadImageToLocal: function(targetDirectory, targetName, itemId) {
       var self = this;
@@ -97,7 +97,7 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
         }
       );
     },
-    prepareCache: function(userProfile) {
+    prepareCache: function (userProfile) {
       console.log("Start prepare cache");
       var self = this;
       GlobalCacheVariable.FileCheck.Reset();
@@ -111,6 +111,7 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
           idList.push(item.ID);
         }
       }
+
       GlobalVariable.DownloadProgress.Reset();
       var targetDirectory = GlobalVariable.LocalCacheDirectory();
       $cordovaFile.createDir(targetDirectory, "images", false);
@@ -235,5 +236,20 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
         }
       );
     }
+  };
+});
+
+myModule.factory("ShareCategoryService", function ($http, $localStorage) { //Store User Prefile
+  return {
+    getOnline: function () {
+      console.log("Read shareCategory online.");
+      $http.get(ServerPathVariable.GetSharePath()).then(function (data) {
+        $localStorage.shareCategory = data.data;
+      });
+    },
+    getShareCategory: function () {
+      this.getOnline();
+      return $localStorage.shareCategory;
+    },
   };
 });

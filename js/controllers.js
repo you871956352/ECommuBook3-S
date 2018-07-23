@@ -132,81 +132,6 @@ angular
           $scope.speechGenderOptions.push(gender);
         }
       }
-      /*switch ($scope.selectedSpeechLanguage) {
-        case "ar-EG":
-          $scope.speechGenderOptions.push({ value: "female", name: "أنثى" });
-          break;
-        case "de-DE":
-          $scope.speechGenderOptions.push({
-            value: "female",
-            name: "weiblich"
-          });
-          $scope.speechGenderOptions.push({ value: "male", name: "männlich" });
-          break;
-        case "en-AU":
-          $scope.speechGenderOptions.push({ value: "female", name: "Female" });
-          break;
-        case "en-CA":
-          $scope.speechGenderOptions.push({ value: "female", name: "Female" });
-          break;
-        case "en-GB":
-          $scope.speechGenderOptions.push({ value: "female", name: "Female" });
-          $scope.speechGenderOptions.push({ value: "male", name: "Male" });
-          break;
-        case "en-IN":
-          $scope.speechGenderOptions.push({ value: "male", name: "Male" });
-          break;
-        case "en-US":
-          $scope.speechGenderOptions.push({ value: "female", name: "Female" });
-          $scope.speechGenderOptions.push({ value: "male", name: "Male" });
-          break;
-        case "es-ES":
-          $scope.speechGenderOptions.push({ value: "female", name: "hembra" });
-          $scope.speechGenderOptions.push({ value: "male", name: "masculino" });
-          break;
-        case "es-MX":
-          $scope.speechGenderOptions.push({ value: "male", name: "masculino" });
-          break;
-        case "fr-CA":
-          $scope.speechGenderOptions.push({ value: "female", name: "femelle" });
-          break;
-        case "fr-FR":
-          $scope.speechGenderOptions.push({ value: "female", name: "femelle" });
-          $scope.speechGenderOptions.push({ value: "male", name: "mâle" });
-          break;
-        case "it-IT":
-          $scope.speechGenderOptions.push({ value: "male", name: "maschio" });
-          break;
-        case "ja-JP":
-          $scope.speechGenderOptions.push({ value: "female", name: "女性" });
-          $scope.speechGenderOptions.push({ value: "male", name: "男性" });
-          break;
-        case "pt-BR":
-          $scope.speechGenderOptions.push({ value: "male", name: "masculino" });
-          break;
-        case "ru-RU":
-          $scope.speechGenderOptions.push({
-            value: "female",
-            name: "женский пол"
-          });
-          $scope.speechGenderOptions.push({ value: "male", name: "мужской" });
-          break;
-        case "zh-CN":
-          $scope.speechGenderOptions.push({ value: "female", name: "女" });
-          $scope.speechGenderOptions.push({ value: "male", name: "男" });
-          break;
-        case "zh-HK":
-          $scope.speechGenderOptions.push({ value: "female", name: "女" });
-          $scope.speechGenderOptions.push({ value: "male", name: "男" });
-          break;
-        case "zh-TW":
-          $scope.speechGenderOptions.push({ value: "female", name: "女" });
-          $scope.speechGenderOptions.push({ value: "male", name: "男" });
-          break;
-        case "ko-KR":
-          $scope.speechGenderOptions.push({ value: "female", name: "女" });
-          break;
-      }*/
     };
     $scope.onSelectedSpeechGenderChanged = function() {
       console.log("gender:" + $scope.selectedSpeechGender);
@@ -579,8 +504,7 @@ angular
     };
   })
   .controller("WelcomeCtrl", function( $scope, $mdDialog, $http, $ionicSideMenuDelegate, UserProfileService, LocalCacheService) {})
-  .controller("GridController", [
-    "$scope",
+  .controller("GridController", ["$scope",
     function($scope) {
       var i;
       $scope.itemsList = {
@@ -626,6 +550,13 @@ angular
       var otherIndex = $scope.draggableObjects.indexOf(obj);
       $scope.draggableObjects[index] = obj;
       $scope.draggableObjects[otherIndex] = otherObj;
+    };
+  })
+  .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, $mdDialog) { //Share Ctrl, for user downloading
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.shareCategory = ShareCategoryService.getShareCategory();
+    $scope.onItemClickedDownload = function ($event, ID) {
+      alert(ID);
     };
   })
   .controller("TestCtrl", function ($scope, UserProfileService, $mdDialog) { //Test Ctrl, for logging

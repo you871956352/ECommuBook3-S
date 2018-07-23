@@ -30,6 +30,9 @@ var ServerPathVariable = new function () { //User to store server return path
   this.getTranslationsPath = function (sourceLanguage, sourceText) {
     return (this.hostname + this.path + 'translations/' + sourceLanguage + '/' + sourceText);
   };
+  this.GetSharePath = function () {
+    return (this.hostname + this.path + 'category/share');
+  };
 };
 
 var GlobalVariable = new function () { //User to store some global variable

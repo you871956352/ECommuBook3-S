@@ -100,6 +100,15 @@ angular
           }
         }
       })
+      .state("app.share", {
+        url: "/share",
+        views: {
+          menuContent: {
+            templateUrl: "templates/share.html",
+            controller: "ShareCtrl"
+          }
+        }
+      })
       .state("app.test", {
         url: "/test",
         views: {
