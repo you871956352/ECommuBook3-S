@@ -552,9 +552,13 @@ angular
       $scope.draggableObjects[otherIndex] = otherObj;
     };
   })
-  .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, $mdDialog) { //Share Ctrl, for user downloading
+  .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
+    $scope.refreshOnlineResource = function () {
+      console.log("Start to download online resources");
+      LocalCacheService.prepareShareCategory($scope.shareCategory);
+    },
     $scope.onItemClickedDownload = function ($event, ID) {
       alert(ID);
     };

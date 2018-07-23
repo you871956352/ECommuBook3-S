@@ -1,6 +1,17 @@
 <ion-view cache-view="false" view-title="Download">
   <ion-content>
     <div id="grid-container" class="container-fluid" ng-controller="ShareCtrl" ng-cloak>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Get Online Resource</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <md-button ng-click=refreshOnlineResource()>Get Now!</md-button>
+        </md-card-content>
+      </md-card>
+
       <div class="row">
         <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="shareCategory.categories">
           <div ng-repeat="category in shareCategory.categories" style="float:left;width:32%">
@@ -14,7 +25,7 @@
           </div>
         </div>
       </div>
-   </div>
+    </div>
 </ion-content>
 </ion-view>
 
