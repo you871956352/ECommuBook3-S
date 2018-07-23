@@ -33,6 +33,9 @@ var ServerPathVariable = new function () { //User to store server return path
   this.GetSharePath = function () {
     return (this.hostname + this.path + 'category/share');
   };
+  this.GetUploadSharePath = function (categoryID) {
+    return this.GetSharePath() + "/" + categoryID;
+  }
 };
 
 var GlobalVariable = new function () { //User to store some global variable

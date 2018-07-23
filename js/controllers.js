@@ -2,22 +2,22 @@
 /* global console */
 angular
   .module("starter.controllers", [])
-  .controller("AppCtrl", function ($rootScope, $scope,$mdDialog,$ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage,$http,$cordovaMedia,$cordovaNetwork, UserProfileService, LocalCacheService) {
-    $scope.$on("$ionicView.enter", function(e) {
+  .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService) {
+    $scope.$on("$ionicView.enter", function (e) {
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
       $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
       // on page loaded
       var userProfile = UserProfileService.getLatest();
-      if(typeof $rootScope.isShowDisplayName == 'undefined') {
+      if (typeof $rootScope.isShowDisplayName == 'undefined') {
         $rootScope.isShowDisplayName = { checked: true };
       }
       $scope.userProfile = userProfile;
-      console.log( "Language Selected:" + userProfile.DISPLAY_LANGUAGE +  "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
-      if(window.localStorage.getItem("loggedIn") != 1) {
-        if($cordovaNetwork.isOffline()) {
+      console.log("Language Selected:" + userProfile.DISPLAY_LANGUAGE + "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
+      if (window.localStorage.getItem("loggedIn") != 1) {
+        if ($cordovaNetwork.isOffline()) {
           alert("Please connect to the Internet for app initilization.");
           return;
-        }else{
+        } else {
           window.localStorage.setItem("loggedIn", 1);
           console.log("First run: initialization");
           GlobalVariable.DownloadProgress.Reset();
@@ -51,10 +51,10 @@ angular
       }
     }
     $scope.width = 1;
-    $scope.onItemClicked = function(ev, itemId) {
+    $scope.onItemClicked = function (ev, itemId) {
       $scope.showEnlargeItemPopup(ev, itemId);
     };
-    $scope.showEnlargeItemPopup = function(ev, itemId) {
+    $scope.showEnlargeItemPopup = function (ev, itemId) {
       userProfile = UserProfileService.getLatest();
       targetItem = getItemObjectByItemId(userProfile, itemId);
       var targetScope = $scope.$new();
@@ -71,49 +71,49 @@ angular
       var src = targetScope.AudioDirectory + targetScope.selectedItemId + ".mp3";
       MediaPlayer.play($cordovaMedia, src);
       $mdDialog.show({
-          controller: DialogController,
-          templateUrl: "templates/popup-item.tmpl.html",
-          parent: angular.element(document.body),
-          targetEvent: ev,
-          clickOutsideToClose: true,
-          scope: targetScope,
-          fullscreen: false // Only for -xs, -sm breakpoints.
-        })
+        controller: DialogController,
+        templateUrl: "templates/popup-item.tmpl.html",
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        scope: targetScope,
+        fullscreen: false // Only for -xs, -sm breakpoints.
+      })
         .then(
-          function(answer) {
+          function (answer) {
             $scope.status = 'You said the information was "' + answer + '".';
           },
-          function() {
+          function () {
             $scope.status = "You cancelled the dialog.";
           }
         );
     };
     function DialogController($scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer) {
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
-      $scope.hide = function() {
+      $scope.hide = function () {
         $mdDialog.hide();
       };
-      $scope.cancel = function() {
+      $scope.cancel = function () {
         $mdDialog.cancel();
       };
-      $scope.answer = function(answer) {
+      $scope.answer = function (answer) {
         $mdDialog.hide(answer);
       };
 
-      $scope.onItemClicked = function(ev) {
+      $scope.onItemClicked = function (ev) {
         var src = $scope.AudioDirectory + $scope.selectedItemId + ".mp3";
         MediaPlayer.play($cordovaMedia, src);
       };
     }
   })
-  .controller("SettingCtrl", function(  $scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService) {
+  .controller("SettingCtrl", function ($scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.speechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.genderList = GlobalVariable.GenderList;
     $scope.selectedDisplayLanguage;
     $scope.selectedSpeechLanguage;
     $scope.selectedSpeechGender;
-    $scope.onSelectedDisplayLanguageChanged = function() {
+    $scope.onSelectedDisplayLanguageChanged = function () {
       console.log("display language:" + $scope.selectedDisplayLanguage);
       $scope.speechLanguageListOption = [];
       for (var i = 0; i < $scope.speechLanguageList.length; i++) {
@@ -123,7 +123,7 @@ angular
         }
       }
     };
-    $scope.onSelectedSpeechLanguageChanged = function() {
+    $scope.onSelectedSpeechLanguageChanged = function () {
       console.log("speech language:" + $scope.selectedSpeechLanguage);
       $scope.speechGenderOptions = [];
       for (var i = 0; i < $scope.genderList.length; i++) {
@@ -133,11 +133,11 @@ angular
         }
       }
     };
-    $scope.onSelectedSpeechGenderChanged = function() {
+    $scope.onSelectedSpeechGenderChanged = function () {
       console.log("gender:" + $scope.selectedSpeechGender);
     };
-    $scope.onConfirmLanguageButtonClicked = function() {
-      if($cordovaNetwork.isOffline()) {
+    $scope.onConfirmLanguageButtonClicked = function () {
+      if ($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
       }
@@ -156,17 +156,17 @@ angular
         });
       }
     };
-    $scope.onItemNormalFontSizeChanged = function() {
+    $scope.onItemNormalFontSizeChanged = function () {
       GlobalVariable.Appearance.itemNormalFontSize = $scope.itemNormalFontSize;
     };
-    $scope.onConfirmAppearanceButtonClicked = function() {
-      setTimeout(function() {
+    $scope.onConfirmAppearanceButtonClicked = function () {
+      setTimeout(function () {
         $state.go("app.setting", {}, { reload: true });
         $ionicSideMenuDelegate.toggleLeft();
       }, 500);
     };
-    $scope.onConfirmResetUserprofileButtonClicked = function() {
-      if($cordovaNetwork.isOffline()) {
+    $scope.onConfirmResetUserprofileButtonClicked = function () {
+      if ($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
       }
@@ -175,9 +175,9 @@ angular
       var userProfile = UserProfileService.getDefault();
       userProfile.ID = guid();
       UserProfileService.saveLocal(userProfile);
-      UserProfileService.postToServerCallback(function() {
+      UserProfileService.postToServerCallback(function () {
         console.log('Setting: reset userProfile and uploaded. UserID: ' + userProfile.ID);
-        UserProfileService.cloneItem(userProfile.ID, function() {
+        UserProfileService.cloneItem(userProfile.ID, function () {
           console.log('UserProfile:' + JSON.stringify(UserProfileService.getLatest()));
           GlobalVariable.DownloadProgress.Reset();
           LocalCacheService.prepareCache(UserProfileService.getLatest());
@@ -185,7 +185,7 @@ angular
       });
     }
   })
-  .controller("AddCategoryCtrl", function( $rootScope,  $scope,  $cordovaCamera, $cordovaFileTransfer, $mdDialog,$http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
+  .controller("AddCategoryCtrl", function ($rootScope, $scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.uuid = guid();
@@ -236,7 +236,7 @@ angular
       );
     };
     $scope.onAddCategoryConfirmClicked = function () {
-      if($cordovaNetwork.isOffline()) {
+      if ($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
       }
@@ -261,11 +261,11 @@ angular
       newCategory.DisplayName = $scope.categoryName;
       newCategory.DisplayNameLanguage = $scope.inputLanguage;
       newCategory.DisplayMultipleLanguage = [];
-      $http({url: ServerPathVariable.getTranslationsPath($scope.inputLanguage, newCategory.DisplayName), method: "GET" }).then(function (data) {
+      $http({ url: ServerPathVariable.getTranslationsPath($scope.inputLanguage, newCategory.DisplayName), method: "GET" }).then(function (data) {
         newCategory.DisplayMultipleLanguage = data.data;
         $scope.userProfile.Categories.push(newCategory);
         UserProfileService.saveLocal($scope.userProfile);
-        UserProfileService.postToServerCallback(function() {
+        UserProfileService.postToServerCallback(function () {
           var filePath = $scope.selectedImageUrl;
           var options = new FileUploadOptions();
           options.fileKey = "file";
@@ -275,7 +275,7 @@ angular
           options.params = { uuid: newCategory.ID };
           console.log("Category Option: " + JSON.stringify(options));
           $cordovaFileTransfer.upload(ServerPathVariable.GetPostImagePath(), filePath, options).then(
-            function(result) {
+            function (result) {
               UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
                 LocalCacheService.prepareCache(UserProfileService.getLatest());
               });
@@ -283,7 +283,7 @@ angular
             function (err) { // Error
               console.log("Image upload Error: " + JSON.stringify(err));
             },
-            function(progress) { }
+            function (progress) { }
           );
         });
       }, function errorCallback(response) {
@@ -291,18 +291,18 @@ angular
       });
     };
   })
-  .controller("DeleteCategoryCtrl", function($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService,LocalCacheService) {
+  .controller("DeleteCategoryCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
     $scope.selectedCategoryId = "";
-    $scope.onSelectedCategoryChanged = function() {
+    $scope.onSelectedCategoryChanged = function () {
       console.log("$scope.selectedCategoryId: " + $scope.selectedCategoryId);
-      $scope.category = getCategoryById($scope.userProfile,$scope.selectedCategoryId);
+      $scope.category = getCategoryById($scope.userProfile, $scope.selectedCategoryId);
     };
-    $scope.onDeleteCategoryConfirmClicked = function() {
-      if($cordovaNetwork.isOffline()) {
+    $scope.onDeleteCategoryConfirmClicked = function () {
+      if ($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
       }
@@ -325,8 +325,8 @@ angular
       UserProfileService.postToServerCallback(function () {
         console.log("Deleted in userProfile and uploaded.");
         for (i = 0; i < idList.length; i++) {
-          LocalCacheService.deleteLocalImage($scope.ImagePath,idList[i]);
-          LocalCacheService.deleteLocalAudio($scope.userProfile,$scope.AudioPath,idList[i]);
+          LocalCacheService.deleteLocalImage($scope.ImagePath, idList[i]);
+          LocalCacheService.deleteLocalAudio($scope.userProfile, $scope.AudioPath, idList[i]);
         }
         LoadingDialog.hideLoadingPopup($mdDialog);
         $ionicSideMenuDelegate.toggleLeft();
@@ -334,14 +334,14 @@ angular
       });
     };
   })
-  .controller("AddItemCtrl", function($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
+  .controller("AddItemCtrl", function ($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.uuid = guid();
     $scope.inputLanguageList = GlobalVariable.DisplayLanguageList;
-    $scope.onAddItemConfirmClicked = function() {
-      if($cordovaNetwork.isOffline()) {
+    $scope.onAddItemConfirmClicked = function () {
+      if ($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
       }
@@ -372,8 +372,8 @@ angular
       newItem.DisplayName = displayName;
       newItem.DisplayNameLanguage = $scope.inputLanguage;
       newItem.DisplayMultipleLanguage = [];
-      var url = ServerPathVariable.getTranslationsPath(inputLanguage,newItem.DisplayName);
-      $http({url: url,method: "GET"}).then(function(data) {
+      var url = ServerPathVariable.getTranslationsPath(inputLanguage, newItem.DisplayName);
+      $http({ url: url, method: "GET" }).then(function (data) {
         newItem.DisplayMultipleLanguage = data.data;
         console.log(JSON.stringify(newItem));
         var categoryIndex = getCategoryIndexById(
@@ -386,7 +386,7 @@ angular
         }
         userProfile.Categories[categoryIndex].Items.push(newItem);
         UserProfileService.saveLocal(userProfile);
-        UserProfileService.postToServerCallback(function() {
+        UserProfileService.postToServerCallback(function () {
           var filePath = $scope.selectedImageUrl;
           var server = ServerPathVariable.GetPostImagePath();
           var options = new FileUploadOptions();
@@ -399,22 +399,22 @@ angular
           options.params = params;
           console.log(JSON.stringify(options));
           $cordovaFileTransfer.upload(server, filePath, options).then(
-            function(result) {
+            function (result) {
               console.log(JSON.stringify(result));
               var userProfile = UserProfileService.getLatest();
-              UserProfileService.getOnline(userProfile.ID, function() {
+              UserProfileService.getOnline(userProfile.ID, function () {
                 LocalCacheService.prepareCache(UserProfileService.getLatest());
               });
             },
             function (err) { // Error
               console.log(JSON.stringify(err));
             },
-            function(progress) { }
+            function (progress) { }
           );
         });
       });
     };
-    $scope.onTakeImageButtonClicked = function(mode) {
+    $scope.onTakeImageButtonClicked = function (mode) {
       console.log("onTakeImageButtonClicked");
       var options = {};
       if (mode == "camera") {
@@ -448,7 +448,7 @@ angular
       }
 
       $cordovaCamera.getPicture(options).then(
-        function(imageData) {
+        function (imageData) {
           console.log("get picture success");
           var image = document.getElementById("myImage");
           //image.src = "data:image/jpeg;base64," + imageData;
@@ -456,30 +456,30 @@ angular
           $scope.selectedImageUrl = imageData;
           $scope.myImageData = imageData;
         },
-        function(err) {
+        function (err) {
           console.log("get picture fail" + JSON.stringify(err));
           // error
         }
       );
     };
   })
-  .controller("DeleteItemCtrl", function($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
+  .controller("DeleteItemCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
-    $scope.onSelectedCategoryChanged = function() {
+    $scope.onSelectedCategoryChanged = function () {
       console.log("$scope.selectedCategoryId: " + $scope.selectedCategoryId);
-      $scope.category = getCategoryById($scope.userProfile,$scope.selectedCategoryId);
+      $scope.category = getCategoryById($scope.userProfile, $scope.selectedCategoryId);
     };
-    $scope.onDeleteItemConfirmClicked = function() {
+    $scope.onDeleteItemConfirmClicked = function () {
       console.log("onDeleteItemConfirmClicked");
-      if($cordovaNetwork.isOffline()) {
+      if ($cordovaNetwork.isOffline()) {
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
       }
       var itemIndex = getItemIndexByItemId($scope.category, $scope.selectedItemId);
-      if(typeof $scope.category =='undefined' || itemIndex == -1) {
+      if (typeof $scope.category == 'undefined' || itemIndex == -1) {
         console.log('itemIndex = -1, itemId:' + $scope.selectedItemId);
         alert("Please select item");
         return;
@@ -495,50 +495,51 @@ angular
       UserProfileService.saveLocal($scope.userProfile);
       UserProfileService.postToServerCallback(function () {
         console.log("Deleted in userProfile and uploaded.");
-        LocalCacheService.deleteLocalImage($scope.ImagePath,$scope.selectedItemId);
-        LocalCacheService.deleteLocalAudio($scope.userProfile,$scope.AudioPath,$scope.selectedItemId);
+        LocalCacheService.deleteLocalImage($scope.ImagePath, $scope.selectedItemId);
+        LocalCacheService.deleteLocalAudio($scope.userProfile, $scope.AudioPath, $scope.selectedItemId);
         $ionicSideMenuDelegate.toggleLeft();
         LoadingDialog.hideLoadingPopup($mdDialog);
         alert("Item Deleted");
       });
     };
   })
-  .controller("WelcomeCtrl", function( $scope, $mdDialog, $http, $ionicSideMenuDelegate, UserProfileService, LocalCacheService) {})
-  .controller("GridController", ["$scope",
-    function($scope) {
+  .controller("WelcomeCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, UserProfileService, LocalCacheService) { })
+  .controller("GridController", function ($scope, $http) {
       var i;
-      $scope.itemsList = {
-        items1: []
-      };
-
+      $scope.itemsList = { items1: [] };
       for (i = 0; i <= 100; i += 1) {
         $scope.itemsList.items1.push({ Id: i, Label: "Item A_" + i });
       }
-
       $scope.sortableOptions = {
         containment: "#grid-container",
-        accept: function(sourceItemHandleScope, destSortableScope) {
+        accept: function (sourceItemHandleScope, destSortableScope) {
           return false;
         }, //override to determine sort is allowed or not. default is true.
-        itemMoved: function(event) {
+        itemMoved: function (event) {
         },
-        orderChanged: function(event) {
+        orderChanged: function (event) {
         }
       };
       $scope.dragControlListeners = {  // drag boundary
         containment: "#grid-container",
-        accept: function(sourceItemHandleScope, destSortableScope) {
+        accept: function (sourceItemHandleScope, destSortableScope) {
           return false;
         }, //override to determine drag is allowed or not. default is true.
-        itemMoved: function(event) {
+        itemMoved: function (event) {
           console.log("itemMoved:" + event);
         },
-        orderChanged: function(event) {
+        orderChanged: function (event) {
           console.log("orderChanged:" + event);
         }
       };
-    }
-  ])
+      $scope.shareCategory = function (categoryID) {
+        //alert(serverUrl);
+        console.log("Shared Category ID" + ServerPathVariable.GetUploadSharePath(categoryID));
+        $http.get(ServerPathVariable.GetUploadSharePath(categoryID)).then(function (data) {
+          console.log("Success");
+        });
+      };
+   })
   .controller("MainCtrl", function($scope) { //Test Ctrl, to test reorder function
     $scope.draggableObjects = [
       { name: "one" },
@@ -552,12 +553,14 @@ angular
       $scope.draggableObjects[otherIndex] = otherObj;
     };
   })
-  .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog) { //Share Ctrl, for user downloading
+  .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
     $scope.refreshOnlineResource = function () {
       console.log("Start to download online resources");
       $scope.shareCategory = ShareCategoryService.getShareCategory();
+      GlobalVariable.DownloadProgress.Reset();
+      LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       LocalCacheService.prepareShareCategory($scope.shareCategory);
     },
     $scope.onItemClickedDownload = function ($event, ID) {
