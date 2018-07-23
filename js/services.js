@@ -117,8 +117,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
 
       setTimeout(function () {
         console.log("Check File static:" + GlobalCacheVariable.FileCheck.ExistImageFile + "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
-        if (GlobalCacheVariable.FileCheck.ExistAudioFile >= GlobalCacheVariable.FileCheck.TotalAudioFile &&
-          GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
+        if (GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
           console.log("Set IsNoDownload = 1");
           GlobalVariable.DownloadProgress.IsNoDownload = 1;
         }

@@ -557,6 +557,7 @@ angular
     $scope.shareCategory = ShareCategoryService.getShareCategory();
     $scope.refreshOnlineResource = function () {
       console.log("Start to download online resources");
+      $scope.shareCategory = ShareCategoryService.getShareCategory();
       LocalCacheService.prepareShareCategory($scope.shareCategory);
     },
     $scope.onItemClickedDownload = function ($event, ID) {
