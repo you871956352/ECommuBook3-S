@@ -1,0 +1,17 @@
+<ion-view cache-view="false" view-title="Download">
+  <ion-content>
+    <div id="grid-container" class="container-fluid" ng-controller="ShareCtrl" ng-cloak>
+      <div class="row">
+        <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="shareCategory.categories">
+          <div ng-repeat="category in shareCategory.categories" style="float:left;width:32%">
+            <div ng-click="onItemClickedDownload($event, category.ID);" style="text-align:center;border:2px blue dashed;">
+              <img width="100%" src='{{ImagePath}}/{{item.ID}}.jpg' />
+              <div> {{category.DisplayName}} </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+</ion-content>
+</ion-view>
+

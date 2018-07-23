@@ -237,3 +237,18 @@ myModule.factory("LocalCacheService", function($ionicPlatform,$cordovaFile, $cor
     }
   };
 });
+
+myModule.factory("ShareCategoryService", function ($http, $localStorage) { //Store User Prefile
+  return {
+    getOnline: function () {
+      console.log("Read shareCategory online.");
+      $http.get(ServerPathVariable.GetSharePath()).then(function (data) {
+        $localStorage.shareCategory = data.data;
+      });
+    },
+    getShareCategory: function () {
+      this.getOnline();
+      return $localStorage.shareCategory;
+    },
+  };
+});
