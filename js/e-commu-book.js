@@ -35,6 +35,9 @@ var ServerPathVariable = new function () { //User to store server return path
   };
   this.GetUploadSharePath = function (categoryID) {
     return this.GetSharePath() + "/" + categoryID;
+  };
+  this.GetShareCategoryClonePath = function (categoryID) {
+    return this.hostname + this.path + "category/" + categoryID + "/clone";
   }
 };
 

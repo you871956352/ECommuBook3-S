@@ -99,7 +99,6 @@ angular
       $scope.answer = function (answer) {
         $mdDialog.hide(answer);
       };
-
       $scope.onItemClicked = function (ev) {
         var src = $scope.AudioDirectory + $scope.selectedItemId + ".mp3";
         MediaPlayer.play($cordovaMedia, src);
@@ -565,7 +564,7 @@ angular
       $scope.draggableObjects[otherIndex] = otherObj;
     };
   })
-  .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate) { //Share Ctrl, for user downloading
+  .controller("ShareCtrl", function ($rootScope, $scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
     $scope.refreshOnlineResource = function () {
@@ -574,10 +573,42 @@ angular
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       LocalCacheService.prepareShareCategory($scope.shareCategory);
-    },
-    $scope.onItemClickedDownload = function ($event, ID) {
-      alert(ID);
     };
+    $scope.onItemClickedDownload = function (ev, categoryId) {
+      //alert(categoryId);
+      var targetScope = $scope.$new();
+      targetScope.selectedCategoryId = categoryId;
+      targetScope.selectedCategoryName = "Default";
+      for (var i = 0; i < $scope.shareCategory.categories.length; i++) {
+        if ($scope.shareCategory.categories[i].ID == categoryId) {
+          targetScope.selectedCategoryName = $scope.shareCategory.categories[i].DisplayName;
+          break;
+        }
+      }
+      $mdDialog.show({
+        controller: viewShareController,
+        templateUrl: "templates/popup-viewShare.tmpl.html",
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        scope: targetScope,
+        fullscreen: false // Only for -xs, -sm breakpoints.
+      }).then(
+        function (answer) { },
+        function () { }
+      );
+    };
+    function viewShareController($scope, $mdDialog) {
+      $scope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent($scope.selectedCategoryId);
+      $scope.Test = $scope.selectedCategoryId;
+      $scope.cancel = function () {
+        $mdDialog.cancel();
+      };
+      $scope.getOnlineResource = function (ev) {
+        $scope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent($scope.selectedCategoryId);
+        $scope.Test = $scope.categoryCloneContent;
+      };
+    }
   })
   .controller("TestCtrl", function ($scope, UserProfileService, $mdDialog) { //Test Ctrl, for logging
     $scope.uid = 0;

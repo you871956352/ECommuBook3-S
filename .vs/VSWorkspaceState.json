@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\css",
     "\\js",
     "\\templates"
   ],
-  "SelectedNode": "\\js\\e-commu-book.js",
+  "SelectedNode": "\\js\\services.js",
   "PreviewInSolutionExplorer": false
 }
