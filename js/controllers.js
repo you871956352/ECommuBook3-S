@@ -504,7 +504,7 @@ angular
     };
   })
   .controller("WelcomeCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, UserProfileService, LocalCacheService) { })
-  .controller("GridController", function ($scope, $http) {
+  .controller("GridController", function ($scope, $http, $scope, $mdDialog, $ionicSideMenuDelegate) {
       var i;
       $scope.itemsList = { items1: [] };
       for (i = 0; i <= 100; i += 1) {
@@ -532,11 +532,23 @@ angular
           console.log("orderChanged:" + event);
         }
       };
-      $scope.shareCategory = function (categoryID) {
-        //alert(serverUrl);
-        console.log("Shared Category ID" + ServerPathVariable.GetUploadSharePath(categoryID));
-        $http.get(ServerPathVariable.GetUploadSharePath(categoryID)).then(function (data) {
-          console.log("Success");
+      $scope.shareCategory = function (event,categoryID) {
+        var confirmDialog = $mdDialog.confirm()
+          .title('Confirm Upload?')
+          .textContent(GlobalVariable.AlertMessageList.UploadAlert())
+          .ariaLabel('23333')
+          .targetEvent(event)
+          .ok('OK')
+          .cancel('Cancel');
+
+        $mdDialog.show(confirmDialog).then(function () {
+          console.log("Shared Category ID: " + ServerPathVariable.GetUploadSharePath(categoryID));
+          $http.get(ServerPathVariable.GetUploadSharePath(categoryID)).then(function (data) {
+            console.log("Success");
+            alert("Upload Success!");
+          });
+        },function () {
+          console.log("User decide to quit share");
         });
       };
    })

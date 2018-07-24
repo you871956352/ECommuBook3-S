@@ -144,6 +144,11 @@ var GlobalVariable = new function () { //User to store some global variable
     { name: "男", value: "male", language: "zh-TW"},
     { name: "女", value: "female", language: "ko-KR"}
   ];
+  this.AlertMessageList = new function () {
+    this.UploadAlert = function () {
+      return "Are you sure to share this category? Attention: if you share this category, all information will be public on internet and can be viewed by others.";
+    };
+  };
 };
 
 var GlobalCacheVariable = new function () { //
@@ -191,25 +196,20 @@ var MediaPlayer = new function () {
 var LoadingDialog = new function () {
   this.showLoadingPopup = function ($mdDialog, $ionicSideMenuDelegate) {
     $mdDialog.show({
-      controller: this.Controller,
+      controller: this.LoadPopupController,
       templateUrl: "templates/popup-loading.tmpl.html",
       parent: angular.element(document.body),
       clickOutsideToClose: false,
       fullscreen: false // Only for -xs, -sm breakpoints.
-    })
-      .then(
-        function (answer) {
-
-        },
-        function () {
-
-        }
+    }) .then(
+        function (answer) {},
+        function () {}
       );
   };
   this.hideLoadingPopup = function ($mdDialog) {
     $mdDialog.hide();
   };
-  this.Controller = function ($scope, $mdDialog, $ionicSideMenuDelegate) {
+  this.LoadPopupController = function ($scope, $mdDialog, $ionicSideMenuDelegate) {
     $scope.downloaded = NaN;
     $scope.total = NaN;
     $scope.hide = function () { $mdDialog.hide(); };
