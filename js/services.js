@@ -144,16 +144,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       for (var i = 0; i < audioIDList.length; i++) {
         self.downloadAudioToLocal(targetDirectory, "bing", currentSpeechLanguageCode, currentSpeechGender, displayTextList[i], audioIDList[i]);
       }
-
-      setTimeout(function() {
-        console.log("Check File static:" + GlobalCacheVariable.FileCheck.ExistAudioFile +  "/" + GlobalCacheVariable.FileCheck.TotalAudioFile);
-        console.log("Check File static:" + GlobalCacheVariable.FileCheck.ExistImageFile +  "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
-        if (GlobalCacheVariable.FileCheck.ExistAudioFile >= GlobalCacheVariable.FileCheck.TotalAudioFile &&
-          GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
-          console.log("Set IsNoDownload = 1");
-          GlobalVariable.DownloadProgress.IsNoDownload = 1;
-        }
-      }, 2000); //delay 2 seconds
+      self.checkDownload();
     },
     deleteLocalImage: function(targetDirectory, targetID) {
       var targetName = targetID + ".jpg";
@@ -235,6 +226,21 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
           console.log("Clear audio: Error");
         }
       );
+    },
+    checkDownload: function(){
+      var self = this;
+      console.log("CheckDownload: Start");
+        setTimeout(function() {
+          console.log("Check File static:" + GlobalCacheVariable.FileCheck.ExistAudioFile +  "/" + GlobalCacheVariable.FileCheck.TotalAudioFile);
+          console.log("Check File static:" + GlobalCacheVariable.FileCheck.ExistImageFile +  "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
+          if (GlobalCacheVariable.FileCheck.ExistAudioFile >= GlobalCacheVariable.FileCheck.TotalAudioFile &&
+            GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
+            console.log("Set IsNoDownload = 1");
+            GlobalVariable.DownloadProgress.IsNoDownload = 1;
+          }else{
+            //self.checkDownload();
+          }
+        }, 2000); //delay 2 seconds
     }
   };
 });
