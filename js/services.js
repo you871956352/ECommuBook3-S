@@ -97,6 +97,32 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
         }
       );
     },
+    prepareShareCategory: function(shareCategory) {
+      console.log("Start prepare share category");
+      var self = this;
+      GlobalCacheVariable.FileCheck.Reset();
+      //image cache
+      var idList = [];
+      for (var i = 0; i < shareCategory.categories.length; i++) {
+        idList.push(shareCategory.categories[i].ID);
+      }
+      console.log("Read information successful");
+      GlobalVariable.DownloadProgress.Reset();
+      var targetDirectory = GlobalVariable.LocalCacheDirectory();
+      $cordovaFile.createDir(targetDirectory, "images", false);
+      GlobalCacheVariable.FileCheck.SetTotalImageFile(idList.length);
+      for (var i = 0; i < idList.length; i++) {
+        self.downloadImageToLocal(targetDirectory, ("images/" + idList[i] + ".jpg"), idList[i]);
+      }
+
+      setTimeout(function () {
+        console.log("Check File static:" + GlobalCacheVariable.FileCheck.ExistImageFile + "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
+        if (GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
+          console.log("Set IsNoDownload = 1");
+          GlobalVariable.DownloadProgress.IsNoDownload = 1;
+        }
+      }, 2000); //delay 2 seconds
+    },
     prepareCache: function (userProfile) {
       console.log("Start prepare cache");
       var self = this;

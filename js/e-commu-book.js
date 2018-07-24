@@ -1,6 +1,6 @@
 var ServerPathVariable = new function () { //User to store server return path
   this.hostname = "http://sepc155.se.cuhk.edu.hk:8080/";
-  this.path = "ECommuBook2-2.0.3-SNAPSHOT/";
+  this.path = "ECommuBook2-2.0.4-SNAPSHOT/";
   this.GetBingAudioPath = function (speechLanguageCode, speechGender, text) {
     text = text.replace("/", " ");
     return (this.hostname + this.path + "audio/bing/" + speechLanguageCode + "/" + speechGender + "/" + text + ".mp3");
@@ -33,6 +33,9 @@ var ServerPathVariable = new function () { //User to store server return path
   this.GetSharePath = function () {
     return (this.hostname + this.path + 'category/share');
   };
+  this.GetUploadSharePath = function (categoryID) {
+    return this.GetSharePath() + "/" + categoryID;
+  }
 };
 
 var GlobalVariable = new function () { //User to store some global variable
@@ -141,6 +144,11 @@ var GlobalVariable = new function () { //User to store some global variable
     { name: "男", value: "male", language: "zh-TW"},
     { name: "女", value: "female", language: "ko-KR"}
   ];
+  this.AlertMessageList = new function () {
+    this.UploadAlert = function () {
+      return "Are you sure to share this category? Attention: if you share this category, all information will be public on internet and can be viewed by others.";
+    };
+  };
 };
 
 var GlobalCacheVariable = new function () { //
@@ -188,25 +196,20 @@ var MediaPlayer = new function () {
 var LoadingDialog = new function () {
   this.showLoadingPopup = function ($mdDialog, $ionicSideMenuDelegate) {
     $mdDialog.show({
-      controller: this.Controller,
+      controller: this.LoadPopupController,
       templateUrl: "templates/popup-loading.tmpl.html",
       parent: angular.element(document.body),
       clickOutsideToClose: false,
       fullscreen: false // Only for -xs, -sm breakpoints.
-    })
-      .then(
-        function (answer) {
-
-        },
-        function () {
-
-        }
+    }) .then(
+        function (answer) {},
+        function () {}
       );
   };
   this.hideLoadingPopup = function ($mdDialog) {
     $mdDialog.hide();
   };
-  this.Controller = function ($scope, $mdDialog, $ionicSideMenuDelegate) {
+  this.LoadPopupController = function ($scope, $mdDialog, $ionicSideMenuDelegate) {
     $scope.downloaded = NaN;
     $scope.total = NaN;
     $scope.hide = function () { $mdDialog.hide(); };
