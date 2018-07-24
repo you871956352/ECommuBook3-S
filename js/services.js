@@ -62,6 +62,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
           $cordovaFileTransfer.download(ServerPathVariable.GetImagePath(itemId), (targetDirectory + "/" + targetName), { timeout: 10000 }, true).then(
               function (result) {  // Success!
                 GlobalVariable.DownloadProgress.AddDownloaded();
+                GlobalCacheVariable.FileCheck.AddExistImageFile();
               },
               function (err) { // Error
                 console.log("download err:" + JSON.stringify(err));
@@ -86,6 +87,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
             .download(ServerPathVariable.GetBingAudioPath(speechLanguageCode, speechGender, normalizeDisplayName(displayText)), (targetDirectory + "/" + targetName), { timeout: 10000 }, true).then(
               function (result) { //download ok
                 GlobalVariable.DownloadProgress.AddDownloaded();
+                GlobalCacheVariable.FileCheck.AddExistAudioFile();
               },
               function (err) {  //download error
                 console.log("download err:" + JSON.stringify(err));
@@ -255,16 +257,17 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
     },
     checkDownload: function(){
       var self = this;
-      console.log("CheckDownload: Start");
         setTimeout(function() {
-          console.log("Check File static:" + GlobalCacheVariable.FileCheck.ExistAudioFile +  "/" + GlobalCacheVariable.FileCheck.TotalAudioFile);
-          console.log("Check File static:" + GlobalCacheVariable.FileCheck.ExistImageFile +  "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
+          console.log("Check Audio File static:" + GlobalCacheVariable.FileCheck.ExistAudioFile +  "/" + GlobalCacheVariable.FileCheck.TotalAudioFile);
+          console.log("Check Image File static:" + GlobalCacheVariable.FileCheck.ExistImageFile +  "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
           if (GlobalCacheVariable.FileCheck.ExistAudioFile >= GlobalCacheVariable.FileCheck.TotalAudioFile &&
             GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
             console.log("Set IsNoDownload = 1");
             GlobalVariable.DownloadProgress.IsNoDownload = 1;
+            console.log("Download complete, refresh the page.");
+            window.location.reload(true);
           }else{
-            //self.checkDownload();
+            self.checkDownload();
           }
         }, 2000); //delay 2 seconds
     }
