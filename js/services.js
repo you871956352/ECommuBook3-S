@@ -187,6 +187,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
             },
             function(err) {
               console.log("Check file: Image removed.");
+              GlobalCacheVariable.DeleteCheck.AddDletedFile();
             }
           );
         },
@@ -211,6 +212,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
             },
             function(err) {
               console.log("Check file: Audio removed.");
+              GlobalCacheVariable.DeleteCheck.AddDletedFile();
             }
           );
         },
@@ -268,6 +270,18 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
             window.location.reload(true);
           }else{
             self.checkDownload();
+          }
+        }, 2000); //delay 2 seconds
+    },
+    checkDelete: function(){
+      var self = this;
+        setTimeout(function() {
+          console.log("Check File Delete:" + GlobalCacheVariable.DeleteCheck.DeletedFile +  "/" + GlobalCacheVariable.DeleteCheck.FileToDelete);
+          if (GlobalCacheVariable.DeleteCheck.DeletedFile >= GlobalCacheVariable.DeleteCheck.FileToDelete ) {
+            console.log("Delete complete, refresh the page.");
+            window.location.reload(true);
+          }else{
+            self.checkDelete();
           }
         }, 2000); //delay 2 seconds
     }

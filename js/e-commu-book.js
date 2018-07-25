@@ -178,6 +178,18 @@ var GlobalCacheVariable = new function () { //
       this.TotalAudioFile = newNumber;
     }
   };
+  this.DeleteCheck = new function () {
+    this.Reset = function () {
+      this.FileToDelete = 0;
+      this.DeletedFile = 0;
+    };
+    this.AddDletedFile = function () {
+      this.DeletedFile++;
+    }
+    this.SetFileToDelete = function (newNumber) {
+      this.FileToDelete = newNumber;
+    }
+  };
 };
 
 var MediaPlayer = new function () {

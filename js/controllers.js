@@ -318,6 +318,10 @@ angular
           idList.push(item.ID);
         }
       }
+      GlobalCacheVariable.DeleteCheck.Reset();
+      GlobalCacheVariable.DeleteCheck.SetFileToDelete(idList.length * 2);
+      console.log("idList leangth: " + idList.length);
+      console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete);
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       $scope.userProfile.Categories.splice(categoryIndex, 1);
       UserProfileService.saveLocal($scope.userProfile);
@@ -330,6 +334,7 @@ angular
         LoadingDialog.hideLoadingPopup($mdDialog);
         $ionicSideMenuDelegate.toggleLeft();
         alert("Category Deleted");
+        LocalCacheService.checkDelete();
       });
     };
   })
@@ -477,6 +482,9 @@ angular
         alert("This feature only be supported with internet. Please connect wifi and try again.");
         return;
       }
+      GlobalCacheVariable.DeleteCheck.Reset();
+      GlobalCacheVariable.DeleteCheck.SetFileToDelete(2);
+      console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete);
       var itemIndex = getItemIndexByItemId($scope.category, $scope.selectedItemId);
       if (typeof $scope.category == 'undefined' || itemIndex == -1) {
         console.log('itemIndex = -1, itemId:' + $scope.selectedItemId);
@@ -499,6 +507,7 @@ angular
         $ionicSideMenuDelegate.toggleLeft();
         LoadingDialog.hideLoadingPopup($mdDialog);
         alert("Item Deleted");
+        LocalCacheService.checkDelete();
       });
     };
   })
@@ -576,7 +585,7 @@ angular
     };
     $scope.onItemClickedDownload = function (ev, categoryId) {
       var targetScope = $scope.$new();
-      targetScope.selectedCategoryId = categoryId; 
+      targetScope.selectedCategoryId = categoryId;
       targetScope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent(categoryId);
       targetScope.selectedCategoryName = "";
       for (var i = 0; i < $scope.shareCategory.categories.length; i++) {
@@ -586,8 +595,8 @@ angular
             if (targetCategory.DisplayMultipleLanguage[j].Language == $scope.userProfile.DISPLAY_LANGUAGE) {
               targetScope.selectedCategoryName = targetCategory.DisplayMultipleLanguage[j].Text;
               break;
-            } 
-          }     
+            }
+          }
           break;
         }
       }
@@ -601,7 +610,7 @@ angular
         fullscreen: false, // Only for -xs, -sm breakpoints.
         onComplete: function () {
           targetScope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent(categoryId);
-        }    
+        }
       }).then(
         function (answer) {},
         function () { }
