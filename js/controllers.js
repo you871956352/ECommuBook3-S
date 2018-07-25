@@ -99,7 +99,6 @@ angular
       $scope.answer = function (answer) {
         $mdDialog.hide(answer);
       };
-
       $scope.onItemClicked = function (ev) {
         var src = $scope.AudioDirectory + $scope.selectedItemId + ".mp3";
         MediaPlayer.play($cordovaMedia, src);
@@ -565,7 +564,7 @@ angular
       $scope.draggableObjects[otherIndex] = otherObj;
     };
   })
-  .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate) { //Share Ctrl, for user downloading
+  .controller("ShareCtrl", function ($rootScope, $scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
     $scope.refreshOnlineResource = function () {
@@ -574,10 +573,65 @@ angular
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       LocalCacheService.prepareShareCategory($scope.shareCategory);
-    },
-    $scope.onItemClickedDownload = function ($event, ID) {
-      alert(ID);
     };
+    $scope.onItemClickedDownload = function (ev, categoryId) {
+      var targetScope = $scope.$new();
+      targetScope.selectedCategoryId = categoryId; 
+      targetScope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent(categoryId);
+      targetScope.selectedCategoryName = "";
+      for (var i = 0; i < $scope.shareCategory.categories.length; i++) {
+        if ($scope.shareCategory.categories[i].ID == categoryId) {
+          var targetCategory = $scope.shareCategory.categories[i];
+          for (var j = 0; j < targetCategory.DisplayMultipleLanguage.length; j++) {
+            if (targetCategory.DisplayMultipleLanguage[j].Language == $scope.userProfile.DISPLAY_LANGUAGE) {
+              targetScope.selectedCategoryName = targetCategory.DisplayMultipleLanguage[j].Text;
+              break;
+            } 
+          }     
+          break;
+        }
+      }
+      $mdDialog.show({
+        controller: viewShareController,
+        templateUrl: "templates/popup-viewShare.tmpl.html",
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        scope: targetScope,
+        fullscreen: false, // Only for -xs, -sm breakpoints.
+        onComplete: function () {
+          targetScope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent(categoryId);
+        }    
+      }).then(
+        function (answer) {},
+        function () { }
+      );
+    };
+    function viewShareController($scope, $mdDialog, $ionicSideMenuDelegate, $http) {
+      $scope.userProfile = UserProfileService.getLatest();
+      $scope.cancel = function () {
+        $mdDialog.cancel();
+      };
+      $scope.getOnlineResource = function (ev) {
+        $scope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent($scope.selectedCategoryId);
+      };
+      $scope.downloadToLocal = function (ev) {
+        var url = ServerPathVariable.GetAddCategoryToUserProfilePath($scope.userProfile.ID, $scope.selectedCategoryId);
+        console.log("Add category to user, Access Server url: " + url);
+        GlobalVariable.DownloadProgress.Reset();
+        LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+        $http.get(url).then(function (data) {
+          console.log("Request send to server success, start to sync server data...");
+          UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
+            console.log("Get updated user profile from server success, start to download files");
+
+            LocalCacheService.prepareCache(UserProfileService.getLatest());
+          });
+        }),function errorCallback(response) {
+            alert("Server is not avaliable: " + response);
+        };
+      }
+    }
   })
   .controller("TestCtrl", function ($scope,$cordovaFileTransfer, UserProfileService) { //Test Ctrl, for logging
     //$scope.uid = 0;
