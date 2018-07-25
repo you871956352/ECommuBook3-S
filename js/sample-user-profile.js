@@ -7249,3 +7249,204 @@ function getSampleUserProfile() {
   };
   return json;
 }
+
+function getSampleMenuProfile() {
+  json = {
+    Operations: [
+      {
+        OperationType: "AddCategory",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Kategorie hinzufügen" },
+          { Language: "ru", Text: "Добавить категорию" },
+          { Language: "pt", Text: "Adicionar categoria" },
+          { Language: "ko", Text: "카테고리 추가" },
+          { Language: "yue", Text: "添加類別" },
+          { Language: "en", Text: "Add Category" },
+          { Language: "it", Text: "Aggiungi categoria" },
+          { Language: "fr", Text: "Ajouter la catégorie" },
+          { Language: "es", Text: "Añadir categoría" },
+          { Language: "zh-CHT", Text: "添加類別" },
+          { Language: "ar", Text: "إضافة فئة" },
+          { Language: "zh-CHS", Text: "添加类别" },
+          { Language: "ja", Text: "カテゴリを追加します。" }
+        ],
+      },
+      {
+        OperationType: "DeleteCategory",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Kategorie löschen" },
+          { Language: "ru", Text: "Удаление категории" },
+          { Language: "pt", Text: "Excluir a categoria" },
+          { Language: "ko", Text: "카테고리 삭제" },
+          { Language: "yue", Text: "刪除類別" },
+          { Language: "en", Text: "Delete Category" },
+          { Language: "it", Text: "Eliminare categoria" },
+          { Language: "fr", Text: "Supprimer la catégorie" },
+          { Language: "es", Text: "Eliminar categoría" },
+          { Language: "zh-CHT", Text: "刪除類別" },
+          { Language: "ar", Text: "حذف فئة" },
+          { Language: "zh-CHS", Text: "删除类别" },
+          { Language: "ja", Text: "カテゴリを削除します。" }]
+      },
+      {
+        OperationType: "AddItem",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Element hinzufügen" },
+          { Language: "ru", Text: "Добавить элемент" },
+          { Language: "pt", Text: "Adicionar Item" },
+          { Language: "ko", Text: "항목 추가" },
+          { Language: "yue", Text: "添加項目" },
+          { Language: "en", Text: "Add Item" },
+          { Language: "it", Text: "Aggiungi elemento" },
+          { Language: "fr", Text: "Ajouter l’article" },
+          { Language: "es", Text: "Agregar elemento" },
+          { Language: "zh-CHT", Text: "添加專案" },
+          { Language: "ar", Text: "إضافة عنصر" },
+          { Language: "zh-CHS", Text: "添加项目" },
+          { Language: "ja", Text: "項目を追加します。" }]
+      },
+      {
+        OperationType: "DeleteItem",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Element löschen" },
+          { Language: "ru", Text: "Удалить элемент" },
+          { Language: "pt", Text: "Excluir Item" },
+          { Language: "ko", Text: "항목 삭제" },
+          { Language: "yue", Text: "刪除項目" },
+          { Language: "en", Text: "Delete Item" },
+          { Language: "it", Text: "Elimina elemento" },
+          { Language: "fr", Text: "Supprimer le point" },
+          { Language: "es", Text: "Eliminar elemento" },
+          { Language: "zh-CHT", Text: "刪除專案" },
+          { Language: "ar", Text: "حذف عنصر" },
+          { Language: "zh-CHS", Text: "删除项目" },
+          { Language: "ja", Text: "項目を削除します。" }]
+      },
+      {
+        OperationType: "Download",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Download" },
+          { Language: "ru", Text: "Скачать" },
+          { Language: "pt", Text: "Baixar" },
+          { Language: "ko", Text: "다운로드" },
+          { Language: "yue", Text: "下載" },
+          { Language: "en", Text: "Download" },
+          { Language: "it", Text: "Scarica" },
+          { Language: "fr", Text: "Télécharger" },
+          { Language: "es", Text: "Descargar" },
+          { Language: "zh-CHT", Text: "下載" },
+          { Language: "ar", Text: "تحميل" },
+          { Language: "zh-CHS", Text: "下载" },
+          { Language: "ja", Text: "ダウンロード" }]
+      },
+      {
+        OperationType: "Setting",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Einstellung" },
+          { Language: "ru", Text: "Настройка" },
+          { Language: "pt", Text: "Configuração" },
+          { Language: "ko", Text: "설정" },
+          { Language: "yue", Text: "設置" },
+          { Language: "en", Text: "Setting" },
+          { Language: "it", Text: "Impostazione" },
+          { Language: "fr", Text: "Réglage" },
+          { Language: "es", Text: "Ajuste" },
+          { Language: "zh-CHT", Text: "設置" },
+          { Language: "ar", Text: "الإعداد" },
+          { Language: "zh-CHS", Text: "设置" },
+          { Language: "ja", Text: "設定" }],
+        SettingSubPage: [
+          {
+            OperationType: "LanguageSetting",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Sprache" },
+              { Language: "ru", Text: "Язык" },
+              { Language: "pt", Text: "Língua" },
+              { Language: "ko", Text: "언어" },
+              { Language: "yue", Text: "語言" },
+              { Language: "en", Text: "Language " },
+              { Language: "it", Text: "Lingua" },
+              { Language: "fr", Text: "Langue" },
+              { Language: "es", Text: "Idioma" },
+              { Language: "zh-CHT", Text: "語言" },
+              { Language: "ar", Text: "اللغة" },
+              { Language: "zh-CHS", Text: "语言" },
+              { Language: "ja", Text: "言語" }]
+          },
+          {
+            OperationType: "DisplayLanguage",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Display-Sprache" },
+              { Language: "ru", Text: "Язык отображения" },
+              { Language: "pt", Text: "Idioma de exibição" },
+              { Language: "ko", Text: "표시 언어" },
+              { Language: "yue", Text: "顯示語言" },
+              { Language: "en", Text: "Display Language" },
+              { Language: "it", Text: "Lingua di visualizzazione" },
+              { Language: "fr", Text: "Langue d’affichage" },
+              { Language: "es", Text: "Idioma de la pantalla" },
+              { Language: "zh-CHT", Text: "顯示語言" },
+              { Language: "ar", Text: "لغة العرض" },
+              { Language: "zh-CHS", Text: "显示语言" },
+              { Language: "ja", Text: "表示言語" }]
+          },
+          {
+            OperationType: "SpeechLanguage",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Sprache" },
+              { Language: "ru", Text: "Речи язык" },
+              { Language: "pt", Text: "Língua de discurso" },
+              { Language: "ko", Text: "음성 언어" },
+              { Language: "yue", Text: "語音語言" },
+              { Language: "en", Text: "Speech Language" },
+              { Language: "it", Text: "Lingua di discorso" },
+              { Language: "fr", Text: "Orthophonie" },
+              { Language: "es", Text: "Habla el lenguaje" },
+              { Language: "zh-CHT", Text: "語音語言" },
+              { Language: "ar", Text: "لغة الكلام" },
+              { Language: "zh-CHS", Text: "语音语言" },
+              { Language: "ja", Text: "音声言語" }]
+          },
+          {
+            OperationType: "SpeakerGender ",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Lautsprecher-Geschlecht" },
+              { Language: "ru", Text: "Динамика гендерных" },
+              { Language: "pt", Text: "Sexo de alto-falante" },
+              { Language: "ko", Text: "스피커 성별" },
+              { Language: "yue", Text: "演講者性別" },
+              { Language: "en", Text: "Speaker Gender" },
+              { Language: "it", Text: "Genere di altoparlante" },
+              { Language: "fr", Text: "Enceinte sexe" },
+              { Language: "es", Text: "Género de altavoz" },
+              { Language: "zh-CHT", Text: "演講者性別" },
+              { Language: "ar", Text: "المتكلم بين الجنسين" },
+              { Language: "zh-CHS", Text: "演讲者性别" },
+              { Language: "ja", Text: "スピーカーの性別" }]
+          }
+        ],
+      }
+    ],
+    Buttons: [
+      {
+        ButtonType: "Confirm",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Bestätigen" },
+          { Language: "ru", Text: "Подтвердите" },
+          { Language: "pt", Text: "Confirmar" },
+          { Language: "ko", Text: "확인" },
+          { Language: "yue", Text: "確認" },
+          { Language: "en", Text: "Confirm" },
+          { Language: "it", Text: "Confermare" },
+          { Language: "fr", Text: "Confirmer" },
+          { Language: "es", Text: "Confirmar" },
+          { Language: "zh-CHT", Text: "確認" },
+          { Language: "ar", Text: "تأكيد" },
+          { Language: "zh-CHS", Text: "确认" },
+          { Language: "ja", Text: "確認します。" }]
+      },
+    ]
+  };
+  return json;
+}
+

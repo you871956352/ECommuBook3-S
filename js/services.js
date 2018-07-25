@@ -45,6 +45,28 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
         .error(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
           console.log("post userprofile error :" + JSON.stringify(data));
         });
+    },
+
+    getMenuProfile: function () {
+      $localStorage.menuProfile = getSampleMenuProfile();
+      return $localStorage.menuProfile;
+    },
+
+    getTranslatedMenuText: function (mode, targetText) {
+      var userProfile = $localStorage.userProfile;
+      var menuProfile = $localStorage.menuProfile;
+      if (mode == "Operations") {
+        for (var i = 0; i < menuProfile.Operations.length; i++) {
+          if (menuProfile.Operations[i].OperationType == targetText) {
+            for (var j = 0; j < menuProfile.Operations[i].DisplayMultipleLanguage.length; j++) {
+              if (menuProfile.Operations[i].DisplayMultipleLanguage[j].Language == userProfile.DISPLAY_LANGUAGE) {
+                return menuProfile.Operations[i].DisplayMultipleLanguage[j].Text;
+              }
+            }
+          }
+        }
+      }
+      
     }
   };
 });
