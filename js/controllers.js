@@ -5,13 +5,15 @@ angular
   .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.$on("$ionicView.enter", function (e) {
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
-      $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
+      $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";   
       // on page loaded
       var userProfile = UserProfileService.getLatest();
       if (typeof $rootScope.isShowDisplayName == 'undefined') {
         $rootScope.isShowDisplayName = { checked: true };
       }
       $scope.userProfile = userProfile;
+      $scope.menuProfile = UserProfileService.getMenuProfile();
+      $scope.refreshMenuLanguage();
       console.log("Language Selected:" + userProfile.DISPLAY_LANGUAGE + "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
       if (window.localStorage.getItem("loggedIn") != 1) {
         if ($cordovaNetwork.isOffline()) {
@@ -31,6 +33,9 @@ angular
       var src = GlobalVariable.GetLocalAudioDirectory(userProfile) + categoryId + ".mp3";
       MediaPlayer.play($cordovaMedia, src);
     };
+    $scope.refreshMenuLanguage = function () {
+
+    }
   })
   .controller("CategoryCtrl", function ($rootScope, $scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService) {
     var userProfile = UserProfileService.getLatest();
@@ -112,6 +117,7 @@ angular
     $scope.selectedDisplayLanguage;
     $scope.selectedSpeechLanguage;
     $scope.selectedSpeechGender;
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Setting");
     $scope.onSelectedDisplayLanguageChanged = function () {
       console.log("display language:" + $scope.selectedDisplayLanguage);
       $scope.speechLanguageListOption = [];
@@ -186,6 +192,7 @@ angular
   })
   .controller("AddCategoryCtrl", function ($rootScope, $scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "AddCategory");
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.uuid = guid();
     $scope.inputLanguage = "";
@@ -293,6 +300,7 @@ angular
   .controller("DeleteCategoryCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "DeleteCategory");
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
     $scope.selectedCategoryId = "";
@@ -336,6 +344,7 @@ angular
   .controller("AddItemCtrl", function ($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "AddItem");
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.uuid = guid();
     $scope.inputLanguageList = GlobalVariable.DisplayLanguageList;
@@ -465,6 +474,7 @@ angular
   .controller("DeleteItemCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "DeleteItem");
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
     $scope.onSelectedCategoryChanged = function () {
@@ -566,7 +576,9 @@ angular
   })
   .controller("ShareCtrl", function ($rootScope, $scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
+    $scope.menuProfile = UserProfileService.getMenuProfile();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Download");
     $scope.refreshOnlineResource = function () {
       console.log("Start to download online resources");
       $scope.shareCategory = ShareCategoryService.getShareCategory();

@@ -22,23 +22,49 @@
           </div>
         </ion-item>
 
+        <h1></h1>
+
         <ion-item menu-close href="#/app/share">
-          <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Download</span>
+          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Download' && isShowDisplayName.checked">
+            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
+            </div>
+          </div>
         </ion-item>
         <ion-item menu-close href="#/app/addCategory">
-          <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Add Category</span>
+          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'AddCategory' && isShowDisplayName.checked">
+            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
+            </div>
+          </div>
         </ion-item>
         <ion-item menu-close href="#/app/deleteCategory">
-          <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Delete Category</span>
+          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'DeleteCategory' && isShowDisplayName.checked">
+            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
+            </div>
+          </div>
         </ion-item>
         <ion-item menu-close href="#/app/addItem">
-          <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Add Item</span>
+          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'AddItem' && isShowDisplayName.checked">
+            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
+            </div>
+          </div>
         </ion-item>
         <ion-item menu-close href="#/app/deleteItem">
-          <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Delete Item</span>
+          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'DeleteItem' && isShowDisplayName.checked">
+            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
+            </div>
+          </div>
         </ion-item>
         <ion-item menu-close href="#/app/setting">
-          <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Setting</span>
+          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Setting' && isShowDisplayName.checked">
+            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
+            </div>
+          </div>
         </ion-item>
         <ion-item menu-close href="#/app/test">
           <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">Test</span>
