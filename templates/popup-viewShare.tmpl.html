@@ -10,8 +10,29 @@
       </div>
     </md-toolbar>
     <md-dialog-content>
-      <div>{{Test}}</div>
-      <md-button ng-click="getOnlineResource($event);">Get From Net</md-button>
+
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Word Items <md-button ng-click="getOnlineResource($event);">Refresh</md-button> </span>
+          </md-card-title-text>
+        </md-card-title>
+
+        <md-card-content>
+          <div ng-repeat="item in categoryCloneContent.Items">
+            <div ng-repeat="translation in item.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+              <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;">{{translation.Text}}</span>
+              <span flex></span>
+              <h1></h1>
+            </div>
+          </div>
+        </md-card-content>
+
+        <md-card-content>
+          <md-button ng-click="downloadToLocal($event);">Download</md-button>
+        </md-card-content>
+      </md-card>
+
     </md-dialog-content>
   </form>
 </md-dialog>

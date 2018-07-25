@@ -564,7 +564,7 @@ angular
       $scope.draggableObjects[otherIndex] = otherObj;
     };
   })
-  .controller("ShareCtrl", function ($rootScope, $scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate) { //Share Ctrl, for user downloading
+  .controller("ShareCtrl", function ($rootScope, $scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
     $scope.refreshOnlineResource = function () {
@@ -575,13 +575,19 @@ angular
       LocalCacheService.prepareShareCategory($scope.shareCategory);
     };
     $scope.onItemClickedDownload = function (ev, categoryId) {
-      //alert(categoryId);
       var targetScope = $scope.$new();
-      targetScope.selectedCategoryId = categoryId;
-      targetScope.selectedCategoryName = "Default";
+      targetScope.selectedCategoryId = categoryId; 
+      targetScope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent(categoryId);
+      targetScope.selectedCategoryName = "";
       for (var i = 0; i < $scope.shareCategory.categories.length; i++) {
         if ($scope.shareCategory.categories[i].ID == categoryId) {
-          targetScope.selectedCategoryName = $scope.shareCategory.categories[i].DisplayName;
+          var targetCategory = $scope.shareCategory.categories[i];
+          for (var j = 0; j < targetCategory.DisplayMultipleLanguage.length; j++) {
+            if (targetCategory.DisplayMultipleLanguage[j].Language == $scope.userProfile.DISPLAY_LANGUAGE) {
+              targetScope.selectedCategoryName = targetCategory.DisplayMultipleLanguage[j].Text;
+              break;
+            } 
+          }     
           break;
         }
       }
@@ -592,22 +598,39 @@ angular
         targetEvent: ev,
         clickOutsideToClose: true,
         scope: targetScope,
-        fullscreen: false // Only for -xs, -sm breakpoints.
+        fullscreen: false, // Only for -xs, -sm breakpoints.
+        onComplete: function () {
+          targetScope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent(categoryId);
+        }    
       }).then(
-        function (answer) { },
+        function (answer) {},
         function () { }
       );
     };
-    function viewShareController($scope, $mdDialog) {
-      $scope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent($scope.selectedCategoryId);
-      $scope.Test = $scope.selectedCategoryId;
+    function viewShareController($scope, $mdDialog, $ionicSideMenuDelegate, $http) {
+      $scope.userProfile = UserProfileService.getLatest();
       $scope.cancel = function () {
         $mdDialog.cancel();
       };
       $scope.getOnlineResource = function (ev) {
         $scope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent($scope.selectedCategoryId);
-        $scope.Test = $scope.categoryCloneContent;
       };
+      $scope.downloadToLocal = function (ev) {
+        var url = ServerPathVariable.GetAddCategoryToUserProfilePath($scope.userProfile.ID, $scope.selectedCategoryId);
+        console.log("Add category to user, Access Server url: " + url);
+        GlobalVariable.DownloadProgress.Reset();
+        LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+        $http.get(url).then(function (data) {
+          console.log("Request send to server success, start to sync server data...");
+          UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
+            console.log("Get updated user profile from server success, start to download files");
+
+            LocalCacheService.prepareCache(UserProfileService.getLatest());
+          });
+        }),function errorCallback(response) {
+            alert("Server is not avaliable: " + response);
+        };
+      }
     }
   })
   .controller("TestCtrl", function ($scope, UserProfileService, $mdDialog) { //Test Ctrl, for logging
