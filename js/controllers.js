@@ -579,10 +579,34 @@ angular
       alert(ID);
     };
   })
-  .controller("TestCtrl", function ($scope, UserProfileService, $mdDialog) { //Test Ctrl, for logging
-    $scope.uid = 0;
+  .controller("TestCtrl", function ($scope,$cordovaFileTransfer, UserProfileService) { //Test Ctrl, for logging
+    //$scope.uid = 0;
+    var targetDirectory = GlobalVariable.LocalCacheDirectory() + "images/";
+    var imageID = "00000000-0000-0000-0003-000000000197";
+    var uploadID = "00000000-0000-0000-0000-000000000012";
+    var uploadName = uploadID + ".jpg";
+    $scope.ImagePath = targetDirectory + imageID + ".jpg";
     $scope.testClick = function () {
-      alert( UserProfileService.getLatest().ID);
-      console.log("UserID: " + UserProfileService.getLatest().ID);
-    }
+      alert($scope.ImagePath);
+    };
+
+    $scope.uploadClick = function () {
+      var filePath = $scope.ImagePath;
+      var options = new FileUploadOptions();
+      options.fileKey = "file";
+      options.fileName = uploadName;
+      options.mimeType = "image/jpeg";
+      options.httpMethod = "POST";
+      options.params = { uuid:  uploadID};
+      console.log("Category Option: " + JSON.stringify(options));
+      $cordovaFileTransfer.upload(ServerPathVariable.GetPostImagePath(), filePath, options).then(
+        function (result) {
+          console.log("ID: " + uploadName + " -- Success.");
+        },
+        function (err) { // Error
+          console.log("Image upload Error: " + JSON.stringify(err));
+        },
+        function (progress) { });
+    };
+
   });

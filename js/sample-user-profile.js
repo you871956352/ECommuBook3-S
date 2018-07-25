@@ -3,19 +3,14 @@ function getSampleUserProfile() {
     ID: "00000000-0000-0000-0001-000000000000",
     Password: "00000",
     DisplayName: "試用者",
-    OpenCount: 0,
     Categories: [
       {
-        ID: "00000000-0000-0000-0003-000000000036",
+        ID: "00000000-0000-0000-0000-000000000001",
         DisplayName: "動作",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000001",
             DisplayName: "剪指甲",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Schneiden Sie Ihre Nägel" },
               { Language: "ru", Text: "Вырезать ногти" },
@@ -31,21 +26,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "剪指甲" },
               { Language: "ja", Text: "あなたの爪をカットします。" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Schneiden Sie Ihre Nägel",
-              ru: "Вырезать ногти",
-              pt: "Cortar as unhas",
-              ko: "손톱을 잘라",
-              yue: "剪指甲",
-              en: "Cut your nails",
-              it: "Tagliare le unghie",
-              fr: "Coupez vos ongles",
-              es: "Cortar las uñas",
-              "zh-CHT": "剪指甲",
-              ar: "قص الأظافر",
-              "zh-CHS": "剪指甲",
-              ja: "あなたの爪をカットします。"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Schneiden Sie Ihre Nägel" },
               { Language: "ru", Text: "Вырезать ногти" },
@@ -65,8 +45,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000002",
             DisplayName: "剪頭髮",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Haare schneiden" },
               { Language: "ru", Text: "Стрижка" },
@@ -82,21 +60,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "剪头发" },
               { Language: "ja", Text: "髪を切って" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Haare schneiden",
-              ru: "Стрижка",
-              pt: "Corte de cabelo",
-              ko: "머리를 잘라",
-              yue: "剪頭髮",
-              en: "Hair cut",
-              it: "Taglio di capelli",
-              fr: "Coupe de cheveux",
-              es: "Corte de pelo",
-              "zh-CHT": "剪頭髮",
-              ar: "قص الشعر",
-              "zh-CHS": "剪头发",
-              ja: "髪を切って"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Haare schneiden" },
               { Language: "ru", Text: "Стрижка" },
@@ -116,8 +79,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000003",
             DisplayName: "去廁所",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Um auf die Toilette gehen" },
               { Language: "ru", Text: "Чтобы перейти к ванной комнате" },
@@ -133,21 +94,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "去厕所" },
               { Language: "ja", Text: "トイレに行く" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Um auf die Toilette gehen",
-              ru: "Чтобы перейти к ванной комнате",
-              pt: "Para ir ao banheiro",
-              ko: "화장실에가 서",
-              yue: "去廁所",
-              en: "To go to the bathroom",
-              it: "Per andare in bagno",
-              fr: "Pour aller à la salle de bain",
-              es: "Para ir al baño",
-              "zh-CHT": "去廁所",
-              ar: "للذهاب إلى الحمام",
-              "zh-CHS": "去厕所",
-              ja: "トイレに行く"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Um auf die Toilette gehen" },
               { Language: "ru", Text: "Чтобы перейти к ванной комнате" },
@@ -167,8 +113,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000004",
             DisplayName: "小便",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Pinkeln" },
               { Language: "ru", Text: "Пи" },
@@ -184,21 +128,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "小便" },
               { Language: "ja", Text: "おしっこ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Pinkeln",
-              ru: "Пи",
-              pt: "Fazer xixi",
-              ko: "오 줌",
-              yue: "小便",
-              en: "Pee",
-              it: "Piscia",
-              fr: "Pipi",
-              es: "Pee",
-              "zh-CHT": "小便",
-              ar: "تبول",
-              "zh-CHS": "小便",
-              ja: "おしっこ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Pinkeln" },
               { Language: "ru", Text: "Пи" },
@@ -218,8 +147,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000005",
             DisplayName: "食藥",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Nahrung und Medizin" },
               { Language: "ru", Text: "Продовольствие и медикаменты" },
@@ -235,21 +162,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "食药" },
               { Language: "ja", Text: "食品や医薬品" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Nahrung und Medizin",
-              ru: "Продовольствие и медикаменты",
-              pt: "Alimentos e medicamentos",
-              ko: "음식과 약",
-              yue: "食藥",
-              en: "Food and medicine",
-              it: "Cibo e medicine",
-              fr: "Nourriture et médicaments",
-              es: "Alimentos y medicinas",
-              "zh-CHT": "食藥",
-              ar: "المواد الغذائية والأدوية",
-              "zh-CHS": "食药",
-              ja: "食品や医薬品"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Nahrung und Medizin" },
               { Language: "ru", Text: "Продовольствие и медикаменты" },
@@ -269,8 +181,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000006",
             DisplayName: "上床訓覺",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Geh ins Bett" },
               { Language: "ru", Text: "Иди спать" },
@@ -286,21 +196,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "上床睡觉" },
               { Language: "ja", Text: "寝てください" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Geh ins Bett",
-              ru: "Иди спать",
-              pt: "Vá para cama",
-              ko: "잠자리에 들다",
-              yue: "上床訓覺",
-              en: "Go to bed",
-              it: "Vai a letto",
-              fr: "Aller se coucher",
-              es: "Vete a dormir",
-              "zh-CHT": "上床睡覺",
-              ar: "حان وقت النوم",
-              "zh-CHS": "上床睡觉",
-              ja: "寝てください"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Geh ins Bett" },
               { Language: "ru", Text: "Иди спать" },
@@ -320,8 +215,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000007",
             DisplayName: "剃鬚",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Rasur" },
               { Language: "ru", Text: "Бритье" },
@@ -337,21 +230,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "剃须" },
               { Language: "ja", Text: "シェービング" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Rasur",
-              ru: "Бритье",
-              pt: "Fazer a barba",
-              ko: "면도",
-              yue: "剃鬚",
-              en: "Shaving",
-              it: "Rasatura",
-              fr: "Rasage",
-              es: "Afeitado",
-              "zh-CHT": "剃須",
-              ar: "حلق",
-              "zh-CHS": "剃须",
-              ja: "シェービング"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Rasur" },
               { Language: "ru", Text: "Бритье" },
@@ -371,8 +249,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000008",
             DisplayName: "沖涼",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Ein Bad nehmen" },
               { Language: "ru", Text: "Принять ванну" },
@@ -388,21 +264,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "洗澡" },
               { Language: "ja", Text: "お風呂に入る" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Ein Bad nehmen",
-              ru: "Принять ванну",
-              pt: "Tomar um banho",
-              ko: "목욕을",
-              yue: "沖涼",
-              en: "Take a bath",
-              it: "Prendere un bagno",
-              fr: "Prendre un bain",
-              es: "Tomar un baño",
-              "zh-CHT": "洗澡",
-              ar: "أخذ حمام",
-              "zh-CHS": "洗澡",
-              ja: "お風呂に入る"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Ein Bad nehmen" },
               { Language: "ru", Text: "Принять ванну" },
@@ -422,8 +283,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000009",
             DisplayName: "抹面",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Reinigen Sie Ihr Gesicht" },
               { Language: "ru", Text: "Очистите лицо" },
@@ -439,21 +298,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "擦脸" },
               { Language: "ja", Text: "顔を洗ってください。" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Reinigen Sie Ihr Gesicht",
-              ru: "Очистите лицо",
-              pt: "Limpar o seu rosto",
-              ko: "당신의 얼굴을 청소",
-              yue: "抹面",
-              en: "Clean your face",
-              it: "Pulire il viso",
-              fr: "Nettoyez votre visage",
-              es: "Limpiar tu cara",
-              "zh-CHT": "擦臉",
-              ar: "تنظيف وجهك",
-              "zh-CHS": "擦脸",
-              ja: "顔を洗ってください。"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Reinigen Sie Ihr Gesicht" },
               { Language: "ru", Text: "Очистите лицо" },
@@ -473,8 +317,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000010",
             DisplayName: "洗面",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Gesicht zu waschen" },
               { Language: "ru", Text: "Мытье лица" },
@@ -490,21 +332,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "洗面" },
               { Language: "ja", Text: "顔を洗う" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Gesicht zu waschen",
-              ru: "Мытье лица",
-              pt: "Lavar o rosto",
-              ko: "페이스 워시",
-              yue: "洗面",
-              en: "Face wash",
-              it: "Volto di lavaggio",
-              fr: "Se laver le visage",
-              es: "Lavado de cara",
-              "zh-CHT": "洗面",
-              ar: "غسل الوجه",
-              "zh-CHS": "洗面",
-              ja: "顔を洗う"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Gesicht zu waschen" },
               { Language: "ru", Text: "Мытье лица" },
@@ -524,8 +351,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000011",
             DisplayName: "刷牙",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Putzen Sie Ihre Zähne" },
               { Language: "ru", Text: "Чистите зубы" },
@@ -541,21 +366,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "刷牙" },
               { Language: "ja", Text: "あなたの歯を磨く" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Putzen Sie Ihre Zähne",
-              ru: "Чистите зубы",
-              pt: "Escovar os dentes",
-              ko: "양치질",
-              yue: "刷牙",
-              en: "Brush your teeth",
-              it: "Lavarsi i denti",
-              fr: "Brossez-vous les dents",
-              es: "Cepillarse los dientes",
-              "zh-CHT": "刷牙",
-              ar: "فرشاة الأسنان",
-              "zh-CHS": "刷牙",
-              ja: "あなたの歯を磨く"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Putzen Sie Ihre Zähne" },
               { Language: "ru", Text: "Чистите зубы" },
@@ -575,8 +385,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000012",
             DisplayName: "梳頭",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Kämmen Sie Ihr Haar" },
               { Language: "ru", Text: "Расчешите волосы" },
@@ -592,21 +400,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "梳头" },
               { Language: "ja", Text: "あなたの髪をとかす" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Kämmen Sie Ihr Haar",
-              ru: "Расчешите волосы",
-              pt: "Pentear o cabelo",
-              ko: "머리 빗",
-              yue: "梳頭",
-              en: "Comb your hair",
-              it: "Pettinare i capelli",
-              fr: "Peignez vos cheveux",
-              es: "Peina tu cabello",
-              "zh-CHT": "梳頭",
-              ar: "مشط الشعر",
-              "zh-CHS": "梳头",
-              ja: "あなたの髪をとかす"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Kämmen Sie Ihr Haar" },
               { Language: "ru", Text: "Расчешите волосы" },
@@ -626,8 +419,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000013",
             DisplayName: "食飯",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Essen" },
               { Language: "ru", Text: "Ешьте" },
@@ -643,21 +434,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "吃饭" },
               { Language: "ja", Text: "食べる" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Essen",
-              ru: "Ешьте",
-              pt: "Comer",
-              ko: "먹으십시오",
-              yue: "食飯",
-              en: "Eat",
-              it: "Mangiare",
-              fr: "Manger",
-              es: "Comer",
-              "zh-CHT": "吃飯",
-              ar: "أكل",
-              "zh-CHS": "吃饭",
-              ja: "食べる"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Essen" },
               { Language: "ru", Text: "Ешьте" },
@@ -677,8 +453,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000014",
             DisplayName: "飲水",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Wasser zu trinken" },
               { Language: "ru", Text: "Питьевая вода" },
@@ -694,21 +468,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "饮水" },
               { Language: "ja", Text: "水を飲む" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Wasser zu trinken",
-              ru: "Питьевая вода",
-              pt: "Água potável",
-              ko: "식 수",
-              yue: "飲水",
-              en: "Drinking water",
-              it: "Acqua potabile",
-              fr: "Eau potable",
-              es: "Agua potable",
-              "zh-CHT": "飲水",
-              ar: "مياه الشرب",
-              "zh-CHS": "饮水",
-              ja: "水を飲む"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Wasser zu trinken" },
               { Language: "ru", Text: "Питьевая вода" },
@@ -728,8 +487,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000015",
             DisplayName: "坐輪椅",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Rollstuhl" },
               { Language: "ru", Text: "Для инвалидов" },
@@ -745,21 +502,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "坐轮椅" },
               { Language: "ja", Text: "車椅子" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Rollstuhl",
-              ru: "Для инвалидов",
-              pt: "Cadeira de rodas",
-              ko: "휠체어",
-              yue: "坐輪椅",
-              en: "Wheelchair",
-              it: "Sedia a rotelle",
-              fr: "Fauteuil roulant",
-              es: "Silla de ruedas",
-              "zh-CHT": "坐輪椅",
-              ar: "كرسي متحرك",
-              "zh-CHS": "坐轮椅",
-              ja: "車椅子"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Rollstuhl" },
               { Language: "ru", Text: "Для инвалидов" },
@@ -779,8 +521,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000016",
             DisplayName: "著衫",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Kleid" },
               { Language: "ru", Text: "Платье" },
@@ -796,21 +536,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "穿衣服" },
               { Language: "ja", Text: "ドレス" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Kleid",
-              ru: "Платье",
-              pt: "Vestido",
-              ko: "드레스",
-              yue: "著衫",
-              en: "Dress",
-              it: "Abito",
-              fr: "Robe",
-              es: "Vestido",
-              "zh-CHT": "穿衣服",
-              ar: "فستان",
-              "zh-CHS": "穿衣服",
-              ja: "ドレス"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Kleid" },
               { Language: "ru", Text: "Платье" },
@@ -830,8 +555,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000017",
             DisplayName: "拉拉鍊／扣鈕",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: 'Taste "Lalalian/Clip"' },
               { Language: "ru", Text: "Кнопка Lalalian/клип" },
@@ -847,21 +570,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "拉拉炼/扣钮" },
               { Language: "ja", Text: "Lalalian/クリップ ボタン" }
             ],
-            DisplayNameMultiLanguage: {
-              de: 'Taste "Lalalian/Clip"',
-              ru: "Кнопка Lalalian/клип",
-              pt: "Botão Lalalian/clip",
-              ko: "Lalalian/클립 버튼",
-              yue: "拉拉鍊／扣鈕",
-              en: "Lalalian/clip button",
-              it: "Tasto Lalalian/clip",
-              fr: "Bouton Lalalian/clip",
-              es: "Botón Lalalian/clip",
-              "zh-CHT": "拉拉煉/扣鈕",
-              ar: "زر لالاليان/مقطع",
-              "zh-CHS": "拉拉炼/扣钮",
-              ja: "Lalalian/クリップ ボタン"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: 'Taste "Lalalian/Clip"' },
               { Language: "ru", Text: "Кнопка Lalalian/клип" },
@@ -881,8 +589,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000018",
             DisplayName: "換片",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Advance-Folien" },
               { Language: "ru", Text: "Смена слайдов" },
@@ -898,21 +604,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "换片" },
               { Language: "ja", Text: "スライドの切り替え" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Advance-Folien",
-              ru: "Смена слайдов",
-              pt: "Slides de avanço",
-              ko: "사전 슬라이드",
-              yue: "換片",
-              en: "Advance slides",
-              it: "Avanzamento diapositive",
-              fr: "Défilement des diapositives",
-              es: "Avance de diapositivas",
-              "zh-CHT": "換片",
-              ar: "التقدم بالشرائح",
-              "zh-CHS": "换片",
-              ja: "スライドの切り替え"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Advance-Folien" },
               { Language: "ru", Text: "Смена слайдов" },
@@ -932,8 +623,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000019",
             DisplayName: "剝皮",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Skinning" },
               { Language: "ru", Text: "Снятие шкуры" },
@@ -949,21 +638,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "剥皮" },
               { Language: "ja", Text: "スキニング" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Skinning",
-              ru: "Снятие шкуры",
-              pt: "Esfola",
-              ko: "스키닝",
-              yue: "剝皮",
-              en: "Skinning",
-              it: "Scuoiatura",
-              fr: "Le dépouillement",
-              es: "Aplicación de aspectos",
-              "zh-CHT": "剝皮",
-              ar: "السلخ",
-              "zh-CHS": "剥皮",
-              ja: "スキニング"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Skinning" },
               { Language: "ru", Text: "Снятие шкуры" },
@@ -983,8 +657,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000020",
             DisplayName: "攪床",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Ein Bett machen" },
               { Language: "ru", Text: "Сделать кровать" },
@@ -1000,21 +672,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "做床" },
               { Language: "ja", Text: "ベッドを作る" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Ein Bett machen",
-              ru: "Сделать кровать",
-              pt: "Fazer uma cama",
-              ko: "침대를 만들어",
-              yue: "攪床",
-              en: "Make a bed",
-              it: "Fare un letto",
-              fr: "Faire un lit",
-              es: "Hacer una cama",
-              "zh-CHT": "做床",
-              ar: "جعل السرير",
-              "zh-CHS": "做床",
-              ja: "ベッドを作る"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Ein Bett machen" },
               { Language: "ru", Text: "Сделать кровать" },
@@ -1034,8 +691,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000021",
             DisplayName: "碎藥",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Zum Schleifen" },
               { Language: "ru", Text: "Для измельчения" },
@@ -1051,21 +706,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "碎药" },
               { Language: "ja", Text: "挽く" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Zum Schleifen",
-              ru: "Для измельчения",
-              pt: "Para moer",
-              ko: "갈기 위해",
-              yue: "碎藥",
-              en: "To grind",
-              it: "Per macinare",
-              fr: "Pour moudre",
-              es: "Para moler",
-              "zh-CHT": "碎藥",
-              ar: "لطحن",
-              "zh-CHS": "碎药",
-              ja: "挽く"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Zum Schleifen" },
               { Language: "ru", Text: "Для измельчения" },
@@ -1085,8 +725,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000022",
             DisplayName: "吐痰",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Spucken" },
               { Language: "ru", Text: "Коса" },
@@ -1102,21 +740,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "吐痰" },
               { Language: "ja", Text: "唾を吐きかける" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Spucken",
-              ru: "Коса",
-              pt: "Cuspir",
-              ko: "침",
-              yue: "吐痰",
-              en: "Spit",
-              it: "Spiedo",
-              fr: "Spit",
-              es: "Asador",
-              "zh-CHT": "吐痰",
-              ar: "يبصقون",
-              "zh-CHS": "吐痰",
-              ja: "唾を吐きかける"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Spucken" },
               { Language: "ru", Text: "Коса" },
@@ -1136,8 +759,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000023",
             DisplayName: "練習寫字",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Praxis schreiben" },
               { Language: "ru", Text: "Практика написания" },
@@ -1153,21 +774,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "练习写字" },
               { Language: "ja", Text: "作文の練習" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Praxis schreiben",
-              ru: "Практика написания",
-              pt: "Prática escrita",
-              ko: "연습 글",
-              yue: "練習寫字",
-              en: "Practice writing",
-              it: "Pratica di scrittura",
-              fr: "Écriture de la pratique",
-              es: "Práctica de escritura",
-              "zh-CHT": "練習寫字",
-              ar: "ممارسة الكتابة",
-              "zh-CHS": "练习写字",
-              ja: "作文の練習"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Praxis schreiben" },
               { Language: "ru", Text: "Практика написания" },
@@ -1187,8 +793,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000024",
             DisplayName: "拗痕",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Depression-Marken" },
               { Language: "ru", Text: "Депрессия знаки" },
@@ -1204,21 +808,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "拗痕" },
               { Language: "ja", Text: "うつ病のマーク" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Depression-Marken",
-              ru: "Депрессия знаки",
-              pt: "Marcas de depressão",
-              ko: "우울증 마크",
-              yue: "拗痕",
-              en: "Depression marks",
-              it: "Segni di depressione",
-              fr: "Marques de dépression",
-              es: "Marcas de depresión",
-              "zh-CHT": "拗痕",
-              ar: "علامات الاكتئاب",
-              "zh-CHS": "拗痕",
-              ja: "うつ病のマーク"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Depression-Marken" },
               { Language: "ru", Text: "Депрессия знаки" },
@@ -1238,8 +827,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000025",
             DisplayName: "睇粵劇／大戲",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Oper/Theater" },
               { Language: "ru", Text: "Опера/Театр" },
@@ -1255,21 +842,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "看粤剧/大戏" },
               { Language: "ja", Text: "オペラ/劇場" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Oper/Theater",
-              ru: "Опера/Театр",
-              pt: "Ópera/Teatro",
-              ko: "오페라/극장",
-              yue: "睇粵劇／大戲",
-              en: "Opera/Theatre",
-              it: "Teatro/Opera",
-              fr: "Opéra/théâtre",
-              es: "Teatro de la ópera",
-              "zh-CHT": "看粵劇/大戲",
-              ar: "مسرح الأوبرا/",
-              "zh-CHS": "看粤剧/大戏",
-              ja: "オペラ/劇場"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Oper/Theater" },
               { Language: "ru", Text: "Опера/Театр" },
@@ -1289,8 +861,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000026",
             DisplayName: "睇報紙／書",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Zeitung Buch /" },
               { Language: "ru", Text: "Чтение газеты/книги" },
@@ -1306,21 +876,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "看报纸/书" },
               { Language: "ja", Text: "新聞・本を読む" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Zeitung Buch /",
-              ru: "Чтение газеты/книги",
-              pt: "Lendo um jornal/livro",
-              ko: "신문/책을 읽고",
-              yue: "睇報紙／書",
-              en: "Reading a newspaper/book",
-              it: "Leggendo un giornale/libro",
-              fr: "Lecture d’un journal/livre",
-              es: "Leyendo un libro de diario",
-              "zh-CHT": "看報紙/書",
-              ar: "قراءة كتاب صحيفة",
-              "zh-CHS": "看报纸/书",
-              ja: "新聞・本を読む"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Zeitung Buch /" },
               { Language: "ru", Text: "Чтение газеты/книги" },
@@ -1340,8 +895,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000027",
             DisplayName: "行晨運",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Frühsport" },
               { Language: "ru", Text: "Утренняя гимнастика" },
@@ -1357,21 +910,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "走晨练" },
               { Language: "ja", Text: "朝の運動" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Frühsport",
-              ru: "Утренняя гимнастика",
-              pt: "Exercício de manhã",
-              ko: "아침 운동",
-              yue: "行晨運",
-              en: "Morning exercise",
-              it: "Ginnastica mattutina",
-              fr: "Exercices matinaux",
-              es: "Ejercicio por la mañana",
-              "zh-CHT": "走晨練",
-              ar: "ممارسة صباح",
-              "zh-CHS": "走晨练",
-              ja: "朝の運動"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Frühsport" },
               { Language: "ru", Text: "Утренняя гимнастика" },
@@ -1391,8 +929,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000028",
             DisplayName: "探朋友",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Besuch bei Freunden" },
               { Language: "ru", Text: "В гостях у друзей" },
@@ -1408,21 +944,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "看望朋友" },
               { Language: "ja", Text: "友人を訪問" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Besuch bei Freunden",
-              ru: "В гостях у друзей",
-              pt: "Visitando amigos",
-              ko: "친구 방문",
-              yue: "探朋友",
-              en: "Visiting friends",
-              it: "Visitando gli amici",
-              fr: "Visite à des amis",
-              es: "Amigos visitantes",
-              "zh-CHT": "看望朋友",
-              ar: "زيارة الأصدقاء",
-              "zh-CHS": "看望朋友",
-              ja: "友人を訪問"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Besuch bei Freunden" },
               { Language: "ru", Text: "В гостях у друзей" },
@@ -1442,8 +963,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000029",
             DisplayName: "去街",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Die Straßen" },
               { Language: "ru", Text: "Улицы" },
@@ -1459,21 +978,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "上街" },
               { Language: "ja", Text: "通り" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Die Straßen",
-              ru: "Улицы",
-              pt: "As ruas",
-              ko: "거리",
-              yue: "去街",
-              en: "The streets",
-              it: "Le strade",
-              fr: "Les rues",
-              es: "Las calles",
-              "zh-CHT": "上街",
-              ar: "الشوارع",
-              "zh-CHS": "上街",
-              ja: "通り"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Die Straßen" },
               { Language: "ru", Text: "Улицы" },
@@ -1493,8 +997,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000030",
             DisplayName: "打電話",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Rufen Sie" },
               { Language: "ru", Text: "Вызов" },
@@ -1510,21 +1012,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "打电话" },
               { Language: "ja", Text: "呼び出し" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Rufen Sie",
-              ru: "Вызов",
-              pt: "Chamada",
-              ko: "전화",
-              yue: "打電話",
-              en: "Call",
-              it: "Chiamata",
-              fr: "Appel",
-              es: "Llame al",
-              "zh-CHT": "打電話",
-              ar: "المكالمة",
-              "zh-CHS": "打电话",
-              ja: "呼び出し"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Rufen Sie" },
               { Language: "ru", Text: "Вызов" },
@@ -1544,8 +1031,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000031",
             DisplayName: "開風扇",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Offenen Ventilator" },
               { Language: "ru", Text: "Открытый Вентилятор" },
@@ -1561,21 +1046,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "开风扇" },
               { Language: "ja", Text: "開いているファン" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Offenen Ventilator",
-              ru: "Открытый Вентилятор",
-              pt: "Leque aberto",
-              ko: "오픈 팬",
-              yue: "開風扇",
-              en: "Open fan",
-              it: "Ventilatore aperto",
-              fr: "Ventilateur ouvert",
-              es: "Ventilador abierto",
-              "zh-CHT": "開風扇",
-              ar: "مروحة مفتوحة",
-              "zh-CHS": "开风扇",
-              ja: "開いているファン"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Offenen Ventilator" },
               { Language: "ru", Text: "Открытый Вентилятор" },
@@ -1595,8 +1065,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000032",
             DisplayName: "扭乾",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Auswringen" },
               { Language: "ru", Text: "Скрутить" },
@@ -1612,21 +1080,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "拧干" },
               { Language: "ja", Text: "絞る" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Auswringen",
-              ru: "Скрутить",
-              pt: "Torcer o",
-              ko: "짜서",
-              yue: "扭乾",
-              en: "Wring",
-              it: "Strizzare",
-              fr: "Essorer",
-              es: "Saca",
-              "zh-CHT": "擰乾",
-              ar: "تفرك",
-              "zh-CHS": "拧干",
-              ja: "絞る"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Auswringen" },
               { Language: "ru", Text: "Скрутить" },
@@ -1646,8 +1099,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000033",
             DisplayName: "聽收音機",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Radio hören" },
               { Language: "ru", Text: "Слушайте к радио" },
@@ -1663,21 +1114,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "听收音机" },
               { Language: "ja", Text: "ラジオを聴く" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Radio hören",
-              ru: "Слушайте к радио",
-              pt: "Ouvir o rádio",
-              ko: "라디오를 듣으십시오",
-              yue: "聽收音機",
-              en: "Listen to the radio",
-              it: "Ascoltare la radio",
-              fr: "Ecouter la radio",
-              es: "Escuchar la radio",
-              "zh-CHT": "聽收音機",
-              ar: "الاستماع إلى الراديو",
-              "zh-CHS": "听收音机",
-              ja: "ラジオを聴く"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Radio hören" },
               { Language: "ru", Text: "Слушайте к радио" },
@@ -1697,8 +1133,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000034",
             DisplayName: "睇電視",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Vor dem Fernseher" },
               { Language: "ru", Text: "Смотреть телевизор" },
@@ -1714,21 +1148,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "看电视" },
               { Language: "ja", Text: "テレビを見てください。" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Vor dem Fernseher",
-              ru: "Смотреть телевизор",
-              pt: "Assistindo TV",
-              ko: "TV를 시청",
-              yue: "睇電視",
-              en: "Watching TV",
-              it: "Guardare la TV",
-              fr: "Regarder la télévision",
-              es: "Viendo la televisión",
-              "zh-CHT": "看電視",
-              ar: "مشاهدة التلفزيون",
-              "zh-CHS": "看电视",
-              ja: "テレビを見てください。"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Vor dem Fernseher" },
               { Language: "ru", Text: "Смотреть телевизор" },
@@ -1748,8 +1167,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000035",
             DisplayName: "做針灸",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Akupunktur und moxibustion" },
               { Language: "ru", Text: "Иглоукалывание и прижигание" },
@@ -1765,21 +1182,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "做针灸" },
               { Language: "ja", Text: "鍼と灸" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Akupunktur und moxibustion",
-              ru: "Иглоукалывание и прижигание",
-              pt: "Acupuntura e moxabustão",
-              ko: "침술과 뜸",
-              yue: "做針灸",
-              en: "Acupuncture and moxibustion",
-              it: "Agopuntura e moxibustione",
-              fr: "Acupuncture et moxibustion",
-              es: "Acupuntura y moxibustion",
-              "zh-CHT": "做針灸",
-              ar: "الوخز بالإبر والكي",
-              "zh-CHS": "做针灸",
-              ja: "鍼と灸"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Akupunktur und moxibustion" },
               { Language: "ru", Text: "Иглоукалывание и прижигание" },
@@ -1799,8 +1201,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000036",
             DisplayName: "耍太極",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Tai Chi" },
               { Language: "ru", Text: "Тай-Чи" },
@@ -1816,21 +1216,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "耍太极" },
               { Language: "ja", Text: "太極拳" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Tai Chi",
-              ru: "Тай-Чи",
-              pt: "Tai Chi",
-              ko: "타이 치",
-              yue: "耍太極",
-              en: "Tai Chi",
-              it: "Tai Chi",
-              fr: "Tai Chi",
-              es: "Tai Chi",
-              "zh-CHT": "耍太極",
-              ar: "تاي تشي",
-              "zh-CHS": "耍太极",
-              ja: "太極拳"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Tai Chi" },
               { Language: "ru", Text: "Тай-Чи" },
@@ -1850,8 +1235,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000037",
             DisplayName: "俾錢買嘢",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Dinge für Geld kaufen" },
               { Language: "ru", Text: "Купить вещи за деньги" },
@@ -1867,21 +1250,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "给钱买东西" },
               { Language: "ja", Text: "お金のためのものを購入します。" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Dinge für Geld kaufen",
-              ru: "Купить вещи за деньги",
-              pt: "Comprar coisas por dinheiro",
-              ko: "돈에 대 한 것 들을 살",
-              yue: "俾錢買嘢",
-              en: "Buy things for money",
-              it: "Comprare cose per soldi",
-              fr: "Acheter des choses pour l’argent",
-              es: "Comprar cosas para el dinero",
-              "zh-CHT": "給錢買東西",
-              ar: "شراء أشياء للمال",
-              "zh-CHS": "给钱买东西",
-              ja: "お金のためのものを購入します。"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Dinge für Geld kaufen" },
               { Language: "ru", Text: "Купить вещи за деньги" },
@@ -1901,8 +1269,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000038",
             DisplayName: "捉象棋",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Schach" },
               { Language: "ru", Text: "Шахматы" },
@@ -1918,21 +1284,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "下象棋" },
               { Language: "ja", Text: "チェス" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Schach",
-              ru: "Шахматы",
-              pt: "Xadrez",
-              ko: "체스",
-              yue: "捉象棋",
-              en: "Chess",
-              it: "Scacchi",
-              fr: "Jeu d’échecs",
-              es: "Ajedrez",
-              "zh-CHT": "下象棋",
-              ar: "لعبة الشطرنج",
-              "zh-CHS": "下象棋",
-              ja: "チェス"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Schach" },
               { Language: "ru", Text: "Шахматы" },
@@ -1952,8 +1303,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000039",
             DisplayName: "去飲茶",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Gehen Sie zum Tee" },
               { Language: "ru", Text: "Перейти к чаю" },
@@ -1969,21 +1318,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "去饮茶" },
               { Language: "ja", Text: "お茶に行く" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Gehen Sie zum Tee",
-              ru: "Перейти к чаю",
-              pt: "Ir para o chá",
-              ko: "차에가 서",
-              yue: "去飲茶",
-              en: "Go to tea",
-              it: "Vai al tè",
-              fr: "Aller à thé",
-              es: "Ir a tomar el té",
-              "zh-CHT": "去飲茶",
-              ar: "الذهاب للشاي",
-              "zh-CHS": "去饮茶",
-              ja: "お茶に行く"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Gehen Sie zum Tee" },
               { Language: "ru", Text: "Перейти к чаю" },
@@ -2003,8 +1337,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000040",
             DisplayName: "開／關冷氣",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Ein/aus Schalter Klimaanlage" },
               { Language: "ru", Text: "Вкл/выкл выключателя кондиционера" },
@@ -2035,21 +1367,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "开/关空调" },
               { Language: "ja", Text: "オン/オフ スイッチ、エアコン" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Ein/aus Schalter Klimaanlage",
-              ru: "Вкл/выкл выключателя кондиционера",
-              pt: "Ligar/desligar o interruptor de ar condicionado",
-              ko: "온/오프 스위치 에어컨",
-              yue: "開／關冷氣",
-              en: "On/off switch air conditioning",
-              it: "Aria condizionata interruttore inserita/disinserita",
-              fr: "Marche/arrêt interrupteur de climatisation",
-              es: "Encendido/apagado interruptor aire acondicionado",
-              "zh-CHT": "開/關空調",
-              ar: "تشغيل/إيقاف تشغيل التبديل تكييف الهواء",
-              "zh-CHS": "开/关空调",
-              ja: "オン/オフ スイッチ、エアコン"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Ein/aus Schalter Klimaanlage" },
               { Language: "ru", Text: "Вкл/выкл выключателя кондиционера" },
@@ -2097,21 +1414,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "动作" },
           { Language: "ja", Text: "アクション" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Aktion",
-          ru: "Действия",
-          pt: "Ação",
-          ko: "액션",
-          yue: "動作",
-          en: "Action",
-          it: "Azione",
-          fr: "Action",
-          es: "Acción",
-          "zh-CHT": "動作",
-          ar: "عمل",
-          "zh-CHS": "动作",
-          ja: "アクション"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Aktion" },
           { Language: "ru", Text: "Действия" },
@@ -2129,16 +1431,12 @@ function getSampleUserProfile() {
         ]
       },
       {
-        ID: "00000000-0000-0000-0003-000000000043",
+        ID: "00000000-0000-0000-0000-000000000002",
         DisplayName: "感覺",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000041",
             DisplayName: "肚餓",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Hungrige" },
               { Language: "ru", Text: "Голодные" },
@@ -2154,21 +1452,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "肚子饿" },
               { Language: "ja", Text: "空腹" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Hungrige",
-              ru: "Голодные",
-              pt: "Com fome",
-              ko: "배 고 파",
-              yue: "肚餓",
-              en: "Hungry",
-              it: "Fame",
-              fr: "Faim",
-              es: "Hambre",
-              "zh-CHT": "肚子餓",
-              ar: "الجوع",
-              "zh-CHS": "肚子饿",
-              ja: "空腹"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Hungrige" },
               { Language: "ru", Text: "Голодные" },
@@ -2188,8 +1471,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000042",
             DisplayName: "口渴",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Durstig" },
               { Language: "ru", Text: "Жажда" },
@@ -2205,21 +1486,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "口渴" },
               { Language: "ja", Text: "のどが渇いて" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Durstig",
-              ru: "Жажда",
-              pt: "Com sede",
-              ko: "목말라",
-              yue: "口渴",
-              en: "Thirsty",
-              it: "Assetato",
-              fr: "Soif",
-              es: "Sed",
-              "zh-CHT": "口渴",
-              ar: "عطشى",
-              "zh-CHS": "口渴",
-              ja: "のどが渇いて"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Durstig" },
               { Language: "ru", Text: "Жажда" },
@@ -2239,8 +1505,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000043",
             DisplayName: "好開心",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Viel Spaß" },
               { Language: "ru", Text: "Хорошее развлечение" },
@@ -2256,21 +1520,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "好开心" },
               { Language: "ja", Text: "楽しい" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Viel Spaß",
-              ru: "Хорошее развлечение",
-              pt: "Boa diversão",
-              ko: "좋은 재미",
-              yue: "好開心",
-              en: "Good fun",
-              it: "Buon divertimento",
-              fr: "Bon amusement",
-              es: "Buena diversión",
-              "zh-CHT": "好開心",
-              ar: "متعة جيدة",
-              "zh-CHS": "好开心",
-              ja: "楽しい"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Viel Spaß" },
               { Language: "ru", Text: "Хорошее развлечение" },
@@ -2290,8 +1539,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000044",
             DisplayName: "好嬲",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Gas" },
               { Language: "ru", Text: "Газ" },
@@ -2307,21 +1554,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "很气" },
               { Language: "ja", Text: "ガス" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Gas",
-              ru: "Газ",
-              pt: "Gás",
-              ko: "가스",
-              yue: "好嬲",
-              en: "Gas",
-              it: "Gas",
-              fr: "Gaz",
-              es: "Gas",
-              "zh-CHT": "很氣",
-              ar: "الغاز",
-              "zh-CHS": "很气",
-              ja: "ガス"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Gas" },
               { Language: "ru", Text: "Газ" },
@@ -2341,8 +1573,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000045",
             DisplayName: "好驚",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "So erschrocken" },
               { Language: "ru", Text: "Так страшно" },
@@ -2358,21 +1588,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "好害怕" },
               { Language: "ja", Text: "怖いから" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "So erschrocken",
-              ru: "Так страшно",
-              pt: "Com tanto medo",
-              ko: "그래서 무서 워",
-              yue: "好驚",
-              en: "So scared",
-              it: "Tanta paura",
-              fr: "Tellement peur",
-              es: "Tan asustado",
-              "zh-CHT": "好害怕",
-              ar: "خائفة جداً",
-              "zh-CHS": "好害怕",
-              ja: "怖いから"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "So erschrocken" },
               { Language: "ru", Text: "Так страшно" },
@@ -2392,8 +1607,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000046",
             DisplayName: "疲倦",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Müde" },
               { Language: "ru", Text: "Усталость" },
@@ -2409,21 +1622,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "疲倦" },
               { Language: "ja", Text: "疲れています。" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Müde",
-              ru: "Усталость",
-              pt: "Cansado",
-              ko: "피곤",
-              yue: "疲倦",
-              en: "Tired",
-              it: "Stanco",
-              fr: "Fatigué",
-              es: "Cansado",
-              "zh-CHT": "疲倦",
-              ar: "متعب",
-              "zh-CHS": "疲倦",
-              ja: "疲れています。"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Müde" },
               { Language: "ru", Text: "Усталость" },
@@ -2443,8 +1641,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000047",
             DisplayName: "好傷心",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Zu traurig" },
               { Language: "ru", Text: "Слишком грустно" },
@@ -2460,21 +1656,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "太伤心了" },
               { Language: "ja", Text: "あまりにも悲しい" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Zu traurig",
-              ru: "Слишком грустно",
-              pt: "Muito triste",
-              ko: "너무 슬픈",
-              yue: "好傷心",
-              en: "Too sad",
-              it: "Troppo triste",
-              fr: "Trop triste",
-              es: "Demasiado triste",
-              "zh-CHT": "太傷心了",
-              ar: "حزين جداً",
-              "zh-CHS": "太伤心了",
-              ja: "あまりにも悲しい"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Zu traurig" },
               { Language: "ru", Text: "Слишком грустно" },
@@ -2494,8 +1675,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000048",
             DisplayName: "好痛",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Sehr schmerzhaft" },
               { Language: "ru", Text: "Очень больно" },
@@ -2511,21 +1690,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "很痛" },
               { Language: "ja", Text: "非常に痛みを伴う" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Sehr schmerzhaft",
-              ru: "Очень больно",
-              pt: "Muito doloroso",
-              ko: "매우 고통 스러운",
-              yue: "好痛",
-              en: "Very painful",
-              it: "Molto doloroso",
-              fr: "Très douloureux",
-              es: "Muy doloroso",
-              "zh-CHT": "很痛",
-              ar: "مؤلمة جداً",
-              "zh-CHS": "很痛",
-              ja: "非常に痛みを伴う"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Sehr schmerzhaft" },
               { Language: "ru", Text: "Очень больно" },
@@ -2545,8 +1709,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000049",
             DisplayName: "好凍",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Es ist kalt" },
               { Language: "ru", Text: "Это холодно" },
@@ -2562,21 +1724,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "好冷" },
               { Language: "ja", Text: "寒いです" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Es ist kalt",
-              ru: "Это холодно",
-              pt: "Está frio",
-              ko: "그것은 감기",
-              yue: "好凍",
-              en: "It's cold",
-              it: "Fa freddo",
-              fr: "Il fait froid",
-              es: "Es frío",
-              "zh-CHT": "好冷",
-              ar: "إنه بارد",
-              "zh-CHS": "好冷",
-              ja: "寒いです"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Es ist kalt" },
               { Language: "ru", Text: "Это холодно" },
@@ -2596,8 +1743,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000050",
             DisplayName: "好熱",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Es ist heiß" },
               { Language: "ru", Text: "Это горячий" },
@@ -2613,21 +1758,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "好热" },
               { Language: "ja", Text: "暑いです。" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Es ist heiß",
-              ru: "Это горячий",
-              pt: "Está quente",
-              ko: "그것은 뜨거운",
-              yue: "好熱",
-              en: "It's hot",
-              it: "È caldo",
-              fr: "Il fait chaud",
-              es: "Está caliente",
-              "zh-CHT": "好熱",
-              ar: "أنها ساخنة",
-              "zh-CHS": "好热",
-              ja: "暑いです。"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Es ist heiß" },
               { Language: "ru", Text: "Это горячий" },
@@ -2647,8 +1777,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000051",
             DisplayName: "唔舒服",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Nicht gut" },
               { Language: "ru", Text: "Не чувствует себя хорошо" },
@@ -2664,21 +1792,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "不舒服" },
               { Language: "ja", Text: "気分が良くないです。" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Nicht gut",
-              ru: "Не чувствует себя хорошо",
-              pt: "Não se sente bem",
-              ko: "몸이 안",
-              yue: "唔舒服",
-              en: "Not feeling well",
-              it: "Non si sente bene",
-              fr: "Ne se sentant pas bien",
-              es: "No se siente bien",
-              "zh-CHT": "不舒服",
-              ar: "ليس على ما يرام",
-              "zh-CHS": "不舒服",
-              ja: "気分が良くないです。"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Nicht gut" },
               { Language: "ru", Text: "Не чувствует себя хорошо" },
@@ -2711,21 +1824,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "感觉" },
           { Language: "ja", Text: "感じ" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Gefühl",
-          ru: "Чувство",
-          pt: "Sentimento",
-          ko: "느낌",
-          yue: "感覺",
-          en: "Feeling",
-          it: "Sensazione",
-          fr: "Sentiment",
-          es: "Sensación",
-          "zh-CHT": "感覺",
-          ar: "شعور",
-          "zh-CHS": "感觉",
-          ja: "感じ"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Gefühl" },
           { Language: "ru", Text: "Чувство" },
@@ -2743,16 +1841,12 @@ function getSampleUserProfile() {
         ]
       },
       {
-        ID: "00000000-0000-0000-0003-000000000054",
+        ID: "00000000-0000-0000-0000-000000000003",
         DisplayName: "社交",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000052",
             DisplayName: "再講一次",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Sage es noch einmal" },
               { Language: "ru", Text: "Скажем еще раз" },
@@ -2768,21 +1862,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "再说一次" },
               { Language: "ja", Text: "もう一度言って下さい" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Sage es noch einmal",
-              ru: "Скажем еще раз",
-              pt: "Diga de novo",
-              ko: "다시 말해 봐",
-              yue: "再講一次",
-              en: "Say it again",
-              it: "Dillo di nuovo",
-              fr: "Il répète",
-              es: "Decir otra vez",
-              "zh-CHT": "再說一次",
-              ar: "قلها مجددًا",
-              "zh-CHS": "再说一次",
-              ja: "もう一度言って下さい"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Sage es noch einmal" },
               { Language: "ru", Text: "Скажем еще раз" },
@@ -2802,8 +1881,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000053",
             DisplayName: "唔該",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Vielen Dank" },
               { Language: "ru", Text: "Большое спасибо" },
@@ -2819,21 +1896,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "多谢" },
               { Language: "ja", Text: "どうもありがとうございます" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Vielen Dank",
-              ru: "Большое спасибо",
-              pt: "Muito obrigado",
-              ko: "정말 고마워요",
-              yue: "唔該",
-              en: "Thanks a lot",
-              it: "Grazie mille",
-              fr: "Merci beaucoup",
-              es: "Muchas gracias",
-              "zh-CHT": "多謝",
-              ar: "شكرًا جزيلاً",
-              "zh-CHS": "多谢",
-              ja: "どうもありがとうございます"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Vielen Dank" },
               { Language: "ru", Text: "Большое спасибо" },
@@ -2853,8 +1915,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000054",
             DisplayName: "早晨",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Guten Tag" },
               { Language: "ru", Text: "Добрый день" },
@@ -2870,21 +1930,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "日安" },
               { Language: "ja", Text: "こんにちは" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Guten Tag",
-              ru: "Добрый день",
-              pt: "Bom dia",
-              ko: "좋은 하루",
-              yue: "早晨",
-              en: "Good day",
-              it: "Buona giornata",
-              fr: "Bonne journée",
-              es: "Buenos días",
-              "zh-CHT": "日安",
-              ar: "يوم سعيد",
-              "zh-CHS": "日安",
-              ja: "こんにちは"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Guten Tag" },
               { Language: "ru", Text: "Добрый день" },
@@ -2904,8 +1949,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000055",
             DisplayName: "晚安",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Gute Nacht" },
               { Language: "ru", Text: "Спокойной ночи" },
@@ -2921,21 +1964,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "晚安" },
               { Language: "ja", Text: "おやすみなさい" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Gute Nacht",
-              ru: "Спокойной ночи",
-              pt: "Boa noite",
-              ko: "잘자",
-              yue: "晚安",
-              en: "Good night",
-              it: "Buona notte",
-              fr: "Bonne nuit",
-              es: "Buenas noches",
-              "zh-CHT": "晚安",
-              ar: "طابت ليلتك",
-              "zh-CHS": "晚安",
-              ja: "おやすみなさい"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Gute Nacht" },
               { Language: "ru", Text: "Спокойной ночи" },
@@ -2955,8 +1983,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000056",
             DisplayName: "對唔住",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Es tut mir leid" },
               { Language: "ru", Text: "Извините, пожалуйста" },
@@ -2972,21 +1998,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "对不起" },
               { Language: "ja", Text: "ごめんなさい" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Es tut mir leid",
-              ru: "Извините, пожалуйста",
-              pt: "Desculpa",
-              ko: "미안해",
-              yue: "對唔住",
-              en: "I am sorry",
-              it: "Mi dispiace",
-              fr: "Désolé",
-              es: "Lo siento",
-              "zh-CHT": "對不起",
-              ar: "اسف",
-              "zh-CHS": "对不起",
-              ja: "ごめんなさい"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Es tut mir leid" },
               { Language: "ru", Text: "Извините, пожалуйста" },
@@ -3006,8 +2017,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000057",
             DisplayName: "幾多點",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Wie viele Punkte" },
               { Language: "ru", Text: "Сколько очков" },
@@ -3023,21 +2032,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "多少点" },
               { Language: "ja", Text: "どのように多くのポイント" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Wie viele Punkte",
-              ru: "Сколько очков",
-              pt: "Quantos pontos",
-              ko: "얼마나 많은 포인트",
-              yue: "幾多點",
-              en: "How many points",
-              it: "Quanti punti",
-              fr: "Combien de points",
-              es: "Cuántos puntos",
-              "zh-CHT": "多少點",
-              ar: "كم عدد نقاط",
-              "zh-CHS": "多少点",
-              ja: "どのように多くのポイント"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Wie viele Punkte" },
               { Language: "ru", Text: "Сколько очков" },
@@ -3057,8 +2051,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000058",
             DisplayName: "唔好理我",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Lass mich in Ruhe" },
               { Language: "ru", Text: "Оставь меня в покое" },
@@ -3074,21 +2066,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "别理我" },
               { Language: "ja", Text: "1 人にしてください" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Lass mich in Ruhe",
-              ru: "Оставь меня в покое",
-              pt: "Deixa-me",
-              ko: "혼자 있고 싶어요",
-              yue: "唔好理我",
-              en: "Leave me alone",
-              it: "Lasciami in pace",
-              fr: "Laisse-moi tranquille",
-              es: "Déjame en paz",
-              "zh-CHT": "別理我",
-              ar: "دعني وشأني",
-              "zh-CHS": "别理我",
-              ja: "1 人にしてください"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Lass mich in Ruhe" },
               { Language: "ru", Text: "Оставь меня в покое" },
@@ -3108,8 +2085,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000059",
             DisplayName: "請等等",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Bitte warten" },
               { Language: "ru", Text: "Подождите" },
@@ -3125,21 +2100,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "请等等" },
               { Language: "ja", Text: "お待ちください" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Bitte warten",
-              ru: "Подождите",
-              pt: "Aguarde",
-              ko: "잠시만 기다려 주십시오",
-              yue: "請等等",
-              en: "Please wait",
-              it: "Attendere prego",
-              fr: "Veuillez patienter",
-              es: "Espera",
-              "zh-CHT": "請等等",
-              ar: "الرجاء الانتظار",
-              "zh-CHS": "请等等",
-              ja: "お待ちください"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Bitte warten" },
               { Language: "ru", Text: "Подождите" },
@@ -3172,21 +2132,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "社交" },
           { Language: "ja", Text: "社会のネットワー キング" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Soziale Netzwerke",
-          ru: "Социальные сети",
-          pt: "Redes sociais",
-          ko: "소셜 네트워킹",
-          yue: "社交",
-          en: "Social networking",
-          it: "Di social networking",
-          fr: "Réseaux sociaux",
-          es: "Redes sociales",
-          "zh-CHT": "社交",
-          ar: "الشبكات الاجتماعية",
-          "zh-CHS": "社交",
-          ja: "社会のネットワー キング"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Soziale Netzwerke" },
           { Language: "ru", Text: "Социальные сети" },
@@ -3204,16 +2149,12 @@ function getSampleUserProfile() {
         ]
       },
       {
-        ID: "00000000-0000-0000-0003-000000000082",
+        ID: "00000000-0000-0000-0000-000000000004",
         DisplayName: "食物",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000060",
             DisplayName: "飯",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Reis" },
               { Language: "ru", Text: "Райс" },
@@ -3229,21 +2170,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "饭" },
               { Language: "ja", Text: "米" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Reis",
-              ru: "Райс",
-              pt: "Arroz",
-              ko: "쌀",
-              yue: "飯",
-              en: "Rice",
-              it: "Riso",
-              fr: "Riz",
-              es: "Arroz",
-              "zh-CHT": "飯",
-              ar: "الأرز",
-              "zh-CHS": "饭",
-              ja: "米"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Reis" },
               { Language: "ru", Text: "Райс" },
@@ -3263,8 +2189,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000061",
             DisplayName: "麥皮",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Haferflocken" },
               { Language: "ru", Text: "Овсяная каша" },
@@ -3280,21 +2204,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "麦皮" },
               { Language: "ja", Text: "オートミール" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Haferflocken",
-              ru: "Овсяная каша",
-              pt: "Farinha de aveia",
-              ko: "오트밀",
-              yue: "麥皮",
-              en: "Oatmeal",
-              it: "Farina d'avena",
-              fr: "Farine d’avoine",
-              es: "Harina de avena",
-              "zh-CHT": "麥皮",
-              ar: "دقيق الشوفان",
-              "zh-CHS": "麦皮",
-              ja: "オートミール"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Haferflocken" },
               { Language: "ru", Text: "Овсяная каша" },
@@ -3314,8 +2223,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000062",
             DisplayName: "飯盒",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Lunch-box" },
               { Language: "ru", Text: "Ланч бокс" },
@@ -3331,21 +2238,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "饭盒" },
               { Language: "ja", Text: "ランチ ボックス" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Lunch-box",
-              ru: "Ланч бокс",
-              pt: "Caixa de almoço",
-              ko: "점심 상자",
-              yue: "飯盒",
-              en: "Lunch box",
-              it: "Scatola di pranzo",
-              fr: "Boîte à lunch",
-              es: "Caja de almuerzo",
-              "zh-CHT": "飯盒",
-              ar: "مربع الغداء",
-              "zh-CHS": "饭盒",
-              ja: "ランチ ボックス"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Lunch-box" },
               { Language: "ru", Text: "Ланч бокс" },
@@ -3365,8 +2257,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000063",
             DisplayName: "粥",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Witz" },
               { Language: "ru", Text: "Шутка" },
@@ -3382,21 +2272,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "笑话" },
               { Language: "ja", Text: "冗談" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Witz",
-              ru: "Шутка",
-              pt: "Piada",
-              ko: "농담",
-              yue: "粥",
-              en: "Joke",
-              it: "Scherzo",
-              fr: "Blague",
-              es: "Broma",
-              "zh-CHT": "笑話",
-              ar: "جوك",
-              "zh-CHS": "笑话",
-              ja: "冗談"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Witz" },
               { Language: "ru", Text: "Шутка" },
@@ -3416,8 +2291,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000064",
             DisplayName: "麵",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Nudeln" },
               { Language: "ru", Text: "Лапша" },
@@ -3433,21 +2306,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "面" },
               { Language: "ja", Text: "麺" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Nudeln",
-              ru: "Лапша",
-              pt: "Macarrão",
-              ko: "국수",
-              yue: "麵",
-              en: "Noodles",
-              it: "Tagliatelle",
-              fr: "Nouilles",
-              es: "Fideos",
-              "zh-CHT": "面",
-              ar: "الشعرية",
-              "zh-CHS": "面",
-              ja: "麺"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Nudeln" },
               { Language: "ru", Text: "Лапша" },
@@ -3467,8 +2325,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000065",
             DisplayName: "通心粉",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Makkaroni" },
               { Language: "ru", Text: "Макаронные изделия" },
@@ -3484,21 +2340,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "通心粉" },
               { Language: "ja", Text: "マカロニ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Makkaroni",
-              ru: "Макаронные изделия",
-              pt: "Macarrão",
-              ko: "마 카로 니",
-              yue: "通心粉",
-              en: "Macaroni",
-              it: "Maccheroni",
-              fr: "Macaroni",
-              es: "Macarrones",
-              "zh-CHT": "通心粉",
-              ar: "معكرونة",
-              "zh-CHS": "通心粉",
-              ja: "マカロニ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Makkaroni" },
               { Language: "ru", Text: "Макаронные изделия" },
@@ -3518,8 +2359,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000066",
             DisplayName: "饅頭",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Gedämpftes Brötchen" },
               { Language: "ru", Text: "Пару булочка" },
@@ -3535,21 +2374,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "馒头" },
               { Language: "ja", Text: "蒸しパン" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Gedämpftes Brötchen",
-              ru: "Пару булочка",
-              pt: "Pão cozido no vapor",
-              ko: "찐된 롤빵",
-              yue: "饅頭",
-              en: "Steamed bun",
-              it: "Panino cotto a vapore",
-              fr: "Petit pain cuit à la vapeur",
-              es: "Pan al vapor",
-              "zh-CHT": "饅頭",
-              ar: "كعكة البخار",
-              "zh-CHS": "馒头",
-              ja: "蒸しパン"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Gedämpftes Brötchen" },
               { Language: "ru", Text: "Пару булочка" },
@@ -3569,8 +2393,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000067",
             DisplayName: "雲吞",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Won Ton Suppe" },
               { Language: "ru", Text: "Выиграл тонну суп" },
@@ -3586,21 +2408,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "馄饨" },
               { Language: "ja", Text: "ワンタン入りスープ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Won Ton Suppe",
-              ru: "Выиграл тонну суп",
-              pt: "Sopa won ton",
-              ko: "원 톤 스프",
-              yue: "雲吞",
-              en: "Won ton soup",
-              it: "Zuppa di Won ton",
-              fr: "Soupe won ton",
-              es: "Sopa de Won ton",
-              "zh-CHT": "餛飩",
-              ar: "شوربة ون طن",
-              "zh-CHS": "馄饨",
-              ja: "ワンタン入りスープ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Won Ton Suppe" },
               { Language: "ru", Text: "Выиграл тонну суп" },
@@ -3620,8 +2427,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000068",
             DisplayName: "麵包",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Brot" },
               { Language: "ru", Text: "Хлеб" },
@@ -3637,21 +2442,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "面包" },
               { Language: "ja", Text: "パン" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Brot",
-              ru: "Хлеб",
-              pt: "Pão",
-              ko: "빵",
-              yue: "麵包",
-              en: "Bread",
-              it: "Pane",
-              fr: "Pain",
-              es: "Pan",
-              "zh-CHT": "麵包",
-              ar: "الخبز",
-              "zh-CHS": "面包",
-              ja: "パン"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Brot" },
               { Language: "ru", Text: "Хлеб" },
@@ -3671,8 +2461,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000069",
             DisplayName: "豆腐",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Tofu" },
               { Language: "ru", Text: "Тофу" },
@@ -3688,21 +2476,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "豆腐" },
               { Language: "ja", Text: "豆腐" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Tofu",
-              ru: "Тофу",
-              pt: "Tofu",
-              ko: "두 부",
-              yue: "豆腐",
-              en: "Tofu",
-              it: "Tofu",
-              fr: "Tofu",
-              es: "Queso de soja",
-              "zh-CHT": "豆腐",
-              ar: "توفو",
-              "zh-CHS": "豆腐",
-              ja: "豆腐"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Tofu" },
               { Language: "ru", Text: "Тофу" },
@@ -3722,8 +2495,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000070",
             DisplayName: "餅乾",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Keks" },
               { Language: "ru", Text: "Печенье" },
@@ -3739,21 +2510,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "饼干" },
               { Language: "ja", Text: "ビスケット" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Keks",
-              ru: "Печенье",
-              pt: "Biscoito",
-              ko: "비스킷",
-              yue: "餅乾",
-              en: "Biscuit",
-              it: "Biscotto",
-              fr: "Biscuit",
-              es: "Galleta",
-              "zh-CHT": "餅乾",
-              ar: "بسكويت",
-              "zh-CHS": "饼干",
-              ja: "ビスケット"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Keks" },
               { Language: "ru", Text: "Печенье" },
@@ -3773,8 +2529,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000071",
             DisplayName: "蛋糕",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Kuchen" },
               { Language: "ru", Text: "Торт" },
@@ -3790,21 +2544,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "蛋糕" },
               { Language: "ja", Text: "ケーキ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Kuchen",
-              ru: "Торт",
-              pt: "Bolo",
-              ko: "케이크",
-              yue: "蛋糕",
-              en: "Cake",
-              it: "Torta",
-              fr: "Gâteau",
-              es: "Pastel",
-              "zh-CHT": "蛋糕",
-              ar: "كعكة",
-              "zh-CHS": "蛋糕",
-              ja: "ケーキ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Kuchen" },
               { Language: "ru", Text: "Торт" },
@@ -3824,8 +2563,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000072",
             DisplayName: "豬肉",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Schweinefleisch" },
               { Language: "ru", Text: "Свинина" },
@@ -3841,21 +2578,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "猪肉" },
               { Language: "ja", Text: "豚肉" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Schweinefleisch",
-              ru: "Свинина",
-              pt: "Carne de porco",
-              ko: "돼지고기",
-              yue: "豬肉",
-              en: "Pork",
-              it: "Carne di maiale",
-              fr: "Porc",
-              es: "Carne de cerdo",
-              "zh-CHT": "豬肉",
-              ar: "لحم الخنزير",
-              "zh-CHS": "猪肉",
-              ja: "豚肉"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Schweinefleisch" },
               { Language: "ru", Text: "Свинина" },
@@ -3875,8 +2597,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000073",
             DisplayName: "牛肉",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Rindfleisch" },
               { Language: "ru", Text: "Говядина" },
@@ -3892,21 +2612,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "牛肉" },
               { Language: "ja", Text: "牛肉" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Rindfleisch",
-              ru: "Говядина",
-              pt: "Carne de bovino",
-              ko: "쇠고기",
-              yue: "牛肉",
-              en: "Beef",
-              it: "Manzo",
-              fr: "Viande bovine",
-              es: "Carne de res",
-              "zh-CHT": "牛肉",
-              ar: "لحوم البقر",
-              "zh-CHS": "牛肉",
-              ja: "牛肉"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Rindfleisch" },
               { Language: "ru", Text: "Говядина" },
@@ -3926,8 +2631,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000074",
             DisplayName: "雞",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Huhn" },
               { Language: "ru", Text: "Курица" },
@@ -3943,21 +2646,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "鸡" },
               { Language: "ja", Text: "チキン" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Huhn",
-              ru: "Курица",
-              pt: "Frango",
-              ko: "치킨",
-              yue: "雞",
-              en: "Chicken",
-              it: "Pollo",
-              fr: "Poulet",
-              es: "Pollo",
-              "zh-CHT": "雞",
-              ar: "الدجاج",
-              "zh-CHS": "鸡",
-              ja: "チキン"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Huhn" },
               { Language: "ru", Text: "Курица" },
@@ -3977,8 +2665,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000075",
             DisplayName: "火腿",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Schinken" },
               { Language: "ru", Text: "Ветчина" },
@@ -3994,21 +2680,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "火腿" },
               { Language: "ja", Text: "ハム" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Schinken",
-              ru: "Ветчина",
-              pt: "Presunto",
-              ko: "햄",
-              yue: "火腿",
-              en: "Ham",
-              it: "Prosciutto",
-              fr: "Jambon",
-              es: "Jamón",
-              "zh-CHT": "火腿",
-              ar: "لحم الخنزير",
-              "zh-CHS": "火腿",
-              ja: "ハム"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Schinken" },
               { Language: "ru", Text: "Ветчина" },
@@ -4028,8 +2699,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000076",
             DisplayName: "香腸",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Wurst aus Schweinefleisch" },
               { Language: "ru", Text: "Свиная колбаса" },
@@ -4045,21 +2714,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "香肠" },
               { Language: "ja", Text: "ポーク ソーセージ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Wurst aus Schweinefleisch",
-              ru: "Свиная колбаса",
-              pt: "Linguiça de porco",
-              ko: "돼지고기 소시지",
-              yue: "香腸",
-              en: "Pork sausage",
-              it: "Salsiccia di maiale",
-              fr: "Saucisse de porc",
-              es: "Salchicha de cerdo",
-              "zh-CHT": "香腸",
-              ar: "نقانق لحم الخنزير",
-              "zh-CHS": "香肠",
-              ja: "ポーク ソーセージ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Wurst aus Schweinefleisch" },
               { Language: "ru", Text: "Свиная колбаса" },
@@ -4079,8 +2733,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000077",
             DisplayName: "叉燒",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Gegrilltes Schweinefleisch" },
               { Language: "ru", Text: "Barbecued свинина" },
@@ -4096,21 +2748,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "叉烧" },
               { Language: "ja", Text: "チャーシュー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Gegrilltes Schweinefleisch",
-              ru: "Barbecued свинина",
-              pt: "Carne de porco assada",
-              ko: "바베 큐 돼지고기",
-              yue: "叉燒",
-              en: "Barbecued pork",
-              it: "Porco arrostito col barbecue",
-              fr: "Porc laqué",
-              es: "Cerdo a la barbacoa",
-              "zh-CHT": "叉燒",
-              ar: "لحم الخنزير المشوية.",
-              "zh-CHS": "叉烧",
-              ja: "チャーシュー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Gegrilltes Schweinefleisch" },
               { Language: "ru", Text: "Barbecued свинина" },
@@ -4130,8 +2767,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000078",
             DisplayName: "叉燒包",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               {
                 Language: "de",
@@ -4162,21 +2797,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "叉烧包" },
               { Language: "ja", Text: "バーベキュー豚肉饅頭" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Gedünstet gegrilltes Schweinefleisch Brötchen",
-              ru: "Приготовленная на пару булочка свинины на гриле",
-              pt: "Bolo de carne de porco assada no vapor",
-              ko: "찐된 바베 큐 돼지고기 롤빵",
-              yue: "叉燒包",
-              en: "Steamed barbecued pork bun",
-              it: "Maiale alla brace panino cotto a vapore",
-              fr: "Petit pain cuit à la vapeur porc laqué",
-              es: "Bollo de cerdo a la barbacoa al vapor",
-              "zh-CHT": "叉燒包",
-              ar: "كعكة البخار لحم الخنزير المشوية.",
-              "zh-CHS": "叉烧包",
-              ja: "バーベキュー豚肉饅頭"
-            },
             DisplayMultipleLanguage: [
               {
                 Language: "de",
@@ -4211,8 +2831,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000079",
             DisplayName: "蝦餃",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Chinatown" },
               { Language: "ru", Text: "Креветки пельмени" },
@@ -4228,21 +2846,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "虾饺" },
               { Language: "ja", Text: "エビ餃子" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Chinatown",
-              ru: "Креветки пельмени",
-              pt: "Bolinhos de camarão",
-              ko: "새우만 두",
-              yue: "蝦餃",
-              en: "Shrimp dumplings",
-              it: "Gnocchi di gamberi",
-              fr: "Boulettes de crevettes",
-              es: "Albóndigas de camarón",
-              "zh-CHT": "蝦餃",
-              ar: "فطائر الجمبري",
-              "zh-CHS": "虾饺",
-              ja: "エビ餃子"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Chinatown" },
               { Language: "ru", Text: "Креветки пельмени" },
@@ -4262,8 +2865,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000080",
             DisplayName: "腸粉",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Reisnudel rollt" },
               { Language: "ru", Text: "Рисовая лапша рулетики" },
@@ -4279,21 +2880,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "肠粉" },
               { Language: "ja", Text: "米麺ロールします。" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Reisnudel rollt",
-              ru: "Рисовая лапша рулетики",
-              pt: "Rolos de macarrão de arroz",
-              ko: "쌀 국수 롤",
-              yue: "腸粉",
-              en: "Rice noodle rolls",
-              it: "Tagliatella di riso rotoli",
-              fr: "Rouleaux de nouille de riz",
-              es: "Rollitos de fideos de arroz",
-              "zh-CHT": "腸粉",
-              ar: "لفات المعكرونة الأرز",
-              "zh-CHS": "肠粉",
-              ja: "米麺ロールします。"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Reisnudel rollt" },
               { Language: "ru", Text: "Рисовая лапша рулетики" },
@@ -4313,8 +2899,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000081",
             DisplayName: "鳳爪",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: '"Phoenix Klauen" Hühnerfüße' },
               { Language: "ru", Text: "«Феникс когти» куриные ноги" },
@@ -4333,21 +2917,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "凤爪" },
               { Language: "ja", Text: "「フェニックス爪' 鶏の足" }
             ],
-            DisplayNameMultiLanguage: {
-              de: '"Phoenix Klauen" Hühnerfüße',
-              ru: "«Феникс когти» куриные ноги",
-              pt: "Pés de galinha 'Garras de Phoenix'",
-              ko: "'피닉스 발톱' 닭 발",
-              yue: "鳳爪",
-              en: "' Phoenix claws ' chicken feet",
-              it: "Zampe di gallina 'Artigli Phoenix'",
-              fr: "Pattes de poulet « Griffes de Phoenix »",
-              es: "Pies del pollo 'Garras de Phoenix'",
-              "zh-CHT": "鳳爪",
-              ar: "أقدام دجاج 'مخالب طائر الفينيق'",
-              "zh-CHS": "凤爪",
-              ja: "「フェニックス爪' 鶏の足"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: '"Phoenix Klauen" Hühnerfüße' },
               { Language: "ru", Text: "«Феникс когти» куриные ноги" },
@@ -4370,8 +2939,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000082",
             DisplayName: "燒賣",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Mai" },
               { Language: "ru", Text: "Май" },
@@ -4387,21 +2954,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "烧卖" },
               { Language: "ja", Text: "舞" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Mai",
-              ru: "Май",
-              pt: "Mai",
-              ko: "마이",
-              yue: "燒賣",
-              en: "Mai",
-              it: "Mai",
-              fr: "Mai",
-              es: "Mai",
-              "zh-CHT": "燒賣",
-              ar: "مي",
-              "zh-CHS": "烧卖",
-              ja: "舞"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Mai" },
               { Language: "ru", Text: "Май" },
@@ -4421,8 +2973,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000083",
             DisplayName: "牛肉球",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Rindfleisch-Kugel" },
               { Language: "ru", Text: "Говядина шар" },
@@ -4438,21 +2988,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "牛肉球" },
               { Language: "ja", Text: "牛肉団子" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Rindfleisch-Kugel",
-              ru: "Говядина шар",
-              pt: "Bola de carne",
-              ko: "쇠고기 공",
-              yue: "牛肉球",
-              en: "Beef ball",
-              it: "Palla di carne di manzo",
-              fr: "Billes de boeuf",
-              es: "Bola de carne",
-              "zh-CHT": "牛肉球",
-              ar: "الكرة لحوم البقر",
-              "zh-CHS": "牛肉球",
-              ja: "牛肉団子"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Rindfleisch-Kugel" },
               { Language: "ru", Text: "Говядина шар" },
@@ -4472,8 +3007,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000084",
             DisplayName: "雞蛋",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Ei" },
               { Language: "ru", Text: "Яйцо" },
@@ -4489,21 +3022,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "鸡蛋" },
               { Language: "ja", Text: "卵" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Ei",
-              ru: "Яйцо",
-              pt: "Ovo",
-              ko: "달걀",
-              yue: "雞蛋",
-              en: "Egg",
-              it: "Uovo",
-              fr: "Oeuf",
-              es: "Huevo",
-              "zh-CHT": "雞蛋",
-              ar: "البيض",
-              "zh-CHS": "鸡蛋",
-              ja: "卵"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Ei" },
               { Language: "ru", Text: "Яйцо" },
@@ -4523,8 +3041,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000085",
             DisplayName: "魚",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Fisch" },
               { Language: "ru", Text: "Рыба" },
@@ -4540,21 +3056,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "鱼" },
               { Language: "ja", Text: "魚" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Fisch",
-              ru: "Рыба",
-              pt: "Peixe",
-              ko: "물고기",
-              yue: "魚",
-              en: "Fish",
-              it: "Pesce",
-              fr: "Poisson",
-              es: "Pescado",
-              "zh-CHT": "魚",
-              ar: "الأسماك",
-              "zh-CHS": "鱼",
-              ja: "魚"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Fisch" },
               { Language: "ru", Text: "Рыба" },
@@ -4574,8 +3075,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000086",
             DisplayName: "罐頭食物",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Konserven" },
               { Language: "ru", Text: "Консервы" },
@@ -4591,21 +3090,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "罐头食物" },
               { Language: "ja", Text: "缶詰食品" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Konserven",
-              ru: "Консервы",
-              pt: "Comida enlatada",
-              ko: "통조림된 식품",
-              yue: "罐頭食物",
-              en: "Canned food",
-              it: "Conserve alimentari",
-              fr: "Aliments en conserve",
-              es: "Alimentos enlatados",
-              "zh-CHT": "罐頭食物",
-              ar: "الأغذية المعلبة",
-              "zh-CHS": "罐头食物",
-              ja: "缶詰食品"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Konserven" },
               { Language: "ru", Text: "Консервы" },
@@ -4638,21 +3122,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "食物" },
           { Language: "ja", Text: "食品" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Essen",
-          ru: "Питание",
-          pt: "Comida",
-          ko: "음식",
-          yue: "食物",
-          en: "Food",
-          it: "Cibo",
-          fr: "Alimentaire",
-          es: "Alimentos",
-          "zh-CHT": "食物",
-          ar: "المواد الغذائية",
-          "zh-CHS": "食物",
-          ja: "食品"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Essen" },
           { Language: "ru", Text: "Питание" },
@@ -4670,16 +3139,12 @@ function getSampleUserProfile() {
         ]
       },
       {
-        ID: "00000000-0000-0000-0003-000000000088",
+        ID: "00000000-0000-0000-0000-000000000005",
         DisplayName: "水果",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000087",
             DisplayName: "啤梨",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Erdbeere" },
               { Language: "ru", Text: "Клубника" },
@@ -4695,21 +3160,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "草莓" },
               { Language: "ja", Text: "イチゴ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Erdbeere",
-              ru: "Клубника",
-              pt: "Morango",
-              ko: "딸기",
-              yue: "啤梨",
-              en: "Strawberry",
-              it: "Fragola",
-              fr: "Fraise",
-              es: "Fresa",
-              "zh-CHT": "草莓",
-              ar: "الفراولة",
-              "zh-CHS": "草莓",
-              ja: "イチゴ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Erdbeere" },
               { Language: "ru", Text: "Клубника" },
@@ -4729,8 +3179,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000088",
             DisplayName: "蘋果",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Apple" },
               { Language: "ru", Text: "Яблоко" },
@@ -4746,21 +3194,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "苹果" },
               { Language: "ja", Text: "アップル" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Apple",
-              ru: "Яблоко",
-              pt: "Apple",
-              ko: "애플",
-              yue: "蘋果",
-              en: "Apple",
-              it: "Apple",
-              fr: "pomme",
-              es: "Apple",
-              "zh-CHT": "蘋果",
-              ar: "أبل",
-              "zh-CHS": "苹果",
-              ja: "アップル"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Apple" },
               { Language: "ru", Text: "Яблоко" },
@@ -4780,8 +3213,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000089",
             DisplayName: "提子",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Trauben" },
               { Language: "ru", Text: "Виноград" },
@@ -4797,21 +3228,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "葡萄" },
               { Language: "ja", Text: "ブドウ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Trauben",
-              ru: "Виноград",
-              pt: "Uvas",
-              ko: "포도",
-              yue: "提子",
-              en: "Grapes",
-              it: "Uva",
-              fr: "Raisins",
-              es: "Uvas",
-              "zh-CHT": "葡萄",
-              ar: "العنب",
-              "zh-CHS": "葡萄",
-              ja: "ブドウ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Trauben" },
               { Language: "ru", Text: "Виноград" },
@@ -4831,8 +3247,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000090",
             DisplayName: "西瓜",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Wassermelone" },
               { Language: "ru", Text: "Арбуз" },
@@ -4848,21 +3262,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "西瓜" },
               { Language: "ja", Text: "スイカ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Wassermelone",
-              ru: "Арбуз",
-              pt: "Melancia",
-              ko: "수 박",
-              yue: "西瓜",
-              en: "Watermelon",
-              it: "Anguria",
-              fr: "Melon d’eau",
-              es: "Sandía",
-              "zh-CHT": "西瓜",
-              ar: "البطيخ",
-              "zh-CHS": "西瓜",
-              ja: "スイカ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Wassermelone" },
               { Language: "ru", Text: "Арбуз" },
@@ -4882,8 +3281,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000091",
             DisplayName: "橙",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Orange" },
               { Language: "ru", Text: "Оранжевый" },
@@ -4899,21 +3296,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "橙" },
               { Language: "ja", Text: "オレンジ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Orange",
-              ru: "Оранжевый",
-              pt: "Laranja",
-              ko: "오렌지",
-              yue: "橙",
-              en: "Orange",
-              it: "Orange",
-              fr: "Orange",
-              es: "Naranja",
-              "zh-CHT": "橙",
-              ar: "أورانج",
-              "zh-CHS": "橙",
-              ja: "オレンジ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Orange" },
               { Language: "ru", Text: "Оранжевый" },
@@ -4933,8 +3315,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000092",
             DisplayName: "香蕉",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Banane" },
               { Language: "ru", Text: "Банан" },
@@ -4950,21 +3330,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "香蕉" },
               { Language: "ja", Text: "バナナ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Banane",
-              ru: "Банан",
-              pt: "Banana",
-              ko: "바나나",
-              yue: "香蕉",
-              en: "Banana",
-              it: "Banana",
-              fr: "Banane",
-              es: "Plátano",
-              "zh-CHT": "香蕉",
-              ar: "الموز",
-              "zh-CHS": "香蕉",
-              ja: "バナナ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Banane" },
               { Language: "ru", Text: "Банан" },
@@ -4984,8 +3349,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000093",
             DisplayName: "木瓜",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Papaya" },
               { Language: "ru", Text: "Папайя" },
@@ -5001,21 +3364,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "木瓜" },
               { Language: "ja", Text: "パパイヤ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Papaya",
-              ru: "Папайя",
-              pt: "Mamão",
-              ko: "파파야",
-              yue: "木瓜",
-              en: "Papaya",
-              it: "Papaia",
-              fr: "Papaye",
-              es: "Papaya",
-              "zh-CHT": "木瓜",
-              ar: "بابايا",
-              "zh-CHS": "木瓜",
-              ja: "パパイヤ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Papaya" },
               { Language: "ru", Text: "Папайя" },
@@ -5035,8 +3383,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000094",
             DisplayName: "芒果",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Mango" },
               { Language: "ru", Text: "Манго" },
@@ -5052,21 +3398,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "芒果" },
               { Language: "ja", Text: "マンゴー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Mango",
-              ru: "Манго",
-              pt: "Manga",
-              ko: "망고",
-              yue: "芒果",
-              en: "Mango",
-              it: "Mango",
-              fr: "Mangue",
-              es: "Mango",
-              "zh-CHT": "芒果",
-              ar: "مانجو",
-              "zh-CHS": "芒果",
-              ja: "マンゴー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Mango" },
               { Language: "ru", Text: "Манго" },
@@ -5086,8 +3417,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000095",
             DisplayName: "火龍果",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Pitaya" },
               { Language: "ru", Text: "Питайя" },
@@ -5103,21 +3432,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "火龙果" },
               { Language: "ja", Text: "ピタヤ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Pitaya",
-              ru: "Питайя",
-              pt: "Pitaya",
-              ko: "Pitaya",
-              yue: "火龍果",
-              en: "Pitaya",
-              it: "Pitaya",
-              fr: "Pitaya",
-              es: "Pitaya",
-              "zh-CHT": "火龍果",
-              ar: "بيتيا",
-              "zh-CHS": "火龙果",
-              ja: "ピタヤ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Pitaya" },
               { Language: "ru", Text: "Питайя" },
@@ -5137,8 +3451,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000096",
             DisplayName: "桃",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Pfirsich" },
               { Language: "ru", Text: "Персик" },
@@ -5154,21 +3466,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "桃" },
               { Language: "ja", Text: "ピーチ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Pfirsich",
-              ru: "Персик",
-              pt: "Pêssego",
-              ko: "복숭아",
-              yue: "桃",
-              en: "Peach",
-              it: "Peach",
-              fr: "Peach",
-              es: "Melocotón",
-              "zh-CHT": "桃",
-              ar: "الخوخ",
-              "zh-CHS": "桃",
-              ja: "ピーチ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Pfirsich" },
               { Language: "ru", Text: "Персик" },
@@ -5188,8 +3485,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000097",
             DisplayName: "奇異果",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Kiwi" },
               { Language: "ru", Text: "Киви" },
@@ -5205,21 +3500,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "弥猴桃" },
               { Language: "ja", Text: "キウイ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Kiwi",
-              ru: "Киви",
-              pt: "Quivi",
-              ko: "키 위",
-              yue: "奇異果",
-              en: "Kiwi",
-              it: "Kiwi",
-              fr: "Kiwi",
-              es: "Kiwi",
-              "zh-CHT": "彌猴桃",
-              ar: "كيوي",
-              "zh-CHS": "弥猴桃",
-              ja: "キウイ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Kiwi" },
               { Language: "ru", Text: "Киви" },
@@ -5239,8 +3519,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000098",
             DisplayName: "蜜瓜",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Honig-Tau-Melone" },
               { Language: "ru", Text: "Мед росы дыней" },
@@ -5256,21 +3534,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "白兰瓜" },
               { Language: "ja", Text: "ハニーデュー メロン" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Honig-Tau-Melone",
-              ru: "Мед росы дыней",
-              pt: "Melão de orvalho de mel",
-              ko: "허니 듀 멜론",
-              yue: "蜜瓜",
-              en: "Honey dew melon",
-              it: "Melone della rugiada di miele",
-              fr: "Melon de miel rosée",
-              es: "Melón Rocío de miel",
-              "zh-CHT": "白蘭瓜",
-              ar: "العسل الندى البطيخ",
-              "zh-CHS": "白兰瓜",
-              ja: "ハニーデュー メロン"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Honig-Tau-Melone" },
               { Language: "ru", Text: "Мед росы дыней" },
@@ -5303,21 +3566,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "水果" },
           { Language: "ja", Text: "フルーツ" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Obst",
-          ru: "Фрукты",
-          pt: "Frutas",
-          ko: "과일",
-          yue: "水果",
-          en: "Fruit",
-          it: "Frutta",
-          fr: "Fruits",
-          es: "Fruta",
-          "zh-CHT": "水果",
-          ar: "فاكهة",
-          "zh-CHS": "水果",
-          ja: "フルーツ"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Obst" },
           { Language: "ru", Text: "Фрукты" },
@@ -5335,16 +3583,12 @@ function getSampleUserProfile() {
         ]
       },
       {
-        ID: "00000000-0000-0000-0003-000000000102",
+        ID: "00000000-0000-0000-0000-000000000006",
         DisplayName: "蔬菜",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000099",
             DisplayName: "黃芽白",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Gelbe Knospe weiß" },
               { Language: "ru", Text: "Белый желтый бутон" },
@@ -5360,21 +3604,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "黄芽白" },
               { Language: "ja", Text: "黄色いつぼみホワイト" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Gelbe Knospe weiß",
-              ru: "Белый желтый бутон",
-              pt: "Branca de botão amarelo",
-              ko: "옐로우 버드 화이트",
-              yue: "黃芽白",
-              en: "Yellow bud white",
-              it: "Bianco giallo gemma",
-              fr: "Blanc de œuf jaune",
-              es: "Blanco amarillo yema",
-              "zh-CHT": "黃芽白",
-              ar: "الأبيض الأصفر برعم",
-              "zh-CHS": "黄芽白",
-              ja: "黄色いつぼみホワイト"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Gelbe Knospe weiß" },
               { Language: "ru", Text: "Белый желтый бутон" },
@@ -5394,8 +3623,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000100",
             DisplayName: "椰菜花",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Blumenkohl" },
               { Language: "ru", Text: "Цветная капуста" },
@@ -5411,21 +3638,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "菜花" },
               { Language: "ja", Text: "カリフラワー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Blumenkohl",
-              ru: "Цветная капуста",
-              pt: "Couve-flor",
-              ko: "콜리플라워",
-              yue: "椰菜花",
-              en: "Cauliflower",
-              it: "Cavolfiore",
-              fr: "Chou-fleur",
-              es: "Coliflor",
-              "zh-CHT": "菜花",
-              ar: "قرنبيط",
-              "zh-CHS": "菜花",
-              ja: "カリフラワー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Blumenkohl" },
               { Language: "ru", Text: "Цветная капуста" },
@@ -5445,8 +3657,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000101",
             DisplayName: "椰菜",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Chinesische blühende Kohl" },
               { Language: "ru", Text: "Капуста китайская цветением" },
@@ -5462,21 +3672,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "包菜" },
               { Language: "ja", Text: "中国開花キャベツ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Chinesische blühende Kohl",
-              ru: "Капуста китайская цветением",
-              pt: "Repolho chinês floração",
-              ko: "중국 꽃 양배추",
-              yue: "椰菜",
-              en: "Chinese flowering cabbage",
-              it: "Cavolo di fioritura cinese",
-              fr: "Chou chinois floraison",
-              es: "Repollo chino flores",
-              "zh-CHT": "包菜",
-              ar: "الأزهار الصينية الملفوف",
-              "zh-CHS": "包菜",
-              ja: "中国開花キャベツ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Chinesische blühende Kohl" },
               { Language: "ru", Text: "Капуста китайская цветением" },
@@ -5496,8 +3691,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000102",
             DisplayName: "西蘭花",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Brokkoli" },
               { Language: "ru", Text: "Брокколи" },
@@ -5513,21 +3706,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "西兰花" },
               { Language: "ja", Text: "ブロッコリー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Brokkoli",
-              ru: "Брокколи",
-              pt: "Brócolis",
-              ko: "브로콜리",
-              yue: "西蘭花",
-              en: "Broccoli",
-              it: "Broccolo",
-              fr: "Brocoli",
-              es: "Brócoli",
-              "zh-CHT": "西蘭花",
-              ar: "قرنبيط",
-              "zh-CHS": "西兰花",
-              ja: "ブロッコリー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Brokkoli" },
               { Language: "ru", Text: "Брокколи" },
@@ -5547,8 +3725,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000103",
             DisplayName: "白菜",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Chinesischer weißer Kohl" },
               { Language: "ru", Text: "Белая китайская капуста" },
@@ -5564,21 +3740,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "白菜" },
               { Language: "ja", Text: "中国白キャベツ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Chinesischer weißer Kohl",
-              ru: "Белая китайская капуста",
-              pt: "Repolho chinês branco",
-              ko: "중국 백색 양배추",
-              yue: "白菜",
-              en: "Chinese white cabbage",
-              it: "Cavolo bianco cinese",
-              fr: "Chou chinois blanc",
-              es: "Repollo blanco chino",
-              "zh-CHT": "白菜",
-              ar: "الملفوف الأبيض الصيني",
-              "zh-CHS": "白菜",
-              ja: "中国白キャベツ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Chinesischer weißer Kohl" },
               { Language: "ru", Text: "Белая китайская капуста" },
@@ -5598,8 +3759,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000104",
             DisplayName: "西芹",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Sellerie" },
               { Language: "ru", Text: "Сельдерей" },
@@ -5615,21 +3774,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "西芹" },
               { Language: "ja", Text: "セロリ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Sellerie",
-              ru: "Сельдерей",
-              pt: "Aipo",
-              ko: "셀러리",
-              yue: "西芹",
-              en: "Celery",
-              it: "Sedano",
-              fr: "Céleri",
-              es: "Apio",
-              "zh-CHT": "西芹",
-              ar: "الكرفس",
-              "zh-CHS": "西芹",
-              ja: "セロリ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Sellerie" },
               { Language: "ru", Text: "Сельдерей" },
@@ -5649,8 +3793,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000105",
             DisplayName: "青椒",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Paprika" },
               { Language: "ru", Text: "Болгарский перец" },
@@ -5666,21 +3808,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "青椒" },
               { Language: "ja", Text: "ピーマン" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Paprika",
-              ru: "Болгарский перец",
-              pt: "Pimenta de sino",
-              ko: "벨 페 퍼",
-              yue: "青椒",
-              en: "Bell Pepper",
-              it: "Peperone dolce",
-              fr: "Bell Pepper",
-              es: "Pimiento",
-              "zh-CHT": "青椒",
-              ar: "فلفل",
-              "zh-CHS": "青椒",
-              ja: "ピーマン"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Paprika" },
               { Language: "ru", Text: "Болгарский перец" },
@@ -5700,8 +3827,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000106",
             DisplayName: "冬菇",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Shiitake-Pilz" },
               { Language: "ru", Text: "Гриб шиитаке" },
@@ -5717,21 +3842,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "香菇" },
               { Language: "ja", Text: "椎茸" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Shiitake-Pilz",
-              ru: "Гриб шиитаке",
-              pt: "Cogumelo shiitake",
-              ko: "표고버섯",
-              yue: "冬菇",
-              en: "Shiitake mushroom",
-              it: "Fungo di shiitake",
-              fr: "Champignon Shiitake",
-              es: "Seta de shiitake",
-              "zh-CHT": "香菇",
-              ar: "فطر شيتاكي",
-              "zh-CHS": "香菇",
-              ja: "椎茸"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Shiitake-Pilz" },
               { Language: "ru", Text: "Гриб шиитаке" },
@@ -5751,8 +3861,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000107",
             DisplayName: "粟米",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Mais" },
               { Language: "ru", Text: "Кукуруза" },
@@ -5768,21 +3876,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "玉米" },
               { Language: "ja", Text: "トウモロコシ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Mais",
-              ru: "Кукуруза",
-              pt: "Milho",
-              ko: "옥수수",
-              yue: "粟米",
-              en: "Corn",
-              it: "Mais",
-              fr: "Maïs",
-              es: "Maíz",
-              "zh-CHT": "玉米",
-              ar: "الذرة",
-              "zh-CHS": "玉米",
-              ja: "トウモロコシ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Mais" },
               { Language: "ru", Text: "Кукуруза" },
@@ -5802,8 +3895,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000108",
             DisplayName: "芽菜仔",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Sprossen-Kinder" },
               { Language: "ru", Text: "Ростки детей" },
@@ -5819,21 +3910,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "芽菜孩子" },
               { Language: "ja", Text: "子供を芽します。" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Sprossen-Kinder",
-              ru: "Ростки детей",
-              pt: "Brotos de crianças",
-              ko: "새싹 어린이",
-              yue: "芽菜仔",
-              en: "Sprouts children",
-              it: "Germogli di bambini",
-              fr: "Enfants de choux",
-              es: "Coles de los niños",
-              "zh-CHT": "芽菜孩子",
-              ar: "براعم الأطفال",
-              "zh-CHS": "芽菜孩子",
-              ja: "子供を芽します。"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Sprossen-Kinder" },
               { Language: "ru", Text: "Ростки детей" },
@@ -5853,8 +3929,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000109",
             DisplayName: "蕃茄",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Tomaten" },
               { Language: "ru", Text: "Помидор" },
@@ -5870,21 +3944,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "蕃茄" },
               { Language: "ja", Text: "トマト" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Tomaten",
-              ru: "Помидор",
-              pt: "Tomate",
-              ko: "토마토",
-              yue: "蕃茄",
-              en: "Tomato",
-              it: "Pomodoro",
-              fr: "Tomate",
-              es: "Tomate",
-              "zh-CHT": "蕃茄",
-              ar: "الطماطم",
-              "zh-CHS": "蕃茄",
-              ja: "トマト"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Tomaten" },
               { Language: "ru", Text: "Помидор" },
@@ -5904,8 +3963,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000110",
             DisplayName: "薯仔",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Kartoffel" },
               { Language: "ru", Text: "Картофель" },
@@ -5921,21 +3978,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "土豆" },
               { Language: "ja", Text: "ジャガイモ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Kartoffel",
-              ru: "Картофель",
-              pt: "Batata",
-              ko: "감자",
-              yue: "薯仔",
-              en: "Potato",
-              it: "Patata",
-              fr: "Pomme de terre",
-              es: "Papa",
-              "zh-CHT": "土豆",
-              ar: "البطاطا",
-              "zh-CHS": "土豆",
-              ja: "ジャガイモ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Kartoffel" },
               { Language: "ru", Text: "Картофель" },
@@ -5955,8 +3997,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000111",
             DisplayName: "矮瓜",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Aubergine" },
               { Language: "ru", Text: "Баклажан" },
@@ -5972,21 +4012,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "茄子" },
               { Language: "ja", Text: "ナス" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Aubergine",
-              ru: "Баклажан",
-              pt: "Berinjela",
-              ko: "가지",
-              yue: "矮瓜",
-              en: "Eggplant",
-              it: "Melanzane",
-              fr: "Aubergine",
-              es: "Berenjena",
-              "zh-CHT": "茄子",
-              ar: "باذنجان",
-              "zh-CHS": "茄子",
-              ja: "ナス"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Aubergine" },
               { Language: "ru", Text: "Баклажан" },
@@ -6006,8 +4031,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000112",
             DisplayName: "蘿蔔",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Rettich" },
               { Language: "ru", Text: "Редиска" },
@@ -6023,21 +4046,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "萝卜" },
               { Language: "ja", Text: "大根" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Rettich",
-              ru: "Редиска",
-              pt: "Rabanete",
-              ko: "무",
-              yue: "蘿蔔",
-              en: "Radish",
-              it: "Ravanello",
-              fr: "Radis",
-              es: "Rábano",
-              "zh-CHT": "蘿蔔",
-              ar: "فجل",
-              "zh-CHS": "萝卜",
-              ja: "大根"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Rettich" },
               { Language: "ru", Text: "Редиска" },
@@ -6057,8 +4065,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000113",
             DisplayName: "蓮藕",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Lotuswurzel" },
               { Language: "ru", Text: "Корень лотоса" },
@@ -6074,21 +4080,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "莲藕" },
               { Language: "ja", Text: "ロータス ルート" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Lotuswurzel",
-              ru: "Корень лотоса",
-              pt: "Raiz de lótus",
-              ko: "연 근",
-              yue: "蓮藕",
-              en: "Lotus root",
-              it: "Radice di loto",
-              fr: "Racine de Lotus",
-              es: "Raíz de loto",
-              "zh-CHT": "蓮藕",
-              ar: "جذور اللوتس",
-              "zh-CHS": "莲藕",
-              ja: "ロータス ルート"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Lotuswurzel" },
               { Language: "ru", Text: "Корень лотоса" },
@@ -6108,8 +4099,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000114",
             DisplayName: "青瓜",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Gurke" },
               { Language: "ru", Text: "Огурец" },
@@ -6125,21 +4114,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "黄瓜" },
               { Language: "ja", Text: "キュウリ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Gurke",
-              ru: "Огурец",
-              pt: "Pepino",
-              ko: "오이",
-              yue: "青瓜",
-              en: "Cucumber",
-              it: "Cetriolo",
-              fr: "Concombre",
-              es: "Pepino",
-              "zh-CHT": "黃瓜",
-              ar: "خيار",
-              "zh-CHS": "黄瓜",
-              ja: "キュウリ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Gurke" },
               { Language: "ru", Text: "Огурец" },
@@ -6159,8 +4133,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000115",
             DisplayName: "薑",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Ingwer" },
               { Language: "ru", Text: "Имбирь" },
@@ -6176,21 +4148,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "姜" },
               { Language: "ja", Text: "ジンジャー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Ingwer",
-              ru: "Имбирь",
-              pt: "Ginger",
-              ko: "생강",
-              yue: "薑",
-              en: "Ginger",
-              it: "Ginger",
-              fr: "Gingembre",
-              es: "Jengibre",
-              "zh-CHT": "姜",
-              ar: "زنجبيل",
-              "zh-CHS": "姜",
-              ja: "ジンジャー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Ingwer" },
               { Language: "ru", Text: "Имбирь" },
@@ -6210,8 +4167,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000116",
             DisplayName: "洋蔥",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Zwiebel" },
               { Language: "ru", Text: "Лук" },
@@ -6227,21 +4182,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "洋葱" },
               { Language: "ja", Text: "タマネギ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Zwiebel",
-              ru: "Лук",
-              pt: "Cebola",
-              ko: "양파",
-              yue: "洋蔥",
-              en: "Onion",
-              it: "Cipolla",
-              fr: "Oignon",
-              es: "Cebolla",
-              "zh-CHT": "洋蔥",
-              ar: "بصل",
-              "zh-CHS": "洋葱",
-              ja: "タマネギ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Zwiebel" },
               { Language: "ru", Text: "Лук" },
@@ -6261,8 +4201,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000117",
             DisplayName: "蒜頭",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Knoblauch" },
               { Language: "ru", Text: "Чеснок" },
@@ -6278,21 +4216,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "蒜头" },
               { Language: "ja", Text: "ニンニク" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Knoblauch",
-              ru: "Чеснок",
-              pt: "Alho",
-              ko: "마늘",
-              yue: "蒜頭",
-              en: "Garlic",
-              it: "Aglio",
-              fr: "Ail",
-              es: "Ajo",
-              "zh-CHT": "蒜頭",
-              ar: "ثوم",
-              "zh-CHS": "蒜头",
-              ja: "ニンニク"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Knoblauch" },
               { Language: "ru", Text: "Чеснок" },
@@ -6312,8 +4235,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000118",
             DisplayName: "蔥",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Frühlingszwiebeln" },
               { Language: "ru", Text: "Весенний Лук" },
@@ -6329,21 +4250,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "葱" },
               { Language: "ja", Text: "ばねのタマネギ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Frühlingszwiebeln",
-              ru: "Весенний Лук",
-              pt: "Cebolinhas",
-              ko: "봄 양파",
-              yue: "蔥",
-              en: "Spring onions",
-              it: "Cipollotti",
-              fr: "Oignons de printemps",
-              es: "Cebollas de primavera",
-              "zh-CHT": "蔥",
-              ar: "بصل",
-              "zh-CHS": "葱",
-              ja: "ばねのタマネギ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Frühlingszwiebeln" },
               { Language: "ru", Text: "Весенний Лук" },
@@ -6376,21 +4282,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "蔬菜" },
           { Language: "ja", Text: "野菜" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Gemüse",
-          ru: "Овощной",
-          pt: "Vegetal",
-          ko: "야채",
-          yue: "蔬菜",
-          en: "Vegetable",
-          it: "Vegetale",
-          fr: "Légume",
-          es: "Vegetales",
-          "zh-CHT": "蔬菜",
-          ar: "الخضر",
-          "zh-CHS": "蔬菜",
-          ja: "野菜"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Gemüse" },
           { Language: "ru", Text: "Овощной" },
@@ -6408,16 +4299,12 @@ function getSampleUserProfile() {
         ]
       },
       {
-        ID: "00000000-0000-0000-0003-000000000125",
+        ID: "00000000-0000-0000-0000-000000000007",
         DisplayName: "飲品",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000119",
             DisplayName: "茶",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Tee" },
               { Language: "ru", Text: "Чай" },
@@ -6433,21 +4320,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "茶" },
               { Language: "ja", Text: "紅茶" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Tee",
-              ru: "Чай",
-              pt: "Chá",
-              ko: "차",
-              yue: "茶",
-              en: "Tea",
-              it: "Tè",
-              fr: "Thé",
-              es: "Té",
-              "zh-CHT": "茶",
-              ar: "الشاي",
-              "zh-CHS": "茶",
-              ja: "紅茶"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Tee" },
               { Language: "ru", Text: "Чай" },
@@ -6467,8 +4339,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000120",
             DisplayName: "牛奶",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Milch" },
               { Language: "ru", Text: "Молоко" },
@@ -6484,21 +4354,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "牛奶" },
               { Language: "ja", Text: "ミルク" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Milch",
-              ru: "Молоко",
-              pt: "Leite",
-              ko: "우유",
-              yue: "牛奶",
-              en: "Milk",
-              it: "Latte",
-              fr: "Lait",
-              es: "Leche",
-              "zh-CHT": "牛奶",
-              ar: "الحليب",
-              "zh-CHS": "牛奶",
-              ja: "ミルク"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Milch" },
               { Language: "ru", Text: "Молоко" },
@@ -6518,8 +4373,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000121",
             DisplayName: "湯",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Suppe" },
               { Language: "ru", Text: "Суп" },
@@ -6535,21 +4388,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "汤" },
               { Language: "ja", Text: "スープ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Suppe",
-              ru: "Суп",
-              pt: "Sopa",
-              ko: "수프",
-              yue: "湯",
-              en: "Soup",
-              it: "Zuppa",
-              fr: "Soupe",
-              es: "Sopa",
-              "zh-CHT": "湯",
-              ar: "حساء",
-              "zh-CHS": "汤",
-              ja: "スープ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Suppe" },
               { Language: "ru", Text: "Суп" },
@@ -6569,8 +4407,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000122",
             DisplayName: "橙汁",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Orangensaft" },
               { Language: "ru", Text: "Апельсиновый сок" },
@@ -6586,21 +4422,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "橙汁" },
               { Language: "ja", Text: "オレンジ ジュース" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Orangensaft",
-              ru: "Апельсиновый сок",
-              pt: "Suco de laranja",
-              ko: "오렌지 주스",
-              yue: "橙汁",
-              en: "Orange juice",
-              it: "Succo d'arancia",
-              fr: "Jus d’orange",
-              es: "Jugo de naranja",
-              "zh-CHT": "橙汁",
-              ar: "عصير برتقال",
-              "zh-CHS": "橙汁",
-              ja: "オレンジ ジュース"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Orangensaft" },
               { Language: "ru", Text: "Апельсиновый сок" },
@@ -6620,8 +4441,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000123",
             DisplayName: "水",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Wasser" },
               { Language: "ru", Text: "Вода" },
@@ -6637,21 +4456,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "水" },
               { Language: "ja", Text: "水" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Wasser",
-              ru: "Вода",
-              pt: "Água",
-              ko: "물",
-              yue: "水",
-              en: "Water",
-              it: "Acqua",
-              fr: "Eau",
-              es: "Agua",
-              "zh-CHT": "水",
-              ar: "المياه",
-              "zh-CHS": "水",
-              ja: "水"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Wasser" },
               { Language: "ru", Text: "Вода" },
@@ -6671,8 +4475,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000124",
             DisplayName: "檸檬茶",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Tee mit Zitrone" },
               { Language: "ru", Text: "Чай с лимоном" },
@@ -6688,21 +4490,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "柠檬茶" },
               { Language: "ja", Text: "レモン茶" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Tee mit Zitrone",
-              ru: "Чай с лимоном",
-              pt: "Chá de limão",
-              ko: "레몬 티",
-              yue: "檸檬茶",
-              en: "Lemon tea",
-              it: "Tè al limone",
-              fr: "Thé au citron",
-              es: "Té de limón",
-              "zh-CHT": "檸檬茶",
-              ar: "شاي الليمون",
-              "zh-CHS": "柠檬茶",
-              ja: "レモン茶"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Tee mit Zitrone" },
               { Language: "ru", Text: "Чай с лимоном" },
@@ -6722,8 +4509,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000125",
             DisplayName: "維他奶",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Vitasoy" },
               { Language: "ru", Text: "VITASOY" },
@@ -6739,21 +4524,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "维他奶" },
               { Language: "ja", Text: "Vitasoy" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Vitasoy",
-              ru: "VITASOY",
-              pt: "Vitasoy",
-              ko: "Vitasoy",
-              yue: "維他奶",
-              en: "Vitasoy",
-              it: "Vitasoy",
-              fr: "Vitasoy",
-              es: "VITASOY",
-              "zh-CHT": "維他奶",
-              ar: "فيتاسوي",
-              "zh-CHS": "维他奶",
-              ja: "Vitasoy"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Vitasoy" },
               { Language: "ru", Text: "VITASOY" },
@@ -6773,8 +4543,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000126",
             DisplayName: "汽水",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Alkoholfreies Getränk" },
               { Language: "ru", Text: "Безалкогольный напиток" },
@@ -6790,21 +4558,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "汽水" },
               { Language: "ja", Text: "ソフトド リンク" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Alkoholfreies Getränk",
-              ru: "Безалкогольный напиток",
-              pt: "Refrigerante",
-              ko: "청량 음료",
-              yue: "汽水",
-              en: "Soft drink",
-              it: "Bevanda analcolica",
-              fr: "Boisson non alcoolisée",
-              es: "Bebida suave",
-              "zh-CHT": "汽水",
-              ar: "المشروبات الغازية",
-              "zh-CHS": "汽水",
-              ja: "ソフトド リンク"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Alkoholfreies Getränk" },
               { Language: "ru", Text: "Безалкогольный напиток" },
@@ -6824,8 +4577,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000127",
             DisplayName: "益力多",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Yakult" },
               { Language: "ru", Text: "Якулт" },
@@ -6841,21 +4592,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "益力多" },
               { Language: "ja", Text: "東京ヤクルト" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Yakult",
-              ru: "Якулт",
-              pt: "Yakult",
-              ko: "야쿠르트",
-              yue: "益力多",
-              en: "Yakult",
-              it: "Yakult",
-              fr: "Yakult",
-              es: "Yakult",
-              "zh-CHT": "益力多",
-              ar: "ياكولت",
-              "zh-CHS": "益力多",
-              ja: "東京ヤクルト"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Yakult" },
               { Language: "ru", Text: "Якулт" },
@@ -6875,8 +4611,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000128",
             DisplayName: "奶茶",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Tee mit Milch" },
               { Language: "ru", Text: "Чай с молоком" },
@@ -6892,21 +4626,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "奶茶" },
               { Language: "ja", Text: "ミルク入り紅茶" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Tee mit Milch",
-              ru: "Чай с молоком",
-              pt: "Chá com leite",
-              ko: "우유 차",
-              yue: "奶茶",
-              en: "Tea with milk",
-              it: "Tè con latte",
-              fr: "Thé au lait",
-              es: "Té con leche",
-              "zh-CHT": "奶茶",
-              ar: "الشاي مع الحليب",
-              "zh-CHS": "奶茶",
-              ja: "ミルク入り紅茶"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Tee mit Milch" },
               { Language: "ru", Text: "Чай с молоком" },
@@ -6939,21 +4658,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "饮品" },
           { Language: "ja", Text: "ドリンク" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Getränke",
-          ru: "Напитки",
-          pt: "Bebidas",
-          ko: "음료",
-          yue: "飲品",
-          en: "Drinks",
-          it: "Bevande",
-          fr: "Boissons",
-          es: "Bebidas",
-          "zh-CHT": "飲品",
-          ar: "المشروبات",
-          "zh-CHS": "饮品",
-          ja: "ドリンク"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Getränke" },
           { Language: "ru", Text: "Напитки" },
@@ -6971,16 +4675,12 @@ function getSampleUserProfile() {
         ]
       },
       {
-        ID: "00000000-0000-0000-0003-000000000142",
+        ID: "00000000-0000-0000-0000-000000000008",
         DisplayName: "睇醫生",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000129",
             DisplayName: "心口痛",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Epigastrische Schmerzen" },
               { Language: "ru", Text: "Боль в эпигастральной области" },
@@ -6996,21 +4696,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "心口痛" },
               { Language: "ja", Text: "心窩部痛" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Epigastrische Schmerzen",
-              ru: "Боль в эпигастральной области",
-              pt: "Dor epigástrica",
-              ko: "상 복 부 통증",
-              yue: "心口痛",
-              en: "Epigastric pain",
-              it: "Dolore epigastrico",
-              fr: "Douleur épigastrique",
-              es: "Dolor epigástrico",
-              "zh-CHT": "心口痛",
-              ar: "ألم شرسوفي",
-              "zh-CHS": "心口痛",
-              ja: "心窩部痛"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Epigastrische Schmerzen" },
               { Language: "ru", Text: "Боль в эпигастральной области" },
@@ -7030,8 +4715,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000130",
             DisplayName: "肚痾",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Durchfall" },
               { Language: "ru", Text: "Диарея" },
@@ -7047,21 +4730,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "拉稀" },
               { Language: "ja", Text: "下痢" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Durchfall",
-              ru: "Диарея",
-              pt: "Diarreia",
-              ko: "설사",
-              yue: "肚痾",
-              en: "Diarrhoea",
-              it: "Diarrea",
-              fr: "Diarrhées",
-              es: "Diarrea",
-              "zh-CHT": "拉稀",
-              ar: "الإسهال",
-              "zh-CHS": "拉稀",
-              ja: "下痢"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Durchfall" },
               { Language: "ru", Text: "Диарея" },
@@ -7081,8 +4749,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000131",
             DisplayName: "嘔",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Erbrechen" },
               { Language: "ru", Text: "Рвота" },
@@ -7098,21 +4764,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "呕吐" },
               { Language: "ja", Text: "嘔吐" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Erbrechen",
-              ru: "Рвота",
-              pt: "Vômitos",
-              ko: "구 토",
-              yue: "嘔",
-              en: "Vomiting",
-              it: "Vomito",
-              fr: "Vomissements",
-              es: "Vómitos",
-              "zh-CHT": "嘔吐",
-              ar: "قيء",
-              "zh-CHS": "呕吐",
-              ja: "嘔吐"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Erbrechen" },
               { Language: "ru", Text: "Рвота" },
@@ -7132,8 +4783,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000132",
             DisplayName: "頭痛",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Kopfschmerzen" },
               { Language: "ru", Text: "Головная боль" },
@@ -7149,21 +4798,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "头痛" },
               { Language: "ja", Text: "頭痛の種" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Kopfschmerzen",
-              ru: "Головная боль",
-              pt: "Dor de cabeça",
-              ko: "두통",
-              yue: "頭痛",
-              en: "Headache",
-              it: "Mal di testa",
-              fr: "Maux de tête",
-              es: "Dolor de cabeza",
-              "zh-CHT": "頭痛",
-              ar: "صداع",
-              "zh-CHS": "头痛",
-              ja: "頭痛の種"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Kopfschmerzen" },
               { Language: "ru", Text: "Головная боль" },
@@ -7183,8 +4817,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000133",
             DisplayName: "食唔到",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Essen Sie weniger" },
               { Language: "ru", Text: "Ешьте меньше" },
@@ -7200,21 +4832,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "吃不到" },
               { Language: "ja", Text: "食べる量を減らす" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Essen Sie weniger",
-              ru: "Ешьте меньше",
-              pt: "Comer menos",
-              ko: "덜 먹으십시오",
-              yue: "食唔到",
-              en: "Eat less",
-              it: "Mangiare di meno",
-              fr: "Manger moins",
-              es: "Comer menos",
-              "zh-CHT": "吃不到",
-              ar: "تآكل أقل",
-              "zh-CHS": "吃不到",
-              ja: "食べる量を減らす"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Essen Sie weniger" },
               { Language: "ru", Text: "Ешьте меньше" },
@@ -7234,8 +4851,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000134",
             DisplayName: "肚痛",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Magenschmerzen" },
               { Language: "ru", Text: "Боль в животе" },
@@ -7251,21 +4866,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "肚子痛" },
               { Language: "ja", Text: "胃の痛み" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Magenschmerzen",
-              ru: "Боль в животе",
-              pt: "Dor de estômago",
-              ko: "복 통",
-              yue: "肚痛",
-              en: "Stomach pain",
-              it: "Mal di stomaco",
-              fr: "Douleurs à l’estomac",
-              es: "Dolor de estómago",
-              "zh-CHT": "肚子痛",
-              ar: "الأم في المعدة",
-              "zh-CHS": "肚子痛",
-              ja: "胃の痛み"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Magenschmerzen" },
               { Language: "ru", Text: "Боль в животе" },
@@ -7285,8 +4885,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000135",
             DisplayName: "頭暈",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Dizzy" },
               { Language: "ru", Text: "Кружится голова" },
@@ -7302,21 +4900,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "头晕" },
               { Language: "ja", Text: "めまいがします。" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Dizzy",
-              ru: "Кружится голова",
-              pt: "Tonto",
-              ko: "현기증",
-              yue: "頭暈",
-              en: "Dizzy",
-              it: "Dizzy",
-              fr: "Dizzy",
-              es: "Mareado",
-              "zh-CHT": "頭暈",
-              ar: "دوار",
-              "zh-CHS": "头晕",
-              ja: "めまいがします。"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Dizzy" },
               { Language: "ru", Text: "Кружится голова" },
@@ -7336,8 +4919,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000136",
             DisplayName: "發燒",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Fieber" },
               { Language: "ru", Text: "Лихорадка" },
@@ -7353,21 +4934,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "发烧" },
               { Language: "ja", Text: "発熱" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Fieber",
-              ru: "Лихорадка",
-              pt: "Febre",
-              ko: "발열",
-              yue: "發燒",
-              en: "Fever",
-              it: "Febbre",
-              fr: "Fièvre",
-              es: "Fiebre",
-              "zh-CHT": "發燒",
-              ar: "حمى",
-              "zh-CHS": "发烧",
-              ja: "発熱"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Fieber" },
               { Language: "ru", Text: "Лихорадка" },
@@ -7387,8 +4953,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000137",
             DisplayName: "傷風",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Grippe" },
               { Language: "ru", Text: "Грипп" },
@@ -7404,21 +4968,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "感冒" },
               { Language: "ja", Text: "インフルエンザ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Grippe",
-              ru: "Грипп",
-              pt: "Gripe",
-              ko: "독감",
-              yue: "傷風",
-              en: "Flu",
-              it: "Influenza",
-              fr: "Grippe",
-              es: "Gripe",
-              "zh-CHT": "感冒",
-              ar: "إنفلونزا",
-              "zh-CHS": "感冒",
-              ja: "インフルエンザ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Grippe" },
               { Language: "ru", Text: "Грипп" },
@@ -7438,8 +4987,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000138",
             DisplayName: "便秘",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Verstopfung" },
               { Language: "ru", Text: "Запор" },
@@ -7455,21 +5002,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "便秘" },
               { Language: "ja", Text: "便秘" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Verstopfung",
-              ru: "Запор",
-              pt: "Prisão de ventre",
-              ko: "변 비",
-              yue: "便秘",
-              en: "Constipation",
-              it: "Costipazione",
-              fr: "Constipation",
-              es: "Estreñimiento",
-              "zh-CHT": "便秘",
-              ar: "الإمساك",
-              "zh-CHS": "便秘",
-              ja: "便秘"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Verstopfung" },
               { Language: "ru", Text: "Запор" },
@@ -7489,8 +5021,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000139",
             DisplayName: "坐到痛",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Sitzen Schmerzen" },
               { Language: "ru", Text: "Боль сидя" },
@@ -7506,21 +5036,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "坐到痛" },
               { Language: "ja", Text: "座っている痛み" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Sitzen Schmerzen",
-              ru: "Боль сидя",
-              pt: "Sessão dor",
-              ko: "앉아 통증",
-              yue: "坐到痛",
-              en: "Sitting pain",
-              it: "Dolore di seduta",
-              fr: "Douleur de la séance",
-              es: "Sienta dolor",
-              "zh-CHT": "坐到痛",
-              ar: "ألم الجلوس",
-              "zh-CHS": "坐到痛",
-              ja: "座っている痛み"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Sitzen Schmerzen" },
               { Language: "ru", Text: "Боль сидя" },
@@ -7540,8 +5055,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000140",
             DisplayName: "喉嚨痛",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Halsschmerzen" },
               { Language: "ru", Text: "Боль в горле" },
@@ -7557,21 +5070,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "喉咙痛" },
               { Language: "ja", Text: "喉の痛み" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Halsschmerzen",
-              ru: "Боль в горле",
-              pt: "Dor de garganta",
-              ko: "목의 통증",
-              yue: "喉嚨痛",
-              en: "Sore throat",
-              it: "Mal di gola",
-              fr: "Mal de gorge",
-              es: "Dolor de garganta",
-              "zh-CHT": "喉嚨痛",
-              ar: "التهاب في الحلق",
-              "zh-CHS": "喉咙痛",
-              ja: "喉の痛み"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Halsschmerzen" },
               { Language: "ru", Text: "Боль в горле" },
@@ -7591,8 +5089,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000141",
             DisplayName: "牙痛",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Zahnschmerzen" },
               { Language: "ru", Text: "Зубной боли" },
@@ -7608,21 +5104,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "牙痛" },
               { Language: "ja", Text: "歯痛" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Zahnschmerzen",
-              ru: "Зубной боли",
-              pt: "Dor de dente",
-              ko: "치 통",
-              yue: "牙痛",
-              en: "Toothache",
-              it: "Mal di denti",
-              fr: "Mal de dents",
-              es: "Dolor de muelas",
-              "zh-CHT": "牙痛",
-              ar: "ألم في الأسنان",
-              "zh-CHS": "牙痛",
-              ja: "歯痛"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Zahnschmerzen" },
               { Language: "ru", Text: "Зубной боли" },
@@ -7642,8 +5123,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000142",
             DisplayName: "血壓高",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Hoher Blutdruck" },
               { Language: "ru", Text: "Высокое кровяное давление" },
@@ -7659,21 +5138,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "血压高" },
               { Language: "ja", Text: "高血圧" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Hoher Blutdruck",
-              ru: "Высокое кровяное давление",
-              pt: "Pressão arterial elevada",
-              ko: "높은 혈압",
-              yue: "血壓高",
-              en: "High blood pressure",
-              it: "Alta pressione sanguigna",
-              fr: "Hypertension artérielle",
-              es: "Presión arterial alta",
-              "zh-CHT": "血壓高",
-              ar: "ارتفاع ضغط الدم",
-              "zh-CHS": "血压高",
-              ja: "高血圧"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Hoher Blutdruck" },
               { Language: "ru", Text: "Высокое кровяное давление" },
@@ -7693,8 +5157,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000143",
             DisplayName: "氣喘",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Asthma" },
               { Language: "ru", Text: "Астма" },
@@ -7710,21 +5172,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "气喘" },
               { Language: "ja", Text: "喘息" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Asthma",
-              ru: "Астма",
-              pt: "Asma",
-              ko: "천식",
-              yue: "氣喘",
-              en: "Asthma",
-              it: "Asma",
-              fr: "Asthme",
-              es: "Asma",
-              "zh-CHT": "氣喘",
-              ar: "الربو",
-              "zh-CHS": "气喘",
-              ja: "喘息"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Asthma" },
               { Language: "ru", Text: "Астма" },
@@ -7757,21 +5204,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "看病" },
           { Language: "ja", Text: "医師を診察します。" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Einen Arzt aufsuchen",
-          ru: "Обратитесь к врачу",
-          pt: "Consulte um médico",
-          ko: "의사를 참조 하십시오",
-          yue: "睇醫生",
-          en: "See a doctor",
-          it: "Consultare un medico",
-          fr: "Consulter un médecin",
-          es: "Ver a un médico",
-          "zh-CHT": "看病",
-          ar: "راجع الطبيب",
-          "zh-CHS": "看病",
-          ja: "医師を診察します。"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Einen Arzt aufsuchen" },
           { Language: "ru", Text: "Обратитесь к врачу" },
@@ -7789,16 +5221,12 @@ function getSampleUserProfile() {
         ]
       },
       {
-        ID: "00000000-0000-0000-0003-000000000151",
+        ID: "00000000-0000-0000-0000-000000000009",
         DisplayName: "地方",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000144",
             DisplayName: "職業治療",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Ergotherapie" },
               { Language: "ru", Text: "Эрготерапия" },
@@ -7814,21 +5242,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "职业治疗" },
               { Language: "ja", Text: "作業療法" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Ergotherapie",
-              ru: "Эрготерапия",
-              pt: "Terapia ocupacional",
-              ko: "작업 요법",
-              yue: "職業治療",
-              en: "Occupational therapy",
-              it: "Terapia occupazionale",
-              fr: "Ergothérapie",
-              es: "Terapia ocupacional",
-              "zh-CHT": "職業治療",
-              ar: "العلاج المهني",
-              "zh-CHS": "职业治疗",
-              ja: "作業療法"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Ergotherapie" },
               { Language: "ru", Text: "Эрготерапия" },
@@ -7848,8 +5261,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000145",
             DisplayName: "物理治療",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Physikalische Therapie" },
               { Language: "ru", Text: "Физическая терапия" },
@@ -7865,21 +5276,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "物理治疗" },
               { Language: "ja", Text: "理学療法" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Physikalische Therapie",
-              ru: "Физическая терапия",
-              pt: "Terapia física",
-              ko: "물리 치료",
-              yue: "物理治療",
-              en: "Physical therapy",
-              it: "Terapia fisica",
-              fr: "Thérapie physique",
-              es: "Terapia física",
-              "zh-CHT": "物理治療",
-              ar: "العلاج الطبيعي",
-              "zh-CHS": "物理治疗",
-              ja: "理学療法"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Physikalische Therapie" },
               { Language: "ru", Text: "Физическая терапия" },
@@ -7899,8 +5295,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000146",
             DisplayName: "醫院",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Das Krankenhaus" },
               { Language: "ru", Text: "Больница" },
@@ -7916,21 +5310,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "医院" },
               { Language: "ja", Text: "病院" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Das Krankenhaus",
-              ru: "Больница",
-              pt: "O hospital",
-              ko: "병원",
-              yue: "醫院",
-              en: "The hospital",
-              it: "L'ospedale",
-              fr: "L’hôpital",
-              es: "El hospital",
-              "zh-CHT": "醫院",
-              ar: "المستشفى",
-              "zh-CHS": "医院",
-              ja: "病院"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Das Krankenhaus" },
               { Language: "ru", Text: "Больница" },
@@ -7950,8 +5329,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000147",
             DisplayName: "言語治療",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Logopädische Praxis" },
               { Language: "ru", Text: "Терапия речи" },
@@ -7967,21 +5344,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "言语治疗" },
               { Language: "ja", Text: "スピーチセラピー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Logopädische Praxis",
-              ru: "Терапия речи",
-              pt: "Terapia da fala",
-              ko: "음성 치료",
-              yue: "言語治療",
-              en: "Speech therapy",
-              it: "Logopedia",
-              fr: "Orthophonie",
-              es: "Terapia del habla",
-              "zh-CHT": "言語治療",
-              ar: "علاج النطق",
-              "zh-CHS": "言语治疗",
-              ja: "スピーチセラピー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Logopädische Praxis" },
               { Language: "ru", Text: "Терапия речи" },
@@ -8001,8 +5363,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000148",
             DisplayName: "超級市場",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Super-Markt" },
               { Language: "ru", Text: "Супер рынок" },
@@ -8018,21 +5378,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "超级市场" },
               { Language: "ja", Text: "スーパー マーケット" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Super-Markt",
-              ru: "Супер рынок",
-              pt: "Super mercado",
-              ko: "최고 시장",
-              yue: "超級市場",
-              en: "Super market",
-              it: "Super mercato",
-              fr: "Super marché",
-              es: "Super mercado",
-              "zh-CHT": "超級市場",
-              ar: "سوبر ماركت",
-              "zh-CHS": "超级市场",
-              ja: "スーパー マーケット"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Super-Markt" },
               { Language: "ru", Text: "Супер рынок" },
@@ -8052,8 +5397,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000149",
             DisplayName: "公園",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Öffentliche Gärten" },
               { Language: "ru", Text: "Общественные парки" },
@@ -8069,21 +5412,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "公园" },
               { Language: "ja", Text: "公共の庭園" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Öffentliche Gärten",
-              ru: "Общественные парки",
-              pt: "Jardins públicos",
-              ko: "공공 정원",
-              yue: "公園",
-              en: "Public gardens",
-              it: "Giardini pubblici",
-              fr: "Jardins publics",
-              es: "Jardines públicos",
-              "zh-CHT": "公園",
-              ar: "الحدائق العامة",
-              "zh-CHS": "公园",
-              ja: "公共の庭園"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Öffentliche Gärten" },
               { Language: "ru", Text: "Общественные парки" },
@@ -8103,8 +5431,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000150",
             DisplayName: "商場",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Einkaufszentrum" },
               { Language: "ru", Text: "Торговый центр" },
@@ -8120,21 +5446,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "商场" },
               { Language: "ja", Text: "ショッピング センター" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Einkaufszentrum",
-              ru: "Торговый центр",
-              pt: "Centro comercial",
-              ko: "쇼핑 센터",
-              yue: "商場",
-              en: "Shopping Centre",
-              it: "Centro commerciale",
-              fr: "Centre commercial",
-              es: "Centro comercial",
-              "zh-CHT": "商場",
-              ar: "مركز تسوق",
-              "zh-CHS": "商场",
-              ja: "ショッピング センター"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Einkaufszentrum" },
               { Language: "ru", Text: "Торговый центр" },
@@ -8154,8 +5465,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000151",
             DisplayName: "屋企",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Haus" },
               { Language: "ru", Text: "Главная" },
@@ -8171,21 +5480,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "家里" },
               { Language: "ja", Text: "ホーム" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Haus",
-              ru: "Главная",
-              pt: "Casa",
-              ko: "홈",
-              yue: "屋企",
-              en: "Home",
-              it: "Casa",
-              fr: "Accueil",
-              es: "Página de inicio",
-              "zh-CHT": "家裡",
-              ar: "الصفحة الرئيسية",
-              "zh-CHS": "家里",
-              ja: "ホーム"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Haus" },
               { Language: "ru", Text: "Главная" },
@@ -8205,8 +5499,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000152",
             DisplayName: "銀行",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Bank" },
               { Language: "ru", Text: "Банк" },
@@ -8222,21 +5514,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "银行" },
               { Language: "ja", Text: "銀行" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Bank",
-              ru: "Банк",
-              pt: "Banco",
-              ko: "은행",
-              yue: "銀行",
-              en: "Bank",
-              it: "Banca",
-              fr: "Banque",
-              es: "Banco",
-              "zh-CHT": "銀行",
-              ar: "مصرف",
-              "zh-CHS": "银行",
-              ja: "銀行"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Bank" },
               { Language: "ru", Text: "Банк" },
@@ -8256,8 +5533,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000153",
             DisplayName: "街市",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Straßenmarkt" },
               { Language: "ru", Text: "Уличный рынок" },
@@ -8273,21 +5548,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "街市" },
               { Language: "ja", Text: "ストリート マーケット" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Straßenmarkt",
-              ru: "Уличный рынок",
-              pt: "Rua do mercado",
-              ko: "거리 시장",
-              yue: "街市",
-              en: "Street market",
-              it: "Mercato di strada",
-              fr: "Marché de rue",
-              es: "Mercado de la calle",
-              "zh-CHT": "街市",
-              ar: "شارع السوق",
-              "zh-CHS": "街市",
-              ja: "ストリート マーケット"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Straßenmarkt" },
               { Language: "ru", Text: "Уличный рынок" },
@@ -8320,21 +5580,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "地方" },
           { Language: "ja", Text: "ローカル" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Lokale",
-          ru: "Местные",
-          pt: "Local",
-          ko: "지역",
-          yue: "地方",
-          en: "Local",
-          it: "Locale",
-          fr: "Local",
-          es: "Local",
-          "zh-CHT": "地方",
-          ar: "المحلية",
-          "zh-CHS": "地方",
-          ja: "ローカル"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Lokale" },
           { Language: "ru", Text: "Местные" },
@@ -8352,16 +5597,12 @@ function getSampleUserProfile() {
         ]
       },
       {
-        ID: "00000000-0000-0000-0003-000000000175",
+        ID: "00000000-0000-0000-0000-000000000010",
         DisplayName: "日用品",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000154",
             DisplayName: "假牙",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Falsche Zähne" },
               { Language: "ru", Text: "Вставные зубы" },
@@ -8377,21 +5618,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "假牙" },
               { Language: "ja", Text: "入れ歯" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Falsche Zähne",
-              ru: "Вставные зубы",
-              pt: "Dentes postiços",
-              ko: "틀니",
-              yue: "假牙",
-              en: "False teeth",
-              it: "Denti falsi",
-              fr: "Fausses dents",
-              es: "Dentadura postiza",
-              "zh-CHT": "假牙",
-              ar: "أسنان اصطناعية",
-              "zh-CHS": "假牙",
-              ja: "入れ歯"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Falsche Zähne" },
               { Language: "ru", Text: "Вставные зубы" },
@@ -8411,8 +5637,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000155",
             DisplayName: "首飾",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Schmuck" },
               { Language: "ru", Text: "Ювелирные изделия" },
@@ -8428,21 +5652,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "首饰" },
               { Language: "ja", Text: "ジュエリー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Schmuck",
-              ru: "Ювелирные изделия",
-              pt: "Joias",
-              ko: "보석",
-              yue: "首飾",
-              en: "Jewellery",
-              it: "Gioielli",
-              fr: "Bijoux",
-              es: "Joyería",
-              "zh-CHT": "首飾",
-              ar: "مجوهرات",
-              "zh-CHS": "首饰",
-              ja: "ジュエリー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Schmuck" },
               { Language: "ru", Text: "Ювелирные изделия" },
@@ -8462,8 +5671,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000156",
             DisplayName: "手錶",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Uhr" },
               { Language: "ru", Text: "Часы" },
@@ -8479,21 +5686,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "手表" },
               { Language: "ja", Text: "時計" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Uhr",
-              ru: "Часы",
-              pt: "Relógio",
-              ko: "시계",
-              yue: "手錶",
-              en: "Watch",
-              it: "Orologio",
-              fr: "Montre",
-              es: "Reloj",
-              "zh-CHT": "手錶",
-              ar: "مشاهدة",
-              "zh-CHS": "手表",
-              ja: "時計"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Uhr" },
               { Language: "ru", Text: "Часы" },
@@ -8513,8 +5705,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000157",
             DisplayName: "廁紙",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "WC-Papier" },
               { Language: "ru", Text: "Туалетная бумага" },
@@ -8530,21 +5720,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "卫生纸" },
               { Language: "ja", Text: "トイレット ペーパー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "WC-Papier",
-              ru: "Туалетная бумага",
-              pt: "Papel higiênico",
-              ko: "화장지",
-              yue: "廁紙",
-              en: "Toilet paper",
-              it: "Carta igienica",
-              fr: "Papier hygiénique",
-              es: "Papel higiénico",
-              "zh-CHT": "衛生紙",
-              ar: "ورق التواليت",
-              "zh-CHS": "卫生纸",
-              ja: "トイレット ペーパー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "WC-Papier" },
               { Language: "ru", Text: "Туалетная бумага" },
@@ -8564,8 +5739,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000158",
             DisplayName: "眼鏡",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Brille" },
               { Language: "ru", Text: "Очки" },
@@ -8581,21 +5754,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "眼镜" },
               { Language: "ja", Text: "メガネ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Brille",
-              ru: "Очки",
-              pt: "Óculos",
-              ko: "안경",
-              yue: "眼鏡",
-              en: "Glasses",
-              it: "Occhiali",
-              fr: "Lunettes",
-              es: "Gafas",
-              "zh-CHT": "眼鏡",
-              ar: "نظارات",
-              "zh-CHS": "眼镜",
-              ja: "メガネ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Brille" },
               { Language: "ru", Text: "Очки" },
@@ -8615,8 +5773,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000159",
             DisplayName: "助聽器",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Hörgerät" },
               { Language: "ru", Text: "Слуховой аппарат" },
@@ -8632,21 +5788,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "助听器" },
               { Language: "ja", Text: "補聴器" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Hörgerät",
-              ru: "Слуховой аппарат",
-              pt: "Aparelho auditivo",
-              ko: "청력 보조",
-              yue: "助聽器",
-              en: "Hearing aid",
-              it: "Apparecchio acustico",
-              fr: "Prothèse auditive",
-              es: "Prótesis de oído",
-              "zh-CHT": "助聽器",
-              ar: "السمع",
-              "zh-CHS": "助听器",
-              ja: "補聴器"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Hörgerät" },
               { Language: "ru", Text: "Слуховой аппарат" },
@@ -8666,8 +5807,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000160",
             DisplayName: "鏡",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Spiegel" },
               { Language: "ru", Text: "Зеркало" },
@@ -8683,21 +5822,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "镜" },
               { Language: "ja", Text: "ミラー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Spiegel",
-              ru: "Зеркало",
-              pt: "Espelho",
-              ko: "미러",
-              yue: "鏡",
-              en: "Mirror",
-              it: "Specchio",
-              fr: "Miroir",
-              es: "Espejo",
-              "zh-CHT": "鏡",
-              ar: "مرآة",
-              "zh-CHS": "镜",
-              ja: "ミラー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Spiegel" },
               { Language: "ru", Text: "Зеркало" },
@@ -8717,8 +5841,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000161",
             DisplayName: "潤膚露",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Bodylotion" },
               { Language: "ru", Text: "Лосьон для тела" },
@@ -8734,21 +5856,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "润肤露" },
               { Language: "ja", Text: "ボディ ローション" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Bodylotion",
-              ru: "Лосьон для тела",
-              pt: "Loção para o corpo",
-              ko: "바디 로션",
-              yue: "潤膚露",
-              en: "Body lotion",
-              it: "Lozione per il corpo",
-              fr: "Lotion pour le corps",
-              es: "Loción del cuerpo",
-              "zh-CHT": "潤膚露",
-              ar: "لوسيون الجسم",
-              "zh-CHS": "润肤露",
-              ja: "ボディ ローション"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Bodylotion" },
               { Language: "ru", Text: "Лосьон для тела" },
@@ -8768,8 +5875,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000162",
             DisplayName: "風筒",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Luftschlauch" },
               { Language: "ru", Text: "Воздушная трубка" },
@@ -8785,21 +5890,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "风筒" },
               { Language: "ja", Text: "空気管" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Luftschlauch",
-              ru: "Воздушная трубка",
-              pt: "Tubo de ar",
-              ko: "공기 튜브",
-              yue: "風筒",
-              en: "Air tube",
-              it: "Tubo aria",
-              fr: "Tuyau d’air",
-              es: "Tubo de aire",
-              "zh-CHT": "風筒",
-              ar: "أنبوب الهواء",
-              "zh-CHS": "风筒",
-              ja: "空気管"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Luftschlauch" },
               { Language: "ru", Text: "Воздушная трубка" },
@@ -8819,8 +5909,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000163",
             DisplayName: "牙膏／牙刷",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Zahnpasta/Zahnbürste" },
               { Language: "ru", Text: "Зубная паста/зубная щетка" },
@@ -8836,21 +5924,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "牙膏/牙刷" },
               { Language: "ja", Text: "歯磨き/歯ブラシ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Zahnpasta/Zahnbürste",
-              ru: "Зубная паста/зубная щетка",
-              pt: "Pasta de dente/escova de dentes",
-              ko: "치약/칫 솔",
-              yue: "牙膏／牙刷",
-              en: "Toothpaste/toothbrush",
-              it: "Dentifricio/spazzolino da denti",
-              fr: "Dentifrice/brosse à dents",
-              es: "Cepillo de dientes/pasta dental",
-              "zh-CHT": "牙膏/牙刷",
-              ar: "معجون الأسنان/فرشاة الأسنان",
-              "zh-CHS": "牙膏/牙刷",
-              ja: "歯磨き/歯ブラシ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Zahnpasta/Zahnbürste" },
               { Language: "ru", Text: "Зубная паста/зубная щетка" },
@@ -8870,8 +5943,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000164",
             DisplayName: "梳",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Buchse" },
               { Language: "ru", Text: "Розетка" },
@@ -8887,21 +5958,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "插座" },
               { Language: "ja", Text: "ソケット" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Buchse",
-              ru: "Розетка",
-              pt: "Soquete",
-              ko: "소켓",
-              yue: "梳",
-              en: "Socket",
-              it: "Presa di corrente",
-              fr: "Prise de courant",
-              es: "Toma de corriente",
-              "zh-CHT": "插座",
-              ar: "مأخذ التوصيل",
-              "zh-CHS": "插座",
-              ja: "ソケット"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Buchse" },
               { Language: "ru", Text: "Розетка" },
@@ -8921,8 +5977,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000165",
             DisplayName: "毛巾",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Waschlappen" },
               { Language: "ru", Text: "Вымойте ткань" },
@@ -8938,21 +5992,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "毛巾" },
               { Language: "ja", Text: "洗浄布" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Waschlappen",
-              ru: "Вымойте ткань",
-              pt: "Lavar a roupa",
-              ko: "워시 헝겊",
-              yue: "毛巾",
-              en: "Wash cloth",
-              it: "Panno della lavata",
-              fr: "Gant de toilette",
-              es: "Paño de la colada",
-              "zh-CHT": "毛巾",
-              ar: "يغسل القماش",
-              "zh-CHS": "毛巾",
-              ja: "洗浄布"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Waschlappen" },
               { Language: "ru", Text: "Вымойте ткань" },
@@ -8972,8 +6011,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000166",
             DisplayName: "飲管",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Strohhalm trinken" },
               { Language: "ru", Text: "Питьевой соломы" },
@@ -8989,21 +6026,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "吸管" },
               { Language: "ja", Text: "ストロー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Strohhalm trinken",
-              ru: "Питьевой соломы",
-              pt: "Canudo",
-              ko: "빨 대를 마시면",
-              yue: "飲管",
-              en: "Drinking straw",
-              it: "Cannuccia",
-              fr: "Consommation de paille",
-              es: "Paja de beber",
-              "zh-CHT": "吸管",
-              ar: "ماصة شرب",
-              "zh-CHS": "吸管",
-              ja: "ストロー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Strohhalm trinken" },
               { Language: "ru", Text: "Питьевой соломы" },
@@ -9023,8 +6045,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000167",
             DisplayName: "凝固粉",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Erstarrung Pulver" },
               { Language: "ru", Text: "Затвердевание порошок" },
@@ -9040,21 +6060,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "凝固粉" },
               { Language: "ja", Text: "凝固粉末" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Erstarrung Pulver",
-              ru: "Затвердевание порошок",
-              pt: "Pó de solidificação",
-              ko: "응고 분말",
-              yue: "凝固粉",
-              en: "Solidification powder",
-              it: "Polvere di solidificazione",
-              fr: "Poudre de solidification",
-              es: "Polvo de solidificación",
-              "zh-CHT": "凝固粉",
-              ar: "مسحوق التجميد",
-              "zh-CHS": "凝固粉",
-              ja: "凝固粉末"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Erstarrung Pulver" },
               { Language: "ru", Text: "Затвердевание порошок" },
@@ -9074,8 +6079,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000168",
             DisplayName: "匙羹",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Kleiner Löffel" },
               { Language: "ru", Text: "Небольшая ложка" },
@@ -9091,21 +6094,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "小勺子" },
               { Language: "ja", Text: "小さいスプーン" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Kleiner Löffel",
-              ru: "Небольшая ложка",
-              pt: "Colher pequena",
-              ko: "작은 스푼",
-              yue: "匙羹",
-              en: "Small spoon",
-              it: "Piccolo cucchiaio",
-              fr: "Petite cuillère",
-              es: "Cuchara pequeña",
-              "zh-CHT": "小勺子",
-              ar: "ملعقة صغيرة",
-              "zh-CHS": "小勺子",
-              ja: "小さいスプーン"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Kleiner Löffel" },
               { Language: "ru", Text: "Небольшая ложка" },
@@ -9125,8 +6113,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000169",
             DisplayName: "筷子",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Ess-Stäbchen" },
               { Language: "ru", Text: "Палочки для еды" },
@@ -9142,21 +6128,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "筷子" },
               { Language: "ja", Text: "箸" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Ess-Stäbchen",
-              ru: "Палочки для еды",
-              pt: "Pauzinhos",
-              ko: "젓가락",
-              yue: "筷子",
-              en: "Chopsticks",
-              it: "Bacchette",
-              fr: "Baguettes",
-              es: "Palillos",
-              "zh-CHT": "筷子",
-              ar: "عيدان الطعام",
-              "zh-CHS": "筷子",
-              ja: "箸"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Ess-Stäbchen" },
               { Language: "ru", Text: "Палочки для еды" },
@@ -9176,8 +6147,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000170",
             DisplayName: "藥油",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Pflanzliche Öle" },
               { Language: "ru", Text: "Травяные масла" },
@@ -9193,21 +6162,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "药油" },
               { Language: "ja", Text: "ハーブオイル" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Pflanzliche Öle",
-              ru: "Травяные масла",
-              pt: "Óleos de ervas",
-              ko: "허브 오일",
-              yue: "藥油",
-              en: "Herbal oils",
-              it: "Oli vegetali",
-              fr: "Huiles à base de plantes",
-              es: "Aceites de hierbas",
-              "zh-CHT": "藥油",
-              ar: "الزيوت العشبية",
-              "zh-CHS": "药油",
-              ja: "ハーブオイル"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Pflanzliche Öle" },
               { Language: "ru", Text: "Травяные масла" },
@@ -9227,8 +6181,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000171",
             DisplayName: "膠布",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Wundpflaster" },
               { Language: "ru", Text: "Лейкопластырь" },
@@ -9244,21 +6196,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "胶布" },
               { Language: "ja", Text: "絆創膏" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Wundpflaster",
-              ru: "Лейкопластырь",
-              pt: "Emplastro adesivo",
-              ko: "접착 석고",
-              yue: "膠布",
-              en: "Adhesive plaster",
-              it: "Cerotto adesivo",
-              fr: "Sparadrap",
-              es: "Emplasto adhesivo",
-              "zh-CHT": "膠布",
-              ar: "الجص لاصقة",
-              "zh-CHS": "胶布",
-              ja: "絆創膏"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Wundpflaster" },
               { Language: "ru", Text: "Лейкопластырь" },
@@ -9278,8 +6215,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000172",
             DisplayName: "手袋",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Handtasche" },
               { Language: "ru", Text: "Сумочка" },
@@ -9295,21 +6230,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "手袋" },
               { Language: "ja", Text: "ハンドバッグ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Handtasche",
-              ru: "Сумочка",
-              pt: "Bolsa",
-              ko: "핸드백",
-              yue: "手袋",
-              en: "Handbag",
-              it: "Borsa",
-              fr: "Sac à main",
-              es: "Bolso",
-              "zh-CHT": "手袋",
-              ar: "حقيبة يد",
-              "zh-CHS": "手袋",
-              ja: "ハンドバッグ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Handtasche" },
               { Language: "ru", Text: "Сумочка" },
@@ -9329,8 +6249,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000173",
             DisplayName: "銀包",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Geldbörse" },
               { Language: "ru", Text: "Кошелек" },
@@ -9346,21 +6264,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "钱包" },
               { Language: "ja", Text: "財布" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Geldbörse",
-              ru: "Кошелек",
-              pt: "Bolsa",
-              ko: "지갑",
-              yue: "銀包",
-              en: "Purse",
-              it: "Borsa",
-              fr: "Sac à main",
-              es: "Monedero",
-              "zh-CHT": "錢包",
-              ar: "محفظة",
-              "zh-CHS": "钱包",
-              ja: "財布"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Geldbörse" },
               { Language: "ru", Text: "Кошелек" },
@@ -9380,8 +6283,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000174",
             DisplayName: "八達通",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Krake" },
               { Language: "ru", Text: "Осьминог" },
@@ -9397,21 +6298,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "八达通" },
               { Language: "ja", Text: "タコ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Krake",
-              ru: "Осьминог",
-              pt: "Polvo",
-              ko: "문 어",
-              yue: "八達通",
-              en: "Octopus",
-              it: "Polpo",
-              fr: "Poulpe",
-              es: "Octopus",
-              "zh-CHT": "八達通",
-              ar: "الأخطبوط",
-              "zh-CHS": "八达通",
-              ja: "タコ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Krake" },
               { Language: "ru", Text: "Осьминог" },
@@ -9431,8 +6317,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000175",
             DisplayName: "鎖匙",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Schlüsselanhänger" },
               { Language: "ru", Text: "Брелоки" },
@@ -9448,21 +6332,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "锁匙" },
               { Language: "ja", Text: "キー リング" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Schlüsselanhänger",
-              ru: "Брелоки",
-              pt: "Chaveiros",
-              ko: "키 링",
-              yue: "鎖匙",
-              en: "Key rings",
-              it: "Portachiavi",
-              fr: "Porte-clés",
-              es: "Llaveros",
-              "zh-CHT": "鎖匙",
-              ar: "مفتاح الخواتم",
-              "zh-CHS": "锁匙",
-              ja: "キー リング"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Schlüsselanhänger" },
               { Language: "ru", Text: "Брелоки" },
@@ -9482,8 +6351,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000176",
             DisplayName: "筆",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Stift" },
               { Language: "ru", Text: "Ручка" },
@@ -9499,21 +6366,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "笔" },
               { Language: "ja", Text: "ペン" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Stift",
-              ru: "Ручка",
-              pt: "Caneta",
-              ko: "펜",
-              yue: "筆",
-              en: "Pen",
-              it: "Penna",
-              fr: "Stylo",
-              es: "Pluma",
-              "zh-CHT": "筆",
-              ar: "القلم",
-              "zh-CHS": "笔",
-              ja: "ペン"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Stift" },
               { Language: "ru", Text: "Ручка" },
@@ -9533,8 +6385,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000177",
             DisplayName: "身分證",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Identitätskarte" },
               { Language: "ru", Text: "Удостоверение личности" },
@@ -9550,21 +6400,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "身分证" },
               { Language: "ja", Text: "Id カード" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Identitätskarte",
-              ru: "Удостоверение личности",
-              pt: "Bilhete de identidade",
-              ko: "신분 카드",
-              yue: "身分證",
-              en: "Identity card",
-              it: "Carta d'identità",
-              fr: "Carte d’identité",
-              es: "Tarjeta de identidad",
-              "zh-CHT": "身分證",
-              ar: "بطاقة الهوية",
-              "zh-CHS": "身分证",
-              ja: "Id カード"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Identitätskarte" },
               { Language: "ru", Text: "Удостоверение личности" },
@@ -9584,8 +6419,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000178",
             DisplayName: "銀行存摺",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Bankbuch" },
               { Language: "ru", Text: "Книга банка" },
@@ -9601,21 +6434,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "银行存折" },
               { Language: "ja", Text: "預金通帳" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Bankbuch",
-              ru: "Книга банка",
-              pt: "Livro de banco",
-              ko: "은행도 서",
-              yue: "銀行存摺",
-              en: "Bank book",
-              it: "Libretto di banca",
-              fr: "Livre de banque",
-              es: "Libro de Banco",
-              "zh-CHT": "銀行存摺",
-              ar: "كتاب البنك",
-              "zh-CHS": "银行存折",
-              ja: "預金通帳"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Bankbuch" },
               { Language: "ru", Text: "Книга банка" },
@@ -9648,21 +6466,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "日用品" },
           { Language: "ja", Text: "生活必需品" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Dinge des täglichen Bedarfs",
-          ru: "Ежедневные необходимости",
-          pt: "Necessidades diárias",
-          ko: "일용품",
-          yue: "日用品",
-          en: "Daily necessities",
-          it: "Oggetti di uso quotidiani",
-          fr: "Nécessités quotidiennes",
-          es: "Necesidades diarias",
-          "zh-CHT": "日用品",
-          ar: "الضروريات اليومية",
-          "zh-CHS": "日用品",
-          ja: "生活必需品"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Dinge des täglichen Bedarfs" },
           { Language: "ru", Text: "Ежедневные необходимости" },
@@ -9680,16 +6483,12 @@ function getSampleUserProfile() {
         ]
       },
       {
-        ID: "00000000-0000-0000-0003-000000000185",
+        ID: "00000000-0000-0000-0000-000000000011",
         DisplayName: "衣物",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000179",
             DisplayName: "拖鞋",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Hausschuhe" },
               { Language: "ru", Text: "Тапочки" },
@@ -9705,21 +6504,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "拖鞋" },
               { Language: "ja", Text: "スリッパ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Hausschuhe",
-              ru: "Тапочки",
-              pt: "Chinelos",
-              ko: "슬리퍼",
-              yue: "拖鞋",
-              en: "Slippers",
-              it: "Pantofole",
-              fr: "Pantoufles",
-              es: "Zapatillas",
-              "zh-CHT": "拖鞋",
-              ar: "نعال",
-              "zh-CHS": "拖鞋",
-              ja: "スリッパ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Hausschuhe" },
               { Language: "ru", Text: "Тапочки" },
@@ -9739,8 +6523,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000180",
             DisplayName: "尿片",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Windel" },
               { Language: "ru", Text: "Пеленки" },
@@ -9756,21 +6538,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "尿布" },
               { Language: "ja", Text: "おむつ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Windel",
-              ru: "Пеленки",
-              pt: "Fralda",
-              ko: "기저귀",
-              yue: "尿片",
-              en: "Diaper",
-              it: "Pannolino",
-              fr: "Couche-culotte",
-              es: "Pañal",
-              "zh-CHT": "尿布",
-              ar: "حفاضات",
-              "zh-CHS": "尿布",
-              ja: "おむつ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Windel" },
               { Language: "ru", Text: "Пеленки" },
@@ -9790,8 +6557,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000181",
             DisplayName: "裙",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Rock" },
               { Language: "ru", Text: "Юбка" },
@@ -9807,21 +6572,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "裙子" },
               { Language: "ja", Text: "スカート" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Rock",
-              ru: "Юбка",
-              pt: "Saia",
-              ko: "치마",
-              yue: "裙",
-              en: "Skirt",
-              it: "Gonna",
-              fr: "Jupe",
-              es: "Falda",
-              "zh-CHT": "裙子",
-              ar: "تنورة",
-              "zh-CHS": "裙子",
-              ja: "スカート"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Rock" },
               { Language: "ru", Text: "Юбка" },
@@ -9841,8 +6591,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000182",
             DisplayName: "褲",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Hose" },
               { Language: "ru", Text: "Брюки" },
@@ -9858,21 +6606,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "裤" },
               { Language: "ja", Text: "パンツ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Hose",
-              ru: "Брюки",
-              pt: "Calças",
-              ko: "바지",
-              yue: "褲",
-              en: "Pants",
-              it: "Pantaloni",
-              fr: "Jeans/Pantalons",
-              es: "Pantalones",
-              "zh-CHT": "褲",
-              ar: "السراويل",
-              "zh-CHS": "裤",
-              ja: "パンツ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Hose" },
               { Language: "ru", Text: "Брюки" },
@@ -9892,8 +6625,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000183",
             DisplayName: "鞋",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Schuhe" },
               { Language: "ru", Text: "Обувь" },
@@ -9909,21 +6640,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "鞋子" },
               { Language: "ja", Text: "靴" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Schuhe",
-              ru: "Обувь",
-              pt: "Sapatos",
-              ko: "신발",
-              yue: "鞋",
-              en: "Shoes",
-              it: "Scarpe",
-              fr: "Chaussures",
-              es: "Zapatos",
-              "zh-CHT": "鞋子",
-              ar: "أحذية",
-              "zh-CHS": "鞋子",
-              ja: "靴"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Schuhe" },
               { Language: "ru", Text: "Обувь" },
@@ -9943,8 +6659,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000184",
             DisplayName: "襪",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Socke" },
               { Language: "ru", Text: "Носок" },
@@ -9960,21 +6674,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "袜子" },
               { Language: "ja", Text: "靴下" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Socke",
-              ru: "Носок",
-              pt: "Meia",
-              ko: "양말",
-              yue: "襪",
-              en: "Sock",
-              it: "Calzino",
-              fr: "Chaussette",
-              es: "Calcetín",
-              "zh-CHT": "襪子",
-              ar: "جورب",
-              "zh-CHS": "袜子",
-              ja: "靴下"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Socke" },
               { Language: "ru", Text: "Носок" },
@@ -9994,8 +6693,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000185",
             DisplayName: "褸",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Jacke" },
               { Language: "ru", Text: "Куртка" },
@@ -10011,21 +6708,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "外套" },
               { Language: "ja", Text: "ジャケット" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Jacke",
-              ru: "Куртка",
-              pt: "Jaqueta",
-              ko: "자 켓",
-              yue: "褸",
-              en: "Jacket",
-              it: "Giacca",
-              fr: "Veste",
-              es: "Chaqueta",
-              "zh-CHT": "外套",
-              ar: "سترة",
-              "zh-CHS": "外套",
-              ja: "ジャケット"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Jacke" },
               { Language: "ru", Text: "Куртка" },
@@ -10045,8 +6727,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000186",
             DisplayName: "頸巾",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Schal" },
               { Language: "ru", Text: "Шарф" },
@@ -10062,21 +6742,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "围巾" },
               { Language: "ja", Text: "スカーフ" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Schal",
-              ru: "Шарф",
-              pt: "Cachecol",
-              ko: "스카프",
-              yue: "頸巾",
-              en: "Scarf",
-              it: "Sciarpa",
-              fr: "Écharpe",
-              es: "Bufanda de",
-              "zh-CHT": "圍巾",
-              ar: "وشاح",
-              "zh-CHS": "围巾",
-              ja: "スカーフ"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Schal" },
               { Language: "ru", Text: "Шарф" },
@@ -10096,8 +6761,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000187",
             DisplayName: "內衣",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Unterwäsche" },
               { Language: "ru", Text: "Нижнее белье" },
@@ -10113,21 +6776,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "内衣" },
               { Language: "ja", Text: "下着" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Unterwäsche",
-              ru: "Нижнее белье",
-              pt: "Roupa interior",
-              ko: "속옷",
-              yue: "內衣",
-              en: "Underwear",
-              it: "Biancheria intima",
-              fr: "Sous-vêtements",
-              es: "Ropa interior",
-              "zh-CHT": "內衣",
-              ar: "الملابس الداخلية",
-              "zh-CHS": "内衣",
-              ja: "下着"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Unterwäsche" },
               { Language: "ru", Text: "Нижнее белье" },
@@ -10147,8 +6795,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000188",
             DisplayName: "帽",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Hut" },
               { Language: "ru", Text: "Шляпа" },
@@ -10164,21 +6810,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "帽子" },
               { Language: "ja", Text: "帽子" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Hut",
-              ru: "Шляпа",
-              pt: "Chapéu",
-              ko: "모자",
-              yue: "帽",
-              en: "Hat",
-              it: "Cappello",
-              fr: "Chapeau",
-              es: "Sombrero",
-              "zh-CHT": "帽子",
-              ar: "هات",
-              "zh-CHS": "帽子",
-              ja: "帽子"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Hut" },
               { Language: "ru", Text: "Шляпа" },
@@ -10211,21 +6842,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "衣物" },
           { Language: "ja", Text: "衣料品" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Kleidung",
-          ru: "Одежда",
-          pt: "Vestuário",
-          ko: "의류",
-          yue: "衣物",
-          en: "Clothing",
-          it: "Abbigliamento",
-          fr: "Vêtements",
-          es: "Ropa",
-          "zh-CHT": "衣物",
-          ar: "ملابس",
-          "zh-CHS": "衣物",
-          ja: "衣料品"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Kleidung" },
           { Language: "ru", Text: "Одежда" },
@@ -10243,16 +6859,12 @@ function getSampleUserProfile() {
         ]
       },
       {
-        ID: "00000000-0000-0000-0003-000000000197",
+        ID: "00000000-0000-0000-0000-000000000012",
         DisplayName: "人物",
-        OpenCount: 0,
-        OrderIndex: 0,
         Items: [
           {
             ID: "00000000-0000-0000-0003-000000000189",
             DisplayName: "護士",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Krankenschwester" },
               { Language: "ru", Text: "Медсестра" },
@@ -10268,21 +6880,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "护士" },
               { Language: "ja", Text: "看護師" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Krankenschwester",
-              ru: "Медсестра",
-              pt: "Enfermeira",
-              ko: "간호사",
-              yue: "護士",
-              en: "Nurse",
-              it: "Infermiera",
-              fr: "Infirmière",
-              es: "Enfermera",
-              "zh-CHT": "護士",
-              ar: "ممرضة",
-              "zh-CHS": "护士",
-              ja: "看護師"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Krankenschwester" },
               { Language: "ru", Text: "Медсестра" },
@@ -10302,8 +6899,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000190",
             DisplayName: "醫生",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Arzt" },
               { Language: "ru", Text: "Доктор" },
@@ -10319,21 +6914,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "医生" },
               { Language: "ja", Text: "医師" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Arzt",
-              ru: "Доктор",
-              pt: "Médico",
-              ko: "의사",
-              yue: "醫生",
-              en: "Doctor",
-              it: "Medico",
-              fr: "Médecin",
-              es: "Médico",
-              "zh-CHT": "醫生",
-              ar: "طبيب",
-              "zh-CHS": "医生",
-              ja: "医師"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Arzt" },
               { Language: "ru", Text: "Доктор" },
@@ -10353,8 +6933,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000191",
             DisplayName: "社工",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Sozialarbeiter" },
               { Language: "ru", Text: "Социальный работник" },
@@ -10370,21 +6948,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "社工" },
               { Language: "ja", Text: "ソーシャル ワーカー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Sozialarbeiter",
-              ru: "Социальный работник",
-              pt: "Assistente social",
-              ko: "사회 복지사",
-              yue: "社工",
-              en: "Social worker",
-              it: "Assistente sociale",
-              fr: "Travailleur social",
-              es: "Trabajador social",
-              "zh-CHT": "社工",
-              ar: "أخصائية اجتماعية",
-              "zh-CHS": "社工",
-              ja: "ソーシャル ワーカー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Sozialarbeiter" },
               { Language: "ru", Text: "Социальный работник" },
@@ -10404,8 +6967,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000192",
             DisplayName: "營養師",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Ernährungsberater" },
               { Language: "ru", Text: "Диетолог" },
@@ -10421,21 +6982,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "营养师" },
               { Language: "ja", Text: "栄養士" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Ernährungsberater",
-              ru: "Диетолог",
-              pt: "Nutricionista",
-              ko: "영양사",
-              yue: "營養師",
-              en: "Dietitian",
-              it: "Dietista",
-              fr: "Diététiste",
-              es: "Dietista",
-              "zh-CHT": "營養師",
-              ar: "أخصائي التغذية",
-              "zh-CHS": "营养师",
-              ja: "栄養士"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Ernährungsberater" },
               { Language: "ru", Text: "Диетолог" },
@@ -10455,8 +7001,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000193",
             DisplayName: "眼科醫生",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Augenarzt" },
               { Language: "ru", Text: "Окулист" },
@@ -10472,21 +7016,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "眼科医生" },
               { Language: "ja", Text: "検眼医" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Augenarzt",
-              ru: "Окулист",
-              pt: "Optometrista",
-              ko: "검 안",
-              yue: "眼科醫生",
-              en: "Optometrist",
-              it: "Optometrista",
-              fr: "Optométriste",
-              es: "Optometrista",
-              "zh-CHT": "眼科醫生",
-              ar: "طبيب العيون",
-              "zh-CHS": "眼科医生",
-              ja: "検眼医"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Augenarzt" },
               { Language: "ru", Text: "Окулист" },
@@ -10506,8 +7035,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000194",
             DisplayName: "中醫",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Chinesische Medizin Arzt" },
               { Language: "ru", Text: "Доктор китайской медицины" },
@@ -10523,21 +7050,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "中医" },
               { Language: "ja", Text: "中国医学の医師" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Chinesische Medizin Arzt",
-              ru: "Доктор китайской медицины",
-              pt: "Médico de medicina chinesa",
-              ko: "중국 의학 의사",
-              yue: "中醫",
-              en: "Chinese medicine doctor",
-              it: "Medico della medicina cinese",
-              fr: "Médecin de médecine chinoise",
-              es: "Doctor de Medicina China",
-              "zh-CHT": "中醫",
-              ar: "دكتوراه في الطب الصيني",
-              "zh-CHS": "中医",
-              ja: "中国医学の医師"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Chinesische Medizin Arzt" },
               { Language: "ru", Text: "Доктор китайской медицины" },
@@ -10557,8 +7069,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000195",
             DisplayName: "家務助理",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Hausangestellte" },
               { Language: "ru", Text: "Домашней прислуги" },
@@ -10574,21 +7084,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "家务助理" },
               { Language: "ja", Text: "国内のヘルパー" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Hausangestellte",
-              ru: "Домашней прислуги",
-              pt: "Auxiliar doméstica",
-              ko: "국내 도우미",
-              yue: "家務助理",
-              en: "Domestic helper",
-              it: "Collaboratrice domestica",
-              fr: "Domestique",
-              es: "Auxiliar doméstico",
-              "zh-CHT": "家務助理",
-              ar: "مدبرة منزل",
-              "zh-CHS": "家务助理",
-              ja: "国内のヘルパー"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Hausangestellte" },
               { Language: "ru", Text: "Домашней прислуги" },
@@ -10608,8 +7103,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000196",
             DisplayName: "警察",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Die Polizei" },
               { Language: "ru", Text: "Полиция" },
@@ -10625,21 +7118,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "警察" },
               { Language: "ja", Text: "警察" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Die Polizei",
-              ru: "Полиция",
-              pt: "A polícia",
-              ko: "경찰",
-              yue: "警察",
-              en: "The police",
-              it: "La polizia",
-              fr: "La police",
-              es: "La policía",
-              "zh-CHT": "員警",
-              ar: "الشرطة",
-              "zh-CHS": "警察",
-              ja: "警察"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Die Polizei" },
               { Language: "ru", Text: "Полиция" },
@@ -10659,8 +7137,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000197",
             DisplayName: "朋友",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Freund" },
               { Language: "ru", Text: "Друг" },
@@ -10676,21 +7152,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "朋友" },
               { Language: "ja", Text: "友人" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Freund",
-              ru: "Друг",
-              pt: "Amigo",
-              ko: "친구",
-              yue: "朋友",
-              en: "Friend",
-              it: "Amico",
-              fr: "Ami (e)",
-              es: "Amigo",
-              "zh-CHT": "朋友",
-              ar: "صديق",
-              "zh-CHS": "朋友",
-              ja: "友人"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Freund" },
               { Language: "ru", Text: "Друг" },
@@ -10710,8 +7171,6 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000198",
             DisplayName: "牙醫",
-            OpenCount: 0,
-            OrderIndex: 0,
             displayMultipleLanguage: [
               { Language: "de", Text: "Zahnarzt" },
               { Language: "ru", Text: "Стоматолог" },
@@ -10727,21 +7186,6 @@ function getSampleUserProfile() {
               { Language: "zh-CHS", Text: "牙医" },
               { Language: "ja", Text: "歯科医" }
             ],
-            DisplayNameMultiLanguage: {
-              de: "Zahnarzt",
-              ru: "Стоматолог",
-              pt: "Dentista",
-              ko: "치과 의사",
-              yue: "牙醫",
-              en: "Dentist",
-              it: "Dentista",
-              fr: "Dentiste",
-              es: "Dentista",
-              "zh-CHT": "牙醫",
-              ar: "طبيب أسنان",
-              "zh-CHS": "牙医",
-              ja: "歯科医"
-            },
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Zahnarzt" },
               { Language: "ru", Text: "Стоматолог" },
@@ -10774,21 +7218,6 @@ function getSampleUserProfile() {
           { Language: "zh-CHS", Text: "人物" },
           { Language: "ja", Text: "文字" }
         ],
-        DisplayNameMultiLanguage: {
-          de: "Zeichen",
-          ru: "Персонажи",
-          pt: "Personagens",
-          ko: "문자",
-          yue: "人物",
-          en: "Characters",
-          it: "Caratteri",
-          fr: "Caractères",
-          es: "Personajes",
-          "zh-CHT": "人物",
-          ar: "الأحرف",
-          "zh-CHS": "人物",
-          ja: "文字"
-        },
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Zeichen" },
           { Language: "ru", Text: "Персонажи" },
