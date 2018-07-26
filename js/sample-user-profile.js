@@ -7425,6 +7425,23 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "スピーカーの性別" }]
           }
         ],
+      },
+      {
+        OperationType: "UserInformation",
+        DisplayMultipleLanguage: [
+          {Language:"de",Text:"Benutzerinformationen"},
+          {Language:"ru",Text:"данные пользователя"},
+          {Language:"pt",Text:"informações do usuário"},
+          {Language:"ko",Text:"사용자 정보"},
+          {Language:"yue",Text:"用戶信息"},
+          {Language:"en",Text:"user information"},
+          {Language:"it",Text:"informazioni utente"},
+          {Language:"fr",Text:"informations utilisateur"},
+          {Language:"es",Text:"información de usuario"},
+          {Language:"zh-CHT",Text:"使用者資訊"},
+          {Language:"ar",Text:"معلومات المستخدم"},
+          {Language:"zh-CHS",Text:"用户信息"},
+          {Language:"ja",Text:"ユーザー情報"}]
       }
     ],
     Buttons: [
@@ -7449,4 +7466,3 @@ function getSampleMenuProfile() {
   };
   return json;
 }
-

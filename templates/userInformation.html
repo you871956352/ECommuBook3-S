@@ -1,0 +1,43 @@
+<ion-view cache-view="false" view-title={{Title}}>
+  <ion-content>
+    <div ng-controller="UserInfoCtrl" class="md-padding" ng-cloak>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{Title}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <h1 class="md-title">User ID: {{userProfile.ID}}</h1>
+          <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
+            Display Language: {{displayLanguage.name}}
+          </h1>
+          <h1 class="md-title" ng-repeat="speechLanguage in SpeechLanguageList" ng-if="speechLanguage.value == userProfile.SPEECH_LANGUAGE_CODE && speechLanguage.language == userProfile.DISPLAY_LANGUAGE">
+            Speech Language: {{speechLanguage.name}}
+          </h1>
+          <h1 class="md-title" ng-repeat="speakGender in GenderList" ng-if="speakGender.value == userProfile.SPEECH_GENDER && speakGender.language == userProfile.SPEECH_LANGUAGE_CODE">
+            Speak Gender: {{speakGender.name}}
+          </h1>
+        </md-card-content>
+      </md-card>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Voice Collection</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <span class="md-title">Collction Percentage: {{collectedVoice}} / {{totalVoice}}</span>
+            <div layout="row">
+              <span class="md-title">Start Collection: </span>
+              <md-button ng-click=vcStart()>Confirm</md-button>
+            </div>
+            <div layout="row">
+              <span class="md-title">Synchronize progress: </span>
+              <md-button ng-click=synchronizeStart()>Confirm</md-button>
+            </div>
+        </md-card-content>
+      </md-card>
+    </div>
+  </ion-content>
+</ion-view>

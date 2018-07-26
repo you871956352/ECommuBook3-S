@@ -5,7 +5,7 @@ angular
   .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.$on("$ionicView.enter", function (e) {
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
-      $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";   
+      $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
       // on page loaded
       var userProfile = UserProfileService.getLatest();
       if (typeof $rootScope.isShowDisplayName == 'undefined') {
@@ -652,6 +652,21 @@ angular
             alert("Server is not avaliable: " + response);
         };
       }
+    }
+  })
+  .controller("UserInfoCtrl", function ($scope, UserProfileService){
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
+    $scope.SpeechLanguageList = GlobalVariable.SpeechLanguageList;
+    $scope.GenderList = GlobalVariable.GenderList;
+    $scope.collectedVoice = 0;
+    $scope.totalVoice = 160;
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "UserInformation");
+    $scope.vcStart = function () {
+
+    };
+    $scope.synchronizeStart = function () {
+      
     }
   })
   .controller("TestCtrl", function ($scope,$cordovaFileTransfer, UserProfileService) { //Test Ctrl, for logging
