@@ -7423,8 +7423,127 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "المتكلم بين الجنسين" },
               { Language: "zh-CHS", Text: "演讲者性别" },
               { Language: "ja", Text: "スピーカーの性別" }]
+          },
+          {
+            OperationType: "ConfirmButton",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Bestätigen" },
+              { Language: "ru", Text: "Подтвердите" },
+              { Language: "pt", Text: "Confirmar" },
+              { Language: "ko", Text: "확인" },
+              { Language: "yue", Text: "確認" },
+              { Language: "en", Text: "Confirm" },
+              { Language: "it", Text: "Confermare" },
+              { Language: "fr", Text: "Confirmer" },
+              { Language: "es", Text: "Confirmar" },
+              { Language: "zh-CHT", Text: "確認" },
+              { Language: "ar", Text: "تأكيد" },
+              { Language: "zh-CHS", Text: "确认" },
+              { Language: "ja", Text: "確認します。" }]
+          },
+          {
+            OperationType: "Appearance",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Aussehen" },
+              { Language: "ru", Text: "Внешний вид" },
+              { Language: "pt", Text: "Aparência" },
+              { Language: "ko", Text: "외관" },
+              { Language: "yue", Text: "外觀" },
+              { Language: "en", Text: "Appearance" },
+              { Language: "it", Text: "Aspetto" },
+              { Language: "fr", Text: "Apparence" },
+              { Language: "es", Text: "Aspecto" },
+              { Language: "zh-CHT", Text: "外觀" },
+              { Language: "ar", Text: "المظهر" },
+              { Language: "zh-CHS", Text: "外观" },
+              { Language: "ja", Text: "外観" }]
+          },
+          {
+            OperationType: "FontSize",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Schriftgröße" },
+              { Language: "ru", Text: "Размер шрифта" },
+              { Language: "pt", Text: "Tamanho da fonte" },
+              { Language: "ko", Text: "글꼴 크기" },
+              { Language: "yue", Text: "字體大小" },
+              { Language: "en", Text: "Font Size" },
+              { Language: "it", Text: "Dimensione del carattere" },
+              { Language: "fr", Text: "Taille de police" },
+              { Language: "es", Text: "Tamaño de la fuente" },
+              { Language: "zh-CHT", Text: "字體大小" },
+              { Language: "ar", Text: "حجم الخط" },
+              { Language: "zh-CHS", Text: "字体大小" },
+              { Language: "ja", Text: "フォント サイズ" }]
+          },
+          {
+            OperationType: "Example",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Beispiel" },
+              { Language: "ru", Text: "Пример" },
+              { Language: "pt", Text: "Exemplo de" },
+              { Language: "ko", Text: "예를 들어" },
+              { Language: "yue", Text: "例子" },
+              { Language: "en", Text: "Example" },
+              { Language: "it", Text: "Esempio" },
+              { Language: "fr", Text: "Exemple de" },
+              { Language: "es", Text: "Ejemplo" },
+              { Language: "zh-CHT", Text: "例子" },
+              { Language: "ar", Text: "مثال" },
+              { Language: "zh-CHS", Text: "例子" },
+              { Language: "ja", Text: "例" }]
+          },
+          {
+            OperationType: "ResetApp",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Reset-Anwendung" },
+              { Language: "ru", Text: "Восстановить приложение" },
+              { Language: "pt", Text: "Aplicação da restauração" },
+              { Language: "ko", Text: "응용 프로그램을 다시 설정" },
+              { Language: "yue", Text: "重置應用程序" },
+              { Language: "en", Text: "Reset Application" },
+              { Language: "it", Text: "Reimposta applicazione" },
+              { Language: "fr", Text: "Demande de réinitialisation" },
+              { Language: "es", Text: "Aplicación de reajuste" },
+              { Language: "zh-CHT", Text: "重置應用程式" },
+              { Language: "ar", Text: "إعادة تعيين التطبيق" },
+              { Language: "zh-CHS", Text: "重置应用程序" },
+              { Language: "ja", Text: "アプリケーションをリセットします。" }]
+          },
+          {
+            OperationType: "ResetConfirm",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Reset bestätigen" },
+              { Language: "ru", Text: "Подтвердить сброс" },
+              { Language: "pt", Text: "Confirme o Reset" },
+              { Language: "ko", Text: "리셋 확인" },
+              { Language: "yue", Text: "確認復位" },
+              { Language: "en", Text: "Confirm Reset" },
+              { Language: "it", Text: "Confermare il Reset" },
+              { Language: "fr", Text: "Confirmez la réinitialisation" },
+              { Language: "es", Text: "Confirmar reinicio" },
+              { Language: "zh-CHT", Text: "確認重定" },
+              { Language: "ar", Text: "تأكيد إعادة تعيين" },
+              { Language: "zh-CHS", Text: "确认复位" },
+              { Language: "ja", Text: "リセットを確認します。" }]
+          },
+          {
+            OperationType: "ResetConfirmWarning",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Alle persönlichen Einstellungen werden zurückgesetzt" },
+              { Language: "ru", Text: "Все личные настройки будут сброшены" },
+              { Language: "pt", Text: "Todas as definições pessoais serão redefinida" },
+              { Language: "ko", Text: "모든 개인 설정으로 다시 설정 됩니다." },
+              { Language: "yue", Text: "將重置所有個人設置" },
+              { Language: "en", Text: "All personal setting will be reset" },
+              { Language: "it", Text: "Tutte le impostazioni personali vengono azzerate" },
+              { Language: "fr", Text: "Tous les réglages personnels seront réinitialisées" },
+              { Language: "es", Text: "Se restablecerá la configuración personal todos" },
+              { Language: "zh-CHT", Text: "將重置所有個人設定" },
+              { Language: "ar", Text: "سيتم إعادة تعيين كافة إعدادات شخصية" },
+              { Language: "zh-CHS", Text: "将重置所有个人设置" },
+              { Language: "ja", Text: "すべての個人設定がリセットされます。" }]
           }
-        ],
+        ]
       },
       {
         OperationType: "UserInformation",
