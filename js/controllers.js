@@ -617,7 +617,7 @@ angular
     $scope.sentences = $scope.userProfile.Sentences;
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Sentence");
     $scope.onSentenceCheck = function (sentenceID) {
-
+      alert(sentenceID);
     };
   })
   .controller("ShareCtrl", function ($rootScope, $scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading

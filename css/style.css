@@ -31,10 +31,16 @@ md-dialog {
 	height: 90%;
 }
 
+.itemImage {
+  width: 100%;
+  max-height: 200px;
+}
+
 .itemNormalContainer {
   width: 95%;
-  text-align: center; 
-  white-space:nowrap;
+  height: 220px;
+  text-align: center;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
