@@ -32,8 +32,8 @@ md-dialog {
 }
 
 .itemImage {
-  width: 100%;
-  max-height: 200px;
+  max-width: 100%;
+  max-height: 180px;
 }
 
 .itemNormalContainer {
