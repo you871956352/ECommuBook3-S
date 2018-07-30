@@ -8,35 +8,35 @@
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
-          <h1 class="md-title">User ID: {{userProfile.ID}}</h1>
+          <h1 class="md-title">{{UserID}}: {{userProfile.ID}}</h1>
           <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
-            Display Language: {{displayLanguage.name}}
+            {{DisplayLanguage}}: {{displayLanguage.name}}
           </h1>
           <h1 class="md-title" ng-repeat="speechLanguage in SpeechLanguageList" ng-if="speechLanguage.value == userProfile.SPEECH_LANGUAGE_CODE && speechLanguage.language == userProfile.DISPLAY_LANGUAGE">
-            Speech Language: {{speechLanguage.name}}
+            {{SpeechLanguage}}: {{speechLanguage.name}}
           </h1>
           <h1 class="md-title" ng-repeat="speakGender in GenderList" ng-if="speakGender.value == userProfile.SPEECH_GENDER && speakGender.language == userProfile.SPEECH_LANGUAGE_CODE">
-            Speak Gender: {{speakGender.name}}
+            {{SpeakerGender}}: {{speakGender.name}}
           </h1>
         </md-card-content>
       </md-card>
       <md-card>
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline">Voice Collection</span>
+            <span class="md-headline">{{VoiceConversion}}</span>
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
-            <span class="md-title">Collction Percentage: {{collectedVoice}} / {{totalVoice}}</span>
+            <span class="md-title">{{CollectionProgress}}: {{collectedVoice}} / {{totalVoice}}</span>
             <div layout="row">
-              <span class="md-title">Collection: </span>
+              <span class="md-title">{{Collection}}: </span>
             </div>
             <div layout="row">
               <md-button ng-click=vcStart()>Start</md-button>
               <md-button ng-click=vcCheck()>Check</md-button>
             </div>
             <div layout="row">
-              <span class="md-title">Synchronize Progress: </span>
+              <span class="md-title">{{SynchronizeProgress}}: </span>
             </div>
             <div layout="row">
               <md-button ng-click=synchronizeStart()>Confirm</md-button>
