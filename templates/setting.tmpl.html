@@ -6,13 +6,12 @@
 	<md-card>
 	    <md-card-title>
 	      <md-card-title-text>
-	        <span class="md-headline">Language</span>
-	        <span class="md-subhead">Select your language preference</span>
+          <span class="md-headline">{{textLanguage}}</span>
 	      </md-card-title-text>
 	    </md-card-title>
 
 	    <md-card-content>
-		    <h1 class="md-title">Display Language</h1>
+        <h1 class="md-title">{{textDisplayLanguage}}</h1>
 		    <div layout="row">
 		      <md-input-container>
 		        <md-select ng-model="selectedDisplayLanguage" ng-change="onSelectedDisplayLanguageChanged()">
@@ -20,7 +19,7 @@
 		        </md-select>
 		      </md-input-container>
 		    </div>
-		    <h1 class="md-title">Speech Language</h1>
+        <h1 class="md-title">{{textSpeechLanguage}}</h1>
 		    <div layout="row">
 		      <md-input-container>
 		        <md-select ng-model="selectedSpeechLanguage" ng-change="onSelectedSpeechLanguageChanged()">
@@ -28,7 +27,7 @@
 		        </md-select>
 		      </md-input-container>
 		    </div>
-		    <h1 class="md-title">Speaker Gender</h1>
+        <h1 class="md-title">{{textSpeechGender}}</h1>
 		    <div layout="row">
 		      <md-input-container>
 		        <md-select ng-model="selectedSpeechGender" ng-change="onSelectedSpeechGenderChanged()">

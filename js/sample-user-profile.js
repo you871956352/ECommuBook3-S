@@ -7355,7 +7355,7 @@ function getSampleMenuProfile() {
           { Language: "ar", Text: "الإعداد" },
           { Language: "zh-CHS", Text: "设置" },
           { Language: "ja", Text: "設定" }],
-        SettingSubPage: [
+        SubPage: [
           {
             OperationType: "LanguageSetting",
             DisplayMultipleLanguage: [
@@ -7408,7 +7408,7 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "音声言語" }]
           },
           {
-            OperationType: "SpeakerGender ",
+            OperationType: "SpeakerGender",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Lautsprecher-Geschlecht" },
               { Language: "ru", Text: "Динамика гендерных" },
@@ -7429,19 +7429,19 @@ function getSampleMenuProfile() {
       {
         OperationType: "UserInformation",
         DisplayMultipleLanguage: [
-          {Language:"de",Text:"Benutzerinformationen"},
-          {Language:"ru",Text:"данные пользователя"},
-          {Language:"pt",Text:"informações do usuário"},
-          {Language:"ko",Text:"사용자 정보"},
-          {Language:"yue",Text:"用戶信息"},
-          {Language:"en",Text:"user information"},
-          {Language:"it",Text:"informazioni utente"},
-          {Language:"fr",Text:"informations utilisateur"},
-          {Language:"es",Text:"información de usuario"},
-          {Language:"zh-CHT",Text:"使用者資訊"},
-          {Language:"ar",Text:"معلومات المستخدم"},
-          {Language:"zh-CHS",Text:"用户信息"},
-          {Language:"ja",Text:"ユーザー情報"}],
+          { Language: "de", Text: "Benutzerinformationen" },
+          { Language: "ru", Text: "Данные пользователя" },
+          { Language: "pt", Text: "Informações do usuário" },
+          { Language: "ko", Text: "사용자 정보" },
+          { Language: "yue", Text: "用戶信息" },
+          { Language: "en", Text: "User information" },
+          { Language: "it", Text: "Informazioni utente" },
+          { Language: "fr", Text: "Informations utilisateur" },
+          { Language: "es", Text: "Información de usuario" },
+          { Language: "zh-CHT", Text: "使用者資訊" },
+          { Language: "ar", Text: "معلومات المستخدم" },
+          { Language: "zh-CHS", Text: "用户信息" },
+          { Language: "ja", Text: "ユーザー情報" }],
         SubPage: [
           {
             OperationType: "VoiceConversion",
@@ -7584,7 +7584,7 @@ function getSampleMenuProfile() {
     ],
     Buttons: [
       {
-        ButtonType: "Confirm",
+        OperationType: "Confirm",
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Bestätigen" },
           { Language: "ru", Text: "Подтвердите" },
