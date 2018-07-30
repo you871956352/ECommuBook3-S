@@ -29,11 +29,16 @@
         <md-card-content>
             <span class="md-title">Collction Percentage: {{collectedVoice}} / {{totalVoice}}</span>
             <div layout="row">
-              <span class="md-title">Start Collection: </span>
-              <md-button ng-click=vcStart()>Confirm</md-button>
+              <span class="md-title">Collection: </span>
             </div>
             <div layout="row">
-              <span class="md-title">Synchronize progress: </span>
+              <md-button ng-click=vcStart()>Start</md-button>
+              <md-button ng-click=vcCheck()>Check</md-button>
+            </div>
+            <div layout="row">
+              <span class="md-title">Synchronize Progress: </span>
+            </div>
+            <div layout="row">
               <md-button ng-click=synchronizeStart()>Confirm</md-button>
             </div>
         </md-card-content>

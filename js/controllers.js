@@ -665,8 +665,11 @@ angular
     $scope.vcStart = function () {
 
     };
+    $scope.vcCheck = function () {
+
+    };
     $scope.synchronizeStart = function () {
-      
+
     }
   })
   .controller("TestCtrl", function ($scope,$cordovaFileTransfer, UserProfileService) { //Test Ctrl, for logging

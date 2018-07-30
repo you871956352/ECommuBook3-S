@@ -7441,7 +7441,145 @@ function getSampleMenuProfile() {
           {Language:"zh-CHT",Text:"使用者資訊"},
           {Language:"ar",Text:"معلومات المستخدم"},
           {Language:"zh-CHS",Text:"用户信息"},
-          {Language:"ja",Text:"ユーザー情報"}]
+          {Language:"ja",Text:"ユーザー情報"}],
+        SubPage: [
+          {
+            OperationType: "VoiceConversion",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Stimme-Konvertierung"},
+              { Language: "ru", Text: "Голос преобразования"},
+              { Language: "pt", Text: "Conversão de voz"},
+              { Language: "ko", Text: "음성 변환"},
+              { Language: "yue", Text: "語音轉換"},
+              { Language: "en", Text: "Voice Conversion"},
+              { Language: "it", Text: "Conversione di voce"},
+              { Language: "fr", Text: "Conversion de la voix"},
+              { Language: "es", Text: "Conversión de la voz"},
+              { Language: "zh-CHT", Text: "語音轉換"},
+              { Language: "ar", Text: "تحويل صوت"},
+              { Language: "zh-CHS", Text: "语音转换"},
+              { Language: "ja", Text: "音声変換"}]
+          },
+          {
+            OperationType: "UserID",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Benutzer-ID"},
+              { Language: "ru", Text: "Идентификатор пользователя"},
+              { Language: "pt", Text: "ID de usuário"},
+              { Language: "ko", Text: "사용자 ID"},
+              { Language: "yue", Text: "用戶 id"},
+              { Language: "en", Text: "User ID"},
+              { Language: "it", Text: "ID utente"},
+              { Language: "fr", Text: "ID de l’utilisateur"},
+              { Language: "es", Text: "ID de usuario"},
+              { Language: "zh-CHT", Text: "使用者 ID"},
+              { Language: "ar", Text: "معرف المستخدم"},
+              { Language: "zh-CHS", Text: "用户 ID"},
+              { Language: "ja", Text: "ユーザー ID"}]
+          },
+          {
+            OperationType: "DisplayLanguage",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Display-Sprache" },
+              { Language: "ru", Text: "Язык отображения" },
+              { Language: "pt", Text: "Idioma de exibição" },
+              { Language: "ko", Text: "표시 언어" },
+              { Language: "yue", Text: "顯示語言" },
+              { Language: "en", Text: "Display Language" },
+              { Language: "it", Text: "Lingua di visualizzazione" },
+              { Language: "fr", Text: "Langue d’affichage" },
+              { Language: "es", Text: "Idioma de la pantalla" },
+              { Language: "zh-CHT", Text: "顯示語言" },
+              { Language: "ar", Text: "لغة العرض" },
+              { Language: "zh-CHS", Text: "显示语言" },
+              { Language: "ja", Text: "表示言語" }]
+          },
+          {
+            OperationType: "SpeechLanguage",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Sprache" },
+              { Language: "ru", Text: "Речи язык" },
+              { Language: "pt", Text: "Língua de discurso" },
+              { Language: "ko", Text: "음성 언어" },
+              { Language: "yue", Text: "語音語言" },
+              { Language: "en", Text: "Speech Language" },
+              { Language: "it", Text: "Lingua di discorso" },
+              { Language: "fr", Text: "Orthophonie" },
+              { Language: "es", Text: "Habla el lenguaje" },
+              { Language: "zh-CHT", Text: "語音語言" },
+              { Language: "ar", Text: "لغة الكلام" },
+              { Language: "zh-CHS", Text: "语音语言" },
+              { Language: "ja", Text: "音声言語" }]
+          },
+          {
+            OperationType: "SpeakerGender",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Lautsprecher-Geschlecht" },
+              { Language: "ru", Text: "Динамика гендерных" },
+              { Language: "pt", Text: "Sexo de alto-falante" },
+              { Language: "ko", Text: "스피커 성별" },
+              { Language: "yue", Text: "演講者性別" },
+              { Language: "en", Text: "Speaker Gender" },
+              { Language: "it", Text: "Genere di altoparlante" },
+              { Language: "fr", Text: "Enceinte sexe" },
+              { Language: "es", Text: "Género de altavoz" },
+              { Language: "zh-CHT", Text: "演講者性別" },
+              { Language: "ar", Text: "المتكلم بين الجنسين" },
+              { Language: "zh-CHS", Text: "演讲者性别" },
+              { Language: "ja", Text: "スピーカーの性別" }]
+          },
+          {
+            OperationType: "CollectionProgress",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Sammlung-Fortschritt"},
+              { Language: "ru", Text: "Коллекции прогресс"},
+              { Language: "pt", Text: "Coleção de progresso"},
+              { Language: "ko", Text: "컬렉션 진행"},
+              { Language: "yue", Text: "收集進度"},
+              { Language: "en", Text: "Collection Progress"},
+              { Language: "it", Text: "Collezione Progress"},
+              { Language: "fr", Text: "Progrès de la collection"},
+              { Language: "es", Text: "Avance de colección"},
+              { Language: "zh-CHT", Text: "收集進度"},
+              { Language: "ar", Text: "تقدم مجموعة"},
+              { Language: "zh-CHS", Text: "收集进度"},
+              { Language: "ja", Text: "コレクションの進行状況"}]
+          },
+          {
+            OperationType: "Collection",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Kollektion"},
+              { Language: "ru", Text: "Коллекция"},
+              { Language: "pt", Text: "Coleção"},
+              { Language: "ko", Text: "컬렉션"},
+              { Language: "yue", Text: "收集"},
+              { Language: "en", Text: "Collection"},
+              { Language: "it", Text: "Collezione"},
+              { Language: "fr", Text: "Collection"},
+              { Language: "es", Text: "Colección"},
+              { Language: "zh-CHT", Text: "收集"},
+              { Language: "ar", Text: "جمع"},
+              { Language: "zh-CHS", Text: "收集"},
+              { Language: "ja", Text: "コレクション"}]
+          },
+          {
+            OperationType: "SynchronizeProgress",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Fortschritt zu synchronisieren"},
+              { Language: "ru", Text: "Синхронизировать прогресс"},
+              { Language: "pt", Text: "Sincronizar o progresso"},
+              { Language: "ko", Text: "동기화 진행률"},
+              { Language: "yue", Text: "同步進度"},
+              { Language: "en", Text: "Synchronize Progress"},
+              { Language: "it", Text: "Sincronizzare i progressi di"},
+              { Language: "fr", Text: "Synchroniser les progrès"},
+              { Language: "es", Text: "Sincronizar el progreso"},
+              { Language: "zh-CHT", Text: "同步進度"},
+              { Language: "ar", Text: "تزامن التقدم"},
+              { Language: "zh-CHS", Text: "同步进度"},
+              { Language: "ja", Text: "同期の進行状況"}]
+          }
+        ]
       }
     ],
     Buttons: [
