@@ -11,26 +11,26 @@
                 <md-card-content>
                   <div layout="row">
                     <md-input-container>
-                      <label>DisplayName:</label>
+                      <label>{{textCategoryName}}</label>
                       <input type="text" ng-model="categoryName" required/>
                     </md-input-container>
       
                     <md-input-container>
-                      <label>Input Language</label>
+                      <label>{{textLanguage}}</label>
                       <md-select ng-model="inputLanguage" required>
                         <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
                       </md-select>
                     </md-input-container>
                   </div>
                   <div layout="row">
-                    <md-button ng-click='onTakeImageButtonClicked("camera")'>Camera Image</md-button>
-                    <md-button ng-click='onTakeImageButtonClicked("album")'>Album Image</md-button>
+                    <md-button ng-click='onTakeImageButtonClicked("camera")'>{{textCameraImage}}</md-button>
+                    <md-button ng-click='onTakeImageButtonClicked("album")'>{{textAlbumImage}}</md-button>
                   </div>
                   <div layout="row">
                     <img id='myImage'/>
                   </div>
                   <div layout="row">
-                    <md-button ng-click=onAddCategoryConfirmClicked()>Confirm. Add Category!</md-button>
+                    <md-button ng-click=onAddCategoryConfirmClicked()>{{textButtonConfirm}}</md-button>
                   </div>
                 </md-card-content>
               </md-card>
