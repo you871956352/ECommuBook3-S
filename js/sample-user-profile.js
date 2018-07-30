@@ -7697,6 +7697,57 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "تزامن التقدم"},
               { Language: "zh-CHS", Text: "同步进度"},
               { Language: "ja", Text: "同期の進行状況"}]
+          },
+          {
+            OperationType: "Start",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Start"},
+              { Language: "ru", Text: "Начало"},
+              { Language: "pt", Text: "Início"},
+              { Language: "ko", Text: "시작"},
+              { Language: "yue", Text: "初時"},
+              { Language: "en", Text: "Start"},
+              { Language: "it", Text: "Inizio"},
+              { Language: "fr", Text: "Début"},
+              { Language: "es", Text: "Inicio"},
+              { Language: "zh-CHT", Text: "開始"},
+              { Language: "ar", Text: "بدء تشغيل"},
+              { Language: "zh-CHS", Text: "开始"},
+              { Language: "ja", Text: "スタート"}]
+          },
+          {
+            OperationType: "Check",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Überprüfen Sie"},
+              { Language: "ru", Text: "Проверить"},
+              { Language: "pt", Text: "Verifique"},
+              { Language: "ko", Text: "확인"},
+              { Language: "yue", Text: "檢查"},
+              { Language: "en", Text: "Check"},
+              { Language: "it", Text: "Verifica"},
+              { Language: "fr", Text: "Vérifier"},
+              { Language: "es", Text: "Echale un vistazo"},
+              { Language: "zh-CHT", Text: "檢查"},
+              { Language: "ar", Text: "تحقق"},
+              { Language: "zh-CHS", Text: "检查"},
+              { Language: "ja", Text: "チェック"}]
+          },
+          {
+            OperationType: "Confirm",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Bestätigen"},
+              { Language: "ru", Text: "Подтвердите"},
+              { Language: "pt", Text: "Confirmar"},
+              { Language: "ko", Text: "확인"},
+              { Language: "yue", Text: "確認"},
+              { Language: "en", Text: "Confirm"},
+              { Language: "it", Text: "Confermare"},
+              { Language: "fr", Text: "Confirmer"},
+              { Language: "es", Text: "Confirmar"},
+              { Language: "zh-CHT", Text: "確認"},
+              { Language: "ar", Text: "تأكيد"},
+              { Language: "zh-CHS", Text: "确认"},
+              { Language: "ja", Text: "確認します。"}]
           }
         ]
       }

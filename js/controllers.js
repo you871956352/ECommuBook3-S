@@ -675,15 +675,21 @@ angular
     $scope.collectedVoice = 0;
     $scope.totalVoice = 160;
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "UserInformation");
-    $scope.vcStart = function () {
-
-    };
-    $scope.vcCheck = function () {
-
-    };
-    $scope.synchronizeStart = function () {
-
-    }
+    $scope.subMenuProfile = UserProfileService.getMenuProfileSubObject("UserInformation");
+    $scope.VoiceConversion = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "VoiceConversion");
+    $scope.UserID = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "UserID");
+    $scope.DisplayLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "DisplayLanguage");
+    $scope.SpeechLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SpeechLanguage");
+    $scope.SpeakerGender = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SpeakerGender");
+    $scope.CollectionProgress = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "CollectionProgress");
+    $scope.Collection = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Collection");
+    $scope.SynchronizeProgress = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SynchronizeProgress");
+    $scope.Start = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Start");
+    $scope.Check = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Check");
+    $scope.Confirm = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Confirm");
+    $scope.vcStart = function () {};
+    $scope.vcCheck = function () {};
+    $scope.synchronizeStart = function () {};
   })
   .controller("TestCtrl", function ($scope,$cordovaFileTransfer, UserProfileService) { //Test Ctrl, for logging
     //$scope.uid = 0;
