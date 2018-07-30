@@ -118,6 +118,11 @@ angular
     $scope.selectedSpeechLanguage;
     $scope.selectedSpeechGender;
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Setting");
+    $scope.subMenuProfile = UserProfileService.getMenuProfileSubObject("Setting");
+    $scope.textLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "LanguageSetting");
+    $scope.textDisplayLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "DisplayLanguage");
+    $scope.textSpeechLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SpeechLanguage");
+    $scope.textSpeechGender = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SpeakerGender");
     $scope.onSelectedDisplayLanguageChanged = function () {
       console.log("display language:" + $scope.selectedDisplayLanguage);
       $scope.speechLanguageListOption = [];

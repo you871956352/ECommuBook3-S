@@ -7355,7 +7355,7 @@ function getSampleMenuProfile() {
           { Language: "ar", Text: "الإعداد" },
           { Language: "zh-CHS", Text: "设置" },
           { Language: "ja", Text: "設定" }],
-        SettingSubPage: [
+        SubPage: [
           {
             OperationType: "LanguageSetting",
             DisplayMultipleLanguage: [
@@ -7408,7 +7408,7 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "音声言語" }]
           },
           {
-            OperationType: "SpeakerGender ",
+            OperationType: "SpeakerGender",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Lautsprecher-Geschlecht" },
               { Language: "ru", Text: "Динамика гендерных" },
@@ -7446,7 +7446,7 @@ function getSampleMenuProfile() {
     ],
     Buttons: [
       {
-        ButtonType: "Confirm",
+        OperationType: "Confirm",
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Bestätigen" },
           { Language: "ru", Text: "Подтвердите" },

@@ -48,25 +48,43 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
     },
 
     getMenuProfile: function () {
+      /*if ($localStorage.menuProfile) {
+        console.log("Read menuProfile from LocalStorage.");
+      }
+      else {
+        console.log("No menuProfile in LocalStorage. Read sample menuProfile.");
+        $localStorage.menuProfile = getSampleMenuProfile();
+      }
+      return $localStorage.menuProfile;*/
+
       $localStorage.menuProfile = getSampleMenuProfile();
       return $localStorage.menuProfile;
     },
-
+    getMenuProfileSubObject: function (targetText) {
+      var menuProfile = this.getMenuProfile();
+      for (var i = 0; i < menuProfile.Operations.length; i++) {
+        if (menuProfile.Operations[i].OperationType == targetText) {
+          return menuProfile.Operations[i];
+        }
+      }
+    },
     getTranslatedMenuText: function (mode, targetText) {
-      var userProfile = $localStorage.userProfile;
-      var menuProfile = $localStorage.menuProfile;
+      var menuProfile = this.getMenuProfile();   
       if (mode == "Operations") {
-        for (var i = 0; i < menuProfile.Operations.length; i++) {
-          if (menuProfile.Operations[i].OperationType == targetText) {
-            for (var j = 0; j < menuProfile.Operations[i].DisplayMultipleLanguage.length; j++) {
-              if (menuProfile.Operations[i].DisplayMultipleLanguage[j].Language == userProfile.DISPLAY_LANGUAGE) {
-                return menuProfile.Operations[i].DisplayMultipleLanguage[j].Text;
-              }
+        return this.getTranslatedObjectText(menuProfile.Operations, targetText)
+      }
+    },
+    getTranslatedObjectText: function (targetObject, targetText) {
+      var userProfile = this.getLatest();
+      for (var i = 0; i < targetObject.length; i++) {
+        if (targetObject[i].OperationType == targetText) {
+          for (var j = 0; j < targetObject[i].DisplayMultipleLanguage.length; j++) {
+            if (targetObject[i].DisplayMultipleLanguage[j].Language == userProfile.DISPLAY_LANGUAGE) {
+              return targetObject[i].DisplayMultipleLanguage[j].Text;
             }
           }
         }
       }
-      
     }
   };
 });
