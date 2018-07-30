@@ -12,7 +12,7 @@
           <md-card-content>
             <div layout="row">
               <md-input-container>
-                <label>Select Category:</label>
+                <label>{{textCategoryName}}</label>
                 <md-select ng-model="selectedCategoryId" ng-change="onSelectedCategoryChanged()">
                   <md-option ng-value="category.ID" ng-repeat="category in categories">
                     <div ng-repeat="translation in category.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">{{translation.Text}}</div>
@@ -25,7 +25,7 @@
             </div>
 
             <div layout="row">
-              <md-button ng-click=onDeleteCategoryConfirmClicked()>Confirm. Delete Category!</md-button>
+              <md-button ng-click=onDeleteCategoryConfirmClicked()>{{textButtonConfirm}}</md-button>
             </div>
           </md-card-content>
         </md-card>

@@ -7254,6 +7254,147 @@ function getSampleMenuProfile() {
   json = {
     Operations: [
       {
+        OperationType: "General",
+        SubPage: [
+          {
+            OperationType: "ConfirmButton",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Bestätigen" },
+              { Language: "ru", Text: "Подтвердите" },
+              { Language: "pt", Text: "Confirmar" },
+              { Language: "ko", Text: "확인" },
+              { Language: "yue", Text: "確認" },
+              { Language: "en", Text: "Confirm" },
+              { Language: "it", Text: "Confermare" },
+              { Language: "fr", Text: "Confirmer" },
+              { Language: "es", Text: "Confirmar" },
+              { Language: "zh-CHT", Text: "確認" },
+              { Language: "ar", Text: "تأكيد" },
+              { Language: "zh-CHS", Text: "确认" },
+              { Language: "ja", Text: "確認します。" }]
+          },
+          {
+            OperationType: "GetButton",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Holen Sie sich jetzt" },
+              { Language: "ru", Text: "Получить сейчас" },
+              { Language: "pt", Text: "Obter agora" },
+              { Language: "ko", Text: "지금" },
+              { Language: "yue", Text: "立即獲取" },
+              { Language: "en", Text: "Get Now" },
+              { Language: "it", Text: "Installa adesso" },
+              { Language: "fr", Text: "Téléchargez dès maintenant" },
+              { Language: "es", Text: "¡Ahora" },
+              { Language: "zh-CHT", Text: "立即獲取" },
+              { Language: "ar", Text: "يحصل الآن" },
+              { Language: "zh-CHS", Text: "立即获取" },
+              { Language: "ja", Text: "今すぐ入手します。" }]
+          },
+          {
+            OperationType: "CategoryName",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Kategorienamen" },
+              { Language: "ru", Text: "Имя категории" },
+              { Language: "pt", Text: "Nome da categoria" },
+              { Language: "ko", Text: "카테고리 이름" },
+              { Language: "yue", Text: "類別名稱" },
+              { Language: "en", Text: "Category Name" },
+              { Language: "it", Text: "Nome della categoria" },
+              { Language: "fr", Text: "Nom de la catégorie" },
+              { Language: "es", Text: "Nombre de la categoría" },
+              { Language: "zh-CHT", Text: "類別名稱" },
+              { Language: "ar", Text: "اسم الفئة" },
+              { Language: "zh-CHS", Text: "类别名称" },
+              { Language: "ja", Text: "カテゴリ名" }]
+          },
+          {
+            OperationType: "ItemName",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Elementnamen" },
+              { Language: "ru", Text: "Имя элемента" },
+              { Language: "pt", Text: "Nome do artigo" },
+              { Language: "ko", Text: "항목 이름" },
+              { Language: "yue", Text: "項目名稱" },
+              { Language: "en", Text: "Item Name" },
+              { Language: "it", Text: "Nome dell'articolo" },
+              { Language: "fr", Text: "Nom de l’élément" },
+              { Language: "es", Text: "Nombre del artículo" },
+              { Language: "zh-CHT", Text: "專案名稱" },
+              { Language: "ar", Text: "اسم العنصر" },
+              { Language: "zh-CHS", Text: "项目名称" },
+              { Language: "ja", Text: "アイテム名" }]
+          },
+          {
+            OperationType: "TargetName",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Zielname" },
+              { Language: "ru", Text: "Имя целевого объекта" },
+              { Language: "pt", Text: "Nome de destino" },
+              { Language: "ko", Text: "대상 이름" },
+              { Language: "yue", Text: "目標名稱" },
+              { Language: "en", Text: "Target Name" },
+              { Language: "it", Text: "Nome di destinazione" },
+              { Language: "fr", Text: "Nom de la cible" },
+              { Language: "es", Text: "Nombre del destino" },
+              { Language: "zh-CHT", Text: "目標名稱" },
+              { Language: "ar", Text: "اسم الهدف" },
+              { Language: "zh-CHS", Text: "目标名称" },
+              { Language: "ja", Text: "ターゲット名" }]
+          },
+          {
+            OperationType: "TargetLanguage",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Zielsprache" },
+              { Language: "ru", Text: "Целевой язык" },
+              { Language: "pt", Text: "Língua-alvo" },
+              { Language: "ko", Text: "대상 언어" },
+              { Language: "yue", Text: "目標語言" },
+              { Language: "en", Text: "Target Language" },
+              { Language: "it", Text: "Lingua di destinazione" },
+              { Language: "fr", Text: "Langue cible" },
+              { Language: "es", Text: "Idioma de destino" },
+              { Language: "zh-CHT", Text: "目的語言" },
+              { Language: "ar", Text: "اللغة الهدف" },
+              { Language: "zh-CHS", Text: "目标语言" },
+              { Language: "ja", Text: "ターゲット言語" }]
+          },
+          {
+            OperationType: "CameraImage",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Kamerabild" },
+              { Language: "ru", Text: "Изображение с камеры" },
+              { Language: "pt", Text: "Imagem de câmera" },
+              { Language: "ko", Text: "카메라 이미지" },
+              { Language: "yue", Text: "相機圖像" },
+              { Language: "en", Text: "Camera Image" },
+              { Language: "it", Text: "Immagine della telecamera" },
+              { Language: "fr", Text: "Image de la caméra" },
+              { Language: "es", Text: "Imagen de la cámara" },
+              { Language: "zh-CHT", Text: "相機圖像" },
+              { Language: "ar", Text: "صورة الكاميرا" },
+              { Language: "zh-CHS", Text: "相机图像" },
+              { Language: "ja", Text: "カメラ画像" }]
+          },
+          {
+            OperationType: "AlbumImage",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Albumbild" },
+              { Language: "ru", Text: "Обложка альбома" },
+              { Language: "pt", Text: "Imagem do álbum" },
+              { Language: "ko", Text: "앨범 이미지" },
+              { Language: "yue", Text: "相冊圖像" },
+              { Language: "en", Text: "Album Image" },
+              { Language: "it", Text: "Immagine dell'album" },
+              { Language: "fr", Text: "Image de l’album" },
+              { Language: "es", Text: "Imagen álbum" },
+              { Language: "zh-CHT", Text: "相冊圖像" },
+              { Language: "ar", Text: "ألبوم الصور" },
+              { Language: "zh-CHS", Text: "相册图像" },
+              { Language: "ja", Text: "アルバムのイメージ" }]
+          }
+        ]
+      },
+      {
         OperationType: "AddCategory",
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Kategorie hinzufügen" },
@@ -7423,23 +7564,6 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "المتكلم بين الجنسين" },
               { Language: "zh-CHS", Text: "演讲者性别" },
               { Language: "ja", Text: "スピーカーの性別" }]
-          },
-          {
-            OperationType: "ConfirmButton",
-            DisplayMultipleLanguage: [
-              { Language: "de", Text: "Bestätigen" },
-              { Language: "ru", Text: "Подтвердите" },
-              { Language: "pt", Text: "Confirmar" },
-              { Language: "ko", Text: "확인" },
-              { Language: "yue", Text: "確認" },
-              { Language: "en", Text: "Confirm" },
-              { Language: "it", Text: "Confermare" },
-              { Language: "fr", Text: "Confirmer" },
-              { Language: "es", Text: "Confirmar" },
-              { Language: "zh-CHT", Text: "確認" },
-              { Language: "ar", Text: "تأكيد" },
-              { Language: "zh-CHS", Text: "确认" },
-              { Language: "ja", Text: "確認します。" }]
           },
           {
             OperationType: "Appearance",

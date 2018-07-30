@@ -118,6 +118,8 @@ angular
     $scope.selectedSpeechLanguage;
     $scope.selectedSpeechGender;
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Setting");
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
+    $scope.textButtonConfirm = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton");
     $scope.subMenuProfile = UserProfileService.getMenuProfileSubObject("Setting");
     $scope.textLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "LanguageSetting");
     $scope.textDisplayLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "DisplayLanguage");
@@ -126,11 +128,9 @@ angular
     $scope.textAppearance = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Appearance");
     $scope.textFontSize = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "FontSize");
     $scope.textExample = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Example");
-    $scope.textButtonConfirm = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "ConfirmButton");
     $scope.textResetApp = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "ResetApp");
     $scope.textResetConfirm = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "ResetConfirm");
     $scope.textResetConfirmWarning = $scope.textResetConfirm + "?" + UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "ResetConfirmWarning");
-
     $scope.onSelectedDisplayLanguageChanged = function () {
       console.log("display language:" + $scope.selectedDisplayLanguage);
       $scope.speechLanguageListOption = [];
@@ -206,6 +206,12 @@ angular
   .controller("AddCategoryCtrl", function ($rootScope, $scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "AddCategory");
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
+    $scope.textCategoryName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CategoryName");
+    $scope.textLanguage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "TargetLanguage");
+    $scope.textCameraImage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CameraImage");
+    $scope.textAlbumImage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "AlbumImage");
+    $scope.textButtonConfirm = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton");
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.uuid = guid();
     $scope.inputLanguage = "";
@@ -314,6 +320,9 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "DeleteCategory");
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
+    $scope.textCategoryName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CategoryName");
+    $scope.textButtonConfirm = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton");
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
     $scope.selectedCategoryId = "";
@@ -363,6 +372,13 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "AddItem");
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
+    $scope.textCategoryName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CategoryName");
+    $scope.textItemName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ItemName");
+    $scope.textLanguage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "TargetLanguage");
+    $scope.textCameraImage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CameraImage");
+    $scope.textAlbumImage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "AlbumImage");
+    $scope.textButtonConfirm = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton");
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.uuid = guid();
     $scope.inputLanguageList = GlobalVariable.DisplayLanguageList;
@@ -493,6 +509,10 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "DeleteItem");
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
+    $scope.textCategoryName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CategoryName");
+    $scope.textItemName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ItemName");
+    $scope.textButtonConfirm = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton");
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
     $scope.onSelectedCategoryChanged = function () {
@@ -601,6 +621,8 @@ angular
     $scope.menuProfile = UserProfileService.getMenuProfile();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Download");
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
+    $scope.textButtonGet = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "GetButton");
     $scope.refreshOnlineResource = function () {
       console.log("Start to download online resources");
       $scope.shareCategory = ShareCategoryService.getShareCategory();
