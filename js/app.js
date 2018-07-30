@@ -109,6 +109,15 @@ angular
           }
         }
       })
+      .state("app.sentence", {
+        url: "/sentence",
+        views: {
+          menuContent: {
+            templateUrl: "templates/sentence.html",
+            controller: "SentenceCtrl"
+          }
+        }
+      })
       .state("app.test", {
         url: "/test",
         views: {

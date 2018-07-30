@@ -7235,7 +7235,48 @@ function getSampleUserProfile() {
         ]
       }
     ],
-    Sentences: [],
+    Sentences: [
+      {
+        ID: "00000000-0000-2333-0001-000000000001",
+        Priority: 0,
+        DisplayName: "The world, Time Stop!",
+        DisplayNameLanguage: "en",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Die Welt, die Zeit anhalten!" },
+          { Language: "ru", Text: "Всемирный, остановить время!" },
+          { Language: "pt", Text: "O mundo, parar de vez!" },
+          { Language: "ko", Text: "세계, 시간 정지!" },
+          { Language: "yue", Text: "世界, 時間停止!" },
+          { Language: "en", Text: "The world, Time Stop!" },
+          { Language: "it", Text: "Il mondo, il tempo si ferma!" },
+          { Language: "fr", Text: "Le monde, temps arrêter !" },
+          { Language: "es", Text: "¡El mundo, parar el tiempo!" },
+          { Language: "zh-CHT", Text: "世界, 時間停止!" },
+          { Language: "ar", Text: "العالم، و \"وقف الوقت\"!" },
+          { Language: "zh-CHS", Text: "世界, 时间停止!" },
+          { Language: "ja", Text: "時間停止世界!" }]
+      },
+      {
+        ID: "00000000-0000-2333-0001-000000000002",
+        Priority: 10,
+        DisplayName: "The traveller of wind and time",
+        DisplayNameLanguage: "en",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Der Reisende, der Wind und die Zeit" },
+          { Language: "ru", Text: "Путешественник во времени и Ветер" },
+          { Language: "pt", Text: "O viajante do vento e do tempo" },
+          { Language: "ko", Text: "바람과 시간 여행자" },
+          { Language: "yue", Text: "風與時間的過客" },
+          { Language: "en", Text: "The traveller of wind and time" },
+          { Language: "it", Text: "Il viaggiatore di vento e di tempo" },
+          { Language: "fr", Text: "Le voyageur de vent et du temps" },
+          { Language: "es", Text: "El viajero del viento y del tiempo" },
+          { Language: "zh-CHT", Text: "風與時間的過客" },
+          { Language: "ar", Text: "المسافر من الريح والوقت" },
+          { Language: "zh-CHS", Text: "风与时间的过客" },
+          { Language: "ja", Text: "風と時間の旅行者" }]
+      }
+    ],
     deletionLog: -1,
     log: [],
     lastUploadedLog: 0,
@@ -7479,6 +7520,23 @@ function getSampleMenuProfile() {
           { Language: "ar", Text: "تحميل" },
           { Language: "zh-CHS", Text: "下载" },
           { Language: "ja", Text: "ダウンロード" }]
+      },
+      {
+        OperationType: "Sentence",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Satz" },
+          { Language: "ru", Text: "Предложение" },
+          { Language: "pt", Text: "Sentença" },
+          { Language: "ko", Text: "문장" },
+          { Language: "yue", Text: "句子" },
+          { Language: "en", Text: "Sentence" },
+          { Language: "it", Text: "Frase" },
+          { Language: "fr", Text: "Phrase" },
+          { Language: "es", Text: "Sentencia" },
+          { Language: "zh-CHT", Text: "句子" },
+          { Language: "ar", Text: "الجملة" },
+          { Language: "zh-CHS", Text: "句子" },
+          { Language: "ja", Text: "文" }]
       },
       {
         OperationType: "Setting",

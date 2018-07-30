@@ -13,7 +13,6 @@ angular
       }
       $scope.userProfile = userProfile;
       $scope.menuProfile = UserProfileService.getMenuProfile();
-      $scope.refreshMenuLanguage();
       console.log("Language Selected:" + userProfile.DISPLAY_LANGUAGE + "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
       if (window.localStorage.getItem("loggedIn") != 1) {
         if ($cordovaNetwork.isOffline()) {
@@ -33,9 +32,6 @@ angular
       var src = GlobalVariable.GetLocalAudioDirectory(userProfile) + categoryId + ".mp3";
       MediaPlayer.play($cordovaMedia, src);
     };
-    $scope.refreshMenuLanguage = function () {
-
-    }
   })
   .controller("CategoryCtrl", function ($rootScope, $scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService) {
     var userProfile = UserProfileService.getLatest();
@@ -555,7 +551,7 @@ angular
     };
   })
   .controller("WelcomeCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, UserProfileService, LocalCacheService) { })
-  .controller("GridController", function ($scope, $http, $scope, $mdDialog, $ionicSideMenuDelegate) {
+  .controller("GridController", function ($scope, $http, $mdDialog, $ionicSideMenuDelegate) {
       var i;
       $scope.itemsList = { items1: [] };
       for (i = 0; i <= 100; i += 1) {
@@ -616,9 +612,16 @@ angular
       $scope.draggableObjects[otherIndex] = otherObj;
     };
   })
+  .controller("SentenceCtrl", function ($scope, $http, UserProfileService) { //For Construct Sentence
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.sentences = $scope.userProfile.Sentences;
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Sentence");
+    $scope.onSentenceCheck = function (sentenceID) {
+
+    };
+  })
   .controller("ShareCtrl", function ($rootScope, $scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.menuProfile = UserProfileService.getMenuProfile();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Download");
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
