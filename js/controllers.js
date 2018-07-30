@@ -691,17 +691,36 @@ angular
     $scope.vcCheck = function () {};
     $scope.synchronizeStart = function () {};
   })
-  .controller("TestCtrl", function ($scope,$cordovaFileTransfer, UserProfileService) { //Test Ctrl, for logging
+  .controller("TestCtrl", function ($scope,$cordovaFileTransfer,$cordovaMedia, UserProfileService) { //Test Ctrl, for logging
     //$scope.uid = 0;
     var targetDirectory = GlobalVariable.LocalCacheDirectory() + "images/";
     var imageID = "00000000-0000-0000-0003-000000000197";
     var uploadID = "00000000-0000-0000-0000-000000000012";
     var uploadName = uploadID + ".jpg";
+    var path;
     $scope.ImagePath = targetDirectory + imageID + ".jpg";
-    $scope.testClick = function () {
-      alert($scope.ImagePath);
+    $scope.recordClick = function () {
+      console.log("Capture Start.");
+      var options = {
+        limit: 1,
+        duration: 10
+      };
+      navigator.device.capture.captureAudio(onSuccess, onError, options);
+      function onSuccess(mediaFiles) {
+        var i, len;
+        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+          path = mediaFiles[i].fullPath;
+          console.log(mediaFiles);
+        }
+      }
+      function onError(error) {
+        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+      }
     };
-
+    $scope.playClick = function () {
+      MediaPlayer.play($cordovaMedia, path);
+    }
+    $scope.testClick = function () {}
     $scope.uploadClick = function () {
       var filePath = $scope.ImagePath;
       var options = new FileUploadOptions();
