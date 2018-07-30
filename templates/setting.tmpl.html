@@ -47,14 +47,14 @@
 	      </md-card-title-text>
 	    </md-card-title>
 
-	    <md-card-content>
+      <md-card-content>
+        <h1 class="md-title">{{textPicSize}}</h1>
+        <md-slider ng-model="itemNormalPicSize" min="180" max="240" ng-change="onItemNormalPicSizeChanged()"></md-slider>
         <h1 class="md-title">{{textFontSize}}</h1>
-	    	<md-slider ng-model="itemNormalFontSize" min="12" max="108" ng-change="onItemNormalFontSizeChanged()">
-			</md-slider>
+        <md-slider ng-model="itemNormalFontSize" min="12" max="108" ng-change="onItemNormalFontSizeChanged()"></md-slider>
         <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">{{textExample}}</span>
-
         <md-button ng-click=onConfirmAppearanceButtonClicked()>{{textButtonConfirm}}</md-button>
-	    </md-card-content>
+      </md-card-content>
 	</md-card>
 
 	<md-card>

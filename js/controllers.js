@@ -5,6 +5,7 @@ angular
   .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.$on("$ionicView.enter", function (e) {
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
+      $scope.itemNormalPicSize = GlobalVariable.Appearance.itemNormalPicSize;
       $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
       // on page loaded
       var userProfile = UserProfileService.getLatest();
@@ -37,6 +38,7 @@ angular
     var userProfile = UserProfileService.getLatest();
     $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
+    $scope.itemNormalPicSize = GlobalVariable.Appearance.itemNormalPicSize;
     $scope.userProfile = userProfile;
     $scope.categoryId = $stateParams.categoryId;
     for (var i = 0; i < userProfile.Categories.length; i++) {
@@ -123,6 +125,7 @@ angular
     $scope.textSpeechGender = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SpeakerGender");
     $scope.textAppearance = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Appearance");
     $scope.textFontSize = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "FontSize");
+    $scope.textPicSize = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "PicSize");
     $scope.textExample = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Example");
     $scope.textResetApp = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "ResetApp");
     $scope.textResetConfirm = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "ResetConfirm");
@@ -172,6 +175,9 @@ angular
     };
     $scope.onItemNormalFontSizeChanged = function () {
       GlobalVariable.Appearance.itemNormalFontSize = $scope.itemNormalFontSize;
+    };
+    $scope.onItemNormalPicSizeChanged = function () {
+      GlobalVariable.Appearance.itemNormalPicSize = $scope.itemNormalPicSize;
     };
     $scope.onConfirmAppearanceButtonClicked = function () {
       setTimeout(function () {
@@ -622,6 +628,7 @@ angular
   })
   .controller("ShareCtrl", function ($rootScope, $scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
+    $scope.itemNormalPicSize = GlobalVariable.Appearance.itemNormalPicSize;
     $scope.shareCategory = ShareCategoryService.getShareCategory();
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Download");
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");

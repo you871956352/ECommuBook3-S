@@ -36,15 +36,6 @@ md-dialog {
   max-height: 180px;
 }
 
-.itemNormalContainer {
-  width: 95%;
-  height: 220px;
-  text-align: center;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 .itemNormalText {
   vertical-align : middle;
 }
