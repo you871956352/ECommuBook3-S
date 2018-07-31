@@ -1,0 +1,28 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools" style="text-align: center;">
+        <div style="text-align: center;" ng-if="isShowDisplayName.checked">{{categoryName}}</div>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="selectedCategory">
+        <div ng-repeat="item in selectedCategory.Items" style="float:left;width:33%">
+          <div ng-click="onAddToSentence(item.ID);" style="text-align:center;border:1px black dashed;">
+            <div style="height:{{itemNormalPicSize}}px">
+              <img class='itemImage' src='{{ImagePath}}/{{item.ID}}.jpg' />
+              <div ng-repeat="translation in item.DisplayMultipleLanguage" ng-if="translation.Language == DisplayLanguage">
+                <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">{{translation.Text}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>

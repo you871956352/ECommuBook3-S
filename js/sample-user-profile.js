@@ -7554,7 +7554,92 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "إضافة الجملة" },
               { Language: "zh-CHS", Text: "添加句子" },
               { Language: "ja", Text: "文章を追加します。" }]
-          }         
+          },
+          {
+            OperationType: "BackSpace",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Rücktaste" },
+              { Language: "ru", Text: "Возврат" },
+              { Language: "pt", Text: "Backspace" },
+              { Language: "ko", Text: "백스페이스" },
+              { Language: "yue", Text: "Backspace" },
+              { Language: "en", Text: "Backspace" },
+              { Language: "it", Text: "BACKSPACE" },
+              { Language: "fr", Text: "Retour arrière" },
+              { Language: "es", Text: "Retroceso" },
+              { Language: "zh-CHT", Text: "Backspace" },
+              { Language: "ar", Text: "مفتاح مسافة للخلف" },
+              { Language: "zh-CHS", Text: "Backspace" },
+              { Language: "ja", Text: "バック スペース" }]
+          },
+          {
+            OperationType: "Add",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Hinzufügen" },
+              { Language: "ru", Text: "Добавить" },
+              { Language: "pt", Text: "Adicionar" },
+              { Language: "ko", Text: "추가" },
+              { Language: "yue", Text: "添加" },
+              { Language: "en", Text: "Add" },
+              { Language: "it", Text: "Aggiungere" },
+              { Language: "fr", Text: "Ajouter" },
+              { Language: "es", Text: "Añadir" },
+              { Language: "zh-CHT", Text: "添加" },
+              { Language: "ar", Text: "إضافة" },
+              { Language: "zh-CHS", Text: "添加" },
+              { Language: "ja", Text: "追加" }]
+          },
+          {
+            OperationType: "SelectAdd",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Klicken Sie auf Add" },
+              { Language: "ru", Text: "Выберите Добавить" },
+              { Language: "pt", Text: "Selecione Adicionar" },
+              { Language: "ko", Text: "선택 추가" },
+              { Language: "yue", Text: "選擇添加" },
+              { Language: "en", Text: "Select Add" },
+              { Language: "it", Text: "Selezionare Aggiungi" },
+              { Language: "fr", Text: "Sélectionnez Ajouter" },
+              { Language: "es", Text: "Seleccione Agregar" },
+              { Language: "zh-CHT", Text: "選擇添加" },
+              { Language: "ar", Text: "حدد إضافة" },
+              { Language: "zh-CHS", Text: "选择添加" },
+              { Language: "ja", Text: "選択を追加します。" }]
+          },
+          {
+            OperationType: "InputAdd",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Beitrag hinzufügen" },
+              { Language: "ru", Text: "Добавление входных данных" },
+              { Language: "pt", Text: "Adicionar entrada" },
+              { Language: "ko", Text: "입력 추가" },
+              { Language: "yue", Text: "輸入添加" },
+              { Language: "en", Text: "Input Add" },
+              { Language: "it", Text: "Aggiungere input" },
+              { Language: "fr", Text: "Ajouter entrée" },
+              { Language: "es", Text: "Añadir entrada" },
+              { Language: "zh-CHT", Text: "輸入添加" },
+              { Language: "ar", Text: "إضافة الإدخال" },
+              { Language: "zh-CHS", Text: "输入添加" },
+              { Language: "ja", Text: "入力を追加します。" }]
+          },
+          {
+            OperationType: "UploadSentence",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Laden Sie Satz" },
+              { Language: "ru", Text: "Загрузить предложение" },
+              { Language: "pt", Text: "Upload de sentença" },
+              { Language: "ko", Text: "문장 업로드" },
+              { Language: "yue", Text: "貼句子" },
+              { Language: "en", Text: "Upload Sentence" },
+              { Language: "it", Text: "Caricare la frase" },
+              { Language: "fr", Text: "Télécharger la phrase" },
+              { Language: "es", Text: "Añadir frase" },
+              { Language: "zh-CHT", Text: "上傳句子" },
+              { Language: "ar", Text: "تحميل الجملة" },
+              { Language: "zh-CHS", Text: "上传句子" },
+              { Language: "ja", Text: "文をアップロードします。" }]
+          }
         ]
       },
       {

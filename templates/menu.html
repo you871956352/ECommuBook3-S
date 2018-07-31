@@ -16,7 +16,7 @@
     <ion-content>
       <ion-list>
         <ion-item ng-repeat="category in userProfile.Categories" href="#/app/category/{{category.ID}}" ng-click="onCategoryClicked(category.ID)">
-          <img width="80%; padding-top: 75%;" src='{{ImagePath}}/{{category.ID}}.jpg' />
+          <img style="" src='{{ImagePath}}/{{category.ID}}.jpg' />
           <div ng-repeat="translation in category.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE && isShowDisplayName.checked">
             <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
           </div>

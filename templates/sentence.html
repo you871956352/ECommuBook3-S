@@ -10,7 +10,41 @@
       </md-card>
 
       <md-card>
+        <md-card-title>
+          <span class="md-headline">{{textAddSentence}}</span>
+          <md-button ng-click=sentenceBackSpace()>{{textButtonBackspace}}</md-button>
+        </md-card-title>
+        <md-card-content>
+          <h3></h3><div class="addSentencePreview">{{currentConstructSentence}}</div> <h3></h3>
+          <div>
+            <md-input-container>
+              <label>{{textInputAdd}}</label>
+              <input type="text" ng-model="inputAdd">
+            </md-input-container>
+            <md-button ng-click=sentenceAdd()>{{textAdd}}</md-button>
+          </div>
+          <md-button ng-click=upLoadSentence()>{{textButtonUpload}}</md-button>
+        </md-card-content>
+      </md-card>
 
+      <md-card>
+        <md-card-title>
+          <span>{{textSelectAdd}}</span>
+        </md-card-title>
+        <md-card-content>
+          <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="userProfile.Categories">
+            <div ng-repeat="category in userProfile.Categories" style="float:left;width:33%">
+              <div ng-click="onCategoryClickPopup(category.ID);" style="text-align:center;border:1px black dashed;">
+                <div style="height:{{itemNormalPicSize}}px">
+                  <img class='itemImage' src='{{ImagePath}}/{{category.ID}}.jpg' />
+                  <div ng-repeat="translation in category.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+                    <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">{{translation.Text}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card-content>
       </md-card>
 
 

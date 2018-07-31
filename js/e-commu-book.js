@@ -81,7 +81,7 @@ var GlobalVariable = new function () { //User to store some global variable
   };
   this.Appearance = new function () {
     this.itemNormalFontSize = 24;
-    this.itemNormalPicSize = 220;
+    this.itemNormalPicSize = 230;
   };
   this.DisplayLanguageList = [
     { name: "粵語", value: "yue" },
@@ -156,6 +156,7 @@ var GlobalVariable = new function () { //User to store some global variable
       return "Are you sure to share this category? Attention: if you share this category, all information will be public on internet and can be viewed by others.";
     };
   };
+  this.currentConstructSentence = "";
 };
 
 var GlobalCacheVariable = new function () { //

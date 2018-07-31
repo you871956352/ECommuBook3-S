@@ -47,3 +47,16 @@ md-dialog {
   width: auto;
   height: auto;
 }
+
+.addSentencePreview {
+  width: 100%;
+  font-style: italic;
+  font-size: 25px;
+  border: 1px dashed #000;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  background: pink;
+  line-height: 28px;
+}
