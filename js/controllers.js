@@ -628,9 +628,27 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentInputLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.sentences = $scope.userProfile.Sentences;
+    $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
+    $scope.inputAdd = "";
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Sentence", $scope.currentInputLanguage);
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("Sentence");
+    $scope.textAddSentence = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "AddSentence", $scope.currentInputLanguage);
+    $scope.textButtonBackspace = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "BackSpace", $scope.currentInputLanguage);
     $scope.onSentenceCheck = function (sentenceID) {
       alert(sentenceID);
+    };
+    $scope.sentenceAdd = function () {
+      $scope.currentConstructSentence = $scope.currentConstructSentence + $scope.inputAdd;
+      GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
+    };
+    $scope.sentenceBackSpace = function () {
+      if ($scope.currentConstructSentence != "") {
+        $scope.currentConstructSentence = $scope.currentConstructSentence.substring(0, $scope.currentConstructSentence.length - 1);        
+        GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
+      }
+    };
+    $scope.onCategoryClickPopup = function (categoryID) {
+      alert(categoryID);
     };
   })
   .controller("ShareCtrl", function ($rootScope, $scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
