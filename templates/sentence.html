@@ -17,16 +17,19 @@
           <h3></h3><div class="addSentencePreview">{{currentConstructSentence}}</div> <h3></h3>
           <div>
             <md-input-container>
-              <label>Add Input</label>
+              <label>{{textInputAdd}}</label>
               <input type="text" ng-model="inputAdd">
             </md-input-container>
-            <md-button ng-click=sentenceAdd()>Add</md-button>
+            <md-button ng-click=sentenceAdd()>{{textAdd}}</md-button>
           </div>
           <md-button ng-click=sentenceBackSpace()>{{textButtonBackspace}}</md-button>
         </md-card-content>
       </md-card>
 
       <md-card>
+        <md-card-title>
+          <span>{{textSelectAdd}}</span>
+        </md-card-title>
         <md-card-content>
           <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="userProfile.Categories">
             <div ng-repeat="category in userProfile.Categories" style="float:left;width:32%">

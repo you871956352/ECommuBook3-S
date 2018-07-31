@@ -633,6 +633,9 @@ angular
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Sentence", $scope.currentInputLanguage);
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("Sentence");
     $scope.textAddSentence = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "AddSentence", $scope.currentInputLanguage);
+    $scope.textAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Add", $scope.currentInputLanguage);
+    $scope.textInputAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "InputAdd", $scope.currentInputLanguage);
+    $scope.textSelectAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SelectAdd", $scope.currentInputLanguage);
     $scope.textButtonBackspace = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "BackSpace", $scope.currentInputLanguage);
     $scope.onSentenceCheck = function (sentenceID) {
       alert(sentenceID);
