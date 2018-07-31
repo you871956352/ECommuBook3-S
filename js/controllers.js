@@ -716,16 +716,62 @@ angular
     $scope.vcCheck = function () {};
     $scope.synchronizeStart = function () {};
   })
-  .controller("TestCtrl", function ($scope,$cordovaFileTransfer,$cordovaMedia, UserProfileService) { //Test Ctrl, for logging
-    //$scope.uid = 0;
+  .controller("TestCtrl", function ($scope,$cordovaFileTransfer,$cordovaMedia,$mdDialog, UserProfileService) { //Test Ctrl, for logging
     var targetDirectory = GlobalVariable.LocalCacheDirectory() + "images/";
     var imageID = "00000000-0000-0000-0003-000000000197";
     var uploadID = "00000000-0000-0000-0000-000000000012";
     var uploadName = uploadID + ".jpg";
     var path;
     $scope.ImagePath = targetDirectory + imageID + ".jpg";
-    $scope.recordClick = function () {
+
+    $scope.recordClick = function (ev) {
       console.log("Capture Start.");
+      var targetScope = $scope.$new();
+      $mdDialog.show({
+        controller: DialogController,
+        templateUrl: "templates/popup-vc.tmpl.html",
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        scope: targetScope,
+        fullscreen: false // Only for -xs, -sm breakpoints.
+      })
+        .then(
+          function (answer) {
+            $scope.status = 'You said the information was "' + answer + '".';
+          },
+          function () {
+            $scope.status = "You cancelled the dialog.";
+          }
+        );
+      function DialogController($scope, $mdDialog) {
+          $scope.hide = function () {
+            $mdDialog.hide();
+          };
+          $scope.cancel = function () {
+            $mdDialog.cancel();
+          };
+          $scope.answer = function (answer) {
+            $mdDialog.hide(answer);
+          };
+          var options = {
+            limit: 1,
+            duration: 10
+          };
+          navigator.device.capture.captureAudio(onSuccess, onError, options);
+          function onSuccess(mediaFiles) {
+            var i, len;
+            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+              path = mediaFiles[i].fullPath;
+              console.log(mediaFiles);
+            }
+          }
+          function onError(error) {
+            navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+          }
+        }
+
+      /*
       var options = {
         limit: 1,
         duration: 10
@@ -740,7 +786,7 @@ angular
       }
       function onError(error) {
         navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
-      }
+      }*/
     };
     $scope.playClick = function () {
       MediaPlayer.play($cordovaMedia, path);
