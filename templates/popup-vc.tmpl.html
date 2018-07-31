@@ -13,6 +13,33 @@
     <md-dialog-content>
       <div class="md-dialog-content">
         <h2></h2>
+        <div style="line-height: {{itemNormalFontSize}}px;text-align: center;">
+            <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;">
+              Hello World!!
+            </span>
+        </div>
+        <h2></h2><h2></h2><h2></h2><h2></h2>
+        <div layout="row" layout-align="center">
+          <md-button class="md-raised" ng-click=start()>Start</md-button>
+        </div>
+        <h2></h2><h2></h2>
+        <div layout="row" layout-align="center">
+          <md-button class="md-raised" ng-click=stop()>Stop</md-button>
+        </div>
+        <h2></h2><h2></h2>
+        <div layout="row" layout-align="center">
+          <md-button class="md-raised" ng-click=check()>Check</md-button>
+        </div>
+        <h2></h2><h2></h2>
+        <div layout="row" layout-align="center">
+          <md-button class="md-raised" ng-click=upload()>Upload</md-button>
+        </div>
+        <div layout-align="center">
+          <span>{{infoTimer}}</span>
+        </div>
+        <div layout-align="center">
+          <span>{{recordinglist}}</span>
+        </div>
       </div>
     </md-dialog-content>
   </form>

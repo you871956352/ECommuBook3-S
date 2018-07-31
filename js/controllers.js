@@ -739,9 +739,7 @@ angular
     var uploadName = uploadID + ".jpg";
     var path;
     $scope.ImagePath = targetDirectory + imageID + ".jpg";
-
     $scope.recordClick = function (ev) {
-      console.log("Capture Start.");
       var targetScope = $scope.$new();
       $mdDialog.show({
         controller: DialogController,
@@ -751,8 +749,7 @@ angular
         clickOutsideToClose: true,
         scope: targetScope,
         fullscreen: false // Only for -xs, -sm breakpoints.
-      })
-        .then(
+      }).then(
           function (answer) {
             $scope.status = 'You said the information was "' + answer + '".';
           },
@@ -770,44 +767,110 @@ angular
           $scope.answer = function (answer) {
             $mdDialog.hide(answer);
           };
-          var options = {
-            limit: 1,
-            duration: 10
+          if (window.cordova && window.cordova.file && window.audioinput) {
+              console.log("Use 'Start Capture' to begin...");
+              window.addEventListener('audioinput', onAudioInputCapture, false);
+              window.addEventListener('audioinputerror', onAudioInputError, false);
+          }
+          else {
+              console.log("Missing: cordova-plugin-file or cordova-plugin-audioinput!");
+          }
+          var captureCfg = {};
+          var audioDataBuffer = [];
+          var timerInterVal, timerGenerateSimulatedData;
+          var objectURL = null;
+          var totalReceivedData = 0;
+          $scope.start = function () {
+            console.log("Capture Start.");
+            startCapture();
           };
-          navigator.device.capture.captureAudio(onSuccess, onError, options);
-          function onSuccess(mediaFiles) {
-            var i, len;
-            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-              path = mediaFiles[i].fullPath;
-              console.log(mediaFiles);
+          $scope.stop = function () {
+            console.log("Capture Stop.");
+            stopCapture();
+          };
+          var startCapture = function () {
+            try {
+                if (window.audioinput && !audioinput.isCapturing()) {
+                    captureCfg = {
+                        sampleRate: 16000,
+                        bufferSize: 16384,
+                        channels: 1,
+                        format: audioinput.FORMAT.PCM_16BIT,
+                        audioSourceType: audioinput.AUDIOSOURCE_TYPE.DEFAULT,
+                    };
+                    audioinput.start(captureCfg);
+                    console.log("Microphone input started!");
+                    $scope.recordinglist = "";
+                    if (objectURL) {
+                        URL.revokeObjectURL(objectURL);
+                    }
+                    timerInterVal = setInterval(function () {
+                        if (audioinput.isCapturing()) {
+                            $scope.infoTimer = "" +
+                            new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1") +
+                            "|Received:" + totalReceivedData;
+                        }
+                    }, 1000);
+                }
+            }
+            catch (e) {
+                alert("startCapture exception: " + e);
+            }
+          };
+          var stopCapture = function () {
+            try {
+                if (window.audioinput && audioinput.isCapturing()) {
+                    if (timerInterVal) { clearInterval(timerInterVal); }
+                    if (window.audioinput) { audioinput.stop(); } else { clearInterval(timerGenerateSimulatedData); }
+                    totalReceivedData = 0;
+                    $scope.infoTimer = "";
+                    console.log("Encoding WAV...");
+                    var encoder = new WavAudioEncoder(captureCfg.sampleRate, captureCfg.channels);
+                    encoder.encode([audioDataBuffer]);
+                    console.log("Encoding WAV finished");
+                    var blob = encoder.finish("audio/wav");
+                    console.log("BLOB created");
+                    window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function (dir) {
+                        var fileName = new Date().YYYYMMDDHHMMSS() + ".wav";
+                        dir.getFile(fileName, {create: true}, function (file) {
+                            file.createWriter(function (fileWriter) {
+                                fileWriter.write(blob);
+                                // Add an URL for the file
+                                var a = document.createElement('a');
+                                var linkText = document.createTextNode(file.toURL());
+                                console.log("Audio path: " + linkText);
+                                a.appendChild(linkText);
+                                a.title = file.toURL();
+                                a.href = file.toURL();
+                                a.target = '_blank';
+                                $scope.recordinglist.appendChild(a);
+                                console.log("File created!");
+                            }, function () {
+                                alert("FileWriter error!");
+                            });
+                        });
+                    });
+                }
+            }
+            catch (e) {
+                alert("stopCapture exception: " + e);
+            }
+          };
+          function onAudioInputCapture( evt ) {
+            try {
+              if (evt && evt.data) {
+                totalReceivedData += evt.data.length;
+                console.log( "Audio data received: " + totalReceivedData );
+                audioDataBuffer = audioDataBuffer.concat(evt.data);
+              }
+            }
+            catch (ex) {
+              alert("onAudioInputCapture ex: " + ex);
             }
           }
-          function onError(error) {
-            navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
-          }
+          function onAudioInputError(error) { alert("onAudioInputError event recieved: " + JSON.stringify(error)); }
         }
-
-      /*
-      var options = {
-        limit: 1,
-        duration: 10
-      };
-      navigator.device.capture.captureAudio(onSuccess, onError, options);
-      function onSuccess(mediaFiles) {
-        var i, len;
-        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-          path = mediaFiles[i].fullPath;
-          console.log(mediaFiles);
-        }
-      }
-      function onError(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
-      }*/
     };
-    $scope.playClick = function () {
-      MediaPlayer.play($cordovaMedia, path);
-    }
-    $scope.testClick = function () {}
     $scope.uploadClick = function () {
       var filePath = $scope.ImagePath;
       var options = new FileUploadOptions();
@@ -826,5 +889,4 @@ angular
         },
         function (progress) { });
     };
-
   });
