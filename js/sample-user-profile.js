@@ -7622,6 +7622,23 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "إضافة الإدخال" },
               { Language: "zh-CHS", Text: "输入添加" },
               { Language: "ja", Text: "入力を追加します。" }]
+          },
+          {
+            OperationType: "UploadSentence",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Laden Sie Satz" },
+              { Language: "ru", Text: "Загрузить предложение" },
+              { Language: "pt", Text: "Upload de sentença" },
+              { Language: "ko", Text: "문장 업로드" },
+              { Language: "yue", Text: "貼句子" },
+              { Language: "en", Text: "Upload Sentence" },
+              { Language: "it", Text: "Caricare la frase" },
+              { Language: "fr", Text: "Télécharger la phrase" },
+              { Language: "es", Text: "Añadir frase" },
+              { Language: "zh-CHT", Text: "上傳句子" },
+              { Language: "ar", Text: "تحميل الجملة" },
+              { Language: "zh-CHS", Text: "上传句子" },
+              { Language: "ja", Text: "文をアップロードします。" }]
           }
         ]
       },

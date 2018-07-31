@@ -7,14 +7,12 @@ angular
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
       $scope.itemNormalPicSize = GlobalVariable.Appearance.itemNormalPicSize;
       $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
-      // on page loaded
-      var userProfile = UserProfileService.getLatest();
+      $scope.userProfile = UserProfileService.getLatest();
+      $scope.menuProfile = UserProfileService.getMenuProfile();
       if (typeof $rootScope.isShowDisplayName == 'undefined') {
         $rootScope.isShowDisplayName = { checked: true };
-      }
-      $scope.userProfile = userProfile;
-      $scope.menuProfile = UserProfileService.getMenuProfile();
-      console.log("Language Selected:" + userProfile.DISPLAY_LANGUAGE + "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
+      }     
+      console.log("Language Selected:" + $scope.userProfile.DISPLAY_LANGUAGE + "/" + $scope.userProfile.SPEECH_LANGUAGE_CODE + "/" + $scope.userProfile.SPEECH_GENDER);
       if (window.localStorage.getItem("loggedIn") != 1) {
         if ($cordovaNetwork.isOffline()) {
           alert("Please connect to the Internet for app initilization.");
@@ -24,27 +22,23 @@ angular
           console.log("First run: initialization");
           GlobalVariable.DownloadProgress.Reset();
           LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-          LocalCacheService.prepareCache(userProfile);
+          LocalCacheService.prepareCache($scope.userProfile);
         }
       }
     });
     $scope.onCategoryClicked = function (categoryId) {
-      var userProfile = UserProfileService.getLatest();
-      var src = GlobalVariable.GetLocalAudioDirectory(userProfile) + categoryId + ".mp3";
+      var src = GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + categoryId + ".mp3";
       MediaPlayer.play($cordovaMedia, src);
     };
   })
   .controller("CategoryCtrl", function ($rootScope, $scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService) {
     var userProfile = UserProfileService.getLatest();
-    $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
-    $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
-    $scope.itemNormalPicSize = GlobalVariable.Appearance.itemNormalPicSize;
     $scope.userProfile = userProfile;
     $scope.categoryId = $stateParams.categoryId;
     for (var i = 0; i < userProfile.Categories.length; i++) {
       if (userProfile.Categories[i].ID == $stateParams.categoryId) {
         $scope.category = userProfile.Categories[i];
-        for (i = 0; i < $scope.category.DisplayMultipleLanguage.length; i++) {
+        for (var i = 0; i < $scope.category.DisplayMultipleLanguage.length; i++) {
           translation = $scope.category.DisplayMultipleLanguage[i];
           if (translation.Language == userProfile.DISPLAY_LANGUAGE) {
             $scope.categoryDisplayName = translation.Text;
@@ -58,19 +52,18 @@ angular
       $scope.showEnlargeItemPopup(ev, itemId);
     };
     $scope.showEnlargeItemPopup = function (ev, itemId) {
-      userProfile = UserProfileService.getLatest();
-      targetItem = getItemObjectByItemId(userProfile, itemId);
+      targetItem = getItemObjectByItemId($scope.userProfile, itemId);
       var targetScope = $scope.$new();
       targetScope.selectedItemId = targetItem.ID;
       targetScope.selectedItemName = targetItem.DisplayName;
-      for (i = 0; i < targetItem.DisplayMultipleLanguage.length; i++) {
+      for (var i = 0; i < targetItem.DisplayMultipleLanguage.length; i++) {
         translation = targetItem.DisplayMultipleLanguage[i];
-        if (translation.Language == userProfile.DISPLAY_LANGUAGE) {
+        if (translation.Language == $scope.userProfile.DISPLAY_LANGUAGE) {
           targetScope.selectedItemName = translation.Text;
         }
       }
       targetScope.ImagePath = $scope.ImagePath;
-      targetScope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory(userProfile)
+      targetScope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile)
       var src = targetScope.AudioDirectory + targetScope.selectedItemId + ".mp3";
       MediaPlayer.play($cordovaMedia, src);
       $mdDialog.show({
@@ -624,9 +617,10 @@ angular
       $scope.draggableObjects[otherIndex] = otherObj;
     };
   })
-  .controller("SentenceCtrl", function ($scope, $http, UserProfileService) { //For Construct Sentence
+  .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $ionicSideMenuDelegate) { //For Construct Sentence
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentInputLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
+    $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
     $scope.sentences = $scope.userProfile.Sentences;
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
     $scope.inputAdd = "";
@@ -637,6 +631,7 @@ angular
     $scope.textInputAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "InputAdd", $scope.currentInputLanguage);
     $scope.textSelectAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SelectAdd", $scope.currentInputLanguage);
     $scope.textButtonBackspace = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "BackSpace", $scope.currentInputLanguage);
+    $scope.textButtonUpload = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "UploadSentence", $scope.currentInputLanguage);
     $scope.onSentenceCheck = function (sentenceID) {
       alert(sentenceID);
     };
@@ -650,9 +645,68 @@ angular
         GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
       }
     };
-    $scope.onCategoryClickPopup = function (categoryID) {
-      alert(categoryID);
+    $scope.onCategoryClickPopup = function (categoryID, ev) {
+      var targetScope = $scope.$new();
+      targetScope.selectedCategory = "";
+      targetScope.ImagePath = $scope.ImagePath;
+      targetScope.DisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
+      for (i = 0; i < $scope.userProfile.Categories.length; i++) {
+        if ($scope.userProfile.Categories[i].ID == categoryID) {
+          targetScope.selectedCategory = $scope.userProfile.Categories[i];
+        }
+      }
+      //alert(categoryID);
+      $mdDialog.show({
+        controller: SentenceDialogController,
+        templateUrl: "templates/popup-sentence-item.tmpl.html",
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        scope: targetScope,
+        fullscreen: false // Only for -xs, -sm breakpoints.
+      }).then(function (targetText) {       
+
+        }, function (targetText) {
+          if (targetText != undefined) {
+            $scope.currentConstructSentence = $scope.currentConstructSentence + targetText;
+            GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
+          }       
+        });
     };
+    $scope.upLoadSentence = function(){
+      alert($scope.currentConstructSentence);
+    };
+    function SentenceDialogController($scope, $mdDialog, $cordovaMedia) {
+      $scope.hide = function () {
+        $mdDialog.hide();
+      };
+      $scope.cancel = function () {
+        $mdDialog.cancel("");
+      };
+      $scope.answer = function (answer) {
+        $mdDialog.hide(answer);
+      };
+      for (var i = 0; i < $scope.selectedCategory.DisplayMultipleLanguage.length; i++) {
+        translation = $scope.selectedCategory.DisplayMultipleLanguage[i];
+        if (translation.Language == $scope.DisplayLanguage) {
+          $scope.categoryName = translation.Text;
+        }
+      }
+      $scope.onAddToSentence = function (itemID) {
+        var targetText = "Default";
+        for (var i = 0; i < $scope.selectedCategory.Items.length; i++) {
+          if ($scope.selectedCategory.Items[i].ID == itemID) {
+            for (var j = 0; j < $scope.selectedCategory.Items[i].DisplayMultipleLanguage.length; j++) {
+              translation = $scope.selectedCategory.Items[i].DisplayMultipleLanguage[j];
+              if (translation.Language == $scope.DisplayLanguage) {
+                targetText = translation.Text;
+              }
+            }
+          }
+        }
+        $mdDialog.cancel(targetText);
+      };
+    }
   })
   .controller("ShareCtrl", function ($rootScope, $scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
