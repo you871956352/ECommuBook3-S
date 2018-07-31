@@ -81,7 +81,7 @@ var GlobalVariable = new function () { //User to store some global variable
   };
   this.Appearance = new function () {
     this.itemNormalFontSize = 24;
-    this.itemNormalPicSize = 220;
+    this.itemNormalPicSize = 230;
   };
   this.DisplayLanguageList = [
     { name: "粵語", value: "yue" },
