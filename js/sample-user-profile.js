@@ -7536,7 +7536,26 @@ function getSampleMenuProfile() {
           { Language: "zh-CHT", Text: "句子" },
           { Language: "ar", Text: "الجملة" },
           { Language: "zh-CHS", Text: "句子" },
-          { Language: "ja", Text: "文" }]
+          { Language: "ja", Text: "文" }],
+        SubPage: [
+          {
+            OperationType: "AddSentence",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Satz hinzugefügt" },
+              { Language: "ru", Text: "Добавить предложение" },
+              { Language: "pt", Text: "Adicionar frase" },
+              { Language: "ko", Text: "문장 추가" },
+              { Language: "yue", Text: "添加句子" },
+              { Language: "en", Text: "Add Sentence" },
+              { Language: "it", Text: "Aggiungere la frase" },
+              { Language: "fr", Text: "Ajouter la phrase" },
+              { Language: "es", Text: "Añadir frase" },
+              { Language: "zh-CHT", Text: "添加句子" },
+              { Language: "ar", Text: "إضافة الجملة" },
+              { Language: "zh-CHS", Text: "添加句子" },
+              { Language: "ja", Text: "文章を追加します。" }]
+          }         
+        ]
       },
       {
         OperationType: "Setting",
