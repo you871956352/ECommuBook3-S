@@ -7536,7 +7536,26 @@ function getSampleMenuProfile() {
           { Language: "zh-CHT", Text: "句子" },
           { Language: "ar", Text: "الجملة" },
           { Language: "zh-CHS", Text: "句子" },
-          { Language: "ja", Text: "文" }]
+          { Language: "ja", Text: "文" }],
+        SubPage: [
+          {
+            OperationType: "AddSentence",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Satz hinzugefügt" },
+              { Language: "ru", Text: "Добавить предложение" },
+              { Language: "pt", Text: "Adicionar frase" },
+              { Language: "ko", Text: "문장 추가" },
+              { Language: "yue", Text: "添加句子" },
+              { Language: "en", Text: "Add Sentence" },
+              { Language: "it", Text: "Aggiungere la frase" },
+              { Language: "fr", Text: "Ajouter la phrase" },
+              { Language: "es", Text: "Añadir frase" },
+              { Language: "zh-CHT", Text: "添加句子" },
+              { Language: "ar", Text: "إضافة الجملة" },
+              { Language: "zh-CHS", Text: "添加句子" },
+              { Language: "ja", Text: "文章を追加します。" }]
+          }         
+        ]
       },
       {
         OperationType: "Setting",
@@ -7656,6 +7675,23 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "حجم الخط" },
               { Language: "zh-CHS", Text: "字体大小" },
               { Language: "ja", Text: "フォント サイズ" }]
+          },
+          {
+            OperationType: "PicSize",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Bildgröße" },
+              { Language: "ru", Text: "Размер изображения" },
+              { Language: "pt", Text: "Tamanho da imagem" },
+              { Language: "ko", Text: "사진 크기" },
+              { Language: "yue", Text: "圖大小" },
+              { Language: "en", Text: "Picture Size" },
+              { Language: "it", Text: "Dimensioni dell'immagine" },
+              { Language: "fr", Text: "Taille de l’image" },
+              { Language: "es", Text: "Tamaño de la imagen" },
+              { Language: "zh-CHT", Text: "圖片大小" },
+              { Language: "ar", Text: "حجم الصورة" },
+              { Language: "zh-CHS", Text: "图片大小" },
+              { Language: "ja", Text: "画像のサイズ" }]
           },
           {
             OperationType: "Example",

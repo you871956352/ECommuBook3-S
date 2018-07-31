@@ -1,12 +1,3 @@
-.itemNormalContainer {
-  line-height: $itemNormalFontSize;
-  width: 95%;
-  text-align: center; 
-  white-space:nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 .itemNormalText {
   font-size : $itemNormalFontSize;
   vertical-align : middle;

@@ -5,7 +5,7 @@
         <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="category.Items">
           <div ng-repeat="item in category.Items" style="float:left;width:32%">
             <div ng-click="onItemClicked($event, item.ID);" style="text-align:center;border:2px blue dashed;">            
-              <div class='itemNormalContainer' style="line-height: {{itemNormalFontSize}}px;">
+              <div style="height:{{itemNormalPicSize}}px">
                 <img class='itemImage' src='{{ImagePath}}/{{item.ID}}.jpg' />
                 <div ng-repeat="translation in item.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                   <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">{{translation.Text}}</span>

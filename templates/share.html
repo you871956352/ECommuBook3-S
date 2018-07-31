@@ -18,10 +18,10 @@
             <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="shareCategory.categories">
               <div ng-repeat="category in shareCategory.categories" style="float:left;width:32%">
                 <div ng-click="onItemClickedDownload($event, category.ID);" style="text-align:center;border:2px blue dashed;">
-                  <div class='itemNormalContainer' style="line-height: {{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">
+                  <div style="height:{{itemNormalPicSize}}px" >
                     <img class='itemImage' src='{{ImagePath}}/{{category.ID}}.jpg' />
                     <div ng-repeat="translation in category.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-                      <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;">{{translation.Text}}</span>
+                      <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">{{translation.Text}}</span>
                     </div>
                   </div>
                 </div>
