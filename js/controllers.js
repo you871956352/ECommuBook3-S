@@ -33,7 +33,15 @@ angular
       MediaPlayer.play($cordovaMedia, src);
     };
   })
-  .controller("CategoryCtrl", function ($rootScope, $scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService) {
+  .controller("CategoryCtrl", function ($rootScope, $scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService, $http) {
+    $scope.subMenuPage = UserProfileService.getMenuProfileSubObject("CategoryGrid");
+    $scope.textButtonShare = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareButton", $scope.currentDisplayLanguage);
+    $scope.textShareWarning = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareWarning1", $scope.currentDisplayLanguage) + "? " + UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareWarning2", $scope.currentDisplayLanguage);
+    $scope.textSuccessAlert = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SuccessAlert", $scope.currentDisplayLanguage);
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
+    $scope.textButtonOK = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton", $scope.currentDisplayLanguage);
+    $scope.textButtonCancel = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CancelButton", $scope.currentDisplayLanguage);
+    $scope.textNotification = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Notification", $scope.currentDisplayLanguage);
     $scope.categoryId = $stateParams.categoryId;
     for (var i = 0; i < $scope.userProfile.Categories.length; i++) {
       if ($scope.userProfile.Categories[i].ID == $stateParams.categoryId) {
@@ -71,6 +79,27 @@ angular
         scope: targetScope,
         fullscreen: false // Only for -xs, -sm breakpoints.
       });
+    };
+    $scope.shareCategory = function (event, categoryID) {
+      var confirmDialog = $mdDialog.confirm()
+        .title($scope.textNotification)
+        .textContent($scope.textShareWarning)
+        .targetEvent(event)
+        .ok($scope.textButtonOK)
+        .cancel($scope.textButtonCancel);
+
+      $mdDialog.show(confirmDialog).then(function () {
+        console.log("Shared Category ID: " + ServerPathVariable.GetUploadSharePath(categoryID));
+        $http.get(ServerPathVariable.GetUploadSharePath(categoryID)).then(function (data) {
+          console.log("Success");
+          alert($scope.textSuccessAlert);
+        });
+      }, function () {
+        console.log("User decide to quit share");
+      });
+    };
+    $scope.reorderAddTop = function (event, categoryID) {
+      alert(categoryID);
     };
     function DialogController($scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer) {
       $scope.cancel = function () {
@@ -559,10 +588,6 @@ angular
             alert("Upload Success!");
           });
         },function () {
-          console.log("User decide to quit share");
-        });
-      };
-   })
   .controller("MainCtrl", function($scope) { //Test Ctrl, to test reorder function
     $scope.draggableObjects = [
       { name: "one" },

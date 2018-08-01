@@ -1,6 +1,6 @@
 <ion-view cache-view="false" view-title="{{categoryDisplayName}}">
   <ion-content>
-    <div id="grid-container" class="container-fluid" ng-controller="GridController" ng-cloak>
+    <div id="grid-container" class="container-fluid" ng-controller="CategoryCtrl" ng-cloak>
       <div class="row">
         <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="category.Items">
           <div ng-repeat="item in category.Items" style="float:left;width:33%">
@@ -17,8 +17,9 @@
       </div>
       <md-card>
         <md-card-content>
-          <div layout="row" >
-            <md-button ng-click="shareCategory($event, category.ID)">Share</md-button>
+          <div layout="row">
+            <md-button ng-click="shareCategory($event, category.ID)">{{textButtonShare}}</md-button>
+            <md-button ng-click="reorderAddTop($event, category.ID)">Set to top</md-button>
           </div>
         </md-card-content>
       </md-card>
