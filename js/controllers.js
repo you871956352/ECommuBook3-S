@@ -544,63 +544,6 @@ angular
     };
   })
   .controller("WelcomeCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, UserProfileService, LocalCacheService) { })
-  .controller("GridController", function ($scope, $http, $mdDialog, $ionicSideMenuDelegate) {
-      var i;
-      $scope.itemsList = { items1: [] };
-      for (i = 0; i <= 100; i += 1) {
-        $scope.itemsList.items1.push({ Id: i, Label: "Item A_" + i });
-      }
-      $scope.sortableOptions = {
-        containment: "#grid-container",
-        accept: function (sourceItemHandleScope, destSortableScope) {
-          return false;
-        }, //override to determine sort is allowed or not. default is true.
-        itemMoved: function (event) {
-        },
-        orderChanged: function (event) {
-        }
-      };
-      $scope.dragControlListeners = {  // drag boundary
-        containment: "#grid-container",
-        accept: function (sourceItemHandleScope, destSortableScope) {
-          return false;
-        }, //override to determine drag is allowed or not. default is true.
-        itemMoved: function (event) {
-          console.log("itemMoved:" + event);
-        },
-        orderChanged: function (event) {
-          console.log("orderChanged:" + event);
-        }
-      };
-      $scope.shareCategory = function (event,categoryID) {
-        var confirmDialog = $mdDialog.confirm()
-          .title('Confirm Upload?')
-          .textContent(GlobalVariable.AlertMessageList.UploadAlert())
-          .ariaLabel('23333')
-          .targetEvent(event)
-          .ok('OK')
-          .cancel('Cancel');
-
-        $mdDialog.show(confirmDialog).then(function () {
-          console.log("Shared Category ID: " + ServerPathVariable.GetUploadSharePath(categoryID));
-          $http.get(ServerPathVariable.GetUploadSharePath(categoryID)).then(function (data) {
-            console.log("Success");
-            alert("Upload Success!");
-          });
-        },function () {
-  .controller("MainCtrl", function($scope) { //Test Ctrl, to test reorder function
-    $scope.draggableObjects = [
-      { name: "one" },
-      { name: "two" },
-      { name: "three" }
-    ];
-    $scope.onDropComplete = function(index, obj, evt) {
-      var otherObj = $scope.draggableObjects[index];
-      var otherIndex = $scope.draggableObjects.indexOf(obj);
-      $scope.draggableObjects[index] = obj;
-      $scope.draggableObjects[otherIndex] = otherObj;
-    };
-  })
   .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $ionicSideMenuDelegate) { //For Construct Sentence
     $scope.sentences = $scope.userProfile.Sentences;
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
