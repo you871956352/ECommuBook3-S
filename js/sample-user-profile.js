@@ -7968,21 +7968,21 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "コレクションの進行状況"}]
           },
           {
-            OperationType: "Collection",
+            OperationType: "Recording",
             DisplayMultipleLanguage:[
-              { Language: "de", Text: "Kollektion"},
-              { Language: "ru", Text: "Коллекция"},
-              { Language: "pt", Text: "Coleção"},
-              { Language: "ko", Text: "컬렉션"},
-              { Language: "yue", Text: "收集"},
-              { Language: "en", Text: "Collection"},
-              { Language: "it", Text: "Collezione"},
-              { Language: "fr", Text: "Collection"},
-              { Language: "es", Text: "Colección"},
-              { Language: "zh-CHT", Text: "收集"},
-              { Language: "ar", Text: "جمع"},
-              { Language: "zh-CHS", Text: "收集"},
-              { Language: "ja", Text: "コレクション"}]
+              { Language: "de", Text: "Aufnahme"},
+              { Language: "ru", Text: "Запись"},
+              { Language: "pt", Text: "Gravação"},
+              { Language: "ko", Text: "기록"},
+              { Language: "yue", Text: "記錄"},
+              { Language: "en", Text: "Recording"},
+              { Language: "it", Text: "Registrazione"},
+              { Language: "fr", Text: "D’enregistrement"},
+              { Language: "es", Text: "Grabación"},
+              { Language: "zh-CHT", Text: "記錄"},
+              { Language: "ar", Text: "تسجيل"},
+              { Language: "zh-CHS", Text: "记录"},
+              { Language: "ja", Text: "記録"}]
           },
           {
             OperationType: "SynchronizeProgress",
@@ -8002,6 +8002,40 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "同期の進行状況"}]
           },
           {
+            OperationType: "AudioRecording",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Audio-Aufnahme"},
+              { Language: "ru", Text: "Запись звука"},
+              { Language: "pt", Text: "Gravação de áudio"},
+              { Language: "ko", Text: "오디오 녹음"},
+              { Language: "yue", Text: "錄音"},
+              { Language: "en", Text: "Audio Recording"},
+              { Language: "it", Text: "Registrazione audio"},
+              { Language: "fr", Text: "Enregistrement audio"},
+              { Language: "es", Text: "Grabación de audio"},
+              { Language: "zh-CHT", Text: "錄音"},
+              { Language: "ar", Text: "تسجيل الصوت"},
+              { Language: "zh-CHS", Text: "录音"},
+              { Language: "ja", Text: "オーディオの録音"}]
+          },
+          {
+            OperationType: "Confirm",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Bestätigen"},
+              { Language: "ru", Text: "Подтвердите"},
+              { Language: "pt", Text: "Confirmar"},
+              { Language: "ko", Text: "확인"},
+              { Language: "yue", Text: "確認"},
+              { Language: "en", Text: "Confirm"},
+              { Language: "it", Text: "Confermare"},
+              { Language: "fr", Text: "Confirmer"},
+              { Language: "es", Text: "Confirmar"},
+              { Language: "zh-CHT", Text: "確認"},
+              { Language: "ar", Text: "تأكيد"},
+              { Language: "zh-CHS", Text: "确认"},
+              { Language: "ja", Text: "確認します。"}]
+          },
+          {
             OperationType: "Start",
             DisplayMultipleLanguage:[
               { Language: "de", Text: "Start"},
@@ -8017,6 +8051,23 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "بدء تشغيل"},
               { Language: "zh-CHS", Text: "开始"},
               { Language: "ja", Text: "スタート"}]
+          },
+          {
+            OperationType: "Stop",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Stop"},
+              { Language: "ru", Text: "Остановить"},
+              { Language: "pt", Text: "Pare"},
+              { Language: "ko", Text: "중지"},
+              { Language: "yue", Text: "停止"},
+              { Language: "en", Text: "Stop"},
+              { Language: "it", Text: "Fermata"},
+              { Language: "fr", Text: "Arrêter"},
+              { Language: "es", Text: "Parada"},
+              { Language: "zh-CHT", Text: "停止"},
+              { Language: "ar", Text: "وقف"},
+              { Language: "zh-CHS", Text: "停止"},
+              { Language: "ja", Text: "停止"}]
           },
           {
             OperationType: "Check",
@@ -8036,21 +8087,21 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "チェック"}]
           },
           {
-            OperationType: "Confirm",
+            OperationType: "Upload",
             DisplayMultipleLanguage:[
-              { Language: "de", Text: "Bestätigen"},
-              { Language: "ru", Text: "Подтвердите"},
-              { Language: "pt", Text: "Confirmar"},
-              { Language: "ko", Text: "확인"},
-              { Language: "yue", Text: "確認"},
-              { Language: "en", Text: "Confirm"},
-              { Language: "it", Text: "Confermare"},
-              { Language: "fr", Text: "Confirmer"},
-              { Language: "es", Text: "Confirmar"},
-              { Language: "zh-CHT", Text: "確認"},
-              { Language: "ar", Text: "تأكيد"},
-              { Language: "zh-CHS", Text: "确认"},
-              { Language: "ja", Text: "確認します。"}]
+              { Language: "de", Text: "Upload"},
+              { Language: "ru", Text: "Загрузить"},
+              { Language: "pt", Text: "Fazer upload"},
+              { Language: "ko", Text: "업로드"},
+              { Language: "yue", Text: "貼"},
+              { Language: "en", Text: "Upload"},
+              { Language: "it", Text: "Caricare"},
+              { Language: "fr", Text: "Télécharger"},
+              { Language: "es", Text: "Subir"},
+              { Language: "zh-CHT", Text: "上傳"},
+              { Language: "ar", Text: "تحميل"},
+              { Language: "zh-CHS", Text: "上传"},
+              { Language: "ja", Text: "アップロード"}]
           }
         ]
       }

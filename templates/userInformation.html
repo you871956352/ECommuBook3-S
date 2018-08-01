@@ -29,11 +29,10 @@
         <md-card-content>
             <span class="md-title">{{CollectionProgress}}: {{collectedVoice}} / {{totalVoice}}</span>
             <div layout="row">
-              <span class="md-title">{{Collection}}: </span>
+              <span class="md-title">{{AudioRecording}}: </span>
             </div>
             <div layout="row">
-              <md-button ng-click=vcStart()>{{Start}}</md-button>
-              <md-button ng-click=vcCheck()>{{Check}}</md-button>
+              <md-button ng-click=vcRecording($event)>{{Recording}}</md-button>
             </div>
             <div layout="row">
               <span class="md-title">{{SynchronizeProgress}}: </span>

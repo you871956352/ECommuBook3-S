@@ -13,7 +13,7 @@ angular
       $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
       if (typeof $rootScope.isShowDisplayName == 'undefined') {
         $rootScope.isShowDisplayName = { checked: true };
-      }     
+      }
       console.log("Language Selected:" + $scope.currentDisplayLanguage + "/" + $scope.userProfile.SPEECH_LANGUAGE_CODE + "/" + $scope.userProfile.SPEECH_GENDER);
       if (window.localStorage.getItem("loggedIn") != 1) {
         if ($cordovaNetwork.isOffline()) {
@@ -474,7 +474,7 @@ angular
     $scope.textCategoryName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CategoryName", $scope.currentDisplayLanguage);
     $scope.textItemName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ItemName", $scope.currentDisplayLanguage);
     $scope.textButtonConfirm = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton", $scope.currentDisplayLanguage);
-    
+
     $scope.onSelectedCategoryChanged = function () {
       console.log("$scope.selectedCategoryId: " + $scope.selectedCategoryId);
       $scope.category = getCategoryById($scope.userProfile, $scope.selectedCategoryId);
@@ -597,7 +597,7 @@ angular
     };
     $scope.sentenceBackSpace = function () {
       if ($scope.currentConstructSentence != "") {
-        $scope.currentConstructSentence = $scope.currentConstructSentence.substring(0, $scope.currentConstructSentence.length - 1);        
+        $scope.currentConstructSentence = $scope.currentConstructSentence.substring(0, $scope.currentConstructSentence.length - 1);
         GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
       }
     };
@@ -625,7 +625,7 @@ angular
           if (targetText != undefined) {
             $scope.currentConstructSentence = $scope.currentConstructSentence + targetText;
             GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
-          }       
+          }
         });
     };
     $scope.upLoadSentence = function(){
@@ -723,7 +723,7 @@ angular
       }
     }
   })
-  .controller("UserInfoCtrl", function ($scope, UserProfileService){
+  .controller("UserInfoCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$mdDialog,UserProfileService){
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.SpeechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.GenderList = GlobalVariable.GenderList;
@@ -737,50 +737,36 @@ angular
     $scope.SpeechLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SpeechLanguage", $scope.currentDisplayLanguage);
     $scope.SpeakerGender = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SpeakerGender", $scope.currentDisplayLanguage);
     $scope.CollectionProgress = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "CollectionProgress", $scope.currentDisplayLanguage);
-    $scope.Collection = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Collection", $scope.currentDisplayLanguage);
+    $scope.AudioRecording = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "AudioRecording", $scope.currentDisplayLanguage);
     $scope.SynchronizeProgress = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SynchronizeProgress", $scope.currentDisplayLanguage);
-    $scope.Start = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Start", $scope.currentDisplayLanguage);
-    $scope.Check = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Check", $scope.currentDisplayLanguage);
+    $scope.Recording = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Recording", $scope.currentDisplayLanguage);
     $scope.Confirm = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Confirm", $scope.currentDisplayLanguage);
-    $scope.vcStart = function () {};
-    $scope.vcCheck = function () {};
-    $scope.synchronizeStart = function () {};
-  })
-  .controller("TestCtrl", function ($scope,$cordovaFileTransfer,$cordovaMedia,$mdDialog, UserProfileService) { //Test Ctrl, for logging
-    var targetDirectory = GlobalVariable.LocalCacheDirectory() + "images/";
-    var imageID = "00000000-0000-0000-0003-000000000197";
-    var uploadID = "00000000-0000-0000-0000-000000000012";
-    var uploadName = uploadID + ".jpg";
-    var path;
-    $scope.ImagePath = targetDirectory + imageID + ".jpg";
-    $scope.recordClick = function (ev) {
-      var targetScope = $scope.$new();
-      $mdDialog.show({
-        controller: DialogController,
-        templateUrl: "templates/popup-vc.tmpl.html",
-        parent: angular.element(document.body),
-        targetEvent: ev,
-        clickOutsideToClose: true,
-        scope: targetScope,
-        fullscreen: false // Only for -xs, -sm breakpoints.
-      }).then(
-          function (answer) {
-            $scope.status = 'You said the information was "' + answer + '".';
-          },
-          function () {
-            $scope.status = "You cancelled the dialog.";
-          }
-        );
-      function DialogController($scope, $mdDialog) {
-          $scope.hide = function () {
-            $mdDialog.hide();
-          };
-          $scope.cancel = function () {
-            $mdDialog.cancel();
-          };
-          $scope.answer = function (answer) {
-            $mdDialog.hide(answer);
-          };
+    $scope.vcRecording = function (ev) {
+        var targetScope = $scope.$new();
+        targetScope.Recording = $scope.Recording;
+        targetScope.Start = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Start", $scope.currentDisplayLanguage);
+        targetScope.Stop = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Stop", $scope.currentDisplayLanguage);
+        targetScope.Check = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Check", $scope.currentDisplayLanguage);
+        targetScope.Upload = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Upload", $scope.currentDisplayLanguage);
+        $mdDialog.show({
+          controller: DialogController,
+          templateUrl: "templates/popup-vc.tmpl.html",
+          parent: angular.element(document.body),
+          targetEvent: ev,
+          clickOutsideToClose: true,
+          scope: targetScope,
+          fullscreen: false // Only for -xs, -sm breakpoints.
+        }).then(
+          function (answer) {$scope.status = 'You said the information was "' + answer + '".';},
+          function () {$scope.status = "You cancelled the dialog.";}
+          );
+        function DialogController($scope, $mdDialog) {
+          $scope.hide = function () { $mdDialog.hide(); };
+          $scope.cancel = function () { $mdDialog.cancel(); };
+          $scope.answer = function (answer) { $mdDialog.hide(answer); };
+          $scope.checkStart = false;
+          $scope.checkStop = true;
+          $scope.checkStatus = true;
           if (window.cordova && window.cordova.file && window.audioinput) {
               console.log("Use 'Start Capture' to begin...");
               window.addEventListener('audioinput', onAudioInputCapture, false);
@@ -791,17 +777,18 @@ angular
           }
           var captureCfg = {};
           var audioDataBuffer = [];
-          var timerInterVal, timerGenerateSimulatedData;
-          var objectURL = null;
-          var totalReceivedData = 0;
-          $scope.start = function () {
-            console.log("Capture Start.");
-            startCapture();
-          };
-          $scope.stop = function () {
-            console.log("Capture Stop.");
-            stopCapture();
-          };
+          var timerInterVal, timerGenerateSimulatedData, recordingPath;
+          var objectURL = null, totalReceivedData = 0, id = $scope.userProfile.ID;
+
+          $scope.start = function () { startCapture(); $scope.checkStart = true;$scope.checkStop = false;};
+          $scope.stop = function () { stopCapture(); $scope.checkStart = false;$scope.checkStop = true;$scope.checkStatus = false;};
+          $scope.check = function () {
+            if(typeof recordingPath == "undefined" || recordingPath == ""){
+              alert("Please recorde the audio first.");
+              return;
+            }
+            MediaPlayer.play($cordovaMedia, recordingPath);
+          }
           var startCapture = function () {
             try {
                 if (window.audioinput && !audioinput.isCapturing()) {
@@ -814,15 +801,13 @@ angular
                     };
                     audioinput.start(captureCfg);
                     console.log("Microphone input started!");
-                    $scope.recordinglist = "";
                     if (objectURL) {
                         URL.revokeObjectURL(objectURL);
                     }
                     timerInterVal = setInterval(function () {
                         if (audioinput.isCapturing()) {
-                            $scope.infoTimer = "" +
-                            new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1") +
-                            "|Received:" + totalReceivedData;
+                            var timer =  "" + new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1") + "|Received:" + totalReceivedData;
+                            console.log(timer);
                         }
                     }, 1000);
                 }
@@ -835,40 +820,35 @@ angular
             try {
                 if (window.audioinput && audioinput.isCapturing()) {
                     if (timerInterVal) { clearInterval(timerInterVal); }
-                    if (window.audioinput) { audioinput.stop(); } else { clearInterval(timerGenerateSimulatedData); }
+                    if (isMobile.any() && window.audioinput) { audioinput.stop(); } else { clearInterval(timerGenerateSimulatedData); }
                     totalReceivedData = 0;
-                    $scope.infoTimer = "";
                     console.log("Encoding WAV...");
                     var encoder = new WavAudioEncoder(captureCfg.sampleRate, captureCfg.channels);
                     encoder.encode([audioDataBuffer]);
+                    audioDataBuffer = [];
                     console.log("Encoding WAV finished");
                     var blob = encoder.finish("audio/wav");
                     console.log("BLOB created");
-                    window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function (dir) {
-                        var fileName = new Date().YYYYMMDDHHMMSS() + ".wav";
-                        dir.getFile(fileName, {create: true}, function (file) {
-                            file.createWriter(function (fileWriter) {
-                                fileWriter.write(blob);
-                                // Add an URL for the file
-                                var a = document.createElement('a');
-                                var linkText = document.createTextNode(file.toURL());
-                                console.log("Audio path: " + linkText);
-                                a.appendChild(linkText);
-                                a.title = file.toURL();
-                                a.href = file.toURL();
-                                a.target = '_blank';
-                                $scope.recordinglist.appendChild(a);
-                                console.log("File created!");
-                            }, function () {
-                                alert("FileWriter error!");
-                            });
-                        });
-                    });
+                    window.resolveLocalFileSystemURL(cordova.file.dataDirectory,
+                      function (dir) {
+                        dir.getDirectory("recording/" + id + "/", {create: true, exclusive: false}, success, fail);
+                        function success(parent) {
+                          console.log("Parent Name: " + parent.name);
+                          var fileName = new Date().YYYYMMDDHHMMSS() + ".wav";
+                          parent.getFile(fileName, {create: true}, function (file) {
+                              file.createWriter(function (fileWriter) {
+                                  fileWriter.write(blob);
+                                  recordingPath = file.toURL();
+                                  console.log("File created.");
+                                  console.log("RecordingPath: " + recordingPath);
+                              }, function () { alert("FileWriter error!"); });
+                          });
+                        }
+                        function fail(error) { alert("Unable to create new directory: " + error.code); }
+                      },function(){ alert("File resolve error!"); });
                 }
             }
-            catch (e) {
-                alert("stopCapture exception: " + e);
-            }
+            catch (e) { alert("stopCapture exception: " + e); }
           };
           function onAudioInputCapture( evt ) {
             try {
@@ -885,6 +865,16 @@ angular
           function onAudioInputError(error) { alert("onAudioInputError event recieved: " + JSON.stringify(error)); }
         }
     };
+    $scope.synchronizeStart = function () {};
+  })
+  .controller("TestCtrl", function ($scope,$cordovaFileTransfer,$cordovaMedia,$mdDialog, UserProfileService) { //Test Ctrl, for logging
+    var targetDirectory = GlobalVariable.LocalCacheDirectory() + "images/";
+    var imageID = "00000000-0000-0000-0003-000000000197";
+    var uploadID = "00000000-0000-0000-0000-000000000012";
+    var uploadName = uploadID + ".jpg";
+    var path;
+    $scope.ImagePath = targetDirectory + imageID + ".jpg";
+    $scope.recordClick = function (ev) {};
     $scope.uploadClick = function () {
       var filePath = $scope.ImagePath;
       var options = new FileUploadOptions();

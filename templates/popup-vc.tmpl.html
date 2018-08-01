@@ -2,7 +2,7 @@
   <form ng-cloak>
     <md-toolbar>
       <div class="md-toolbar-tools" style="text-align: center;">
-        <div style="text-align: center;"  ng-if="isShowDisplayName.checked">Audio Recording</div>
+        <div style="text-align: center;"  ng-if="isShowDisplayName.checked">{{Recording}}</div>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel()">
           <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
@@ -20,25 +20,22 @@
         </div>
         <h2></h2><h2></h2><h2></h2><h2></h2>
         <div layout="row" layout-align="center">
-          <md-button class="md-raised" ng-click=start()>Start</md-button>
+          <md-button class="md-raised" ng-click=start() ng-disabled="checkStart">{{Start}}</md-button>
         </div>
         <h2></h2><h2></h2>
         <div layout="row" layout-align="center">
-          <md-button class="md-raised" ng-click=stop()>Stop</md-button>
+          <md-button class="md-raised" ng-click=stop() ng-disabled="checkStop">{{Stop}}</md-button>
         </div>
         <h2></h2><h2></h2>
         <div layout="row" layout-align="center">
-          <md-button class="md-raised" ng-click=check()>Check</md-button>
+          <md-button class="md-raised" ng-click=check() ng-disabled="checkStatus">{{Check}}</md-button>
         </div>
         <h2></h2><h2></h2>
         <div layout="row" layout-align="center">
-          <md-button class="md-raised" ng-click=upload()>Upload</md-button>
+          <md-button class="md-raised" ng-click=upload()>{{Upload}}</md-button>
         </div>
-        <div layout-align="center">
-          <span>{{infoTimer}}</span>
-        </div>
-        <div layout-align="center">
-          <span>{{recordinglist}}</span>
+        <h2></h2><h2></h2>
+        <div layout="row" layout-align="center">
         </div>
       </div>
     </md-dialog-content>
