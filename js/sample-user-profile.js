@@ -7315,6 +7315,23 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "確認します。" }]
           },
           {
+            OperationType: "CancelButton",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Abbrechen" },
+              { Language: "ru", Text: "Отмена" },
+              { Language: "pt", Text: "Cancelar" },
+              { Language: "ko", Text: "취소" },
+              { Language: "yue", Text: "取消" },
+              { Language: "en", Text: "Cancel" },
+              { Language: "it", Text: "Annulla" },
+              { Language: "fr", Text: "Annuler" },
+              { Language: "es", Text: "Cancelar" },
+              { Language: "zh-CHT", Text: "取消" },
+              { Language: "ar", Text: "إلغاء الأمر" },
+              { Language: "zh-CHS", Text: "取消" },
+              { Language: "ja", Text: "キャンセル" }]
+          },
+          {
             OperationType: "GetButton",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Holen Sie sich jetzt" },
@@ -7330,6 +7347,23 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "يحصل الآن" },
               { Language: "zh-CHS", Text: "立即获取" },
               { Language: "ja", Text: "今すぐ入手します。" }]
+          },
+          {
+            OperationType: "Notification",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Benachrichtigung" },
+              { Language: "ru", Text: "Уведомление" },
+              { Language: "pt", Text: "Notificação" },
+              { Language: "ko", Text: "알림" },
+              { Language: "yue", Text: "通知" },
+              { Language: "en", Text: "Notification" },
+              { Language: "it", Text: "Notifica" },
+              { Language: "fr", Text: "Notification" },
+              { Language: "es", Text: "Notificación" },
+              { Language: "zh-CHT", Text: "通知" },
+              { Language: "ar", Text: "إعلام" },
+              { Language: "zh-CHS", Text: "通知" },
+              { Language: "ja", Text: "通知" }]
           },
           {
             OperationType: "CategoryName",
@@ -7452,6 +7486,113 @@ function getSampleMenuProfile() {
           { Language: "zh-CHS", Text: "添加类别" },
           { Language: "ja", Text: "カテゴリを追加します。" }
         ],
+      },
+      {
+        OperationType: "CategoryGrid",
+        SubPage: [
+          {
+            OperationType: "ShareButton",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Freigeben" },
+              { Language: "ru", Text: "Предоставить общий доступ" },
+              { Language: "pt", Text: "Compartilhar" },
+              { Language: "ko", Text: "공유" },
+              { Language: "yue", Text: "共享" },
+              { Language: "en", Text: "Share" },
+              { Language: "it", Text: "Condividi" },
+              { Language: "fr", Text: "Partager" },
+              { Language: "es", Text: "Compartir" },
+              { Language: "zh-CHT", Text: "共用" },
+              { Language: "ar", Text: "حصة" },
+              { Language: "zh-CHS", Text: "共享" },
+              { Language: "ja", Text: "共有" }]
+          },
+          {
+            OperationType: "SetTopButton",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Oben einstellen" },
+              { Language: "ru", Text: "Значение Top" },
+              { Language: "pt", Text: "Conjunto para Top" },
+              { Language: "ko", Text: "상단으로 설정" },
+              { Language: "yue", Text: "設置為頂部" },
+              { Language: "en", Text: "Set to Top" },
+              { Language: "it", Text: "Impostare su Top" },
+              { Language: "fr", Text: "La valeur haut" },
+              { Language: "es", Text: "Establece en la parte superior" },
+              { Language: "zh-CHT", Text: "設置為頂部" },
+              { Language: "ar", Text: "تعيين لأعلى" },
+              { Language: "zh-CHS", Text: "设置为顶部" },
+              { Language: "ja", Text: "Top に設定します。" }]
+          },
+          {
+            OperationType: "ShareWarning1",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Sind Sie sicher, diese Kategorie zu teilen" },
+                { Language: "ru", Text: "Вы уверены, чтобы поделиться этой категории" },
+                { Language: "pt", Text: "Tens a certeza de compartilhar esta categoria" },
+                { Language: "ko", Text: "당신은이 종류를 공유 하십시오" },
+                { Language: "yue", Text: "你肯定要共享此類別架?" },
+                { Language: "en", Text: "Are you sure to share this category" },
+                { Language: "it", Text: "Sei sicuro di condividere questa categoria" },
+                { Language: "fr", Text: "Êtes-vous sûr de partager cette catégorie" },
+                { Language: "es", Text: "Está seguro de compartir esta categoría" },
+                { Language: "zh-CHT", Text: "您確定要共用此類別嗎？" },
+                { Language: "ar", Text: "هل أنت متأكد من حصة هذه الفئة" },
+                { Language: "zh-CHS", Text: "您确定要共享此类别吗？" },
+                { Language: "ja", Text: "このカテゴリを共有するよろしい" }]
+          },
+          {
+            OperationType: "ShareWarning2",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Wenn Sie diese Kategorie teilen, alle Informationen werden im Internet öffentlich und kann von anderen eingesehen werden" },
+              { Language: "ru", Text: "Если вы разделяете эту категорию, вся информация будет опубликован в Интернете и могут быть просмотрены другими" },
+              { Language: "pt", Text: "Se você compartilha desta categoria, todas as informações serão públicas na internet e podem ser visualizadas por outros" },
+              { Language: "ko", Text: "이 범주를 공유 하는 경우 모든 정보가 인터넷에 공개 되며 다른 사람에 의해 볼 수 있습니다." },
+              { Language: "yue", Text: "如果你共享此類別, 所有信息就在互聯網上公開, 並可由其他人查看" },
+              { Language: "en", Text: "If you share this category, all information will be public on internet and can be viewed by others" },
+              { Language: "it", Text: "Se si condivide questa categoria, tutte le informazioni saranno resi pubbliche su internet e possono essere visualizzate da altri utenti" },
+              { Language: "fr", Text: "Si vous partagez cette catégorie, toute l’information sera publique sur internet et peut être lus par d’autres" },
+              { Language: "es", Text: "Si usted comparte esta categoría, toda la información será pública en internet y puede ser vista por otros" },
+              { Language: "zh-CHT", Text: "如果您共用此類別, 所有資訊將在互聯網上公開, 並可由其他人查看" },
+              { Language: "ar", Text: "إذا قمت بمشاركة هذه الفئة، جميع المعلومات وسيكون الجمهور على شبكة الإنترنت، ويمكن عرضها من قبل الآخرين" },
+              { Language: "zh-CHS", Text: "如果您共享此类别, 所有信息将在互联网上公开, 并可由其他人查看" },
+              { Language: "ja", Text: "すべての情報がインターネット上に公開され、他の人が閲覧することができますこのカテゴリを共有する場合" }]
+          },
+          {
+            OperationType: "SetTopWarning",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Möchten Sie diese Kategorie nach oben setzen" },
+              { Language: "ru", Text: "Вы действительно хотите установить эту категорию в верхней" },
+              { Language: "pt", Text: "Tens a certeza definir essa categoria para cima" },
+              { Language: "ko", Text: "당신은 상단에이 카테고리를 설정 해야" },
+              { Language: "yue", Text: "係咪肯定將此類別設置為頂部" },
+              { Language: "en", Text: "Are you sure to set this category to top" },
+              { Language: "it", Text: "Sei sicuro di impostare questa categoria verso l'alto" },
+              { Language: "fr", Text: "Êtes-vous sûr de définir cette catégorie en haut" },
+              { Language: "es", Text: "Está seguro de establecer esta categoría a superior" },
+              { Language: "zh-CHT", Text: "是否確定將此類別設置為頂部" },
+              { Language: "ar", Text: "هل أنت متأكد من تعيين هذه الفئة إلى أعلى" },
+              { Language: "zh-CHS", Text: "是否确定将此类别设置为顶部" },
+              { Language: "ja", Text: "あなたはトップにこのカテゴリを設定してください。" }]
+          },
+          {
+            OperationType: "SuccessAlert",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Erfolg zu teilen" },
+              { Language: "ru", Text: "Поделиться успехом" },
+              { Language: "pt", Text: "Compartilhar o sucesso" },
+              { Language: "ko", Text: "공유 성공" },
+              { Language: "yue", Text: "分享成功" },
+              { Language: "en", Text: "Share Success" },
+              { Language: "it", Text: "Condividere il successo" },
+              { Language: "fr", Text: "Partager les succès" },
+              { Language: "es", Text: "Éxito de participación" },
+              { Language: "zh-CHT", Text: "分享成功" },
+              { Language: "ar", Text: "نسبة النجاح" },
+              { Language: "zh-CHS", Text: "分享成功" },
+              { Language: "ja", Text: "成功を共有します。" }]
+          }        
+        ]
       },
       {
         OperationType: "DeleteCategory",

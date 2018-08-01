@@ -46,7 +46,58 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
           console.log("post userprofile error :" + JSON.stringify(data));
         });
     },
-
+    setTargetCategoryTop: function (UserProfile, categoryID) {
+      var Categories = UserProfile.Categories;
+      var newCategories = [];
+      var targetIndex = -1;
+      for (var i = 0; i < Categories.length; i++) {
+        if (Categories[i].ID == categoryID) {
+          newCategories.push(Categories[i]);
+          targetIndex = i;         
+          break;
+        }
+      }
+      for (var i = 0; i < Categories.length; i++) {
+        if (targetIndex != -1 && targetIndex != i) {
+          newCategories.push(Categories[i]);
+        }
+        else {
+          //alert(targetIndex);
+        }
+      }
+      UserProfile.Categories = newCategories;
+      return UserProfile;
+    },
+    setTargetItemTop: function (UserProfile, categoryID, ItemID) {
+      var Items;
+      var newItems = [];
+      var CategoryIndex = -1;
+      var ItemsIndex = -1;
+      for (var i = 0; i < UserProfile.Categories.length; i++) {
+        if (UserProfile.Categories[i].ID == categoryID) {
+          CategoryIndex = i;
+          Items = UserProfile.Categories[CategoryIndex].Items;
+          break;
+        }
+      }
+      for (var i = 0; i < Items.length; i++) {
+        if (Items[i].ID == ItemID) {
+          newItems.push(Items[i]);
+          ItemsIndex = i;
+          break;
+        }
+      }
+      for (var i = 0; i < Items.length; i++) {
+        if (ItemsIndex != -1 && ItemsIndex != i) {
+          newItems.push(Items[i]);
+        }
+        else {
+          //alert(ItemsIndex);
+        }
+      }
+      UserProfile.Categories[CategoryIndex].Items = newItems;
+      return UserProfile;
+    },
     getMenuProfile: function () {
       /*if ($localStorage.menuProfile) {
         console.log("Read menuProfile from LocalStorage.");

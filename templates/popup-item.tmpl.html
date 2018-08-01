@@ -14,10 +14,12 @@
       <div class="md-dialog-content" ng-click="onItemClicked($event);">
         <h2></h2>
         <img class="enlarge_item_image" style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="{{ImagePath}}/{{selectedItemId}}.jpg" />
-      
         <div style="line-height: {{itemNormalFontSize}}px;text-align: center; " ng-if="isShowDisplayName.checked">
-            <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;">{{selectedItemName}}</span>
+          <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;">{{selectedItemName}}</span>
         </div>
+      </div>
+      <div>
+        <md-button ng-click="reorderAddTopItem($event)">{{textButtonSetTop}}</md-button>
       </div>
     </md-dialog-content>
   </form>

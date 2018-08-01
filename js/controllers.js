@@ -33,7 +33,17 @@ angular
       MediaPlayer.play($cordovaMedia, src);
     };
   })
-  .controller("CategoryCtrl", function ($rootScope, $scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService) {
+  .controller("CategoryCtrl", function ($rootScope, $scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService, $http) {
+    $scope.subMenuPage = UserProfileService.getMenuProfileSubObject("CategoryGrid");
+    $scope.textButtonShare = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareButton", $scope.currentDisplayLanguage);
+    $scope.textButtonSetTop = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SetTopButton", $scope.currentDisplayLanguage);
+    $scope.textShareWarning = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareWarning1", $scope.currentDisplayLanguage) + "? " + UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareWarning2", $scope.currentDisplayLanguage);
+    $scope.textSetTopWarning = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SetTopWarning", $scope.currentDisplayLanguage) + "?";
+    $scope.textSuccessAlert = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SuccessAlert", $scope.currentDisplayLanguage);
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
+    $scope.textButtonOK = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton", $scope.currentDisplayLanguage);
+    $scope.textButtonCancel = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CancelButton", $scope.currentDisplayLanguage);
+    $scope.textNotification = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Notification", $scope.currentDisplayLanguage);
     $scope.categoryId = $stateParams.categoryId;
     for (var i = 0; i < $scope.userProfile.Categories.length; i++) {
       if ($scope.userProfile.Categories[i].ID == $stateParams.categoryId) {
@@ -72,6 +82,42 @@ angular
         fullscreen: false // Only for -xs, -sm breakpoints.
       });
     };
+    $scope.shareCategory = function (event, categoryID) {
+      var confirmDialog = $mdDialog.confirm()
+        .title($scope.textNotification)
+        .textContent($scope.textShareWarning)
+        .targetEvent(event)
+        .ok($scope.textButtonOK)
+        .cancel($scope.textButtonCancel);
+
+      $mdDialog.show(confirmDialog).then(function () {
+        console.log("Shared Category ID: " + ServerPathVariable.GetUploadSharePath(categoryID));
+        $http.get(ServerPathVariable.GetUploadSharePath(categoryID)).then(function (data) {
+          console.log("Success");
+          alert($scope.textSuccessAlert);
+        });
+      }, function () {
+        console.log("User decide to quit share");
+      });
+    };
+    $scope.reorderAddTopCategory = function (event, categoryID) {
+      var confirmDialog = $mdDialog.confirm()
+        .title($scope.textNotification)
+        .textContent($scope.textSetTopWarning)
+        .targetEvent(event)
+        .ok($scope.textButtonOK)
+        .cancel($scope.textButtonCancel);
+
+      $mdDialog.show(confirmDialog).then(function () {
+        newUserProfile = UserProfileService.setTargetCategoryTop($scope.userProfile, $scope.categoryId);
+        UserProfileService.saveLocal(newUserProfile);
+        UserProfileService.postToServerCallback(function () {        
+          console.log("Post to Server After Reorder");
+        });
+      }, function () {
+        console.log("User decide to quit share");
+      });
+    };
     function DialogController($scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer) {
       $scope.cancel = function () {
         $mdDialog.cancel();
@@ -80,6 +126,13 @@ angular
         var src = $scope.AudioDirectory + $scope.selectedItemId + ".mp3";
         MediaPlayer.play($cordovaMedia, src);
       };
+      $scope.reorderAddTopItem = function (ev) {
+        newUserProfile = UserProfileService.setTargetItemTop($scope.userProfile, $scope.categoryId, $scope.selectedItemId);
+        UserProfileService.saveLocal(newUserProfile);
+        UserProfileService.postToServerCallback(function () {
+          console.log("Post to Server After Reorder");
+        });
+      }
     }
   })
   .controller("SettingCtrl", function ($scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService) {
@@ -515,67 +568,6 @@ angular
     };
   })
   .controller("WelcomeCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, UserProfileService, LocalCacheService) { })
-  .controller("GridController", function ($scope, $http, $mdDialog, $ionicSideMenuDelegate) {
-      var i;
-      $scope.itemsList = { items1: [] };
-      for (i = 0; i <= 100; i += 1) {
-        $scope.itemsList.items1.push({ Id: i, Label: "Item A_" + i });
-      }
-      $scope.sortableOptions = {
-        containment: "#grid-container",
-        accept: function (sourceItemHandleScope, destSortableScope) {
-          return false;
-        }, //override to determine sort is allowed or not. default is true.
-        itemMoved: function (event) {
-        },
-        orderChanged: function (event) {
-        }
-      };
-      $scope.dragControlListeners = {  // drag boundary
-        containment: "#grid-container",
-        accept: function (sourceItemHandleScope, destSortableScope) {
-          return false;
-        }, //override to determine drag is allowed or not. default is true.
-        itemMoved: function (event) {
-          console.log("itemMoved:" + event);
-        },
-        orderChanged: function (event) {
-          console.log("orderChanged:" + event);
-        }
-      };
-      $scope.shareCategory = function (event,categoryID) {
-        var confirmDialog = $mdDialog.confirm()
-          .title('Confirm Upload?')
-          .textContent(GlobalVariable.AlertMessageList.UploadAlert())
-          .ariaLabel('23333')
-          .targetEvent(event)
-          .ok('OK')
-          .cancel('Cancel');
-
-        $mdDialog.show(confirmDialog).then(function () {
-          console.log("Shared Category ID: " + ServerPathVariable.GetUploadSharePath(categoryID));
-          $http.get(ServerPathVariable.GetUploadSharePath(categoryID)).then(function (data) {
-            console.log("Success");
-            alert("Upload Success!");
-          });
-        },function () {
-          console.log("User decide to quit share");
-        });
-      };
-   })
-  .controller("MainCtrl", function($scope) { //Test Ctrl, to test reorder function
-    $scope.draggableObjects = [
-      { name: "one" },
-      { name: "two" },
-      { name: "three" }
-    ];
-    $scope.onDropComplete = function(index, obj, evt) {
-      var otherObj = $scope.draggableObjects[index];
-      var otherIndex = $scope.draggableObjects.indexOf(obj);
-      $scope.draggableObjects[index] = obj;
-      $scope.draggableObjects[otherIndex] = otherObj;
-    };
-  })
   .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $ionicSideMenuDelegate) { //For Construct Sentence
     $scope.sentences = $scope.userProfile.Sentences;
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
