@@ -36,7 +36,9 @@ angular
   .controller("CategoryCtrl", function ($rootScope, $scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService, $http) {
     $scope.subMenuPage = UserProfileService.getMenuProfileSubObject("CategoryGrid");
     $scope.textButtonShare = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareButton", $scope.currentDisplayLanguage);
+    $scope.textButtonSetTop = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SetTopButton", $scope.currentDisplayLanguage);
     $scope.textShareWarning = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareWarning1", $scope.currentDisplayLanguage) + "? " + UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareWarning2", $scope.currentDisplayLanguage);
+    $scope.textSetTopWarning = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SetTopWarning", $scope.currentDisplayLanguage) + "?";
     $scope.textSuccessAlert = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SuccessAlert", $scope.currentDisplayLanguage);
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
     $scope.textButtonOK = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton", $scope.currentDisplayLanguage);
@@ -98,8 +100,23 @@ angular
         console.log("User decide to quit share");
       });
     };
-    $scope.reorderAddTop = function (event, categoryID) {
-      alert(categoryID);
+    $scope.reorderAddTopCategory = function (event, categoryID) {
+      var confirmDialog = $mdDialog.confirm()
+        .title($scope.textNotification)
+        .textContent($scope.textSetTopWarning)
+        .targetEvent(event)
+        .ok($scope.textButtonOK)
+        .cancel($scope.textButtonCancel);
+
+      $mdDialog.show(confirmDialog).then(function () {
+        newUserProfile = UserProfileService.setTargetCategoryTop($scope.userProfile, $scope.categoryId);
+        UserProfileService.saveLocal(newUserProfile);
+        UserProfileService.postToServerCallback(function () {        
+          console.log("Post to Server After Reorder");
+        });
+      }, function () {
+        console.log("User decide to quit share");
+      });
     };
     function DialogController($scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer) {
       $scope.cancel = function () {
@@ -109,6 +126,13 @@ angular
         var src = $scope.AudioDirectory + $scope.selectedItemId + ".mp3";
         MediaPlayer.play($cordovaMedia, src);
       };
+      $scope.reorderAddTopItem = function (ev) {
+        newUserProfile = UserProfileService.setTargetItemTop($scope.userProfile, $scope.categoryId, $scope.selectedItemId);
+        UserProfileService.saveLocal(newUserProfile);
+        UserProfileService.postToServerCallback(function () {
+          console.log("Post to Server After Reorder");
+        });
+      }
     }
   })
   .controller("SettingCtrl", function ($scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService) {

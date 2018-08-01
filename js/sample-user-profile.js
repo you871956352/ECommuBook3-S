@@ -7508,6 +7508,23 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "共有" }]
           },
           {
+            OperationType: "SetTopButton",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Oben einstellen" },
+              { Language: "ru", Text: "Значение Top" },
+              { Language: "pt", Text: "Conjunto para Top" },
+              { Language: "ko", Text: "상단으로 설정" },
+              { Language: "yue", Text: "設置為頂部" },
+              { Language: "en", Text: "Set to Top" },
+              { Language: "it", Text: "Impostare su Top" },
+              { Language: "fr", Text: "La valeur haut" },
+              { Language: "es", Text: "Establece en la parte superior" },
+              { Language: "zh-CHT", Text: "設置為頂部" },
+              { Language: "ar", Text: "تعيين لأعلى" },
+              { Language: "zh-CHS", Text: "设置为顶部" },
+              { Language: "ja", Text: "Top に設定します。" }]
+          },
+          {
             OperationType: "ShareWarning1",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Sind Sie sicher, diese Kategorie zu teilen" },
@@ -7540,6 +7557,23 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "إذا قمت بمشاركة هذه الفئة، جميع المعلومات وسيكون الجمهور على شبكة الإنترنت، ويمكن عرضها من قبل الآخرين" },
               { Language: "zh-CHS", Text: "如果您共享此类别, 所有信息将在互联网上公开, 并可由其他人查看" },
               { Language: "ja", Text: "すべての情報がインターネット上に公開され、他の人が閲覧することができますこのカテゴリを共有する場合" }]
+          },
+          {
+            OperationType: "SetTopWarning",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Möchten Sie diese Kategorie nach oben setzen" },
+              { Language: "ru", Text: "Вы действительно хотите установить эту категорию в верхней" },
+              { Language: "pt", Text: "Tens a certeza definir essa categoria para cima" },
+              { Language: "ko", Text: "당신은 상단에이 카테고리를 설정 해야" },
+              { Language: "yue", Text: "係咪肯定將此類別設置為頂部" },
+              { Language: "en", Text: "Are you sure to set this category to top" },
+              { Language: "it", Text: "Sei sicuro di impostare questa categoria verso l'alto" },
+              { Language: "fr", Text: "Êtes-vous sûr de définir cette catégorie en haut" },
+              { Language: "es", Text: "Está seguro de establecer esta categoría a superior" },
+              { Language: "zh-CHT", Text: "是否確定將此類別設置為頂部" },
+              { Language: "ar", Text: "هل أنت متأكد من تعيين هذه الفئة إلى أعلى" },
+              { Language: "zh-CHS", Text: "是否确定将此类别设置为顶部" },
+              { Language: "ja", Text: "あなたはトップにこのカテゴリを設定してください。" }]
           },
           {
             OperationType: "SuccessAlert",
