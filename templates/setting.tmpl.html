@@ -35,7 +35,7 @@
 		        </md-select>
 		      </md-input-container>
 		    </div>
-        <md-button ng-click=onConfirmLanguageButtonClicked()>{{textButtonConfirm}}</md-button>
+        <md-button class="md-raised" ng-click=onConfirmLanguageButtonClicked()>{{textButtonConfirm}}</md-button>
 
 	    </md-card-content>
 	</md-card>
@@ -53,7 +53,7 @@
         <h1 class="md-title">{{textFontSize}}</h1>
         <md-slider ng-model="itemNormalFontSize" min="12" max="108" ng-change="onItemNormalFontSizeChanged()"></md-slider>
         <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">{{textExample}}</span>
-        <md-button ng-click=onConfirmAppearanceButtonClicked()>{{textButtonConfirm}}</md-button>
+        <md-button class="md-raised" ng-click=onConfirmAppearanceButtonClicked()>{{textButtonConfirm}}</md-button>
       </md-card-content>
 	</md-card>
 
@@ -66,7 +66,7 @@
 
 	    <md-card-content>
         <h1 class="md-title">{{textResetConfirmWarning}}</h1>
-      <md-button ng-click=onConfirmResetUserprofileButtonClicked()>{{textResetConfirm}}</md-button>
+      <md-button class="md-raised" ng-click=onConfirmResetUserprofileButtonClicked()>{{textResetConfirm}}</md-button>
 	    </md-card-content>
 	</md-card>
 

@@ -11,8 +11,8 @@
 
       <md-card>
         <md-card-title>
-          <span class="md-headline">{{textAddSentence}}</span>
-          <md-button ng-click=sentenceBackSpace()>{{textButtonBackspace}}</md-button>
+          <span class="md-headline">{{textAddSentence}}</span><span flex></span>
+          <md-button class="md-raised" ng-click=sentenceBackSpace()>{{textButtonBackspace}}</md-button>
         </md-card-title>
         <md-card-content>
           <h3></h3><div class="addSentencePreview">{{currentConstructSentence}}</div> <h3></h3>
@@ -21,9 +21,9 @@
               <label>{{textInputAdd}}</label>
               <input type="text" ng-model="inputAdd">
             </md-input-container>
-            <md-button ng-click=sentenceAdd()>{{textAdd}}</md-button>
+            <md-button class="md-raised" ng-click=sentenceAdd()>{{textAdd}}</md-button>
           </div>
-          <md-button ng-click=upLoadSentence()>{{textButtonUpload}}</md-button>
+          <md-button class="md-raised" ng-click=upLoadSentence()>{{textButtonUpload}}</md-button>
         </md-card-content>
       </md-card>
 
@@ -51,4 +51,3 @@
     </div>
   </ion-content>
 </ion-view>
-
