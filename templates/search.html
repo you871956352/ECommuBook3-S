@@ -21,14 +21,11 @@
         <md-card-title>
           <span class="md-headline">Result</span><span flex></span>
         </md-card-title>
-        <md-card-content >
-          <div ng-repeat="word in resultWords" ng-if="$index < maxResultWordsDisplay" style="float:left;width:80%">            
-            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{word}}</span>
-          </div>     
-        </md-card-content>
+        <h1></h1>
+        <md-card-content  ng-repeat="word in resultWords" ng-if="$index < maxResultWordsDisplay" class= "searchResultPreview ">            
+          <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{word}}</span>
+        </md-card-content>     
       </md-card>
-
-
     </div>
   </ion-content>
 </ion-view>
