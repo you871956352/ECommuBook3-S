@@ -33,7 +33,7 @@ angular
       MediaPlayer.play($cordovaMedia, src);
     };
   })
-  .controller("CategoryCtrl", function ($rootScope, $scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService, $http) {
+  .controller("CategoryCtrl", function ($scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService, $http) {
     $scope.subMenuPage = UserProfileService.getMenuProfileSubObject("CategoryGrid");
     $scope.textButtonShare = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareButton", $scope.currentDisplayLanguage);
     $scope.textButtonSetTop = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SetTopButton", $scope.currentDisplayLanguage);
@@ -231,7 +231,7 @@ angular
       });
     }
   })
-  .controller("AddCategoryCtrl", function ($rootScope, $scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
+  .controller("AddCategoryCtrl", function ($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "AddCategory", $scope.currentDisplayLanguage);
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
     $scope.textCategoryName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CategoryName", $scope.currentDisplayLanguage);
@@ -649,7 +649,20 @@ angular
       };
     }
   })
-  .controller("ShareCtrl", function ($rootScope, $scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
+  .controller("SearchCtrl", function ($scope, UserProfileService, $http){
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Search", $scope.currentDisplayLanguage);
+    $scope.subMenuProfile = UserProfileService.getMenuProfileSubObject("UserInformation");
+    $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
+    $scope.textDisplayLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "DisplayLanguage", $scope.currentDisplayLanguage);
+    $scope.isShowResult = true;
+    $scope.resultWords = ["22", "33", "44", "55"];
+    $scope.maxResultWordsDisplay = 3;
+    $scope.searchRecording = function (ev) {
+      alert("searchRecording");
+    }
+
+  })
+  .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.shareCategory = ShareCategoryService.getShareCategory();
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Download", $scope.currentDisplayLanguage);
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
@@ -748,14 +761,9 @@ angular
           clickOutsideToClose: true,
           scope: targetScope,
           fullscreen: false // Only for -xs, -sm breakpoints.
-        }).then(
-          function (answer) {$scope.status = 'You said the information was "' + answer + '".';},
-          function () {$scope.status = "You cancelled the dialog.";}
-          );
+        });
         function DialogController($scope, $mdDialog) {
-          $scope.hide = function () { $mdDialog.hide(); };
           $scope.cancel = function () { $mdDialog.cancel(); };
-          $scope.answer = function (answer) { $mdDialog.hide(answer); };
           $scope.checkStart = false;
           $scope.checkStop = true;
           $scope.checkStatus = true;

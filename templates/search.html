@@ -1,0 +1,29 @@
+<ion-view cache-view="false" view-title="{{Title}}">
+  <ion-content>
+    <div id="grid-container" class="container-fluid" ng-controller="SentenceCtrl" ng-cloak>
+      <md-card>
+        <md-card-title>
+          <span class="md-headline">Speak Word for search</span><span flex></span>
+          <md-button class="md-raised" ng-click=searchRecording()>Record</md-button>
+        </md-card-title>
+        <md-card-content>
+          <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
+            {{textDisplayLanguage}}: {{displayLanguage.name}}</h1>
+        </md-card-content>
+      </md-card>
+
+      <md-card ng-if="isShowResult">
+        <md-card-title>
+          <span class="md-headline">Result</span><span flex></span>
+        </md-card-title>
+        <md-card-content >
+          <div ng-repeat="word in resultWords" ng-if="$index < maxResultWordsDisplay" style="float:left;width:80%">            
+            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{word}}</span>
+          </div>     
+        </md-card-content>
+      </md-card>
+
+
+    </div>
+  </ion-content>
+</ion-view>
