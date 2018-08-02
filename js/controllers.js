@@ -754,7 +754,7 @@ angular
       }
     }
   })
-  .controller("UserInfoCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$mdDialog,UserProfileService){
+  .controller("UserInfoCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$mdDialog,UserProfileService,VoiceRecordService){
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.SpeechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.GenderList = GlobalVariable.GenderList;
@@ -796,100 +796,17 @@ angular
           $scope.gifDisplay = false;
           if (window.cordova && window.cordova.file && window.audioinput) {
               console.log("Use 'Start Capture' to begin...");
-              window.addEventListener('audioinput', onAudioInputCapture, false);
-              window.addEventListener('audioinputerror', onAudioInputError, false);
+              window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
+              window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
           }
           else {
               console.log("Missing: cordova-plugin-file or cordova-plugin-audioinput!");
           }
-          var captureCfg = {};
-          var audioDataBuffer = [];
-          var timerInterVal, timerGenerateSimulatedData, recordingPath;
-          var objectURL = null, totalReceivedData = 0, id = $scope.userProfile.ID;
-
-          $scope.start = function () { startCapture(); $scope.checkStart = true;$scope.checkStop = false;$scope.gifDisplay = true;};
-          $scope.stop = function () { stopCapture(); $scope.checkStart = false;$scope.checkStop = true;$scope.checkStatus = false;$scope.gifDisplay = false;};
-          $scope.check = function () {
-            if(typeof recordingPath == "undefined" || recordingPath == ""){
-              alert("Please recorde the audio first.");
-              return;
-            }
-            MediaPlayer.play($cordovaMedia, recordingPath);
-          }
-          var startCapture = function () {
-            try {
-                if (window.audioinput && !audioinput.isCapturing()) {
-                    captureCfg = {
-                        sampleRate: 16000,
-                        bufferSize: 16384,
-                        channels: 1,
-                        format: audioinput.FORMAT.PCM_16BIT,
-                        audioSourceType: audioinput.AUDIOSOURCE_TYPE.DEFAULT,
-                    };
-                    audioinput.start(captureCfg);
-                    console.log("Microphone input started!");
-                    if (objectURL) {
-                        URL.revokeObjectURL(objectURL);
-                    }
-                    timerInterVal = setInterval(function () {
-                        if (audioinput.isCapturing()) {
-                            var timer =  "" + new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1") + "|Received:" + totalReceivedData;
-                            console.log(timer);
-                        }
-                    }, 1000);
-                }
-            }
-            catch (e) {
-                alert("startCapture exception: " + e);
-            }
-          };
-          var stopCapture = function () {
-            try {
-                if (window.audioinput && audioinput.isCapturing()) {
-                    if (timerInterVal) { clearInterval(timerInterVal); }
-                    if (isMobile.any() && window.audioinput) { audioinput.stop(); } else { clearInterval(timerGenerateSimulatedData); }
-                    totalReceivedData = 0;
-                    console.log("Encoding WAV...");
-                    var encoder = new WavAudioEncoder(captureCfg.sampleRate, captureCfg.channels);
-                    encoder.encode([audioDataBuffer]);
-                    audioDataBuffer = [];
-                    console.log("Encoding WAV finished");
-                    var blob = encoder.finish("audio/wav");
-                    console.log("BLOB created");
-                    window.resolveLocalFileSystemURL(cordova.file.dataDirectory,
-                      function (dir) {
-                        dir.getDirectory(id + "/", {create: true, exclusive: false}, success, fail);
-                        function success(parent) {
-                          console.log("Parent Name: " + parent.name);
-                          var fileName = new Date().YYYYMMDDHHMMSS() + ".wav";
-                          parent.getFile(fileName, {create: true}, function (file) {
-                              file.createWriter(function (fileWriter) {
-                                  fileWriter.write(blob);
-                                  recordingPath = file.toURL();
-                                  console.log("File created.");
-                                  console.log("RecordingPath: " + recordingPath);
-                              }, function () { alert("FileWriter error!"); });
-                          });
-                        }
-                        function fail(error) { alert("Unable to create new directory: " + error.code); }
-                      },function(){ alert("File resolve error!"); });
-                }
-            }
-            catch (e) { alert("stopCapture exception: " + e); }
-          };
-          function onAudioInputCapture( evt ) {
-            try {
-              if (evt && evt.data) {
-                totalReceivedData += evt.data.length;
-                console.log( "Audio data received: " + totalReceivedData );
-                audioDataBuffer = audioDataBuffer.concat(evt.data);
-              }
-            }
-            catch (ex) {
-              alert("onAudioInputCapture ex: " + ex);
-            }
-          }
-          function onAudioInputError(error) { alert("onAudioInputError event recieved: " + JSON.stringify(error)); }
+          var id = $scope.userProfile.ID;
+          $scope.start = function () { VoiceRecordService.startCapture(); $scope.checkStart = true;$scope.checkStop = false;$scope.gifDisplay = true;};
+          $scope.stop = function () { VoiceRecordService.stopCapture(id); $scope.checkStart = false;$scope.checkStop = true;$scope.checkStatus = false;$scope.gifDisplay = false;};
+          $scope.check = function () { VoiceRecordService.checkRecord(); }
+          $scope.upload = function () { VoiceRecordService.uploadRecordVC(); }
         }
     };
     $scope.synchronizeStart = function () {};
