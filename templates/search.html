@@ -3,7 +3,7 @@
     <div id="grid-container" class="container-fluid" ng-controller="SentenceCtrl" ng-cloak>
       <md-card>
         <md-card-title>
-          <span class="md-headline">Speak Word for search</span><span flex></span>     
+          <span class="md-headline">{{textGuide}}</span><span flex></span>     
         </md-card-title>
         <md-card-content>
           <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
@@ -19,7 +19,7 @@
 
       <md-card ng-if="isShowResult">
         <md-card-title>
-          <span class="md-headline">Result</span><span flex></span>
+          <span class="md-headline">{{textSearchResult}}</span><span flex></span>
         </md-card-title>
         <h1></h1>
         <md-card-content  ng-repeat="word in resultWords" ng-if="$index < maxResultWordsDisplay" class= "searchResultPreview ">            
