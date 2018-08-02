@@ -340,6 +340,7 @@ angular
     };
   })
   .controller("DeleteCategoryCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
+    $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "DeleteCategory", $scope.currentDisplayLanguage);
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
@@ -389,6 +390,7 @@ angular
     };
   })
   .controller("AddItemCtrl", function ($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
+    $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "AddItem", $scope.currentDisplayLanguage);
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
@@ -521,6 +523,7 @@ angular
     };
   })
   .controller("DeleteItemCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
+    $scope.userProfile = UserProfileService.getLatest();
     $scope.categories = $scope.userProfile.Categories;
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "DeleteItem", $scope.currentDisplayLanguage);
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
