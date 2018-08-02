@@ -111,7 +111,7 @@ angular
       $mdDialog.show(confirmDialog).then(function () {
         newUserProfile = UserProfileService.setTargetCategoryTop($scope.userProfile, $scope.categoryId);
         UserProfileService.saveLocal(newUserProfile);
-        UserProfileService.postToServerCallback(function () {        
+        UserProfileService.postToServerCallback(function () {
           console.log("Post to Server After Reorder");
         });
       }, function () {
@@ -823,7 +823,7 @@ angular
                     console.log("BLOB created");
                     window.resolveLocalFileSystemURL(cordova.file.dataDirectory,
                       function (dir) {
-                        dir.getDirectory("recording/" + id + "/", {create: true, exclusive: false}, success, fail);
+                        dir.getDirectory(id + "/", {create: true, exclusive: false}, success, fail);
                         function success(parent) {
                           console.log("Parent Name: " + parent.name);
                           var fileName = new Date().YYYYMMDDHHMMSS() + ".wav";
