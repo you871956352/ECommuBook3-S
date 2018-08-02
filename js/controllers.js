@@ -767,6 +767,7 @@ angular
           $scope.checkStart = false;
           $scope.checkStop = true;
           $scope.checkStatus = true;
+          $scope.gifDisplay = false;
           if (window.cordova && window.cordova.file && window.audioinput) {
               console.log("Use 'Start Capture' to begin...");
               window.addEventListener('audioinput', onAudioInputCapture, false);
@@ -780,8 +781,8 @@ angular
           var timerInterVal, timerGenerateSimulatedData, recordingPath;
           var objectURL = null, totalReceivedData = 0, id = $scope.userProfile.ID;
 
-          $scope.start = function () { startCapture(); $scope.checkStart = true;$scope.checkStop = false;};
-          $scope.stop = function () { stopCapture(); $scope.checkStart = false;$scope.checkStop = true;$scope.checkStatus = false;};
+          $scope.start = function () { startCapture(); $scope.checkStart = true;$scope.checkStop = false;$scope.gifDisplay = true;};
+          $scope.stop = function () { stopCapture(); $scope.checkStart = false;$scope.checkStop = true;$scope.checkStatus = false;$scope.gifDisplay = false;};
           $scope.check = function () {
             if(typeof recordingPath == "undefined" || recordingPath == ""){
               alert("Please recorde the audio first.");
