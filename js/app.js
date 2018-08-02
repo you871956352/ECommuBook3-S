@@ -118,6 +118,15 @@ angular
           }
         }
       })
+      .state("app.search", {
+        url: "/search",
+        views: {
+          menuContent: {
+            templateUrl: "templates/search.html",
+            controller: "SearchCtrl"
+          }
+        }
+      })
       .state("app.test", {
         url: "/test",
         views: {

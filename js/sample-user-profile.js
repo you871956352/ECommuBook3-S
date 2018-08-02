@@ -7784,6 +7784,23 @@ function getSampleMenuProfile() {
         ]
       },
       {
+        OperationType: "Search",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Suche" },
+          { Language: "ru", Text: "Поиск" },
+          { Language: "pt", Text: "Pesquisa" },
+          { Language: "ko", Text: "검색" },
+          { Language: "yue", Text: "搜尋" },
+          { Language: "en", Text: "Search" },
+          { Language: "it", Text: "Ricerca" },
+          { Language: "fr", Text: "Recherche" },
+          { Language: "es", Text: "Búsqueda de" },
+          { Language: "zh-CHT", Text: "搜索" },
+          { Language: "ar", Text: "البحث عن" },
+          { Language: "zh-CHS", Text: "搜索" },
+          { Language: "ja", Text: "検索" }]
+      },
+      {
         OperationType: "Setting",
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Einstellung" },
