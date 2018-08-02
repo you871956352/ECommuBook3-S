@@ -567,7 +567,10 @@ angular
       });
     };
   })
-  .controller("WelcomeCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, UserProfileService, LocalCacheService) { })
+  .controller("WelcomeCtrl", function ($scope,UserProfileService) {
+    $scope.Text = UserProfileService.getTranslatedMenuText("Operations", "WelcomeText", $scope.currentDisplayLanguage);
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Welcome", $scope.currentDisplayLanguage);
+   })
   .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $ionicSideMenuDelegate) { //For Construct Sentence
     $scope.sentences = $scope.userProfile.Sentences;
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;

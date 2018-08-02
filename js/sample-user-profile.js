@@ -7591,7 +7591,7 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "نسبة النجاح" },
               { Language: "zh-CHS", Text: "分享成功" },
               { Language: "ja", Text: "成功を共有します。" }]
-          }        
+          }
         ]
       },
       {
@@ -8262,6 +8262,40 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "アップロード"}]
           }
         ]
+      },
+      {
+        OperationType: "Welcome",
+        DisplayMultipleLanguage: [
+          {"Language":"de","Text":"Herzlich Willkommen"},
+          {"Language":"ru","Text":"Добро пожаловать"},
+          {"Language":"pt","Text":"Bem-vindo"},
+          {"Language":"ko","Text":"환영 합니다"},
+          {"Language":"yue","Text":"歡迎"},
+          {"Language":"en","Text":"Welcome"},
+          {"Language":"it","Text":"Benvenuto"},
+          {"Language":"fr","Text":"Bienvenue"},
+          {"Language":"es","Text":"Bienvenida"},
+          {"Language":"zh-CHT","Text":"歡迎"},
+          {"Language":"ar","Text":"اهلا وسهلا"},
+          {"Language":"zh-CHS","Text":"欢迎"},
+          {"Language":"ja","Text":"ようこそ"}]
+      },
+      {
+        OperationType: "WelcomeText",
+        DisplayMultipleLanguage: [
+          {"Language":"de","Text":"Willkommen bei eBook-Kommunikations-"},
+          {"Language":"ru","Text":"Добро пожаловать на E-Commu книга"},
+          {"Language":"pt","Text":"Bem-vindo ao E-comu-livro"},
+          {"Language":"ko","Text":"오신 것을 환영 합니다 전자-Commu-도 서"},
+          {"Language":"yue","Text":"歡迎來到電子通訊書"},
+          {"Language":"en","Text":"Welcome to E-Commu-Book"},
+          {"Language":"it","Text":"Benvenuto a comu-eBook"},
+          {"Language":"fr","Text":"Bienvenue sur E-Commu-livre"},
+          {"Language":"es","Text":"¡Bienvenido a E-comunidad-libro"},
+          {"Language":"zh-CHT","Text":"歡迎來到電子通訊書"},
+          {"Language":"ar","Text":"مرحبا بكم في-الاتصالات-بووك"},
+          {"Language":"zh-CHS","Text":"欢迎来到电子通讯书"},
+          {"Language":"ja","Text":"E-Commu-Bookへようこそ"}]
       }
     ],
     Buttons: [
