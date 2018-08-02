@@ -60,3 +60,12 @@ md-dialog {
   background: pink;
   line-height: 28px;
 }
+
+.searchResultPreview {
+  width: 80%;
+  font-style: italic;
+  font-size: 22px;
+  border: 1px dashed #000;
+  background: LightCyan;
+  line-height: 24px;
+}

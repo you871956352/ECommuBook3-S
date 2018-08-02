@@ -264,6 +264,30 @@ function updateDisplayName(userProfile) { //Current not used
   }
   return userProfile;
 }
+function getObjectByTranslationText(userProfile, translationText, targetLanguage) {
+  for (var i = 0; i < userProfile.Categories.length; i++) {
+    for (var j = 0; j < userProfile.Categories[i].DisplayMultipleLanguage.length; j++) {
+      if (userProfile.Categories[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
+        if (userProfile.Categories[i].DisplayMultipleLanguage[j].Text == translationText) {
+          return { object: userProfile.Categories[i], type: "category" };
+        }
+      }
+    }
+   for (var j = 0; j < userProfile.Categories[i].Items.length; j++) {
+     for (var k = 0; k < userProfile.Categories[i].Items[j].DisplayMultipleLanguage.length;k++) {
+        if (userProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Language == targetLanguage) {
+          if (userProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text == translationText) {
+            return { object: userProfile.Categories[i].Items[j], type: "item" };
+          }
+        }
+      }
+    }
+  }
+  return {object: null, type: "undefined"};
+}
+function getObjectTranslationByID(userProfile, itemId, targetLanguage) {
+  return getObjectTranslation(getItemObjectByItemId(userProfile, itemId), targetLanguage);
+}
 function getObjectTranslation(itemObject, targetLanguage) {
   for (var k = 0; k < itemObject.DisplayMultipleLanguage.length; k++) {
     if (itemObject.DisplayMultipleLanguage[k].Language == targetLanguage) {

@@ -48,26 +48,14 @@ angular
     for (var i = 0; i < $scope.userProfile.Categories.length; i++) {
       if ($scope.userProfile.Categories[i].ID == $stateParams.categoryId) {
         $scope.category = $scope.userProfile.Categories[i];
-        for (var i = 0; i < $scope.category.DisplayMultipleLanguage.length; i++) {
-          translation = $scope.category.DisplayMultipleLanguage[i];
-          if (translation.Language == $scope.currentDisplayLanguage) {
-            $scope.categoryDisplayName = translation.Text;
-          }
-        }
+        $scope.categoryDisplayName = getObjectTranslation($scope.category, $scope.currentDisplayLanguage);
         break;
       }
     }
     $scope.showEnlargeItemPopup = function (ev, itemId) {
-      targetItem = getItemObjectByItemId($scope.userProfile, itemId);
       var targetScope = $scope.$new();
-      targetScope.selectedItemId = targetItem.ID;
-      targetScope.selectedItemName = targetItem.DisplayName;
-      for (var i = 0; i < targetItem.DisplayMultipleLanguage.length; i++) {
-        translation = targetItem.DisplayMultipleLanguage[i];
-        if (translation.Language == $scope.currentDisplayLanguage) {
-          targetScope.selectedItemName = translation.Text;
-        }
-      }
+      targetScope.selectedItemId = itemId;
+      targetScope.selectedItemName = getObjectTranslationByID($scope.userProfile, itemId, $scope.currentDisplayLanguage);
       targetScope.ImagePath = $scope.ImagePath;
       targetScope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile)
       var src = targetScope.AudioDirectory + targetScope.selectedItemId + ".mp3";
@@ -633,22 +621,12 @@ angular
       $scope.cancel = function () {
         $mdDialog.cancel("");
       };
-      for (var i = 0; i < $scope.selectedCategory.DisplayMultipleLanguage.length; i++) {
-        translation = $scope.selectedCategory.DisplayMultipleLanguage[i];
-        if (translation.Language == $scope.DisplayLanguage) {
-          $scope.categoryName = translation.Text;
-        }
-      }
+      $scope.categoryName = getObjectTranslation($scope.selectedCategory, $scope.currentDisplayLanguage);
       $scope.onAddToSentence = function (itemID) {
         var targetText = "Default";
         for (var i = 0; i < $scope.selectedCategory.Items.length; i++) {
           if ($scope.selectedCategory.Items[i].ID == itemID) {
-            for (var j = 0; j < $scope.selectedCategory.Items[i].DisplayMultipleLanguage.length; j++) {
-              translation = $scope.selectedCategory.Items[i].DisplayMultipleLanguage[j];
-              if (translation.Language == $scope.DisplayLanguage) {
-                targetText = translation.Text;
-              }
-            }
+            targetText = getObjectTranslation($scope.selectedCategory.Items[i], $scope.currentDisplayLanguage);
           }
         }
         $mdDialog.cancel(targetText);
@@ -660,9 +638,9 @@ angular
     $scope.subMenuProfile = UserProfileService.getMenuProfileSubObject("UserInformation");
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.textDisplayLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "DisplayLanguage", $scope.currentDisplayLanguage);
-    $scope.isShowResult = true;
+    $scope.isShowResult = false;
     $scope.isRecorded = false;
-    $scope.resultWords = ["22", "33", "44", "55"];
+    $scope.resultWords = ["Feeling", "Shaving", "Rice"];
     $scope.maxResultWordsDisplay = 3;
     $scope.textStart = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Start", $scope.currentDisplayLanguage);
     $scope.textStop = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Stop", $scope.currentDisplayLanguage);
@@ -679,7 +657,14 @@ angular
       VoiceRecordService.checkRecord();
     };
     $scope.uploadRecord = function () {
-      VoiceRecordService.uploadRecordSearch();
+      //VoiceRecordService.uploadRecordSearch();
+      $scope.isShowResult = true;
+      for (var i = 0; i < $scope.resultWords.length; i++) {
+        var targetIDObject = getObjectByTranslationText($scope.userProfile, $scope.resultWords[i], $scope.currentDisplayLanguage);
+        if (targetIDObject.type != "undefined") {
+          $scope.resultWords[i] = targetIDObject.object.ID;
+        }
+      }
     };
     $scope.searchRecording = function (ev) {
       if ($scope.textRecordState == $scope.textStart) {
@@ -713,13 +698,7 @@ angular
       targetScope.selectedCategoryName = "";
       for (var i = 0; i < $scope.shareCategory.categories.length; i++) {
         if ($scope.shareCategory.categories[i].ID == categoryId) {
-          var targetCategory = $scope.shareCategory.categories[i];
-          for (var j = 0; j < targetCategory.DisplayMultipleLanguage.length; j++) {
-            if (targetCategory.DisplayMultipleLanguage[j].Language == $scope.currentDisplayLanguage) {
-              targetScope.selectedCategoryName = targetCategory.DisplayMultipleLanguage[j].Text;
-              break;
-            }
-          }
+          targetScope.selectedCategoryName = getObjectTranslation($scope.shareCategory.categories[i], $scope.currentDisplayLanguage);
           break;
         }
       }
