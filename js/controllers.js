@@ -673,7 +673,7 @@ angular
       VoiceRecordService.checkRecord();
     };
     $scope.uploadRecord = function () {
-      VoiceRecordService.uploadRecord();
+      VoiceRecordService.uploadRecordSearch();
     };
     $scope.searchRecording = function (ev) {
       if ($scope.textRecordState == $scope.textStart) {
@@ -683,7 +683,7 @@ angular
       }
       else if ($scope.textRecordState == $scope.textStop) {
         $scope.textRecordState = $scope.textStart;
-        VoiceRecordService.stopCapture();
+        VoiceRecordService.stopCapture("searchTemp");
         $scope.isRecorded = true;
       }
     };

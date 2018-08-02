@@ -415,7 +415,7 @@ myModule.factory("ShareCategoryService", function ($http, $localStorage) { //Sto
 myModule.factory("VoiceRecordService", function ($http, $cordovaMedia) {
   var captureCfg = {}, audioDataBuffer = [];
   var timerInterVal, timerGenerateSimulatedData, recordingPath;
-  var objectURL = null, totalReceivedData = 0, id = "001";
+  var objectURL = null, totalReceivedData = 0;
   return {
     startCapture : function () {
       try {
@@ -444,7 +444,7 @@ myModule.factory("VoiceRecordService", function ($http, $cordovaMedia) {
         alert("startCapture exception: " + e);
       }
     },
-    stopCapture : function () {
+    stopCapture : function (id) {
       try {
         if (window.audioinput && audioinput.isCapturing()) {
           if (timerInterVal) { clearInterval(timerInterVal); }
@@ -485,8 +485,14 @@ myModule.factory("VoiceRecordService", function ($http, $cordovaMedia) {
       }
       MediaPlayer.play($cordovaMedia, recordingPath);
     },
-    uploadRecord: function () {
+    uploadRecordSearch: function () {
       alert("Need server side");
+    },
+    uploadRecordVC: function () {
+      alert("Need server side");
+    },
+    returnRecordingPath: function () {
+      return recordingPath;
     },
     onAudioInputError: function (error) {
       alert("onAudioInputError event recieved: " + JSON.stringify(error));
