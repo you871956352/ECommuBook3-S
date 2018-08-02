@@ -3,12 +3,17 @@
     <div id="grid-container" class="container-fluid" ng-controller="SentenceCtrl" ng-cloak>
       <md-card>
         <md-card-title>
-          <span class="md-headline">Speak Word for search</span><span flex></span>
-          <md-button class="md-raised" ng-click=searchRecording()>Record</md-button>
+          <span class="md-headline">Speak Word for search</span><span flex></span>     
         </md-card-title>
         <md-card-content>
           <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
-            {{textDisplayLanguage}}: {{displayLanguage.name}}</h1>
+            {{textDisplayLanguage}}: {{displayLanguage.name}}
+          </h1>
+        </md-card-content>
+        <md-card-content>
+          <md-button class="md-raised" ng-click=searchRecording()>{{textRecordState}}</md-button>
+          <md-button class="md-raised"  ng-click=checkRecord() ng-disabled="!isRecorded">{{textCheck}}</md-button>
+          <md-button class="md-raised" ng-click=uploadRecord() ng-disabled="!isRecorded">{{textUpload}}</md-button>
         </md-card-content>
       </md-card>
 
