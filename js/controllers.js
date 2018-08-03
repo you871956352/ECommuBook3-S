@@ -399,16 +399,13 @@ angular
       GlobalCacheVariable.DeleteCheck.SetFileToDelete(idList.length * 2);
       console.log("idList leangth: " + idList.length);
       console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete);
-      LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+      LoadingDeleteDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       $scope.userProfile.Categories.splice(categoryIndex, 1);
       UserProfileService.saveLocal($scope.userProfile);
       UserProfileService.postToServerCallback(function () {
-        console.log("Deleted in userProfile and uploaded.");
         for (i = 0; i < idList.length; i++) {
-          LocalCacheService.deleteLocalImage($scope.ImagePath, idList[i]);
-          LocalCacheService.deleteLocalAudio($scope.userProfile, $scope.AudioPath, idList[i]);
+          LocalCacheService.deleteCache($scope.userProfile, idList[i]);
         }
-        LoadingDialog.hideLoadingPopup($mdDialog);
         LocalCacheService.checkDelete();
       });
     };
@@ -580,14 +577,11 @@ angular
         console.log('categoryIndex = -1, categoryId:' + $scope.selectedCategoryId);
         return;
       }
-      LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+      LoadingDeleteDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       $scope.userProfile.Categories[categoryIndex] = $scope.category;
       UserProfileService.saveLocal($scope.userProfile);
       UserProfileService.postToServerCallback(function () {
-        console.log("Deleted in userProfile and uploaded.");
-        LocalCacheService.deleteLocalImage($scope.ImagePath, $scope.selectedItemId);
-        LocalCacheService.deleteLocalAudio($scope.userProfile, $scope.AudioPath, $scope.selectedItemId);
-        LoadingDialog.hideLoadingPopup($mdDialog);
+        LocalCacheService.deleteCache($scope.userProfile, $scope.selectedItemId);
         LocalCacheService.checkDelete();
       });
     };
@@ -609,7 +603,7 @@ angular
     $scope.textButtonBackspace = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "BackSpace", $scope.currentDisplayLanguage);
     $scope.textButtonUpload = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "UploadSentence", $scope.currentDisplayLanguage);
     $scope.textEmptyWarning = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SentenceEmptyWarning", $scope.currentDisplayLanguage);
-    $scope.onSentenceClick = function (sentence) {        
+    $scope.onSentenceClick = function (sentence) {
       console.log("Select Sentence:" + sentence.ID + " " + sentence.DisplayName + " " + sentence.DisplayNameLanguage);
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + sentence.ID + ".mp3");
     };

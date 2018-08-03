@@ -266,7 +266,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
         }
       }
       GlobalVariable.DownloadProgress.Reset();
-      var targetDirectory = GlobalVariable.LocalCacheDirectory();   
+      var targetDirectory = GlobalVariable.LocalCacheDirectory();
       GlobalCacheVariable.FileCheck.SetTotalImageFile(idList.length);
       for (var i = 0; i < idList.length; i++) {
         self.downloadImageToLocal(targetDirectory, ("images/" + idList[i] + ".jpg"), idList[i]);
@@ -294,9 +294,14 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       }
       if (isCheckDownload == true) {
         self.checkDownload();
-      }    
+      }
     },
-    deleteLocalImage: function(targetDirectory, targetID) {
+    deleteCache: function (userProfile, targetID) {
+      this.deleteLocalImage(targetID);
+      this.deleteLocalAudio(userProfile, targetID);
+    },
+    deleteLocalImage: function(targetID) {
+      var targetDirectory = GlobalVariable.LocalCacheDirectory() + "images/";
       var targetName = targetID + ".jpg";
       console.log("Start remove local image: " + targetID);
       console.log("TargetDirectory: " + targetDirectory + "\nTargetName:" + targetName);
@@ -318,7 +323,8 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
         }
       );
     },
-    deleteLocalAudio: function(userProfile,targetDirectory, targetID) {
+    deleteLocalAudio: function(userProfile, targetID) {
+      var targetDirectory = GlobalVariable.LocalCacheDirectory() + "audio/";
       var speechProvider = "bing";
       var currentSpeechLanguageCode = userProfile.SPEECH_LANGUAGE_CODE;
       var currentSpeechGender = userProfile.SPEECH_GENDER;
@@ -393,7 +399,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
           }else{
             self.checkDownload();
           }
-        }, 2000); //delay 2 seconds
+        }, 1000); //delay 2 seconds
     },
     checkDelete: function(){
       var self = this;
@@ -401,11 +407,11 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
           console.log("Check File Delete:" + GlobalCacheVariable.DeleteCheck.DeletedFile +  "/" + GlobalCacheVariable.DeleteCheck.FileToDelete);
           if (GlobalCacheVariable.DeleteCheck.DeletedFile >= GlobalCacheVariable.DeleteCheck.FileToDelete ) {
             console.log("Delete complete, refresh the page.");
-            window.location.reload(true);
+            $state.reload();
           }else{
             self.checkDelete();
           }
-        }, 2000); //delay 2 seconds
+        }, 1000); //delay 2 seconds
     }
   };
 });
