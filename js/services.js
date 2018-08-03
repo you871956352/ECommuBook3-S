@@ -281,6 +281,10 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
           audioIDList.push(item.ID);
         }
       }
+      for (var i = 0; i < userProfile.Sentences.length; i++) {
+        displayTextList.push(getObjectTranslation(userProfile.Sentences[i], userProfile.DISPLAY_LANGUAGE));
+        audioIDList.push(userProfile.Sentences[i].ID);
+      }
       GlobalCacheVariable.FileCheck.SetTotalAudioFile(audioIDList.length);
       for (var i = 0; i < audioIDList.length; i++) {
         self.downloadAudioToLocal(targetDirectory, "bing", userProfile.SPEECH_LANGUAGE_CODE, userProfile.SPEECH_GENDER, displayTextList[i], audioIDList[i]);

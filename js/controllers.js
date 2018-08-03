@@ -29,8 +29,7 @@ angular
       }
     });
     $scope.onCategoryClicked = function (categoryId) {
-      var src = GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + categoryId + ".mp3";
-      MediaPlayer.play($cordovaMedia, src);
+      MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + categoryId + ".mp3");
     };
   })
   .controller("CategoryCtrl", function ($scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService, $http, LocalCacheService) {
@@ -603,10 +602,9 @@ angular
     $scope.textSelectAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SelectAdd", $scope.currentDisplayLanguage);
     $scope.textButtonBackspace = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "BackSpace", $scope.currentDisplayLanguage);
     $scope.textButtonUpload = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "UploadSentence", $scope.currentDisplayLanguage);
-    $scope.onSentenceClick = function (sentence) {
-      alert("Select Sentence:" + sentence.ID + " " + sentence.DisplayName + " " + sentence.DisplayNameLanguage);
-      MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + sentence.ID + ".mp3");
-
+    $scope.onSentenceClick = function (sentence) {        
+      console.log("Select Sentence:" + sentence.ID + " " + sentence.DisplayName + " " + sentence.DisplayNameLanguage);
+      MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + sentence.ID + ".mp3");
     };
     $scope.sentenceAdd = function () {
       $scope.currentConstructSentence = $scope.currentConstructSentence + $scope.inputAdd;
