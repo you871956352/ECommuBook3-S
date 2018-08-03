@@ -142,7 +142,7 @@ angular
           var targetDirectory = GlobalVariable.LocalCacheDirectory();
           console.log(targetDirectory + " " + $scope.DefaultSpeakerObject.targetSpeechLanguage + " " + $scope.DefaultSpeakerObject.targetSpeechGender + " " + $scope.selectedItemName + " " + $scope.selectItemObject.ID);
           LocalCacheService.downloadAudioToLocal(targetDirectory, "bing", $scope.DefaultSpeakerObject.targetSpeechLanguage, $scope.DefaultSpeakerObject.targetSpeechGender, $scope.selectedItemName, $scope.selectItemObject.ID);
-        }      
+        }
       };
       $scope.editText = function () {
         if ($scope.EditNewText == undefined || $scope.EditNewText == "") {
@@ -154,7 +154,7 @@ angular
           UserProfileService.postToServerCallback(function () {
             console.log("Post to Server After Edit");
           });
-        }      
+        }
       };
       $scope.enableEditTog = function () {
         $scope.enableEdit = !$scope.enableEdit;
@@ -793,7 +793,7 @@ angular
       }
     }
   })
-  .controller("UserInfoCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$mdDialog,UserProfileService,VoiceRecordService){
+  .controller("UserInfoCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$mdDialog,$http,UserProfileService,VoiceRecordService,VoiceModelService){
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.SpeechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.GenderList = GlobalVariable.GenderList;
@@ -848,7 +848,31 @@ angular
           $scope.upload = function () { VoiceRecordService.uploadRecordVC(); }
         }
     };
-    $scope.synchronizeStart = function () {};
+    $scope.synchronizeStart = function (ev) {
+      var targetScope = $scope.$new();
+      var id = $scope.userProfile.ID;
+      targetScope.collectedVoice = 0;
+      targetScope.totalVoice = 160;
+      targetScope.CollectionStatusText = "Uncompleted"
+      targetScope.CollectionProgress = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "CollectionProgress", $scope.currentDisplayLanguage);
+      //VoiceModelService.getOnline(id);
+      $mdDialog.show({
+        controller: DialogController,
+        templateUrl: "templates/popup-synchronize.tmpl.html",
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        scope: targetScope,
+        fullscreen: false
+        });
+      function DialogController($scope, $mdDialog) {
+        $scope.cancel = function () { $mdDialog.cancel(); };
+        $scope.startTrain = function () {
+
+        };
+        //$scope.VoiceModel = VoiceModelService.getLatest();
+      }
+    };
   })
   .controller("TestCtrl", function ($scope) {
     $scope.testClick = function () {};

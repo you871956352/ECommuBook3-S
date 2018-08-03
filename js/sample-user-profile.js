@@ -8366,3 +8366,9 @@ function getSampleMenuProfile() {
   };
   return json;
 }
+
+function getSampleVoiceModel(){
+  json = {
+  };
+  return json;
+}
