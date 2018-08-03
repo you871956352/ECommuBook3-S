@@ -831,30 +831,6 @@ angular
     };
     $scope.synchronizeStart = function () {};
   })
-  .controller("TestCtrl", function ($scope,$cordovaFileTransfer,$cordovaMedia,$mdDialog, UserProfileService) { //Test Ctrl, for logging
-    var targetDirectory = GlobalVariable.LocalCacheDirectory() + "images/";
-    var imageID = "00000000-0000-0000-0003-000000000197";
-    var uploadID = "00000000-0000-0000-0000-000000000012";
-    var uploadName = uploadID + ".jpg";
-    var path;
-    $scope.ImagePath = targetDirectory + imageID + ".jpg";
-    $scope.recordClick = function (ev) {};
-    $scope.uploadClick = function () {
-      var filePath = $scope.ImagePath;
-      var options = new FileUploadOptions();
-      options.fileKey = "file";
-      options.fileName = uploadName;
-      options.mimeType = "image/jpeg";
-      options.httpMethod = "POST";
-      options.params = { uuid:  uploadID};
-      console.log("Category Option: " + JSON.stringify(options));
-      $cordovaFileTransfer.upload(ServerPathVariable.GetPostImagePath(), filePath, options).then(
-        function (result) {
-          console.log("ID: " + uploadName + " -- Success.");
-        },
-        function (err) { // Error
-          console.log("Image upload Error: " + JSON.stringify(err));
-        },
-        function (progress) { });
-    };
+  .controller("TestCtrl", function ($scope) {
+    $scope.testClick = function () {};
   });

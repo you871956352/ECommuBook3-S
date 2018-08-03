@@ -53,7 +53,7 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
       for (var i = 0; i < Categories.length; i++) {
         if (Categories[i].ID == categoryID) {
           newCategories.push(Categories[i]);
-          targetIndex = i;         
+          targetIndex = i;
           break;
         }
       }
@@ -140,7 +140,7 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
       }
     },
     getTranslatedMenuText: function (mode, targetText, inputLanguage) {
-      var menuProfile = this.getMenuProfile();   
+      var menuProfile = this.getMenuProfile();
       if (mode == "Operations") {
         return this.getTranslatedObjectText(menuProfile.Operations, targetText, inputLanguage)
       }
@@ -153,7 +153,7 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
       }
       else {
         var targetLanguage = inputLanguage;
-      }   
+      }
       for (var i = 0; i < targetObject.length; i++) {
         if (targetObject[i].OperationType == targetText) {
           for (var j = 0; j < targetObject[i].DisplayMultipleLanguage.length; j++) {
@@ -234,14 +234,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       for (var i = 0; i < idList.length; i++) {
         self.downloadImageToLocal(targetDirectory, ("images/" + idList[i] + ".jpg"), idList[i]);
       }
-
-      setTimeout(function () {
-        console.log("Check File static:" + GlobalCacheVariable.FileCheck.ExistImageFile + "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
-        if (GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
-          console.log("Set IsNoDownload = 1");
-          GlobalVariable.DownloadProgress.IsNoDownload = 1;
-        }
-      }, 2000); //delay 2 seconds
+      self.checkDownload();
     },
     prepareCache: function (userProfile) {
       console.log("Start prepare cache");
