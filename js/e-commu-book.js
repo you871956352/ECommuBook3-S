@@ -275,6 +275,50 @@ var LoadingDialog = new function () {
   };
 };
 
+var LoadingDeleteDialog = new function () {
+  this.showLoadingPopup = function ($mdDialog, $ionicSideMenuDelegate) {
+    $mdDialog.show({
+      controller: this.LoadPopupController,
+      templateUrl: "templates/popup-loading.tmpl.html",
+      parent: angular.element(document.body),
+      clickOutsideToClose: false,
+      fullscreen: false // Only for -xs, -sm breakpoints.
+    }) .then(
+        function (answer) {},
+        function () {}
+      );
+  };
+  this.hideLoadingPopup = function ($mdDialog) {
+    $mdDialog.hide();
+  };
+  this.LoadPopupController = function ($scope, $mdDialog, $ionicSideMenuDelegate) {
+    $scope.downloaded = NaN;
+    $scope.total = NaN;
+    $scope.hide = function () { $mdDialog.hide(); };
+    $scope.cancel = function () { $mdDialog.cancel(); };
+    $scope.answer = function (answer) { $mdDialog.hide(answer); };
+
+    var loop = setInterval(function () {
+      $scope.downloaded = GlobalCacheVariable.DeleteCheck.DeletedFile;
+      $scope.total = GlobalCacheVariable.DeleteCheck.FileToDelete;
+      if ($scope.total > 0) {
+        $scope.precentage = Math.round(100.0 * $scope.downloaded / $scope.total);
+      }
+      else {
+        $scope.precentage = 0;
+      }
+      $scope.message = "Loading, Please wait";
+      if (($scope.downloaded == $scope.total && $scope.total > 0) || GlobalVariable.DownloadProgress.IsNoDownload == 1) {
+        clearInterval(loop);
+        setTimeout(function () {
+          $ionicSideMenuDelegate.toggleLeft();
+          $scope.hide();
+        }, 2500);
+      }
+    }, 500);
+  };
+};
+
 function updateDisplayName(userProfile) { //Current not used
   var category, item, targetLanguage = userProfile.DISPLAY_LANGUAGE;
   for (i = 0; i < userProfile.Categories.length; i++) {
