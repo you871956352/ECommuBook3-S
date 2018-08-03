@@ -248,7 +248,10 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       }
       self.checkDownload();
     },
-    prepareCache: function (userProfile) {
+    prepareCache: function (userProfile, isCheckDownload) {
+      if (isCheckDownload == undefined) {
+        isCheckDownload = true;
+      }
       console.log("Start prepare cache");
       var self = this;
       GlobalCacheVariable.FileCheck.Reset();
@@ -289,7 +292,9 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       for (var i = 0; i < audioIDList.length; i++) {
         self.downloadAudioToLocal(targetDirectory, "bing", userProfile.SPEECH_LANGUAGE_CODE, userProfile.SPEECH_GENDER, displayTextList[i], audioIDList[i]);
       }
-      self.checkDownload();
+      if (isCheckDownload == true) {
+        self.checkDownload();
+      }    
     },
     deleteLocalImage: function(targetDirectory, targetID) {
       var targetName = targetID + ".jpg";

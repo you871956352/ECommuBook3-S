@@ -33,6 +33,7 @@ angular
     };
   })
   .controller("CategoryCtrl", function ($scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService, $http, LocalCacheService) {
+    $scope.userProfile = UserProfileService.getLatest();
     $scope.subMenuPage = UserProfileService.getMenuProfileSubObject("CategoryGrid");
     $scope.textButtonShare = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareButton", $scope.currentDisplayLanguage);
     $scope.textButtonSetTop = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SetTopButton", $scope.currentDisplayLanguage);
@@ -152,6 +153,7 @@ angular
     }
   })
   .controller("SettingCtrl", function ($scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService) {
+    $scope.userProfile = UserProfileService.getLatest();
     $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.speechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.genderList = GlobalVariable.GenderList;
@@ -248,6 +250,7 @@ angular
     }
   })
   .controller("AddCategoryCtrl", function ($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
+    $scope.userProfile = UserProfileService.getLatest();
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "AddCategory", $scope.currentDisplayLanguage);
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
     $scope.textCategoryName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CategoryName", $scope.currentDisplayLanguage);
@@ -399,8 +402,6 @@ angular
           LocalCacheService.deleteLocalAudio($scope.userProfile, $scope.AudioPath, idList[i]);
         }
         LoadingDialog.hideLoadingPopup($mdDialog);
-        $ionicSideMenuDelegate.toggleLeft();
-        alert("Category Deleted");
         LocalCacheService.checkDelete();
       });
     };
@@ -579,9 +580,7 @@ angular
         console.log("Deleted in userProfile and uploaded.");
         LocalCacheService.deleteLocalImage($scope.ImagePath, $scope.selectedItemId);
         LocalCacheService.deleteLocalAudio($scope.userProfile, $scope.AudioPath, $scope.selectedItemId);
-        $ionicSideMenuDelegate.toggleLeft();
         LoadingDialog.hideLoadingPopup($mdDialog);
-        alert("Item Deleted");
         LocalCacheService.checkDelete();
       });
     };
@@ -653,7 +652,7 @@ angular
         UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
           console.log("Get sentence detail online");
           $scope.userProfile = UserProfileService.getLatest();
-          LocalCacheService.prepareCache(UserProfileService.getLatest());
+          LocalCacheService.prepareCache(UserProfileService.getLatest(),false);
         });
       });
     };
@@ -674,6 +673,7 @@ angular
     }
   })
   .controller("SearchCtrl", function ($scope, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
+    $scope.userProfile = UserProfileService.getLatest();
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Search", $scope.currentDisplayLanguage);
     $scope.subUserInformationProfile = UserProfileService.getMenuProfileSubObject("UserInformation");
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
@@ -724,6 +724,7 @@ angular
     };
   })
   .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
+    $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Download", $scope.currentDisplayLanguage);
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
