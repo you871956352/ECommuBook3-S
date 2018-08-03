@@ -118,6 +118,14 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
       }
       return UserProfile;
     },
+    addSentence: function (UserProfile, targetSentence, inputDisplayNameLanguage) {
+      var SentenceObject = {};
+      SentenceObject.ID = guid();
+      SentenceObject.DisplayNameLanguage = inputDisplayNameLanguage;
+      SentenceObject.DisplayName = targetSentence;
+      UserProfile.Sentences.push(SentenceObject);
+      return UserProfile;
+    },
     getMenuProfile: function () {
       /*if ($localStorage.menuProfile) {
         console.log("Read menuProfile from LocalStorage.");
@@ -169,7 +177,8 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
 
 myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $cordovaFileTransfer) { //Used for store user audio and image
   return {
-    downloadImageToLocal: function(targetDirectory, targetName, itemId) {
+    downloadImageToLocal: function (targetDirectory, targetName, itemId) {
+      $cordovaFile.createDir(targetDirectory, "images", false);
       var self = this;
       $cordovaFile.checkFile(targetDirectory, targetName).then(
         function(result) {
@@ -192,7 +201,10 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
         }
       );
     },
-    downloadAudioToLocal: function(targetDirectory,speechProvider, speechLanguageCode,speechGender,displayText, audioID) {
+    downloadAudioToLocal: function (targetDirectory, speechProvider, speechLanguageCode, speechGender, displayText, audioID) {
+      $cordovaFile.createDir(targetDirectory, speechProvider, false);
+      $cordovaFile.createDir(targetDirectory, speechProvider + "/" + speechLanguageCode, false);
+      $cordovaFile.createDir(targetDirectory, speechProvider + "/" + speechLanguageCode + "/" + speechGender, false);
       var self = this;
       var targetName = "audio/" + speechProvider + "/" + speechLanguageCode + "/" + speechGender + "/" + audioID +  ".mp3";
       var a = $cordovaFile.checkFile(targetDirectory, targetName).then(
@@ -250,38 +262,28 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
           idList.push(item.ID);
         }
       }
-
       GlobalVariable.DownloadProgress.Reset();
-      var targetDirectory = GlobalVariable.LocalCacheDirectory();
-      $cordovaFile.createDir(targetDirectory, "images", false);
+      var targetDirectory = GlobalVariable.LocalCacheDirectory();   
       GlobalCacheVariable.FileCheck.SetTotalImageFile(idList.length);
       for (var i = 0; i < idList.length; i++) {
         self.downloadImageToLocal(targetDirectory, ("images/" + idList[i] + ".jpg"), idList[i]);
       }
-
       // audio cache
-      var currentDisplayLanguage = userProfile.DISPLAY_LANGUAGE;
-      var currentSpeechLanguageCode = userProfile.SPEECH_LANGUAGE_CODE;
-      var currentSpeechGender = userProfile.SPEECH_GENDER;
-
       var displayTextList = [];
       var audioIDList = [];
       for (var i = 0; i < userProfile.Categories.length; i++) {
         var category = userProfile.Categories[i];
-        displayTextList.push(getObjectTranslation(category, currentDisplayLanguage));
+        displayTextList.push(getObjectTranslation(category, userProfile.DISPLAY_LANGUAGE));
         audioIDList.push(category.ID);
         for (var j = 0; j < category.Items.length; j++) {
           item = category.Items[j];
-          displayTextList.push(getObjectTranslation(item, currentDisplayLanguage));
+          displayTextList.push(getObjectTranslation(item, userProfile.DISPLAY_LANGUAGE));
           audioIDList.push(item.ID);
         }
       }
-      $cordovaFile.createDir(targetDirectory, "bing", false);
-      $cordovaFile.createDir(targetDirectory, "bing/" + currentSpeechLanguageCode, false);
-      $cordovaFile.createDir(targetDirectory, "bing/" + currentSpeechLanguageCode + "/" + currentSpeechGender,false);
       GlobalCacheVariable.FileCheck.SetTotalAudioFile(audioIDList.length);
       for (var i = 0; i < audioIDList.length; i++) {
-        self.downloadAudioToLocal(targetDirectory, "bing", currentSpeechLanguageCode, currentSpeechGender, displayTextList[i], audioIDList[i]);
+        self.downloadAudioToLocal(targetDirectory, "bing", userProfile.SPEECH_LANGUAGE_CODE, userProfile.SPEECH_GENDER, displayTextList[i], audioIDList[i]);
       }
       self.checkDownload();
     },

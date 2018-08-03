@@ -134,8 +134,6 @@ angular
           $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.selectedDisplayLanguage);
           $scope.DefaultSpeakerObject = GlobalVariable.GetDefaultSpeakerForDisplayLanguage($scope.selectedDisplayLanguage);
           var targetDirectory = GlobalVariable.LocalCacheDirectory();
-          $cordovaFile.createDir(targetDirectory, "bing/" + $scope.DefaultSpeakerObject.targetSpeechLanguage, false);
-          $cordovaFile.createDir(targetDirectory, "bing/" + $scope.DefaultSpeakerObject.targetSpeechLanguage + "/" + $scope.DefaultSpeakerObject.targetSpeechGender, false);
           console.log(targetDirectory + " " + $scope.DefaultSpeakerObject.targetSpeechLanguage + " " + $scope.DefaultSpeakerObject.targetSpeechGender + " " + $scope.selectedItemName + " " + $scope.selectItemObject.ID);
           LocalCacheService.downloadAudioToLocal(targetDirectory, "bing", $scope.DefaultSpeakerObject.targetSpeechLanguage, $scope.DefaultSpeakerObject.targetSpeechGender, $scope.selectedItemName, $scope.selectItemObject.ID);
         }      
@@ -593,8 +591,8 @@ angular
     $scope.Text = UserProfileService.getTranslatedMenuText("Operations", "WelcomeText", $scope.currentDisplayLanguage);
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Welcome", $scope.currentDisplayLanguage);
    })
-  .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $ionicSideMenuDelegate) { //For Construct Sentence
-    $scope.sentences = $scope.userProfile.Sentences;
+  .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
+    $scope.userProfile = UserProfileService.getLatest();
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
     $scope.inputAdd = "";
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Sentence", $scope.currentDisplayLanguage);
@@ -605,8 +603,10 @@ angular
     $scope.textSelectAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SelectAdd", $scope.currentDisplayLanguage);
     $scope.textButtonBackspace = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "BackSpace", $scope.currentDisplayLanguage);
     $scope.textButtonUpload = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "UploadSentence", $scope.currentDisplayLanguage);
-    $scope.onSentenceCheck = function (sentenceID) {
-      alert(sentenceID);
+    $scope.onSentenceClick = function (sentence) {
+      alert("Select Sentence:" + sentence.ID + " " + sentence.DisplayName + " " + sentence.DisplayNameLanguage);
+      MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + sentence.ID + ".mp3");
+
     };
     $scope.sentenceAdd = function () {
       $scope.currentConstructSentence = $scope.currentConstructSentence + $scope.inputAdd;
@@ -645,8 +645,19 @@ angular
           }
         });
     };
-    $scope.upLoadSentence = function(){
-      alert($scope.currentConstructSentence);
+    $scope.upLoadSentence = function () {
+      GlobalVariable.DownloadProgress.Reset();
+      LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+      var newUserProfile = UserProfileService.addSentence($scope.userProfile, $scope.currentConstructSentence, $scope.currentDisplayLanguage);
+      UserProfileService.saveLocal(newUserProfile);
+      UserProfileService.postToServerCallback(function () {
+        console.log("Post to Server After Add Sentence");
+        UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
+          console.log("Get sentence detail online");
+          $scope.userProfile = UserProfileService.getLatest();
+          LocalCacheService.prepareCache(UserProfileService.getLatest());
+        });
+      });
     };
     function SentenceDialogController($scope, $mdDialog, $cordovaMedia) {
       $scope.cancel = function () {
