@@ -635,18 +635,22 @@ angular
   })
   .controller("SearchCtrl", function ($scope, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Search", $scope.currentDisplayLanguage);
-    $scope.subMenuProfile = UserProfileService.getMenuProfileSubObject("UserInformation");
+    $scope.subUserInformationProfile = UserProfileService.getMenuProfileSubObject("UserInformation");
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
-    $scope.textDisplayLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "DisplayLanguage", $scope.currentDisplayLanguage);
+    $scope.textDisplayLanguage = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "DisplayLanguage", $scope.currentDisplayLanguage);
+    $scope.textStart = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Start", $scope.currentDisplayLanguage);
+    $scope.textStop = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Stop", $scope.currentDisplayLanguage);
+    $scope.textCheck = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Check", $scope.currentDisplayLanguage);
+    $scope.textUpload = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Upload", $scope.currentDisplayLanguage);
+    $scope.textRecordState = $scope.textStart;
+    $scope.subMenuProfile = UserProfileService.getMenuProfileSubObject("Search");
+    $scope.textGuide = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SearchGuide1", $scope.currentDisplayLanguage) + ", " + UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SearchGuide2", $scope.currentDisplayLanguage);
+    $scope.textSearchResult = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SearchResult", $scope.currentDisplayLanguage);
     $scope.isShowResult = false;
     $scope.isRecorded = false;
     $scope.resultWords = ["Feeling", "Shaving", "Rice"];
     $scope.maxResultWordsDisplay = 3;
-    $scope.textStart = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Start", $scope.currentDisplayLanguage);
-    $scope.textStop = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Stop", $scope.currentDisplayLanguage);
-    $scope.textCheck = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Check", $scope.currentDisplayLanguage);
-    $scope.textUpload = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Upload", $scope.currentDisplayLanguage);
-    $scope.textRecordState = $scope.textStart;
+
 
     if (window.cordova && window.cordova.file && window.audioinput) {
       console.log("Use 'Start Capture' to begin...");
