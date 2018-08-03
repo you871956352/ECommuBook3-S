@@ -7550,6 +7550,40 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "نسبة النجاح" },
               { Language: "zh-CHS", Text: "分享成功" },
               { Language: "ja", Text: "成功を共有します。" }]
+          },
+          {
+            OperationType: "Edit",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Bearbeiten" },
+              { "Language": "ru", "Text": "Редактировать" },
+              { "Language": "pt", "Text": "Editar" },
+              { "Language": "ko", "Text": "편집" },
+              { "Language": "yue", "Text": "編輯" },
+              { "Language": "en", "Text": "Edit" },
+              { "Language": "it", "Text": "Modifica" },
+              { "Language": "fr", "Text": "Edit" },
+              { "Language": "es", "Text": "Editar" },
+              { "Language": "zh-CHT", "Text": "編輯" },
+              { "Language": "ar", "Text": "تحرير" },
+              { "Language": "zh-CHS", "Text": "编辑" },
+              { "Language": "ja", "Text": "編集" }]
+          },
+          {
+            OperationType: "SelectLanguage",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Sprache auswählen" },
+              { "Language": "ru", "Text": "Выбрать язык" },
+              { "Language": "pt", "Text": "Selecionar idioma" },
+              { "Language": "ko", "Text": "언어 선택" },
+              { "Language": "yue", "Text": "選擇語言" },
+              { "Language": "en", "Text": "Select Language" },
+              { "Language": "it", "Text": "Seleziona lingua" },
+              { "Language": "fr", "Text": "Sélectionner une langue" },
+              { "Language": "es", "Text": "Seleccionar idioma" },
+              { "Language": "zh-CHT", "Text": "選擇語言" },
+              { "Language": "ar", "Text": "حدد اللغة" },
+              { "Language": "zh-CHS", "Text": "选择语言" },
+              { "Language": "ja", "Text": "言語の選択" }]
           }
         ]
       },

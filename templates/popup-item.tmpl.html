@@ -2,11 +2,15 @@
   <form ng-cloak>
     <md-toolbar>
       <div class="md-toolbar-tools" style="text-align: center;">
-        <div style="text-align: center;"  ng-if="isShowDisplayName.checked">{{selectedItemName}}</div>
+        <div style="text-align: center;" ng-if="isShowDisplayName.checked">{{selectedItemName}}</div>
         <span flex></span>
+        <md-button class="md-icon-button" ng-click="enableEditTog()">
+          <md-icon md-svg-src="img/icons/ic_edit.svg" aria-label="Enable edit"></md-icon>
+        </md-button>
         <md-button class="md-icon-button" ng-click="cancel()">
           <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
         </md-button>
+        
       </div>
     </md-toolbar>
 
@@ -19,23 +23,23 @@
         </div>
       </div>
       <md-card>
-        <md-card-content>       
-          <md-input-container style="margin: auto; width: 50%;">
-            <label>Edit</label>
-            <input type="text" ng-model="EditNewText">
-          </md-input-container>
-          <md-button class="md-raised" ng-click="editText()" style="float: right">Confirm</md-button>
-        </md-card-content>
         <md-card-content>
           <md-input-container style="margin: auto; width: 50%;">
-            <label>Select Language</label>
+            <label>{{textLabelSelectLanguage}}</label>
             <md-select ng-model="selectedDisplayLanguage" ng-change="popupLanguageChange()">
               <md-option ng-value="displayLanguage.value" ng-repeat="displayLanguage in displayLanguageList">{{displayLanguage.name}}</md-option>
             </md-select>
           </md-input-container>
           <md-button class="md-raised" ng-click="reorderAddTopItem($event)" style="float: right">{{textButtonSetTop}}</md-button>
         </md-card-content>
-    </md-card>
+        <md-card-content ng-if="enableEdit == true">
+          <md-input-container style="margin: auto; width: 50%;">
+            <label>{{textLabelEdit}}</label>
+            <input type="text" ng-model="EditNewText">
+          </md-input-container>
+          <md-button class="md-raised" ng-click="editText()" style="float: right">{{textButtonConfirm}}</md-button>
+        </md-card-content>
+      </md-card>
     </md-dialog-content>
   </form>
 </md-dialog>
