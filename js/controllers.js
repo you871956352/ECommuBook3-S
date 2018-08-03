@@ -658,7 +658,7 @@ angular
         UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
           console.log("Get sentence detail online");
           $scope.userProfile = UserProfileService.getLatest();
-          LocalCacheService.prepareCache(UserProfileService.getLatest(),false);
+          LocalCacheService.prepareCache(UserProfileService.getLatest());
         });
       });
     };
