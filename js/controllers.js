@@ -45,6 +45,7 @@ angular
     $scope.textButtonCancel = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CancelButton", $scope.currentDisplayLanguage);
     $scope.textNotification = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Notification", $scope.currentDisplayLanguage);
     $scope.categoryId = $stateParams.categoryId;
+    $scope.enableEdit = false;
     for (var i = 0; i < $scope.userProfile.Categories.length; i++) {
       if ($scope.userProfile.Categories[i].ID == $stateParams.categoryId) {
         $scope.category = $scope.userProfile.Categories[i];
@@ -110,6 +111,11 @@ angular
       });
     };
     function DialogController($scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer, $cordovaFile) {
+      $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
+      $scope.textButtonConfirm = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton", $scope.currentDisplayLanguage);
+      $scope.subMenuPage = UserProfileService.getMenuProfileSubObject("CategoryGrid");
+      $scope.textLabelEdit = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Edit", $scope.currentDisplayLanguage);
+      $scope.textLabelSelectLanguage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SelectLanguage", $scope.currentDisplayLanguage);
       $scope.cancel = function () {
         $mdDialog.cancel();
       };
@@ -149,6 +155,9 @@ angular
             console.log("Post to Server After Edit");
           });
         }
+      };
+      $scope.enableEditTog = function () {
+        $scope.enableEdit = !$scope.enableEdit;
       };
     }
   })
