@@ -33,7 +33,7 @@ angular
       MediaPlayer.play($cordovaMedia, src);
     };
   })
-  .controller("CategoryCtrl", function ($scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService, $http) {
+  .controller("CategoryCtrl", function ($scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService, $http, LocalCacheService) {
     $scope.subMenuPage = UserProfileService.getMenuProfileSubObject("CategoryGrid");
     $scope.textButtonShare = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareButton", $scope.currentDisplayLanguage);
     $scope.textButtonSetTop = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SetTopButton", $scope.currentDisplayLanguage);
@@ -54,12 +54,15 @@ angular
     }
     $scope.showEnlargeItemPopup = function (ev, itemId) {
       var targetScope = $scope.$new();
-      targetScope.selectedItemId = itemId;
+      targetScope.userProfile = $scope.userProfile;
+      targetScope.selectItemObject = getItemObjectByItemId($scope.userProfile, itemId);
+      targetScope.displayLanguageList = GlobalVariable.DisplayLanguageList;
+      targetScope.currentDisplayLanguage = $scope.currentDisplayLanguage;
+      targetScope.selectedDisplayLanguage = $scope.currentDisplayLanguage;
       targetScope.selectedItemName = getObjectTranslationByID($scope.userProfile, itemId, $scope.currentDisplayLanguage);
       targetScope.ImagePath = $scope.ImagePath;
-      targetScope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile)
-      var src = targetScope.AudioDirectory + targetScope.selectedItemId + ".mp3";
-      MediaPlayer.play($cordovaMedia, src);
+      targetScope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
+      MediaPlayer.play($cordovaMedia, targetScope.AudioDirectory + targetScope.selectItemObject.ID + ".mp3");
       $mdDialog.show({
         controller: DialogController,
         templateUrl: "templates/popup-item.tmpl.html",
@@ -106,21 +109,49 @@ angular
         console.log("User decide to quit share");
       });
     };
-    function DialogController($scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer) {
+    function DialogController($scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer, $cordovaFile) {
       $scope.cancel = function () {
         $mdDialog.cancel();
       };
       $scope.onItemClicked = function (ev) {
-        var src = $scope.AudioDirectory + $scope.selectedItemId + ".mp3";
-        MediaPlayer.play($cordovaMedia, src);
+        MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + $scope.selectItemObject.ID + ".mp3");
       };
       $scope.reorderAddTopItem = function (ev) {
-        newUserProfile = UserProfileService.setTargetItemTop($scope.userProfile, $scope.categoryId, $scope.selectedItemId);
+        newUserProfile = UserProfileService.setTargetItemTop($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID);
         UserProfileService.saveLocal(newUserProfile);
         UserProfileService.postToServerCallback(function () {
           console.log("Post to Server After Reorder");
         });
-      }
+      };
+      $scope.popupLanguageChange = function () {
+        $scope.selectedItemName = getObjectTranslation($scope.selectItemObject, $scope.selectedDisplayLanguage);
+        if ($scope.selectedDisplayLanguage == $scope.currentDisplayLanguage) {
+          console.log("Return back to current Display Language...");
+          $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
+        }
+        else {
+          console.log("Auto Create Target Language Speaker...");
+          $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.selectedDisplayLanguage);
+          $scope.DefaultSpeakerObject = GlobalVariable.GetDefaultSpeakerForDisplayLanguage($scope.selectedDisplayLanguage);
+          var targetDirectory = GlobalVariable.LocalCacheDirectory();
+          $cordovaFile.createDir(targetDirectory, "bing/" + $scope.DefaultSpeakerObject.targetSpeechLanguage, false);
+          $cordovaFile.createDir(targetDirectory, "bing/" + $scope.DefaultSpeakerObject.targetSpeechLanguage + "/" + $scope.DefaultSpeakerObject.targetSpeechGender, false);
+          console.log(targetDirectory + " " + $scope.DefaultSpeakerObject.targetSpeechLanguage + " " + $scope.DefaultSpeakerObject.targetSpeechGender + " " + $scope.selectedItemName + " " + $scope.selectItemObject.ID);
+          LocalCacheService.downloadAudioToLocal(targetDirectory, "bing", $scope.DefaultSpeakerObject.targetSpeechLanguage, $scope.DefaultSpeakerObject.targetSpeechGender, $scope.selectedItemName, $scope.selectItemObject.ID);
+        }      
+      };
+      $scope.editText = function () {
+        if ($scope.EditNewText == undefined || $scope.EditNewText == "") {
+          alert("Please give a new name for this item");
+        }
+        else {
+          newUserProfile = UserProfileService.editTargetItem($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID, $scope.selectedDisplayLanguage, $scope.EditNewText);
+          UserProfileService.saveLocal(newUserProfile);
+          UserProfileService.postToServerCallback(function () {
+            console.log("Post to Server After Edit");
+          });
+        }      
+      };
     }
   })
   .controller("SettingCtrl", function ($scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService) {

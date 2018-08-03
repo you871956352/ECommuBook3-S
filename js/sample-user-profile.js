@@ -7238,7 +7238,6 @@ function getSampleUserProfile() {
     Sentences: [
       {
         ID: "00000000-0000-2333-0001-000000000001",
-        Priority: 0,
         DisplayName: "The world, Time Stop!",
         DisplayNameLanguage: "en",
         DisplayMultipleLanguage: [
@@ -7258,7 +7257,6 @@ function getSampleUserProfile() {
       },
       {
         ID: "00000000-0000-2333-0001-000000000002",
-        Priority: 10,
         DisplayName: "The traveller of wind and time",
         DisplayNameLanguage: "en",
         DisplayMultipleLanguage: [

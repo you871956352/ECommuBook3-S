@@ -79,6 +79,29 @@ var GlobalVariable = new function () { //User to store some global variable
   this.GetLocalAudioDirectory = function (userProfile) {
     return this.LocalCacheDirectory() + "audio/bing/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER + "/";
   };
+  this.GetLocalAudioDirectoryByInput = function (targetSpeechLanguage, targetSpeechGender) {
+    return this.LocalCacheDirectory() + "audio/bing/" + targetSpeechLanguage + "/" + targetSpeechGender + "/";
+  };
+  this.GetLocalAudioDirectoryByDisplayLanguage = function (targetDisplayLanguage) {
+    var LanguageObject = this.GetDefaultSpeakerForDisplayLanguage(targetDisplayLanguage);
+    return this.GetLocalAudioDirectoryByInput(LanguageObject.targetSpeechLanguage, LanguageObject.targetSpeechGender);
+  };
+  this.GetDefaultSpeakerForDisplayLanguage = function (targetDisplayLanguage) {
+    var targetSpeechLanguage, targetSpeechGender;
+    for (var i = 0; i < this.SpeechLanguageList.length; i++) {
+      if (this.SpeechLanguageList[i].language == targetDisplayLanguage) {
+        targetSpeechLanguage = this.SpeechLanguageList[i].value;
+        break;
+      }
+    }
+    for (var i = 0; i < this.GenderList.length; i++) {
+      if (this.GenderList[i].language == targetSpeechLanguage) {
+        targetSpeechGender = this.GenderList[i].value;
+        break;
+      }
+    }
+    return { targetDisplayLanguage, targetSpeechLanguage, targetSpeechGender };
+  };
   this.Appearance = new function () {
     this.itemNormalFontSize = 24;
     this.itemNormalPicSize = 230;

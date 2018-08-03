@@ -98,6 +98,26 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
       UserProfile.Categories[CategoryIndex].Items = newItems;
       return UserProfile;
     },
+    editTargetItem: function (UserProfile, categoryID, ItemID, targetLanguage, targetText) {
+      for (var i = 0; i < UserProfile.Categories.length; i++) {
+        if (UserProfile.Categories[i].ID == categoryID) {
+          for (var j = 0; j < UserProfile.Categories[i].Items.length; j++) {
+            if (UserProfile.Categories[i].Items[j].ID == ItemID) {
+              for (var k = 0; k < UserProfile.Categories[i].Items[j].DisplayMultipleLanguage.length; k++) {
+                if (UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Language == targetLanguage) {
+                  UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text = targetText;
+                  //alert(i + " " + j + " " + k);
+                  return UserProfile;
+                }
+              }
+              break;
+            }
+          }
+          break;
+        }
+      }
+      return UserProfile;
+    },
     getMenuProfile: function () {
       /*if ($localStorage.menuProfile) {
         console.log("Read menuProfile from LocalStorage.");
