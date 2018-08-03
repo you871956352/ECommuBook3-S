@@ -167,7 +167,7 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
   };
 });
 
-myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $cordovaFileTransfer) { //Used for store user audio and image
+myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $cordovaFileTransfer,$state) { //Used for store user audio and image
   return {
     downloadImageToLocal: function(targetDirectory, targetName, itemId) {
       var self = this;
@@ -375,10 +375,10 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
           console.log("Check Image File static:" + GlobalCacheVariable.FileCheck.ExistImageFile +  "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
           if (GlobalCacheVariable.FileCheck.ExistAudioFile >= GlobalCacheVariable.FileCheck.TotalAudioFile &&
             GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
-            console.log("Set IsNoDownload = 1");
             GlobalVariable.DownloadProgress.IsNoDownload = 1;
             console.log("Download complete, refresh the page.");
-            window.location.reload(true);
+            //window.location.reload(true);
+            $state.reload();
           }else{
             self.checkDownload();
           }
@@ -521,6 +521,32 @@ myModule.factory("VoiceRecordService", function ($http, $cordovaMedia) {
       catch (ex) {
         alert("onAudioInputCapture ex: " + ex);
       }
+    }
+  };
+});
+
+myModule.factory("VoiceModelService", function($http, $localStorage) { //Store User Prefile
+  return {
+    getOnline: function(userId) {
+      $http.get(ServerPathVariable.GetUserProfilePath(userId)).then(function(data) {
+        $localStorage.VoiceModel = data.data;
+      });
+    },
+    getLatest: function() {
+      if ($localStorage.VoiceModel) {
+        console.log("Read user's voiceModel from LocalStorage.");
+      }
+      else {
+        console.log("No VoiceModel in LocalStorage. Read sample voiceModel.");
+        $localStorage.VoiceModel = this.getDefault();
+      }
+      return $localStorage.VoiceModel;
+    },
+    getDefault: function() {
+      return getSampleVoiceModel();
+    },
+    saveLocal: function(newVoiceModel) {
+      $localStorage.VoiceModel = newVoiceModel;
     }
   };
 });
