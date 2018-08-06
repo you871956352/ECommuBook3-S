@@ -7758,6 +7758,23 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "入力を追加します。" }]
           },
           {
+            OperationType: "SentenceEmptyWarning",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Konstruieren Sie bitte einen Satz" },
+              { "Language": "ru", "Text": "Пожалуйста, построить предложение" },
+              { "Language": "pt", "Text": "Por favor, construir uma frase" },
+              { "Language": "ko", "Text": "제발 문장 구성" },
+              { "Language": "yue", "Text": "請構造一個句子" },
+              { "Language": "en", "Text": "Please Construct a Sentence" },
+              { "Language": "it", "Text": "Si prega di costruire una frase" },
+              { "Language": "fr", "Text": "S’il vous plaît construire une phrase" },
+              { "Language": "es", "Text": "Por favor, construir una frase" },
+              { "Language": "zh-CHT", "Text": "請構造一個句子" },
+              { "Language": "ar", "Text": "يرجى بناء الجملة" },
+              { "Language": "zh-CHS", "Text": "请构造一个句子" },
+              { "Language": "ja", "Text": "文を作成してください。" }]
+          },
+          {
             OperationType: "UploadSentence",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Laden Sie Satz" },
@@ -8342,6 +8359,28 @@ function getSampleMenuProfile() {
           { Language:"ar", Text:"مرحبا بكم في-الاتصالات-بووك"},
           { Language:"zh-CHS", Text:"欢迎来到电子通讯书"},
           { Language:"ja", Text:"E-Commu-Bookへようこそ"}]
+      },
+      {
+        OperationType: "Loading",
+        Subpage: [
+          {
+            OperationType: "LoadingMessage",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Warten Sie Daten werden geladen, bitte" },
+              { "Language": "ru", "Text": "Загрузка данных, пожалуйста, подождите" },
+              { "Language": "pt", "Text": "Carregando dados, aguarde" },
+              { "Language": "ko", "Text": "데이터 로드, 기다려 주세요" },
+              { "Language": "yue", "Text": "加载緊數據, 請稍候" },
+              { "Language": "en", "Text": "Loading Data, Please Wait" },
+              { "Language": "it", "Text": "Caricamento dati, attendere prego" },
+              { "Language": "fr", "Text": "Chargement des données, veuillez patienter" },
+              { "Language": "es", "Text": "Cargando datos, espere por favor" },
+              { "Language": "zh-CHT", "Text": "正在載入資料, 請稍候" },
+              { "Language": "ar", "Text": "جاري تحميل البيانات، الرجاء الانتظار" },
+              { "Language": "zh-CHS", "Text": "正在加载数据, 请稍候" },
+              { "Language": "ja", "Text": "データをロードしています" }]
+          }
+        ]
       }
     ],
     Buttons: [

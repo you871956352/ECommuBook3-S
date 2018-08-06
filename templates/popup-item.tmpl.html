@@ -22,7 +22,7 @@
           <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;">{{selectedItemName}}</span>
         </div>
       </div>
-      <md-card>
+      <md-card ng-show="enableEdit">
         <md-card-content>
           <md-input-container style="margin: auto; width: 50%;">
             <label>{{textLabelSelectLanguage}}</label>
@@ -32,12 +32,12 @@
           </md-input-container>
           <md-button class="md-raised" ng-click="reorderAddTopItem($event)" style="float: right">{{textButtonSetTop}}</md-button>
         </md-card-content>
-        <md-card-content ng-if="enableEdit == true">
+        <md-card-content >
           <md-input-container style="margin: auto; width: 50%;">
             <label>{{textLabelEdit}}</label>
             <input type="text" ng-model="EditNewText">
           </md-input-container>
-          <md-button class="md-raised" ng-click="editText()" style="float: right">{{textButtonConfirm}}</md-button>
+          <md-button class="md-raised" ng-click="editText()" style="float: right">{{textButtonOK}}</md-button>
         </md-card-content>
       </md-card>
     </md-dialog-content>

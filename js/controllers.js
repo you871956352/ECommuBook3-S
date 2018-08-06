@@ -45,7 +45,7 @@ angular
     $scope.textButtonCancel = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CancelButton", $scope.currentDisplayLanguage);
     $scope.textNotification = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Notification", $scope.currentDisplayLanguage);
     $scope.categoryId = $stateParams.categoryId;
-    $scope.enableEdit = false;
+    $scope.showEditCard = false;
     for (var i = 0; i < $scope.userProfile.Categories.length; i++) {
       if ($scope.userProfile.Categories[i].ID == $stateParams.categoryId) {
         $scope.category = $scope.userProfile.Categories[i];
@@ -55,13 +55,10 @@ angular
     }
     $scope.showEnlargeItemPopup = function (ev, itemId) {
       var targetScope = $scope.$new();
-      targetScope.userProfile = $scope.userProfile;
       targetScope.selectItemObject = getItemObjectByItemId($scope.userProfile, itemId);
       targetScope.displayLanguageList = GlobalVariable.DisplayLanguageList;
-      targetScope.currentDisplayLanguage = $scope.currentDisplayLanguage;
       targetScope.selectedDisplayLanguage = $scope.currentDisplayLanguage;
       targetScope.selectedItemName = getObjectTranslationByID($scope.userProfile, itemId, $scope.currentDisplayLanguage);
-      targetScope.ImagePath = $scope.ImagePath;
       targetScope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
       MediaPlayer.play($cordovaMedia, targetScope.AudioDirectory + targetScope.selectItemObject.ID + ".mp3");
       $mdDialog.show({
@@ -110,12 +107,13 @@ angular
         console.log("User decide to quit share");
       });
     };
+    $scope.enableEditCategoryTog = function () {
+      $scope.showEditCard = !$scope.showEditCard;
+    };
     function DialogController($scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer, $cordovaFile) {
-      $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
-      $scope.textButtonConfirm = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton", $scope.currentDisplayLanguage);
-      $scope.subMenuPage = UserProfileService.getMenuProfileSubObject("CategoryGrid");
-      $scope.textLabelEdit = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Edit", $scope.currentDisplayLanguage);
-      $scope.textLabelSelectLanguage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SelectLanguage", $scope.currentDisplayLanguage);
+      $scope.enableEdit = false;
+      $scope.textLabelEdit = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "Edit", $scope.currentDisplayLanguage);
+      $scope.textLabelSelectLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SelectLanguage", $scope.currentDisplayLanguage);
       $scope.cancel = function () {
         $mdDialog.cancel();
       };
@@ -604,6 +602,7 @@ angular
     $scope.textSelectAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SelectAdd", $scope.currentDisplayLanguage);
     $scope.textButtonBackspace = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "BackSpace", $scope.currentDisplayLanguage);
     $scope.textButtonUpload = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "UploadSentence", $scope.currentDisplayLanguage);
+    $scope.textEmptyWarning = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SentenceEmptyWarning", $scope.currentDisplayLanguage);
     $scope.onSentenceClick = function (sentence) {
       console.log("Select Sentence:" + sentence.ID + " " + sentence.DisplayName + " " + sentence.DisplayNameLanguage);
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + sentence.ID + ".mp3");
@@ -646,6 +645,10 @@ angular
         });
     };
     $scope.upLoadSentence = function () {
+      if ($scope.currentConstructSentence == undefined || $scope.currentConstructSentence == "") {
+        alert($scope.textEmptyWarning);
+        return;
+      }
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       var newUserProfile = UserProfileService.addSentence($scope.userProfile, $scope.currentConstructSentence, $scope.currentDisplayLanguage);
@@ -655,7 +658,7 @@ angular
         UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
           console.log("Get sentence detail online");
           $scope.userProfile = UserProfileService.getLatest();
-          LocalCacheService.prepareCache(UserProfileService.getLatest(),false);
+          LocalCacheService.prepareCache(UserProfileService.getLatest());
         });
       });
     };
