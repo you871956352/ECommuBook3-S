@@ -1,9 +1,8 @@
-<md-dialog aria-label="Mango (Fruit)">
+<md-dialog>
   <form ng-cloak>
-
     <md-toolbar>
       <div class="md-toolbar-tools" style="text-align: center;">
-        <div style="text-align: center;">Loading</div>
+        <div style="text-align: center;">{{Title}}</div>
         <span flex></span>
       </div>
     </md-toolbar>
@@ -13,9 +12,9 @@
         <div layout="row" layout-align="center">
           <img class="enlarge_item_image" style="margin: auto; max-width: 80%;max-height: 60%;" alt="Loading" src="img/icons/Rolling.gif" />
         </div>
-        <h1> Current: {{downloaded}} / Total: {{total}}</h1>
-        <h1>Percentage: {{precentage}}%</h1>
-        <h1>{{message}}</h1>
+        <h3> {{textCurrent}}: {{downloaded}} / {{textTotal}}: {{total}}</h3>
+        <h3>{{textPercentage}}: {{precentage}}%</h3>
+        <h3>{{message}}</h3>
       </div>
     </md-dialog-content>
   </form>

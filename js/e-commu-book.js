@@ -232,28 +232,31 @@ var MediaPlayer = new function () {
 };
 
 var LoadingDialog = new function () {
-  this.showLoadingPopup = function ($mdDialog, $ionicSideMenuDelegate) {
+  this.showLoadingPopup = function ($mdDialog, $ionicSideMenuDelegate, isDelete) {
+    var TargetController = this.LoadPopupController;
+    if (isDelete == true) {
+      TargetController = this.LoadPopupControllerDelete;
+    }
     $mdDialog.show({
-      controller: this.LoadPopupController,
+      controller: TargetController,
       templateUrl: "templates/popup-loading.tmpl.html",
       parent: angular.element(document.body),
       clickOutsideToClose: false,
       fullscreen: false // Only for -xs, -sm breakpoints.
-    }) .then(
-        function (answer) {},
-        function () {}
-      );
+    });
   };
-  this.hideLoadingPopup = function ($mdDialog) {
-    $mdDialog.hide();
-  };
-  this.LoadPopupController = function ($scope, $mdDialog, $ionicSideMenuDelegate) {
+  this.LoadPopupController = function ($scope, $mdDialog, $ionicSideMenuDelegate, UserProfileService) {
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("Loading");
+    $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Loading", $scope.currentDisplayLanguage);
+    $scope.message = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "LoadingMessage", $scope.currentDisplayLanguage);
+    $scope.textCurrent = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Current", $scope.currentDisplayLanguage);
+    $scope.textTotal = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Total", $scope.currentDisplayLanguage);
+    $scope.textPercentage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Percentage", $scope.currentDisplayLanguage);
+
     $scope.downloaded = NaN;
     $scope.total = NaN;
     $scope.hide = function () { $mdDialog.hide(); };
-    $scope.cancel = function () { $mdDialog.cancel(); };
-    $scope.answer = function (answer) { $mdDialog.hide(answer); };
-
     var loop = setInterval(function () {
       $scope.downloaded = GlobalVariable.DownloadProgress.GetDownloaded();
       $scope.total = GlobalVariable.DownloadProgress.GetTotal();
@@ -263,41 +266,24 @@ var LoadingDialog = new function () {
       else {
         $scope.precentage = 0;
       }
-      $scope.message = "Loading, Please wait";
+      
       if (($scope.downloaded == $scope.total && $scope.total > 0) || GlobalVariable.DownloadProgress.IsNoDownload == 1) {
         clearInterval(loop);
-        setTimeout(function () {
-          $ionicSideMenuDelegate.toggleLeft();
-          $scope.hide();
-        }, 2500);
+        setTimeout(function () { $scope.hide(); }, 2500);
       }
     }, 500);
   };
-};
-
-var LoadingDeleteDialog = new function () {
-  this.showLoadingPopup = function ($mdDialog, $ionicSideMenuDelegate) {
-    $mdDialog.show({
-      controller: this.LoadPopupController,
-      templateUrl: "templates/popup-loading.tmpl.html",
-      parent: angular.element(document.body),
-      clickOutsideToClose: false,
-      fullscreen: false // Only for -xs, -sm breakpoints.
-    }) .then(
-        function (answer) {},
-        function () {}
-      );
-  };
-  this.hideLoadingPopup = function ($mdDialog) {
-    $mdDialog.hide();
-  };
-  this.LoadPopupController = function ($scope, $mdDialog, $ionicSideMenuDelegate) {
+  this.LoadPopupControllerDelete = function ($scope, $mdDialog, $ionicSideMenuDelegate) {
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("Loading");
+    $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
+    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Loading", $scope.currentDisplayLanguage);
+    $scope.message = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "LoadingMessage", $scope.currentDisplayLanguage);
+    $scope.textCurrent = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Current", $scope.currentDisplayLanguage);
+    $scope.textTotal = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Total", $scope.currentDisplayLanguage);
+    $scope.textPercentage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Percentage", $scope.currentDisplayLanguage);
     $scope.downloaded = NaN;
     $scope.total = NaN;
     $scope.hide = function () { $mdDialog.hide(); };
-    $scope.cancel = function () { $mdDialog.cancel(); };
-    $scope.answer = function (answer) { $mdDialog.hide(answer); };
-
     var loop = setInterval(function () {
       $scope.downloaded = GlobalCacheVariable.DeleteCheck.DeletedFile;
       $scope.total = GlobalCacheVariable.DeleteCheck.FileToDelete;
@@ -306,14 +292,10 @@ var LoadingDeleteDialog = new function () {
       }
       else {
         $scope.precentage = 0;
-      }
-      $scope.message = "Loading, Please wait";
+      } 
       if (($scope.downloaded == $scope.total && $scope.total > 0) || GlobalVariable.DownloadProgress.IsNoDownload == 1) {
         clearInterval(loop);
-        setTimeout(function () {
-          $ionicSideMenuDelegate.toggleLeft();
-          $scope.hide();
-        }, 2500);
+        setTimeout(function () { $scope.hide(); }, 2500);
       }
     }, 500);
   };

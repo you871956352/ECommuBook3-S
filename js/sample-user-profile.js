@@ -8447,7 +8447,21 @@ function getSampleMenuProfile() {
       },
       {
         OperationType: "Loading",
-        Subpage: [
+        DisplayMultipleLanguage: [
+          { "Language": "de", "Text": "Verarbeitung" },
+          { "Language": "ru", "Text": "Обработка" },
+          { "Language": "pt", "Text": "Processamento de" },
+          { "Language": "ko", "Text": "처리" },
+          { "Language": "yue", "Text": "處理" },
+          { "Language": "en", "Text": "Processing" },
+          { "Language": "it", "Text": "Elaborazione" },
+          { "Language": "fr", "Text": "Traitement" },
+          { "Language": "es", "Text": "Procesamiento de" },
+          { "Language": "zh-CHT", "Text": "處理" },
+          { "Language": "ar", "Text": "تجهيز" },
+          { "Language": "zh-CHS", "Text": "处理" },
+          { "Language": "ja", "Text": "処理" }],
+        SubPage: [
           {
             OperationType: "LoadingMessage",
             DisplayMultipleLanguage: [
@@ -8464,6 +8478,57 @@ function getSampleMenuProfile() {
               { "Language": "ar", "Text": "جاري تحميل البيانات، الرجاء الانتظار" },
               { "Language": "zh-CHS", "Text": "正在加载数据, 请稍候" },
               { "Language": "ja", "Text": "データをロードしています" }]
+          },
+          {
+            OperationType: "Current",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Strom" },
+              { "Language": "ru", "Text": "Ток" },
+              { "Language": "pt", "Text": "Corrente" },
+              { "Language": "ko", "Text": "전류" },
+              { "Language": "yue", "Text": "當前" },
+              { "Language": "en", "Text": "Current" },
+              { "Language": "it", "Text": "Corrente" },
+              { "Language": "fr", "Text": "Courant" },
+              { "Language": "es", "Text": "Corriente" },
+              { "Language": "zh-CHT", "Text": "當前" },
+              { "Language": "ar", "Text": "الحالية" },
+              { "Language": "zh-CHS", "Text": "当前" },
+              { "Language": "ja", "Text": "現在の" }]
+          },
+          {
+            OperationType: "Total",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Gesamtanzahl" },
+              { "Language": "ru", "Text": "Общее число" },
+              { "Language": "pt", "Text": "Número total" },
+              { "Language": "ko", "Text": "총 수" },
+              { "Language": "yue", "Text": "總數" },
+              { "Language": "en", "Text": "Total Number" },
+              { "Language": "it", "Text": "Numero totale" },
+              { "Language": "fr", "Text": "Nombre total" },
+              { "Language": "es", "Text": "Número total" },
+              { "Language": "zh-CHT", "Text": "總數" },
+              { "Language": "ar", "Text": "العدد الإجمالي" },
+              { "Language": "zh-CHS", "Text": "总数" },
+              { "Language": "ja", "Text": "合計数" }]
+          },
+          {
+            OperationType: "Percentage",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Prozentsatz" },
+              { "Language": "ru", "Text": "Процент" },
+              { "Language": "pt", "Text": "Porcentagem" },
+              { "Language": "ko", "Text": "백분율" },
+              { "Language": "yue", "Text": "百分比" },
+              { "Language": "en", "Text": "Percentage" },
+              { "Language": "it", "Text": "Percentuale" },
+              { "Language": "fr", "Text": "Pourcentage" },
+              { "Language": "es", "Text": "Porcentaje" },
+              { "Language": "zh-CHT", "Text": "百分比" },
+              { "Language": "ar", "Text": "النسبة المئوية" },
+              { "Language": "zh-CHS", "Text": "百分比" },
+              { "Language": "ja", "Text": "割合" }]
           }
         ]
       }
