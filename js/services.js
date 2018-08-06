@@ -123,7 +123,7 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       var targetCategoryIndex = getCategoryIndexById(UserProfile, selectedCategoryId);
       if (targetCategoryIndex == -1) {
         console("Target Category Not Exist");
-        return;
+        return { UserProfile, idList };
       }
       idList.push(selectedCategoryId);
       var category = UserProfile.Categories[targetCategoryIndex];
@@ -138,14 +138,15 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       var targetCategoryIndex = getCategoryIndexById(UserProfile, selectedCategoryId);
       if (targetCategoryIndex == -1) {
         console("Target Category Not Exist");
-        return;
+        return UserProfile;
       }
       var targetItemIndex = getItemIndexByItemId(UserProfile.Categories[targetCategoryIndex], selectedItemId);
-      if (targetCategoryIndex == -1) {
+      if (targetItemIndex == -1) {
         console("Target Item Not Exist");
-        return;
+        return UserProfile;
       }
-      UserProfile.Categories[targetCategoryIndex].Items.splice(itemIndex, 1);
+      //alert(targetCategoryIndex + " " +  targetItemIndex);
+      UserProfile.Categories[targetCategoryIndex].Items.splice(targetItemIndex, 1);
       return UserProfile;
     },
     addSentence: function (UserProfile, targetSentence, inputDisplayNameLanguage) {
@@ -429,13 +430,18 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
           }
         }, 1000); //delay 2 seconds
     },
-    checkDelete: function(){
+    checkDelete: function(refreshAll){
       var self = this;
         setTimeout(function() {
           console.log("Check File Delete:" + GlobalCacheVariable.DeleteCheck.DeletedFile +  "/" + GlobalCacheVariable.DeleteCheck.FileToDelete);
           if (GlobalCacheVariable.DeleteCheck.DeletedFile >= GlobalCacheVariable.DeleteCheck.FileToDelete ) {
             console.log("Delete complete, refresh the page.");
-            $state.go("app.welcome", {}, { reload: true });
+            if (refreshAll == true) {
+              $state.go("app.welcome", {}, { reload: true });
+            } else if (refreshAll == false) {
+              $state.reload();
+            }
+            
           }else{
             self.checkDelete();
           }

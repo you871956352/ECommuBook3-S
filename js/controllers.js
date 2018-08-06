@@ -125,13 +125,13 @@ angular
         GlobalCacheVariable.DeleteCheck.SetFileToDelete(idList.length * 2);
         console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete + "idList leangth: " + idList.length);
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate, true);
-        UserProfileService.saveLocal(newUserProfile);
-        $scope.userProfile = UserProfileService.getLatest();
+        $scope.userProfile = newUserProfile;
+        UserProfileService.saveLocal($scope.userProfile);     
         UserProfileService.postToServerCallback(function () {   
           for (i = 0; i < idList.length; i++) {
             LocalCacheService.deleteCache($scope.userProfile, idList[i]);
           }
-          LocalCacheService.checkDelete();
+          LocalCacheService.checkDelete(true);
         });      
       }, function () {
         console.log("User decide to quit delete");
@@ -140,7 +140,7 @@ angular
     $scope.enableEditCategoryTog = function () {
       $scope.showEditCard = !$scope.showEditCard;
     };
-    function DialogController($scope, $mdDialog, $cordovaMedia, $cordovaFileTransfer, $cordovaFile) {
+    function DialogController($scope, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, $cordovaFileTransfer, $cordovaFile, UserProfileService) {
       $scope.enableEdit = false;
       $scope.textLabelEdit = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "Edit", $scope.currentDisplayLanguage);
       $scope.textLabelSelectLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SelectLanguage", $scope.currentDisplayLanguage);
@@ -158,8 +158,7 @@ angular
         });
       };
       $scope.deleteThisItem = function (categoryID, itemID) {
-        alert(categoryID, itemID);
-       /* var confirmDialog = $mdDialog.confirm()
+        var confirmDialog = $mdDialog.confirm()
           .title($scope.textNotification)
           .textContent("2333?")
           .targetEvent(event)
@@ -167,12 +166,17 @@ angular
           .cancel($scope.textButtonCancel);
 
         $mdDialog.show(confirmDialog).then(function () {
-          var newUserProfile = UserProfileService.deleteCategory($scope.userProfile, categoryID, itemID);
-          alert(categoryID, itemID);
+          var newUserProfile = UserProfileService.deleteItem($scope.userProfile, categoryID, itemID);
+          GlobalCacheVariable.DeleteCheck.Reset();
+          GlobalCacheVariable.DeleteCheck.SetFileToDelete(2);
+          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate, true);
+          $scope.userProfile = newUserProfile;
+          UserProfileService.saveLocal($scope.userProfile);
+          UserProfileService.postToServerCallback(function () {
+            LocalCacheService.deleteCache($scope.userProfile, itemID);
+            LocalCacheService.checkDelete(false);
           });
-        }, function () {
-          console.log("User decide to quit delete");
-        });*/
+        });
       }
       $scope.popupLanguageChange = function () {
         $scope.selectedItemName = getObjectTranslation($scope.selectItemObject, $scope.selectedDisplayLanguage);
