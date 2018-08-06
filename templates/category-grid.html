@@ -25,7 +25,7 @@
             </md-button>
             <md-button ng-show="showEditCard" class="md-raised" ng-click="shareCategory($event, category.ID)">{{textButtonShare}}</md-button>
             <md-button ng-show="showEditCard" class="md-raised" ng-click="reorderAddTopCategory($event, category.ID)">{{textButtonSetTop}}</md-button>
-            <md-button ng-show="showEditCard" class="md-raised" ng-click="deleteThisCategory($event, category.ID)">Delete</md-button>
+            <md-button ng-show="showEditCard" class="md-raised" ng-click="deleteThisCategory($event, category.ID)"  style="float: right">{{textButtonDeleteCategory}}</md-button>
           </div>
         </md-card-content>
       </md-card>   

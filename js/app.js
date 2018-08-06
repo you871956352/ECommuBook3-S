@@ -82,15 +82,6 @@ angular
           }
         }
       })
-      .state("app.deleteCategory", {
-        url: "/deleteCategory",
-        views: {
-          menuContent: {
-            templateUrl: "templates/deleteCategory.tmpl.html",
-            controller: "DeleteCategoryCtrl"
-          }
-        }
-      })
       .state("app.welcome", {
         url: "/welcome",
         views: {

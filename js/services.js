@@ -122,7 +122,7 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       var idList = [];
       var targetCategoryIndex = getCategoryIndexById(UserProfile, selectedCategoryId);
       if (targetCategoryIndex == -1) {
-        alert("Target Category Not Exist");
+        console("Target Category Not Exist");
         return;
       }
       idList.push(selectedCategoryId);
@@ -133,6 +133,20 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       }
       UserProfile.Categories.splice(targetCategoryIndex, 1);
       return { UserProfile, idList };
+    },
+    deleteItem: function (UserProfile, selectedCategoryId, selectedItemId) {
+      var targetCategoryIndex = getCategoryIndexById(UserProfile, selectedCategoryId);
+      if (targetCategoryIndex == -1) {
+        console("Target Category Not Exist");
+        return;
+      }
+      var targetItemIndex = getItemIndexByItemId(UserProfile.Categories[targetCategoryIndex], selectedItemId);
+      if (targetCategoryIndex == -1) {
+        console("Target Item Not Exist");
+        return;
+      }
+      UserProfile.Categories[targetCategoryIndex].Items.splice(itemIndex, 1);
+      return UserProfile;
     },
     addSentence: function (UserProfile, targetSentence, inputDisplayNameLanguage) {
       var SentenceObject = {};

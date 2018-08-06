@@ -7584,25 +7584,59 @@ function getSampleMenuProfile() {
               { "Language": "ar", "Text": "حدد اللغة" },
               { "Language": "zh-CHS", "Text": "选择语言" },
               { "Language": "ja", "Text": "言語の選択" }]
+          },
+          {
+            OperationType: "DeleteCategory",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Kategorie löschen" },
+              { Language: "ru", Text: "Удаление категории" },
+              { Language: "pt", Text: "Excluir a categoria" },
+              { Language: "ko", Text: "카테고리 삭제" },
+              { Language: "yue", Text: "刪除類別" },
+              { Language: "en", Text: "Delete Category" },
+              { Language: "it", Text: "Eliminare categoria" },
+              { Language: "fr", Text: "Supprimer la catégorie" },
+              { Language: "es", Text: "Eliminar categoría" },
+              { Language: "zh-CHT", Text: "刪除類別" },
+              { Language: "ar", Text: "حذف فئة" },
+              { Language: "zh-CHS", Text: "删除类别" },
+              { Language: "ja", Text: "カテゴリを削除します。" }]
+          },
+          {
+            OperationType: "DeleteWarning1",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Möchten Sie diese Kategorie wirklich löschen" },
+              { "Language": "ru", "Text": "Вы действительно хотите удалить эту категорию" },
+              { "Language": "pt", "Text": "Tem certeza de apagar esta categoria" },
+              { "Language": "ko", "Text": "당신은 확실히이 범주를 삭제 하려면" },
+              { "Language": "yue", "Text": "係咪真係要刪除此類別" },
+              { "Language": "en", "Text": "Are you sure to delete this category" },
+              { "Language": "it", "Text": "Sei sicuro di voler eliminare questa categoria" },
+              { "Language": "fr", "Text": "Êtes-vous sûr de supprimer cette catégorie" },
+              { "Language": "es", "Text": "Está seguro de eliminar esta categoría" },
+              { "Language": "zh-CHT", "Text": "是否確實要刪除此類別" },
+              { "Language": "ar", "Text": "هل أنت متأكد من حذف هذه الفئة" },
+              { "Language": "zh-CHS", "Text": "是否确实要删除此类别" },
+              { "Language": "ja", "Text": "このカテゴリを削除するよろしい" }]
+          },
+          {
+            OperationType: "DeleteWarning2",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Nach dieser Kategorie gelöscht wird, werden alle Informationen Verlust" },
+              { "Language": "ru", "Text": "После удаления этой категории, вся информация будет потеря" },
+              { "Language": "pt", "Text": "Depois desta categoria é excluída, todas as informações será perda" },
+              { "Language": "ko", "Text": "이 범주를 삭제 한 후 모든 정보는 손실" },
+              { "Language": "yue", "Text": "刪除此類別之後, 所有信息都將賴" },
+              { "Language": "en", "Text": "After this category is deleted, all information will loss" },
+              { "Language": "it", "Text": "Dopo l'eliminazione di questa categoria, tutte le informazioni saranno perdita" },
+              { "Language": "fr", "Text": "Une fois cette catégorie est supprimée, toutes les informations seront perte" },
+              { "Language": "es", "Text": "Después de esta categoría es eliminada, toda la información será pérdida" },
+              { "Language": "zh-CHT", "Text": "刪除此類別後, 所有資訊都將丟失" },
+              { "Language": "ar", "Text": "بعد أن يتم حذف هذه الفئة، جميع المعلومات سيتم فقدان" },
+              { "Language": "zh-CHS", "Text": "删除此类别后, 所有信息都将丢失" },
+              { "Language": "ja", "Text": "このカテゴリを削除すると、すべての情報が損失" }]
           }
         ]
-      },
-      {
-        OperationType: "DeleteCategory",
-        DisplayMultipleLanguage: [
-          { Language: "de", Text: "Kategorie löschen" },
-          { Language: "ru", Text: "Удаление категории" },
-          { Language: "pt", Text: "Excluir a categoria" },
-          { Language: "ko", Text: "카테고리 삭제" },
-          { Language: "yue", Text: "刪除類別" },
-          { Language: "en", Text: "Delete Category" },
-          { Language: "it", Text: "Eliminare categoria" },
-          { Language: "fr", Text: "Supprimer la catégorie" },
-          { Language: "es", Text: "Eliminar categoría" },
-          { Language: "zh-CHT", Text: "刪除類別" },
-          { Language: "ar", Text: "حذف فئة" },
-          { Language: "zh-CHS", Text: "删除类别" },
-          { Language: "ja", Text: "カテゴリを削除します。" }]
       },
       {
         OperationType: "AddItem",
@@ -8532,25 +8566,6 @@ function getSampleMenuProfile() {
           }
         ]
       }
-    ],
-    Buttons: [
-      {
-        OperationType: "Confirm",
-        DisplayMultipleLanguage: [
-          { Language: "de", Text: "Bestätigen" },
-          { Language: "ru", Text: "Подтвердите" },
-          { Language: "pt", Text: "Confirmar" },
-          { Language: "ko", Text: "확인" },
-          { Language: "yue", Text: "確認" },
-          { Language: "en", Text: "Confirm" },
-          { Language: "it", Text: "Confermare" },
-          { Language: "fr", Text: "Confirmer" },
-          { Language: "es", Text: "Confirmar" },
-          { Language: "zh-CHT", Text: "確認" },
-          { Language: "ar", Text: "تأكيد" },
-          { Language: "zh-CHS", Text: "确认" },
-          { Language: "ja", Text: "確認します。" }]
-      },
     ]
   };
   return json;
