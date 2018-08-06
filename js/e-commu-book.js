@@ -273,7 +273,7 @@ var LoadingDialog = new function () {
       }
     }, 500);
   };
-  this.LoadPopupControllerDelete = function ($scope, $mdDialog, $ionicSideMenuDelegate) {
+  this.LoadPopupControllerDelete = function ($scope, $mdDialog, $ionicSideMenuDelegate, UserProfileService) {
     $scope.subGeneral = UserProfileService.getMenuProfileSubObject("Loading");
     $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Loading", $scope.currentDisplayLanguage);
@@ -281,6 +281,7 @@ var LoadingDialog = new function () {
     $scope.textCurrent = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Current", $scope.currentDisplayLanguage);
     $scope.textTotal = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Total", $scope.currentDisplayLanguage);
     $scope.textPercentage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Percentage", $scope.currentDisplayLanguage);
+
     $scope.downloaded = NaN;
     $scope.total = NaN;
     $scope.hide = function () { $mdDialog.hide(); };
@@ -292,7 +293,8 @@ var LoadingDialog = new function () {
       }
       else {
         $scope.precentage = 0;
-      } 
+      }
+
       if (($scope.downloaded == $scope.total && $scope.total > 0) || GlobalVariable.DownloadProgress.IsNoDownload == 1) {
         clearInterval(loop);
         setTimeout(function () { $scope.hide(); }, 2500);

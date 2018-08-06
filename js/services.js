@@ -422,7 +422,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
           console.log("Check File Delete:" + GlobalCacheVariable.DeleteCheck.DeletedFile +  "/" + GlobalCacheVariable.DeleteCheck.FileToDelete);
           if (GlobalCacheVariable.DeleteCheck.DeletedFile >= GlobalCacheVariable.DeleteCheck.FileToDelete ) {
             console.log("Delete complete, refresh the page.");
-            $state.reload();
+            $state.go("app.welcome", {}, { reload: true });
           }else{
             self.checkDelete();
           }
