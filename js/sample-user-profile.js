@@ -8323,6 +8323,91 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "تحميل"},
               { Language: "zh-CHS", Text: "上传"},
               { Language: "ja", Text: "アップロード"}]
+          },
+          {
+            OperationType: "VoiceModelInformation",
+            DisplayMultipleLanguage:[
+              {"Language":"de","Text":"Stimme-Modell-Informationen"},
+              {"Language":"ru","Text":"Сведения о модели голос"},
+              {"Language":"pt","Text":"Informações sobre modelo de voz"},
+              {"Language":"ko","Text":"음성 모델 정보"},
+              {"Language":"yue","Text":"語音模型信息"},
+              {"Language":"en","Text":"Voice Model Information"},
+              {"Language":"it","Text":"Informazioni sul modello di voce"},
+              {"Language":"fr","Text":"Informations de modèle de voix"},
+              {"Language":"es","Text":"Información de modelo de voz"},
+              {"Language":"zh-CHT","Text":"語音模型資訊"},
+              {"Language":"ar","Text":"صوت نموذج المعلومات"},
+              {"Language":"zh-CHS","Text":"语音模型信息"},
+              {"Language":"ja","Text":"音声モデル情報"}]
+          },
+          {
+            OperationType: "CollectionStatus",
+            DisplayMultipleLanguage:[
+              {"Language":"de","Text":"Inkassostatus"},
+              {"Language":"ru","Text":"Статус коллекции"},
+              {"Language":"pt","Text":"Coleção Status"},
+              {"Language":"ko","Text":"컬렉션 상태"},
+              {"Language":"yue","Text":"收集狀態"},
+              {"Language":"en","Text":"Collection Status"},
+              {"Language":"it","Text":"Stato della raccolta"},
+              {"Language":"fr","Text":"Statut de la collection"},
+              {"Language":"es","Text":"Estado de colección"},
+              {"Language":"zh-CHT","Text":"收集狀態"},
+              {"Language":"ar","Text":"حالة تجميع"},
+              {"Language":"zh-CHS","Text":"收集状态"},
+              {"Language":"ja","Text":"収集の状況"}]
+          },
+          {
+            OperationType: "ModelStatus",
+            DisplayMultipleLanguage:[
+              {"Language":"de","Text":"Modellstatus"},
+              {"Language":"ru","Text":"Статус модели"},
+              {"Language":"pt","Text":"Status de modelo"},
+              {"Language":"ko","Text":"모델 상태"},
+              {"Language":"yue","Text":"模型狀態"},
+              {"Language":"en","Text":"Model Status"},
+              {"Language":"it","Text":"Stato del modello"},
+              {"Language":"fr","Text":"Modèle de statut"},
+              {"Language":"es","Text":"Modelo de estado"},
+              {"Language":"zh-CHT","Text":"模型狀態"},
+              {"Language":"ar","Text":"وضع نموذج"},
+              {"Language":"zh-CHS","Text":"模型状态"},
+              {"Language":"ja","Text":"モデル ステータス"}]
+          },
+          {
+            OperationType: "TrainModel",
+            DisplayMultipleLanguage:[
+              {"Language":"de","Text":"Ausbildungsmodell"},
+              {"Language":"ru","Text":"Модель обучения"},
+              {"Language":"pt","Text":"Modelo de formação"},
+              {"Language":"ko","Text":"교육 모델"},
+              {"Language":"yue","Text":"訓練模型"},
+              {"Language":"en","Text":"Train model"},
+              {"Language":"it","Text":"Modello formativo"},
+              {"Language":"fr","Text":"Modèle de formation"},
+              {"Language":"es","Text":"Modelo de formación"},
+              {"Language":"zh-CHT","Text":"訓練模型"},
+              {"Language":"ar","Text":"نموذج التدريب"},
+              {"Language":"zh-CHS","Text":"训练模型"},
+              {"Language":"ja","Text":"トレーニング モデル"}]
+          },
+          {
+            OperationType: "DownloadModel",
+            DisplayMultipleLanguage:[
+              {"Language":"de","Text":"Modell herunterladen"},
+              {"Language":"ru","Text":"Скачать модель"},
+              {"Language":"pt","Text":"Baixar modelo"},
+              {"Language":"ko","Text":"모델 다운로드"},
+              {"Language":"yue","Text":"下載模型"},
+              {"Language":"en","Text":"Download model"},
+              {"Language":"it","Text":"Scarica modello"},
+              {"Language":"fr","Text":"Télécharger le modèle de"},
+              {"Language":"es","Text":"Descargar modelo"},
+              {"Language":"zh-CHT","Text":"下載模型"},
+              {"Language":"ar","Text":"تحميل نموذج"},
+              {"Language":"zh-CHS","Text":"下载模型"},
+              {"Language":"ja","Text":"モデルをダウンロードします。"}]
           }
         ]
       },

@@ -387,7 +387,6 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       var self = this;
       var reload = trueReload;
         setTimeout(function() {
-          console.log("IsTrueReload:" + reload);
           console.log("Check Audio File static:" + GlobalCacheVariable.FileCheck.ExistAudioFile +  "/" + GlobalCacheVariable.FileCheck.TotalAudioFile);
           console.log("Check Image File static:" + GlobalCacheVariable.FileCheck.ExistImageFile +  "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
           if (GlobalCacheVariable.FileCheck.ExistAudioFile >= GlobalCacheVariable.FileCheck.TotalAudioFile &&
@@ -543,9 +542,12 @@ myModule.factory("VoiceRecordService", function ($http, $cordovaMedia) {
 
 myModule.factory("VoiceModelService", function($http, $localStorage) { //Store User Prefile
   return {
-    getOnline: function(userId) {
+    getOnline: function(userId,completeCallback) {
       $http.get(ServerPathVariable.GetUserProfilePath(userId)).then(function(data) {
         $localStorage.VoiceModel = data.data;
+        if (typeof completeCallback == "function") {
+          completeCallback();
+        }
       });
     },
     getLatest: function() {

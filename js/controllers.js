@@ -161,6 +161,7 @@ angular
   })
   .controller("SettingCtrl", function ($scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
+    $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.speechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.genderList = GlobalVariable.GenderList;
@@ -587,6 +588,7 @@ angular
     };
   })
   .controller("WelcomeCtrl", function ($scope,UserProfileService) {
+    $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
     $scope.Text = UserProfileService.getTranslatedMenuText("Operations", "WelcomeText", $scope.currentDisplayLanguage);
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Welcome", $scope.currentDisplayLanguage);
    })
@@ -850,8 +852,16 @@ angular
       var id = $scope.userProfile.ID;
       targetScope.collectedVoice = 0;
       targetScope.totalVoice = 160;
-      targetScope.CollectionStatusText = "Uncompleted"
+      targetScope.CollectionStatusText = "Uncompleted";
+      targetScope.ModelStatusText = "Training";
+      $scope.collectionStatus = true;
+      $scope.modelStatus = true;
+      targetScope.VoiceModelInformation = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "VoiceModelInformation", $scope.currentDisplayLanguage);
       targetScope.CollectionProgress = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "CollectionProgress", $scope.currentDisplayLanguage);
+      targetScope.CollectionStatus = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "CollectionStatus", $scope.currentDisplayLanguage);
+      targetScope.ModelStatus = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "ModelStatus", $scope.currentDisplayLanguage);
+      targetScope.TrainModel = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "TrainModel", $scope.currentDisplayLanguage);
+      targetScope.DownloadModel = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "DownloadModel", $scope.currentDisplayLanguage);
       //VoiceModelService.getOnline(id);
       $mdDialog.show({
         controller: DialogController,
