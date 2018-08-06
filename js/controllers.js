@@ -221,7 +221,7 @@ angular
         userProfile.SPEECH_GENDER = $scope.selectedSpeechGender;
         console.log("Language Selected:" + userProfile.DISPLAY_LANGUAGE + "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
         UserProfileService.saveLocal(userProfile);
-        LocalCacheService.prepareCache(userProfile);
+        LocalCacheService.prepareCache(userProfile, true);
         UserProfileService.postToServerCallback(function () {
           console.log("Post to Server when onConfirmLanguageButtonClicked ");
         });
@@ -253,7 +253,7 @@ angular
         console.log('Setting: reset userProfile and uploaded. UserID: ' + userProfile.ID);
         UserProfileService.cloneItem(userProfile.ID, function () {
           GlobalVariable.DownloadProgress.Reset();
-          LocalCacheService.prepareCache(UserProfileService.getLatest());
+          LocalCacheService.prepareCache(UserProfileService.getLatest(), true);
         });
       });
     }
