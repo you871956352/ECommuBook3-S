@@ -251,9 +251,9 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       }
       self.checkDownload();
     },
-    prepareCache: function (userProfile, isCheckDownload) {
-      if (isCheckDownload == undefined) {
-        isCheckDownload = true;
+    prepareCache: function (userProfile, trueReload) {
+      if (trueReload == undefined) {
+        trueReload = false;
       }
       console.log("Start prepare cache");
       var self = this;
@@ -295,9 +295,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       for (var i = 0; i < audioIDList.length; i++) {
         self.downloadAudioToLocal(targetDirectory, "bing", userProfile.SPEECH_LANGUAGE_CODE, userProfile.SPEECH_GENDER, displayTextList[i], audioIDList[i]);
       }
-      if (isCheckDownload == true) {
-        self.checkDownload();
-      }
+      self.checkDownload(trueReload);
     },
     deleteCache: function (userProfile, targetID) {
       this.deleteLocalImage(targetID);
@@ -388,19 +386,20 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
         }
       );
     },
-    checkDownload: function(){
+    checkDownload: function(trueReload){
       var self = this;
+      var reload = trueReload;
         setTimeout(function() {
+          console.log("IsTrueReload:" + reload);
           console.log("Check Audio File static:" + GlobalCacheVariable.FileCheck.ExistAudioFile +  "/" + GlobalCacheVariable.FileCheck.TotalAudioFile);
           console.log("Check Image File static:" + GlobalCacheVariable.FileCheck.ExistImageFile +  "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
           if (GlobalCacheVariable.FileCheck.ExistAudioFile >= GlobalCacheVariable.FileCheck.TotalAudioFile &&
             GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
             GlobalVariable.DownloadProgress.IsNoDownload = 1;
             console.log("Download complete, refresh the page.");
-            //window.location.reload(true);
-            $state.reload();
+            if(reload == true){ window.location.reload(true); } else { $state.reload(); }
           }else{
-            self.checkDownload();
+            self.checkDownload(reload);
           }
         }, 1000); //delay 2 seconds
     },
