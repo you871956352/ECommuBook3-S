@@ -1,6 +1,6 @@
 var myModule = angular.module("starter.services", []);
 
-myModule.factory("UserProfileService", function($http, $localStorage) { //Store User Prefile
+myModule.factory("UserProfileService", function($http, $localStorage, LocalCacheService) { //Store User Prefile
   return {
     getOnline: function(userUuid, completeCallback) {
       $http.get(ServerPathVariable.GetUserProfilePath(userUuid)).then(function(data) {
@@ -118,8 +118,21 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
       }
       return UserProfile;
     },
-    deleteCategory: function (category, selectedItemId) {
-
+    deleteCategory: function (UserProfile, selectedCategoryId) {
+      var idList = [];
+      var targetCategoryIndex = getCategoryIndexById(UserProfile, selectedCategoryId);
+      if (targetCategoryIndex == -1) {
+        alert("Target Category Not Exist");
+        return;
+      }
+      idList.push(selectedCategoryId);
+      var category = UserProfile.Categories[targetCategoryIndex];
+      for (i = 0; i < category.Items.length; i++) {
+        var item = category.Items[i];
+        idList.push(item.ID);
+      }
+      UserProfile.Categories.splice(targetCategoryIndex, 1);
+      return { UserProfile, idList };
     },
     addSentence: function (UserProfile, targetSentence, inputDisplayNameLanguage) {
       var SentenceObject = {};

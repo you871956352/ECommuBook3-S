@@ -32,7 +32,7 @@ angular
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + categoryId + ".mp3");
     };
   })
-  .controller("CategoryCtrl", function ($scope, $stateParams, $mdDialog, $cordovaMedia, UserProfileService, $http, LocalCacheService) {
+  .controller("CategoryCtrl", function ($scope, $stateParams, $state, $mdDialog, $ionicSideMenuDelegate, $cordovaMedia, UserProfileService, $http, LocalCacheService, $cordovaNetwork) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.subMenuPage = UserProfileService.getMenuProfileSubObject("CategoryGrid");
     $scope.textButtonShare = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareButton", $scope.currentDisplayLanguage);
@@ -98,7 +98,7 @@ angular
         .cancel($scope.textButtonCancel);
 
       $mdDialog.show(confirmDialog).then(function () {
-        newUserProfile = UserProfileService.setTargetCategoryTop($scope.userProfile, $scope.categoryId);
+        var newUserProfile = UserProfileService.setTargetCategoryTop($scope.userProfile, $scope.categoryId);
         UserProfileService.saveLocal(newUserProfile);
         UserProfileService.postToServerCallback(function () {
           console.log("Post to Server After Reorder");
@@ -107,6 +107,32 @@ angular
         console.log("User decide to quit share");
       });
     };
+    $scope.deleteThisCategory = function (event, categoryID) {
+      var confirmDialog = $mdDialog.confirm()
+        .title($scope.textNotification)
+        .textContent("Confirm Delete?")
+        .targetEvent(event)
+        .ok($scope.textButtonOK)
+        .cancel($scope.textButtonCancel);
+
+      $mdDialog.show(confirmDialog).then(function () {        
+        var returnObject = UserProfileService.deleteCategory($scope.userProfile, categoryID);
+        var newUserProfile = returnObject.UserProfile;
+        var idList = returnObject.idList;
+        UserProfileService.saveLocal(newUserProfile);
+        $scope.userProfile = UserProfileService.getLatest();
+        $state.go("app.welcome", {}, { reload: true });
+        UserProfileService.postToServerCallback(function () {   
+          for (i = 0; i < idList.length; i++) {
+            LocalCacheService.deleteCache($scope.userProfile, idList[i]);
+          }
+          LocalCacheService.checkDelete();
+          //alert("Done");
+        });      
+      }, function () {
+        console.log("User decide to quit delete");
+        });
+    }
     $scope.enableEditCategoryTog = function () {
       $scope.showEditCard = !$scope.showEditCard;
     };
@@ -378,10 +404,6 @@ angular
       $scope.category = getCategoryById($scope.userProfile, $scope.selectedCategoryId);
     };
     $scope.onDeleteCategoryConfirmClicked = function () {
-      if ($cordovaNetwork.isOffline()) {
-        alert("This feature only be supported with internet. Please connect wifi and try again.");
-        return;
-      }
       var idList = [];
       var categoryIndex = getCategoryIndexById($scope.userProfile, $scope.selectedCategoryId);
       if (categoryIndex == -1) {
@@ -397,8 +419,7 @@ angular
       }
       GlobalCacheVariable.DeleteCheck.Reset();
       GlobalCacheVariable.DeleteCheck.SetFileToDelete(idList.length * 2);
-      console.log("idList leangth: " + idList.length);
-      console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete);
+      console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete + "idList leangth: " + idList.length);
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate,true);
       $scope.userProfile.Categories.splice(categoryIndex, 1);
       UserProfileService.saveLocal($scope.userProfile);
