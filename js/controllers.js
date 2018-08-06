@@ -399,7 +399,7 @@ angular
       GlobalCacheVariable.DeleteCheck.SetFileToDelete(idList.length * 2);
       console.log("idList leangth: " + idList.length);
       console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete);
-      LoadingDeleteDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+      LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate,true);
       $scope.userProfile.Categories.splice(categoryIndex, 1);
       UserProfileService.saveLocal($scope.userProfile);
       UserProfileService.postToServerCallback(function () {
@@ -577,7 +577,7 @@ angular
         console.log('categoryIndex = -1, categoryId:' + $scope.selectedCategoryId);
         return;
       }
-      LoadingDeleteDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+      LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate,true);
       $scope.userProfile.Categories[categoryIndex] = $scope.category;
       UserProfileService.saveLocal($scope.userProfile);
       UserProfileService.postToServerCallback(function () {

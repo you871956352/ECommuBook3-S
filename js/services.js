@@ -118,6 +118,9 @@ myModule.factory("UserProfileService", function($http, $localStorage) { //Store 
       }
       return UserProfile;
     },
+    deleteCategory: function (category, selectedItemId) {
+
+    },
     addSentence: function (UserProfile, targetSentence, inputDisplayNameLanguage) {
       var SentenceObject = {};
       SentenceObject.ID = guid();
