@@ -100,15 +100,6 @@ angular
           }
         }
       })
-      .state("app.test", {
-        url: "/test",
-        views: {
-          menuContent: {
-            templateUrl: "templates/test.html",
-            controller: "TestCtrl"
-          }
-        }
-      })
       .state("app.userInformation", {
         url: "/userInformation",
         views: {
@@ -119,7 +110,5 @@ angular
         }
       });
     // if none of the above states are matched, use this as the fallback
-    // $urlRouterProvider.otherwise('/app/browse');
-    //$urlRouterProvider.otherwise('/app/category/00000000-0000-0000-0002-000000000006');
     $urlRouterProvider.otherwise("/app/welcome");
   });
