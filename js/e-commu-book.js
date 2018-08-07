@@ -290,18 +290,6 @@ var LoadingDialog = new function () {
   };
 };
 
-function updateDisplayName(userProfile) { //Current not used
-  var category, item, targetLanguage = userProfile.DISPLAY_LANGUAGE;
-  for (i = 0; i < userProfile.Categories.length; i++) {
-    category = userProfile.Categories[i];
-    category.DisplayName = getObjectTranslation(category, targetLanguage);
-    for (j = 0; j < category.Items.length; j++) {
-      item = category.Items[j];
-      item.DisplayName = getObjectTranslation(item, targetLanguage);
-    }
-  }
-  return userProfile;
-}
 function getObjectByTranslationText(userProfile, translationText, targetLanguage) {
   for (var i = 0; i < userProfile.Categories.length; i++) {
     for (var j = 0; j < userProfile.Categories[i].DisplayMultipleLanguage.length; j++) {
@@ -323,9 +311,6 @@ function getObjectByTranslationText(userProfile, translationText, targetLanguage
   }
   return {object: null, type: "undefined"};
 }
-function getObjectTranslationByID(userProfile, itemId, targetLanguage) {
-  return getObjectTranslation(getItemObjectByItemId(userProfile, itemId), targetLanguage);
-}
 function getObjectTranslation(itemObject, targetLanguage) {
   for (var k = 0; k < itemObject.DisplayMultipleLanguage.length; k++) {
     if (itemObject.DisplayMultipleLanguage[k].Language == targetLanguage) {
@@ -333,18 +318,6 @@ function getObjectTranslation(itemObject, targetLanguage) {
     }
   }
   return "";
-}
-function getItemObjectByItemId(userProfile, itemId) {
-  for (i = 0; i < userProfile.Categories.length; i++) {
-    category = userProfile.Categories[i];
-    for (j = 0; j < category.Items.length; j++) {
-      item = category.Items[j];
-      if (item.ID == itemId) {
-        return item;
-      }
-    }
-  }
-  return null;
 }
 function getObjectById(userProfile, id) {
   for (i = 0; i < userProfile.Categories.length; i++) {
@@ -368,14 +341,6 @@ function getCategoryIndexById(userProfile, categoryid) {
     }
   }
   return -1;
-}
-function getCategoryById(userProfile, categoryid) {
-  for (var i = 0; i < userProfile.Categories.length; i++) {
-    if (userProfile.Categories[i].ID == categoryid) {
-      return userProfile.Categories[i];
-    }
-  }
-  return null;
 }
 function getItemIndexByItemId(category, itemId) {
   for (var i = 0; i < category.Items.length; i++) {

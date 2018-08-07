@@ -14,6 +14,12 @@
           <md-button class="md-raised" ng-click=searchRecording()>{{RecordState}}</md-button>
           <md-button class="md-raised" ng-click=checkRecord() ng-disabled="!isRecorded">{{subMenuProfileGeneral.Check}}</md-button>
           <md-button class="md-raised" ng-click=uploadRecord() ng-disabled="!isRecorded">{{subMenuProfileGeneral.Upload}}</md-button>
+          <md-input-container>
+            <label>Range</label>
+            <md-select ng-model="CategoryName" required>
+              <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
+            </md-select>
+          </md-input-container>
         </md-card-content>
       </md-card>
 

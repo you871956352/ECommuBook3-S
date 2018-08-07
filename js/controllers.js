@@ -114,10 +114,10 @@ angular
     };
     $scope.showEnlargeItemPopup = function (ev, itemId) {
       var targetScope = $scope.$new();
-      targetScope.selectItemObject = getItemObjectByItemId($scope.userProfile, itemId);
+      targetScope.selectItemObject = getObjectById($scope.userProfile, itemId);
       targetScope.displayLanguageList = GlobalVariable.DisplayLanguageList;
       targetScope.selectedDisplayLanguage = $scope.currentDisplayLanguage;
-      targetScope.selectedItemName = getObjectTranslationByID($scope.userProfile, itemId, $scope.currentDisplayLanguage);
+      targetScope.selectedItemName = getObjectTranslation(targetScope.selectItemObject, $scope.currentDisplayLanguage);
       targetScope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
       MediaPlayer.play($cordovaMedia, targetScope.AudioDirectory + targetScope.selectItemObject.ID + ".mp3");
       $mdDialog.show({
