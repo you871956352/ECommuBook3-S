@@ -1,14 +1,14 @@
-<ion-view cache-view="false" view-title={{Title}}>
+<ion-view cache-view="false" view-title={{subMenuProfileObject.PageTitle}}>
   <ion-content>
     <div id="grid-container" class="container-fluid" ng-controller="ShareCtrl" ng-cloak>
       <md-card>
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline">{{Title}}</span>
+            <span class="md-headline">{{subMenuProfileObject.PageTitle}}</span>
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
-          <md-button class="md-raised" ng-click=refreshOnlineResource()>{{textButtonGet}}</md-button>
+          <md-button class="md-raised" ng-click=refreshOnlineResource()>{{subMenuProfileGeneral.GetButton}}</md-button>
         </md-card-content>
       </md-card>
 

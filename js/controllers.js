@@ -607,24 +607,14 @@ angular
   })
   .controller("SearchCtrl", function ($scope, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Search", $scope.currentDisplayLanguage);
-    $scope.subUserInformationProfile = UserProfileService.getMenuProfileSubObject("UserInformation");
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Search", $scope.currentDisplayLanguage); 
+    $scope.subMenuProfileObjectUserInformatiion = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
-    $scope.textDisplayLanguage = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "DisplayLanguage", $scope.currentDisplayLanguage);
-    $scope.textStart = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Start", $scope.currentDisplayLanguage);
-    $scope.textStop = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Stop", $scope.currentDisplayLanguage);
-    $scope.textCheck = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Check", $scope.currentDisplayLanguage);
-    $scope.textUpload = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Upload", $scope.currentDisplayLanguage);
-    $scope.textRecordState = $scope.textStart;
-    $scope.subMenuProfile = UserProfileService.getMenuProfileSubObject("Search");
-    $scope.textGuide = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SearchGuide1", $scope.currentDisplayLanguage) + ", " + UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SearchGuide2", $scope.currentDisplayLanguage);
-    $scope.textSearchResult = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SearchResult", $scope.currentDisplayLanguage);
+    $scope.RecordState = $scope.subMenuProfileObjectUserInformatiion.Start;
     $scope.isShowResult = false;
     $scope.isRecorded = false;
     $scope.resultWords = ["Feeling", "Shaving", "Rice"];
     $scope.maxResultWordsDisplay = 3;
-
-
     if (window.cordova && window.cordova.file && window.audioinput) {
       console.log("Use 'Start Capture' to begin...");
       window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
@@ -644,13 +634,13 @@ angular
       }
     };
     $scope.searchRecording = function (ev) {
-      if ($scope.textRecordState == $scope.textStart) {
+      if ($scope.RecordState == $scope.subMenuProfileObjectUserInformatiion.Start) {
         $scope.isRecorded = false;
-        $scope.textRecordState = $scope.textStop;
+        $scope.RecordState = $scope.subMenuProfileObjectUserInformatiion.Stop;
         VoiceRecordService.startCapture();
       }
-      else if ($scope.textRecordState == $scope.textStop) {
-        $scope.textRecordState = $scope.textStart;
+      else if ($scope.RecordState == $scope.subMenuProfileObjectUserInformatiion.Stop) {
+        $scope.RecordState = $scope.subMenuProfileObjectUserInformatiion.Start;
         VoiceRecordService.stopCapture("searchTemp");
         $scope.isRecorded = true;
       }
@@ -659,9 +649,7 @@ angular
   .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Download", $scope.currentDisplayLanguage);
-    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
-    $scope.textButtonGet = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "GetButton", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Download", $scope.currentDisplayLanguage);
     $scope.refreshOnlineResource = function () {
       console.log("Start to download online resources");
       $scope.shareCategory = ShareCategoryService.getShareCategory();
