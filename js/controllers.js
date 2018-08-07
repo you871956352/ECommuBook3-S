@@ -144,6 +144,8 @@ angular
       $scope.enableEdit = false;
       $scope.textLabelEdit = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "Edit", $scope.currentDisplayLanguage);
       $scope.textLabelSelectLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SelectLanguage", $scope.currentDisplayLanguage);
+      $scope.textLabelDeleteItem = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "DeleteItem", $scope.currentDisplayLanguage);
+      $scope.textLabelDeleteItemWarning = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "DeleteItemWarning1", $scope.currentDisplayLanguage) + "? " + UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "DeleteItemWarning2", $scope.currentDisplayLanguage);
       $scope.cancel = function () {
         $mdDialog.cancel();
       };
@@ -160,7 +162,7 @@ angular
       $scope.deleteThisItem = function (categoryID, itemID) {
         var confirmDialog = $mdDialog.confirm()
           .title($scope.textNotification)
-          .textContent("2333?")
+          .textContent($scope.textLabelDeleteItemWarning)
           .targetEvent(event)
           .ok($scope.textButtonOK)
           .cancel($scope.textButtonCancel);
@@ -548,44 +550,6 @@ angular
           // error
         }
       );
-    };
-  })
-  .controller("DeleteItemCtrl", function ($scope, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
-    $scope.userProfile = UserProfileService.getLatest();
-    $scope.categories = $scope.userProfile.Categories;
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "DeleteItem", $scope.currentDisplayLanguage);
-    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
-    $scope.textCategoryName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CategoryName", $scope.currentDisplayLanguage);
-    $scope.textItemName = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ItemName", $scope.currentDisplayLanguage);
-    $scope.textButtonConfirm = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton", $scope.currentDisplayLanguage);
-
-    $scope.onSelectedCategoryChanged = function () {
-      console.log("$scope.selectedCategoryId: " + $scope.selectedCategoryId);
-      $scope.category = getCategoryById($scope.userProfile, $scope.selectedCategoryId);
-    };
-    $scope.onDeleteItemConfirmClicked = function () {
-      GlobalCacheVariable.DeleteCheck.Reset();
-      GlobalCacheVariable.DeleteCheck.SetFileToDelete(2);
-      console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete);
-      var itemIndex = getItemIndexByItemId($scope.category, $scope.selectedItemId);
-      if (typeof $scope.category == 'undefined' || itemIndex == -1) {
-        console.log('itemIndex = -1, itemId:' + $scope.selectedItemId);
-        alert("Please select item");
-        return;
-      }
-      $scope.category.Items.splice(itemIndex, 1);
-      var categoryIndex = getCategoryIndexById($scope.userProfile, $scope.selectedCategoryId);
-      if (categoryIndex == -1) {
-        console.log('categoryIndex = -1, categoryId:' + $scope.selectedCategoryId);
-        return;
-      }
-      LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate,true);
-      $scope.userProfile.Categories[categoryIndex] = $scope.category;
-      UserProfileService.saveLocal($scope.userProfile);
-      UserProfileService.postToServerCallback(function () {
-        LocalCacheService.deleteCache($scope.userProfile, $scope.selectedItemId);
-        LocalCacheService.checkDelete();
-      });
     };
   })
   .controller("WelcomeCtrl", function ($scope,UserProfileService) {

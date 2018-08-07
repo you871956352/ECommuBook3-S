@@ -7635,6 +7635,57 @@ function getSampleMenuProfile() {
               { "Language": "ar", "Text": "بعد أن يتم حذف هذه الفئة، جميع المعلومات سيتم فقدان" },
               { "Language": "zh-CHS", "Text": "删除此类别后, 所有信息都将丢失" },
               { "Language": "ja", "Text": "このカテゴリを削除すると、すべての情報が損失" }]
+          },
+          {
+            OperationType: "DeleteItem",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Element löschen" },
+              { "Language": "ru", "Text": "Удалить элемент" },
+              { "Language": "pt", "Text": "Excluir Item" },
+              { "Language": "ko", "Text": "항목 삭제" },
+              { "Language": "yue", "Text": "刪除項目" },
+              { "Language": "en", "Text": "Delete Item" },
+              { "Language": "it", "Text": "Elimina elemento" },
+              { "Language": "fr", "Text": "Supprimer le point" },
+              { "Language": "es", "Text": "Eliminar elemento" },
+              { "Language": "zh-CHT", "Text": "刪除專案" },
+              { "Language": "ar", "Text": "حذف عنصر" },
+              { "Language": "zh-CHS", "Text": "删除项目" },
+              { "Language": "ja", "Text": "項目を削除します。" }]
+          },
+          {
+            OperationType: "DeleteItemWarning1",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Möchten Sie dieses Element wirklich löschen" },
+              { "Language": "ru", "Text": "Вы действительно хотите удалить этот элемент" },
+              { "Language": "pt", "Text": "Tem certeza de excluir este Item" },
+              { "Language": "ko", "Text": "이 항목을 삭제 해야 당신은" },
+              { "Language": "yue", "Text": "係咪真係要刪除此項目" },
+              { "Language": "en", "Text": "Are you sure to delete this Item" },
+              { "Language": "it", "Text": "Sei sicuro di voler eliminare questo elemento" },
+              { "Language": "fr", "Text": "Êtes-vous sûr de supprimer cet élément" },
+              { "Language": "es", "Text": "Está seguro de eliminar este elemento" },
+              { "Language": "zh-CHT", "Text": "是否確實要刪除此專案" },
+              { "Language": "ar", "Text": "هل أنت متأكد من حذف هذا العنصر" },
+              { "Language": "zh-CHS", "Text": "是否确实要删除此项目" },
+              { "Language": "ja", "Text": "この項目を削除してよろしい" }]
+          },
+          {
+            OperationType: "DeleteItemWarning2",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Nachdem dieses Element gelöscht wird, wird es Disapper in dieser Kategorie" },
+              { "Language": "ru", "Text": "После того, как этот элемент удален, он будет пропадают в этой категории" },
+              { "Language": "pt", "Text": "Após este item é excluído, ele será disapper nesta categoria" },
+              { "Language": "ko", "Text": "이 카테고리에서 disapper 것 이다이 항목을 삭제 후" },
+              { "Language": "yue", "Text": "刪除此項目後, 它將在該類別中消失" },
+              { "Language": "en", "Text": "After this item is deleted, it will disapper in this category" },
+              { "Language": "it", "Text": "Dopo questo elemento viene eliminato, esso sarà disapper in questa categoria" },
+              { "Language": "fr", "Text": "Après que cet élément est supprimé, il sera disapper dans cette catégorie" },
+              { "Language": "es", "Text": "Después de este artículo se suprime, serán disapper en esta categoría" },
+              { "Language": "zh-CHT", "Text": "刪除此專案後, 它將在該類別中消失" },
+              { "Language": "ar", "Text": "بعد أن يتم حذف هذا البند، وسوف ديسابير في هذه الفئة" },
+              { "Language": "zh-CHS", "Text": "删除此项目后, 它将在该类别中消失" },
+              { "Language": "ja", "Text": "この項目を削除すると、した後それがこのカテゴリで消え去る" }]
           }
         ]
       },

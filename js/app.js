@@ -64,15 +64,6 @@ angular
           }
         }
       })
-      .state("app.deleteItem", {
-        url: "/deleteItem",
-        views: {
-          menuContent: {
-            templateUrl: "templates/deleteItem.tmpl.html",
-            controller: "DeleteItemCtrl"
-          }
-        }
-      })
       .state("app.addCategory", {
         url: "/addCategory",
         views: {

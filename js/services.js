@@ -432,18 +432,22 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
     },
     checkDelete: function(refreshAll){
       var self = this;
+      var refresh = true;
+      if (refreshAll == false || refreshAll == undefined) {
+        refresh = false;
+      }
         setTimeout(function() {
           console.log("Check File Delete:" + GlobalCacheVariable.DeleteCheck.DeletedFile +  "/" + GlobalCacheVariable.DeleteCheck.FileToDelete);
           if (GlobalCacheVariable.DeleteCheck.DeletedFile >= GlobalCacheVariable.DeleteCheck.FileToDelete ) {
             console.log("Delete complete, refresh the page.");
-            if (refreshAll == true) {
+            if (refresh == true) {          
               $state.go("app.welcome", {}, { reload: true });
-            } else if (refreshAll == false) {
+            } else if (refresh == false) {
               $state.reload();
             }
             
           }else{
-            self.checkDelete();
+            self.checkDelete(refresh);
           }
         }, 1000); //delay 2 seconds
     }
