@@ -418,7 +418,7 @@ angular
   })
   .controller("AddCategoryCtrl", function ($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "AddCategory", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("AddCategory", $scope.currentDisplayLanguage);
     $scope.uuid = UtilityFunction.guid();
     $scope.inputLanguage = "";
     $scope.selectedImageUrl = "";

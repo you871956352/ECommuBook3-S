@@ -170,16 +170,15 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       $localStorage.menuProfile = getSampleMenuProfile();
       return $localStorage.menuProfile;
     },
-    getMenuProfileSubObject: function (targetText) {
+    getMenuProfileSubObjectWithInputLanguage: function (targetText, inputLanguage) {
+      var originalObject;
       var menuProfile = this.getMenuProfile();
       for (var i = 0; i < menuProfile.Operations.length; i++) {
         if (menuProfile.Operations[i].OperationType == targetText) {
-          return menuProfile.Operations[i];
+          originalObject = menuProfile.Operations[i];
+          break;
         }
       }
-    },
-    getMenuProfileSubObjectWithInputLanguage: function (targetText, inputLanguage) {
-      var originalObject = this.getMenuProfileSubObject(targetText);
       var returnObject = {};
       if (inputLanguage == undefined) {
         var userProfile = this.getLatest();
@@ -210,31 +209,6 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       }
       return returnObject;
     },
-    getTranslatedMenuText: function (mode, targetText, inputLanguage) {
-      var menuProfile = this.getMenuProfile();
-      if (mode == "Operations") {
-        return this.getTranslatedObjectText(menuProfile.Operations, targetText, inputLanguage)
-      }
-    },
-    getTranslatedObjectText: function (targetObject, targetText, inputLanguage) {
-      if (inputLanguage == undefined) {
-        var userProfile = this.getLatest();
-        var targetLanguage = userProfile.DISPLAY_LANGUAGE;
-        console.log("No input language detected, use default userProfile config language");
-      }
-      else {
-        var targetLanguage = inputLanguage;
-      }
-      for (var i = 0; i < targetObject.length; i++) {
-        if (targetObject[i].OperationType == targetText) {
-          for (var j = 0; j < targetObject[i].DisplayMultipleLanguage.length; j++) {
-            if (targetObject[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
-              return targetObject[i].DisplayMultipleLanguage[j].Text;
-            }
-          }
-        }
-      }
-    }
   };
 });
 
