@@ -1,4 +1,4 @@
-<md-dialog aria-label="Mango (Fruit)">
+<md-dialog>
   <form ng-cloak>
     <md-toolbar>
       <div class="md-toolbar-tools" style="text-align: center;">
@@ -25,22 +25,22 @@
       <md-card ng-show="enableEdit">
         <md-card-content>
           <md-input-container style="margin: auto; width: 50%;">
-            <label>{{textLabelSelectLanguage}}</label>
+            <label>{{subMenuProfileObject.SelectLanguage}}</label>
             <md-select ng-model="selectedDisplayLanguage" ng-change="popupLanguageChange()">
               <md-option ng-value="displayLanguage.value" ng-repeat="displayLanguage in displayLanguageList">{{displayLanguage.name}}</md-option>
             </md-select>
           </md-input-container>
-          <md-button class="md-raised" ng-click="reorderAddTopItem($event)" style="float: right">{{textButtonSetTop}}</md-button>
+          <md-button class="md-raised" ng-click="reorderAddTopItem($event)" style="float: right">{{subMenuProfileObject.SetTopButton}}</md-button>
         </md-card-content>
         <md-card-content>
           <md-input-container style="margin: auto; width: 50%;">
-            <label>{{textLabelEdit}}</label>
+            <label>{{subMenuProfileObject.Edit}}</label>
             <input type="text" ng-model="EditNewText">
           </md-input-container>
-          <md-button class="md-raised" ng-click="editText()" style="float: right">{{textButtonOK}}</md-button>
+          <md-button class="md-raised" ng-click="editText()" style="float: right">{{subMenuProfileGeneral.ConfirmButton}}</md-button>
         </md-card-content>
         <md-card-content>
-          <md-button class="md-raised" ng-click="deleteThisItem(categoryId, selectItemObject.ID)" style="float: right">{{textLabelDeleteItem}}</md-button>
+          <md-button class="md-raised" ng-click="deleteThisItem(categoryId, selectItemObject.ID)" style="float: right">{{subMenuProfileObject.DeleteItem}}</md-button>
         </md-card-content>
       </md-card>
     </md-dialog-content>
