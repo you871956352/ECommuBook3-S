@@ -120,7 +120,7 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
     },
     deleteCategory: function (UserProfile, selectedCategoryId) {
       var idList = [];
-      var targetCategoryIndex = getCategoryIndexById(UserProfile, selectedCategoryId);
+      var targetCategoryIndex = UtilityFunction.getCategoryIndexById(UserProfile, selectedCategoryId);
       if (targetCategoryIndex == -1) {
         console("Target Category Not Exist");
         return { UserProfile, idList };
@@ -135,12 +135,12 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       return { UserProfile, idList };
     },
     deleteItem: function (UserProfile, selectedCategoryId, selectedItemId) {
-      var targetCategoryIndex = getCategoryIndexById(UserProfile, selectedCategoryId);
+      var targetCategoryIndex = UtilityFunction.getCategoryIndexById(UserProfile, selectedCategoryId);
       if (targetCategoryIndex == -1) {
         console("Target Category Not Exist");
         return UserProfile;
       }
-      var targetItemIndex = getItemIndexByItemId(UserProfile.Categories[targetCategoryIndex], selectedItemId);
+      var targetItemIndex = UtilityFunction.getItemIndexByItemId(UserProfile.Categories[targetCategoryIndex], selectedItemId);
       if (targetItemIndex == -1) {
         console("Target Item Not Exist");
         return UserProfile;
@@ -151,7 +151,7 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
     },
     addSentence: function (UserProfile, targetSentence, inputDisplayNameLanguage) {
       var SentenceObject = {};
-      SentenceObject.ID = guid();
+      SentenceObject.ID = UtilityFunction.guid();
       SentenceObject.DisplayNameLanguage = inputDisplayNameLanguage;
       SentenceObject.DisplayName = targetSentence;
       UserProfile.Sentences.push(SentenceObject);
@@ -277,7 +277,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
         function (error) { //file not exist
           GlobalVariable.DownloadProgress.AddTotal();
           $cordovaFileTransfer
-            .download(ServerPathVariable.GetBingAudioPath(speechLanguageCode, speechGender, normalizeDisplayName(displayText)), (targetDirectory + "/" + targetName), { timeout: 10000 }, true).then(
+            .download(ServerPathVariable.GetBingAudioPath(speechLanguageCode, speechGender, UtilityFunction.normalizeDisplayName(displayText)), (targetDirectory + "/" + targetName), { timeout: 10000 }, true).then(
               function (result) { //download ok
                 GlobalVariable.DownloadProgress.AddDownloaded();
                 GlobalCacheVariable.FileCheck.AddExistAudioFile();
@@ -339,16 +339,16 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       var audioIDList = [];
       for (var i = 0; i < userProfile.Categories.length; i++) {
         var category = userProfile.Categories[i];
-        displayTextList.push(getObjectTranslation(category, userProfile.DISPLAY_LANGUAGE));
+        displayTextList.push(UtilityFunction.getObjectTranslation(category, userProfile.DISPLAY_LANGUAGE));
         audioIDList.push(category.ID);
         for (var j = 0; j < category.Items.length; j++) {
           item = category.Items[j];
-          displayTextList.push(getObjectTranslation(item, userProfile.DISPLAY_LANGUAGE));
+          displayTextList.push(UtilityFunction.getObjectTranslation(item, userProfile.DISPLAY_LANGUAGE));
           audioIDList.push(item.ID);
         }
       }
       for (var i = 0; i < userProfile.Sentences.length; i++) {
-        displayTextList.push(getObjectTranslation(userProfile.Sentences[i], userProfile.DISPLAY_LANGUAGE));
+        displayTextList.push(UtilityFunction.getObjectTranslation(userProfile.Sentences[i], userProfile.DISPLAY_LANGUAGE));
         audioIDList.push(userProfile.Sentences[i].ID);
       }
       GlobalCacheVariable.FileCheck.SetTotalAudioFile(audioIDList.length);

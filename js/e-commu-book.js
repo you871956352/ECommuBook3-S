@@ -290,86 +290,83 @@ var LoadingDialog = new function () {
   };
 };
 
-function getObjectByTranslationText(userProfile, translationText, targetLanguage) {
-  for (var i = 0; i < userProfile.Categories.length; i++) {
-    for (var j = 0; j < userProfile.Categories[i].DisplayMultipleLanguage.length; j++) {
-      if (userProfile.Categories[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
-        if (userProfile.Categories[i].DisplayMultipleLanguage[j].Text == translationText) {
-          return { object: userProfile.Categories[i], type: "category" };
+var UtilityFunction = new function () {
+  this.getObjectTranslation = function (itemObject, targetLanguage) {
+    for (var k = 0; k < itemObject.DisplayMultipleLanguage.length; k++) {
+      if (itemObject.DisplayMultipleLanguage[k].Language == targetLanguage) {
+        return itemObject.DisplayMultipleLanguage[k].Text;
+      }
+    }
+    return "";
+  };
+  this.getObjectById = function (userProfile, id) {
+    for (i = 0; i < userProfile.Categories.length; i++) {
+      category = userProfile.Categories[i];
+      if (category.ID == id) {
+        return category;
+      }
+      for (j = 0; j < category.Items.length; j++) {
+        item = category.Items[j];
+        if (item.ID == id) {
+          return item;
         }
       }
     }
-   for (var j = 0; j < userProfile.Categories[i].Items.length; j++) {
-     for (var k = 0; k < userProfile.Categories[i].Items[j].DisplayMultipleLanguage.length;k++) {
-        if (userProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Language == targetLanguage) {
-          if (userProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text == translationText) {
-            return { object: userProfile.Categories[i].Items[j], type: "item" };
+    return null;
+  };
+  this.getObjectByTranslationText = function (userProfile, translationText, targetLanguage) {
+    for (var i = 0; i < userProfile.Categories.length; i++) {
+      for (var j = 0; j < userProfile.Categories[i].DisplayMultipleLanguage.length; j++) {
+        if (userProfile.Categories[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
+          if (userProfile.Categories[i].DisplayMultipleLanguage[j].Text == translationText) {
+            return { object: userProfile.Categories[i], type: "category" };
+          }
+        }
+      }
+      for (var j = 0; j < userProfile.Categories[i].Items.length; j++) {
+        for (var k = 0; k < userProfile.Categories[i].Items[j].DisplayMultipleLanguage.length; k++) {
+          if (userProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Language == targetLanguage) {
+            if (userProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text == translationText) {
+              return { object: userProfile.Categories[i].Items[j], type: "item" };
+            }
           }
         }
       }
     }
-  }
-  return {object: null, type: "undefined"};
-}
-function getObjectTranslation(itemObject, targetLanguage) {
-  for (var k = 0; k < itemObject.DisplayMultipleLanguage.length; k++) {
-    if (itemObject.DisplayMultipleLanguage[k].Language == targetLanguage) {
-      return itemObject.DisplayMultipleLanguage[k].Text;
-    }
-  }
-  return "";
-}
-function getObjectById(userProfile, id) {
-  for (i = 0; i < userProfile.Categories.length; i++) {
-    category = userProfile.Categories[i];
-    if (category.ID == id) {
-      return category;
-    }
-    for (j = 0; j < category.Items.length; j++) {
-      item = category.Items[j];
-      if (item.ID == id) {
-        return item;
+    return { object: null, type: "undefined" };
+  };
+  this.getCategoryIndexById = function (userProfile, categoryid) {
+    for (var i = 0; i < userProfile.Categories.length; i++) {
+      if (userProfile.Categories[i].ID == categoryid) {
+        return i;
       }
     }
-  }
-  return null;
-}
-function getCategoryIndexById(userProfile, categoryid) {
-  for (var i = 0; i < userProfile.Categories.length; i++) {
-    if (userProfile.Categories[i].ID == categoryid) {
-      return i;
+    return -1;
+  };
+  this.getItemIndexByItemId = function (category, itemId) {
+    for (var i = 0; i < category.Items.length; i++) {
+      if (category.Items[i].ID == itemId) {
+        return i;
+      }
     }
-  }
-  return -1;
-}
-function getItemIndexByItemId(category, itemId) {
-  for (var i = 0; i < category.Items.length; i++) {
-    if (category.Items[i].ID == itemId) {
-      return i;
+    return -1;
+  };
+  this.normalizeDisplayName = function (text) {
+    return text
+      .replace("/", " ")
+      .replace(".", " ")
+      .replace(",", " ");
+  };
+  this.guid = function () {
+    function s4() {
+      return Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
     }
-  }
-  return -1;
-}
-function normalizeDisplayName(text) {
-  return text
-    .replace("/", " ")
-    .replace(".", " ")
-    .replace(",", " ");
-}
-function playAudio(src) {
-  console.log("play audio:" + src);
-  var media = new Media(encodeURI(src), null, null, null);
-  media.play();
-}
-function playSpeechAudio($cordovaMedia, src) {
-  media = $cordovaMedia.newMedia(src);
-  media.play();
-}
-function guid() {
-  function s4() {
-    return Math.floor((1 + Math.random()) * 0x10000)
-      .toString(16)
-      .substring(1);
-  }
-  return ( s4() +  s4() +  "-" + s4() +  "-" +  s4() +  "-" + s4() +  "-" +  s4() +  s4() +  s4() );
-}
+    return (s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + s4() + s4() + s4());
+  };
+};
+
+
+
+

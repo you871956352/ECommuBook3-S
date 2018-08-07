@@ -41,7 +41,7 @@ angular
     for (var i = 0; i < $scope.userProfile.Categories.length; i++) {
       if ($scope.userProfile.Categories[i].ID == $stateParams.categoryId) {
         $scope.category = $scope.userProfile.Categories[i];
-        $scope.categoryDisplayName = getObjectTranslation($scope.category, $scope.currentDisplayLanguage);
+        $scope.categoryDisplayName = UtilityFunction.getObjectTranslation($scope.category, $scope.currentDisplayLanguage);
         break;
       }
     }
@@ -114,10 +114,10 @@ angular
     };
     $scope.showEnlargeItemPopup = function (ev, itemId) {
       var targetScope = $scope.$new();
-      targetScope.selectItemObject = getObjectById($scope.userProfile, itemId);
+      targetScope.selectItemObject = UtilityFunction.getObjectById($scope.userProfile, itemId);
       targetScope.displayLanguageList = GlobalVariable.DisplayLanguageList;
       targetScope.selectedDisplayLanguage = $scope.currentDisplayLanguage;
-      targetScope.selectedItemName = getObjectTranslation(targetScope.selectItemObject, $scope.currentDisplayLanguage);
+      targetScope.selectedItemName = UtilityFunction.getObjectTranslation(targetScope.selectItemObject, $scope.currentDisplayLanguage);
       targetScope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
       MediaPlayer.play($cordovaMedia, targetScope.AudioDirectory + targetScope.selectItemObject.ID + ".mp3");
       $mdDialog.show({
@@ -167,7 +167,7 @@ angular
         });
       }
       $scope.popupLanguageChange = function () {
-        $scope.selectedItemName = getObjectTranslation($scope.selectItemObject, $scope.selectedDisplayLanguage);
+        $scope.selectedItemName = UtilityFunction.getObjectTranslation($scope.selectItemObject, $scope.selectedDisplayLanguage);
         if ($scope.selectedDisplayLanguage == $scope.currentDisplayLanguage) {
           console.log("Return back to current Display Language...");
           $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
@@ -213,7 +213,7 @@ angular
     };
     function AddItemController($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
       $scope.categories = $scope.userProfile.Categories;
-      $scope.uuid = guid();
+      $scope.uuid = UtilityFunction.guid();
       $scope.inputLanguage = $scope.currentDisplayLanguage;
       $scope.inputLanguageList = GlobalVariable.DisplayLanguageList;
       $scope.cancel = function () {
@@ -247,7 +247,7 @@ angular
         $http({ url: url, method: "GET" }).then(function (data) {
           newItem.DisplayMultipleLanguage = data.data;
           console.log(JSON.stringify(newItem));
-          var categoryIndex = getCategoryIndexById(UserProfileService.getLatest(), selectedCategoryId);
+          var categoryIndex = UtilityFunction.getCategoryIndexById(UserProfileService.getLatest(), selectedCategoryId);
           if (categoryIndex == -1) {
             console.log("Categort Id not found:" + selectedCategoryId);
             return;
@@ -405,7 +405,7 @@ angular
       LocalCacheService.clearAllCache();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       var userProfile = UserProfileService.getDefault();
-      userProfile.ID = guid();
+      userProfile.ID = UtilityFunction.guid();
       UserProfileService.saveLocal(userProfile);
       UserProfileService.postToServerCallback(function () {
         console.log('Setting: reset userProfile and uploaded. UserID: ' + userProfile.ID);
@@ -419,7 +419,7 @@ angular
   .controller("AddCategoryCtrl", function ($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "AddCategory", $scope.currentDisplayLanguage);
-    $scope.uuid = guid();
+    $scope.uuid = UtilityFunction.guid();
     $scope.inputLanguage = "";
     $scope.selectedImageUrl = "";
     $scope.inputLanguageList = GlobalVariable.DisplayLanguageList;
@@ -591,12 +591,12 @@ angular
       $scope.cancel = function () {
         $mdDialog.cancel("");
       };
-      $scope.categoryName = getObjectTranslation($scope.selectedCategory, $scope.currentDisplayLanguage);
+      $scope.categoryName = UtilityFunction.getObjectTranslation($scope.selectedCategory, $scope.currentDisplayLanguage);
       $scope.onAddToSentence = function (itemID) {
         var targetText = "Default";
         for (var i = 0; i < $scope.selectedCategory.Items.length; i++) {
           if ($scope.selectedCategory.Items[i].ID == itemID) {
-            targetText = getObjectTranslation($scope.selectedCategory.Items[i], $scope.currentDisplayLanguage);
+            targetText = UtilityFunction.getObjectTranslation($scope.selectedCategory.Items[i], $scope.currentDisplayLanguage);
           }
         }
         $mdDialog.cancel(targetText);
@@ -624,7 +624,7 @@ angular
       //VoiceRecordService.uploadRecordSearch();
       $scope.isShowResult = true;
       for (var i = 0; i < $scope.resultWords.length; i++) {
-        var targetIDObject = getObjectByTranslationText($scope.userProfile, $scope.resultWords[i], $scope.currentDisplayLanguage);
+        var targetIDObject = UtilityFunction.getObjectByTranslationText($scope.userProfile, $scope.resultWords[i], $scope.currentDisplayLanguage);
         if (targetIDObject.type != "undefined") {
           $scope.resultWords[i] = targetIDObject.object.ID;
         }
@@ -661,7 +661,7 @@ angular
       targetScope.selectedCategoryName = "";
       for (var i = 0; i < $scope.shareCategory.categories.length; i++) {
         if ($scope.shareCategory.categories[i].ID == categoryId) {
-          targetScope.selectedCategoryName = getObjectTranslation($scope.shareCategory.categories[i], $scope.currentDisplayLanguage);
+          targetScope.selectedCategoryName = UtilityFunction.getObjectTranslation($scope.shareCategory.categories[i], $scope.currentDisplayLanguage);
           break;
         }
       }
