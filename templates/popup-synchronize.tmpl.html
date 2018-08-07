@@ -2,7 +2,7 @@
   <form ng-cloak>
     <md-toolbar>
       <div class="md-toolbar-tools" style="text-align: center;">
-        <div style="text-align: center;"  ng-if="isShowDisplayName.checked">{{VoiceModelInformation}}</div>
+        <div style="text-align: center;"  ng-if="isShowDisplayName.checked">{{subMenuProfileObject.VoiceModelInformation}}</div>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel()">
           <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
@@ -14,21 +14,21 @@
       <div class="md-dialog-content">
         <h2></h2>
         <div layout="row" >
-          <span class="md-title">{{CollectionProgress}}: {{collectedVoice}} / {{totalVoice}}</span>
+          <span class="md-title">{{subMenuProfileObject.CollectionProgress}}: {{collectedVoice}} / {{totalVoice}}</span>
         </div>
         <h2></h2><h2></h2>
         <div layout="row">
-          <span class="md-title">{{CollectionStatus}}: {{CollectionStatusText}}</span>
+          <span class="md-title">{{subMenuProfileObject.CollectionStatus}}: {{CollectionStatusText}}</span>
         </div>
         <div layout="row">
-          <md-button class="md-raised" ng-click=startTrain() ng-disabled="collectionStatus">{{TrainModel}}</md-button>
+          <md-button class="md-raised" ng-click=startTrain() ng-disabled="collectionStatus">{{subMenuProfileObject.TrainModel}}</md-button>
         </div>
         <h2></h2><h2></h2>
         <div layout="row">
-          <span class="md-title">{{ModelStatus}}: {{ModelStatusText}}</span>
+          <span class="md-title">{{subMenuProfileObject.ModelStatus}}: {{ModelStatusText}}</span>
         </div>
         <div layout="row">
-          <md-button class="md-raised" ng-click=startTrain() ng-disabled="modelStatus">{{DownloadModel}}</md-button>
+          <md-button class="md-raised" ng-click=startTrain() ng-disabled="modelStatus">{{subMenuProfileObject.DownloadModel}}</md-button>
         </div>
       </div>
     </md-dialog-content>

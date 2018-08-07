@@ -7425,6 +7425,74 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "ألبوم الصور" },
               { Language: "zh-CHS", Text: "相册图像" },
               { Language: "ja", Text: "アルバムのイメージ" }]
+          },
+          {
+            OperationType: "Start",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Start"},
+              { Language: "ru", Text: "Начало"},
+              { Language: "pt", Text: "Início"},
+              { Language: "ko", Text: "시작"},
+              { Language: "yue", Text: "初時"},
+              { Language: "en", Text: "Start"},
+              { Language: "it", Text: "Inizio"},
+              { Language: "fr", Text: "Début"},
+              { Language: "es", Text: "Inicio"},
+              { Language: "zh-CHT", Text: "開始"},
+              { Language: "ar", Text: "بدء تشغيل"},
+              { Language: "zh-CHS", Text: "开始"},
+              { Language: "ja", Text: "スタート"}]
+          },
+          {
+            OperationType: "Stop",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Stop"},
+              { Language: "ru", Text: "Остановить"},
+              { Language: "pt", Text: "Pare"},
+              { Language: "ko", Text: "중지"},
+              { Language: "yue", Text: "停止"},
+              { Language: "en", Text: "Stop"},
+              { Language: "it", Text: "Fermata"},
+              { Language: "fr", Text: "Arrêter"},
+              { Language: "es", Text: "Parada"},
+              { Language: "zh-CHT", Text: "停止"},
+              { Language: "ar", Text: "وقف"},
+              { Language: "zh-CHS", Text: "停止"},
+              { Language: "ja", Text: "停止"}]
+          },
+          {
+            OperationType: "Check",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Überprüfen Sie"},
+              { Language: "ru", Text: "Проверить"},
+              { Language: "pt", Text: "Verifique"},
+              { Language: "ko", Text: "확인"},
+              { Language: "yue", Text: "檢查"},
+              { Language: "en", Text: "Check"},
+              { Language: "it", Text: "Verifica"},
+              { Language: "fr", Text: "Vérifier"},
+              { Language: "es", Text: "Echale un vistazo"},
+              { Language: "zh-CHT", Text: "檢查"},
+              { Language: "ar", Text: "تحقق"},
+              { Language: "zh-CHS", Text: "检查"},
+              { Language: "ja", Text: "チェック"}]
+          },
+          {
+            OperationType: "Upload",
+            DisplayMultipleLanguage:[
+              { Language: "de", Text: "Upload"},
+              { Language: "ru", Text: "Загрузить"},
+              { Language: "pt", Text: "Fazer upload"},
+              { Language: "ko", Text: "업로드"},
+              { Language: "yue", Text: "貼"},
+              { Language: "en", Text: "Upload"},
+              { Language: "it", Text: "Caricare"},
+              { Language: "fr", Text: "Télécharger"},
+              { Language: "es", Text: "Subir"},
+              { Language: "zh-CHT", Text: "上傳"},
+              { Language: "ar", Text: "تحميل"},
+              { Language: "zh-CHS", Text: "上传"},
+              { Language: "ja", Text: "アップロード"}]
           }
         ]
       },
@@ -8344,91 +8412,6 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "オーディオの録音"}]
           },
           {
-            OperationType: "Confirm",
-            DisplayMultipleLanguage:[
-              { Language: "de", Text: "Bestätigen"},
-              { Language: "ru", Text: "Подтвердите"},
-              { Language: "pt", Text: "Confirmar"},
-              { Language: "ko", Text: "확인"},
-              { Language: "yue", Text: "確認"},
-              { Language: "en", Text: "Confirm"},
-              { Language: "it", Text: "Confermare"},
-              { Language: "fr", Text: "Confirmer"},
-              { Language: "es", Text: "Confirmar"},
-              { Language: "zh-CHT", Text: "確認"},
-              { Language: "ar", Text: "تأكيد"},
-              { Language: "zh-CHS", Text: "确认"},
-              { Language: "ja", Text: "確認します。"}]
-          },
-          {
-            OperationType: "Start",
-            DisplayMultipleLanguage:[
-              { Language: "de", Text: "Start"},
-              { Language: "ru", Text: "Начало"},
-              { Language: "pt", Text: "Início"},
-              { Language: "ko", Text: "시작"},
-              { Language: "yue", Text: "初時"},
-              { Language: "en", Text: "Start"},
-              { Language: "it", Text: "Inizio"},
-              { Language: "fr", Text: "Début"},
-              { Language: "es", Text: "Inicio"},
-              { Language: "zh-CHT", Text: "開始"},
-              { Language: "ar", Text: "بدء تشغيل"},
-              { Language: "zh-CHS", Text: "开始"},
-              { Language: "ja", Text: "スタート"}]
-          },
-          {
-            OperationType: "Stop",
-            DisplayMultipleLanguage:[
-              { Language: "de", Text: "Stop"},
-              { Language: "ru", Text: "Остановить"},
-              { Language: "pt", Text: "Pare"},
-              { Language: "ko", Text: "중지"},
-              { Language: "yue", Text: "停止"},
-              { Language: "en", Text: "Stop"},
-              { Language: "it", Text: "Fermata"},
-              { Language: "fr", Text: "Arrêter"},
-              { Language: "es", Text: "Parada"},
-              { Language: "zh-CHT", Text: "停止"},
-              { Language: "ar", Text: "وقف"},
-              { Language: "zh-CHS", Text: "停止"},
-              { Language: "ja", Text: "停止"}]
-          },
-          {
-            OperationType: "Check",
-            DisplayMultipleLanguage:[
-              { Language: "de", Text: "Überprüfen Sie"},
-              { Language: "ru", Text: "Проверить"},
-              { Language: "pt", Text: "Verifique"},
-              { Language: "ko", Text: "확인"},
-              { Language: "yue", Text: "檢查"},
-              { Language: "en", Text: "Check"},
-              { Language: "it", Text: "Verifica"},
-              { Language: "fr", Text: "Vérifier"},
-              { Language: "es", Text: "Echale un vistazo"},
-              { Language: "zh-CHT", Text: "檢查"},
-              { Language: "ar", Text: "تحقق"},
-              { Language: "zh-CHS", Text: "检查"},
-              { Language: "ja", Text: "チェック"}]
-          },
-          {
-            OperationType: "Upload",
-            DisplayMultipleLanguage:[
-              { Language: "de", Text: "Upload"},
-              { Language: "ru", Text: "Загрузить"},
-              { Language: "pt", Text: "Fazer upload"},
-              { Language: "ko", Text: "업로드"},
-              { Language: "yue", Text: "貼"},
-              { Language: "en", Text: "Upload"},
-              { Language: "it", Text: "Caricare"},
-              { Language: "fr", Text: "Télécharger"},
-              { Language: "es", Text: "Subir"},
-              { Language: "zh-CHT", Text: "上傳"},
-              { Language: "ar", Text: "تحميل"},
-              { Language: "zh-CHS", Text: "上传"},
-              { Language: "ja", Text: "アップロード"}]
-          },
-          {
             OperationType: "VoiceModelInformation",
             DisplayMultipleLanguage:[
               {"Language":"de","Text":"Stimme-Modell-Informationen"},
@@ -8530,24 +8513,26 @@ function getSampleMenuProfile() {
           { Language:"zh-CHT", Text:"歡迎"},
           { Language:"ar", Text:"اهلا وسهلا"},
           { Language:"zh-CHS", Text:"欢迎"},
-          { Language:"ja", Text:"ようこそ"}]
-      },
-      {
-        OperationType: "WelcomeText",
-        DisplayMultipleLanguage: [
-          { Language:"de", Text:"Willkommen bei eBook-Kommunikations-"},
-          { Language:"ru", Text:"Добро пожаловать на E-Commu книга"},
-          { Language:"pt", Text:"Bem-vindo ao E-comu-livro"},
-          { Language:"ko", Text:"오신 것을 환영 합니다 전자-Commu-도 서"},
-          { Language:"yue", Text:"歡迎來到電子通訊書"},
-          { Language:"en", Text:"Welcome to E-Commu-Book"},
-          { Language:"it", Text:"Benvenuto a comu-eBook"},
-          { Language:"fr", Text:"Bienvenue sur E-Commu-livre"},
-          { Language:"es", Text:"¡Bienvenido a E-comunidad-libro"},
-          { Language:"zh-CHT", Text:"歡迎來到電子通訊書"},
-          { Language:"ar", Text:"مرحبا بكم في-الاتصالات-بووك"},
-          { Language:"zh-CHS", Text:"欢迎来到电子通讯书"},
-          { Language:"ja", Text:"E-Commu-Bookへようこそ"}]
+          { Language:"ja", Text:"ようこそ"}],
+        SubPage: [
+          {
+            OperationType: "WelcomeText",
+            DisplayMultipleLanguage: [
+              { Language:"de", Text:"Willkommen bei eBook-Kommunikations-"},
+              { Language:"ru", Text:"Добро пожаловать на E-Commu книга"},
+              { Language:"pt", Text:"Bem-vindo ao E-comu-livro"},
+              { Language:"ko", Text:"오신 것을 환영 합니다 전자-Commu-도 서"},
+              { Language:"yue", Text:"歡迎來到電子通訊書"},
+              { Language:"en", Text:"Welcome to E-Commu-Book"},
+              { Language:"it", Text:"Benvenuto a comu-eBook"},
+              { Language:"fr", Text:"Bienvenue sur E-Commu-livre"},
+              { Language:"es", Text:"¡Bienvenido a E-comunidad-libro"},
+              { Language:"zh-CHT", Text:"歡迎來到電子通訊書"},
+              { Language:"ar", Text:"مرحبا بكم في-الاتصالات-بووك"},
+              { Language:"zh-CHS", Text:"欢迎来到电子通讯书"},
+              { Language:"ja", Text:"E-Commu-Bookへようこそ"}]
+          }
+        ]
       },
       {
         OperationType: "Loading",

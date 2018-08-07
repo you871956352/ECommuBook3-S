@@ -1,4 +1,4 @@
-<ion-view cache-view="false" view-title={{Title}}>
+<ion-view cache-view="false" view-title={{subMenuProfileObject.PageTitle}}>
   <ion-content>
     <div ng-controller="UserInfoCtrl" class="md-padding" ng-cloak>
       <md-card>
@@ -8,37 +8,37 @@
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
-          <h1 class="md-title">{{UserID}}: {{userProfile.ID}}</h1>
+          <h1 class="md-title">{{subMenuProfileObject.UserID}}: {{userProfile.ID}}</h1>
           <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
-            {{DisplayLanguage}}: {{displayLanguage.name}}
+            {{subMenuProfileObject.DisplayLanguage}}: {{displayLanguage.name}}
           </h1>
           <h1 class="md-title" ng-repeat="speechLanguage in SpeechLanguageList" ng-if="speechLanguage.value == userProfile.SPEECH_LANGUAGE_CODE && speechLanguage.language == userProfile.DISPLAY_LANGUAGE">
-            {{SpeechLanguage}}: {{speechLanguage.name}}
+            {{subMenuProfileObject.SpeechLanguage}}: {{speechLanguage.name}}
           </h1>
           <h1 class="md-title" ng-repeat="speakGender in GenderList" ng-if="speakGender.value == userProfile.SPEECH_GENDER && speakGender.language == userProfile.SPEECH_LANGUAGE_CODE">
-            {{SpeakerGender}}: {{speakGender.name}}
+            {{subMenuProfileObject.SpeakerGender}}: {{speakGender.name}}
           </h1>
         </md-card-content>
       </md-card>
       <md-card>
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline">{{VoiceConversion}}</span>
+            <span class="md-headline">{{subMenuProfileObject.VoiceConversion}}</span>
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
-            <span class="md-title">{{CollectionProgress}}: {{collectedVoice}} / {{totalVoice}}</span>
+            <span class="md-title">{{subMenuProfileObject.CollectionProgress}}: {{collectedVoice}} / {{totalVoice}}</span>
             <div layout="row">
-              <span class="md-title">{{AudioRecording}}: </span>
+              <span class="md-title">{{subMenuProfileObject.AudioRecording}}: </span>
             </div>
             <div layout="row">
-              <md-button class="md-raised" ng-click=vcRecording($event)>{{Recording}}</md-button>
+              <md-button class="md-raised" ng-click=vcRecording($event)>{{subMenuProfileObject.Recording}}</md-button>
             </div>
             <div layout="row">
-              <span class="md-title">{{SynchronizeProgress}}: </span>
+              <span class="md-title">{{subMenuProfileObject.SynchronizeProgress}}: </span>
             </div>
             <div layout="row">
-              <md-button class="md-raised" ng-click=synchronizeStart($event)>{{Confirm}}</md-button>
+              <md-button class="md-raised" ng-click=synchronizeStart($event)>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
             </div>
         </md-card-content>
       </md-card>

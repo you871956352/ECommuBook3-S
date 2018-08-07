@@ -117,7 +117,7 @@ angular
         .ok($scope.textButtonOK)
         .cancel($scope.textButtonCancel);
 
-      $mdDialog.show(confirmDialog).then(function () {        
+      $mdDialog.show(confirmDialog).then(function () {
         var returnObject = UserProfileService.deleteCategory($scope.userProfile, categoryID);
         var newUserProfile = returnObject.UserProfile;
         var idList = returnObject.idList;
@@ -126,13 +126,13 @@ angular
         console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete + "idList leangth: " + idList.length);
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate, true);
         $scope.userProfile = newUserProfile;
-        UserProfileService.saveLocal($scope.userProfile);     
-        UserProfileService.postToServerCallback(function () {   
+        UserProfileService.saveLocal($scope.userProfile);
+        UserProfileService.postToServerCallback(function () {
           for (i = 0; i < idList.length; i++) {
             LocalCacheService.deleteCache($scope.userProfile, idList[i]);
           }
           LocalCacheService.checkDelete(true);
-        });      
+        });
       }, function () {
         console.log("User decide to quit delete");
         });
@@ -538,8 +538,7 @@ angular
   })
   .controller("WelcomeCtrl", function ($scope,UserProfileService) {
     $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
-    $scope.Text = UserProfileService.getTranslatedMenuText("Operations", "WelcomeText", $scope.currentDisplayLanguage);
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Welcome", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Welcome", $scope.currentDisplayLanguage);
    })
   .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
     $scope.userProfile = UserProfileService.getLatest();
@@ -747,28 +746,15 @@ angular
     $scope.GenderList = GlobalVariable.GenderList;
     $scope.collectedVoice = 0;
     $scope.totalVoice = 160;
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "UserInformation", $scope.currentDisplayLanguage);
-    $scope.subMenuProfile = UserProfileService.getMenuProfileSubObject("UserInformation");
-    $scope.VoiceConversion = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "VoiceConversion", $scope.currentDisplayLanguage);
-    $scope.UserID = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "UserID", $scope.currentDisplayLanguage);
-    $scope.DisplayLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "DisplayLanguage", $scope.currentDisplayLanguage);
-    $scope.SpeechLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SpeechLanguage", $scope.currentDisplayLanguage);
-    $scope.SpeakerGender = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SpeakerGender", $scope.currentDisplayLanguage);
-    $scope.CollectionProgress = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "CollectionProgress", $scope.currentDisplayLanguage);
-    $scope.AudioRecording = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "AudioRecording", $scope.currentDisplayLanguage);
-    $scope.SynchronizeProgress = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SynchronizeProgress", $scope.currentDisplayLanguage);
-    $scope.Recording = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Recording", $scope.currentDisplayLanguage);
-    $scope.Confirm = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Confirm", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileGeneral = UserProfileService.getMenuProfileSubObjectWithInputLanguage("General", $scope.currentDisplayLanguage);
     $scope.vcRecording = function (ev) {
         var targetScope = $scope.$new();
-        targetScope.Recording = $scope.Recording;
-        targetScope.Start = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Start", $scope.currentDisplayLanguage);
-        targetScope.Stop = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Stop", $scope.currentDisplayLanguage);
-        targetScope.Check = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Check", $scope.currentDisplayLanguage);
-        targetScope.Upload = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "Upload", $scope.currentDisplayLanguage);
+        targetScope.subMenuProfileObject = $scope.subMenuProfileObject;
+        targetScope.subMenuProfileGeneral = $scope.subMenuProfileGeneral;
         $mdDialog.show({
           controller: DialogController,
-          templateUrl: "templates/popup-vc.tmpl.html",
+          templateUrl: "templates/popup-recording.tmpl.html",
           parent: angular.element(document.body),
           targetEvent: ev,
           clickOutsideToClose: true,
@@ -805,12 +791,7 @@ angular
       targetScope.ModelStatusText = "Training";
       $scope.collectionStatus = true;
       $scope.modelStatus = true;
-      targetScope.VoiceModelInformation = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "VoiceModelInformation", $scope.currentDisplayLanguage);
-      targetScope.CollectionProgress = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "CollectionProgress", $scope.currentDisplayLanguage);
-      targetScope.CollectionStatus = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "CollectionStatus", $scope.currentDisplayLanguage);
-      targetScope.ModelStatus = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "ModelStatus", $scope.currentDisplayLanguage);
-      targetScope.TrainModel = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "TrainModel", $scope.currentDisplayLanguage);
-      targetScope.DownloadModel = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "DownloadModel", $scope.currentDisplayLanguage);
+      targetScope.subMenuProfileObject = $scope.subMenuProfileObject;
       //VoiceModelService.getOnline(id);
       $mdDialog.show({
         controller: DialogController,
