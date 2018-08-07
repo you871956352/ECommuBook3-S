@@ -11,6 +11,7 @@ angular
       $scope.userProfile = UserProfileService.getLatest();
       $scope.menuProfile = UserProfileService.getMenuProfile();
       $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
+      $scope.subMenuProfileGeneral = UserProfileService.getMenuProfileSubObjectWithInputLanguage("General", $scope.currentDisplayLanguage);
       if (typeof $rootScope.isShowDisplayName == 'undefined') {
         $rootScope.isShowDisplayName = { checked: true };
       }
@@ -34,8 +35,7 @@ angular
   })
   .controller("CategoryCtrl", function ($scope, $stateParams, $state, $mdDialog, $ionicSideMenuDelegate, $cordovaMedia, UserProfileService, $http, LocalCacheService, $cordovaNetwork) {
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("CategoryGrid", $scope.currentDisplayLanguage);
-    $scope.subMenuProfileGeneral = UserProfileService.getMenuProfileSubObjectWithInputLanguage("General", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("CategoryGrid", $scope.currentDisplayLanguage);   
     $scope.categoryId = $stateParams.categoryId;
     $scope.showEditCard = false;
     for (var i = 0; i < $scope.userProfile.Categories.length; i++) {
@@ -208,7 +208,6 @@ angular
     $scope.selectedSpeechLanguage;
     $scope.selectedSpeechGender;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Setting", $scope.currentDisplayLanguage);
-    $scope.subMenuProfileGeneral = UserProfileService.getMenuProfileSubObjectWithInputLanguage("General", $scope.currentDisplayLanguage);
 
     $scope.onSelectedDisplayLanguageChanged = function () {
       console.log("display language:" + $scope.selectedDisplayLanguage);
@@ -530,15 +529,7 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
     $scope.inputAdd = "";
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Sentence", $scope.currentDisplayLanguage);
-    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("Sentence");
-    $scope.textAddSentence = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "AddSentence", $scope.currentDisplayLanguage);
-    $scope.textAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Add", $scope.currentDisplayLanguage);
-    $scope.textInputAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "InputAdd", $scope.currentDisplayLanguage);
-    $scope.textSelectAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SelectAdd", $scope.currentDisplayLanguage);
-    $scope.textButtonBackspace = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "BackSpace", $scope.currentDisplayLanguage);
-    $scope.textButtonUpload = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "UploadSentence", $scope.currentDisplayLanguage);
-    $scope.textEmptyWarning = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SentenceEmptyWarning", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Sentence", $scope.currentDisplayLanguage);
     $scope.onSentenceClick = function (sentence) {
       console.log("Select Sentence:" + sentence.ID + " " + sentence.DisplayName + " " + sentence.DisplayNameLanguage);
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + sentence.ID + ".mp3");
@@ -582,7 +573,7 @@ angular
     };
     $scope.upLoadSentence = function () {
       if ($scope.currentConstructSentence == undefined || $scope.currentConstructSentence == "") {
-        alert($scope.textEmptyWarning);
+        alert($scope.subMenuProfileObject.SentenceEmptyWarning);
         return;
       }
       GlobalVariable.DownloadProgress.Reset();
