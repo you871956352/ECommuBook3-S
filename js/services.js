@@ -178,6 +178,37 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
         }
       }
     },
+    getMenuProfileSubObjectWithInputLanguage: function (targetText, inputLanguage) {
+      var originalObject = this.getMenuProfileSubObject(targetText);
+      var returnObject = {};
+      if (inputLanguage == undefined) {
+        var userProfile = this.getLatest();
+        var targetLanguage = userProfile.DISPLAY_LANGUAGE;
+        console.log("No input language detected, use default userProfile config language");
+      }
+      else {
+        var targetLanguage = inputLanguage;
+      }
+      if (targetText != "General") {
+        for (var i = 0; i < originalObject.DisplayMultipleLanguage.length; i++) {
+          if (originalObject.DisplayMultipleLanguage[i].Language == targetLanguage) {
+            returnObject.PageTitle = originalObject.DisplayMultipleLanguage[i].Text;
+            break;
+          }
+        }
+      }
+
+      var originalObjectSubPage = originalObject.SubPage;
+      for (var i = 0; i < originalObjectSubPage.length; i++) {
+        for (var j = 0; j < originalObjectSubPage[i].DisplayMultipleLanguage.length; j++) {
+          if (originalObjectSubPage[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
+            returnObject[originalObjectSubPage[i].OperationType] = originalObjectSubPage[i].DisplayMultipleLanguage[j].Text;
+            break;
+          }
+        }
+      }
+      return returnObject;
+    },
     getTranslatedMenuText: function (mode, targetText, inputLanguage) {
       var menuProfile = this.getMenuProfile();
       if (mode == "Operations") {

@@ -7707,23 +7707,6 @@ function getSampleMenuProfile() {
           { Language: "ja", Text: "項目を追加します。" }]
       },
       {
-        OperationType: "DeleteItem",
-        DisplayMultipleLanguage: [
-          { Language: "de", Text: "Element löschen" },
-          { Language: "ru", Text: "Удалить элемент" },
-          { Language: "pt", Text: "Excluir Item" },
-          { Language: "ko", Text: "항목 삭제" },
-          { Language: "yue", Text: "刪除項目" },
-          { Language: "en", Text: "Delete Item" },
-          { Language: "it", Text: "Elimina elemento" },
-          { Language: "fr", Text: "Supprimer le point" },
-          { Language: "es", Text: "Eliminar elemento" },
-          { Language: "zh-CHT", Text: "刪除專案" },
-          { Language: "ar", Text: "حذف عنصر" },
-          { Language: "zh-CHS", Text: "删除项目" },
-          { Language: "ja", Text: "項目を削除します。" }]
-      },
-      {
         OperationType: "Download",
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Download" },
@@ -7738,7 +7721,43 @@ function getSampleMenuProfile() {
           { Language: "zh-CHT", Text: "下載" },
           { Language: "ar", Text: "تحميل" },
           { Language: "zh-CHS", Text: "下载" },
-          { Language: "ja", Text: "ダウンロード" }]
+          { Language: "ja", Text: "ダウンロード" }],
+        SubPage: [
+          {
+            OperationType: "OnlineContent",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Online-Inhalte" },
+              { "Language": "ru", "Text": "Онлайн-контента" },
+              { "Language": "pt", "Text": "Conteúdo on-line" },
+              { "Language": "ko", "Text": "온라인 콘텐츠" },
+              { "Language": "yue", "Text": "在線內容" },
+              { "Language": "en", "Text": "Online Content" },
+              { "Language": "it", "Text": "Contenuti online" },
+              { "Language": "fr", "Text": "Contenu en ligne" },
+              { "Language": "es", "Text": "Contenido en línea" },
+              { "Language": "zh-CHT", "Text": "線上內容" },
+              { "Language": "ar", "Text": "المحتوى على الإنترنت" },
+              { "Language": "zh-CHS", "Text": "在线内容" },
+              { "Language": "ja", "Text": "オンライン コンテンツ" }]
+          },
+          {
+            OperationType: "WordItems",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Wörter-Element" },
+              { "Language": "ru", "Text": "Элемент слова" },
+              { "Language": "pt", "Text": "Item de palavras" },
+              { "Language": "ko", "Text": "단어 항목" },
+              { "Language": "yue", "Text": "詞語項目" },
+              { "Language": "en", "Text": "Words Item" },
+              { "Language": "it", "Text": "Voce di parole" },
+              { "Language": "fr", "Text": "Point de mots" },
+              { "Language": "es", "Text": "Artículo de palabras" },
+              { "Language": "zh-CHT", "Text": "詞語專案" },
+              { "Language": "ar", "Text": "البند الكلمات" },
+              { "Language": "zh-CHS", "Text": "词语项目" },
+              { "Language": "ja", "Text": "言葉項目" }]
+          }
+        ]
       },
       {
         OperationType: "Sentence",

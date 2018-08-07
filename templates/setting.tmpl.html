@@ -1,4 +1,4 @@
-<ion-view view-title={{Title}}>
+<ion-view view-title={{subMenuProfileObject.PageTitle}}>
   <ion-content>
 <div ng-controller="SettingCtrl" class="md-padding" ng-cloak>
   <div>
@@ -6,12 +6,12 @@
 	<md-card>
 	    <md-card-title>
 	      <md-card-title-text>
-          <span class="md-headline">{{textLanguage}}</span>
+          <span class="md-headline">{{subMenuProfileObject.LanguageSetting}}</span>
 	      </md-card-title-text>
 	    </md-card-title>
 
 	    <md-card-content>
-        <h1 class="md-title">{{textDisplayLanguage}}</h1>
+        <h1 class="md-title">{{subMenuProfileObject.DisplayLanguage}}</h1>
 		    <div layout="row">
 		      <md-input-container>
 		        <md-select ng-model="selectedDisplayLanguage" ng-change="onSelectedDisplayLanguageChanged()">
@@ -19,7 +19,7 @@
 		        </md-select>
 		      </md-input-container>
 		    </div>
-        <h1 class="md-title">{{textSpeechLanguage}}</h1>
+        <h1 class="md-title">{{subMenuProfileObject.SpeechLanguage}}</h1>
 		    <div layout="row">
 		      <md-input-container>
 		        <md-select ng-model="selectedSpeechLanguage" ng-change="onSelectedSpeechLanguageChanged()">
@@ -27,7 +27,7 @@
 		        </md-select>
 		      </md-input-container>
 		    </div>
-        <h1 class="md-title">{{textSpeechGender}}</h1>
+        <h1 class="md-title">{{subMenuProfileObject.SpeakerGender}}</h1>
 		    <div layout="row">
 		      <md-input-container>
 		        <md-select ng-model="selectedSpeechGender" ng-change="onSelectedSpeechGenderChanged()">
@@ -35,7 +35,7 @@
 		        </md-select>
 		      </md-input-container>
 		    </div>
-        <md-button class="md-raised" ng-click=onConfirmLanguageButtonClicked()>{{textButtonConfirm}}</md-button>
+        <md-button class="md-raised" ng-click=onConfirmLanguageButtonClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
 
 	    </md-card-content>
 	</md-card>
@@ -43,30 +43,30 @@
 	<md-card>
 	    <md-card-title>
 	      <md-card-title-text>
-          <span class="md-headline">{{textAppearance}}</span>
+          <span class="md-headline">{{subMenuProfileObject.Appearance}}</span>
 	      </md-card-title-text>
 	    </md-card-title>
 
       <md-card-content>
-        <h1 class="md-title">{{textPicSize}}</h1>
+        <h1 class="md-title">{{subMenuProfileObject.PicSize}}</h1>
         <md-slider ng-model="itemNormalPicSize" min="180" max="240" ng-change="onItemNormalPicSizeChanged()"></md-slider>
-        <h1 class="md-title">{{textFontSize}}</h1>
+        <h1 class="md-title">{{subMenuProfileObject.FontSize}}</h1>
         <md-slider ng-model="itemNormalFontSize" min="12" max="108" ng-change="onItemNormalFontSizeChanged()"></md-slider>
-        <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">{{textExample}}</span>
-        <md-button class="md-raised" ng-click=onConfirmAppearanceButtonClicked()>{{textButtonConfirm}}</md-button>
+        <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">{{subMenuProfileObject.Example}}</span>
+        <md-button class="md-raised" ng-click=onConfirmAppearanceButtonClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
       </md-card-content>
 	</md-card>
 
 	<md-card>
 	    <md-card-title>
 	      <md-card-title-text>
-          <span class="md-headline">{{textResetApp}}</span>
+          <span class="md-headline">{{subMenuProfileObject.ResetApp}}</span>
 	      </md-card-title-text>
 	    </md-card-title>
 
 	    <md-card-content>
-        <h1 class="md-title">{{textResetConfirmWarning}}</h1>
-      <md-button class="md-raised" ng-click=onConfirmResetUserprofileButtonClicked()>{{textResetConfirm}}</md-button>
+        <h1 class="md-title">{{subMenuProfileObject.ResetConfirmWarning}}</h1>
+        <md-button class="md-raised" ng-click=onConfirmResetUserprofileButtonClicked()>{{subMenuProfileObject.ResetConfirm}}</md-button>
 	    </md-card-content>
 	</md-card>
 
