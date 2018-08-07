@@ -1,4 +1,4 @@
-<ion-view cache-view="false" view-title="{{Title}}">
+<ion-view cache-view="false" view-title="{{subMenuProfileObject.PageTitle}}">
   <ion-content>
     <div id="grid-container" class="container-fluid" ng-controller="SentenceCtrl" ng-cloak>
       <md-card>
@@ -11,25 +11,25 @@
 
       <md-card>
         <md-card-title>
-          <span class="md-headline">{{textAddSentence}}</span><span flex></span>
-          <md-button class="md-raised" ng-click=sentenceBackSpace()>{{textButtonBackspace}}</md-button>
+          <span class="md-headline">{{subMenuProfileObject.AddSentence}}</span><span flex></span>
+          <md-button class="md-raised" ng-click=sentenceBackSpace()>{{subMenuProfileObject.BackSpace}}</md-button>
         </md-card-title>
         <md-card-content>
           <h3></h3><div class="addSentencePreview">{{currentConstructSentence}}</div> <h3></h3>
           <div>
             <md-input-container>
-              <label>{{textInputAdd}}</label>
+              <label>{{subMenuProfileObject.InputAdd}}</label>
               <input type="text" ng-model="inputAdd">
             </md-input-container>
-            <md-button class="md-raised" ng-click=sentenceAdd()>{{textAdd}}</md-button>
+            <md-button class="md-raised" ng-click=sentenceAdd()>{{subMenuProfileObject.Add}}</md-button>
           </div>
-          <md-button class="md-raised" ng-click=upLoadSentence()>{{textButtonUpload}}</md-button>
+          <md-button class="md-raised" ng-click=upLoadSentence()>{{subMenuProfileObject.UploadSentence}}</md-button>
         </md-card-content>
       </md-card>
 
       <md-card>
         <md-card-title>
-          <span>{{textSelectAdd}}</span>
+          <span>{{subMenuProfileObject.SelectAdd}}</span>
         </md-card-title>
         <md-card-content>
           <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="userProfile.Categories">

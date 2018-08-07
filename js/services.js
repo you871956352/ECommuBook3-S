@@ -189,7 +189,7 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       else {
         var targetLanguage = inputLanguage;
       }
-      if (targetText != "General") {
+      if (originalObject.DisplayMultipleLanguage != undefined) {
         for (var i = 0; i < originalObject.DisplayMultipleLanguage.length; i++) {
           if (originalObject.DisplayMultipleLanguage[i].Language == targetLanguage) {
             returnObject.PageTitle = originalObject.DisplayMultipleLanguage[i].Text;
@@ -197,13 +197,14 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
           }
         }
       }
-
-      var originalObjectSubPage = originalObject.SubPage;
-      for (var i = 0; i < originalObjectSubPage.length; i++) {
-        for (var j = 0; j < originalObjectSubPage[i].DisplayMultipleLanguage.length; j++) {
-          if (originalObjectSubPage[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
-            returnObject[originalObjectSubPage[i].OperationType] = originalObjectSubPage[i].DisplayMultipleLanguage[j].Text;
-            break;
+      if (originalObject.SubPage != undefined) {
+        var originalObjectSubPage = originalObject.SubPage;
+        for (var i = 0; i < originalObjectSubPage.length; i++) {
+          for (var j = 0; j < originalObjectSubPage[i].DisplayMultipleLanguage.length; j++) {
+            if (originalObjectSubPage[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
+              returnObject[originalObjectSubPage[i].OperationType] = originalObjectSubPage[i].DisplayMultipleLanguage[j].Text;
+              break;
+            }
           }
         }
       }

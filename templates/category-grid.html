@@ -23,9 +23,9 @@
             <md-button class="md-icon-button" ng-click="enableEditCategoryTog()">
               <md-icon md-svg-src="img/icons/ic_edit.svg" aria-label="Enable edit"></md-icon>
             </md-button>
-            <md-button ng-show="showEditCard" class="md-raised" ng-click="shareCategory($event, category.ID)">{{textButtonShare}}</md-button>
-            <md-button ng-show="showEditCard" class="md-raised" ng-click="reorderAddTopCategory($event, category.ID)">{{textButtonSetTop}}</md-button>
-            <md-button ng-show="showEditCard" class="md-raised" ng-click="deleteThisCategory($event, category.ID)"  style="float: right">{{textButtonDeleteCategory}}</md-button>
+            <md-button ng-show="showEditCard" class="md-raised" ng-click="shareCategory($event, category.ID)">{{subMenuProfileObject.ShareButton}}</md-button>
+            <md-button ng-show="showEditCard" class="md-raised" ng-click="reorderAddTopCategory($event, category.ID)">{{subMenuProfileObject.SetTopButton}}</md-button>
+            <md-button ng-show="showEditCard" class="md-raised" ng-click="deleteThisCategory($event, category.ID)" style="float: right">{{subMenuProfileObject.DeleteCategory}}</md-button>
           </div>
         </md-card-content>
       </md-card>   

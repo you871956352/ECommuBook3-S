@@ -11,6 +11,7 @@ angular
       $scope.userProfile = UserProfileService.getLatest();
       $scope.menuProfile = UserProfileService.getMenuProfile();
       $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
+      $scope.subMenuProfileGeneral = UserProfileService.getMenuProfileSubObjectWithInputLanguage("General", $scope.currentDisplayLanguage);
       if (typeof $rootScope.isShowDisplayName == 'undefined') {
         $rootScope.isShowDisplayName = { checked: true };
       }
@@ -34,18 +35,7 @@ angular
   })
   .controller("CategoryCtrl", function ($scope, $stateParams, $state, $mdDialog, $ionicSideMenuDelegate, $cordovaMedia, UserProfileService, $http, LocalCacheService, $cordovaNetwork) {
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.subMenuPage = UserProfileService.getMenuProfileSubObject("CategoryGrid");
-    $scope.textButtonDeleteCategory = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "DeleteCategory", $scope.currentDisplayLanguage);
-    $scope.textDeleteWarning = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "DeleteWarning1", $scope.currentDisplayLanguage) + "? " + UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "DeleteWarning2", $scope.currentDisplayLanguage);
-    $scope.textButtonShare = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareButton", $scope.currentDisplayLanguage);
-    $scope.textButtonSetTop = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SetTopButton", $scope.currentDisplayLanguage);
-    $scope.textShareWarning = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareWarning1", $scope.currentDisplayLanguage) + "? " + UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "ShareWarning2", $scope.currentDisplayLanguage);
-    $scope.textSetTopWarning = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SetTopWarning", $scope.currentDisplayLanguage) + "?";
-    $scope.textSuccessAlert = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SuccessAlert", $scope.currentDisplayLanguage);
-    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
-    $scope.textButtonOK = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "ConfirmButton", $scope.currentDisplayLanguage);
-    $scope.textButtonCancel = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "CancelButton", $scope.currentDisplayLanguage);
-    $scope.textNotification = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Notification", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("CategoryGrid", $scope.currentDisplayLanguage);   
     $scope.categoryId = $stateParams.categoryId;
     $scope.showEditCard = false;
     for (var i = 0; i < $scope.userProfile.Categories.length; i++) {
@@ -75,17 +65,17 @@ angular
     };
     $scope.shareCategory = function (event, categoryID) {
       var confirmDialog = $mdDialog.confirm()
-        .title($scope.textNotification)
-        .textContent($scope.textShareWarning)
+        .title($scope.subMenuProfileGeneral.Notification)
+        .textContent($scope.subMenuProfileObject.ShareWarning1 + "? " + $scope.subMenuProfileObject.ShareWarning2)
         .targetEvent(event)
-        .ok($scope.textButtonOK)
-        .cancel($scope.textButtonCancel);
+        .ok($scope.subMenuProfileGeneral.ConfirmButton)
+        .cancel($scope.subMenuProfileGeneral.CancelButton);
 
       $mdDialog.show(confirmDialog).then(function () {
         console.log("Shared Category ID: " + ServerPathVariable.GetUploadSharePath(categoryID));
         $http.get(ServerPathVariable.GetUploadSharePath(categoryID)).then(function (data) {
           console.log("Success");
-          alert($scope.textSuccessAlert);
+          alert($scope.subMenuProfileObject.SuccessAlert);
         });
       }, function () {
         console.log("User decide to quit share");
@@ -93,11 +83,11 @@ angular
     };
     $scope.reorderAddTopCategory = function (event, categoryID) {
       var confirmDialog = $mdDialog.confirm()
-        .title($scope.textNotification)
-        .textContent($scope.textSetTopWarning)
+        .title($scope.subMenuProfileGeneral.Notification)
+        .textContent($scope.subMenuProfileObject.SetTopWarning + "?")
         .targetEvent(event)
-        .ok($scope.textButtonOK)
-        .cancel($scope.textButtonCancel);
+        .ok($scope.subMenuProfileGeneral.ConfirmButton)
+        .cancel($scope.subMenuProfileGeneral.CancelButton);
 
       $mdDialog.show(confirmDialog).then(function () {
         var newUserProfile = UserProfileService.setTargetCategoryTop($scope.userProfile, $scope.categoryId);
@@ -111,11 +101,11 @@ angular
     };
     $scope.deleteThisCategory = function (event, categoryID) {
       var confirmDialog = $mdDialog.confirm()
-        .title($scope.textNotification)
-        .textContent($scope.textDeleteWarning)
+        .title($scope.subMenuProfileGeneral.Notification)
+        .textContent($scope.subMenuProfileObject.DeleteWarning1 + "? " + $scope.subMenuProfileObject.DeleteWarning2)
         .targetEvent(event)
-        .ok($scope.textButtonOK)
-        .cancel($scope.textButtonCancel);
+        .ok($scope.subMenuProfileGeneral.ConfirmButton)
+        .cancel($scope.subMenuProfileGeneral.CancelButton);
 
       $mdDialog.show(confirmDialog).then(function () {
         var returnObject = UserProfileService.deleteCategory($scope.userProfile, categoryID);
@@ -142,10 +132,6 @@ angular
     };
     function DialogController($scope, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, $cordovaFileTransfer, $cordovaFile, UserProfileService) {
       $scope.enableEdit = false;
-      $scope.textLabelEdit = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "Edit", $scope.currentDisplayLanguage);
-      $scope.textLabelSelectLanguage = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "SelectLanguage", $scope.currentDisplayLanguage);
-      $scope.textLabelDeleteItem = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "DeleteItem", $scope.currentDisplayLanguage);
-      $scope.textLabelDeleteItemWarning = UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "DeleteItemWarning1", $scope.currentDisplayLanguage) + "? " + UserProfileService.getTranslatedObjectText($scope.subMenuPage.SubPage, "DeleteItemWarning2", $scope.currentDisplayLanguage);
       $scope.cancel = function () {
         $mdDialog.cancel();
       };
@@ -161,11 +147,11 @@ angular
       };
       $scope.deleteThisItem = function (categoryID, itemID) {
         var confirmDialog = $mdDialog.confirm()
-          .title($scope.textNotification)
-          .textContent($scope.textLabelDeleteItemWarning)
+          .title($scope.subMenuProfileGeneral.Notification)
+          .textContent($scope.subMenuProfileObject.DeleteItemWarning1 + "? " + $scope.subMenuProfileObject.DeleteItemWarning2)
           .targetEvent(event)
-          .ok($scope.textButtonOK)
-          .cancel($scope.textButtonCancel);
+          .ok($scope.subMenuProfileGeneral.ConfirmButton)
+          .cancel($scope.subMenuProfileGeneral.CancelButton);
 
         $mdDialog.show(confirmDialog).then(function () {
           var newUserProfile = UserProfileService.deleteItem($scope.userProfile, categoryID, itemID);
@@ -221,9 +207,7 @@ angular
     $scope.selectedDisplayLanguage;
     $scope.selectedSpeechLanguage;
     $scope.selectedSpeechGender;
-
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Setting", $scope.currentDisplayLanguage);
-    $scope.subMenuProfileGeneral = UserProfileService.getMenuProfileSubObjectWithInputLanguage("General", $scope.currentDisplayLanguage);
 
     $scope.onSelectedDisplayLanguageChanged = function () {
       console.log("display language:" + $scope.selectedDisplayLanguage);
@@ -544,15 +528,7 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
     $scope.inputAdd = "";
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Sentence", $scope.currentDisplayLanguage);
-    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("Sentence");
-    $scope.textAddSentence = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "AddSentence", $scope.currentDisplayLanguage);
-    $scope.textAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Add", $scope.currentDisplayLanguage);
-    $scope.textInputAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "InputAdd", $scope.currentDisplayLanguage);
-    $scope.textSelectAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SelectAdd", $scope.currentDisplayLanguage);
-    $scope.textButtonBackspace = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "BackSpace", $scope.currentDisplayLanguage);
-    $scope.textButtonUpload = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "UploadSentence", $scope.currentDisplayLanguage);
-    $scope.textEmptyWarning = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "SentenceEmptyWarning", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Sentence", $scope.currentDisplayLanguage);
     $scope.onSentenceClick = function (sentence) {
       console.log("Select Sentence:" + sentence.ID + " " + sentence.DisplayName + " " + sentence.DisplayNameLanguage);
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + sentence.ID + ".mp3");
@@ -596,7 +572,7 @@ angular
     };
     $scope.upLoadSentence = function () {
       if ($scope.currentConstructSentence == undefined || $scope.currentConstructSentence == "") {
-        alert($scope.textEmptyWarning);
+        alert($scope.subMenuProfileObject.SentenceEmptyWarning);
         return;
       }
       GlobalVariable.DownloadProgress.Reset();
@@ -630,24 +606,14 @@ angular
   })
   .controller("SearchCtrl", function ($scope, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Search", $scope.currentDisplayLanguage);
-    $scope.subUserInformationProfile = UserProfileService.getMenuProfileSubObject("UserInformation");
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Search", $scope.currentDisplayLanguage); 
+    $scope.subMenuProfileObjectUserInformatiion = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
-    $scope.textDisplayLanguage = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "DisplayLanguage", $scope.currentDisplayLanguage);
-    $scope.textStart = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Start", $scope.currentDisplayLanguage);
-    $scope.textStop = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Stop", $scope.currentDisplayLanguage);
-    $scope.textCheck = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Check", $scope.currentDisplayLanguage);
-    $scope.textUpload = UserProfileService.getTranslatedObjectText($scope.subUserInformationProfile.SubPage, "Upload", $scope.currentDisplayLanguage);
-    $scope.textRecordState = $scope.textStart;
-    $scope.subMenuProfile = UserProfileService.getMenuProfileSubObject("Search");
-    $scope.textGuide = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SearchGuide1", $scope.currentDisplayLanguage) + ", " + UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SearchGuide2", $scope.currentDisplayLanguage);
-    $scope.textSearchResult = UserProfileService.getTranslatedObjectText($scope.subMenuProfile.SubPage, "SearchResult", $scope.currentDisplayLanguage);
+    $scope.RecordState = $scope.subMenuProfileObjectUserInformatiion.Start;
     $scope.isShowResult = false;
     $scope.isRecorded = false;
     $scope.resultWords = ["Feeling", "Shaving", "Rice"];
     $scope.maxResultWordsDisplay = 3;
-
-
     if (window.cordova && window.cordova.file && window.audioinput) {
       console.log("Use 'Start Capture' to begin...");
       window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
@@ -667,13 +633,13 @@ angular
       }
     };
     $scope.searchRecording = function (ev) {
-      if ($scope.textRecordState == $scope.textStart) {
+      if ($scope.RecordState == $scope.subMenuProfileObjectUserInformatiion.Start) {
         $scope.isRecorded = false;
-        $scope.textRecordState = $scope.textStop;
+        $scope.RecordState = $scope.subMenuProfileObjectUserInformatiion.Stop;
         VoiceRecordService.startCapture();
       }
-      else if ($scope.textRecordState == $scope.textStop) {
-        $scope.textRecordState = $scope.textStart;
+      else if ($scope.RecordState == $scope.subMenuProfileObjectUserInformatiion.Stop) {
+        $scope.RecordState = $scope.subMenuProfileObjectUserInformatiion.Start;
         VoiceRecordService.stopCapture("searchTemp");
         $scope.isRecorded = true;
       }
@@ -682,9 +648,7 @@ angular
   .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Download", $scope.currentDisplayLanguage);
-    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("General");
-    $scope.textButtonGet = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "GetButton", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Download", $scope.currentDisplayLanguage);
     $scope.refreshOnlineResource = function () {
       console.log("Start to download online resources");
       $scope.shareCategory = ShareCategoryService.getShareCategory();
