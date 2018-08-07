@@ -459,11 +459,7 @@ angular
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       console.log("Item ID:" + $scope.uuid);
       var userProfile = UserProfileService.getLatest();
-      var newItem = {};
-      newItem.ID = $scope.uuid;
-      newItem.DisplayName = displayName;
-      newItem.DisplayNameLanguage = $scope.inputLanguage;
-      newItem.DisplayMultipleLanguage = [];
+      var newItem = { ID: $scope.uuid, DisplayName: displayName, DisplayNameLanguage: $scope.inputLanguage, DisplayMultipleLanguage: []};
       var url = ServerPathVariable.getTranslationsPath(inputLanguage, newItem.DisplayName);
       $http({ url: url, method: "GET" }).then(function (data) {
         newItem.DisplayMultipleLanguage = data.data;
@@ -483,8 +479,7 @@ angular
           options.fileName = filePath.substr(filePath.lastIndexOf("/") + 1);
           options.mimeType = "image/jpeg";
           options.httpMethod = "POST";
-          var params = {};
-          params.uuid = newItem.ID;
+          var params = { uuid: newItem.ID};
           options.params = params;
           console.log(JSON.stringify(options));
           $cordovaFileTransfer.upload(server, filePath, options).then(
@@ -562,7 +557,7 @@ angular
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
     $scope.inputAdd = "";
     $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Sentence", $scope.currentDisplayLanguage);
-    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("Loading");
+    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("Sentence");
     $scope.textAddSentence = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "AddSentence", $scope.currentDisplayLanguage);
     $scope.textAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Add", $scope.currentDisplayLanguage);
     $scope.textInputAdd = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "InputAdd", $scope.currentDisplayLanguage);
