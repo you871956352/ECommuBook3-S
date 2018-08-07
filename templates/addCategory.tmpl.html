@@ -11,26 +11,26 @@
                 <md-card-content>
                   <div layout="row">
                     <md-input-container>
-                      <label>{{textCategoryName}}</label>
+                      <label>{{subMenuProfileGeneral.CategoryName}}</label>
                       <input type="text" ng-model="categoryName" required/>
                     </md-input-container>
 
                     <md-input-container>
-                      <label>{{textLanguage}}</label>
+                      <label>{{subMenuProfileGeneral.TargetLanguage}}</label>
                       <md-select ng-model="inputLanguage" required>
                         <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
                       </md-select>
                     </md-input-container>
                   </div>
                   <div layout="row">
-                    <md-button class="md-raised" ng-click='onTakeImageButtonClicked("camera")'>{{textCameraImage}}</md-button>
-                    <md-button class="md-raised" ng-click='onTakeImageButtonClicked("album")'>{{textAlbumImage}}</md-button>
+                    <md-button class="md-raised" ng-click='onTakeImageButtonClicked("camera")'>{{subMenuProfileGeneral.CameraImage}}</md-button>
+                    <md-button class="md-raised" ng-click='onTakeImageButtonClicked("album")'>{{subMenuProfileGeneral.AlbumImage}}</md-button>
                   </div>
                   <div layout="row">
                     <img class ="addDeleteImagePreview" id='myImage'/>
                   </div>
                   <div layout="row">
-                    <md-button class="md-raised" ng-click=onAddCategoryConfirmClicked()>{{textButtonConfirm}}</md-button>
+                    <md-button class="md-raised" ng-click=onAddCategoryConfirmClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
                   </div>
                 </md-card-content>
               </md-card>
