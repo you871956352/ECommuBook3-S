@@ -7257,6 +7257,57 @@ function getSampleMenuProfile() {
         OperationType: "General",
         SubPage: [
           {
+            OperationType: "DisplayLanguage",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Display-Sprache" },
+              { Language: "ru", Text: "Язык отображения" },
+              { Language: "pt", Text: "Idioma de exibição" },
+              { Language: "ko", Text: "표시 언어" },
+              { Language: "yue", Text: "顯示語言" },
+              { Language: "en", Text: "Display Language" },
+              { Language: "it", Text: "Lingua di visualizzazione" },
+              { Language: "fr", Text: "Langue d’affichage" },
+              { Language: "es", Text: "Idioma de la pantalla" },
+              { Language: "zh-CHT", Text: "顯示語言" },
+              { Language: "ar", Text: "لغة العرض" },
+              { Language: "zh-CHS", Text: "显示语言" },
+              { Language: "ja", Text: "表示言語" }]
+          },
+          {
+            OperationType: "SpeechLanguage",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Sprache" },
+              { Language: "ru", Text: "Речи язык" },
+              { Language: "pt", Text: "Língua de discurso" },
+              { Language: "ko", Text: "음성 언어" },
+              { Language: "yue", Text: "語音語言" },
+              { Language: "en", Text: "Speech Language" },
+              { Language: "it", Text: "Lingua di discorso" },
+              { Language: "fr", Text: "Orthophonie" },
+              { Language: "es", Text: "Habla el lenguaje" },
+              { Language: "zh-CHT", Text: "語音語言" },
+              { Language: "ar", Text: "لغة الكلام" },
+              { Language: "zh-CHS", Text: "语音语言" },
+              { Language: "ja", Text: "音声言語" }]
+          },
+          {
+            OperationType: "SpeakerGender",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Lautsprecher-Geschlecht" },
+              { Language: "ru", Text: "Динамика гендерных" },
+              { Language: "pt", Text: "Sexo de alto-falante" },
+              { Language: "ko", Text: "스피커 성별" },
+              { Language: "yue", Text: "演講者性別" },
+              { Language: "en", Text: "Speaker Gender" },
+              { Language: "it", Text: "Genere di altoparlante" },
+              { Language: "fr", Text: "Enceinte sexe" },
+              { Language: "es", Text: "Género de altavoz" },
+              { Language: "zh-CHT", Text: "演講者性別" },
+              { Language: "ar", Text: "المتكلم بين الجنسين" },
+              { Language: "zh-CHS", Text: "演讲者性别" },
+              { Language: "ja", Text: "スピーカーの性別" }]
+          },
+          {
             OperationType: "ConfirmButton",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Bestätigen" },
@@ -8070,57 +8121,6 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "言語" }]
           },
           {
-            OperationType: "DisplayLanguage",
-            DisplayMultipleLanguage: [
-              { Language: "de", Text: "Display-Sprache" },
-              { Language: "ru", Text: "Язык отображения" },
-              { Language: "pt", Text: "Idioma de exibição" },
-              { Language: "ko", Text: "표시 언어" },
-              { Language: "yue", Text: "顯示語言" },
-              { Language: "en", Text: "Display Language" },
-              { Language: "it", Text: "Lingua di visualizzazione" },
-              { Language: "fr", Text: "Langue d’affichage" },
-              { Language: "es", Text: "Idioma de la pantalla" },
-              { Language: "zh-CHT", Text: "顯示語言" },
-              { Language: "ar", Text: "لغة العرض" },
-              { Language: "zh-CHS", Text: "显示语言" },
-              { Language: "ja", Text: "表示言語" }]
-          },
-          {
-            OperationType: "SpeechLanguage",
-            DisplayMultipleLanguage: [
-              { Language: "de", Text: "Sprache" },
-              { Language: "ru", Text: "Речи язык" },
-              { Language: "pt", Text: "Língua de discurso" },
-              { Language: "ko", Text: "음성 언어" },
-              { Language: "yue", Text: "語音語言" },
-              { Language: "en", Text: "Speech Language" },
-              { Language: "it", Text: "Lingua di discorso" },
-              { Language: "fr", Text: "Orthophonie" },
-              { Language: "es", Text: "Habla el lenguaje" },
-              { Language: "zh-CHT", Text: "語音語言" },
-              { Language: "ar", Text: "لغة الكلام" },
-              { Language: "zh-CHS", Text: "语音语言" },
-              { Language: "ja", Text: "音声言語" }]
-          },
-          {
-            OperationType: "SpeakerGender",
-            DisplayMultipleLanguage: [
-              { Language: "de", Text: "Lautsprecher-Geschlecht" },
-              { Language: "ru", Text: "Динамика гендерных" },
-              { Language: "pt", Text: "Sexo de alto-falante" },
-              { Language: "ko", Text: "스피커 성별" },
-              { Language: "yue", Text: "演講者性別" },
-              { Language: "en", Text: "Speaker Gender" },
-              { Language: "it", Text: "Genere di altoparlante" },
-              { Language: "fr", Text: "Enceinte sexe" },
-              { Language: "es", Text: "Género de altavoz" },
-              { Language: "zh-CHT", Text: "演講者性別" },
-              { Language: "ar", Text: "المتكلم بين الجنسين" },
-              { Language: "zh-CHS", Text: "演讲者性别" },
-              { Language: "ja", Text: "スピーカーの性別" }]
-          },
-          {
             OperationType: "Appearance",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Aussehen" },
@@ -8291,57 +8291,6 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "معرف المستخدم"},
               { Language: "zh-CHS", Text: "用户 ID"},
               { Language: "ja", Text: "ユーザー ID"}]
-          },
-          {
-            OperationType: "DisplayLanguage",
-            DisplayMultipleLanguage: [
-              { Language: "de", Text: "Display-Sprache" },
-              { Language: "ru", Text: "Язык отображения" },
-              { Language: "pt", Text: "Idioma de exibição" },
-              { Language: "ko", Text: "표시 언어" },
-              { Language: "yue", Text: "顯示語言" },
-              { Language: "en", Text: "Display Language" },
-              { Language: "it", Text: "Lingua di visualizzazione" },
-              { Language: "fr", Text: "Langue d’affichage" },
-              { Language: "es", Text: "Idioma de la pantalla" },
-              { Language: "zh-CHT", Text: "顯示語言" },
-              { Language: "ar", Text: "لغة العرض" },
-              { Language: "zh-CHS", Text: "显示语言" },
-              { Language: "ja", Text: "表示言語" }]
-          },
-          {
-            OperationType: "SpeechLanguage",
-            DisplayMultipleLanguage: [
-              { Language: "de", Text: "Sprache" },
-              { Language: "ru", Text: "Речи язык" },
-              { Language: "pt", Text: "Língua de discurso" },
-              { Language: "ko", Text: "음성 언어" },
-              { Language: "yue", Text: "語音語言" },
-              { Language: "en", Text: "Speech Language" },
-              { Language: "it", Text: "Lingua di discorso" },
-              { Language: "fr", Text: "Orthophonie" },
-              { Language: "es", Text: "Habla el lenguaje" },
-              { Language: "zh-CHT", Text: "語音語言" },
-              { Language: "ar", Text: "لغة الكلام" },
-              { Language: "zh-CHS", Text: "语音语言" },
-              { Language: "ja", Text: "音声言語" }]
-          },
-          {
-            OperationType: "SpeakerGender",
-            DisplayMultipleLanguage: [
-              { Language: "de", Text: "Lautsprecher-Geschlecht" },
-              { Language: "ru", Text: "Динамика гендерных" },
-              { Language: "pt", Text: "Sexo de alto-falante" },
-              { Language: "ko", Text: "스피커 성별" },
-              { Language: "yue", Text: "演講者性別" },
-              { Language: "en", Text: "Speaker Gender" },
-              { Language: "it", Text: "Genere di altoparlante" },
-              { Language: "fr", Text: "Enceinte sexe" },
-              { Language: "es", Text: "Género de altavoz" },
-              { Language: "zh-CHT", Text: "演講者性別" },
-              { Language: "ar", Text: "المتكلم بين الجنسين" },
-              { Language: "zh-CHS", Text: "演讲者性别" },
-              { Language: "ja", Text: "スピーカーの性別" }]
           },
           {
             OperationType: "CollectionProgress",

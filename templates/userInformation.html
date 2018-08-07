@@ -10,13 +10,13 @@
         <md-card-content>
           <h1 class="md-title">{{subMenuProfileObject.UserID}}: {{userProfile.ID}}</h1>
           <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
-            {{subMenuProfileObject.DisplayLanguage}}: {{displayLanguage.name}}
+            {{subMenuProfileGeneral.DisplayLanguage}}: {{displayLanguage.name}}
           </h1>
           <h1 class="md-title" ng-repeat="speechLanguage in SpeechLanguageList" ng-if="speechLanguage.value == userProfile.SPEECH_LANGUAGE_CODE && speechLanguage.language == userProfile.DISPLAY_LANGUAGE">
-            {{subMenuProfileObject.SpeechLanguage}}: {{speechLanguage.name}}
+            {{subMenuProfileGeneral.SpeechLanguage}}: {{speechLanguage.name}}
           </h1>
           <h1 class="md-title" ng-repeat="speakGender in GenderList" ng-if="speakGender.value == userProfile.SPEECH_GENDER && speakGender.language == userProfile.SPEECH_LANGUAGE_CODE">
-            {{subMenuProfileObject.SpeakerGender}}: {{speakGender.name}}
+            {{subMenuProfileGeneral.SpeakerGender}}: {{speakGender.name}}
           </h1>
         </md-card-content>
       </md-card>

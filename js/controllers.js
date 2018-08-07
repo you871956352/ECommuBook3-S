@@ -594,7 +594,6 @@ angular
   .controller("SearchCtrl", function ($scope, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
     $scope.userProfile = UserProfileService.getLatest();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Search", $scope.currentDisplayLanguage);
-    $scope.subMenuProfileObjectUserInformatiion = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.RecordState = $scope.subMenuProfileGeneral.Start;
     $scope.isShowResult = false;
