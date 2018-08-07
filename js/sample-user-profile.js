@@ -7805,6 +7805,23 @@ function getSampleMenuProfile() {
               { "Language": "ar", "Text": "بعد أن يتم حذف هذا البند، وسوف ديسابير في هذه الفئة" },
               { "Language": "zh-CHS", "Text": "删除此项目后, 它将在该类别中消失" },
               { "Language": "ja", "Text": "この項目を削除すると、した後それがこのカテゴリで消え去る" }]
+          },
+          {
+            OperationType: "AddItem",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Element hinzufügen" },
+              { Language: "ru", Text: "Добавить элемент" },
+              { Language: "pt", Text: "Adicionar Item" },
+              { Language: "ko", Text: "항목 추가" },
+              { Language: "yue", Text: "添加項目" },
+              { Language: "en", Text: "Add Item" },
+              { Language: "it", Text: "Aggiungi elemento" },
+              { Language: "fr", Text: "Ajouter l’article" },
+              { Language: "es", Text: "Agregar elemento" },
+              { Language: "zh-CHT", Text: "添加專案" },
+              { Language: "ar", Text: "إضافة عنصر" },
+              { Language: "zh-CHS", Text: "添加项目" },
+              { Language: "ja", Text: "項目を追加します。" }]
           }
         ]
       },
