@@ -35,7 +35,7 @@ angular
   })
   .controller("CategoryCtrl", function ($scope, $stateParams, $state, $mdDialog, $ionicSideMenuDelegate, $cordovaMedia, UserProfileService, $http, LocalCacheService, $cordovaNetwork) {
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("CategoryGrid", $scope.currentDisplayLanguage);   
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("CategoryGrid", $scope.currentDisplayLanguage);
     $scope.categoryId = $stateParams.categoryId;
     $scope.showEditCard = false;
     for (var i = 0; i < $scope.userProfile.Categories.length; i++) {
@@ -606,10 +606,10 @@ angular
   })
   .controller("SearchCtrl", function ($scope, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Search", $scope.currentDisplayLanguage); 
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Search", $scope.currentDisplayLanguage);
     $scope.subMenuProfileObjectUserInformatiion = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
-    $scope.RecordState = $scope.subMenuProfileObjectUserInformatiion.Start;
+    $scope.RecordState = $scope.subMenuProfileGeneral.Start;
     $scope.isShowResult = false;
     $scope.isRecorded = false;
     $scope.resultWords = ["Feeling", "Shaving", "Rice"];
@@ -633,13 +633,13 @@ angular
       }
     };
     $scope.searchRecording = function (ev) {
-      if ($scope.RecordState == $scope.subMenuProfileObjectUserInformatiion.Start) {
+      if ($scope.RecordState == $scope.subMenuProfileGeneral.Start) {
         $scope.isRecorded = false;
-        $scope.RecordState = $scope.subMenuProfileObjectUserInformatiion.Stop;
+        $scope.RecordState = $scope.subMenuProfileGeneral.Stop;
         VoiceRecordService.startCapture();
       }
-      else if ($scope.RecordState == $scope.subMenuProfileObjectUserInformatiion.Stop) {
-        $scope.RecordState = $scope.subMenuProfileObjectUserInformatiion.Start;
+      else if ($scope.RecordState == $scope.subMenuProfileGeneral.Stop) {
+        $scope.RecordState = $scope.subMenuProfileGeneral.Start;
         VoiceRecordService.stopCapture("searchTemp");
         $scope.isRecorded = true;
       }
@@ -711,7 +711,6 @@ angular
     $scope.collectedVoice = 0;
     $scope.totalVoice = 160;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
-    $scope.subMenuProfileGeneral = UserProfileService.getMenuProfileSubObjectWithInputLanguage("General", $scope.currentDisplayLanguage);
     $scope.vcRecording = function (ev) {
         var targetScope = $scope.$new();
         targetScope.subMenuProfileObject = $scope.subMenuProfileObject;

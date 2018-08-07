@@ -3,7 +3,7 @@
     <div id="grid-container" class="container-fluid" ng-controller="SearchCtrl" ng-cloak>
       <md-card>
         <md-card-title>
-          <span class="md-headline">{{subMenuProfileObject.SearchGuide1}}</span><span flex></span>     
+          <span class="md-headline">{{subMenuProfileObject.SearchGuide1}}</span><span flex></span>
         </md-card-title>
         <md-card-content>
           <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
@@ -12,8 +12,8 @@
         </md-card-content>
         <md-card-content>
           <md-button class="md-raised" ng-click=searchRecording()>{{RecordState}}</md-button>
-          <md-button class="md-raised" ng-click=checkRecord() ng-disabled="!isRecorded">{{subMenuProfileObjectUserInformatiion.Check}}</md-button>
-          <md-button class="md-raised" ng-click=uploadRecord() ng-disabled="!isRecorded">{{subMenuProfileObjectUserInformatiion.Upload}}</md-button>
+          <md-button class="md-raised" ng-click=checkRecord() ng-disabled="!isRecorded">{{subMenuProfileGeneral.Check}}</md-button>
+          <md-button class="md-raised" ng-click=uploadRecord() ng-disabled="!isRecorded">{{subMenuProfileGeneral.Upload}}</md-button>
         </md-card-content>
       </md-card>
 
@@ -22,9 +22,9 @@
           <span class="md-headline">{{subMenuProfileObject.SearchResult}}</span><span flex></span>
         </md-card-title>
         <h1></h1>
-        <md-card-content  ng-repeat="word in resultWords" ng-if="$index < maxResultWordsDisplay" class= "searchResultPreview ">            
+        <md-card-content  ng-repeat="word in resultWords" ng-if="$index < maxResultWordsDisplay" class= "searchResultPreview ">
           <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{word}}</span>
-        </md-card-content>     
+        </md-card-content>
       </md-card>
     </div>
   </ion-content>
