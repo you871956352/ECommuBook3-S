@@ -772,6 +772,3 @@ angular
       }
     };
   })
-  .controller("TestCtrl", function ($scope) {
-    $scope.testClick = function () {};
-  });
