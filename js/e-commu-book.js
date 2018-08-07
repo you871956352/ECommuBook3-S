@@ -246,14 +246,8 @@ var LoadingDialog = new function () {
     });
   };
   this.LoadPopupController = function ($scope, $mdDialog, $ionicSideMenuDelegate, UserProfileService) {
-    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("Loading");
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Loading", $scope.currentDisplayLanguage);   
     $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Loading", $scope.currentDisplayLanguage);
-    $scope.message = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "LoadingMessage", $scope.currentDisplayLanguage);
-    $scope.textCurrent = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Current", $scope.currentDisplayLanguage);
-    $scope.textTotal = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Total", $scope.currentDisplayLanguage);
-    $scope.textPercentage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Percentage", $scope.currentDisplayLanguage);
-
     $scope.downloaded = NaN;
     $scope.total = NaN;
     $scope.hide = function () { $mdDialog.hide(); };
@@ -274,14 +268,8 @@ var LoadingDialog = new function () {
     }, 500);
   };
   this.LoadPopupControllerDelete = function ($scope, $mdDialog, $ionicSideMenuDelegate, UserProfileService) {
-    $scope.subGeneral = UserProfileService.getMenuProfileSubObject("Loading");
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Loading", $scope.currentDisplayLanguage); 
     $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
-    $scope.Title = UserProfileService.getTranslatedMenuText("Operations", "Loading", $scope.currentDisplayLanguage);
-    $scope.message = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "LoadingMessage", $scope.currentDisplayLanguage);
-    $scope.textCurrent = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Current", $scope.currentDisplayLanguage);
-    $scope.textTotal = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Total", $scope.currentDisplayLanguage);
-    $scope.textPercentage = UserProfileService.getTranslatedObjectText($scope.subGeneral.SubPage, "Percentage", $scope.currentDisplayLanguage);
-
     $scope.downloaded = NaN;
     $scope.total = NaN;
     $scope.hide = function () { $mdDialog.hide(); };
