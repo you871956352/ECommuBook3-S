@@ -55,15 +55,6 @@ angular
           }
         }
       })
-      .state("app.addItem", {
-        url: "/addItem",
-        views: {
-          menuContent: {
-            templateUrl: "templates/addItem.tmpl.html",
-            controller: "AddItemCtrl"
-          }
-        }
-      })
       .state("app.addCategory", {
         url: "/addCategory",
         views: {

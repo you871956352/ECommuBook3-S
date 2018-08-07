@@ -52,13 +52,6 @@
             </div>
           </div>
         </ion-item>
-        <ion-item menu-close href="#/app/addItem">
-          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'AddItem' && isShowDisplayName.checked">
-            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
-            </div>
-          </div>
-        </ion-item>
         <ion-item menu-close href="#/app/setting">
           <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Setting' && isShowDisplayName.checked">
             <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">

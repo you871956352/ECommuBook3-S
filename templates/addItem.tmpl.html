@@ -1,54 +1,41 @@
-<ion-view cache-view="false" view-title={{Title}}>
-  <ion-content>
-	<div ng-controller="AddItemCtrl" class="md-padding" ng-cloak>
-	  <div>
-		<md-card>
-		    <md-card-title>
-		      <md-card-title-text>
-            <span class="md-headline">{{Title}}</span>
-		      </md-card-title-text>
-		    </md-card-title>
+<md-dialog>
+  <md-toolbar>
+    <div class="md-toolbar-tools" style="text-align: center;">
+      <div>{{subMenuProfileObject.AddItem}}: {{selectedCategoryName}}</div>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
 
-		    <md-card-content>
-			    <div layout="row">
-			      <md-input-container>
-              <label>{{subMenuProfileGeneral.CategoryName}}</label>
-              <md-select ng-model="selectedCategoryId">
-                <md-option ng-value="category.ID" ng-repeat="category in categories">
-                  <div ng-repeat="translation in category.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">{{translation.Text}}</div>
-                </md-option>
-              </md-select>
-			        <img style="width: 30%" src="{{ImagePath}}/{{selectedCategoryId}}.jpg"/>
-			      </md-input-container>
-			    </div>
-			    <div layout="row">
-			      <md-input-container>
-              <label>{{subMenuProfileGeneral.ItemName}}</label>
-			      	<input type="text" ng-model="itemName" required/>
-			      </md-input-container>
-
-			      <md-input-container>
-              <label>{{subMenuProfileGeneral.TargetLanguage}}</label>
-			        <md-select ng-model="inputLanguage" required>
-			            <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
-			        </md-select>
-			      </md-input-container>
-
-			    </div>
-			    <div layout="row">
-            <md-button class="md-raised" ng-click='onTakeImageButtonClicked("camera")'>{{subMenuProfileGeneral.CameraImage}}</md-button>
-            <md-button class="md-raised" ng-click='onTakeImageButtonClicked("album")'>{{subMenuProfileGeneral.AlbumImage}}</md-button>
-			    </div>
-			    <div layout="row">
-					<img class ="addDeleteImagePreview" id='myImage' />
-			    </div>
-			    <div layout="row">
-            <md-button class="md-raised" ng-click=onAddItemConfirmClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
-		    	</div>
-		    </md-card-content>
-		</md-card>
-
-		</div>
-	</div>
-  </ion-content>
-</ion-view>
+  <md-dialog-content>
+    <md-card>
+      <md-card-content>
+        <img style="width: 50%" src="{{ImagePath}}/{{selectedCategoryId}}.jpg" />
+        <div style="float:right">
+          <md-button class="md-raised" ng-click=onAddItemConfirmClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
+        </div>    
+        <div layout="row">
+          <md-input-container style="width: 40%">
+            <label>{{subMenuProfileGeneral.ItemName}}</label>
+            <input type="text" ng-model="itemName" required />
+          </md-input-container>
+          <md-input-container style="width: 40%; float:right">
+            <label>{{subMenuProfileGeneral.TargetLanguage}}</label>
+            <md-select ng-model="inputLanguage" required>
+              <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+      </md-card-content>
+      <md-card-content>
+        <div layout="row">
+          <md-button class="md-raised" ng-click='onTakeImageButtonClicked("camera")'>{{subMenuProfileGeneral.CameraImage}}</md-button>
+          <md-button class="md-raised" ng-click='onTakeImageButtonClicked("album")'>{{subMenuProfileGeneral.AlbumImage}}</md-button>
+        </div>
+        <img style="width: 50%" id='myImage' />
+      </md-card-content>
+    </md-card>
+  </md-dialog-content>
+</md-dialog>

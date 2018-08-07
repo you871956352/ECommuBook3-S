@@ -119,7 +119,6 @@ var GlobalVariable = new function () { //User to store some global variable
     { name: "português", value: "pt" },
     { name: "русский", value: "ru" },
     { name: "한국어", value: "ko" },
-    { name: "N/A", value: "xx" }
   ];
   this.SpeechLanguageList = [
     { name: "[ar-EG]Arabic (Egypt)", value: "ar-EG", language: "ar" },
