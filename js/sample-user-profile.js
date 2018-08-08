@@ -8596,9 +8596,7 @@ function getSampleVoiceModel(){
   json = {
     ID: "00000000-0000-0000-0001-000000000000",
     ModelStatus: "Unstarted", //Unstarted, Training, Completed
-    DISPLAY_LANGUAGE: "en",
     TotalSentence: 160,
-    TotalSentenceRecorded: 1,
     RecordingSentence: [
       {
         ID: "0001",
