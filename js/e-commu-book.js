@@ -15,6 +15,9 @@ var ServerPathVariable = new function () { //User to store server return path
   this.GetPostImagePath = function () {
     return this.hostname + this.path + "image/post";
   };
+  this.GetPostAudioPath = function () {
+    return this.hostname + this.path + "audio/serverStorage/post";
+  };
   this.PostUserProfilePath = function () {
     return (this.hostname + this.path + "userProfile/post");
   };
