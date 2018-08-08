@@ -335,6 +335,56 @@ var UtilityFunction = new function () {
     }
     return { object: null, type: "undefined" };
   };
+  this.getWordListByObject = function (inputObject, targetLanguage, mode) {
+    if (mode == "All") {
+      var userProfile = inputObject;
+      var returnList = [];
+      for (var i = 0; i < userProfile.Categories.length; i++) {
+        for (var j = 0; j < userProfile.Categories[i].DisplayMultipleLanguage.length; j++) {
+          if (userProfile.Categories[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
+            returnList.push(userProfile.Categories[i].DisplayMultipleLanguage[j].Text);
+            break;
+          }
+        }
+        var category = userProfile.Categories[i];
+        for (var k = 0; k < category.Items.length; k++) {
+          for (var j = 0; j < category.Items[k].DisplayMultipleLanguage.length; j++) {
+            if (category.Items[k].DisplayMultipleLanguage[j].Language == targetLanguage) {
+              returnList.push(category.Items[k].DisplayMultipleLanguage[j].Text);
+              break;
+            }
+          }
+        }
+      }
+      return returnList;
+    }
+    else if (mode == "Category") {
+      var userProfile = inputObject;
+      var returnList = ["All"];
+      for (var i = 0; i < userProfile.Categories.length; i++) {
+        for (var j = 0; j < userProfile.Categories[i].DisplayMultipleLanguage.length; j++) {
+          if (userProfile.Categories[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
+            returnList.push(userProfile.Categories[i].DisplayMultipleLanguage[j].Text);
+            break;
+          }
+        }
+      }
+      return returnList;
+    }
+    else if (mode == "Item") {
+      var returnList = [];
+      var targetCategory = inputObject;
+      for (var k = 0; k < targetCategory.Items.length; k++) {
+        for (var j = 0; j < targetCategory.Items[k].DisplayMultipleLanguage.length; j++) {
+          if (targetCategory.Items[k].DisplayMultipleLanguage[j].Language == targetLanguage) {
+            returnList.push(targetCategory.Items[k].DisplayMultipleLanguage[j].Text);
+            break;
+          }
+        }
+      }
+      return returnList;
+    }
+  }
   this.getCategoryIndexById = function (userProfile, categoryid) {
     for (var i = 0; i < userProfile.Categories.length; i++) {
       if (userProfile.Categories[i].ID == categoryid) {

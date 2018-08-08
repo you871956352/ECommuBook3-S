@@ -14,10 +14,10 @@
           <md-button class="md-raised" ng-click=searchRecording()>{{RecordState}}</md-button>
           <md-button class="md-raised" ng-click=checkRecord() ng-disabled="!isRecorded">{{subMenuProfileGeneral.Check}}</md-button>
           <md-button class="md-raised" ng-click=uploadRecord() ng-disabled="!isRecorded">{{subMenuProfileGeneral.Upload}}</md-button>
-          <md-input-container>
+          <md-input-container style="float:right">
             <label>Range</label>
             <md-select ng-model="CategoryName" required>
-              <md-option ng-value="categoryName" ng-repeat="categoryName in CategoryNameList">{{categoryName}}</md-option>
+              <md-option ng-value="categoryName" ng-repeat="categoryName in CategoryRange">{{categoryName}}</md-option>
             </md-select>
           </md-input-container>
         </md-card-content>
@@ -28,8 +28,10 @@
           <span class="md-headline">{{subMenuProfileObject.SearchResult}}</span><span flex></span>
         </md-card-title>
         <h1></h1>
-        <md-card-content  ng-repeat="word in resultWords" ng-if="$index < maxResultWordsDisplay" class= "searchResultPreview ">
-          <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{word}}</span>
+        <md-card-content ng-repeat="resultObject in resultObjects" ng-if="$index < maxResultWordsDisplay" class="searchResultPreview ">
+          <div ng-repeat="translation in resultObject.object.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+            <span id ="SearchID{{resultObject.object.ID}}" class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;" ng-click="resultGuide(resultObject)">{{translation.Text}}</span>
+          </div>
         </md-card-content>
       </md-card>
     </div>
