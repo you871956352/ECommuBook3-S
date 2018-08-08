@@ -520,7 +520,7 @@ angular
   })
   .controller("WelcomeCtrl", function ($scope,UserProfileService) {
     $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Welcome", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Menu", $scope.currentDisplayLanguage);
    })
   .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
     $scope.userProfile = UserProfileService.getLatest();
@@ -611,7 +611,7 @@ angular
     $scope.isRecorded = false;
     $scope.resultWords = ["Feeling", "Pear", "Rice"];
     $scope.resultObjects = [];
-    $scope.maxResultWordsDisplay = 3;   
+    $scope.maxResultWordsDisplay = 3;
     $scope.CategoryRange = UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "Category");
     $scope.CategoryName = $scope.CategoryRange[0];
     if (window.cordova && window.cordova.file && window.audioinput) {
@@ -784,9 +784,12 @@ angular
       function DialogController($scope, $mdDialog) {
         $scope.cancel = function () { $mdDialog.cancel(); };
         $scope.startTrain = function () {
-
         };
         //$scope.VoiceModel = VoiceModelService.getLatest();
       }
     };
+  })
+  .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$mdDialog,$http,UserProfileService,VoiceRecordService,VoiceModelService){
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
+
   })

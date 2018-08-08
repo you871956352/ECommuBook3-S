@@ -7548,6 +7548,42 @@ function getSampleMenuProfile() {
         ]
       },
       {
+        OperationType: "Menu",
+        DisplayMultipleLanguage: [
+          {"Language":"de","Text":"Menü"},
+          {"Language":"ru","Text":"Меню"},
+          {"Language":"pt","Text":"Menu de"},
+          {"Language":"ko","Text":"메뉴"},
+          {"Language":"yue","Text":"菜單"},
+          {"Language":"en","Text":"Menu"},
+          {"Language":"it","Text":"Dal menu"},
+          {"Language":"fr","Text":"Menu"},
+          {"Language":"es","Text":"Menú"},
+          {"Language":"zh-CHT","Text":"功能表"},
+          {"Language":"ar","Text":"القائمة"},
+          {"Language":"zh-CHS","Text":"菜单"},
+          {"Language":"ja","Text":"メニュー"}],
+        SubPage:[
+          {
+            OperationType: "WelcomeText",
+            DisplayMultipleLanguage: [
+              { Language:"de", Text:"Willkommen bei eBook-Kommunikations-"},
+              { Language:"ru", Text:"Добро пожаловать на E-Commu книга"},
+              { Language:"pt", Text:"Bem-vindo ao E-comu-livro"},
+              { Language:"ko", Text:"오신 것을 환영 합니다 전자-Commu-도 서"},
+              { Language:"yue", Text:"歡迎來到電子通訊書"},
+              { Language:"en", Text:"Welcome to E-Commu-Book"},
+              { Language:"it", Text:"Benvenuto a comu-eBook"},
+              { Language:"fr", Text:"Bienvenue sur E-Commu-livre"},
+              { Language:"es", Text:"¡Bienvenido a E-comunidad-libro"},
+              { Language:"zh-CHT", Text:"歡迎來到電子通訊書"},
+              { Language:"ar", Text:"مرحبا بكم في-الاتصالات-بووك"},
+              { Language:"zh-CHS", Text:"欢迎来到电子通讯书"},
+              { Language:"ja", Text:"E-Commu-Bookへようこそ"}]
+          }
+        ]
+      },
+      {
         OperationType: "AddCategory",
         DisplayMultipleLanguage: [
           { Language: "de", Text: "Kategorie hinzufügen" },
@@ -8461,42 +8497,6 @@ function getSampleMenuProfile() {
               {"Language":"ar","Text":"تحميل نموذج"},
               {"Language":"zh-CHS","Text":"下载模型"},
               {"Language":"ja","Text":"モデルをダウンロードします。"}]
-          }
-        ]
-      },
-      {
-        OperationType: "Welcome",
-        DisplayMultipleLanguage: [
-          { Language:"de", Text:"Herzlich Willkommen"},
-          { Language:"ru", Text:"Добро пожаловать"},
-          { Language:"pt", Text:"Bem-vindo"},
-          { Language:"ko", Text:"환영 합니다"},
-          { Language:"yue", Text:"歡迎"},
-          { Language:"en", Text:"Welcome"},
-          { Language:"it", Text:"Benvenuto"},
-          { Language:"fr", Text:"Bienvenue"},
-          { Language:"es", Text:"Bienvenida"},
-          { Language:"zh-CHT", Text:"歡迎"},
-          { Language:"ar", Text:"اهلا وسهلا"},
-          { Language:"zh-CHS", Text:"欢迎"},
-          { Language:"ja", Text:"ようこそ"}],
-        SubPage: [
-          {
-            OperationType: "WelcomeText",
-            DisplayMultipleLanguage: [
-              { Language:"de", Text:"Willkommen bei eBook-Kommunikations-"},
-              { Language:"ru", Text:"Добро пожаловать на E-Commu книга"},
-              { Language:"pt", Text:"Bem-vindo ao E-comu-livro"},
-              { Language:"ko", Text:"오신 것을 환영 합니다 전자-Commu-도 서"},
-              { Language:"yue", Text:"歡迎來到電子通訊書"},
-              { Language:"en", Text:"Welcome to E-Commu-Book"},
-              { Language:"it", Text:"Benvenuto a comu-eBook"},
-              { Language:"fr", Text:"Bienvenue sur E-Commu-livre"},
-              { Language:"es", Text:"¡Bienvenido a E-comunidad-libro"},
-              { Language:"zh-CHT", Text:"歡迎來到電子通訊書"},
-              { Language:"ar", Text:"مرحبا بكم في-الاتصالات-بووك"},
-              { Language:"zh-CHS", Text:"欢迎来到电子通讯书"},
-              { Language:"ja", Text:"E-Commu-Bookへようこそ"}]
           }
         ]
       },

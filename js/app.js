@@ -100,6 +100,15 @@ angular
           }
         }
       })
+      .state("app.voiceModel", {
+        url: "/voiceModel",
+        views: {
+          menuContent: {
+            templateUrl: "templates/voiceModel.html",
+            controller: "VoiceModelCtrl"
+          }
+        }
+      })
       .state("app.userInformation", {
         url: "/userInformation",
         views: {
