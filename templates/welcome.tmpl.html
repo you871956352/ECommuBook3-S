@@ -22,10 +22,10 @@
                           </div>
                         </div>
                       </ion-item>
-                      <ion-item item-content href="#/app/setting">
+                      <ion-item href="#/app/search">
                         <div layout="column" layout-align="center center">
-                          <img src="img/icons/Setting.png" style="max-width: 50%;max-height: 50%;"/>
-                          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Setting' && isShowDisplayName.checked">
+                          <img src="img/icons/Search.png" style="max-width: 50%;max-height: 50%;"/>
+                          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Search' && isShowDisplayName.checked">
                             <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                               <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
                             </div>
@@ -56,16 +56,6 @@
                     </ion-item>
                   </div>
                   <div layout="row" layout-align="space-around center">
-                    <ion-item href="#/app/search">
-                      <div layout="column" layout-align="center center">
-                        <img src="img/icons/Search.png" style="max-width: 50%;max-height: 50%;"/>
-                        <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Search' && isShowDisplayName.checked">
-                          <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-                            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
-                          </div>
-                        </div>
-                      </div>
-                    </ion-item>
                     <ion-item href="#/app/sentence">
                       <div layout="column" layout-align="center center">
                         <img src="img/icons/Sentence.png" style="max-width: 50%;max-height: 50%;"/>
@@ -76,8 +66,18 @@
                         </div>
                       </div>
                     </ion-item>
+                    <ion-item item-content href="#/app/setting">
+                      <div layout="column" layout-align="center center">
+                        <img src="img/icons/Setting.png" style="max-width: 50%;max-height: 50%;"/>
+                        <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Setting' && isShowDisplayName.checked">
+                          <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+                            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
+                          </div>
+                        </div>
+                      </div>
+                    </ion-item>
                   </div>
-                  
+
                   </ion-list>
                 </md-card-content>
               </md-card>

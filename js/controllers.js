@@ -603,17 +603,20 @@ angular
       };
     }
   })
-  .controller("SearchCtrl", function ($scope, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
+  .controller("SearchCtrl", function ($scope, $state, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
     $scope.userProfile = UserProfileService.getLatest();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Search", $scope.currentDisplayLanguage);
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.RecordState = $scope.subMenuProfileGeneral.Start;
     $scope.isShowResult = false;
     $scope.isRecorded = false;
-    $scope.resultWords = ["Feeling", "Shaving", "Rice"];
-    $scope.maxResultWordsDisplay = 3;
+    $scope.resultWords = ["Feeling", "Pear", "Rice"];
+    $scope.resultObjects = [];
+    $scope.maxResultWordsDisplay = 3;   
+    $scope.CategoryRange = UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "Category");
+    $scope.CategoryName = $scope.CategoryRange[0];
     if (window.cordova && window.cordova.file && window.audioinput) {
-      console.log("Use 'Start Capture' to begin...");
+      console.log("Enable Voice Record Listener...");
       window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
       window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
     }
@@ -621,12 +624,25 @@ angular
       VoiceRecordService.checkRecord();
     };
     $scope.uploadRecord = function () {
+      var searchRangeList;
+      if ($scope.CategoryName == "All") {
+        searchRangeList = UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "All");
+      }
+      else {
+        var targetObject = UtilityFunction.getObjectByTranslationText($scope.userProfile, $scope.CategoryName, $scope.currentDisplayLanguage);
+        searchRangeList = UtilityFunction.getWordListByObject(targetObject.object, $scope.currentDisplayLanguage, "Item");
+      }
+      //Post Video and searchRangeList to server, Need to complete
       //VoiceRecordService.uploadRecordSearch();
+      //Server retun a List, then do search
       $scope.isShowResult = true;
       for (var i = 0; i < $scope.resultWords.length; i++) {
         var targetIDObject = UtilityFunction.getObjectByTranslationText($scope.userProfile, $scope.resultWords[i], $scope.currentDisplayLanguage);
         if (targetIDObject.type != "undefined") {
-          $scope.resultWords[i] = targetIDObject.object.ID;
+          $scope.resultObjects[i] = targetIDObject;
+        }
+        if (targetIDObject.type == "item") {
+          $scope.resultObjects[i].parent = UtilityFunction.findCategoryObjectByItemID($scope.userProfile, targetIDObject.object.ID);
         }
       }
     };
@@ -642,6 +658,9 @@ angular
         $scope.isRecorded = true;
       }
     };
+    $scope.resultGuide = function (resultObject) {
+      //alert(resultObject.parent.ID);
+    }
   })
   .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();

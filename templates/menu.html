@@ -31,52 +31,6 @@
             <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
           </div>
         </ion-item>
-
-        <h1></h1>
-
-        <ion-item menu-close href="#/app/share">
-          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Download' && isShowDisplayName.checked">
-            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
-            </div>
-          </div>
-        </ion-item>
-        <ion-item menu-close href="#/app/sentence">
-          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Sentence' && isShowDisplayName.checked">
-            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
-            </div>
-          </div>
-        </ion-item>
-        <ion-item menu-close href="#/app/search">
-          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Search' && isShowDisplayName.checked">
-            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
-            </div>
-          </div>
-        </ion-item>
-        <ion-item menu-close href="#/app/addCategory">
-          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'AddCategory' && isShowDisplayName.checked">
-            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
-            </div>
-          </div>
-        </ion-item>
-        <ion-item menu-close href="#/app/setting">
-          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Setting' && isShowDisplayName.checked">
-            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
-            </div>
-          </div>
-        </ion-item>
-
-        <ion-item menu-close href="#/app/userInformation">
-          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'UserInformation' && isShowDisplayName.checked">
-            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
-            </div>
-          </div>
-        </ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>
