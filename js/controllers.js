@@ -641,6 +641,9 @@ angular
         if (targetIDObject.type != "undefined") {
           $scope.resultObjects[i] = targetIDObject;
         }
+        if (targetIDObject.type == "item") {
+          $scope.resultObjects[i].parent = UtilityFunction.findCategoryObjectByItemID($scope.userProfile, targetIDObject.object.ID);
+        }
       }
     };
     $scope.searchRecording = function (ev) {
@@ -656,16 +659,7 @@ angular
       }
     };
     $scope.resultGuide = function (resultObject) {
-      if (resultObject.type == "category") {
-        var thisCategory = resultObject.object;
-        var ID = "SearchID" + thisCategory.ID;
-        var a = document.getElementById(ID);
-        a.href = "#/app/category/" + thisCategory.ID;
-        $state.go("app.category/" + thisCategory.ID, {}, { reload: false });
-      }
-      else if (resultObject.type == "item") {
-        var thisItem = resultObject.object;
-      }
+      //alert(resultObject.parent.ID);
     }
   })
   .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading

@@ -23,14 +23,17 @@
         </md-card-content>
       </md-card>
 
-      <md-card ng-if="isShowResult">
+      <md-card ng-show="isShowResult">
         <md-card-title>
           <span class="md-headline">{{subMenuProfileObject.SearchResult}}</span><span flex></span>
         </md-card-title>
         <h1></h1>
-        <md-card-content ng-repeat="resultObject in resultObjects" ng-if="$index < maxResultWordsDisplay" class="searchResultPreview ">
-          <div ng-repeat="translation in resultObject.object.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-            <span id ="SearchID{{resultObject.object.ID}}" class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;" ng-click="resultGuide(resultObject)">{{translation.Text}}</span>
+        <md-card-content ng-repeat="resultObject in resultObjects" ng-if="$index < maxResultWordsDisplay">
+          <div ng-repeat="translation in resultObject.object.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE && resultObject.type == 'category'">
+            <ion-item href="#/app/category/{{resultObject.object.ID}}" class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;">{{translation.Text}}</ion-item>
+          </div>
+          <div ng-repeat="translation in resultObject.object.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE && resultObject.type == 'item'">
+            <ion-item href="#/app/category/{{resultObject.parent.ID}}" class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;" ng-click="resultGuide(resultObject)">{{translation.Text}}</ion-item>
           </div>
         </md-card-content>
       </md-card>

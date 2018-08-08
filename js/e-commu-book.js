@@ -291,6 +291,17 @@ var LoadingDialog = new function () {
 };
 
 var UtilityFunction = new function () {
+  this.findCategoryObjectByItemID = function (userProfile, itemID) {
+    for (var i = 0; i < userProfile.Categories.length; i++) {
+      for (var j = 0; j < userProfile.Categories[i].Items.length; j++) {
+        if (userProfile.Categories[i].Items[j].ID == itemID) {
+          return userProfile.Categories[i];
+        }
+      }
+    }
+    console.log("Cannot find this item");
+    return {};
+  };
   this.getObjectTranslation = function (itemObject, targetLanguage) {
     for (var k = 0; k < itemObject.DisplayMultipleLanguage.length; k++) {
       if (itemObject.DisplayMultipleLanguage[k].Language == targetLanguage) {
