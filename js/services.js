@@ -486,7 +486,7 @@ myModule.factory("ShareCategoryService", function ($http, $localStorage) { //Sto
   };
 });
 
-myModule.factory("VoiceRecordService", function ($http, $cordovaMedia) {
+myModule.factory("VoiceRecordService", function ($http, $cordovaMedia, $cordovaNetwork, $cordovaFileTransfer) {
   var captureCfg = {}, audioDataBuffer = [];
   var timerInterVal, timerGenerateSimulatedData, recordingPath;
   var objectURL = null, totalReceivedData = 0;
@@ -559,8 +559,21 @@ myModule.factory("VoiceRecordService", function ($http, $cordovaMedia) {
       }
       MediaPlayer.play($cordovaMedia, recordingPath);
     },
-    uploadRecordSearch: function () {
-      alert("Need server side");
+    uploadRecordSearch: function (userID) {
+      if (typeof recordingPath == "undefined" || recordingPath == "") {
+        alert("Please recorde the audio first.");
+        return;
+      }
+      var ServerPath = ServerPathVariable.GetPostAudioPath();
+      var options = new FileUploadOptions();
+      options.fileKey = "file";
+      options.fileName = recordingPath.substr(recordingPath.lastIndexOf("/") + 1);
+      options.mimeType = "audio/wav";
+      options.httpMethod = "POST";
+      options.params = { uuid: userID, operationType: "Search" };
+      $cordovaFileTransfer.upload(ServerPath, recordingPath, options).then(
+        function (result) { console.log("Upload Audio to server success, " + JSON.stringify(result)); }
+      );
     },
     uploadRecordVC: function () {
       alert("Need server side");

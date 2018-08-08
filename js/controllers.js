@@ -262,8 +262,7 @@ angular
             options.fileName = filePath.substr(filePath.lastIndexOf("/") + 1);
             options.mimeType = "image/jpeg";
             options.httpMethod = "POST";
-            var params = { uuid: newItem.ID };
-            options.params = params;
+            options.params = { uuid: newItem.ID };
             console.log(JSON.stringify(options));
             $cordovaFileTransfer.upload(server, filePath, options).then(
               function (result) {
@@ -633,7 +632,7 @@ angular
         searchRangeList = UtilityFunction.getWordListByObject(targetObject.object, $scope.currentDisplayLanguage, "Item");
       }
       //Post Video and searchRangeList to server, Need to complete
-      //VoiceRecordService.uploadRecordSearch();
+      VoiceRecordService.uploadRecordSearch($scope.userProfile.ID);
       //Server retun a List, then do search
       $scope.isShowResult = true;
       for (var i = 0; i < $scope.resultWords.length; i++) {
