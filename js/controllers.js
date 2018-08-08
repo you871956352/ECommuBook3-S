@@ -785,9 +785,12 @@ angular
       function DialogController($scope, $mdDialog) {
         $scope.cancel = function () { $mdDialog.cancel(); };
         $scope.startTrain = function () {
-
         };
         //$scope.VoiceModel = VoiceModelService.getLatest();
       }
     };
+  })
+  .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$mdDialog,$http,UserProfileService,VoiceRecordService,VoiceModelService){
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
+
   })

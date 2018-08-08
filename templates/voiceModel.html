@@ -1,0 +1,44 @@
+<ion-view cache-view="false" view-title={{subMenuProfileObject.PageTitle}}>
+  <ion-content>
+    <div ng-controller="VoiceModelCtrl" class="md-padding" ng-cloak>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{Title}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <h1 class="md-title">{{subMenuProfileObject.UserID}}: {{userProfile.ID}}</h1>
+        </md-card-content>
+      </md-card>
+
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{subMenuProfileObject.VoiceConversion}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <div layout="row" >
+            <span class="md-title">{{subMenuProfileObject.CollectionProgress}}: {{collectedVoice}} / {{totalVoice}}</span>
+          </div>
+          <h2></h2><h2></h2>
+          <div layout="row">
+            <span class="md-title">{{subMenuProfileObject.CollectionStatus}}: {{CollectionStatusText}}</span>
+          </div>
+          <div layout="row">
+            <md-button class="md-raised" ng-click=startTrain() ng-disabled="collectionStatus">{{subMenuProfileObject.TrainModel}}</md-button>
+          </div>
+          <h2></h2><h2></h2>
+          <div layout="row">
+            <span class="md-title">{{subMenuProfileObject.ModelStatus}}: {{ModelStatusText}}</span>
+          </div>
+          <div layout="row">
+            <md-button class="md-raised" ng-click=startTrain() ng-disabled="modelStatus">{{subMenuProfileObject.DownloadModel}}</md-button>
+          </div>
+        </md-card-content>
+      </md-card>
+
+    </div>
+  </ion-content>
+</ion-view>
