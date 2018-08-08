@@ -5,6 +5,9 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
       </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+          <button class="button button-icon button-clear ion-home" ui-sref="app.welcome">Home</button>
+      </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
@@ -14,15 +17,14 @@
       <h1 class="title">{{userProfile.DisplayName}}</h1>
     </ion-header-bar>
     <ion-content>
-      <ion-item menu-close href="#/app/welcome">
-        <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Welcome' && isShowDisplayName.checked">
-          <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
-          </div>
-        </div>
-      </ion-item>
-
       <ion-list>
+        <ion-item menu-close href="#/app/welcome">
+          <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Welcome' && isShowDisplayName.checked">
+            <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+              <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
+            </div>
+          </div>
+        </ion-item>
         <ion-item ng-repeat="category in userProfile.Categories" href="#/app/category/{{category.ID}}" ng-click="onCategoryClicked(category.ID)">
           <img style="max-width: 85%" src='{{ImagePath}}/{{category.ID}}.jpg' />
           <div ng-repeat="translation in category.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE && isShowDisplayName.checked">
@@ -75,7 +77,6 @@
             </div>
           </div>
         </ion-item>
-
       </ion-list>
     </ion-content>
   </ion-side-menu>
