@@ -8721,7 +8721,7 @@ function getSampleVoiceModel(){
     RecordingSentences: [
       {
         ID: "0001",
-        IsRecorded: true,
+        IsRecorded: false,
         DisplayName: "The World, Time Stop",
         DisplayNameLanguage: "en",
         DisplayMultipleLanguage: [
@@ -8741,7 +8741,7 @@ function getSampleVoiceModel(){
       },
       {
         ID: "0002",
-        IsRecorded: false,
+        IsRecorded: true,
         DisplayName: "Star Burst Stream",
         DisplayNameLanguage: "en",
         DisplayMultipleLanguage: [
@@ -8758,6 +8758,12 @@ function getSampleVoiceModel(){
           { "Language": "ar", "Text": "تيار الاندفاع ستار" },
           { "Language": "zh-CHS", "Text": "星爆流" },
           { "Language": "ja", "Text": "スター バースト ストリーム" }]
+      },
+      {
+        ID: "0003",
+        IsRecorded: false,
+        DisplayName: "one, two, three times to falling in the dark",
+        DisplayNameLanguage: "en"
       }
     ],
   };

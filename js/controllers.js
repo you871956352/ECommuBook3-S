@@ -733,6 +733,9 @@ angular
     $scope.voiceModel = VoiceModelService.getLatest();
 
     $scope.recordingSentence = UtilityFunction.getFirstUnrecordedSentence($scope.voiceModel);
+
+    //Test For Server Side behaviour
+    VoiceModelService.postToServerCallback();
     $scope.collectedVoice = UtilityFunction.getRecordedVoiceCount($scope.voiceModel);
     $scope.totalVoice = $scope.voiceModel.TotalSentence;
     if($scope.collectedVoice >= $scope.totalVoice){$scope.CollectionStatusText = "Completed";} else {$scope.CollectionStatusText = "UnCompleted";}
