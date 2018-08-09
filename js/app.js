@@ -42,7 +42,6 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/category-grid.html",
-            controller: "CategoryCtrl"
           }
         }
       })
@@ -51,7 +50,6 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/setting.tmpl.html",
-            controller: "SettingCtrl"
           }
         }
       })
@@ -60,7 +58,6 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/addCategory.tmpl.html",
-            controller: "AddCategoryCtrl"
           }
         }
       })
@@ -69,7 +66,6 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/welcome.tmpl.html",
-            controller: "WelcomeCtrl"
           }
         }
       })
@@ -78,7 +74,6 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/share.html",
-            controller: "ShareCtrl"
           }
         }
       })
@@ -87,7 +82,6 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/sentence.html",
-            controller: "SentenceCtrl"
           }
         }
       })
@@ -96,7 +90,6 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/search.html",
-            controller: "SearchCtrl"
           }
         }
       })
@@ -105,7 +98,6 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/voiceModel.html",
-            controller: "VoiceModelCtrl"
           }
         }
       })
@@ -114,7 +106,6 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/userInformation.html",
-            controller: "UserInfoCtrl"
           }
         }
       });

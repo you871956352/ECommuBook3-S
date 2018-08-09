@@ -8,14 +8,14 @@
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
-          <h1 class="md-title">{{subMenuProfileObject.UserID}}: {{userProfile.ID}}</h1>
+          <h1 class="md-title">{{subMenuProfileGeneral.UserID}}: {{userProfile.ID}}</h1>
         </md-card-content>
       </md-card>
 
       <md-card>
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline">{{subMenuProfileObject.VoiceConversion}}</span>
+            <span class="md-headline">{{subMenuProfileObject.PageTitle}}</span>
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
@@ -39,6 +39,28 @@
         </md-card-content>
       </md-card>
 
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{subMenuProfileObject.AudioRecording}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <h2></h2><h2></h2>
+          <span class='md-title'>Hello World!</span>
+          <h2></h2><h2></h2>
+          <div layout="row">
+            <md-button class="md-raised" ng-click=start() ng-disabled="checkStart">{{subMenuProfileGeneral.Start}}</md-button>
+            <md-button class="md-raised" ng-click=stop() ng-disabled="checkStop">{{subMenuProfileGeneral.Stop}}</md-button>
+            <md-button class="md-raised" ng-click=check() ng-disabled="checkStatus">{{subMenuProfileGeneral.Check}}</md-button>
+            <md-button class="md-raised" ng-click=upload()>{{subMenuProfileGeneral.Upload}}</md-button>
+          </div>
+        </md-card-content>
+      </md-card>
+
+      <div layout="row" layout-align="center">
+        <img class="enlarge_item_image" src="img/icons/recording.gif" ng-show="gifDisplay" style="width: 40%;height: 40%;"/>
+      </div>
     </div>
   </ion-content>
 </ion-view>

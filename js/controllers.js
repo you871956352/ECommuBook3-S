@@ -720,76 +720,33 @@ angular
       }
     }
   })
-  .controller("UserInfoCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$mdDialog,$http,UserProfileService,VoiceRecordService,VoiceModelService){
+  .controller("UserInfoCtrl", function ($scope,UserProfileService){
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.SpeechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.GenderList = GlobalVariable.GenderList;
-    $scope.collectedVoice = 0;
-    $scope.totalVoice = 160;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
-    $scope.vcRecording = function (ev) {
-        var targetScope = $scope.$new();
-        targetScope.subMenuProfileObject = $scope.subMenuProfileObject;
-        targetScope.subMenuProfileGeneral = $scope.subMenuProfileGeneral;
-        $mdDialog.show({
-          controller: DialogController,
-          templateUrl: "templates/popup-recording.tmpl.html",
-          parent: angular.element(document.body),
-          targetEvent: ev,
-          clickOutsideToClose: true,
-          scope: targetScope,
-          fullscreen: false // Only for -xs, -sm breakpoints.
-        });
-        function DialogController($scope, $mdDialog) {
-          $scope.cancel = function () { $mdDialog.cancel(); };
-          $scope.checkStart = false;
-          $scope.checkStop = true;
-          $scope.checkStatus = true;
-          $scope.gifDisplay = false;
-          if (window.cordova && window.cordova.file && window.audioinput) {
-              console.log("Use 'Start Capture' to begin...");
-              window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
-              window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
-          }
-          else {
-              console.log("Missing: cordova-plugin-file or cordova-plugin-audioinput!");
-          }
-          var id = $scope.userProfile.ID;
-          $scope.start = function () { VoiceRecordService.startCapture(); $scope.checkStart = true;$scope.checkStop = false;$scope.gifDisplay = true;};
-          $scope.stop = function () { VoiceRecordService.stopCapture(id); $scope.checkStart = false;$scope.checkStop = true;$scope.checkStatus = false;$scope.gifDisplay = false;};
-          $scope.check = function () { VoiceRecordService.checkRecord(); }
-          $scope.upload = function () { VoiceRecordService.uploadRecordVC(); }
-        }
-    };
-    $scope.synchronizeStart = function (ev) {
-      var targetScope = $scope.$new();
-      var id = $scope.userProfile.ID;
-      targetScope.collectedVoice = 0;
-      targetScope.totalVoice = 160;
-      targetScope.CollectionStatusText = "Uncompleted";
-      targetScope.ModelStatusText = "Training";
-      $scope.collectionStatus = true;
-      $scope.modelStatus = true;
-      targetScope.subMenuProfileObject = $scope.subMenuProfileObject;
-      //VoiceModelService.getOnline(id);
-      $mdDialog.show({
-        controller: DialogController,
-        templateUrl: "templates/popup-synchronize.tmpl.html",
-        parent: angular.element(document.body),
-        targetEvent: ev,
-        clickOutsideToClose: true,
-        scope: targetScope,
-        fullscreen: false
-        });
-      function DialogController($scope, $mdDialog) {
-        $scope.cancel = function () { $mdDialog.cancel(); };
-        $scope.startTrain = function () {
-        };
-        //$scope.VoiceModel = VoiceModelService.getLatest();
-      }
-    };
   })
-  .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$mdDialog,$http,UserProfileService,VoiceRecordService,VoiceModelService){
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
+  .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$http,UserProfileService,VoiceRecordService,VoiceModelService){
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("VoiceModelInformation", $scope.currentDisplayLanguage);
+    $scope.voiceModel = VoiceModelService.getLatest();
 
+    $scope.collectedVoice = UtilityFunction.getRecordedVoiceCount($scope.voiceModel);
+    $scope.totalVoice = $scope.voiceModel.TotalSentence;
+    console.log("collectedVoice: " + $scope.collectedVoice);
+    if($scope.collectedVoice >= $scope.totalVoice){$scope.CollectionStatusText = "Completed";} else {$scope.CollectionStatusText = "UnCompleted";}
+    $scope.ModelStatusText = $scope.voiceModel.ModelStatus;
+    if($scope.CollectionStatusText == "Completed"){$scope.collectionStatus = false;} else {$scope.collectionStatus = true;}
+    if($scope.ModelStatusText == "Completed"){$scope.modelStatus = false;} else {$scope.modelStatus = true;}
+
+    $scope.checkStart = false;
+    $scope.checkStop = true;
+    $scope.checkStatus = true;
+    $scope.gifDisplay = false;
+    var id = $scope.userProfile.ID;
+    $scope.start = function () { VoiceRecordService.startCapture(); $scope.checkStart = true;$scope.checkStop = false;$scope.gifDisplay = true;};
+    $scope.stop = function () { VoiceRecordService.stopCapture(id); $scope.checkStart = false;$scope.checkStop = true;$scope.checkStatus = false;$scope.gifDisplay = false;};
+    $scope.check = function () { VoiceRecordService.checkRecord(); }
+    $scope.upload = function () { VoiceRecordService.uploadRecordVC(); }
+    window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
+    window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
   })

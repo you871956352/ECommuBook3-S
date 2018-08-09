@@ -8,7 +8,7 @@
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
-          <h1 class="md-title">{{subMenuProfileObject.UserID}}: {{userProfile.ID}}</h1>
+          <h1 class="md-title">{{subMenuProfileGeneral.UserID}}: {{userProfile.ID}}</h1>
           <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
             {{subMenuProfileGeneral.DisplayLanguage}}: {{displayLanguage.name}}
           </h1>
@@ -20,40 +20,16 @@
           </h1>
         </md-card-content>
       </md-card>
-
-      <md-card>
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">{{subMenuProfileObject.VoiceConversion}}</span>
-          </md-card-title-text>
-        </md-card-title>
-        <md-card-content>
-            <span class="md-title">{{subMenuProfileObject.CollectionProgress}}: {{collectedVoice}} / {{totalVoice}}</span>
-            <div layout="row">
-              <span class="md-title">{{subMenuProfileObject.AudioRecording}}: </span>
-            </div>
-            <div layout="row">
-              <md-button class="md-raised" ng-click=vcRecording($event)>{{subMenuProfileObject.Recording}}</md-button>
-            </div>
-            <div layout="row">
-              <span class="md-title">{{subMenuProfileObject.SynchronizeProgress}}: </span>
-            </div>
-            <div layout="row">
-              <md-button class="md-raised" ng-click=synchronizeStart($event)>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
-            </div>
-        </md-card-content>
-      </md-card>
-      
       <md-card>
     	    <md-card-title>
     	      <md-card-title-text>
-              <span class="md-headline">Voice Model</span>
+              <span class="md-headline">{{subMenuProfileObject.VoiceConversion}}</span>
     	      </md-card-title-text>
     	    </md-card-title>
     	    <md-card-content>
-            <h1 class="md-title">Use your own voice for the audios.</h1>
-            <h1 class="md-title">The function need to record plenty of voices and train the voice model.</h1>
-            <md-button class="md-raised" ui-sref="app.voiceModel">VOICE MODEL</md-button>
+            <h1 class="md-title">{{subMenuProfileObject.Notice1}}</h1>
+            <h1 class="md-title">{{subMenuProfileObject.Notice2}}</h1>
+            <md-button class="md-raised" ui-sref="app.voiceModel">{{subMenuProfileObject.VoiceConversion}}</md-button>
     	    </md-card-content>
     	</md-card>
     </div>

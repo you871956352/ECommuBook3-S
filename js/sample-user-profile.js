@@ -7257,6 +7257,23 @@ function getSampleMenuProfile() {
         OperationType: "General",
         SubPage: [
           {
+            OperationType: "UserID",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Benutzer-ID"},
+              { Language: "ru", Text: "Идентификатор пользователя"},
+              { Language: "pt", Text: "ID de usuário"},
+              { Language: "ko", Text: "사용자 ID"},
+              { Language: "yue", Text: "用戶 id"},
+              { Language: "en", Text: "User ID"},
+              { Language: "it", Text: "ID utente"},
+              { Language: "fr", Text: "ID de l’utilisateur"},
+              { Language: "es", Text: "ID de usuario"},
+              { Language: "zh-CHT", Text: "使用者 ID"},
+              { Language: "ar", Text: "معرف المستخدم"},
+              { Language: "zh-CHS", Text: "用户 ID"},
+              { Language: "ja", Text: "ユーザー ID"}]
+          },
+          {
             OperationType: "DisplayLanguage",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Display-Sprache" },
@@ -8295,90 +8312,22 @@ function getSampleMenuProfile() {
         ]
       },
       {
-        OperationType: "UserInformation",
-        DisplayMultipleLanguage: [
-          { Language: "de", Text: "Benutzerinformationen" },
-          { Language: "ru", Text: "Данные пользователя" },
-          { Language: "pt", Text: "Informações do usuário" },
-          { Language: "ko", Text: "사용자 정보" },
-          { Language: "yue", Text: "用戶信息" },
-          { Language: "en", Text: "User information" },
-          { Language: "it", Text: "Informazioni utente" },
-          { Language: "fr", Text: "Informations utilisateur" },
-          { Language: "es", Text: "Información de usuario" },
-          { Language: "zh-CHT", Text: "使用者資訊" },
-          { Language: "ar", Text: "معلومات المستخدم" },
-          { Language: "zh-CHS", Text: "用户信息" },
-          { Language: "ja", Text: "ユーザー情報" }],
+        OperationType: "VoiceModelInformation",
+        DisplayMultipleLanguage:[
+          {"Language":"de","Text":"Stimme-Modell-Informationen"},
+          {"Language":"ru","Text":"Сведения о модели голос"},
+          {"Language":"pt","Text":"Informações sobre modelo de voz"},
+          {"Language":"ko","Text":"음성 모델 정보"},
+          {"Language":"yue","Text":"語音模型信息"},
+          {"Language":"en","Text":"Voice Model Information"},
+          {"Language":"it","Text":"Informazioni sul modello di voce"},
+          {"Language":"fr","Text":"Informations de modèle de voix"},
+          {"Language":"es","Text":"Información de modelo de voz"},
+          {"Language":"zh-CHT","Text":"語音模型資訊"},
+          {"Language":"ar","Text":"صوت نموذج المعلومات"},
+          {"Language":"zh-CHS","Text":"语音模型信息"},
+          {"Language":"ja","Text":"音声モデル情報"}],
         SubPage: [
-          {
-            OperationType: "VoiceConversion",
-            DisplayMultipleLanguage: [
-              { Language: "de", Text: "Stimme-Konvertierung"},
-              { Language: "ru", Text: "Голос преобразования"},
-              { Language: "pt", Text: "Conversão de voz"},
-              { Language: "ko", Text: "음성 변환"},
-              { Language: "yue", Text: "語音轉換"},
-              { Language: "en", Text: "Voice Conversion"},
-              { Language: "it", Text: "Conversione di voce"},
-              { Language: "fr", Text: "Conversion de la voix"},
-              { Language: "es", Text: "Conversión de la voz"},
-              { Language: "zh-CHT", Text: "語音轉換"},
-              { Language: "ar", Text: "تحويل صوت"},
-              { Language: "zh-CHS", Text: "语音转换"},
-              { Language: "ja", Text: "音声変換"}]
-          },
-          {
-            OperationType: "UserID",
-            DisplayMultipleLanguage: [
-              { Language: "de", Text: "Benutzer-ID"},
-              { Language: "ru", Text: "Идентификатор пользователя"},
-              { Language: "pt", Text: "ID de usuário"},
-              { Language: "ko", Text: "사용자 ID"},
-              { Language: "yue", Text: "用戶 id"},
-              { Language: "en", Text: "User ID"},
-              { Language: "it", Text: "ID utente"},
-              { Language: "fr", Text: "ID de l’utilisateur"},
-              { Language: "es", Text: "ID de usuario"},
-              { Language: "zh-CHT", Text: "使用者 ID"},
-              { Language: "ar", Text: "معرف المستخدم"},
-              { Language: "zh-CHS", Text: "用户 ID"},
-              { Language: "ja", Text: "ユーザー ID"}]
-          },
-          {
-            OperationType: "CollectionProgress",
-            DisplayMultipleLanguage: [
-              { Language: "de", Text: "Sammlung-Fortschritt"},
-              { Language: "ru", Text: "Коллекции прогресс"},
-              { Language: "pt", Text: "Coleção de progresso"},
-              { Language: "ko", Text: "컬렉션 진행"},
-              { Language: "yue", Text: "收集進度"},
-              { Language: "en", Text: "Collection Progress"},
-              { Language: "it", Text: "Collezione Progress"},
-              { Language: "fr", Text: "Progrès de la collection"},
-              { Language: "es", Text: "Avance de colección"},
-              { Language: "zh-CHT", Text: "收集進度"},
-              { Language: "ar", Text: "تقدم مجموعة"},
-              { Language: "zh-CHS", Text: "收集进度"},
-              { Language: "ja", Text: "コレクションの進行状況"}]
-          },
-          {
-            OperationType: "Recording",
-            DisplayMultipleLanguage:[
-              { Language: "de", Text: "Aufnahme"},
-              { Language: "ru", Text: "Запись"},
-              { Language: "pt", Text: "Gravação"},
-              { Language: "ko", Text: "기록"},
-              { Language: "yue", Text: "記錄"},
-              { Language: "en", Text: "Recording"},
-              { Language: "it", Text: "Registrazione"},
-              { Language: "fr", Text: "D’enregistrement"},
-              { Language: "es", Text: "Grabación"},
-              { Language: "zh-CHT", Text: "記錄"},
-              { Language: "ar", Text: "تسجيل"},
-              { Language: "zh-CHS", Text: "记录"},
-              { Language: "ja", Text: "記録"}]
-          },
           {
             OperationType: "SynchronizeProgress",
             DisplayMultipleLanguage:[
@@ -8414,55 +8363,55 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "オーディオの録音"}]
           },
           {
-            OperationType: "VoiceModelInformation",
-            DisplayMultipleLanguage:[
-              {"Language":"de","Text":"Stimme-Modell-Informationen"},
-              {"Language":"ru","Text":"Сведения о модели голос"},
-              {"Language":"pt","Text":"Informações sobre modelo de voz"},
-              {"Language":"ko","Text":"음성 모델 정보"},
-              {"Language":"yue","Text":"語音模型信息"},
-              {"Language":"en","Text":"Voice Model Information"},
-              {"Language":"it","Text":"Informazioni sul modello di voce"},
-              {"Language":"fr","Text":"Informations de modèle de voix"},
-              {"Language":"es","Text":"Información de modelo de voz"},
-              {"Language":"zh-CHT","Text":"語音模型資訊"},
-              {"Language":"ar","Text":"صوت نموذج المعلومات"},
-              {"Language":"zh-CHS","Text":"语音模型信息"},
-              {"Language":"ja","Text":"音声モデル情報"}]
+            OperationType: "CollectionProgress",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Stimme-Sammlung-Fortschritt"},
+              {"Language":"ru","Text":"Голос коллекции прогресс"},
+              {"Language":"pt","Text":"Progresso de coleção de voz"},
+              {"Language":"ko","Text":"음성 컬렉션 진행"},
+              {"Language":"yue","Text":"語音收集進度"},
+              {"Language":"en","Text":"Voice Collection Progress"},
+              {"Language":"it","Text":"Voce collezione Progress"},
+              {"Language":"fr","Text":"Progrès de Collection voix"},
+              {"Language":"es","Text":"Avance de colección de voz"},
+              {"Language":"zh-CHT","Text":"語音收集進度"},
+              {"Language":"ar","Text":"صوت جمع التقدم"},
+              {"Language":"zh-CHS","Text":"语音收集进度"},
+              {"Language":"ja","Text":"ボイス コレクションの進行状況"}]
           },
           {
             OperationType: "CollectionStatus",
             DisplayMultipleLanguage:[
-              {"Language":"de","Text":"Inkassostatus"},
-              {"Language":"ru","Text":"Статус коллекции"},
-              {"Language":"pt","Text":"Coleção Status"},
-              {"Language":"ko","Text":"컬렉션 상태"},
-              {"Language":"yue","Text":"收集狀態"},
-              {"Language":"en","Text":"Collection Status"},
-              {"Language":"it","Text":"Stato della raccolta"},
-              {"Language":"fr","Text":"Statut de la collection"},
-              {"Language":"es","Text":"Estado de colección"},
-              {"Language":"zh-CHT","Text":"收集狀態"},
-              {"Language":"ar","Text":"حالة تجميع"},
-              {"Language":"zh-CHS","Text":"收集状态"},
-              {"Language":"ja","Text":"収集の状況"}]
+              {"Language":"de","Text":"Inkassostatus Stimme"},
+              {"Language":"ru","Text":"Статус коллекции голос"},
+              {"Language":"pt","Text":"Status de coleção de voz"},
+              {"Language":"ko","Text":"음성 수집 상태"},
+              {"Language":"yue","Text":"語音收集狀態"},
+              {"Language":"en","Text":"Voice Collection Status"},
+              {"Language":"it","Text":"Stato di raccolta di voce"},
+              {"Language":"fr","Text":"Statut de la Collection voix"},
+              {"Language":"es","Text":"Estado de la colección de voz"},
+              {"Language":"zh-CHT","Text":"語音收集狀態"},
+              {"Language":"ar","Text":"حالة مجموعة صوت"},
+              {"Language":"zh-CHS","Text":"语音收集状态"},
+              {"Language":"ja","Text":"ボイス コレクションのステータス"}]
           },
           {
             OperationType: "ModelStatus",
             DisplayMultipleLanguage:[
-              {"Language":"de","Text":"Modellstatus"},
-              {"Language":"ru","Text":"Статус модели"},
-              {"Language":"pt","Text":"Status de modelo"},
-              {"Language":"ko","Text":"모델 상태"},
-              {"Language":"yue","Text":"模型狀態"},
-              {"Language":"en","Text":"Model Status"},
-              {"Language":"it","Text":"Stato del modello"},
-              {"Language":"fr","Text":"Modèle de statut"},
-              {"Language":"es","Text":"Modelo de estado"},
-              {"Language":"zh-CHT","Text":"模型狀態"},
-              {"Language":"ar","Text":"وضع نموذج"},
-              {"Language":"zh-CHS","Text":"模型状态"},
-              {"Language":"ja","Text":"モデル ステータス"}]
+              {"Language":"de","Text":"Stimme-Modellstatus"},
+              {"Language":"ru","Text":"Статус модели голос"},
+              {"Language":"pt","Text":"Status de modelo de voz"},
+              {"Language":"ko","Text":"음성 모델 상태"},
+              {"Language":"yue","Text":"語音模型狀態"},
+              {"Language":"en","Text":"Voice Model Status"},
+              {"Language":"it","Text":"Stato di modello di voce"},
+              {"Language":"fr","Text":"Statut de modèle de voix"},
+              {"Language":"es","Text":"Modelo estado de voz"},
+              {"Language":"zh-CHT","Text":"語音模型狀態"},
+              {"Language":"ar","Text":"وضع نموذج صوت"},
+              {"Language":"zh-CHS","Text":"语音模型状态"},
+              {"Language":"ja","Text":"音声モデル状態"}]
           },
           {
             OperationType: "TrainModel",
@@ -8497,6 +8446,76 @@ function getSampleMenuProfile() {
               {"Language":"ar","Text":"تحميل نموذج"},
               {"Language":"zh-CHS","Text":"下载模型"},
               {"Language":"ja","Text":"モデルをダウンロードします。"}]
+          }
+        ]
+      },
+      {
+        OperationType: "UserInformation",
+        DisplayMultipleLanguage: [
+          { Language: "de", Text: "Benutzerinformationen" },
+          { Language: "ru", Text: "Данные пользователя" },
+          { Language: "pt", Text: "Informações do usuário" },
+          { Language: "ko", Text: "사용자 정보" },
+          { Language: "yue", Text: "用戶信息" },
+          { Language: "en", Text: "User information" },
+          { Language: "it", Text: "Informazioni utente" },
+          { Language: "fr", Text: "Informations utilisateur" },
+          { Language: "es", Text: "Información de usuario" },
+          { Language: "zh-CHT", Text: "使用者資訊" },
+          { Language: "ar", Text: "معلومات المستخدم" },
+          { Language: "zh-CHS", Text: "用户信息" },
+          { Language: "ja", Text: "ユーザー情報" }],
+        SubPage: [
+          {
+            OperationType: "VoiceConversion",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Stimme-Konvertierung"},
+              { Language: "ru", Text: "Голос преобразования"},
+              { Language: "pt", Text: "Conversão de voz"},
+              { Language: "ko", Text: "음성 변환"},
+              { Language: "yue", Text: "語音轉換"},
+              { Language: "en", Text: "Voice Conversion"},
+              { Language: "it", Text: "Conversione di voce"},
+              { Language: "fr", Text: "Conversion de la voix"},
+              { Language: "es", Text: "Conversión de la voz"},
+              { Language: "zh-CHT", Text: "語音轉換"},
+              { Language: "ar", Text: "تحويل صوت"},
+              { Language: "zh-CHS", Text: "语音转换"},
+              { Language: "ja", Text: "音声変換"}]
+          },
+          {
+            OperationType: "Notice1",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Ihre Stimme können Sie die Audios sprechen"},
+              {"Language":"ru","Text":"Можно использовать собственный голос говорить аудио"},
+              {"Language":"pt","Text":"Você pode usar sua própria voz para falar os áudios"},
+              {"Language":"ko","Text":"오디오를 말하는 자신의 목소리를 사용할 수 있습니다."},
+              {"Language":"yue","Text":"你可以用你自己把聲講音頻。"},
+              {"Language":"en","Text":"You can use your own voice to speak the audios."},
+              {"Language":"it","Text":"È possibile utilizzare la propria voce a parlare gli audio"},
+              {"Language":"fr","Text":"Vous pouvez utiliser votre propre voix pour parler les audios"},
+              {"Language":"es","Text":"Puede utilizar su propia voz para hablar de los audios"},
+              {"Language":"zh-CHT","Text":"你可以用你自己的聲音說音訊。"},
+              {"Language":"ar","Text":"يمكنك استخدام صوتك للتحدث صوتيات"},
+              {"Language":"zh-CHS","Text":"你可以用你自己的声音说音频。"},
+              {"Language":"ja","Text":"あなた自身の声を使用すると、オーディオを話すことができます。"}]
+          },
+          {
+            OperationType: "Notice2",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Diese Funktion benötigen, nehmen Sie Ihre Stimme und die Stimme Modell trainieren"},
+              {"Language":"ru","Text":"Эта функция нужно записать свой голос и обучить модель голос"},
+              {"Language":"pt","Text":"Esta função precisa gravar sua voz e treinar modelo de voz"},
+              {"Language":"ko","Text":"이 기능은 당신의 목소리를 기록 하 고 음성 모델을 학습 해야"},
+              {"Language":"yue","Text":"呢個功能需要記錄你把聲同訓練聲音模型。"},
+              {"Language":"en","Text":"This function need to record your voice and train voice model."},
+              {"Language":"it","Text":"Questa funzione serve registrare la tua voce e il training vocale modello"},
+              {"Language":"fr","Text":"Cette fonction a besoin d’enregistrer votre voix et de former le modèle voix"},
+              {"Language":"es","Text":"Esta función necesita grabar su voz y voz modelo del tren"},
+              {"Language":"zh-CHT","Text":"這個功能需要記錄你的聲音和訓練聲音模型。"},
+              {"Language":"ar","Text":"هذه الدالة بحاجة لتسجيل صوتك وتدريب نموذج صوت"},
+              {"Language":"zh-CHS","Text":"这个功能需要记录你的声音和训练声音模型。"},
+              {"Language":"ja","Text":"この関数は、あなたの声を記録し、音声モデルを学習する必要があります。"}]
           }
         ]
       },
@@ -8596,9 +8615,7 @@ function getSampleVoiceModel(){
   json = {
     ID: "00000000-0000-0000-0001-000000000000",
     ModelStatus: "Unstarted", //Unstarted, Training, Completed
-    DISPLAY_LANGUAGE: "en",
     TotalSentence: 160,
-    TotalSentenceRecorded: 1,
     RecordingSentence: [
       {
         ID: "0001",

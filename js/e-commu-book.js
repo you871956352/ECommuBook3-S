@@ -248,7 +248,7 @@ var LoadingDialog = new function () {
     });
   };
   this.LoadPopupController = function ($scope, $mdDialog, $ionicSideMenuDelegate, UserProfileService) {
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Loading", $scope.currentDisplayLanguage);   
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Loading", $scope.currentDisplayLanguage);
     $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
     $scope.downloaded = NaN;
     $scope.total = NaN;
@@ -262,7 +262,7 @@ var LoadingDialog = new function () {
       else {
         $scope.precentage = 0;
       }
-      
+
       if (($scope.downloaded == $scope.total && $scope.total > 0) || GlobalVariable.DownloadProgress.IsNoDownload == 1) {
         clearInterval(loop);
         setTimeout(function () { $scope.hide(); }, 2500);
@@ -270,7 +270,7 @@ var LoadingDialog = new function () {
     }, 500);
   };
   this.LoadPopupControllerDelete = function ($scope, $mdDialog, $ionicSideMenuDelegate, UserProfileService) {
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Loading", $scope.currentDisplayLanguage); 
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Loading", $scope.currentDisplayLanguage);
     $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
     $scope.downloaded = NaN;
     $scope.total = NaN;
@@ -415,6 +415,15 @@ var UtilityFunction = new function () {
     }
     return -1;
   };
+  this.getRecordedVoiceCount = function (voiceModel) {
+    var c = 0;
+    for (var i = 0; i < voiceModel.RecordingSentence.length; i++) {
+      if (voiceModel.RecordingSentence[i].IsRecorded == true) {
+        c += 1;
+      }
+    }
+    return c;
+  };
   this.normalizeDisplayName = function (text) {
     return text
       .replace("/", " ")
@@ -430,7 +439,3 @@ var UtilityFunction = new function () {
     return (s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + s4() + s4() + s4());
   };
 };
-
-
-
-
