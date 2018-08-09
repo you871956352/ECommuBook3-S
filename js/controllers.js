@@ -731,11 +731,7 @@ angular
   .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$cordovaNetwork,$http,$state,UserProfileService,VoiceRecordService,VoiceModelService){
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("VoiceModelInformation", $scope.currentDisplayLanguage);
     $scope.voiceModel = VoiceModelService.getLatest();
-
     $scope.recordingSentence = UtilityFunction.getFirstUnrecordedSentence($scope.voiceModel);
-
-    //Test For Server Side behaviour
-    VoiceModelService.postToServerCallback();
     $scope.collectedVoice = UtilityFunction.getRecordedVoiceCount($scope.voiceModel);
     $scope.totalVoice = $scope.voiceModel.TotalSentence;
     if($scope.collectedVoice >= $scope.totalVoice){$scope.CollectionStatusText = "Completed";} else {$scope.CollectionStatusText = "UnCompleted";}
@@ -756,10 +752,15 @@ angular
         alert($scope.subMenuProfileGeneral.NetworkWarning);
         return;
       }
-      var newVoiceModel = VoiceModelService.changeRecordingStatus($scope.voiceModel,$scope.recordingSentence.ID);
-      $scope.voiceModel = newVoiceModel;
-      VoiceModelService.saveLocal(newVoiceModel);
-      $state.reload();
+      VoiceRecordService.uploadRecordVC($scope.userProfile.ID,$scope.recordingSentence.ID,function () {
+        console.log("Upload recording VC to server");
+        var newVoiceModel = VoiceModelService.changeRecordingStatus($scope.voiceModel,$scope.recordingSentence.ID);
+        VoiceModelService.postToServerCallback(newVoiceModel,function () {
+          VoiceModelService.getOnline(id,function () {
+            window.location.reload(true);
+          });
+        });
+      });
     }
     window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
     window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);

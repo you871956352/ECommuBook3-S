@@ -575,8 +575,26 @@ myModule.factory("VoiceRecordService", function ($http, $cordovaMedia, $cordovaN
         function (result) { console.log("Upload Audio to server success, " + JSON.stringify(result)); }
       );
     },
-    uploadRecordVC: function () {
-      alert("Need server side");
+    uploadRecordVC: function (userID, aID,successCallback) {
+      if (typeof recordingPath == "undefined" || recordingPath == "") {
+        alert("Please recorde the audio first.");
+        return;
+      }
+      var ServerPath = ServerPathVariable.GetPostAudioPath();
+      var options = new FileUploadOptions();
+      options.fileKey = "file";
+      options.fileName = recordingPath.substr(recordingPath.lastIndexOf("/") + 1);
+      options.mimeType = "audio/wav";
+      options.httpMethod = "POST";
+      options.params = { uuid: userID, operationType: "VC", audioID: aID};
+      $cordovaFileTransfer.upload(ServerPath, recordingPath, options).then(
+        function (result) {
+           console.log("Upload Audio to server success: " + JSON.stringify(result));
+           if (typeof successCallback == "function") {
+             successCallback();
+           }
+         }
+      );
     },
     returnRecordingPath: function () {
       return recordingPath;
@@ -602,36 +620,38 @@ myModule.factory("VoiceRecordService", function ($http, $cordovaMedia, $cordovaN
 myModule.factory("VoiceModelService", function($http, $localStorage) { //Store User Prefile
   return {
     getOnline: function(userId,completeCallback) {
-      $http.get(ServerPathVariable.GetUserProfilePath(userId)).then(function(data) {
-        $localStorage.VoiceModel = data.data;
+      $http.get(ServerPathVariable.GetVoiceModelProfilePath(userId)).then(function(data) {
+        console.log("Get Online-VoiceModel Success.");
+        $localStorage.voiceModel = data.data;
         if (typeof completeCallback == "function") {
           completeCallback();
         }
       });
     },
     getLatest: function () {
-      /*
-      if ($localStorage.VoiceModel) {
+
+      if ($localStorage.voiceModel) {
         console.log("Read user's voiceModel from LocalStorage.");
       }
       else {
         console.log("No VoiceModel in LocalStorage. Read sample voiceModel.");
-        $localStorage.VoiceModel = this.getDefault();
+        $localStorage.voiceModel = this.getDefault();
       }
-      */
-      $localStorage.VoiceModel = getSampleVoiceModel();
-      return $localStorage.VoiceModel;
+      /*
+      console.log("Read sample voiceModel.");
+      $localStorage.voiceModel = getSampleVoiceModel();*/
+      return $localStorage.voiceModel;
     },
     getDefault: function() {
       return getSampleVoiceModel();
     },
     saveLocal: function(newVoiceModel) {
-      $localStorage.VoiceModel = newVoiceModel;
+      $localStorage.voiceModel = newVoiceModel;
     },
-    postToServerCallback: function (successCallback) {
-      $http.post(ServerPathVariable.PostVCModelProfilePath(), this.getLatest())
+    postToServerCallback: function (newVoiceModel,successCallback) {
+      $http.post(ServerPathVariable.PostVCModelProfilePath(), newVoiceModel)
         .success(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
-          alert("post VoiceModelProfile success:" + JSON.stringify(data));
+          console.log("Post VoiceModelProfile success:" + JSON.stringify(data));
           if (typeof successCallback == "function") {
             successCallback();
           }
@@ -643,7 +663,7 @@ myModule.factory("VoiceModelService", function($http, $localStorage) { //Store U
     changeRecordingStatus: function(voiceModel,sentenceID) {
       for (var i = 0; i < voiceModel.RecordingSentences.length; i++) {
         if (voiceModel.RecordingSentences[i].ID == sentenceID) {
-          voiceModel.RecordingSentences[i].IsRecorded = !voiceModel.RecordingSentences[i].IsRecorded;
+          voiceModel.RecordingSentences[i].IsRecorded = true;
         }
       }
       return voiceModel;

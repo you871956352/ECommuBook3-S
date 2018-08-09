@@ -8718,54 +8718,7 @@ function getSampleVoiceModel(){
     ID: "00000000-0000-0000-0001-000000000000",
     ModelStatus: "Unstarted", //Unstarted, Training, Completed
     TotalSentence: 160,
-    RecordingSentences: [
-      {
-        ID: "0001",
-        IsRecorded: false,
-        DisplayName: "The World, Time Stop",
-        DisplayNameLanguage: "en",
-        DisplayMultipleLanguage: [
-          { "Language": "de", "Text": "Die Welt, Zeit stoppen" },
-          { "Language": "ru", "Text": "Всемирный, остановить время" },
-          { "Language": "pt", "Text": "O mundo, o tempo parar" },
-          { "Language": "ko", "Text": "세계, 시간 정지" },
-          { "Language": "yue", "Text": "世界, 時間停止" },
-          { "Language": "en", "Text": "The World, Time Stop" },
-          { "Language": "it", "Text": "Il mondo, arresto di tempo" },
-          { "Language": "fr", "Text": "Le monde, Time Stop" },
-          { "Language": "es", "Text": "El mundo, Time Stop" },
-          { "Language": "zh-CHT", "Text": "世界, 時間停止" },
-          { "Language": "ar", "Text": "العالم، وتوقف الوقت" },
-          { "Language": "zh-CHS", "Text": "世界, 时间停止" },
-          { "Language": "ja", "Text": "世界、タイム ストップ" }]
-      },
-      {
-        ID: "0002",
-        IsRecorded: true,
-        DisplayName: "Star Burst Stream",
-        DisplayNameLanguage: "en",
-        DisplayMultipleLanguage: [
-          { "Language": "de", "Text": "Star Burst Stream" },
-          { "Language": "ru", "Text": "Звезды всплеск поток" },
-          { "Language": "pt", "Text": "Star Burst Stream" },
-          { "Language": "ko", "Text": "스타 버스트 스트림" },
-          { "Language": "yue", "Text": "星爆流" },
-          { "Language": "en", "Text": "Star Burst Stream" },
-          { "Language": "it", "Text": "Star Burst Stream" },
-          { "Language": "fr", "Text": "Star Stream Burst" },
-          { "Language": "es", "Text": "Star Burst Stream" },
-          { "Language": "zh-CHT", "Text": "星爆流" },
-          { "Language": "ar", "Text": "تيار الاندفاع ستار" },
-          { "Language": "zh-CHS", "Text": "星爆流" },
-          { "Language": "ja", "Text": "スター バースト ストリーム" }]
-      },
-      {
-        ID: "0003",
-        IsRecorded: false,
-        DisplayName: "one, two, three times to falling in the dark",
-        DisplayNameLanguage: "en"
-      }
-    ],
+    RecordingSentences: [],
   };
   return json;
 }

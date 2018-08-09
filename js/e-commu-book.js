@@ -30,6 +30,9 @@ var ServerPathVariable = new function () { //User to store server return path
   this.GetUserProfilePath = function (userUuid) {
     return (this.hostname + this.path + "userProfile/" + userUuid);
   };
+  this.GetVoiceModelProfilePath = function (userUuid) {
+    return (this.hostname + this.path + "vc/VoiceModelList/" + userUuid);
+  };
   this.GetTranslationPath = function (sourceLanguage, sourceText, targetLanguage) {
     return (this.hostname + this.path + 'translation/' + sourceLanguage + '/' + sourceText + '/' + targetLanguage);
   };
@@ -430,6 +433,7 @@ var UtilityFunction = new function () {
   this.getFirstUnrecordedSentence = function (voiceModel) {
     for (var i = 0; i < voiceModel.RecordingSentences.length; i++) {
       if (voiceModel.RecordingSentences[i].IsRecorded == false) {
+        console.log("getFirstUnrecordedSentence:" +  voiceModel.RecordingSentences[i].DisplayName);
         return voiceModel.RecordingSentences[i];
       }
     }
