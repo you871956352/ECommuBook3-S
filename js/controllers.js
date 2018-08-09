@@ -732,6 +732,9 @@ angular
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("VoiceModelInformation", $scope.currentDisplayLanguage);
     $scope.voiceModel = VoiceModelService.getLatest();
 
+    //Test For Server Side behaviour
+    VoiceModelService.postToServerCallback();
+
     $scope.collectedVoice = UtilityFunction.getRecordedVoiceCount($scope.voiceModel);
     $scope.totalVoice = $scope.voiceModel.TotalSentence;
     console.log("collectedVoice: " + $scope.collectedVoice);

@@ -624,6 +624,18 @@ myModule.factory("VoiceModelService", function($http, $localStorage) { //Store U
     },
     saveLocal: function(newVoiceModel) {
       $localStorage.VoiceModel = newVoiceModel;
-    }
+    },
+    postToServerCallback: function (successCallback) {
+      $http.post(ServerPathVariable.PostVCModelProfilePath(), this.getLatest())
+        .success(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
+          alert("post VoiceModelProfile success:" + JSON.stringify(data));
+          if (typeof successCallback == "function") {
+            successCallback();
+          }
+        })
+        .error(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
+          alert("post VoiceModelProfile error :" + JSON.stringify(data));
+        });
+    },
   };
 });
