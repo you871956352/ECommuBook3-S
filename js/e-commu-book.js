@@ -417,12 +417,19 @@ var UtilityFunction = new function () {
   };
   this.getRecordedVoiceCount = function (voiceModel) {
     var c = 0;
-    for (var i = 0; i < voiceModel.RecordingSentence.length; i++) {
-      if (voiceModel.RecordingSentence[i].IsRecorded == true) {
+    for (var i = 0; i < voiceModel.RecordingSentences.length; i++) {
+      if (voiceModel.RecordingSentences[i].IsRecorded == true) {
         c += 1;
       }
     }
     return c;
+  };
+  this.getFirstUnrecordedSentence = function (voiceModel) {
+    for (var i = 0; i < voiceModel.RecordingSentences.length; i++) {
+      if (voiceModel.RecordingSentences[i].IsRecorded == false) {
+        return voiceModel.RecordingSentences[i];
+      }
+    }
   };
   this.normalizeDisplayName = function (text) {
     return text

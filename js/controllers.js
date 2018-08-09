@@ -728,13 +728,13 @@ angular
     $scope.GenderList = GlobalVariable.GenderList;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
   })
-  .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$http,UserProfileService,VoiceRecordService,VoiceModelService){
+  .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$cordovaNetwork,$http,$state,UserProfileService,VoiceRecordService,VoiceModelService){
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("VoiceModelInformation", $scope.currentDisplayLanguage);
     $scope.voiceModel = VoiceModelService.getLatest();
 
+    $scope.recordingSentence = UtilityFunction.getFirstUnrecordedSentence($scope.voiceModel);
     $scope.collectedVoice = UtilityFunction.getRecordedVoiceCount($scope.voiceModel);
     $scope.totalVoice = $scope.voiceModel.TotalSentence;
-    console.log("collectedVoice: " + $scope.collectedVoice);
     if($scope.collectedVoice >= $scope.totalVoice){$scope.CollectionStatusText = "Completed";} else {$scope.CollectionStatusText = "UnCompleted";}
     $scope.ModelStatusText = $scope.voiceModel.ModelStatus;
     if($scope.CollectionStatusText == "Completed"){$scope.collectionStatus = false;} else {$scope.collectionStatus = true;}
@@ -748,7 +748,16 @@ angular
     $scope.start = function () { VoiceRecordService.startCapture(); $scope.checkStart = true;$scope.checkStop = false;$scope.gifDisplay = true;};
     $scope.stop = function () { VoiceRecordService.stopCapture(id); $scope.checkStart = false;$scope.checkStop = true;$scope.checkStatus = false;$scope.gifDisplay = false;};
     $scope.check = function () { VoiceRecordService.checkRecord(); }
-    $scope.upload = function () { VoiceRecordService.uploadRecordVC(); }
+    $scope.upload = function () {
+      if ($cordovaNetwork.isOffline()) {
+        alert($scope.subMenuProfileGeneral.NetworkWarning);
+        return;
+      }
+      var newVoiceModel = VoiceModelService.changeRecordingStatus($scope.voiceModel,$scope.recordingSentence.ID);
+      $scope.voiceModel = newVoiceModel;
+      VoiceModelService.saveLocal(newVoiceModel);
+      $state.reload();
+    }
     window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
     window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
   })

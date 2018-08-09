@@ -8718,7 +8718,7 @@ function getSampleVoiceModel(){
     ID: "00000000-0000-0000-0001-000000000000",
     ModelStatus: "Unstarted", //Unstarted, Training, Completed
     TotalSentence: 160,
-    RecordingSentence: [
+    RecordingSentences: [
       {
         ID: "0001",
         IsRecorded: true,

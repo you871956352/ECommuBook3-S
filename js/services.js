@@ -446,12 +446,12 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
           console.log("Check File Delete:" + GlobalCacheVariable.DeleteCheck.DeletedFile +  "/" + GlobalCacheVariable.DeleteCheck.FileToDelete);
           if (GlobalCacheVariable.DeleteCheck.DeletedFile >= GlobalCacheVariable.DeleteCheck.FileToDelete ) {
             console.log("Delete complete, refresh the page.");
-            if (refresh == true) {          
+            if (refresh == true) {
               $state.go("app.welcome", {}, { reload: true });
             } else if (refresh == false) {
               $state.reload();
             }
-            
+
           }else{
             self.checkDelete(refresh);
           }
@@ -624,6 +624,26 @@ myModule.factory("VoiceModelService", function($http, $localStorage) { //Store U
     },
     saveLocal: function(newVoiceModel) {
       $localStorage.VoiceModel = newVoiceModel;
+    },
+    postToServerCallback: function(successCallback) {
+      $http.post(ServerPathVariable.PostVoiceModelPath(), this.getLatest())
+        .success(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
+          console.log("post userprofile success:" + JSON.stringify(data));
+          if (typeof successCallback == "function") {
+            successCallback();
+          }
+        })
+        .error(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
+          console.log("post userprofile error :" + JSON.stringify(data));
+        });
+    },
+    changeRecordingStatus: function(voiceModel,sentenceID) {
+      for (var i = 0; i < voiceModel.RecordingSentences.length; i++) {
+        if (voiceModel.RecordingSentences[i].ID == sentenceID) {
+          voiceModel.RecordingSentences[i].IsRecorded = !voiceModel.RecordingSentences[i].IsRecorded;
+        }
+      }
+      return voiceModel;
     }
   };
 });
