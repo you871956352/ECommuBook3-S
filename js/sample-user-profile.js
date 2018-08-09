@@ -7561,6 +7561,91 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "تحميل"},
               { Language: "zh-CHS", Text: "上传"},
               { Language: "ja", Text: "アップロード"}]
+          },
+          {
+            OperationType: "NetworkWarning",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Diese Funktion werden nur mit Internet unterstützt. Bitte eine Wifi Verbindung und versuchen Sie es erneut"},
+              {"Language":"ru","Text":"Эта функция поддерживаться только с Интернетом. Пожалуйста Подключите wifi и попробуйте еще раз"},
+              {"Language":"pt","Text":"Este recurso só será suportado com internet. Por favor, ligar o wifi e tente novamente"},
+              {"Language":"ko","Text":"이 기능은 인터넷 에서만 지원 됩니다. Wifi를 연결 하 고 다시 시도 하십시오"},
+              {"Language":"yue","Text":"此功能僅受 internet 支持。 請連接 wifi, 然後再試一次。"},
+              {"Language":"en","Text":"This feature only be supported with internet. Please connect wifi and try again"},
+              {"Language":"it","Text":"Questa funzionalità sia supportata solo con internet. Collegare il wifi e riprovare"},
+              {"Language":"fr","Text":"Cette fonctionnalité uniquement supportée avec internet. S’il vous plaît connecter wifi et essayez à nouveau"},
+              {"Language":"es","Text":"Esta característica sólo se admite con internet. Por favor conectar Wi-Fi e inténtelo de nuevo"},
+              {"Language":"zh-CHT","Text":"此功能僅受 internet 支援。請連接 wifi, 然後再試一次。"},
+              {"Language":"ar","Text":"أن اعتماد هذه الميزة فقط مع شبكة الإنترنت. الرجاء الاتصال وأي فأي وحاول مرة أخرى"},
+              {"Language":"zh-CHS","Text":"此功能仅受 internet 支持。请连接 wifi, 然后再试一次。"},
+              {"Language":"ja","Text":"この機能は、インターネットでのみサポートされます。Wifi を接続して再度行ってください。"}]
+          },
+          {
+            OperationType: "CategoryWarning",
+            DisplayMultipleLanguage:[
+              {"Language":"de","Text":"Bitte Eingabe Kategorienamen"},
+              {"Language":"ru","Text":"Пожалуйста имя входного категории"},
+              {"Language":"pt","Text":"Por favor o nome da categoria de entrada"},
+              {"Language":"ko","Text":"입력된 범주 이름을 하시기 바랍니다"},
+              {"Language":"yue","Text":"請輸入類別名稱"},
+              {"Language":"en","Text":"Please input category name"},
+              {"Language":"it","Text":"Si prega di nome categoria input"},
+              {"Language":"fr","Text":"S’il vous plaît le nom de la catégorie d’entrée"},
+              {"Language":"es","Text":"Por favor nombre de la categoría de entrada"},
+              {"Language":"zh-CHT","Text":"請輸入類別名稱"},
+              {"Language":"ar","Text":"الرجاء اسم الفئة الإدخال"},
+              {"Language":"zh-CHS","Text":"请输入类别名称"},
+              {"Language":"ja","Text":"入力カテゴリ名をしてください。"}]
+          },
+          {
+            OperationType: "LanguageWarning",
+            DisplayMultipleLanguage:[
+              {"Language":"de","Text":"Bitte geben Sie Sprache"},
+              {"Language":"ru","Text":"Пожалуйста язык ввода"},
+              {"Language":"pt","Text":"Linguagem de entrada por favor"},
+              {"Language":"ko","Text":"언어를 입력 해 주세요"},
+              {"Language":"yue","Text":"請輸入語言"},
+              {"Language":"en","Text":"Please input language"},
+              {"Language":"it","Text":"Lingua di input per favore"},
+              {"Language":"fr","Text":"S’il vous plaît la langue d’entrée"},
+              {"Language":"es","Text":"Lengua de entrada por favor"},
+              {"Language":"zh-CHT","Text":"請輸入語言"},
+              {"Language":"ar","Text":"الرجاء إدخال اللغة"},
+              {"Language":"zh-CHS","Text":"请输入语言"},
+              {"Language":"ja","Text":"言語を入力してください。"}]
+          },
+          {
+            OperationType: "ImageWaring",
+            DisplayMultipleLanguage:[
+              {"Language":"de","Text":"Bitte wählen Sie eine Bild"},
+              {"Language":"ru","Text":"Пожалуйста, выберите изображение"},
+              {"Language":"pt","Text":"Por favor, selecione uma imagem"},
+              {"Language":"ko","Text":"이미지를 선택 하십시오"},
+              {"Language":"yue","Text":"請選擇圖像"},
+              {"Language":"en","Text":"Please select a image"},
+              {"Language":"it","Text":"Si prega di selezionare un'immagine"},
+              {"Language":"fr","Text":"Veuillez sélectionner une image"},
+              {"Language":"es","Text":"Por favor, seleccione una imagen"},
+              {"Language":"zh-CHT","Text":"請選擇圖像"},
+              {"Language":"ar","Text":"الرجاء تحديد صورة"},
+              {"Language":"zh-CHS","Text":"请选择图像"},
+              {"Language":"ja","Text":"画像を選択してください。"}]
+          },
+          {
+            OperationType: "ServerWarning",
+            DisplayMultipleLanguage:[
+              {"Language":"de","Text":"Verbindung zum Server fehlgeschlagen"},
+              {"Language":"ru","Text":"Не удается подключиться к серверу"},
+              {"Language":"pt","Text":"Falha ao conectar ao servidor"},
+              {"Language":"ko","Text":"서버에 연결 실패"},
+              {"Language":"yue","Text":"無法連接到服務器"},
+              {"Language":"en","Text":"Fail to connect to server"},
+              {"Language":"it","Text":"Non riuscire a connettersi al server"},
+              {"Language":"fr","Text":"Ne parviennent pas à se connecter au serveur"},
+              {"Language":"es","Text":"Error al conectar al servidor"},
+              {"Language":"zh-CHT","Text":"無法連接到伺服器"},
+              {"Language":"ar","Text":"فشل الاتصال بالخادم"},
+              {"Language":"zh-CHS","Text":"无法连接到服务器"},
+              {"Language":"ja","Text":"サーバーへの接続に失敗します。"}]
           }
         ]
       },
@@ -7875,6 +7960,23 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "إضافة عنصر" },
               { Language: "zh-CHS", Text: "添加项目" },
               { Language: "ja", Text: "項目を追加します。" }]
+          },
+          {
+            OperationType: "EditWarning",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Bitte geben Sie einen neuen Namen für dieses Element"},
+              {"Language":"ru","Text":"Пожалуйста, введите новое имя для этого элемента"},
+              {"Language":"pt","Text":"Por favor, insira um novo nome para este item"},
+              {"Language":"ko","Text":"이 항목에 대 한 새 이름을 입력 해 주세요"},
+              {"Language":"yue","Text":"請輸入此項目的新名稱"},
+              {"Language":"en","Text":"Please input a new name for this item"},
+              {"Language":"it","Text":"Si prega di inserire un nuovo nome per questo elemento"},
+              {"Language":"fr","Text":"Entrez un nouveau nom pour cet article"},
+              {"Language":"es","Text":"Por favor introduzca un nuevo nombre para este artículo"},
+              {"Language":"zh-CHT","Text":"請輸入此專案的新名稱"},
+              {"Language":"ar","Text":"الرجاء إدخال اسم جديد لهذا البند"},
+              {"Language":"zh-CHS","Text":"请输入此项目的新名称"},
+              {"Language":"ja","Text":"このアイテムの新しい名前を入力してください。"}]
           }
         ]
       },

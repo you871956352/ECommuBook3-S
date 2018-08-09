@@ -18,7 +18,7 @@ angular
       console.log("Language Selected:" + $scope.currentDisplayLanguage + "/" + $scope.userProfile.SPEECH_LANGUAGE_CODE + "/" + $scope.userProfile.SPEECH_GENDER);
       if (window.localStorage.getItem("loggedIn") != 1) {
         if ($cordovaNetwork.isOffline()) {
-          alert("Please connect to the Internet for app initilization.");
+          alert($scope.subMenuProfileGeneral.NetworkWarning);
           return;
         } else {
           window.localStorage.setItem("loggedIn", 1);
@@ -183,7 +183,7 @@ angular
       };
       $scope.editText = function () {
         if ($scope.EditNewText == undefined || $scope.EditNewText == "") {
-          alert("Please give a new name for this item");
+          alert($scope.subMenuProfileObject.EditWarning);
         }
         else {
           newUserProfile = UserProfileService.editTargetItem($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID, $scope.selectedDisplayLanguage, $scope.EditNewText);
@@ -221,21 +221,21 @@ angular
       };
       $scope.onAddItemConfirmClicked = function () {
         if ($cordovaNetwork.isOffline()) {
-          alert("This feature only be supported with internet. Please connect wifi and try again.");
+          alert($scope.subMenuProfileGeneral.NetworkWarning);
           return;
         }
         var displayName = $scope.itemName, selectedCategoryId = $scope.selectedCategoryId, inputLanguage = $scope.inputLanguage;
         console.log("displayname:" + displayName + "selectedCategoryId:" + selectedCategoryId + "inputLanguage:" + inputLanguage);
         if (typeof displayName == "undefined" || displayName == "") {
-          alert("Please input display name!");
+          alert($scope.subMenuProfileGeneral.LanguageWarning);
           return;
         }
         if (typeof inputLanguage == "undefined" || inputLanguage == "") {
-          alert("Please input language");
+          alert($scope.subMenuProfileGeneral.LanguageWarning);
           return;
         }
         if (typeof document.getElementById("myImage").src == "undefined" || document.getElementById("myImage").src == "") {
-          alert("Please select a image");
+          alert($scope.subMenuProfileGeneral.ImageWaring);
           return;
         }
         GlobalVariable.DownloadProgress.Reset();
@@ -366,7 +366,7 @@ angular
     };
     $scope.onConfirmLanguageButtonClicked = function () {
       if ($cordovaNetwork.isOffline()) {
-        alert("This feature only be supported with internet. Please connect wifi and try again.");
+        alert($scope.subMenuProfileGeneral.NetworkWarning);
         return;
       }
       console.log($scope.selectedDisplayLanguage + "/" + $scope.selectedSpeechLanguage + "/" + $scope.selectedSpeechGender);
@@ -398,7 +398,7 @@ angular
     };
     $scope.onConfirmResetUserprofileButtonClicked = function () {
       if ($cordovaNetwork.isOffline()) {
-        alert("This feature only be supported with internet. Please connect wifi and try again.");
+        alert($scope.subMenuProfileGeneral.NetworkWarning);
         return;
       }
       LocalCacheService.clearAllCache();
@@ -467,16 +467,16 @@ angular
     };
     $scope.onAddCategoryConfirmClicked = function () {
       if ($cordovaNetwork.isOffline()) {
-        alert("This feature only be supported with internet. Please connect wifi and try again.");
+        alert($scope.subMenuProfileGeneral.NetworkWarning);
         return;
       }else if (typeof $scope.categoryName == "undefined" || $scope.categoryName == "") {
-        alert("Please input category name!");
+        alert($scope.subMenuProfileGeneral.CategoryWarning);
         return;
       }else if (typeof $scope.inputLanguage == "undefined" || $scope.inputLanguage == "") {
-        alert("Please input language");
+        alert($scope.subMenuProfileGeneral.LanguageWarning);
         return;
       }else if (typeof document.getElementById("myImage").src == "undefined" || document.getElementById("myImage").src == "") {
-        alert("Please select a image");
+        alert($scope.subMenuProfileGeneral.ImageWaring);
         return;
       }
       GlobalVariable.DownloadProgress.Reset();
@@ -514,7 +514,8 @@ angular
           );
         });
       }, function errorCallback(response) {
-        alert("Server is not avaliable: " + response);
+        alert($scope.subMenuProfileGeneral.ServerWarning);
+        console.log("Error callback:" + response);
       });
     };
   })
@@ -715,7 +716,8 @@ angular
             LocalCacheService.prepareCache(UserProfileService.getLatest());
           });
         }),function errorCallback(response) {
-            alert("Server is not avaliable: " + response);
+          alert($scope.subMenuProfileGeneral.ServerWarning);
+          console.log("Server is not avaliable: " + response);
         };
       }
     }
