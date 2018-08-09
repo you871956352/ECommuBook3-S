@@ -609,7 +609,8 @@ myModule.factory("VoiceModelService", function($http, $localStorage) { //Store U
         }
       });
     },
-    getLatest: function() {
+    getLatest: function () {
+      /*
       if ($localStorage.VoiceModel) {
         console.log("Read user's voiceModel from LocalStorage.");
       }
@@ -617,6 +618,8 @@ myModule.factory("VoiceModelService", function($http, $localStorage) { //Store U
         console.log("No VoiceModel in LocalStorage. Read sample voiceModel.");
         $localStorage.VoiceModel = this.getDefault();
       }
+      */
+      $localStorage.VoiceModel = getSampleVoiceModel();
       return $localStorage.VoiceModel;
     },
     getDefault: function() {
