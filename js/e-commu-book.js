@@ -54,6 +54,15 @@ var ServerPathVariable = new function () { //User to store server return path
 };
 
 var GlobalVariable = new function () { //User to store some global variable
+  this.DeviceInformation = new function () {
+    this.DeviceWidth = window.screen.width;
+    this.DeviceHeight = window.screen.height;
+    this.DevicePixelRatio = window.devicePixelRatio;
+  };
+  this.Appearance = new function () {
+    this.itemNormalFontSize = parseInt((window.screen.width + window.screen.height) / 65);
+    this.itemNormalPicSize = parseInt((window.screen.width + window.screen.height) / 6.5);
+  };
   this.DownloadProgress = new function () {
     this.Downloaded = 0;
     this.Total = 0;
@@ -110,10 +119,6 @@ var GlobalVariable = new function () { //User to store some global variable
       }
     }
     return { targetDisplayLanguage, targetSpeechLanguage, targetSpeechGender };
-  };
-  this.Appearance = new function () {
-    this.itemNormalFontSize = 24;
-    this.itemNormalPicSize = 230;
   };
   this.DisplayLanguageList = [
     { name: "粵語", value: "yue" },
