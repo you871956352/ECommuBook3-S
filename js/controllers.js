@@ -4,8 +4,10 @@ angular
   .module("starter.controllers", [])
   .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService) {
     $scope.$on("$ionicView.enter", function (e) {
+      $scope.deviceInfomation = GlobalVariable.DeviceInformation;
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
       $scope.itemNormalPicSize = GlobalVariable.Appearance.itemNormalPicSize;
+      //alert($scope.deviceInfomation.DeviceWidth + " " + $scope.deviceInfomation.DeviceHeight);
       $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
       $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
       $scope.userProfile = UserProfileService.getLatest();
