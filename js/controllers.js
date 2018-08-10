@@ -2,13 +2,14 @@
 /* global console */
 angular
   .module("starter.controllers", [])
-  .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService) {
+  .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService,VoiceModelService) {
     $scope.$on("$ionicView.enter", function (e) {
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
       $scope.itemNormalPicSize = GlobalVariable.Appearance.itemNormalPicSize;
       $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
       $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
       $scope.userProfile = UserProfileService.getLatest();
+      $scope.voiceModel = VoiceModelService.getLatest($scope.userProfile.ID);
       $scope.menuProfile = UserProfileService.getMenuProfile();
       $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
       $scope.subMenuProfileGeneral = UserProfileService.getMenuProfileSubObjectWithInputLanguage("General", $scope.currentDisplayLanguage);
@@ -25,7 +26,7 @@ angular
           console.log("First run: initialization");
           GlobalVariable.DownloadProgress.Reset();
           LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-          LocalCacheService.prepareCache($scope.userProfile);
+          LocalCacheService.prepareCache($scope.userProfile, true);
         }
       }
     });
@@ -402,7 +403,6 @@ angular
         return;
       }
       LocalCacheService.clearAllCache();
-      LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       var userProfile = UserProfileService.getDefault();
       userProfile.ID = UtilityFunction.guid();
       UserProfileService.saveLocal(userProfile);
@@ -410,6 +410,7 @@ angular
         console.log('Setting: reset userProfile and uploaded. UserID: ' + userProfile.ID);
         UserProfileService.cloneItem(userProfile.ID, function () {
           GlobalVariable.DownloadProgress.Reset();
+          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
           LocalCacheService.prepareCache(UserProfileService.getLatest(), true);
         });
       });
@@ -729,8 +730,9 @@ angular
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
   })
   .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$cordovaNetwork,$http,$state,UserProfileService,VoiceRecordService,VoiceModelService){
+    var id = UserProfileService.getLatest().ID;
+    $scope.userProfile = UserProfileService.getLatest();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("VoiceModelInformation", $scope.currentDisplayLanguage);
-    $scope.voiceModel = VoiceModelService.getLatest();
     $scope.recordingSentence = UtilityFunction.getFirstUnrecordedSentence($scope.voiceModel);
     $scope.collectedVoice = UtilityFunction.getRecordedVoiceCount($scope.voiceModel);
     $scope.totalVoice = $scope.voiceModel.TotalSentence;
@@ -743,7 +745,6 @@ angular
     $scope.checkStop = true;
     $scope.checkStatus = true;
     $scope.gifDisplay = false;
-    var id = $scope.userProfile.ID;
     $scope.start = function () { VoiceRecordService.startCapture(); $scope.checkStart = true;$scope.checkStop = false;$scope.gifDisplay = true;};
     $scope.stop = function () { VoiceRecordService.stopCapture(id); $scope.checkStart = false;$scope.checkStop = true;$scope.checkStatus = false;$scope.gifDisplay = false;};
     $scope.check = function () { VoiceRecordService.checkRecord(); }
@@ -752,7 +753,7 @@ angular
         alert($scope.subMenuProfileGeneral.NetworkWarning);
         return;
       }
-      VoiceRecordService.uploadRecordVC($scope.userProfile.ID,$scope.recordingSentence.ID,function () {
+      VoiceRecordService.uploadRecordVC(id,$scope.recordingSentence.ID,function () {
         console.log("Upload recording VC to server");
         var newVoiceModel = VoiceModelService.changeRecordingStatus($scope.voiceModel,$scope.recordingSentence.ID);
         VoiceModelService.postToServerCallback(newVoiceModel,function () {

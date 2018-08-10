@@ -621,29 +621,31 @@ myModule.factory("VoiceModelService", function($http, $localStorage) { //Store U
   return {
     getOnline: function(userId,completeCallback) {
       $http.get(ServerPathVariable.GetVoiceModelProfilePath(userId)).then(function(data) {
-        console.log("Get Online-VoiceModel Success.");
+        console.log("Get Online VoiceModel Success: " +  JSON.stringify(data));
         $localStorage.voiceModel = data.data;
         if (typeof completeCallback == "function") {
           completeCallback();
         }
       });
     },
-    getLatest: function () {
-
+    getLatest: function (id) {
+      var self = this;
       if ($localStorage.voiceModel) {
         console.log("Read user's voiceModel from LocalStorage.");
       }
       else {
         console.log("No VoiceModel in LocalStorage. Read sample voiceModel.");
-        $localStorage.voiceModel = this.getDefault();
+        self.saveLocal(self.getDefault());
+        self.postToServerCallback(self.getDefault(id),function () {
+          self.getOnline(id);
+        })
       }
-      /*
-      console.log("Read sample voiceModel.");
-      $localStorage.voiceModel = getSampleVoiceModel();*/
       return $localStorage.voiceModel;
     },
-    getDefault: function() {
-      return getSampleVoiceModel();
+    getDefault: function(id) {
+      var newVoiceModel = getSampleVoiceModel();
+      newVoiceModel.ID = id;
+      return newVoiceModel;
     },
     saveLocal: function(newVoiceModel) {
       $localStorage.voiceModel = newVoiceModel;
