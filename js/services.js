@@ -99,21 +99,44 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       return UserProfile;
     },
     editTargetItem: function (UserProfile, categoryID, ItemID, targetLanguage, targetText) {
-      for (var i = 0; i < UserProfile.Categories.length; i++) {
-        if (UserProfile.Categories[i].ID == categoryID) {
-          for (var j = 0; j < UserProfile.Categories[i].Items.length; j++) {
-            if (UserProfile.Categories[i].Items[j].ID == ItemID) {
-              for (var k = 0; k < UserProfile.Categories[i].Items[j].DisplayMultipleLanguage.length; k++) {
-                if (UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Language == targetLanguage) {
-                  UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text = targetText;
-                  //alert(i + " " + j + " " + k);
-                  return UserProfile;
+      var currentDisplayLanguage = UserProfile.DISPLAY_LANGUAGE;
+      if (currentDisplayLanguage == targetLanguage) {
+        console.log("Edit Current DisplayName");
+        for (var i = 0; i < UserProfile.Categories.length; i++) {
+          if (UserProfile.Categories[i].ID == categoryID) {
+            for (var j = 0; j < UserProfile.Categories[i].Items.length; j++) {
+              if (UserProfile.Categories[i].Items[j].ID == ItemID) {
+                UserProfile.Categories[i].Items[j].DisplayName = targetText;
+                for (var k = 0; k < UserProfile.Categories[i].Items[j].DisplayMultipleLanguage.length; k++) {
+                  if (UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Language == targetLanguage) {
+                    UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text = targetText;
+                    return UserProfile;
+                  }
                 }
+                break;
               }
-              break;
             }
+            break;
           }
-          break;
+        }
+      }
+      else {
+        console.log("Revise Mistake MultiLanguage");
+        for (var i = 0; i < UserProfile.Categories.length; i++) {
+          if (UserProfile.Categories[i].ID == categoryID) {
+            for (var j = 0; j < UserProfile.Categories[i].Items.length; j++) {
+              if (UserProfile.Categories[i].Items[j].ID == ItemID) {
+                for (var k = 0; k < UserProfile.Categories[i].Items[j].DisplayMultipleLanguage.length; k++) {
+                  if (UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Language == targetLanguage) {
+                    UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text = targetText;
+                    return UserProfile;
+                  }
+                }
+                break;
+              }
+            }
+            break;
+          }
         }
       }
       return UserProfile;
@@ -349,7 +372,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
             },
             function(err) {
               console.log("Check file: Image removed.");
-              GlobalCacheVariable.DeleteCheck.AddDletedFile();
+              GlobalCacheVariable.DeleteCheck.AddDeletedFile();
             }
           );
         },
@@ -375,7 +398,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
             },
             function(err) {
               console.log("Check file: Audio removed.");
-              GlobalCacheVariable.DeleteCheck.AddDletedFile();
+              GlobalCacheVariable.DeleteCheck.AddDeletedFile();
             }
           );
         },
@@ -383,6 +406,17 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
           console.log("Remove Audio: Error.");
         }
       );
+    },
+    deleteLocalAudioAllLanguage: function (userProfile, targetID) {
+      var targetDirectory = GlobalVariable.LocalCacheDirectory() + "audio/";
+      var speechProvider = "bing";
+      var currentSpeechLanguageCodeGenderList = GlobalVariable.GenderList;
+      for (var i = 0; i < currentSpeechLanguageCodeGenderList.length; i++) {
+        var currentSpeechLanguageCode = currentSpeechLanguageCodeGenderList[i].language;
+        var currentSpeechGender = currentSpeechLanguageCodeGenderList[i].value;
+        var targetName = speechProvider + "/" + currentSpeechLanguageCode + "/" + currentSpeechGender + "/" + targetID + ".mp3";
+        $cordovaFile.removeFile(targetDirectory, targetName);
+      }
     },
     clearAllCache: function () {
       console.log("Reset: Start clear local cache");

@@ -216,7 +216,7 @@ var GlobalCacheVariable = new function () { //
       this.FileToDelete = 0;
       this.DeletedFile = 0;
     };
-    this.AddDletedFile = function () {
+    this.AddDeletedFile = function () {
       this.DeletedFile++;
     }
     this.SetFileToDelete = function (newNumber) {
