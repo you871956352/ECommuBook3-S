@@ -189,10 +189,15 @@ angular
           alert($scope.subMenuProfileObject.EditWarning);
         }
         else {
+          GlobalVariable.DownloadProgress.Reset();
+          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
           newUserProfile = UserProfileService.editTargetItem($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID, $scope.selectedDisplayLanguage, $scope.EditNewText);
+          LocalCacheService.deleteLocalAudioAllLanguage($scope.userProfile, $scope.selectItemObject.ID);
           UserProfileService.saveLocal(newUserProfile);
           UserProfileService.postToServerCallback(function () {
-            console.log("Post to Server After Edit");
+            UserProfileService.getOnline(newUserProfile.ID, function () {
+              LocalCacheService.prepareCache(UserProfileService.getLatest());
+            });
           });
         }
       };
