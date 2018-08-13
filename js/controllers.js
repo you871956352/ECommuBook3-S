@@ -738,7 +738,7 @@ angular
   })
   .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$cordovaNetwork,$http,$state,UserProfileService,VoiceRecordService,VoiceModelService){
     var id = UserProfileService.getLatest().ID;
-    $scope.userProfile = UserProfileService.getLatest();
+    $scope.voiceModel = VoiceModelService.getLatest(id);
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("VoiceModelInformation", $scope.currentDisplayLanguage);
     $scope.recordingSentence = UtilityFunction.getFirstUnrecordedSentence($scope.voiceModel);
     $scope.collectedVoice = UtilityFunction.getRecordedVoiceCount($scope.voiceModel);
