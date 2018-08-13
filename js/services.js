@@ -621,7 +621,7 @@ myModule.factory("VoiceModelService", function($http, $localStorage) { //Store U
   return {
     getOnline: function(userId,completeCallback) {
       $http.get(ServerPathVariable.GetVoiceModelProfilePath(userId)).then(function(data) {
-        console.log("Get Online VoiceModel Success: " +  JSON.stringify(data));
+        //console.log("Get Online VoiceModel Success: " +  JSON.stringify(data));
         $localStorage.voiceModel = data.data;
         if (typeof completeCallback == "function") {
           completeCallback();
