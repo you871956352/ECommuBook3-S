@@ -429,6 +429,14 @@ var UtilityFunction = new function () {
     }
     return -1;
   };
+  this.getSentenceIndexById = function (userProfile, sentenceid) {
+    for (var i = 0; i < userProfile.Sentences.length; i++) {
+      if (userProfile.Sentences[i].ID == sentenceid) {
+        return i;
+      }
+    }
+    return -1;
+  };
   this.getRecordedVoiceCount = function (voiceModel) {
     var c = 0;
     for (var i = 0; i < voiceModel.RecordingSentences.length; i++) {

@@ -142,10 +142,10 @@ angular
         MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + $scope.selectItemObject.ID + ".mp3");
       };
       $scope.reorderAddTopItem = function (ev) {
-        newUserProfile = UserProfileService.setTargetItemTop($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID);
+        var newUserProfile = UserProfileService.setTargetItemTop($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID);
         UserProfileService.saveLocal(newUserProfile);
         UserProfileService.postToServerCallback(function () {
-          console.log("Post to Server After Reorder");
+          console.log("Post to Server After Reorder Item");
         });
       };
       $scope.deleteThisItem = function (categoryID, itemID) {
@@ -571,6 +571,7 @@ angular
       var targetScope = $scope.$new();
       targetScope.sentenceObject = sentence;
       targetScope.Title = UtilityFunction.getObjectTranslation(sentence, $scope.currentDisplayLanguage);
+      targetScope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
       $mdDialog.show({
         controller: SentencePopupController,
         templateUrl: "templates/popup-sentence.tmpl.html",
@@ -662,17 +663,55 @@ angular
       $scope.enableEditTog = function () {
         $scope.enableEdit = !$scope.enableEdit;
       };
-      $scope.popupLanguageChange = function () {
-        alert($scope.selectedDisplayLanguage);
+      $scope.onSentencePopupClicked = function (ev) {
+        MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + $scope.sentenceObject.ID + ".mp3");
       };
-      $scope.deleteThisSentence = function (sentenceID) {
-        alert("deleteThisSentence");
+      $scope.popupLanguageChange = function () {
+        $scope.Title = UtilityFunction.getObjectTranslation($scope.sentenceObject, $scope.selectedDisplayLanguage);
+        if ($scope.selectedDisplayLanguage == $scope.currentDisplayLanguage) {
+          console.log("Return back to current Display Language...");
+          $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
+        }
+        else {
+          console.log("Auto Create Target Language Speaker...");
+          $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.selectedDisplayLanguage);
+          $scope.DefaultSpeakerObject = GlobalVariable.GetDefaultSpeakerForDisplayLanguage($scope.selectedDisplayLanguage);
+          var targetDirectory = GlobalVariable.LocalCacheDirectory();
+          console.log(targetDirectory + " " + $scope.DefaultSpeakerObject.targetSpeechLanguage + " " + $scope.DefaultSpeakerObject.targetSpeechGender + " " + $scope.Title + " " + $scope.sentenceObject.ID);
+          LocalCacheService.downloadAudioToLocal(targetDirectory, "bing", $scope.DefaultSpeakerObject.targetSpeechLanguage, $scope.DefaultSpeakerObject.targetSpeechGender, $scope.Title, $scope.sentenceObject.ID);
+        }
+      };
+      $scope.deleteThisSentence = function (event, sentenceID) {
+        var confirmDialog = $mdDialog.confirm()
+          .title($scope.subMenuProfileGeneral.Notification)
+          .textContent($scope.subMenuProfileObject.DeleteSentenceWarning1 + "? " + $scope.subMenuProfileObject.DeleteSentenceWarning2)
+          .targetEvent(event)
+          .ok($scope.subMenuProfileGeneral.ConfirmButton)
+          .cancel($scope.subMenuProfileGeneral.CancelButton);
+        $mdDialog.show(confirmDialog).then(function () {
+          var newUserProfile = UserProfileService.deleteSentence($scope.userProfile, sentenceID);
+          GlobalCacheVariable.DeleteCheck.Reset();
+          GlobalCacheVariable.DeleteCheck.SetFileToDelete(1);
+          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate, true);
+          $scope.userProfile = newUserProfile;
+          UserProfileService.saveLocal($scope.userProfile);
+          UserProfileService.postToServerCallback(function () {
+            LocalCacheService.deleteLocalAudio($scope.userProfile, sentenceID);
+            LocalCacheService.checkDelete(false);
+          });
+        }, function () {
+          console.log("User decide to quit delete");
+        });
       };
       $scope.reorderAddTopSentence = function () {
-        alert("reorderAddTopSentence");
+        var newUserProfile = UserProfileService.setTargetSentenceTop($scope.userProfile, $scope.sentenceObject.ID);
+        UserProfileService.saveLocal(newUserProfile);
+        UserProfileService.postToServerCallback(function () {
+          console.log("Post to Server After Reorder Sentence");
+        });
       };
       $scope.editText = function () {
-        alert("editText");
+        alert("editText function not complete:" + $scope.EditNewText);
       };
     };
   })

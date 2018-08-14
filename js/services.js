@@ -98,6 +98,28 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       UserProfile.Categories[CategoryIndex].Items = newItems;
       return UserProfile;
     },
+    setTargetSentenceTop: function (UserProfile, sentenceID) {
+      var Sentences = UserProfile.Sentences;
+      var newSentences = [];
+      var targetIndex = -1;
+      for (var i = 0; i < Sentences.length; i++) {
+        if (Sentences[i].ID == sentenceID) {
+          newSentences.push(Sentences[i]);
+          targetIndex = i;
+          break;
+        }
+      }
+      for (var i = 0; i < Sentences.length; i++) {
+        if (targetIndex != -1 && targetIndex != i) {
+          newSentences.push(Sentences[i]);
+        }
+        else {
+          //alert(targetIndex);
+        }
+      }
+      UserProfile.Sentences = newSentences;
+      return UserProfile;
+    },
     editTargetItem: function (UserProfile, categoryID, ItemID, targetLanguage, targetText) {
       var currentDisplayLanguage = UserProfile.DISPLAY_LANGUAGE;
       if (currentDisplayLanguage == targetLanguage) {
@@ -170,6 +192,15 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       }
       //alert(targetCategoryIndex + " " +  targetItemIndex);
       UserProfile.Categories[targetCategoryIndex].Items.splice(targetItemIndex, 1);
+      return UserProfile;
+    },
+    deleteSentence: function (UserProfile, selectedSentenceId) {
+      var targetSentenceIndex = UtilityFunction.getSentenceIndexById(UserProfile, selectedSentenceId);
+      if (targetSentenceIndex == -1) {
+        console("Sentence Category Not Exist");
+        return UserProfile;
+      }
+      UserProfile.Sentences.splice(targetSentenceIndex, 1);
       return UserProfile;
     },
     addSentence: function (UserProfile, targetSentence, inputDisplayNameLanguage) {

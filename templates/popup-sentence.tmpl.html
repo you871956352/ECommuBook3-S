@@ -14,7 +14,7 @@
     </md-toolbar>
 
     <md-dialog-content>
-      <div class="md-dialog-content">
+      <div class="md-dialog-content" ng-click="onSentencePopupClicked($event);">
         <h2></h2>
         <img class="enlarge_item_image" style="margin: auto; max-width: 100%;" alt="Image Not Exist" src="img/icons/icon-chicken.jpg" />
         <div style="line-height: {{itemNormalFontSize}}px;text-align: center; " ng-if="isShowDisplayName.checked">
@@ -39,7 +39,7 @@
           <md-button class="md-raised" ng-click="editText()" style="float: right">{{subMenuProfileGeneral.ConfirmButton}}</md-button>
         </md-card-content>
         <md-card-content>
-          <md-button class="md-raised" ng-click="deleteThisSentence(sentence.ID)" style="float: right">{{subMenuProfileObject.DeleteSentence}}</md-button>
+          <md-button class="md-raised" ng-click="deleteThisSentence($event, sentenceObject.ID)" style="float: right">{{subMenuProfileObject.DeleteSentence}}</md-button>
         </md-card-content>
       </md-card>
     </md-dialog-content>
