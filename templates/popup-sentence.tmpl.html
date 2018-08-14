@@ -1,0 +1,47 @@
+<md-dialog>
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools" style="text-align: center;">
+        <div style="text-align: center;" ng-if="isShowDisplayName.checked">{{Title}}</div>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="enableEditTog()">
+          <md-icon md-svg-src="img/icons/ic_edit.svg" aria-label="Enable edit"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <h2></h2>
+        <img class="enlarge_item_image" style="margin: auto; max-width: 100%;" alt="Image Not Exist" src="img/icons/icon-chicken.jpg" />
+        <div style="line-height: {{itemNormalFontSize}}px;text-align: center; " ng-if="isShowDisplayName.checked">
+          <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;">{{Title}}</span>
+        </div>
+      </div>
+      <md-card ng-show="enableEdit">
+        <md-card-content>
+          <md-input-container style="margin: auto; width: 50%;">
+            <label>{{subMenuProfileObject.SelectLanguage}}</label>
+            <md-select ng-model="selectedDisplayLanguage" ng-change="popupLanguageChange()">
+              <md-option ng-value="displayLanguage.value" ng-repeat="displayLanguage in displayLanguageList">{{displayLanguage.name}}</md-option>
+            </md-select>
+          </md-input-container>
+          <md-button class="md-raised" ng-click="reorderAddTopSentence($event)" style="float: right">{{subMenuProfileObject.SetTopButton}}</md-button>
+        </md-card-content>
+        <md-card-content>
+          <md-input-container style="margin: auto; width: 50%;">
+            <label>{{subMenuProfileObject.Edit}}</label>
+            <input type="text" ng-model="EditNewText">
+          </md-input-container>
+          <md-button class="md-raised" ng-click="editText()" style="float: right">{{subMenuProfileGeneral.ConfirmButton}}</md-button>
+        </md-card-content>
+        <md-card-content>
+          <md-button class="md-raised" ng-click="deleteThisSentence(sentence.ID)" style="float: right">{{subMenuProfileObject.DeleteSentence}}</md-button>
+        </md-card-content>
+      </md-card>
+    </md-dialog-content>
+  </form>
+</md-dialog>

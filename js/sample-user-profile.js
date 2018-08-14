@@ -7945,6 +7945,57 @@ function getSampleMenuProfile() {
               { "Language": "ja", "Text": "この項目を削除すると、した後それがこのカテゴリで消え去る" }]
           },
           {
+            OperationType: "DeleteSentence",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Satz zu löschen" },
+              { "Language": "ru", "Text": "Исключить предложение" },
+              { "Language": "pt", "Text": "Excluir a frase" },
+              { "Language": "ko", "Text": "문장 삭제" },
+              { "Language": "yue", "Text": "刪除句子" },
+              { "Language": "en", "Text": "Delete Sentence" },
+              { "Language": "it", "Text": "Elimina frase" },
+              { "Language": "fr", "Text": "Supprimer la phrase" },
+              { "Language": "es", "Text": "Eliminar la frase" },
+              { "Language": "zh-CHT", "Text": "刪除句子" },
+              { "Language": "ar", "Text": "حذف الجملة" },
+              { "Language": "zh-CHS", "Text": "删除句子" },
+              { "Language": "ja", "Text": "文を削除します。" }]
+          },
+          {
+            OperationType: "DeleteSentenceWarning1",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Sind Sie sicher, diesen Satz zu löschen" },
+              { "Language": "ru", "Text": "Вы действительно хотите удалить это предложение" },
+              { "Language": "pt", "Text": "Tem certeza de apagar esta frase" },
+              { "Language": "ko", "Text": "이 문장 삭제 해야 당신은" },
+              { "Language": "yue", "Text": "係咪真係要刪除此句子" },
+              { "Language": "en", "Text": "Are you sure to delete this Sentence" },
+              { "Language": "it", "Text": "Sei sicuro di voler eliminare questa frase" },
+              { "Language": "fr", "Text": "Êtes-vous sûr de supprimer cette phrase" },
+              { "Language": "es", "Text": "Está seguro de eliminar esta frase" },
+              { "Language": "zh-CHT", "Text": "是否確實要刪除此句子" },
+              { "Language": "ar", "Text": "هل أنت متأكد من حذف هذه الجملة" },
+              { "Language": "zh-CHS", "Text": "是否确实要删除此句子" },
+              { "Language": "ja", "Text": "あなたはこの文を削除してください。" }]
+          },
+          {
+            OperationType: "DeleteSentenceWarning2",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Nachdem dieser Satz gelöscht wurde, wird es Disapper in Ihrem Profil" },
+              { "Language": "ru", "Text": "После удаления этого предложения, он будет пропадают в вашем профиле" },
+              { "Language": "pt", "Text": "Após esta frase é excluída, ele será disapper no seu perfil" },
+              { "Language": "ko", "Text": "귀하의 프로필에 disapper 것입니다이 문장을 삭제 후" },
+              { "Language": "yue", "Text": "呢句說話被刪除後, 它就消失喺你嘅個人資料" },
+              { "Language": "en", "Text": "After this sentence is deleted, it will disapper in your profile" },
+              { "Language": "it", "Text": "Dopo questa frase viene eliminata, esso sarà disapper nel tuo profilo" },
+              { "Language": "fr", "Text": "Après que cette phrase est supprimée, elle sera disapper dans votre profil" },
+              { "Language": "es", "Text": "Después de esta oración se elimina, va disapper en tu perfil" },
+              { "Language": "zh-CHT", "Text": "這句話被刪除後, 它將消失在您的個人資料" },
+              { "Language": "ar", "Text": "بعد أن يتم حذف هذه الجملة، فإنه سوف ديسابير في ملف التعريف الخاص بك" },
+              { "Language": "zh-CHS", "Text": "这句话被删除后, 它将消失在您的个人资料" },
+              { "Language": "ja", "Text": "この文を削除した後それがプロフィールに消え去る" }]
+          },
+          {
             OperationType: "AddItem",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Element hinzufügen" },

@@ -2,7 +2,7 @@
   <ion-content>
     <div id="grid-container" class="container-fluid" ng-controller="SentenceCtrl" ng-cloak>
       <md-card>
-        <md-card-content ng-repeat="sentence in userProfile.Sentences" ng-click="onSentenceClick(sentence)">
+        <md-card-content ng-repeat="sentence in userProfile.Sentences" ng-click="onSentenceClick($event, sentence)">
           <div ng-repeat="translation in sentence.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
             <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
           </div>

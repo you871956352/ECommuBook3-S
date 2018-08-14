@@ -2,7 +2,7 @@
 /* global console */
 angular
   .module("starter.controllers", [])
-  .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService,VoiceModelService) {
+  .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService, VoiceModelService) {
     $scope.$on("$ionicView.enter", function (e) {
       $scope.deviceInfomation = GlobalVariable.DeviceInformation;
       $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
@@ -110,7 +110,7 @@ angular
         });
       }, function () {
         console.log("User decide to quit delete");
-        });
+      });
     }
     $scope.enableEditCategoryTog = function () {
       $scope.showEditCard = !$scope.showEditCard;
@@ -214,7 +214,7 @@ angular
               .then(function (data) {
                 console.log("Post User Edit success:" + JSON.stringify(data));
                 LocalCacheService.prepareCache(UserProfileService.getLatest());
-            });
+              });
           }
 
         }
@@ -434,22 +434,22 @@ angular
         .ok($scope.subMenuProfileGeneral.ConfirmButton)
         .cancel($scope.subMenuProfileGeneral.CancelButton);
 
-        $mdDialog.show(confirmDialog).then(function () {
-          LocalCacheService.clearAllCache();
-          GlobalVariable.DownloadProgress.Reset();
-          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);          
-          var userProfile = UserProfileService.getDefault();
-          userProfile.ID = UtilityFunction.guid();
-          UserProfileService.saveLocal(userProfile);
-          UserProfileService.postToServerCallback(function () {
-            console.log('Setting: reset userProfile and uploaded. UserID: ' + userProfile.ID);
-            UserProfileService.cloneItem(userProfile.ID, function () {
-              LocalCacheService.prepareCache(UserProfileService.getLatest(), true);
-            });
+      $mdDialog.show(confirmDialog).then(function () {
+        LocalCacheService.clearAllCache();
+        GlobalVariable.DownloadProgress.Reset();
+        LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+        var userProfile = UserProfileService.getDefault();
+        userProfile.ID = UtilityFunction.guid();
+        UserProfileService.saveLocal(userProfile);
+        UserProfileService.postToServerCallback(function () {
+          console.log('Setting: reset userProfile and uploaded. UserID: ' + userProfile.ID);
+          UserProfileService.cloneItem(userProfile.ID, function () {
+            LocalCacheService.prepareCache(UserProfileService.getLatest(), true);
           });
-        }, function () {
-          console.log("User decide to quit reset.");
         });
+      }, function () {
+        console.log("User decide to quit reset.");
+      });
     }
   })
   .controller("AddCategoryCtrl", function ($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
@@ -506,13 +506,13 @@ angular
       if ($cordovaNetwork.isOffline()) {
         alert($scope.subMenuProfileGeneral.NetworkWarning);
         return;
-      }else if (typeof $scope.categoryName == "undefined" || $scope.categoryName == "") {
+      } else if (typeof $scope.categoryName == "undefined" || $scope.categoryName == "") {
         alert($scope.subMenuProfileGeneral.CategoryWarning);
         return;
-      }else if (typeof $scope.inputLanguage == "undefined" || $scope.inputLanguage == "") {
+      } else if (typeof $scope.inputLanguage == "undefined" || $scope.inputLanguage == "") {
         alert($scope.subMenuProfileGeneral.LanguageWarning);
         return;
-      }else if (typeof document.getElementById("myImage").src == "undefined" || document.getElementById("myImage").src == "") {
+      } else if (typeof document.getElementById("myImage").src == "undefined" || document.getElementById("myImage").src == "") {
         alert($scope.subMenuProfileGeneral.ImageWaring);
         return;
       }
@@ -556,18 +556,30 @@ angular
       });
     };
   })
-  .controller("WelcomeCtrl", function ($scope,UserProfileService) {
+  .controller("WelcomeCtrl", function ($scope, UserProfileService) {
     $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Menu", $scope.currentDisplayLanguage);
-   })
+  })
   .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
     $scope.inputAdd = "";
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Sentence", $scope.currentDisplayLanguage);
-    $scope.onSentenceClick = function (sentence) {
+    $scope.onSentenceClick = function (ev, sentence) {
       console.log("Select Sentence:" + sentence.ID + " " + sentence.DisplayName + " " + sentence.DisplayNameLanguage);
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + sentence.ID + ".mp3");
+      var targetScope = $scope.$new();
+      targetScope.sentenceObject = sentence;
+      targetScope.Title = UtilityFunction.getObjectTranslation(sentence, $scope.currentDisplayLanguage);
+      $mdDialog.show({
+        controller: SentencePopupController,
+        templateUrl: "templates/popup-sentence.tmpl.html",
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        scope: targetScope,
+        fullscreen: false
+      });
     };
     $scope.sentenceAdd = function () {
       $scope.currentConstructSentence = $scope.currentConstructSentence + $scope.inputAdd;
@@ -600,11 +612,11 @@ angular
       }).then(function (targetText) {
         //Ok: Do nothing
       }, function (targetText) {
-          if (targetText != undefined) {
-            $scope.currentConstructSentence = $scope.currentConstructSentence + targetText;
-            GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
-          }
-        });
+        if (targetText != undefined) {
+          $scope.currentConstructSentence = $scope.currentConstructSentence + targetText;
+          GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
+        }
+      });
     };
     $scope.upLoadSentence = function () {
       if ($scope.currentConstructSentence == undefined || $scope.currentConstructSentence == "") {
@@ -638,7 +650,31 @@ angular
         }
         $mdDialog.cancel(targetText);
       };
-    }
+    };
+    function SentencePopupController($scope, $mdDialog, $cordovaMedia) {
+      $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("CategoryGrid", $scope.currentDisplayLanguage);
+      $scope.enableEdit = false;
+      $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
+      $scope.selectedDisplayLanguage = $scope.currentDisplayLanguage;
+      $scope.cancel = function () {
+        $mdDialog.cancel("");
+      };
+      $scope.enableEditTog = function () {
+        $scope.enableEdit = !$scope.enableEdit;
+      };
+      $scope.popupLanguageChange = function () {
+        alert($scope.selectedDisplayLanguage);
+      };
+      $scope.deleteThisSentence = function (sentenceID) {
+        alert("deleteThisSentence");
+      };
+      $scope.reorderAddTopSentence = function () {
+        alert("reorderAddTopSentence");
+      };
+      $scope.editText = function () {
+        alert("editText");
+      };
+    };
   })
   .controller("SearchCtrl", function ($scope, $state, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
     $scope.userProfile = UserProfileService.getLatest();
