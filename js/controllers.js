@@ -429,18 +429,29 @@ angular
         alert($scope.subMenuProfileGeneral.NetworkWarning);
         return;
       }
-      LocalCacheService.clearAllCache();
-      var userProfile = UserProfileService.getDefault();
-      userProfile.ID = UtilityFunction.guid();
-      UserProfileService.saveLocal(userProfile);
-      UserProfileService.postToServerCallback(function () {
-        console.log('Setting: reset userProfile and uploaded. UserID: ' + userProfile.ID);
-        UserProfileService.cloneItem(userProfile.ID, function () {
+      var confirmDialog = $mdDialog.confirm()
+        .title($scope.subMenuProfileGeneral.Notification)
+        .textContent($scope.subMenuProfileObject.ResetConfirmWarning)
+        .targetEvent(event)
+        .ok($scope.subMenuProfileGeneral.ConfirmButton)
+        .cancel($scope.subMenuProfileGeneral.CancelButton);
+
+        $mdDialog.show(confirmDialog).then(function () {
+          LocalCacheService.clearAllCache();
           GlobalVariable.DownloadProgress.Reset();
-          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-          LocalCacheService.prepareCache(UserProfileService.getLatest(), true);
+          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);          
+          var userProfile = UserProfileService.getDefault();
+          userProfile.ID = UtilityFunction.guid();
+          UserProfileService.saveLocal(userProfile);
+          UserProfileService.postToServerCallback(function () {
+            console.log('Setting: reset userProfile and uploaded. UserID: ' + userProfile.ID);
+            UserProfileService.cloneItem(userProfile.ID, function () {
+              LocalCacheService.prepareCache(UserProfileService.getLatest(), true);
+            });
+          });
+        }, function () {
+          console.log("User decide to quit reset.");
         });
-      });
     }
   })
   .controller("AddCategoryCtrl", function ($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
