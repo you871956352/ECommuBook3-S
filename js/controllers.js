@@ -133,7 +133,7 @@ angular
         fullscreen: false // Only for -xs, -sm breakpoints.
       });
     };
-    function DialogController($scope, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, $cordovaFileTransfer, $cordovaFile, UserProfileService) {
+    function DialogController($scope, $mdDialog, $cordovaMedia, $http, $ionicSideMenuDelegate, $cordovaFileTransfer, $cordovaFile, UserProfileService) {
       $scope.enableEdit = false;
       $scope.cancel = function () {
         $mdDialog.cancel();
@@ -189,16 +189,36 @@ angular
           alert($scope.subMenuProfileObject.EditWarning);
         }
         else {
-          GlobalVariable.DownloadProgress.Reset();
-          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-          newUserProfile = UserProfileService.editTargetItem($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID, $scope.selectedDisplayLanguage, $scope.EditNewText);
-          LocalCacheService.deleteLocalAudioAllLanguage($scope.userProfile, $scope.selectItemObject.ID);
-          UserProfileService.saveLocal(newUserProfile);
-          UserProfileService.postToServerCallback(function () {
-            UserProfileService.getOnline(newUserProfile.ID, function () {
-              LocalCacheService.prepareCache(UserProfileService.getLatest());
+          var returnObject = UserProfileService.editTargetItem($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID, $scope.selectedDisplayLanguage, $scope.EditNewText);
+          var newUserProfile = returnObject.UserProfile;
+          if (returnObject.Type == "DisplayName") {
+            GlobalVariable.DownloadProgress.Reset();
+            LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+            LocalCacheService.deleteLocalAudioAllLanguage($scope.userProfile, $scope.selectItemObject.ID);
+            UserProfileService.saveLocal(newUserProfile);
+            UserProfileService.postToServerCallback(function () {
+              UserProfileService.getOnline(newUserProfile.ID, function () {
+                LocalCacheService.prepareCache(UserProfileService.getLatest());
+              });
             });
-          });
+          }
+          else if (returnObject.Type == "MultiLanguage") {
+            GlobalVariable.DownloadProgress.Reset();
+            LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+            var speakerObject = GlobalVariable.GetDefaultSpeakerForDisplayLanguage($scope.currentDisplayLanguage)
+            var targetDirectory = GlobalVariable.LocalCacheDirectory() + "audio/";
+            var currentSpeechLanguageCode = speakerObject.targetSpeechLanguage;
+            var currentSpeechGender = speakerObject.targetSpeechGender;
+            var targetName = "bing" + "/" + currentSpeechLanguageCode + "/" + currentSpeechGender + "/" + $scope.selectItemObject.ID + ".mp3";
+            $cordovaFile.removeFile(targetDirectory, targetName);
+            var editItem = { "userID": $scope.userProfile.ID, "targetID": $scope.selectItemObject.ID, "targetLanguage": $scope.selectedDisplayLanguage, "revisedText": $scope.EditNewText };
+            $http.post(ServerPathVariable.PostUserEditPath(), editItem)
+              .then(function (data) {
+                console.log("Post User Edit success:" + JSON.stringify(data));
+                LocalCacheService.prepareCache(UserProfileService.getLatest());
+            });
+          }
+
         }
       };
       $scope.enableEditTog = function () {

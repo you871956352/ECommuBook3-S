@@ -110,7 +110,7 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
                 for (var k = 0; k < UserProfile.Categories[i].Items[j].DisplayMultipleLanguage.length; k++) {
                   if (UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Language == targetLanguage) {
                     UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text = targetText;
-                    return UserProfile;
+                    return { "UserProfile": UserProfile, "Type": "DisplayName" };
                   }
                 }
                 break;
@@ -129,7 +129,7 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
                 for (var k = 0; k < UserProfile.Categories[i].Items[j].DisplayMultipleLanguage.length; k++) {
                   if (UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Language == targetLanguage) {
                     UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text = targetText;
-                    return UserProfile;
+                    return { "UserProfile": UserProfile, "Type": "MultiLanguage" };
                   }
                 }
                 break;
@@ -139,7 +139,7 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
           }
         }
       }
-      return UserProfile;
+      return { "UserProfile" : UserProfile, "Type" : "null"};
     },
     deleteCategory: function (UserProfile, selectedCategoryId) {
       var idList = [];

@@ -24,6 +24,9 @@ var ServerPathVariable = new function () { //User to store server return path
   this.PostVCModelProfilePath = function () {
     return (this.hostname + this.path + "vc/VoiceModelList/post");
   };
+  this.PostUserEditPath = function () {
+    return (this.hostname + this.path + "userProfile/userEdit/post");
+  }
   this.GetUserProfileCloneItemPath = function (userUuid) {
     return (this.hostname + this.path + "userProfile/" + userUuid + '/' + '/cloneItem');
   };
