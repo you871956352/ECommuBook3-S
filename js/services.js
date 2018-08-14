@@ -197,7 +197,7 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
     deleteSentence: function (UserProfile, selectedSentenceId) {
       var targetSentenceIndex = UtilityFunction.getSentenceIndexById(UserProfile, selectedSentenceId);
       if (targetSentenceIndex == -1) {
-        console("Sentence Category Not Exist");
+        console("Sentence Not Exist");
         return UserProfile;
       }
       UserProfile.Sentences.splice(targetSentenceIndex, 1);
@@ -286,8 +286,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
                 console.log("download err:" + JSON.stringify(err));
                 GlobalVariable.DownloadProgress.ReduceTotal();
                 self.downloadImageToLocal(targetDirectory, targetName, itemId);
-              },
-              function(progress) {}
+              }
             );
         }
       );
@@ -314,14 +313,13 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
                 console.log("download err:" + JSON.stringify(err));
                 GlobalVariable.DownloadProgress.ReduceTotal();
                 self.downloadAudioToLocal(targetDirectory, speechProvider, speechLanguageCode, speechGender, displayText, audioID);
-               },
-               function(progress) {}
+               }
             );
         }
       );
     },
     prepareShareCategory: function(shareCategory) {
-      console.log("Start prepare share category");
+      console.log("Start Prepare share category Cache");
       var self = this;
       GlobalCacheVariable.FileCheck.Reset();
       //image cache
@@ -329,7 +327,6 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       for (var i = 0; i < shareCategory.categories.length; i++) {
         idList.push(shareCategory.categories[i].ID);
       }
-      console.log("Read information successful");
       GlobalVariable.DownloadProgress.Reset();
       var targetDirectory = GlobalVariable.LocalCacheDirectory();
       $cordovaFile.createDir(targetDirectory, "images", false);
@@ -391,18 +388,15 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
     },
     deleteLocalImage: function(targetID) {
       var targetDirectory = GlobalVariable.LocalCacheDirectory() + "images/";
-      var targetName = targetID + ".jpg";
-      console.log("Start remove local image: " + targetID);
-      console.log("TargetDirectory: " + targetDirectory + "\nTargetName:" + targetName);
+      var targetName = targetID + ".jpg";    
       $cordovaFile.removeFile(targetDirectory, targetName).then(
         function(result) {
-          console.log("Remove image: Success");
           $cordovaFile.checkFile(targetDirectory, targetName).then(
-            function(result) {
-              console.log("Check file: Image still exist");
+            function (exist) {
+              console.log("Check file fail: Image still exist");
+              console.log("TargetDirectory: " + targetDirectory + ", TargetName:" + targetName);            
             },
-            function(err) {
-              console.log("Check file: Image removed.");
+            function(remove) {
               GlobalCacheVariable.DeleteCheck.AddDeletedFile();
             }
           );
@@ -418,17 +412,14 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       var currentSpeechLanguageCode = userProfile.SPEECH_LANGUAGE_CODE;
       var currentSpeechGender = userProfile.SPEECH_GENDER;
       var targetName = speechProvider + "/" + currentSpeechLanguageCode + "/" + currentSpeechGender + "/" + targetID +  ".mp3";
-      console.log("Start remove local audio: " + targetID);
-      console.log("TargetDirectory: " + targetDirectory + "\nTargetName:" + targetName);
       $cordovaFile.removeFile(targetDirectory, targetName).then(
         function(result) {
-          console.log("Remove audio: Success");
           $cordovaFile.checkFile(targetDirectory, targetName).then(
-            function(result) {
-              console.log("Check file: Audio still exist");
+            function (exist) {
+              console.log("Check file fail: audio still exist");
+              console.log("TargetDirectory: " + targetDirectory + ", TargetName:" + targetName);
             },
-            function(err) {
-              console.log("Check file: Audio removed.");
+            function(remove) {
               GlobalCacheVariable.DeleteCheck.AddDeletedFile();
             }
           );
@@ -454,7 +445,6 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       var path = GlobalVariable.LocalCacheDirectory();
       $cordovaFile.removeRecursively(path,"images").then(
         function(result) {
-          console.log("Clear image: Success");
           $cordovaFile.checkDir(path, "images").then(
             function(result) {
               console.log("Check clear: Image still exist");
@@ -470,7 +460,6 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       );
       $cordovaFile.removeRecursively(path,"audio").then(
         function(result) {
-          console.log("Clear audio: Success");
           $cordovaFile.checkDir(path, "audio").then(
             function(result) {
               console.log("Check clear: Audio still exist");

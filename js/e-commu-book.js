@@ -316,7 +316,6 @@ var UtilityFunction = new function () {
         }
       }
     }
-    console.log("Cannot find this item");
     return {};
   };
   this.getObjectTranslation = function (itemObject, targetLanguage) {
@@ -449,7 +448,6 @@ var UtilityFunction = new function () {
   this.getFirstUnrecordedSentence = function (voiceModel) {
     for (var i = 0; i < voiceModel.RecordingSentences.length; i++) {
       if (voiceModel.RecordingSentences[i].IsRecorded == false) {
-        console.log("getFirstUnrecordedSentence:" +  voiceModel.RecordingSentences[i].DisplayName);
         return voiceModel.RecordingSentences[i];
       }
     }

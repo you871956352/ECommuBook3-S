@@ -23,9 +23,9 @@ angular
         if ($cordovaNetwork.isOffline()) {
           alert($scope.subMenuProfileGeneral.NetworkWarning);
           return;
-        } else {
+        }
+        else {
           window.localStorage.setItem("loggedIn", 1);
-          console.log("First run: initialization");
           GlobalVariable.DownloadProgress.Reset();
           LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
           LocalCacheService.prepareCache($scope.userProfile, true);
@@ -55,15 +55,10 @@ angular
         .targetEvent(event)
         .ok($scope.subMenuProfileGeneral.ConfirmButton)
         .cancel($scope.subMenuProfileGeneral.CancelButton);
-
       $mdDialog.show(confirmDialog).then(function () {
-        console.log("Shared Category ID: " + ServerPathVariable.GetUploadSharePath(categoryID));
         $http.get(ServerPathVariable.GetUploadSharePath(categoryID)).then(function (data) {
-          console.log("Success");
           alert($scope.subMenuProfileObject.SuccessAlert);
         });
-      }, function () {
-        console.log("User decide to quit share");
       });
     };
     $scope.reorderAddTopCategory = function (event, categoryID) {
@@ -78,10 +73,8 @@ angular
         var newUserProfile = UserProfileService.setTargetCategoryTop($scope.userProfile, $scope.categoryId);
         UserProfileService.saveLocal(newUserProfile);
         UserProfileService.postToServerCallback(function () {
-          console.log("Post to Server After Reorder");
+          console.log("Post to Server After Reorder Category Success");
         });
-      }, function () {
-        console.log("User decide to quit share");
       });
     };
     $scope.deleteThisCategory = function (event, categoryID) {
@@ -91,14 +84,13 @@ angular
         .targetEvent(event)
         .ok($scope.subMenuProfileGeneral.ConfirmButton)
         .cancel($scope.subMenuProfileGeneral.CancelButton);
-
       $mdDialog.show(confirmDialog).then(function () {
         var returnObject = UserProfileService.deleteCategory($scope.userProfile, categoryID);
         var newUserProfile = returnObject.UserProfile;
         var idList = returnObject.idList;
         GlobalCacheVariable.DeleteCheck.Reset();
         GlobalCacheVariable.DeleteCheck.SetFileToDelete(idList.length * 2);
-        console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete + "idList leangth: " + idList.length);
+        console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete + "idList length: " + idList.length);
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate, true);
         $scope.userProfile = newUserProfile;
         UserProfileService.saveLocal($scope.userProfile);
@@ -108,8 +100,6 @@ angular
           }
           LocalCacheService.checkDelete(true);
         });
-      }, function () {
-        console.log("User decide to quit delete");
       });
     }
     $scope.enableEditCategoryTog = function () {
@@ -130,7 +120,7 @@ angular
         targetEvent: ev,
         clickOutsideToClose: true,
         scope: targetScope,
-        fullscreen: false // Only for -xs, -sm breakpoints.
+        fullscreen: false
       });
     };
     function DialogController($scope, $mdDialog, $cordovaMedia, $http, $ionicSideMenuDelegate, $cordovaFileTransfer, $cordovaFile, UserProfileService) {
@@ -145,7 +135,7 @@ angular
         var newUserProfile = UserProfileService.setTargetItemTop($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID);
         UserProfileService.saveLocal(newUserProfile);
         UserProfileService.postToServerCallback(function () {
-          console.log("Post to Server After Reorder Item");
+          console.log("Post to Server After Reorder Item Success");
         });
       };
       $scope.deleteThisItem = function (categoryID, itemID) {
@@ -172,15 +162,12 @@ angular
       $scope.popupLanguageChange = function () {
         $scope.selectedItemName = UtilityFunction.getObjectTranslation($scope.selectItemObject, $scope.selectedDisplayLanguage);
         if ($scope.selectedDisplayLanguage == $scope.currentDisplayLanguage) {
-          console.log("Return back to current Display Language...");
           $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
         }
         else {
-          console.log("Auto Create Target Language Speaker...");
           $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.selectedDisplayLanguage);
           $scope.DefaultSpeakerObject = GlobalVariable.GetDefaultSpeakerForDisplayLanguage($scope.selectedDisplayLanguage);
           var targetDirectory = GlobalVariable.LocalCacheDirectory();
-          console.log(targetDirectory + " " + $scope.DefaultSpeakerObject.targetSpeechLanguage + " " + $scope.DefaultSpeakerObject.targetSpeechGender + " " + $scope.selectedItemName + " " + $scope.selectItemObject.ID);
           LocalCacheService.downloadAudioToLocal(targetDirectory, "bing", $scope.DefaultSpeakerObject.targetSpeechLanguage, $scope.DefaultSpeakerObject.targetSpeechGender, $scope.selectedItemName, $scope.selectItemObject.ID);
         }
       };
@@ -207,12 +194,11 @@ angular
             LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
             var speakerObject = GlobalVariable.GetDefaultSpeakerForDisplayLanguage($scope.selectedDisplayLanguage)
             var targetName = "bing" + "/" + speakerObject.targetSpeechLanguage + "/" + speakerObject.targetSpeechGender + "/" + $scope.selectItemObject.ID + ".mp3";
-            //alert(targetDirectory + " " + targetName);
             $cordovaFile.removeFile(GlobalVariable.LocalCacheDirectory() + "audio/", targetName);
             var editItem = { "userID": $scope.userProfile.ID, "targetID": $scope.selectItemObject.ID, "targetLanguage": $scope.selectedDisplayLanguage, "revisedText": $scope.EditNewText };
             $http.post(ServerPathVariable.PostUserEditPath(), editItem)
               .then(function (data) {
-                console.log("Post User Edit success:" + JSON.stringify(data));
+                console.log("Post User Edit  to server Success");
                 LocalCacheService.prepareCache(UserProfileService.getLatest());
               });
           }
@@ -234,7 +220,7 @@ angular
         targetEvent: ev,
         clickOutsideToClose: false,
         scope: targetScope,
-        fullscreen: false // Only for -xs, -sm breakpoints.
+        fullscreen: false
       });
     };
     function AddItemController($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, UserProfileService, LocalCacheService) {
@@ -250,13 +236,7 @@ angular
           alert($scope.subMenuProfileGeneral.NetworkWarning);
           return;
         }
-        var displayName = $scope.itemName, selectedCategoryId = $scope.selectedCategoryId, inputLanguage = $scope.inputLanguage;
-        console.log("displayname:" + displayName + "selectedCategoryId:" + selectedCategoryId + "inputLanguage:" + inputLanguage);
-        if (typeof displayName == "undefined" || displayName == "") {
-          alert($scope.subMenuProfileGeneral.LanguageWarning);
-          return;
-        }
-        if (typeof inputLanguage == "undefined" || inputLanguage == "") {
+        if (typeof $scope.itemName == "undefined" || $scope.itemName == "") {
           alert($scope.subMenuProfileGeneral.LanguageWarning);
           return;
         }
@@ -266,16 +246,14 @@ angular
         }
         GlobalVariable.DownloadProgress.Reset();
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-        console.log("Item ID:" + $scope.uuid);
         var userProfile = UserProfileService.getLatest();
-        var newItem = { ID: $scope.uuid, DisplayName: displayName, DisplayNameLanguage: $scope.inputLanguage, DisplayMultipleLanguage: [] };
-        var url = ServerPathVariable.getTranslationsPath(inputLanguage, newItem.DisplayName);
+        var newItem = { ID: $scope.uuid, DisplayName: $scope.itemName, DisplayNameLanguage: $scope.inputLanguage, DisplayMultipleLanguage: [] };
+        var url = ServerPathVariable.getTranslationsPath($scope.inputLanguage, newItem.DisplayName);
         $http({ url: url, method: "GET" }).then(function (data) {
           newItem.DisplayMultipleLanguage = data.data;
-          console.log(JSON.stringify(newItem));
-          var categoryIndex = UtilityFunction.getCategoryIndexById(UserProfileService.getLatest(), selectedCategoryId);
+          console.log("New Item: " + JSON.stringify(newItem));
+          var categoryIndex = UtilityFunction.getCategoryIndexById(UserProfileService.getLatest(), $scope.selectedCategoryId);
           if (categoryIndex == -1) {
-            console.log("Categort Id not found:" + selectedCategoryId);
             return;
           }
           userProfile.Categories[categoryIndex].Items.push(newItem);
@@ -289,19 +267,14 @@ angular
             options.mimeType = "image/jpeg";
             options.httpMethod = "POST";
             options.params = { uuid: newItem.ID };
-            console.log(JSON.stringify(options));
             $cordovaFileTransfer.upload(server, filePath, options).then(
-              function (result) {
-                console.log(JSON.stringify(result));
+              function (result) {            
                 var userProfile = UserProfileService.getLatest();
                 UserProfileService.getOnline(userProfile.ID, function () {
                   LocalCacheService.prepareCache(UserProfileService.getLatest());
+                  console.log("Add Item Success" + JSON.stringify(result));
                 });
-              },
-              function (err) { // Error
-                console.log(JSON.stringify(err));
-              },
-              function (progress) { }
+              }
             );
           });
         });
@@ -699,8 +672,6 @@ angular
             LocalCacheService.deleteLocalAudio($scope.userProfile, sentenceID);
             LocalCacheService.checkDelete(false);
           });
-        }, function () {
-          console.log("User decide to quit delete");
         });
       };
       $scope.reorderAddTopSentence = function () {
