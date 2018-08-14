@@ -205,12 +205,10 @@ angular
           else if (returnObject.Type == "MultiLanguage") {
             GlobalVariable.DownloadProgress.Reset();
             LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-            var speakerObject = GlobalVariable.GetDefaultSpeakerForDisplayLanguage($scope.currentDisplayLanguage)
-            var targetDirectory = GlobalVariable.LocalCacheDirectory() + "audio/";
-            var currentSpeechLanguageCode = speakerObject.targetSpeechLanguage;
-            var currentSpeechGender = speakerObject.targetSpeechGender;
-            var targetName = "bing" + "/" + currentSpeechLanguageCode + "/" + currentSpeechGender + "/" + $scope.selectItemObject.ID + ".mp3";
-            $cordovaFile.removeFile(targetDirectory, targetName);
+            var speakerObject = GlobalVariable.GetDefaultSpeakerForDisplayLanguage($scope.selectedDisplayLanguage)
+            var targetName = "bing" + "/" + speakerObject.targetSpeechLanguage + "/" + speakerObject.targetSpeechGender + "/" + $scope.selectItemObject.ID + ".mp3";
+            //alert(targetDirectory + " " + targetName);
+            $cordovaFile.removeFile(GlobalVariable.LocalCacheDirectory() + "audio/", targetName);
             var editItem = { "userID": $scope.userProfile.ID, "targetID": $scope.selectItemObject.ID, "targetLanguage": $scope.selectedDisplayLanguage, "revisedText": $scope.EditNewText };
             $http.post(ServerPathVariable.PostUserEditPath(), editItem)
               .then(function (data) {
