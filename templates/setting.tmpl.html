@@ -11,7 +11,7 @@
 	    </md-card-title>
 
 	    <md-card-content>
-        <h1 class="md-title">{{subMenuProfileGeneral.DisplayLanguage}}</h1>
+        <span class="md-title">{{subMenuProfileGeneral.DisplayLanguage}}</span>
 		    <div layout="row">
 		      <md-input-container>
 		        <md-select ng-model="selectedDisplayLanguage" ng-change="onSelectedDisplayLanguageChanged()">
@@ -19,7 +19,7 @@
 		        </md-select>
 		      </md-input-container>
 		    </div>
-        <h1 class="md-title">{{subMenuProfileGeneral.SpeechLanguage}}</h1>
+        <span class="md-title">{{subMenuProfileGeneral.SpeechLanguage}}</span>
 		    <div layout="row">
 		      <md-input-container>
 		        <md-select ng-model="selectedSpeechLanguage" ng-change="onSelectedSpeechLanguageChanged()">
@@ -27,7 +27,7 @@
 		        </md-select>
 		      </md-input-container>
 		    </div>
-        <h1 class="md-title">{{subMenuProfileGeneral.SpeakerGender}}</h1>
+        <span class="md-title">{{subMenuProfileGeneral.SpeakerGender}}</span>
 		    <div layout="row">
 		      <md-input-container>
 		        <md-select ng-model="selectedSpeechGender" ng-change="onSelectedSpeechGenderChanged()">
@@ -48,9 +48,9 @@
 	    </md-card-title>
 
       <md-card-content>
-        <h1 class="md-title">{{subMenuProfileObject.PicSize}}</h1>
+        <span class="md-title">{{subMenuProfileObject.PicSize}}</span>
         <md-slider ng-model="itemNormalPicSize" min="180" max="240" ng-change="onItemNormalPicSizeChanged()"></md-slider>
-        <h1 class="md-title">{{subMenuProfileObject.FontSize}}</h1>
+        <span class="md-title">{{subMenuProfileObject.FontSize}}</span>
         <md-slider ng-model="itemNormalFontSize" min="12" max="108" ng-change="onItemNormalFontSizeChanged()"></md-slider>
         <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">{{subMenuProfileObject.Example}}</span>
         <md-button class="md-raised" ng-click=onConfirmAppearanceButtonClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>

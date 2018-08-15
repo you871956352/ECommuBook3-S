@@ -6,9 +6,9 @@
           <span class="md-headline">{{subMenuProfileObject.SearchGuide1}}</span><span flex></span>
         </md-card-title>
         <md-card-content>
-          <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
+          <span style="font-size:{{itemNormalFontSize}}px" class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
             {{subMenuProfileGeneral.DisplayLanguage}}: {{displayLanguage.name}}
-          </h1>
+          </span>
         </md-card-content>
         <md-card-content>
           <md-button class="md-raised" ng-click=searchRecording()>{{RecordState}}</md-button>
