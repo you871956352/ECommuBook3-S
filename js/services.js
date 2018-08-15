@@ -530,11 +530,7 @@ myModule.factory("ShareCategoryService", function ($http, $localStorage) { //Sto
       console.log("Read shareCategory clone content online.");
       $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryID)).then(function (data) {
         $localStorage.shareCloneContent = data.data;
-
       });
-    },
-    getShareCategoryCloneContent: function(categoryID){
-      this.getOnlineCloneContent(categoryID);
       return $localStorage.shareCloneContent;
     }
   };

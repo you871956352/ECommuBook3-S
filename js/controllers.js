@@ -742,7 +742,7 @@ angular
       //alert(resultObject.parent.ID);
     }
   })
-  .controller("ShareCtrl", function ($scope, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
+  .controller("ShareCtrl", function ($scope, $http, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = ShareCategoryService.getShareCategory();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Download", $scope.currentDisplayLanguage);
@@ -755,9 +755,9 @@ angular
     };
     $scope.onItemClickedDownload = function (ev, categoryId) {
       var targetScope = $scope.$new();
+      targetScope.enableView = false;
       targetScope.selectedCategoryId = categoryId;
-      targetScope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent(categoryId);
-      targetScope.selectedCategoryName = "";
+      targetScope.selectedCategoryName = "";     
       for (var i = 0; i < $scope.shareCategory.categories.length; i++) {
         if ($scope.shareCategory.categories[i].ID == categoryId) {
           targetScope.selectedCategoryName = UtilityFunction.getObjectTranslation($scope.shareCategory.categories[i], $scope.currentDisplayLanguage);
@@ -773,7 +773,10 @@ angular
         scope: targetScope,
         fullscreen: false, // Only for -xs, -sm breakpoints.
         onComplete: function () {
-          targetScope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent(categoryId);
+          $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryId)).then(function (data) {
+            targetScope.categoryCloneContent = data.data;
+            targetScope.enableView = true;
+          });        
         }
       });;
     };
@@ -782,7 +785,7 @@ angular
         $mdDialog.cancel();
       };
       $scope.getOnlineResource = function (ev) {
-        $scope.categoryCloneContent = ShareCategoryService.getShareCategoryCloneContent($scope.selectedCategoryId);
+        $scope.categoryCloneContent = ShareCategoryService.getOnlineCloneContent($scope.selectedCategoryId);
       };
       $scope.downloadToLocal = function (ev) {
         var url = ServerPathVariable.GetAddCategoryToUserProfilePath($scope.userProfile.ID, $scope.selectedCategoryId);
