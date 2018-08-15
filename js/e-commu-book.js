@@ -451,6 +451,7 @@ var UtilityFunction = new function () {
         return voiceModel.RecordingSentences[i];
       }
     }
+    return getSampleCompleteSentence();
   };
   this.normalizeDisplayName = function (text) {
     return text

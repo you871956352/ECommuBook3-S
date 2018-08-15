@@ -388,13 +388,13 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
     },
     deleteLocalImage: function(targetID) {
       var targetDirectory = GlobalVariable.LocalCacheDirectory() + "images/";
-      var targetName = targetID + ".jpg";    
+      var targetName = targetID + ".jpg";
       $cordovaFile.removeFile(targetDirectory, targetName).then(
         function(result) {
           $cordovaFile.checkFile(targetDirectory, targetName).then(
             function (exist) {
               console.log("Check file fail: Image still exist");
-              console.log("TargetDirectory: " + targetDirectory + ", TargetName:" + targetName);            
+              console.log("TargetDirectory: " + targetDirectory + ", TargetName:" + targetName);
             },
             function(remove) {
               GlobalCacheVariable.DeleteCheck.AddDeletedFile();
@@ -671,7 +671,7 @@ myModule.factory("VoiceModelService", function($http, $localStorage) { //Store U
   return {
     getOnline: function(userId,completeCallback) {
       $http.get(ServerPathVariable.GetVoiceModelProfilePath(userId)).then(function(data) {
-        //console.log("Get Online VoiceModel Success: " +  JSON.stringify(data));
+        console.log("Get Online VoiceModel Success: " +  JSON.stringify(data));
         $localStorage.voiceModel = data.data;
         if (typeof completeCallback == "function") {
           completeCallback();
@@ -685,7 +685,7 @@ myModule.factory("VoiceModelService", function($http, $localStorage) { //Store U
       }
       else {
         console.log("No VoiceModel in LocalStorage. Read sample voiceModel.");
-        self.saveLocal(self.getDefault());
+        self.saveLocal(self.getDefault(id));
         self.postToServerCallback(self.getDefault(id),function () {
           self.getOnline(id);
         })
