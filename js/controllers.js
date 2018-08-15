@@ -681,9 +681,6 @@ angular
           console.log("Post to Server After Reorder Sentence");
         });
       };
-      $scope.editText = function () {
-        alert("editText function not complete:" + $scope.EditNewText);
-      };
     };
   })
   .controller("SearchCtrl", function ($scope, $state, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
