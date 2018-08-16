@@ -8796,25 +8796,3 @@ function getSampleVoiceModel(){
     CategoryGridLineNumber: 3
   };
 }*/
-
-function getSampleCompleteSentence(){
-  json = {
-      "ID": "0000",
-      "DisplayName": "You have completed all sentences",
-      "DisplayMultipleLanguage": [
-        {"Language":"de","Text":"Sie haben alle Sätze abgeschlossen."},
-        {"Language":"ru","Text":"Вы завершили все приговоры"},
-        {"Language":"pt","Text":"Você concluiu todas as frases"},
-        {"Language":"ko","Text":"모든 문장이 완료"},
-        {"Language":"yue","Text":"你已經完成了所有的句子"},
-        {"Language":"en","Text":"You have completed all sentences"},
-        {"Language":"it","Text":"Aver completato tutte le frasi"},
-        {"Language":"fr","Text":"Vous avez terminé toutes les peines"},
-        {"Language":"es","Text":"Has completado todas las penas"},
-        {"Language":"zh-CHT","Text":"你已經完成了所有的句子"},
-        {"Language":"ar","Text":"لقد أتممت جميع الأحكام الصادرة"},
-        {"Language":"zh-CHS","Text":"你已经完成了所有的句子"},
-        {"Language":"ja","Text":"すべての文章を完了しています。"}]
-    };
-  return json;
-}
