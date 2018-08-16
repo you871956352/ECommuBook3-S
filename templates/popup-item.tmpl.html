@@ -22,7 +22,7 @@
           <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;">{{selectedItemName}}</span>
         </div>
       </div>
-      <md-card ng-show="enableEdit">
+      <md-card>
         <md-card-content>
           <md-input-container style="margin: auto; width: 50%;">
             <label>{{subMenuProfileObject.SelectLanguage}}</label>
@@ -32,14 +32,14 @@
           </md-input-container>
           <md-button class="md-raised" ng-click="reorderAddTopItem($event)" style="float: right">{{subMenuProfileObject.SetTopButton}}</md-button>
         </md-card-content>
-        <md-card-content>
+        <md-card-content  ng-show="enableEdit">
           <md-input-container style="margin: auto; width: 50%;">
             <label>{{subMenuProfileObject.Edit}}</label>
             <input type="text" ng-model="EditNewText">
           </md-input-container>
           <md-button class="md-raised" ng-click="editText()" style="float: right">{{subMenuProfileGeneral.ConfirmButton}}</md-button>
         </md-card-content>
-        <md-card-content>
+        <md-card-content  ng-show="enableEdit">
           <md-button class="md-raised" ng-click="deleteThisItem(categoryId, selectItemObject.ID)" style="float: right">{{subMenuProfileObject.DeleteItem}}</md-button>
         </md-card-content>
       </md-card>

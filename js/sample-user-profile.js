@@ -8773,3 +8773,10 @@ function getSampleVoiceModel(){
   };
   return json;
 }
+
+function getDefaultUserConfig() {
+  json = {
+    CategoryGridLineNumber: 3
+  };
+  return json;
+}
