@@ -609,7 +609,7 @@ myModule.factory("VoiceRecordService", function ($http, $cordovaMedia, $cordovaN
       }
       MediaPlayer.play($cordovaMedia, recordingPath);
     },
-    uploadRecordSearch: function (userID) {
+    uploadRecordSearch: function (userID, searchRangeList) {
       if (typeof recordingPath == "undefined" || recordingPath == "") {
         alert("Please recorde the audio first.");
         return;
@@ -620,9 +620,12 @@ myModule.factory("VoiceRecordService", function ($http, $cordovaMedia, $cordovaN
       options.fileName = recordingPath.substr(recordingPath.lastIndexOf("/") + 1);
       options.mimeType = "audio/wav";
       options.httpMethod = "POST";
-      options.params = { uuid: userID, operationType: "Search" };
+      options.params = { uuid: userID, operationType: "Search", SearchRange: searchRangeList };
+      alert(JSON.stringify(options.params.SearchRange));
       $cordovaFileTransfer.upload(ServerPath, recordingPath, options).then(
-        function (result) { console.log("Upload Audio to server success, " + JSON.stringify(result)); }
+        function (result) {
+          console.log("Upload Audio to server success, " + JSON.stringify(result));
+        }
       );
     },
     uploadRecordVC: function (userID, aID,successCallback) {

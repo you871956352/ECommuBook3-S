@@ -127,7 +127,6 @@ angular
       });
     };
     if(GlobalVariable.searchPopup.isSearch){
-      console.log("It's search result redirect: " + GlobalVariable.searchPopup.popupID);
       $scope.showEnlargeItemPopup( undefined,GlobalVariable.searchPopup.popupID);
       GlobalVariable.searchPopup.isSearch = false;
     }
@@ -655,6 +654,10 @@ angular
         $mdDialog.cancel(targetText);
       };
     };
+    if (GlobalVariable.searchPopup.isSearch) {
+      $scope.onSentenceClick(undefined, GlobalVariable.searchPopup.targetObject);
+      GlobalVariable.searchPopup.isSearch = false;
+    };
     function SentencePopupController($scope, $mdDialog, $cordovaMedia) {
       $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("CategoryGrid", $scope.currentDisplayLanguage);
       $scope.enableEdit = false;
@@ -724,9 +727,9 @@ angular
     $scope.RecordState = $scope.subMenuProfileGeneral.Start;
     $scope.isShowResult = false;
     $scope.isRecorded = false;
-    $scope.resultWords = ["Feeling", "Pear", "Rice"];
+    $scope.resultWords = [];
     $scope.resultObjects = [];
-    $scope.maxResultWordsDisplay = 3;
+    $scope.maxResultWordsDisplay = 10;
     $scope.CategoryRange = UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "Category");
     $scope.CategoryName = $scope.CategoryRange[0];
     if (window.cordova && window.cordova.file && window.audioinput) {
@@ -740,25 +743,27 @@ angular
     $scope.uploadRecord = function () {
       var searchRangeList;
       if ($scope.CategoryName == "All") {
-        searchRangeList = UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "All");
+        searchRangeList = { "Type": "All", "Object": UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "All") };
       }
       else {
         var targetObject = UtilityFunction.getObjectByTranslationText($scope.userProfile, $scope.CategoryName, $scope.currentDisplayLanguage);
-        searchRangeList = UtilityFunction.getWordListByObject(targetObject.object, $scope.currentDisplayLanguage, "Item");
+        searchRangeList = { "Type": "All", "Object": UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "Item") };
       }
-      //Post Video and searchRangeList to server, Need to complete
-      VoiceRecordService.uploadRecordSearch($scope.userProfile.ID);
-      //Server retun a List, then do search
-      $scope.isShowResult = true;
-      for (var i = 0; i < $scope.resultWords.length; i++) {
-        var targetIDObject = UtilityFunction.getObjectByTranslationText($scope.userProfile, $scope.resultWords[i], $scope.currentDisplayLanguage);
-        if (targetIDObject.type != "undefined") {
-          $scope.resultObjects[i] = targetIDObject;
-        }
-        if (targetIDObject.type == "item") {
-          $scope.resultObjects[i].parent = UtilityFunction.findCategoryObjectByItemID($scope.userProfile, targetIDObject.object.ID);
-        }
-      }
+      VoiceRecordService.uploadRecordSearch($scope.userProfile.ID, searchRangeList);
+      $http.get(ServerPathVariable.GetSearchResultPath($scope.userProfile.ID))
+        .then(function (data) {
+          $scope.resultWords = data.data.ResultWordList;
+          $scope.isShowResult = true;
+          for (var i = 0; i < $scope.resultWords.length; i++) {
+            var targetIDObject = UtilityFunction.getObjectByTranslationText($scope.userProfile, $scope.resultWords[i], $scope.currentDisplayLanguage);
+            if (targetIDObject.type != "undefined") {
+              $scope.resultObjects[i] = targetIDObject;
+            }
+            if (targetIDObject.type == "item") {
+              $scope.resultObjects[i].parent = UtilityFunction.findCategoryObjectByItemID($scope.userProfile, targetIDObject.object.ID);
+            }
+          }
+      });
     };
     $scope.searchRecording = function (ev) {
       if ($scope.RecordState == $scope.subMenuProfileGeneral.Start) {
@@ -773,9 +778,15 @@ angular
       }
     };
     $scope.resultGuide = function (resultObject) {
-      GlobalVariable.searchPopup.isSearch = true;
-      GlobalVariable.searchPopup.popupID = resultObject.object.ID;
-    }
+      if (resultObject.type == "item") {
+        GlobalVariable.searchPopup.isSearch = true;
+        GlobalVariable.searchPopup.popupID = resultObject.object.ID;
+      }
+      else if (resultObject.type == "sentence") {
+        GlobalVariable.searchPopup.isSearch = true;
+        GlobalVariable.searchPopup.targetObject = UtilityFunction.getObjectById($scope.userProfile, resultObject.object.ID);
+      }
+    };
   })
   .controller("ShareCtrl", function ($scope, $http, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();

@@ -35,6 +35,9 @@
           <div ng-repeat="translation in resultObject.object.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE && resultObject.type == 'item'">
             <ion-item href="#/app/category/{{resultObject.parent.ID}}" class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;" ng-click="resultGuide(resultObject)">{{translation.Text}}</ion-item>
           </div>
+          <div ng-repeat="translation in resultObject.object.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE && resultObject.type == 'sentence'">
+            <ion-item href="#/app/sentence" class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;" ng-click="resultGuide(resultObject)">{{translation.Text}}</ion-item>
+          </div>
         </md-card-content>
       </md-card>
     </div>
