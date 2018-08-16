@@ -123,6 +123,11 @@ angular
         fullscreen: false
       });
     };
+    if(GlobalVariable.searchPopup.isSearch){
+      console.log("It's search result redirect: " + GlobalVariable.searchPopup.popupID);
+      $scope.showEnlargeItemPopup( undefined,GlobalVariable.searchPopup.popupID);
+      GlobalVariable.searchPopup.isSearch = false;
+    }
     function DialogController($scope, $mdDialog, $cordovaMedia, $http, $ionicSideMenuDelegate, $cordovaFileTransfer, $cordovaFile, UserProfileService) {
       $scope.enableEdit = false;
       $scope.cancel = function () {
@@ -758,7 +763,8 @@ angular
       }
     };
     $scope.resultGuide = function (resultObject) {
-      //alert(resultObject.parent.ID);
+      GlobalVariable.searchPopup.isSearch = true;
+      GlobalVariable.searchPopup.popupID = resultObject.object.ID;
     }
   })
   .controller("ShareCtrl", function ($scope, $http, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading

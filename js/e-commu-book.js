@@ -191,6 +191,10 @@ var GlobalVariable = new function () { //User to store some global variable
     { name: "女", value: "female", language: "ko-KR"}
   ];
   this.currentConstructSentence = "";
+  this.searchPopup = new function () {
+    this.isSearch = false;
+    this.popupID = 0;
+  }
 };
 
 var GlobalCacheVariable = new function () { //
