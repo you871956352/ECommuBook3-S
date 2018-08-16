@@ -561,6 +561,13 @@ angular
         clickOutsideToClose: true,
         scope: targetScope,
         fullscreen: false
+      }).then(function (targetText) {
+        //Ok: Do nothing
+      }, function (targetText) {
+        if (targetText != undefined) {
+          $scope.currentConstructSentence = targetText;
+          GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
+        }
       });
     };
     $scope.sentenceAdd = function () {
@@ -682,6 +689,10 @@ angular
           });
         });
       };
+      $scope.copyToInput = function () {
+        var targetText = UtilityFunction.getObjectTranslation($scope.sentenceObject,$scope.currentDisplayLanguage);
+        $mdDialog.cancel(targetText);
+      }
       $scope.reorderAddTopSentence = function () {
         var newUserProfile = UserProfileService.setTargetSentenceTop($scope.userProfile, $scope.sentenceObject.ID);
         UserProfileService.saveLocal(newUserProfile);
