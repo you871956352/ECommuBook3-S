@@ -54,7 +54,7 @@
             <md-button class="md-raised" ng-click=start() ng-disabled="checkStart">{{subMenuProfileGeneral.Start}}</md-button>
             <md-button class="md-raised" ng-click=stop() ng-disabled="checkStop">{{subMenuProfileGeneral.Stop}}</md-button>
             <md-button class="md-raised" ng-click=check() ng-disabled="checkStatus">{{subMenuProfileGeneral.Check}}</md-button>
-            <md-button class="md-raised" ng-click=upload()>{{subMenuProfileGeneral.Upload}}</md-button>
+            <md-button class="md-raised" ng-click=upload() ng-disabled="checkUpload">{{subMenuProfileGeneral.Upload}}</md-button>
         </md-card-content>
       </md-card>
 

@@ -191,6 +191,10 @@ var GlobalVariable = new function () { //User to store some global variable
     { name: "女", value: "female", language: "ko-KR"}
   ];
   this.currentConstructSentence = "";
+  this.searchPopup = new function () {
+    this.isSearch = false;
+    this.popupID = 0;
+  }
 };
 
 var GlobalCacheVariable = new function () { //
@@ -228,7 +232,7 @@ var GlobalCacheVariable = new function () { //
   };
 };
 
-var UserConfigVariable = new function ($localStorage) {
+/*var UserConfigVariable = new function ($localStorage) {
   this.getDefaultConfig = new function () {
     return getDefaultUserConfig();
   };
@@ -242,7 +246,7 @@ var UserConfigVariable = new function ($localStorage) {
     }
     return $localStorage.UserConfig;
   };
-};
+};*/
 
 var MediaPlayer = new function () {
   this.media = {};
@@ -467,6 +471,7 @@ var UtilityFunction = new function () {
         return voiceModel.RecordingSentences[i];
       }
     }
+    return getSampleCompleteSentence();
   };
   this.normalizeDisplayName = function (text) {
     return text

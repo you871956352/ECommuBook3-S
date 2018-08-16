@@ -123,6 +123,11 @@ angular
         fullscreen: false
       });
     };
+    if(GlobalVariable.searchPopup.isSearch){
+      console.log("It's search result redirect: " + GlobalVariable.searchPopup.popupID);
+      $scope.showEnlargeItemPopup( undefined,GlobalVariable.searchPopup.popupID);
+      GlobalVariable.searchPopup.isSearch = false;
+    }
     function DialogController($scope, $mdDialog, $cordovaMedia, $http, $ionicSideMenuDelegate, $cordovaFileTransfer, $cordovaFile, UserProfileService) {
       $scope.enableEdit = false;
       $scope.cancel = function () {
@@ -268,7 +273,7 @@ angular
             options.httpMethod = "POST";
             options.params = { uuid: newItem.ID };
             $cordovaFileTransfer.upload(server, filePath, options).then(
-              function (result) {            
+              function (result) {
                 var userProfile = UserProfileService.getLatest();
                 UserProfileService.getOnline(userProfile.ID, function () {
                   LocalCacheService.prepareCache(UserProfileService.getLatest());
@@ -329,7 +334,7 @@ angular
       };
     };
   })
-  .controller("SettingCtrl", function ($scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService) {
+  .controller("SettingCtrl", function ($scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService, VoiceModelService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
@@ -412,8 +417,16 @@ angular
         GlobalVariable.DownloadProgress.Reset();
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
         var userProfile = UserProfileService.getDefault();
-        userProfile.ID = UtilityFunction.guid();
+        var id = UtilityFunction.guid();
+        userProfile.ID = id;
+        var voiceModel = VoiceModelService.getDefault(id);
         UserProfileService.saveLocal(userProfile);
+        VoiceModelService.saveLocal(voiceModel);
+
+        VoiceModelService.postToServerCallback(voiceModel,function () {
+          console.log('Setting: reset voiceModel and uploaded. UserID: ' + userProfile.ID);
+          VoiceModelService.getOnline(id);
+        });
         UserProfileService.postToServerCallback(function () {
           console.log('Setting: reset userProfile and uploaded. UserID: ' + userProfile.ID);
           UserProfileService.cloneItem(userProfile.ID, function () {
@@ -553,6 +566,13 @@ angular
         clickOutsideToClose: true,
         scope: targetScope,
         fullscreen: false
+      }).then(function (targetText) {
+        //Ok: Do nothing
+      }, function (targetText) {
+        if (targetText != undefined) {
+          $scope.currentConstructSentence = targetText;
+          GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
+        }
       });
     };
     $scope.sentenceAdd = function () {
@@ -674,6 +694,10 @@ angular
           });
         });
       };
+      $scope.copyToInput = function () {
+        var targetText = UtilityFunction.getObjectTranslation($scope.sentenceObject,$scope.currentDisplayLanguage);
+        $mdDialog.cancel(targetText);
+      }
       $scope.reorderAddTopSentence = function () {
         var newUserProfile = UserProfileService.setTargetSentenceTop($scope.userProfile, $scope.sentenceObject.ID);
         UserProfileService.saveLocal(newUserProfile);
@@ -739,7 +763,8 @@ angular
       }
     };
     $scope.resultGuide = function (resultObject) {
-      //alert(resultObject.parent.ID);
+      GlobalVariable.searchPopup.isSearch = true;
+      GlobalVariable.searchPopup.popupID = resultObject.object.ID;
     }
   })
   .controller("ShareCtrl", function ($scope, $http, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
@@ -757,7 +782,7 @@ angular
       var targetScope = $scope.$new();
       targetScope.enableView = false;
       targetScope.selectedCategoryId = categoryId;
-      targetScope.selectedCategoryName = "";     
+      targetScope.selectedCategoryName = "";
       for (var i = 0; i < $scope.shareCategory.categories.length; i++) {
         if ($scope.shareCategory.categories[i].ID == categoryId) {
           targetScope.selectedCategoryName = UtilityFunction.getObjectTranslation($scope.shareCategory.categories[i], $scope.currentDisplayLanguage);
@@ -776,7 +801,7 @@ angular
           $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryId)).then(function (data) {
             targetScope.categoryCloneContent = data.data;
             targetScope.enableView = true;
-          });        
+          });
         }
       });;
     };
@@ -823,12 +848,14 @@ angular
     if($scope.CollectionStatusText == "Completed"){$scope.collectionStatus = false;} else {$scope.collectionStatus = true;}
     if($scope.ModelStatusText == "Completed"){$scope.modelStatus = false;} else {$scope.modelStatus = true;}
 
-    $scope.checkStart = false;
-    $scope.checkStop = true;
-    $scope.checkStatus = true;
+    $scope.checkStart = false; $scope.checkStop = true; $scope.checkStatus = true; $scope.checkUpload = true;
     $scope.gifDisplay = false;
     $scope.start = function () { VoiceRecordService.startCapture(); $scope.checkStart = true;$scope.checkStop = false;$scope.gifDisplay = true;};
-    $scope.stop = function () { VoiceRecordService.stopCapture(id); $scope.checkStart = false;$scope.checkStop = true;$scope.checkStatus = false;$scope.gifDisplay = false;};
+    $scope.stop = function () {
+      VoiceRecordService.stopCapture(id);
+      $scope.checkStart = false; $scope.checkStop = true; $scope.checkStatus = false; $scope.gifDisplay = false;
+      if($scope.collectionStatus == true){ $scope.checkUpload = false; }
+    };
     $scope.check = function () { VoiceRecordService.checkRecord(); }
     $scope.upload = function () {
       if ($cordovaNetwork.isOffline()) {

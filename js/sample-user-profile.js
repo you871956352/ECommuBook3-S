@@ -7945,6 +7945,40 @@ function getSampleMenuProfile() {
               { "Language": "ja", "Text": "この項目を削除すると、した後それがこのカテゴリで消え去る" }]
           },
           {
+            OperationType: "AddItem",
+            DisplayMultipleLanguage: [
+              { Language: "de", Text: "Element hinzufügen" },
+              { Language: "ru", Text: "Добавить элемент" },
+              { Language: "pt", Text: "Adicionar Item" },
+              { Language: "ko", Text: "항목 추가" },
+              { Language: "yue", Text: "添加項目" },
+              { Language: "en", Text: "Add Item" },
+              { Language: "it", Text: "Aggiungi elemento" },
+              { Language: "fr", Text: "Ajouter l’article" },
+              { Language: "es", Text: "Agregar elemento" },
+              { Language: "zh-CHT", Text: "添加專案" },
+              { Language: "ar", Text: "إضافة عنصر" },
+              { Language: "zh-CHS", Text: "添加项目" },
+              { Language: "ja", Text: "項目を追加します。" }]
+          },
+          {
+            OperationType: "EditWarning",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Bitte geben Sie einen neuen Namen für dieses Element"},
+              {"Language":"ru","Text":"Пожалуйста, введите новое имя для этого элемента"},
+              {"Language":"pt","Text":"Por favor, insira um novo nome para este item"},
+              {"Language":"ko","Text":"이 항목에 대 한 새 이름을 입력 해 주세요"},
+              {"Language":"yue","Text":"請輸入此項目的新名稱"},
+              {"Language":"en","Text":"Please input a new name for this item"},
+              {"Language":"it","Text":"Si prega di inserire un nuovo nome per questo elemento"},
+              {"Language":"fr","Text":"Entrez un nouveau nom pour cet article"},
+              {"Language":"es","Text":"Por favor introduzca un nuevo nombre para este artículo"},
+              {"Language":"zh-CHT","Text":"請輸入此專案的新名稱"},
+              {"Language":"ar","Text":"الرجاء إدخال اسم جديد لهذا البند"},
+              {"Language":"zh-CHS","Text":"请输入此项目的新名称"},
+              {"Language":"ja","Text":"このアイテムの新しい名前を入力してください。"}]
+          },
+          {
             OperationType: "DeleteSentence",
             DisplayMultipleLanguage: [
               { "Language": "de", "Text": "Satz zu löschen" },
@@ -7996,38 +8030,21 @@ function getSampleMenuProfile() {
               { "Language": "ja", "Text": "この文を削除した後それがプロフィールに消え去る" }]
           },
           {
-            OperationType: "AddItem",
+            OperationType: "CopySentence",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Element hinzufügen" },
-              { Language: "ru", Text: "Добавить элемент" },
-              { Language: "pt", Text: "Adicionar Item" },
-              { Language: "ko", Text: "항목 추가" },
-              { Language: "yue", Text: "添加項目" },
-              { Language: "en", Text: "Add Item" },
-              { Language: "it", Text: "Aggiungi elemento" },
-              { Language: "fr", Text: "Ajouter l’article" },
-              { Language: "es", Text: "Agregar elemento" },
-              { Language: "zh-CHT", Text: "添加專案" },
-              { Language: "ar", Text: "إضافة عنصر" },
-              { Language: "zh-CHS", Text: "添加项目" },
-              { Language: "ja", Text: "項目を追加します。" }]
-          },
-          {
-            OperationType: "EditWarning",
-            DisplayMultipleLanguage: [
-              {"Language":"de","Text":"Bitte geben Sie einen neuen Namen für dieses Element"},
-              {"Language":"ru","Text":"Пожалуйста, введите новое имя для этого элемента"},
-              {"Language":"pt","Text":"Por favor, insira um novo nome para este item"},
-              {"Language":"ko","Text":"이 항목에 대 한 새 이름을 입력 해 주세요"},
-              {"Language":"yue","Text":"請輸入此項目的新名稱"},
-              {"Language":"en","Text":"Please input a new name for this item"},
-              {"Language":"it","Text":"Si prega di inserire un nuovo nome per questo elemento"},
-              {"Language":"fr","Text":"Entrez un nouveau nom pour cet article"},
-              {"Language":"es","Text":"Por favor introduzca un nuevo nombre para este artículo"},
-              {"Language":"zh-CHT","Text":"請輸入此專案的新名稱"},
-              {"Language":"ar","Text":"الرجاء إدخال اسم جديد لهذا البند"},
-              {"Language":"zh-CHS","Text":"请输入此项目的新名称"},
-              {"Language":"ja","Text":"このアイテムの新しい名前を入力してください。"}]
+              {"Language":"de","Text":"Satz zu kopieren"},
+              {"Language":"ru","Text":"Копия приговора"},
+              {"Language":"pt","Text":"Copie a frase"},
+              {"Language":"ko","Text":"문장 복사"},
+              {"Language":"yue","Text":"複製句"},
+              {"Language":"en","Text":"Copy Sentence"},
+              {"Language":"it","Text":"Copiare la frase"},
+              {"Language":"fr","Text":"Copier la phrase"},
+              {"Language":"es","Text":"Copia de la sentencia"},
+              {"Language":"zh-CHT","Text":"複製句"},
+              {"Language":"ar","Text":"نسخ الجملة"},
+              {"Language":"zh-CHS","Text":"复制句"},
+              {"Language":"ja","Text":"コピー文"}]
           }
         ]
       },
@@ -8774,9 +8791,30 @@ function getSampleVoiceModel(){
   return json;
 }
 
-function getDefaultUserConfig() {
+/*function getDefaultUserConfig() {
   json = {
     CategoryGridLineNumber: 3
   };
+}*/
+
+function getSampleCompleteSentence(){
+  json = {
+      "ID": "0000",
+      "DisplayName": "You have completed all sentences",
+      "DisplayMultipleLanguage": [
+        {"Language":"de","Text":"Sie haben alle Sätze abgeschlossen."},
+        {"Language":"ru","Text":"Вы завершили все приговоры"},
+        {"Language":"pt","Text":"Você concluiu todas as frases"},
+        {"Language":"ko","Text":"모든 문장이 완료"},
+        {"Language":"yue","Text":"你已經完成了所有的句子"},
+        {"Language":"en","Text":"You have completed all sentences"},
+        {"Language":"it","Text":"Aver completato tutte le frasi"},
+        {"Language":"fr","Text":"Vous avez terminé toutes les peines"},
+        {"Language":"es","Text":"Has completado todas las penas"},
+        {"Language":"zh-CHT","Text":"你已經完成了所有的句子"},
+        {"Language":"ar","Text":"لقد أتممت جميع الأحكام الصادرة"},
+        {"Language":"zh-CHS","Text":"你已经完成了所有的句子"},
+        {"Language":"ja","Text":"すべての文章を完了しています。"}]
+    };
   return json;
 }
