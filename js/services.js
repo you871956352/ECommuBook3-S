@@ -723,4 +723,24 @@ myModule.factory("VoiceModelService", function($http, $localStorage) { //Store U
   };
 });
 
-
+myModule.factory("AppearanceService", function($localStorage) { //Store User Prefile
+  return {
+    getLatest: function () {
+      var self = this;
+      if ($localStorage.AppearanceConfig) {
+        console.log("Read user's AppearanceConfig from LocalStorage.");
+      }
+      else {
+        console.log("No AppearanceConfig in LocalStorage. Read sample AppearanceConfig.");
+        self.saveLocal(self.getDefault());
+      }
+      return $localStorage.AppearanceConfig;
+    },
+    getDefault: function() {
+      return getDefaultUserConfig();
+    },
+    saveLocal: function(newAppearanceConfig) {
+      $localStorage.AppearanceConfig = newAppearanceConfig;
+    }
+  };
+});

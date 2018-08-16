@@ -65,6 +65,7 @@ var GlobalVariable = new function () { //User to store some global variable
   this.Appearance = new function () {
     this.itemNormalFontSize = parseInt((window.screen.width + window.screen.height) / 65);
     this.itemNormalPicSize = parseInt((window.screen.width + window.screen.height) / 6.5);
+    this.itemNormalPicWidth = 33;
   };
   this.DownloadProgress = new function () {
     this.Downloaded = 0;

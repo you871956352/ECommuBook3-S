@@ -3,7 +3,7 @@
     <div id="grid-container" class="container-fluid" ng-controller="CategoryCtrl" ng-cloak>
       <md-card>
         <md-card-content ng-model="category.Items">
-          <div ng-repeat="item in category.Items" style="float:left;width:33%">
+          <div ng-repeat="item in category.Items" style="float:left;width:{{itemNormalPicWidth}}%">
             <div ng-click="showEnlargeItemPopup($event, item.ID);" style="text-align:center;border:1px black dashed; height:{{itemNormalPicSize}}px">
               <img class='itemImage' src='{{ImagePath}}/{{item.ID}}.jpg' />
               <div ng-repeat="translation in item.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
@@ -23,7 +23,7 @@
           <md-button ng-show="showEditCard" class="md-raised" ng-click="shareCategory($event, category.ID)">{{subMenuProfileObject.ShareButton}}</md-button>
           <md-button ng-show="showEditCard"  class="md-raised" ng-click="deleteThisCategory($event, category.ID)">{{subMenuProfileObject.DeleteCategory}}</md-button>
         </md-card-content>
-      </md-card>   
+      </md-card>
     </div>
   </ion-content>
 </ion-view>
