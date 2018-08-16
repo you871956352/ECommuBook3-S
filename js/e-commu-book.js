@@ -50,10 +50,13 @@ var ServerPathVariable = new function () { //User to store server return path
   };
   this.GetShareCategoryClonePath = function (categoryID) {
     return this.hostname + this.path + "category/" + categoryID + "/clone";
-  }
+  };
   this.GetAddCategoryToUserProfilePath = function (userId, categoryID) {
     return this.hostname + this.path + "userProfile/" + userId + "/addCategory/" + categoryID;
-  }
+  };
+  this.GetSearchResultPath = function (userID) {
+    return this.hostname + this.path + "search/" + userID
+  };
 };
 
 var GlobalVariable = new function () { //User to store some global variable
@@ -194,7 +197,8 @@ var GlobalVariable = new function () { //User to store some global variable
   this.searchPopup = new function () {
     this.isSearch = false;
     this.popupID = 0;
-  }
+    this.targetObject = {};
+  };
 };
 
 var GlobalCacheVariable = new function () { //
@@ -347,16 +351,21 @@ var UtilityFunction = new function () {
     return "";
   };
   this.getObjectById = function (userProfile, id) {
-    for (i = 0; i < userProfile.Categories.length; i++) {
+    for (var i = 0; i < userProfile.Categories.length; i++) {
       category = userProfile.Categories[i];
       if (category.ID == id) {
         return category;
       }
-      for (j = 0; j < category.Items.length; j++) {
+      for (var j = 0; j < category.Items.length; j++) {
         item = category.Items[j];
         if (item.ID == id) {
           return item;
         }
+      }
+    }
+    for (var i = 0; i < userProfile.Sentences.length; i++) {
+      if (userProfile.Sentences[i].ID == id) {
+        return userProfile.Sentences[i];
       }
     }
     return null;
@@ -365,7 +374,7 @@ var UtilityFunction = new function () {
     for (var i = 0; i < userProfile.Categories.length; i++) {
       for (var j = 0; j < userProfile.Categories[i].DisplayMultipleLanguage.length; j++) {
         if (userProfile.Categories[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
-          if (userProfile.Categories[i].DisplayMultipleLanguage[j].Text == translationText) {
+          if (userProfile.Categories[i].DisplayMultipleLanguage[j].Text.toUpperCase() == translationText.toUpperCase()) {
             return { object: userProfile.Categories[i], type: "category" };
           }
         }
@@ -373,9 +382,18 @@ var UtilityFunction = new function () {
       for (var j = 0; j < userProfile.Categories[i].Items.length; j++) {
         for (var k = 0; k < userProfile.Categories[i].Items[j].DisplayMultipleLanguage.length; k++) {
           if (userProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Language == targetLanguage) {
-            if (userProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text == translationText) {
+            if (userProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text.toUpperCase() == translationText.toUpperCase()) {
               return { object: userProfile.Categories[i].Items[j], type: "item" };
             }
+          }
+        }
+      }
+    }
+    for (var i = 0; i < userProfile.Sentences.length; i++) {
+      for (var j = 0; j < userProfile.Sentences[i].DisplayMultipleLanguage.length; j++) {
+        if (userProfile.Sentences[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
+          if (userProfile.Sentences[i].DisplayMultipleLanguage[j].Text.toUpperCase() == translationText.toUpperCase()) {
+            return { object: userProfile.Sentences[i], type: "sentence" };
           }
         }
       }
@@ -400,6 +418,14 @@ var UtilityFunction = new function () {
               returnList.push(category.Items[k].DisplayMultipleLanguage[j].Text);
               break;
             }
+          }
+        }
+      }
+      for (var i = 0; i < userProfile.Sentences.length; i++) {
+        for (var j = 0; j < userProfile.Sentences[i].DisplayMultipleLanguage.length; j++) {
+          if (userProfile.Sentences[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
+            returnList.push(userProfile.Sentences[i].DisplayMultipleLanguage[j].Text);
+            break;
           }
         }
       }
