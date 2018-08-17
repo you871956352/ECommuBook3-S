@@ -13954,6 +13954,26 @@ function getSampleMenuProfile() {
               { "Language": "ja", "Text": "割合" }]
           }
         ]
+      },
+      {
+        OperationType: "Learning",
+        DisplayMultipleLanguage: [
+          { "Language": "de", "Text": "Lernen" },
+          { "Language": "ru", "Text": "Обучение" },
+          { "Language": "pt", "Text": "Aprendizagem" },
+          { "Language": "ko", "Text": "학습" },
+          { "Language": "yue", "Text": "學習" },
+          { "Language": "en", "Text": "Learning" },
+          { "Language": "it", "Text": "Apprendimento" },
+          { "Language": "fr", "Text": "D’apprentissage" },
+          { "Language": "es", "Text": "Aprendizaje" },
+          { "Language": "zh-CHT", "Text": "學習" },
+          { "Language": "ar", "Text": "التعلم" },
+          { "Language": "zh-CHS", "Text": "学习" },
+          { "Language": "ja", "Text": "学習" }],
+        SubPage: [
+
+        ]
       }
     ]
   };

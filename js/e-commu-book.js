@@ -240,22 +240,6 @@ var GlobalCacheVariable = new function () { //
   };
 };
 
-/*var UserConfigVariable = new function ($localStorage) {
-  this.getDefaultConfig = new function () {
-    return getDefaultUserConfig();
-  };
-  this.getUserConfig = new function () {
-    if ($localStorage.UserConfig) {
-      console.log("Read UserConfig from LocalStorage.");
-    }
-    else {
-      console.log("No UserConfig in LocalStorage. Read default UserConfig.");
-      $localStorage.UserConfig = this.getDefaultConfig();
-    }
-    return $localStorage.UserConfig;
-  };
-};*/
-
 var MediaPlayer = new function () {
   this.media = {};
   this.play = function ($cordovaMedia, src) {
