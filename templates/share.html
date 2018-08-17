@@ -21,7 +21,7 @@
                   <div style="height:{{itemNormalPicSize}}px" >
                     <img class='itemImage' src='{{ImagePath}}/{{category.ID}}.jpg' />
                     <div ng-repeat="translation in category.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-                      <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">{{translation.Text}}</span>
+                      <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">{{translation.Text}}</span>
                     </div>
                   </div>
                 </div>
