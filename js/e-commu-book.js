@@ -27,6 +27,9 @@ var ServerPathVariable = new function () { //User to store server return path
   this.PostUserEditPath = function () {
     return (this.hostname + this.path + "userProfile/userEdit/post");
   }
+  this.PostWordList = function () {
+    return (this.hostname + this.path + "search/wordList/post");
+  };
   this.GetUserProfileCloneItemPath = function (userUuid) {
     return (this.hostname + this.path + "userProfile/" + userUuid + '/' + '/cloneItem');
   };

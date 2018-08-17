@@ -743,11 +743,11 @@ angular
     $scope.uploadRecord = function () {
       var searchRangeList;
       if ($scope.CategoryName == "All") {
-        searchRangeList = { "Type": "All", "Object": UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "All") };
+        searchRangeList = { "Type": "All", "SearchRange": UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "All") };
       }
       else {
         var targetObject = UtilityFunction.getObjectByTranslationText($scope.userProfile, $scope.CategoryName, $scope.currentDisplayLanguage);
-        searchRangeList = { "Type": "All", "Object": UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "Item") };
+        searchRangeList = { "Type": "Item", "SearchRange": UtilityFunction.getWordListByObject(targetObject.object, $scope.currentDisplayLanguage, "Item") };
       }
       VoiceRecordService.uploadRecordSearch($scope.userProfile.ID, searchRangeList);
       $http.get(ServerPathVariable.GetSearchResultPath($scope.userProfile.ID))

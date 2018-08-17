@@ -620,11 +620,16 @@ myModule.factory("VoiceRecordService", function ($http, $cordovaMedia, $cordovaN
       options.fileName = recordingPath.substr(recordingPath.lastIndexOf("/") + 1);
       options.mimeType = "audio/wav";
       options.httpMethod = "POST";
-      options.params = { uuid: userID, operationType: "Search", SearchRange: searchRangeList };
-      alert(JSON.stringify(options.params.SearchRange));
+      options.params = { uuid: userID, operationType: "Search" };
+      console.log("Upload Object:" + JSON.stringify(searchRangeList));
       $cordovaFileTransfer.upload(ServerPath, recordingPath, options).then(
         function (result) {
           console.log("Upload Audio to server success, " + JSON.stringify(result));
+          $http.post(ServerPathVariable.PostWordList(), searchRangeList)
+            .then(function (data) {
+              console("Post User Edit to server Success" + JSON.stringify(data.data));
+              //TO DO: After post to server, then do a get method to get back a result list, need server side finish
+            });
         }
       );
     },
