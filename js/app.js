@@ -69,6 +69,14 @@ angular
           }
         }
       })
+      .state("app.learning", {
+        url: "/learning",
+        views: {
+          menuContent: {
+            templateUrl: "templates/learning.tmpl.html",
+          }
+        }
+      })
       .state("app.share", {
         url: "/share",
         views: {

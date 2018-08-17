@@ -6,11 +6,9 @@ angular
     $scope.$on("$ionicView.enter", function (e) {
       $scope.deviceInfomation = GlobalVariable.DeviceInformation;
       $scope.appearanceConfig = AppearanceService.getLatest();
-      //$scope.appearanceConfig = AppearanceService.getDefault();
       $scope.itemNormalFontSize = $scope.appearanceConfig.itemNormalFontSize;
       $scope.itemNormalPicSize = $scope.appearanceConfig.itemNormalPicSize;
       $scope.itemNormalPicWidth = $scope.appearanceConfig.itemNormalPicWidth;
-      //alert($scope.deviceInfomation.DeviceWidth + " " + $scope.deviceInfomation.DeviceHeight);
       $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
       $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
       $scope.userProfile = UserProfileService.getLatest();
@@ -895,4 +893,8 @@ angular
     }
     window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
     window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
+  })
+  .controller("LearningCtrl", function ($scope, UserProfileService) {
+    $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Learning", $scope.currentDisplayLanguage);
   })
