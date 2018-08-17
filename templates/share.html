@@ -16,7 +16,7 @@
         <md-card-content>
           <div class="row">
             <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="shareCategory.categories">
-              <div ng-repeat="category in shareCategory.categories" style="float:left;width:33%">
+              <div ng-repeat="category in shareCategory.categories" style="float:left;width:{{itemNormalPicWidth}}%">
                 <div ng-click="onItemClickedDownload($event, category.ID);" style="text-align:center;border:1px black dashed; height:{{itemNormalPicSize}}px">
                   <div style="height:{{itemNormalPicSize}}px" >
                     <img class='itemImage' src='{{ImagePath}}/{{category.ID}}.jpg' />

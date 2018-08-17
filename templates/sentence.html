@@ -33,7 +33,7 @@
         </md-card-title>
         <md-card-content>
           <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="userProfile.Categories">
-            <div ng-repeat="category in userProfile.Categories" style="float:left;width:33%">
+            <div ng-repeat="category in userProfile.Categories" style="float:left;width:{{itemNormalPicWidth}}%">
               <div ng-click="onCategoryClickPopup(category.ID);" style="text-align:center;border:1px black dashed;">
                 <div style="height:{{itemNormalPicSize}}px">
                   <img class='itemImage' src='{{ImagePath}}/{{category.ID}}.jpg' />

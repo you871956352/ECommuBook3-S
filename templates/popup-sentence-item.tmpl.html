@@ -12,7 +12,7 @@
 
     <md-dialog-content>
       <div class="col-md-1 grid-column" containerPositioning="relative" ng-model="selectedCategory">
-        <div ng-repeat="item in selectedCategory.Items" style="float:left;width:33%">
+        <div ng-repeat="item in selectedCategory.Items" style="float:left;width:{{itemNormalPicWidth}}%">
           <div ng-click="onAddToSentence(item.ID);" style="text-align:center;border:1px black dashed;">
             <div style="height:{{itemNormalPicSize}}px">
               <img class='itemImage' src='{{ImagePath}}/{{item.ID}}.jpg' />
