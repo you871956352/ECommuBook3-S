@@ -263,6 +263,29 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       }
       return returnObject;
     },
+    getMenuProfileOperation: function (inputLanguage) {
+      var menuProfile = this.getMenuProfile();
+      var returnObject = {};
+      if (inputLanguage == undefined) {
+        var userProfile = this.getLatest();
+        var targetLanguage = userProfile.DISPLAY_LANGUAGE;
+        console.log("No input language detected, use default userProfile config language");
+      }
+      else {
+        var targetLanguage = inputLanguage;
+      }
+      for (var i = 0; i < menuProfile.Operations.length; i++) {
+        if (menuProfile.Operations[i].DisplayMultipleLanguage != undefined) {
+          for (var j = 0; j < menuProfile.Operations[i].DisplayMultipleLanguage.length; j++) {
+            if (menuProfile.Operations[i].DisplayMultipleLanguage[j].Language == targetLanguage) {
+              returnObject[menuProfile.Operations[i].OperationType] = menuProfile.Operations[i].DisplayMultipleLanguage[j].Text;
+              break;
+            }
+          }
+        }
+      }
+      return returnObject;
+    },
   };
 });
 

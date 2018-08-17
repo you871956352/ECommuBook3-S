@@ -12381,13 +12381,7 @@ function getSampleUserProfile() {
       }
     ],
     Sentences: [],
-    deletionLog: -1,
-    log: [],
-    lastUploadedLog: 0,
     SignAgreement: true,
-    ItemText: "SHOWN",
-    Zoom: 1.6,
-    PageStyle: "2-3",
     DISPLAY_LANGUAGE: "yue",
     SPEECH_GENDER: "female",
     SPEECH_LANGUAGE_CODE: "zh-HK"
@@ -13192,23 +13186,6 @@ function getSampleMenuProfile() {
               {"Language":"ja","Text":"コピー文"}]
           }
         ]
-      },
-      {
-        OperationType: "AddItem",
-        DisplayMultipleLanguage: [
-          { Language: "de", Text: "Element hinzufügen" },
-          { Language: "ru", Text: "Добавить элемент" },
-          { Language: "pt", Text: "Adicionar Item" },
-          { Language: "ko", Text: "항목 추가" },
-          { Language: "yue", Text: "添加項目" },
-          { Language: "en", Text: "Add Item" },
-          { Language: "it", Text: "Aggiungi elemento" },
-          { Language: "fr", Text: "Ajouter l’article" },
-          { Language: "es", Text: "Agregar elemento" },
-          { Language: "zh-CHT", Text: "添加專案" },
-          { Language: "ar", Text: "إضافة عنصر" },
-          { Language: "zh-CHS", Text: "添加项目" },
-          { Language: "ja", Text: "項目を追加します。" }]
       },
       {
         OperationType: "Download",

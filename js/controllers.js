@@ -16,6 +16,7 @@ angular
       $scope.menuProfile = UserProfileService.getMenuProfile();
       $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
       $scope.subMenuProfileGeneral = UserProfileService.getMenuProfileSubObjectWithInputLanguage("General", $scope.currentDisplayLanguage);
+      $scope.menuProfileTitle = UserProfileService.getMenuProfileOperation($scope.currentDisplayLanguage);
       if (typeof $rootScope.isShowDisplayName == 'undefined') {
         $rootScope.isShowDisplayName = { checked: true };
       }
