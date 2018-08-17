@@ -6,7 +6,7 @@
           <span class="md-headline">{{subMenuProfileObject.SearchGuide1}}</span><span flex></span>
         </md-card-title>
         <md-card-content>
-          <span style="font-size:{{itemNormalFontSize}}px" class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
+          <span style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;" class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
             {{subMenuProfileGeneral.DisplayLanguage}}: {{displayLanguage.name}}
           </span>
         </md-card-content>

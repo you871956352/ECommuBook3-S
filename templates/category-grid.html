@@ -7,7 +7,7 @@
             <div ng-click="showEnlargeItemPopup($event, item.ID);" style="text-align:center;border:1px black dashed; height:{{itemNormalPicSize}}px">
               <img class='itemImage' src='{{ImagePath}}/{{item.ID}}.jpg' />
               <div ng-repeat="translation in item.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-                <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">{{translation.Text}}</span>
+                <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;line-height: {{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">{{translation.Text}}</span>
               </div>
             </div>
           </div>
