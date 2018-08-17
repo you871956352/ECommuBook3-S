@@ -69,14 +69,6 @@ angular
           }
         }
       })
-      .state("app.learning", {
-        url: "/learning",
-        views: {
-          menuContent: {
-            templateUrl: "templates/learning.tmpl.html",
-          }
-        }
-      })
       .state("app.share", {
         url: "/share",
         views: {
@@ -114,6 +106,30 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/userInformation.html",
+          }
+        }
+      })
+      .state("app.practicing", {
+        url: "/practicing",
+        views: {
+          menuContent: {
+            templateUrl: "templates/practicing.tmpl.html",
+          }
+        }
+      })
+      .state("app.poem", {
+        url: "/practicing/poem",
+        views: {
+          menuContent: {
+            templateUrl: "templates/practicing-poem.tmpl.html",
+          }
+        }
+      })
+      .state("app.pronunciation", {
+        url: "/practicing/pronunciation",
+        views: {
+          menuContent: {
+            templateUrl: "templates/practicing-pronunciation.tmpl.html",
           }
         }
       });

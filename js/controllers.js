@@ -551,7 +551,8 @@ angular
     };
   })
   .controller("WelcomeCtrl", function ($scope, UserProfileService) {
-    $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Menu", $scope.currentDisplayLanguage);
   })
   .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
@@ -895,7 +896,18 @@ angular
     window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
     window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
   })
-  .controller("LearningCtrl", function ($scope, UserProfileService) {
-    $scope.currentDisplayLanguage = UserProfileService.getLatest().DISPLAY_LANGUAGE;
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Learning", $scope.currentDisplayLanguage);
+  .controller("PracticingCtrl", function ($scope, UserProfileService) {
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Practicing", $scope.currentDisplayLanguage);
+  })
+  .controller("PoemCtrl", function ($scope, UserProfileService) {
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Poem", $scope.currentDisplayLanguage);
+  })
+  .controller("PronunciationCtrl", function ($scope, UserProfileService) {
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Pronunciation", $scope.currentDisplayLanguage);
   })

@@ -13933,21 +13933,61 @@ function getSampleMenuProfile() {
         ]
       },
       {
-        OperationType: "Learning",
+        OperationType: "Practicing",
         DisplayMultipleLanguage: [
-          { "Language": "de", "Text": "Lernen" },
-          { "Language": "ru", "Text": "Обучение" },
-          { "Language": "pt", "Text": "Aprendizagem" },
-          { "Language": "ko", "Text": "학습" },
-          { "Language": "yue", "Text": "學習" },
-          { "Language": "en", "Text": "Learning" },
-          { "Language": "it", "Text": "Apprendimento" },
-          { "Language": "fr", "Text": "D’apprentissage" },
-          { "Language": "es", "Text": "Aprendizaje" },
-          { "Language": "zh-CHT", "Text": "學習" },
-          { "Language": "ar", "Text": "التعلم" },
-          { "Language": "zh-CHS", "Text": "学习" },
-          { "Language": "ja", "Text": "学習" }],
+          { "Language": "de", "Text": "Üben" },
+          { "Language": "ru", "Text": "Практикующих" },
+          { "Language": "pt", "Text": "Praticando" },
+          { "Language": "ko", "Text": "연습" },
+          { "Language": "yue", "Text": "練習" },
+          { "Language": "en", "Text": "Practicing" },
+          { "Language": "it", "Text": "Pratica" },
+          { "Language": "fr", "Text": "Pratiquant" },
+          { "Language": "es", "Text": "Práctica de la" },
+          { "Language": "zh-CHT", "Text": "練習" },
+          { "Language": "ar", "Text": "ممارسة" },
+          { "Language": "zh-CHS", "Text": "练习" },
+          { "Language": "ja", "Text": "練習" }],
+        SubPage: [
+
+        ]
+      },
+      {
+        OperationType: "Poem",
+        DisplayMultipleLanguage: [
+          { "Language": "de", "Text": "Gedicht" },
+          { "Language": "ru", "Text": "Стихотворение" },
+          { "Language": "pt", "Text": "Poema" },
+          { "Language": "ko", "Text": "시" },
+          { "Language": "yue", "Text": "詩" },
+          { "Language": "en", "Text": "Poem" },
+          { "Language": "it", "Text": "Poesia" },
+          { "Language": "fr", "Text": "Poème" },
+          { "Language": "es", "Text": "Poema" },
+          { "Language": "zh-CHT", "Text": "詩" },
+          { "Language": "ar", "Text": "قصيدة" },
+          { "Language": "zh-CHS", "Text": "诗" },
+          { "Language": "ja", "Text": "詩" }],
+        SubPage: [
+
+        ]
+      },
+      {
+        OperationType: "Pronunciation",
+        DisplayMultipleLanguage: [
+          { "Language": "de", "Text": "Aussprache von" },
+          { "Language": "ru", "Text": "Произношение" },
+          { "Language": "pt", "Text": "Pronúncia" },
+          { "Language": "ko", "Text": "발음" },
+          { "Language": "yue", "Text": "發音" },
+          { "Language": "en", "Text": "Pronunciation" },
+          { "Language": "it", "Text": "Pronuncia di" },
+          { "Language": "fr", "Text": "Prononciation" },
+          { "Language": "es", "Text": "Pronunciación de" },
+          { "Language": "zh-CHT", "Text": "發音" },
+          { "Language": "ar", "Text": "النطق" },
+          { "Language": "zh-CHS", "Text": "发音" },
+          { "Language": "ja", "Text": "発音" }],
         SubPage: [
 
         ]
