@@ -11,1423 +11,2418 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000001",
             DisplayName: "剪指甲",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Schneiden Sie Ihre Nägel" },
-              { Language: "ru", Text: "Вырезать ногти" },
-              { Language: "pt", Text: "Cortar as unhas" },
-              { Language: "ko", Text: "손톱을 잘라" },
-              { Language: "yue", Text: "剪指甲" },
-              { Language: "en", Text: "Cut your nails" },
-              { Language: "it", Text: "Tagliare le unghie" },
-              { Language: "fr", Text: "Coupez vos ongles" },
-              { Language: "es", Text: "Cortar las uñas" },
-              { Language: "zh-CHT", Text: "剪指甲" },
-              { Language: "ar", Text: "قص الأظافر" },
-              { Language: "zh-CHS", Text: "剪指甲" },
-              { Language: "ja", Text: "あなたの爪をカットします。" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Schneiden Sie Ihre Nägel" },
-              { Language: "ru", Text: "Вырезать ногти" },
-              { Language: "pt", Text: "Cortar as unhas" },
-              { Language: "ko", Text: "손톱을 잘라" },
-              { Language: "yue", Text: "剪指甲" },
-              { Language: "en", Text: "Cut your nails" },
-              { Language: "it", Text: "Tagliare le unghie" },
-              { Language: "fr", Text: "Coupez vos ongles" },
-              { Language: "es", Text: "Cortar las uñas" },
-              { Language: "zh-CHT", Text: "剪指甲" },
-              { Language: "ar", Text: "قص الأظافر" },
-              { Language: "zh-CHS", Text: "剪指甲" },
-              { Language: "ja", Text: "あなたの爪をカットします。" }
+              {
+                "Language": "de",
+                "Text": "Schneiden Sie Ihre Nägel"
+              },
+              {
+                "Language": "ru",
+                "Text": "Вырезать ногти"
+              },
+              {
+                "Language": "pt",
+                "Text": "Cortar as unhas"
+              },
+              {
+                "Language": "ko",
+                "Text": "손톱을 잘라"
+              },
+              {
+                "Language": "yue",
+                "Text": "剪指甲"
+              },
+              {
+                "Language": "en",
+                "Text": "Cut your nails"
+              },
+              {
+                "Language": "it",
+                "Text": "Tagliare le unghie"
+              },
+              {
+                "Language": "fr",
+                "Text": "Coupez vos ongles"
+              },
+              {
+                "Language": "es",
+                "Text": "Cortar las uñas"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "剪指甲"
+              },
+              {
+                "Language": "ar",
+                "Text": "قص الأظافر"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "剪指甲"
+              },
+              {
+                "Language": "ja",
+                "Text": "あなたの爪をカットします。"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000002",
             DisplayName: "剪頭髮",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Haare schneiden" },
-              { Language: "ru", Text: "Стрижка" },
-              { Language: "pt", Text: "Corte de cabelo" },
-              { Language: "ko", Text: "머리를 잘라" },
-              { Language: "yue", Text: "剪頭髮" },
-              { Language: "en", Text: "Hair cut" },
-              { Language: "it", Text: "Taglio di capelli" },
-              { Language: "fr", Text: "Coupe de cheveux" },
-              { Language: "es", Text: "Corte de pelo" },
-              { Language: "zh-CHT", Text: "剪頭髮" },
-              { Language: "ar", Text: "قص الشعر" },
-              { Language: "zh-CHS", Text: "剪头发" },
-              { Language: "ja", Text: "髪を切って" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Haare schneiden" },
-              { Language: "ru", Text: "Стрижка" },
-              { Language: "pt", Text: "Corte de cabelo" },
-              { Language: "ko", Text: "머리를 잘라" },
-              { Language: "yue", Text: "剪頭髮" },
-              { Language: "en", Text: "Hair cut" },
-              { Language: "it", Text: "Taglio di capelli" },
-              { Language: "fr", Text: "Coupe de cheveux" },
-              { Language: "es", Text: "Corte de pelo" },
-              { Language: "zh-CHT", Text: "剪頭髮" },
-              { Language: "ar", Text: "قص الشعر" },
-              { Language: "zh-CHS", Text: "剪头发" },
-              { Language: "ja", Text: "髪を切って" }
+              {
+                "Language": "de",
+                "Text": "Haare schneiden"
+              },
+              {
+                "Language": "ru",
+                "Text": "Стрижка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Corte de cabelo"
+              },
+              {
+                "Language": "ko",
+                "Text": "머리를 잘라"
+              },
+              {
+                "Language": "yue",
+                "Text": "剪頭髮"
+              },
+              {
+                "Language": "en",
+                "Text": "Hair cut"
+              },
+              {
+                "Language": "it",
+                "Text": "Taglio di capelli"
+              },
+              {
+                "Language": "fr",
+                "Text": "Coupe de cheveux"
+              },
+              {
+                "Language": "es",
+                "Text": "Corte de pelo"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "剪頭髮"
+              },
+              {
+                "Language": "ar",
+                "Text": "قص الشعر"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "剪头发"
+              },
+              {
+                "Language": "ja",
+                "Text": "髪を切って"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000003",
             DisplayName: "去廁所",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Um auf die Toilette gehen" },
-              { Language: "ru", Text: "Чтобы перейти к ванной комнате" },
-              { Language: "pt", Text: "Para ir ao banheiro" },
-              { Language: "ko", Text: "화장실에가 서" },
-              { Language: "yue", Text: "去廁所" },
-              { Language: "en", Text: "To go to the bathroom" },
-              { Language: "it", Text: "Per andare in bagno" },
-              { Language: "fr", Text: "Pour aller à la salle de bain" },
-              { Language: "es", Text: "Para ir al baño" },
-              { Language: "zh-CHT", Text: "去廁所" },
-              { Language: "ar", Text: "للذهاب إلى الحمام" },
-              { Language: "zh-CHS", Text: "去厕所" },
-              { Language: "ja", Text: "トイレに行く" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Um auf die Toilette gehen" },
-              { Language: "ru", Text: "Чтобы перейти к ванной комнате" },
-              { Language: "pt", Text: "Para ir ao banheiro" },
-              { Language: "ko", Text: "화장실에가 서" },
-              { Language: "yue", Text: "去廁所" },
-              { Language: "en", Text: "To go to the bathroom" },
-              { Language: "it", Text: "Per andare in bagno" },
-              { Language: "fr", Text: "Pour aller à la salle de bain" },
-              { Language: "es", Text: "Para ir al baño" },
-              { Language: "zh-CHT", Text: "去廁所" },
-              { Language: "ar", Text: "للذهاب إلى الحمام" },
-              { Language: "zh-CHS", Text: "去厕所" },
-              { Language: "ja", Text: "トイレに行く" }
+              {
+                "Language": "de",
+                "Text": "Um auf die Toilette gehen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Чтобы перейти к ванной комнате"
+              },
+              {
+                "Language": "pt",
+                "Text": "Para ir ao banheiro"
+              },
+              {
+                "Language": "ko",
+                "Text": "화장실에가 서"
+              },
+              {
+                "Language": "yue",
+                "Text": "去廁所"
+              },
+              {
+                "Language": "en",
+                "Text": "To go to the bathroom"
+              },
+              {
+                "Language": "it",
+                "Text": "Per andare in bagno"
+              },
+              {
+                "Language": "fr",
+                "Text": "Pour aller à la salle de bain"
+              },
+              {
+                "Language": "es",
+                "Text": "Para ir al baño"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "去廁所"
+              },
+              {
+                "Language": "ar",
+                "Text": "للذهاب إلى الحمام"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "去厕所"
+              },
+              {
+                "Language": "ja",
+                "Text": "トイレに行く"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000004",
             DisplayName: "小便",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Pinkeln" },
-              { Language: "ru", Text: "Пи" },
-              { Language: "pt", Text: "Fazer xixi" },
-              { Language: "ko", Text: "오 줌" },
-              { Language: "yue", Text: "小便" },
-              { Language: "en", Text: "Pee" },
-              { Language: "it", Text: "Piscia" },
-              { Language: "fr", Text: "Pipi" },
-              { Language: "es", Text: "Pee" },
-              { Language: "zh-CHT", Text: "小便" },
-              { Language: "ar", Text: "تبول" },
-              { Language: "zh-CHS", Text: "小便" },
-              { Language: "ja", Text: "おしっこ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Pinkeln" },
-              { Language: "ru", Text: "Пи" },
-              { Language: "pt", Text: "Fazer xixi" },
-              { Language: "ko", Text: "오 줌" },
-              { Language: "yue", Text: "小便" },
-              { Language: "en", Text: "Pee" },
-              { Language: "it", Text: "Piscia" },
-              { Language: "fr", Text: "Pipi" },
-              { Language: "es", Text: "Pee" },
-              { Language: "zh-CHT", Text: "小便" },
-              { Language: "ar", Text: "تبول" },
-              { Language: "zh-CHS", Text: "小便" },
-              { Language: "ja", Text: "おしっこ" }
+              {
+                "Language": "de",
+                "Text": "Pinkeln"
+              },
+              {
+                "Language": "ru",
+                "Text": "Пи"
+              },
+              {
+                "Language": "pt",
+                "Text": "Fazer xixi"
+              },
+              {
+                "Language": "ko",
+                "Text": "오 줌"
+              },
+              {
+                "Language": "yue",
+                "Text": "小便"
+              },
+              {
+                "Language": "en",
+                "Text": "Pee"
+              },
+              {
+                "Language": "it",
+                "Text": "Piscia"
+              },
+              {
+                "Language": "fr",
+                "Text": "Pipi"
+              },
+              {
+                "Language": "es",
+                "Text": "Pee"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "小便"
+              },
+              {
+                "Language": "ar",
+                "Text": "تبول"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "小便"
+              },
+              {
+                "Language": "ja",
+                "Text": "おしっこ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000005",
             DisplayName: "食藥",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Nahrung und Medizin" },
-              { Language: "ru", Text: "Продовольствие и медикаменты" },
-              { Language: "pt", Text: "Alimentos e medicamentos" },
-              { Language: "ko", Text: "음식과 약" },
-              { Language: "yue", Text: "食藥" },
-              { Language: "en", Text: "Food and medicine" },
-              { Language: "it", Text: "Cibo e medicine" },
-              { Language: "fr", Text: "Nourriture et médicaments" },
-              { Language: "es", Text: "Alimentos y medicinas" },
-              { Language: "zh-CHT", Text: "食藥" },
-              { Language: "ar", Text: "المواد الغذائية والأدوية" },
-              { Language: "zh-CHS", Text: "食药" },
-              { Language: "ja", Text: "食品や医薬品" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Nahrung und Medizin" },
-              { Language: "ru", Text: "Продовольствие и медикаменты" },
-              { Language: "pt", Text: "Alimentos e medicamentos" },
-              { Language: "ko", Text: "음식과 약" },
-              { Language: "yue", Text: "食藥" },
-              { Language: "en", Text: "Food and medicine" },
-              { Language: "it", Text: "Cibo e medicine" },
-              { Language: "fr", Text: "Nourriture et médicaments" },
-              { Language: "es", Text: "Alimentos y medicinas" },
-              { Language: "zh-CHT", Text: "食藥" },
-              { Language: "ar", Text: "المواد الغذائية والأدوية" },
-              { Language: "zh-CHS", Text: "食药" },
-              { Language: "ja", Text: "食品や医薬品" }
+              {
+                "Language": "de",
+                "Text": "Nahrung und Medizin"
+              },
+              {
+                "Language": "ru",
+                "Text": "Продовольствие и медикаменты"
+              },
+              {
+                "Language": "pt",
+                "Text": "Alimentos e medicamentos"
+              },
+              {
+                "Language": "ko",
+                "Text": "음식과 약"
+              },
+              {
+                "Language": "yue",
+                "Text": "食藥"
+              },
+              {
+                "Language": "en",
+                "Text": "Food and medicine"
+              },
+              {
+                "Language": "it",
+                "Text": "Cibo e medicine"
+              },
+              {
+                "Language": "fr",
+                "Text": "Nourriture et médicaments"
+              },
+              {
+                "Language": "es",
+                "Text": "Alimentos y medicinas"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "食藥"
+              },
+              {
+                "Language": "ar",
+                "Text": "المواد الغذائية والأدوية"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "食药"
+              },
+              {
+                "Language": "ja",
+                "Text": "食品や医薬品"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000006",
             DisplayName: "上床訓覺",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Geh ins Bett" },
-              { Language: "ru", Text: "Иди спать" },
-              { Language: "pt", Text: "Vá para cama" },
-              { Language: "ko", Text: "잠자리에 들다" },
-              { Language: "yue", Text: "上床訓覺" },
-              { Language: "en", Text: "Go to bed" },
-              { Language: "it", Text: "Vai a letto" },
-              { Language: "fr", Text: "Aller se coucher" },
-              { Language: "es", Text: "Vete a dormir" },
-              { Language: "zh-CHT", Text: "上床睡覺" },
-              { Language: "ar", Text: "حان وقت النوم" },
-              { Language: "zh-CHS", Text: "上床睡觉" },
-              { Language: "ja", Text: "寝てください" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Geh ins Bett" },
-              { Language: "ru", Text: "Иди спать" },
-              { Language: "pt", Text: "Vá para cama" },
-              { Language: "ko", Text: "잠자리에 들다" },
-              { Language: "yue", Text: "上床訓覺" },
-              { Language: "en", Text: "Go to bed" },
-              { Language: "it", Text: "Vai a letto" },
-              { Language: "fr", Text: "Aller se coucher" },
-              { Language: "es", Text: "Vete a dormir" },
-              { Language: "zh-CHT", Text: "上床睡覺" },
-              { Language: "ar", Text: "حان وقت النوم" },
-              { Language: "zh-CHS", Text: "上床睡觉" },
-              { Language: "ja", Text: "寝てください" }
+              {
+                "Language": "de",
+                "Text": "Geh ins Bett"
+              },
+              {
+                "Language": "ru",
+                "Text": "Иди спать"
+              },
+              {
+                "Language": "pt",
+                "Text": "Vá para cama"
+              },
+              {
+                "Language": "ko",
+                "Text": "잠자리에 들다"
+              },
+              {
+                "Language": "yue",
+                "Text": "上床訓覺"
+              },
+              {
+                "Language": "en",
+                "Text": "Go to bed"
+              },
+              {
+                "Language": "it",
+                "Text": "Vai a letto"
+              },
+              {
+                "Language": "fr",
+                "Text": "Aller se coucher"
+              },
+              {
+                "Language": "es",
+                "Text": "Vete a dormir"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "上床睡覺"
+              },
+              {
+                "Language": "ar",
+                "Text": "حان وقت النوم"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "上床睡觉"
+              },
+              {
+                "Language": "ja",
+                "Text": "寝てください"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000007",
             DisplayName: "剃鬚",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Rasur" },
-              { Language: "ru", Text: "Бритье" },
-              { Language: "pt", Text: "Fazer a barba" },
-              { Language: "ko", Text: "면도" },
-              { Language: "yue", Text: "剃鬚" },
-              { Language: "en", Text: "Shaving" },
-              { Language: "it", Text: "Rasatura" },
-              { Language: "fr", Text: "Rasage" },
-              { Language: "es", Text: "Afeitado" },
-              { Language: "zh-CHT", Text: "剃須" },
-              { Language: "ar", Text: "حلق" },
-              { Language: "zh-CHS", Text: "剃须" },
-              { Language: "ja", Text: "シェービング" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Rasur" },
-              { Language: "ru", Text: "Бритье" },
-              { Language: "pt", Text: "Fazer a barba" },
-              { Language: "ko", Text: "면도" },
-              { Language: "yue", Text: "剃鬚" },
-              { Language: "en", Text: "Shaving" },
-              { Language: "it", Text: "Rasatura" },
-              { Language: "fr", Text: "Rasage" },
-              { Language: "es", Text: "Afeitado" },
-              { Language: "zh-CHT", Text: "剃須" },
-              { Language: "ar", Text: "حلق" },
-              { Language: "zh-CHS", Text: "剃须" },
-              { Language: "ja", Text: "シェービング" }
+              {
+                "Language": "de",
+                "Text": "Rasur"
+              },
+              {
+                "Language": "ru",
+                "Text": "Бритье"
+              },
+              {
+                "Language": "pt",
+                "Text": "Fazer a barba"
+              },
+              {
+                "Language": "ko",
+                "Text": "면도"
+              },
+              {
+                "Language": "yue",
+                "Text": "剃鬚"
+              },
+              {
+                "Language": "en",
+                "Text": "Shaving"
+              },
+              {
+                "Language": "it",
+                "Text": "Rasatura"
+              },
+              {
+                "Language": "fr",
+                "Text": "Rasage"
+              },
+              {
+                "Language": "es",
+                "Text": "Afeitado"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "剃須"
+              },
+              {
+                "Language": "ar",
+                "Text": "حلق"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "剃须"
+              },
+              {
+                "Language": "ja",
+                "Text": "シェービング"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000008",
             DisplayName: "沖涼",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Ein Bad nehmen" },
-              { Language: "ru", Text: "Принять ванну" },
-              { Language: "pt", Text: "Tomar um banho" },
-              { Language: "ko", Text: "목욕을" },
-              { Language: "yue", Text: "沖涼" },
-              { Language: "en", Text: "Take a bath" },
-              { Language: "it", Text: "Prendere un bagno" },
-              { Language: "fr", Text: "Prendre un bain" },
-              { Language: "es", Text: "Tomar un baño" },
-              { Language: "zh-CHT", Text: "洗澡" },
-              { Language: "ar", Text: "أخذ حمام" },
-              { Language: "zh-CHS", Text: "洗澡" },
-              { Language: "ja", Text: "お風呂に入る" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Ein Bad nehmen" },
-              { Language: "ru", Text: "Принять ванну" },
-              { Language: "pt", Text: "Tomar um banho" },
-              { Language: "ko", Text: "목욕을" },
-              { Language: "yue", Text: "沖涼" },
-              { Language: "en", Text: "Take a bath" },
-              { Language: "it", Text: "Prendere un bagno" },
-              { Language: "fr", Text: "Prendre un bain" },
-              { Language: "es", Text: "Tomar un baño" },
-              { Language: "zh-CHT", Text: "洗澡" },
-              { Language: "ar", Text: "أخذ حمام" },
-              { Language: "zh-CHS", Text: "洗澡" },
-              { Language: "ja", Text: "お風呂に入る" }
+              {
+                "Language": "de",
+                "Text": "Ein Bad nehmen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Принять ванну"
+              },
+              {
+                "Language": "pt",
+                "Text": "Tomar um banho"
+              },
+              {
+                "Language": "ko",
+                "Text": "목욕을"
+              },
+              {
+                "Language": "yue",
+                "Text": "沖涼"
+              },
+              {
+                "Language": "en",
+                "Text": "Take a bath"
+              },
+              {
+                "Language": "it",
+                "Text": "Prendere un bagno"
+              },
+              {
+                "Language": "fr",
+                "Text": "Prendre un bain"
+              },
+              {
+                "Language": "es",
+                "Text": "Tomar un baño"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "洗澡"
+              },
+              {
+                "Language": "ar",
+                "Text": "أخذ حمام"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "洗澡"
+              },
+              {
+                "Language": "ja",
+                "Text": "お風呂に入る"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000009",
             DisplayName: "抹面",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Reinigen Sie Ihr Gesicht" },
-              { Language: "ru", Text: "Очистите лицо" },
-              { Language: "pt", Text: "Limpar o seu rosto" },
-              { Language: "ko", Text: "당신의 얼굴을 청소" },
-              { Language: "yue", Text: "抹面" },
-              { Language: "en", Text: "Clean your face" },
-              { Language: "it", Text: "Pulire il viso" },
-              { Language: "fr", Text: "Nettoyez votre visage" },
-              { Language: "es", Text: "Limpiar tu cara" },
-              { Language: "zh-CHT", Text: "擦臉" },
-              { Language: "ar", Text: "تنظيف وجهك" },
-              { Language: "zh-CHS", Text: "擦脸" },
-              { Language: "ja", Text: "顔を洗ってください。" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Reinigen Sie Ihr Gesicht" },
-              { Language: "ru", Text: "Очистите лицо" },
-              { Language: "pt", Text: "Limpar o seu rosto" },
-              { Language: "ko", Text: "당신의 얼굴을 청소" },
-              { Language: "yue", Text: "抹面" },
-              { Language: "en", Text: "Clean your face" },
-              { Language: "it", Text: "Pulire il viso" },
-              { Language: "fr", Text: "Nettoyez votre visage" },
-              { Language: "es", Text: "Limpiar tu cara" },
-              { Language: "zh-CHT", Text: "擦臉" },
-              { Language: "ar", Text: "تنظيف وجهك" },
-              { Language: "zh-CHS", Text: "擦脸" },
-              { Language: "ja", Text: "顔を洗ってください。" }
+              {
+                "Language": "de",
+                "Text": "Reinigen Sie Ihr Gesicht"
+              },
+              {
+                "Language": "ru",
+                "Text": "Очистите лицо"
+              },
+              {
+                "Language": "pt",
+                "Text": "Limpar o seu rosto"
+              },
+              {
+                "Language": "ko",
+                "Text": "당신의 얼굴을 청소"
+              },
+              {
+                "Language": "yue",
+                "Text": "抹面"
+              },
+              {
+                "Language": "en",
+                "Text": "Clean your face"
+              },
+              {
+                "Language": "it",
+                "Text": "Pulire il viso"
+              },
+              {
+                "Language": "fr",
+                "Text": "Nettoyez votre visage"
+              },
+              {
+                "Language": "es",
+                "Text": "Limpiar tu cara"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "擦臉"
+              },
+              {
+                "Language": "ar",
+                "Text": "تنظيف وجهك"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "擦脸"
+              },
+              {
+                "Language": "ja",
+                "Text": "顔を洗ってください。"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000010",
             DisplayName: "洗面",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Gesicht zu waschen" },
-              { Language: "ru", Text: "Мытье лица" },
-              { Language: "pt", Text: "Lavar o rosto" },
-              { Language: "ko", Text: "페이스 워시" },
-              { Language: "yue", Text: "洗面" },
-              { Language: "en", Text: "Face wash" },
-              { Language: "it", Text: "Volto di lavaggio" },
-              { Language: "fr", Text: "Se laver le visage" },
-              { Language: "es", Text: "Lavado de cara" },
-              { Language: "zh-CHT", Text: "洗面" },
-              { Language: "ar", Text: "غسل الوجه" },
-              { Language: "zh-CHS", Text: "洗面" },
-              { Language: "ja", Text: "顔を洗う" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Gesicht zu waschen" },
-              { Language: "ru", Text: "Мытье лица" },
-              { Language: "pt", Text: "Lavar o rosto" },
-              { Language: "ko", Text: "페이스 워시" },
-              { Language: "yue", Text: "洗面" },
-              { Language: "en", Text: "Face wash" },
-              { Language: "it", Text: "Volto di lavaggio" },
-              { Language: "fr", Text: "Se laver le visage" },
-              { Language: "es", Text: "Lavado de cara" },
-              { Language: "zh-CHT", Text: "洗面" },
-              { Language: "ar", Text: "غسل الوجه" },
-              { Language: "zh-CHS", Text: "洗面" },
-              { Language: "ja", Text: "顔を洗う" }
+              {
+                "Language": "de",
+                "Text": "Gesicht zu waschen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Мытье лица"
+              },
+              {
+                "Language": "pt",
+                "Text": "Lavar o rosto"
+              },
+              {
+                "Language": "ko",
+                "Text": "페이스 워시"
+              },
+              {
+                "Language": "yue",
+                "Text": "洗面"
+              },
+              {
+                "Language": "en",
+                "Text": "Face wash"
+              },
+              {
+                "Language": "it",
+                "Text": "Volto di lavaggio"
+              },
+              {
+                "Language": "fr",
+                "Text": "Se laver le visage"
+              },
+              {
+                "Language": "es",
+                "Text": "Lavado de cara"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "洗面"
+              },
+              {
+                "Language": "ar",
+                "Text": "غسل الوجه"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "洗面"
+              },
+              {
+                "Language": "ja",
+                "Text": "顔を洗う"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000011",
             DisplayName: "刷牙",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Putzen Sie Ihre Zähne" },
-              { Language: "ru", Text: "Чистите зубы" },
-              { Language: "pt", Text: "Escovar os dentes" },
-              { Language: "ko", Text: "양치질" },
-              { Language: "yue", Text: "刷牙" },
-              { Language: "en", Text: "Brush your teeth" },
-              { Language: "it", Text: "Lavarsi i denti" },
-              { Language: "fr", Text: "Brossez-vous les dents" },
-              { Language: "es", Text: "Cepillarse los dientes" },
-              { Language: "zh-CHT", Text: "刷牙" },
-              { Language: "ar", Text: "فرشاة الأسنان" },
-              { Language: "zh-CHS", Text: "刷牙" },
-              { Language: "ja", Text: "あなたの歯を磨く" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Putzen Sie Ihre Zähne" },
-              { Language: "ru", Text: "Чистите зубы" },
-              { Language: "pt", Text: "Escovar os dentes" },
-              { Language: "ko", Text: "양치질" },
-              { Language: "yue", Text: "刷牙" },
-              { Language: "en", Text: "Brush your teeth" },
-              { Language: "it", Text: "Lavarsi i denti" },
-              { Language: "fr", Text: "Brossez-vous les dents" },
-              { Language: "es", Text: "Cepillarse los dientes" },
-              { Language: "zh-CHT", Text: "刷牙" },
-              { Language: "ar", Text: "فرشاة الأسنان" },
-              { Language: "zh-CHS", Text: "刷牙" },
-              { Language: "ja", Text: "あなたの歯を磨く" }
+              {
+                "Language": "de",
+                "Text": "Putzen Sie Ihre Zähne"
+              },
+              {
+                "Language": "ru",
+                "Text": "Чистите зубы"
+              },
+              {
+                "Language": "pt",
+                "Text": "Escovar os dentes"
+              },
+              {
+                "Language": "ko",
+                "Text": "양치질"
+              },
+              {
+                "Language": "yue",
+                "Text": "刷牙"
+              },
+              {
+                "Language": "en",
+                "Text": "Brush your teeth"
+              },
+              {
+                "Language": "it",
+                "Text": "Lavarsi i denti"
+              },
+              {
+                "Language": "fr",
+                "Text": "Brossez-vous les dents"
+              },
+              {
+                "Language": "es",
+                "Text": "Cepillarse los dientes"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "刷牙"
+              },
+              {
+                "Language": "ar",
+                "Text": "فرشاة الأسنان"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "刷牙"
+              },
+              {
+                "Language": "ja",
+                "Text": "あなたの歯を磨く"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000012",
             DisplayName: "梳頭",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Kämmen Sie Ihr Haar" },
-              { Language: "ru", Text: "Расчешите волосы" },
-              { Language: "pt", Text: "Pentear o cabelo" },
-              { Language: "ko", Text: "머리 빗" },
-              { Language: "yue", Text: "梳頭" },
-              { Language: "en", Text: "Comb your hair" },
-              { Language: "it", Text: "Pettinare i capelli" },
-              { Language: "fr", Text: "Peignez vos cheveux" },
-              { Language: "es", Text: "Peina tu cabello" },
-              { Language: "zh-CHT", Text: "梳頭" },
-              { Language: "ar", Text: "مشط الشعر" },
-              { Language: "zh-CHS", Text: "梳头" },
-              { Language: "ja", Text: "あなたの髪をとかす" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Kämmen Sie Ihr Haar" },
-              { Language: "ru", Text: "Расчешите волосы" },
-              { Language: "pt", Text: "Pentear o cabelo" },
-              { Language: "ko", Text: "머리 빗" },
-              { Language: "yue", Text: "梳頭" },
-              { Language: "en", Text: "Comb your hair" },
-              { Language: "it", Text: "Pettinare i capelli" },
-              { Language: "fr", Text: "Peignez vos cheveux" },
-              { Language: "es", Text: "Peina tu cabello" },
-              { Language: "zh-CHT", Text: "梳頭" },
-              { Language: "ar", Text: "مشط الشعر" },
-              { Language: "zh-CHS", Text: "梳头" },
-              { Language: "ja", Text: "あなたの髪をとかす" }
+              {
+                "Language": "de",
+                "Text": "Kämmen Sie Ihr Haar"
+              },
+              {
+                "Language": "ru",
+                "Text": "Расчешите волосы"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pentear o cabelo"
+              },
+              {
+                "Language": "ko",
+                "Text": "머리 빗"
+              },
+              {
+                "Language": "yue",
+                "Text": "梳頭"
+              },
+              {
+                "Language": "en",
+                "Text": "Comb your hair"
+              },
+              {
+                "Language": "it",
+                "Text": "Pettinare i capelli"
+              },
+              {
+                "Language": "fr",
+                "Text": "Peignez vos cheveux"
+              },
+              {
+                "Language": "es",
+                "Text": "Peina tu cabello"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "梳頭"
+              },
+              {
+                "Language": "ar",
+                "Text": "مشط الشعر"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "梳头"
+              },
+              {
+                "Language": "ja",
+                "Text": "あなたの髪をとかす"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000013",
             DisplayName: "食飯",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Essen" },
-              { Language: "ru", Text: "Ешьте" },
-              { Language: "pt", Text: "Comer" },
-              { Language: "ko", Text: "먹으십시오" },
-              { Language: "yue", Text: "食飯" },
-              { Language: "en", Text: "Eat" },
-              { Language: "it", Text: "Mangiare" },
-              { Language: "fr", Text: "Manger" },
-              { Language: "es", Text: "Comer" },
-              { Language: "zh-CHT", Text: "吃飯" },
-              { Language: "ar", Text: "أكل" },
-              { Language: "zh-CHS", Text: "吃饭" },
-              { Language: "ja", Text: "食べる" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Essen" },
-              { Language: "ru", Text: "Ешьте" },
-              { Language: "pt", Text: "Comer" },
-              { Language: "ko", Text: "먹으십시오" },
-              { Language: "yue", Text: "食飯" },
-              { Language: "en", Text: "Eat" },
-              { Language: "it", Text: "Mangiare" },
-              { Language: "fr", Text: "Manger" },
-              { Language: "es", Text: "Comer" },
-              { Language: "zh-CHT", Text: "吃飯" },
-              { Language: "ar", Text: "أكل" },
-              { Language: "zh-CHS", Text: "吃饭" },
-              { Language: "ja", Text: "食べる" }
+              {
+                "Language": "de",
+                "Text": "Essen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Ешьте"
+              },
+              {
+                "Language": "pt",
+                "Text": "Comer"
+              },
+              {
+                "Language": "ko",
+                "Text": "먹으십시오"
+              },
+              {
+                "Language": "yue",
+                "Text": "食飯"
+              },
+              {
+                "Language": "en",
+                "Text": "Eat"
+              },
+              {
+                "Language": "it",
+                "Text": "Mangiare"
+              },
+              {
+                "Language": "fr",
+                "Text": "Manger"
+              },
+              {
+                "Language": "es",
+                "Text": "Comer"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "吃飯"
+              },
+              {
+                "Language": "ar",
+                "Text": "أكل"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "吃饭"
+              },
+              {
+                "Language": "ja",
+                "Text": "食べる"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000014",
             DisplayName: "飲水",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Wasser zu trinken" },
-              { Language: "ru", Text: "Питьевая вода" },
-              { Language: "pt", Text: "Água potável" },
-              { Language: "ko", Text: "식 수" },
-              { Language: "yue", Text: "飲水" },
-              { Language: "en", Text: "Drinking water" },
-              { Language: "it", Text: "Acqua potabile" },
-              { Language: "fr", Text: "Eau potable" },
-              { Language: "es", Text: "Agua potable" },
-              { Language: "zh-CHT", Text: "飲水" },
-              { Language: "ar", Text: "مياه الشرب" },
-              { Language: "zh-CHS", Text: "饮水" },
-              { Language: "ja", Text: "水を飲む" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Wasser zu trinken" },
-              { Language: "ru", Text: "Питьевая вода" },
-              { Language: "pt", Text: "Água potável" },
-              { Language: "ko", Text: "식 수" },
-              { Language: "yue", Text: "飲水" },
-              { Language: "en", Text: "Drinking water" },
-              { Language: "it", Text: "Acqua potabile" },
-              { Language: "fr", Text: "Eau potable" },
-              { Language: "es", Text: "Agua potable" },
-              { Language: "zh-CHT", Text: "飲水" },
-              { Language: "ar", Text: "مياه الشرب" },
-              { Language: "zh-CHS", Text: "饮水" },
-              { Language: "ja", Text: "水を飲む" }
+              {
+                "Language": "de",
+                "Text": "Wasser zu trinken"
+              },
+              {
+                "Language": "ru",
+                "Text": "Питьевая вода"
+              },
+              {
+                "Language": "pt",
+                "Text": "Água potável"
+              },
+              {
+                "Language": "ko",
+                "Text": "식 수"
+              },
+              {
+                "Language": "yue",
+                "Text": "飲水"
+              },
+              {
+                "Language": "en",
+                "Text": "Drinking water"
+              },
+              {
+                "Language": "it",
+                "Text": "Acqua potabile"
+              },
+              {
+                "Language": "fr",
+                "Text": "Eau potable"
+              },
+              {
+                "Language": "es",
+                "Text": "Agua potable"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "飲水"
+              },
+              {
+                "Language": "ar",
+                "Text": "مياه الشرب"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "饮水"
+              },
+              {
+                "Language": "ja",
+                "Text": "水を飲む"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000015",
             DisplayName: "坐輪椅",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Rollstuhl" },
-              { Language: "ru", Text: "Для инвалидов" },
-              { Language: "pt", Text: "Cadeira de rodas" },
-              { Language: "ko", Text: "휠체어" },
-              { Language: "yue", Text: "坐輪椅" },
-              { Language: "en", Text: "Wheelchair" },
-              { Language: "it", Text: "Sedia a rotelle" },
-              { Language: "fr", Text: "Fauteuil roulant" },
-              { Language: "es", Text: "Silla de ruedas" },
-              { Language: "zh-CHT", Text: "坐輪椅" },
-              { Language: "ar", Text: "كرسي متحرك" },
-              { Language: "zh-CHS", Text: "坐轮椅" },
-              { Language: "ja", Text: "車椅子" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Rollstuhl" },
-              { Language: "ru", Text: "Для инвалидов" },
-              { Language: "pt", Text: "Cadeira de rodas" },
-              { Language: "ko", Text: "휠체어" },
-              { Language: "yue", Text: "坐輪椅" },
-              { Language: "en", Text: "Wheelchair" },
-              { Language: "it", Text: "Sedia a rotelle" },
-              { Language: "fr", Text: "Fauteuil roulant" },
-              { Language: "es", Text: "Silla de ruedas" },
-              { Language: "zh-CHT", Text: "坐輪椅" },
-              { Language: "ar", Text: "كرسي متحرك" },
-              { Language: "zh-CHS", Text: "坐轮椅" },
-              { Language: "ja", Text: "車椅子" }
+              {
+                "Language": "de",
+                "Text": "Rollstuhl"
+              },
+              {
+                "Language": "ru",
+                "Text": "Для инвалидов"
+              },
+              {
+                "Language": "pt",
+                "Text": "Cadeira de rodas"
+              },
+              {
+                "Language": "ko",
+                "Text": "휠체어"
+              },
+              {
+                "Language": "yue",
+                "Text": "坐輪椅"
+              },
+              {
+                "Language": "en",
+                "Text": "Wheelchair"
+              },
+              {
+                "Language": "it",
+                "Text": "Sedia a rotelle"
+              },
+              {
+                "Language": "fr",
+                "Text": "Fauteuil roulant"
+              },
+              {
+                "Language": "es",
+                "Text": "Silla de ruedas"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "坐輪椅"
+              },
+              {
+                "Language": "ar",
+                "Text": "كرسي متحرك"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "坐轮椅"
+              },
+              {
+                "Language": "ja",
+                "Text": "車椅子"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000016",
             DisplayName: "著衫",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Kleid" },
-              { Language: "ru", Text: "Платье" },
-              { Language: "pt", Text: "Vestido" },
-              { Language: "ko", Text: "드레스" },
-              { Language: "yue", Text: "著衫" },
-              { Language: "en", Text: "Dress" },
-              { Language: "it", Text: "Abito" },
-              { Language: "fr", Text: "Robe" },
-              { Language: "es", Text: "Vestido" },
-              { Language: "zh-CHT", Text: "穿衣服" },
-              { Language: "ar", Text: "فستان" },
-              { Language: "zh-CHS", Text: "穿衣服" },
-              { Language: "ja", Text: "ドレス" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Kleid" },
-              { Language: "ru", Text: "Платье" },
-              { Language: "pt", Text: "Vestido" },
-              { Language: "ko", Text: "드레스" },
-              { Language: "yue", Text: "著衫" },
-              { Language: "en", Text: "Dress" },
-              { Language: "it", Text: "Abito" },
-              { Language: "fr", Text: "Robe" },
-              { Language: "es", Text: "Vestido" },
-              { Language: "zh-CHT", Text: "穿衣服" },
-              { Language: "ar", Text: "فستان" },
-              { Language: "zh-CHS", Text: "穿衣服" },
-              { Language: "ja", Text: "ドレス" }
+              {
+                "Language": "de",
+                "Text": "Kleid"
+              },
+              {
+                "Language": "ru",
+                "Text": "Платье"
+              },
+              {
+                "Language": "pt",
+                "Text": "Vestido"
+              },
+              {
+                "Language": "ko",
+                "Text": "드레스"
+              },
+              {
+                "Language": "yue",
+                "Text": "著衫"
+              },
+              {
+                "Language": "en",
+                "Text": "Dress"
+              },
+              {
+                "Language": "it",
+                "Text": "Abito"
+              },
+              {
+                "Language": "fr",
+                "Text": "Robe"
+              },
+              {
+                "Language": "es",
+                "Text": "Vestido"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "穿衣服"
+              },
+              {
+                "Language": "ar",
+                "Text": "فستان"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "穿衣服"
+              },
+              {
+                "Language": "ja",
+                "Text": "ドレス"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000017",
             DisplayName: "拉拉鍊／扣鈕",
-            displayMultipleLanguage: [
-              { Language: "de", Text: 'Taste "Lalalian/Clip"' },
-              { Language: "ru", Text: "Кнопка Lalalian/клип" },
-              { Language: "pt", Text: "Botão Lalalian/clip" },
-              { Language: "ko", Text: "Lalalian/클립 버튼" },
-              { Language: "yue", Text: "拉拉鍊／扣鈕" },
-              { Language: "en", Text: "Lalalian/clip button" },
-              { Language: "it", Text: "Tasto Lalalian/clip" },
-              { Language: "fr", Text: "Bouton Lalalian/clip" },
-              { Language: "es", Text: "Botón Lalalian/clip" },
-              { Language: "zh-CHT", Text: "拉拉煉/扣鈕" },
-              { Language: "ar", Text: "زر لالاليان/مقطع" },
-              { Language: "zh-CHS", Text: "拉拉炼/扣钮" },
-              { Language: "ja", Text: "Lalalian/クリップ ボタン" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: 'Taste "Lalalian/Clip"' },
-              { Language: "ru", Text: "Кнопка Lalalian/клип" },
-              { Language: "pt", Text: "Botão Lalalian/clip" },
-              { Language: "ko", Text: "Lalalian/클립 버튼" },
-              { Language: "yue", Text: "拉拉鍊／扣鈕" },
-              { Language: "en", Text: "Lalalian/clip button" },
-              { Language: "it", Text: "Tasto Lalalian/clip" },
-              { Language: "fr", Text: "Bouton Lalalian/clip" },
-              { Language: "es", Text: "Botón Lalalian/clip" },
-              { Language: "zh-CHT", Text: "拉拉煉/扣鈕" },
-              { Language: "ar", Text: "زر لالاليان/مقطع" },
-              { Language: "zh-CHS", Text: "拉拉炼/扣钮" },
-              { Language: "ja", Text: "Lalalian/クリップ ボタン" }
+              {
+                "Language": "de",
+                "Text": "Taste \"Lalalian/Clip\""
+              },
+              {
+                "Language": "ru",
+                "Text": "Кнопка Lalalian/клип"
+              },
+              {
+                "Language": "pt",
+                "Text": "Botão Lalalian/clip"
+              },
+              {
+                "Language": "ko",
+                "Text": "Lalalian/클립 버튼"
+              },
+              {
+                "Language": "yue",
+                "Text": "拉拉鍊／扣鈕"
+              },
+              {
+                "Language": "en",
+                "Text": "Lalalian/clip button"
+              },
+              {
+                "Language": "it",
+                "Text": "Tasto Lalalian/clip"
+              },
+              {
+                "Language": "fr",
+                "Text": "Bouton Lalalian/clip"
+              },
+              {
+                "Language": "es",
+                "Text": "Botón Lalalian/clip"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "拉拉煉/扣鈕"
+              },
+              {
+                "Language": "ar",
+                "Text": "زر لالاليان/مقطع"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "拉拉炼/扣钮"
+              },
+              {
+                "Language": "ja",
+                "Text": "Lalalian/クリップ ボタン"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000018",
             DisplayName: "換片",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Advance-Folien" },
-              { Language: "ru", Text: "Смена слайдов" },
-              { Language: "pt", Text: "Slides de avanço" },
-              { Language: "ko", Text: "사전 슬라이드" },
-              { Language: "yue", Text: "換片" },
-              { Language: "en", Text: "Advance slides" },
-              { Language: "it", Text: "Avanzamento diapositive" },
-              { Language: "fr", Text: "Défilement des diapositives" },
-              { Language: "es", Text: "Avance de diapositivas" },
-              { Language: "zh-CHT", Text: "換片" },
-              { Language: "ar", Text: "التقدم بالشرائح" },
-              { Language: "zh-CHS", Text: "换片" },
-              { Language: "ja", Text: "スライドの切り替え" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Advance-Folien" },
-              { Language: "ru", Text: "Смена слайдов" },
-              { Language: "pt", Text: "Slides de avanço" },
-              { Language: "ko", Text: "사전 슬라이드" },
-              { Language: "yue", Text: "換片" },
-              { Language: "en", Text: "Advance slides" },
-              { Language: "it", Text: "Avanzamento diapositive" },
-              { Language: "fr", Text: "Défilement des diapositives" },
-              { Language: "es", Text: "Avance de diapositivas" },
-              { Language: "zh-CHT", Text: "換片" },
-              { Language: "ar", Text: "التقدم بالشرائح" },
-              { Language: "zh-CHS", Text: "换片" },
-              { Language: "ja", Text: "スライドの切り替え" }
+              {
+                "Language": "de",
+                "Text": "Advance-Folien"
+              },
+              {
+                "Language": "ru",
+                "Text": "Смена слайдов"
+              },
+              {
+                "Language": "pt",
+                "Text": "Slides de avanço"
+              },
+              {
+                "Language": "ko",
+                "Text": "사전 슬라이드"
+              },
+              {
+                "Language": "yue",
+                "Text": "換片"
+              },
+              {
+                "Language": "en",
+                "Text": "Advance slides"
+              },
+              {
+                "Language": "it",
+                "Text": "Avanzamento diapositive"
+              },
+              {
+                "Language": "fr",
+                "Text": "Défilement des diapositives"
+              },
+              {
+                "Language": "es",
+                "Text": "Avance de diapositivas"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "換片"
+              },
+              {
+                "Language": "ar",
+                "Text": "التقدم بالشرائح"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "换片"
+              },
+              {
+                "Language": "ja",
+                "Text": "スライドの切り替え"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000019",
             DisplayName: "剝皮",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Skinning" },
-              { Language: "ru", Text: "Снятие шкуры" },
-              { Language: "pt", Text: "Esfola" },
-              { Language: "ko", Text: "스키닝" },
-              { Language: "yue", Text: "剝皮" },
-              { Language: "en", Text: "Skinning" },
-              { Language: "it", Text: "Scuoiatura" },
-              { Language: "fr", Text: "Le dépouillement" },
-              { Language: "es", Text: "Aplicación de aspectos" },
-              { Language: "zh-CHT", Text: "剝皮" },
-              { Language: "ar", Text: "السلخ" },
-              { Language: "zh-CHS", Text: "剥皮" },
-              { Language: "ja", Text: "スキニング" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Skinning" },
-              { Language: "ru", Text: "Снятие шкуры" },
-              { Language: "pt", Text: "Esfola" },
-              { Language: "ko", Text: "스키닝" },
-              { Language: "yue", Text: "剝皮" },
-              { Language: "en", Text: "Skinning" },
-              { Language: "it", Text: "Scuoiatura" },
-              { Language: "fr", Text: "Le dépouillement" },
-              { Language: "es", Text: "Aplicación de aspectos" },
-              { Language: "zh-CHT", Text: "剝皮" },
-              { Language: "ar", Text: "السلخ" },
-              { Language: "zh-CHS", Text: "剥皮" },
-              { Language: "ja", Text: "スキニング" }
+              {
+                "Language": "de",
+                "Text": "Skinning"
+              },
+              {
+                "Language": "ru",
+                "Text": "Снятие шкуры"
+              },
+              {
+                "Language": "pt",
+                "Text": "Esfola"
+              },
+              {
+                "Language": "ko",
+                "Text": "스키닝"
+              },
+              {
+                "Language": "yue",
+                "Text": "剝皮"
+              },
+              {
+                "Language": "en",
+                "Text": "Skinning"
+              },
+              {
+                "Language": "it",
+                "Text": "Scuoiatura"
+              },
+              {
+                "Language": "fr",
+                "Text": "Le dépouillement"
+              },
+              {
+                "Language": "es",
+                "Text": "Aplicación de aspectos"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "剝皮"
+              },
+              {
+                "Language": "ar",
+                "Text": "السلخ"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "剥皮"
+              },
+              {
+                "Language": "ja",
+                "Text": "スキニング"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000020",
             DisplayName: "攪床",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Ein Bett machen" },
-              { Language: "ru", Text: "Сделать кровать" },
-              { Language: "pt", Text: "Fazer uma cama" },
-              { Language: "ko", Text: "침대를 만들어" },
-              { Language: "yue", Text: "攪床" },
-              { Language: "en", Text: "Make a bed" },
-              { Language: "it", Text: "Fare un letto" },
-              { Language: "fr", Text: "Faire un lit" },
-              { Language: "es", Text: "Hacer una cama" },
-              { Language: "zh-CHT", Text: "做床" },
-              { Language: "ar", Text: "جعل السرير" },
-              { Language: "zh-CHS", Text: "做床" },
-              { Language: "ja", Text: "ベッドを作る" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Ein Bett machen" },
-              { Language: "ru", Text: "Сделать кровать" },
-              { Language: "pt", Text: "Fazer uma cama" },
-              { Language: "ko", Text: "침대를 만들어" },
-              { Language: "yue", Text: "攪床" },
-              { Language: "en", Text: "Make a bed" },
-              { Language: "it", Text: "Fare un letto" },
-              { Language: "fr", Text: "Faire un lit" },
-              { Language: "es", Text: "Hacer una cama" },
-              { Language: "zh-CHT", Text: "做床" },
-              { Language: "ar", Text: "جعل السرير" },
-              { Language: "zh-CHS", Text: "做床" },
-              { Language: "ja", Text: "ベッドを作る" }
+              {
+                "Language": "de",
+                "Text": "Ein Bett machen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Сделать кровать"
+              },
+              {
+                "Language": "pt",
+                "Text": "Fazer uma cama"
+              },
+              {
+                "Language": "ko",
+                "Text": "침대를 만들어"
+              },
+              {
+                "Language": "yue",
+                "Text": "攪床"
+              },
+              {
+                "Language": "en",
+                "Text": "Make a bed"
+              },
+              {
+                "Language": "it",
+                "Text": "Fare un letto"
+              },
+              {
+                "Language": "fr",
+                "Text": "Faire un lit"
+              },
+              {
+                "Language": "es",
+                "Text": "Hacer una cama"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "做床"
+              },
+              {
+                "Language": "ar",
+                "Text": "جعل السرير"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "做床"
+              },
+              {
+                "Language": "ja",
+                "Text": "ベッドを作る"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000021",
             DisplayName: "碎藥",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Zum Schleifen" },
-              { Language: "ru", Text: "Для измельчения" },
-              { Language: "pt", Text: "Para moer" },
-              { Language: "ko", Text: "갈기 위해" },
-              { Language: "yue", Text: "碎藥" },
-              { Language: "en", Text: "To grind" },
-              { Language: "it", Text: "Per macinare" },
-              { Language: "fr", Text: "Pour moudre" },
-              { Language: "es", Text: "Para moler" },
-              { Language: "zh-CHT", Text: "碎藥" },
-              { Language: "ar", Text: "لطحن" },
-              { Language: "zh-CHS", Text: "碎药" },
-              { Language: "ja", Text: "挽く" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Zum Schleifen" },
-              { Language: "ru", Text: "Для измельчения" },
-              { Language: "pt", Text: "Para moer" },
-              { Language: "ko", Text: "갈기 위해" },
-              { Language: "yue", Text: "碎藥" },
-              { Language: "en", Text: "To grind" },
-              { Language: "it", Text: "Per macinare" },
-              { Language: "fr", Text: "Pour moudre" },
-              { Language: "es", Text: "Para moler" },
-              { Language: "zh-CHT", Text: "碎藥" },
-              { Language: "ar", Text: "لطحن" },
-              { Language: "zh-CHS", Text: "碎药" },
-              { Language: "ja", Text: "挽く" }
+              {
+                "Language": "de",
+                "Text": "Zum Schleifen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Для измельчения"
+              },
+              {
+                "Language": "pt",
+                "Text": "Para moer"
+              },
+              {
+                "Language": "ko",
+                "Text": "갈기 위해"
+              },
+              {
+                "Language": "yue",
+                "Text": "碎藥"
+              },
+              {
+                "Language": "en",
+                "Text": "To grind"
+              },
+              {
+                "Language": "it",
+                "Text": "Per macinare"
+              },
+              {
+                "Language": "fr",
+                "Text": "Pour moudre"
+              },
+              {
+                "Language": "es",
+                "Text": "Para moler"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "碎藥"
+              },
+              {
+                "Language": "ar",
+                "Text": "لطحن"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "碎药"
+              },
+              {
+                "Language": "ja",
+                "Text": "挽く"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000022",
             DisplayName: "吐痰",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Spucken" },
-              { Language: "ru", Text: "Коса" },
-              { Language: "pt", Text: "Cuspir" },
-              { Language: "ko", Text: "침" },
-              { Language: "yue", Text: "吐痰" },
-              { Language: "en", Text: "Spit" },
-              { Language: "it", Text: "Spiedo" },
-              { Language: "fr", Text: "Spit" },
-              { Language: "es", Text: "Asador" },
-              { Language: "zh-CHT", Text: "吐痰" },
-              { Language: "ar", Text: "يبصقون" },
-              { Language: "zh-CHS", Text: "吐痰" },
-              { Language: "ja", Text: "唾を吐きかける" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Spucken" },
-              { Language: "ru", Text: "Коса" },
-              { Language: "pt", Text: "Cuspir" },
-              { Language: "ko", Text: "침" },
-              { Language: "yue", Text: "吐痰" },
-              { Language: "en", Text: "Spit" },
-              { Language: "it", Text: "Spiedo" },
-              { Language: "fr", Text: "Spit" },
-              { Language: "es", Text: "Asador" },
-              { Language: "zh-CHT", Text: "吐痰" },
-              { Language: "ar", Text: "يبصقون" },
-              { Language: "zh-CHS", Text: "吐痰" },
-              { Language: "ja", Text: "唾を吐きかける" }
+              {
+                "Language": "de",
+                "Text": "Spucken"
+              },
+              {
+                "Language": "ru",
+                "Text": "Коса"
+              },
+              {
+                "Language": "pt",
+                "Text": "Cuspir"
+              },
+              {
+                "Language": "ko",
+                "Text": "침"
+              },
+              {
+                "Language": "yue",
+                "Text": "吐痰"
+              },
+              {
+                "Language": "en",
+                "Text": "Spit"
+              },
+              {
+                "Language": "it",
+                "Text": "Spiedo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Spit"
+              },
+              {
+                "Language": "es",
+                "Text": "Asador"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "吐痰"
+              },
+              {
+                "Language": "ar",
+                "Text": "يبصقون"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "吐痰"
+              },
+              {
+                "Language": "ja",
+                "Text": "唾を吐きかける"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000023",
             DisplayName: "練習寫字",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Praxis schreiben" },
-              { Language: "ru", Text: "Практика написания" },
-              { Language: "pt", Text: "Prática escrita" },
-              { Language: "ko", Text: "연습 글" },
-              { Language: "yue", Text: "練習寫字" },
-              { Language: "en", Text: "Practice writing" },
-              { Language: "it", Text: "Pratica di scrittura" },
-              { Language: "fr", Text: "Écriture de la pratique" },
-              { Language: "es", Text: "Práctica de escritura" },
-              { Language: "zh-CHT", Text: "練習寫字" },
-              { Language: "ar", Text: "ممارسة الكتابة" },
-              { Language: "zh-CHS", Text: "练习写字" },
-              { Language: "ja", Text: "作文の練習" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Praxis schreiben" },
-              { Language: "ru", Text: "Практика написания" },
-              { Language: "pt", Text: "Prática escrita" },
-              { Language: "ko", Text: "연습 글" },
-              { Language: "yue", Text: "練習寫字" },
-              { Language: "en", Text: "Practice writing" },
-              { Language: "it", Text: "Pratica di scrittura" },
-              { Language: "fr", Text: "Écriture de la pratique" },
-              { Language: "es", Text: "Práctica de escritura" },
-              { Language: "zh-CHT", Text: "練習寫字" },
-              { Language: "ar", Text: "ممارسة الكتابة" },
-              { Language: "zh-CHS", Text: "练习写字" },
-              { Language: "ja", Text: "作文の練習" }
+              {
+                "Language": "de",
+                "Text": "Praxis schreiben"
+              },
+              {
+                "Language": "ru",
+                "Text": "Практика написания"
+              },
+              {
+                "Language": "pt",
+                "Text": "Prática escrita"
+              },
+              {
+                "Language": "ko",
+                "Text": "연습 글"
+              },
+              {
+                "Language": "yue",
+                "Text": "練習寫字"
+              },
+              {
+                "Language": "en",
+                "Text": "Practice writing"
+              },
+              {
+                "Language": "it",
+                "Text": "Pratica di scrittura"
+              },
+              {
+                "Language": "fr",
+                "Text": "Écriture de la pratique"
+              },
+              {
+                "Language": "es",
+                "Text": "Práctica de escritura"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "練習寫字"
+              },
+              {
+                "Language": "ar",
+                "Text": "ممارسة الكتابة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "练习写字"
+              },
+              {
+                "Language": "ja",
+                "Text": "作文の練習"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000024",
             DisplayName: "拗痕",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Depression-Marken" },
-              { Language: "ru", Text: "Депрессия знаки" },
-              { Language: "pt", Text: "Marcas de depressão" },
-              { Language: "ko", Text: "우울증 마크" },
-              { Language: "yue", Text: "拗痕" },
-              { Language: "en", Text: "Depression marks" },
-              { Language: "it", Text: "Segni di depressione" },
-              { Language: "fr", Text: "Marques de dépression" },
-              { Language: "es", Text: "Marcas de depresión" },
-              { Language: "zh-CHT", Text: "拗痕" },
-              { Language: "ar", Text: "علامات الاكتئاب" },
-              { Language: "zh-CHS", Text: "拗痕" },
-              { Language: "ja", Text: "うつ病のマーク" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Depression-Marken" },
-              { Language: "ru", Text: "Депрессия знаки" },
-              { Language: "pt", Text: "Marcas de depressão" },
-              { Language: "ko", Text: "우울증 마크" },
-              { Language: "yue", Text: "拗痕" },
-              { Language: "en", Text: "Depression marks" },
-              { Language: "it", Text: "Segni di depressione" },
-              { Language: "fr", Text: "Marques de dépression" },
-              { Language: "es", Text: "Marcas de depresión" },
-              { Language: "zh-CHT", Text: "拗痕" },
-              { Language: "ar", Text: "علامات الاكتئاب" },
-              { Language: "zh-CHS", Text: "拗痕" },
-              { Language: "ja", Text: "うつ病のマーク" }
+              {
+                "Language": "de",
+                "Text": "Depression-Marken"
+              },
+              {
+                "Language": "ru",
+                "Text": "Депрессия знаки"
+              },
+              {
+                "Language": "pt",
+                "Text": "Marcas de depressão"
+              },
+              {
+                "Language": "ko",
+                "Text": "우울증 마크"
+              },
+              {
+                "Language": "yue",
+                "Text": "拗痕"
+              },
+              {
+                "Language": "en",
+                "Text": "Depression marks"
+              },
+              {
+                "Language": "it",
+                "Text": "Segni di depressione"
+              },
+              {
+                "Language": "fr",
+                "Text": "Marques de dépression"
+              },
+              {
+                "Language": "es",
+                "Text": "Marcas de depresión"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "拗痕"
+              },
+              {
+                "Language": "ar",
+                "Text": "علامات الاكتئاب"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "拗痕"
+              },
+              {
+                "Language": "ja",
+                "Text": "うつ病のマーク"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000025",
             DisplayName: "睇粵劇／大戲",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Oper/Theater" },
-              { Language: "ru", Text: "Опера/Театр" },
-              { Language: "pt", Text: "Ópera/Teatro" },
-              { Language: "ko", Text: "오페라/극장" },
-              { Language: "yue", Text: "睇粵劇／大戲" },
-              { Language: "en", Text: "Opera/Theatre" },
-              { Language: "it", Text: "Teatro/Opera" },
-              { Language: "fr", Text: "Opéra/théâtre" },
-              { Language: "es", Text: "Teatro de la ópera" },
-              { Language: "zh-CHT", Text: "看粵劇/大戲" },
-              { Language: "ar", Text: "مسرح الأوبرا/" },
-              { Language: "zh-CHS", Text: "看粤剧/大戏" },
-              { Language: "ja", Text: "オペラ/劇場" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Oper/Theater" },
-              { Language: "ru", Text: "Опера/Театр" },
-              { Language: "pt", Text: "Ópera/Teatro" },
-              { Language: "ko", Text: "오페라/극장" },
-              { Language: "yue", Text: "睇粵劇／大戲" },
-              { Language: "en", Text: "Opera/Theatre" },
-              { Language: "it", Text: "Teatro/Opera" },
-              { Language: "fr", Text: "Opéra/théâtre" },
-              { Language: "es", Text: "Teatro de la ópera" },
-              { Language: "zh-CHT", Text: "看粵劇/大戲" },
-              { Language: "ar", Text: "مسرح الأوبرا/" },
-              { Language: "zh-CHS", Text: "看粤剧/大戏" },
-              { Language: "ja", Text: "オペラ/劇場" }
+              {
+                "Language": "de",
+                "Text": "Oper/Theater"
+              },
+              {
+                "Language": "ru",
+                "Text": "Опера/Театр"
+              },
+              {
+                "Language": "pt",
+                "Text": "Ópera/Teatro"
+              },
+              {
+                "Language": "ko",
+                "Text": "오페라/극장"
+              },
+              {
+                "Language": "yue",
+                "Text": "睇粵劇／大戲"
+              },
+              {
+                "Language": "en",
+                "Text": "Opera/Theatre"
+              },
+              {
+                "Language": "it",
+                "Text": "Teatro/Opera"
+              },
+              {
+                "Language": "fr",
+                "Text": "Opéra/théâtre"
+              },
+              {
+                "Language": "es",
+                "Text": "Teatro de la ópera"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "看粵劇/大戲"
+              },
+              {
+                "Language": "ar",
+                "Text": "مسرح الأوبرا/"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "看粤剧/大戏"
+              },
+              {
+                "Language": "ja",
+                "Text": "オペラ/劇場"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000026",
             DisplayName: "睇報紙／書",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Zeitung Buch /" },
-              { Language: "ru", Text: "Чтение газеты/книги" },
-              { Language: "pt", Text: "Lendo um jornal/livro" },
-              { Language: "ko", Text: "신문/책을 읽고" },
-              { Language: "yue", Text: "睇報紙／書" },
-              { Language: "en", Text: "Reading a newspaper/book" },
-              { Language: "it", Text: "Leggendo un giornale/libro" },
-              { Language: "fr", Text: "Lecture d’un journal/livre" },
-              { Language: "es", Text: "Leyendo un libro de diario" },
-              { Language: "zh-CHT", Text: "看報紙/書" },
-              { Language: "ar", Text: "قراءة كتاب صحيفة" },
-              { Language: "zh-CHS", Text: "看报纸/书" },
-              { Language: "ja", Text: "新聞・本を読む" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Zeitung Buch /" },
-              { Language: "ru", Text: "Чтение газеты/книги" },
-              { Language: "pt", Text: "Lendo um jornal/livro" },
-              { Language: "ko", Text: "신문/책을 읽고" },
-              { Language: "yue", Text: "睇報紙／書" },
-              { Language: "en", Text: "Reading a newspaper/book" },
-              { Language: "it", Text: "Leggendo un giornale/libro" },
-              { Language: "fr", Text: "Lecture d’un journal/livre" },
-              { Language: "es", Text: "Leyendo un libro de diario" },
-              { Language: "zh-CHT", Text: "看報紙/書" },
-              { Language: "ar", Text: "قراءة كتاب صحيفة" },
-              { Language: "zh-CHS", Text: "看报纸/书" },
-              { Language: "ja", Text: "新聞・本を読む" }
+              {
+                "Language": "de",
+                "Text": "Zeitung Buch /"
+              },
+              {
+                "Language": "ru",
+                "Text": "Чтение газеты/книги"
+              },
+              {
+                "Language": "pt",
+                "Text": "Lendo um jornal/livro"
+              },
+              {
+                "Language": "ko",
+                "Text": "신문/책을 읽고"
+              },
+              {
+                "Language": "yue",
+                "Text": "睇報紙／書"
+              },
+              {
+                "Language": "en",
+                "Text": "Reading a newspaper/book"
+              },
+              {
+                "Language": "it",
+                "Text": "Leggendo un giornale/libro"
+              },
+              {
+                "Language": "fr",
+                "Text": "Lecture d’un journal/livre"
+              },
+              {
+                "Language": "es",
+                "Text": "Leyendo un libro de diario"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "看報紙/書"
+              },
+              {
+                "Language": "ar",
+                "Text": "قراءة كتاب صحيفة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "看报纸/书"
+              },
+              {
+                "Language": "ja",
+                "Text": "新聞・本を読む"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000027",
             DisplayName: "行晨運",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Frühsport" },
-              { Language: "ru", Text: "Утренняя гимнастика" },
-              { Language: "pt", Text: "Exercício de manhã" },
-              { Language: "ko", Text: "아침 운동" },
-              { Language: "yue", Text: "行晨運" },
-              { Language: "en", Text: "Morning exercise" },
-              { Language: "it", Text: "Ginnastica mattutina" },
-              { Language: "fr", Text: "Exercices matinaux" },
-              { Language: "es", Text: "Ejercicio por la mañana" },
-              { Language: "zh-CHT", Text: "走晨練" },
-              { Language: "ar", Text: "ممارسة صباح" },
-              { Language: "zh-CHS", Text: "走晨练" },
-              { Language: "ja", Text: "朝の運動" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Frühsport" },
-              { Language: "ru", Text: "Утренняя гимнастика" },
-              { Language: "pt", Text: "Exercício de manhã" },
-              { Language: "ko", Text: "아침 운동" },
-              { Language: "yue", Text: "行晨運" },
-              { Language: "en", Text: "Morning exercise" },
-              { Language: "it", Text: "Ginnastica mattutina" },
-              { Language: "fr", Text: "Exercices matinaux" },
-              { Language: "es", Text: "Ejercicio por la mañana" },
-              { Language: "zh-CHT", Text: "走晨練" },
-              { Language: "ar", Text: "ممارسة صباح" },
-              { Language: "zh-CHS", Text: "走晨练" },
-              { Language: "ja", Text: "朝の運動" }
+              {
+                "Language": "de",
+                "Text": "Frühsport"
+              },
+              {
+                "Language": "ru",
+                "Text": "Утренняя гимнастика"
+              },
+              {
+                "Language": "pt",
+                "Text": "Exercício de manhã"
+              },
+              {
+                "Language": "ko",
+                "Text": "아침 운동"
+              },
+              {
+                "Language": "yue",
+                "Text": "行晨運"
+              },
+              {
+                "Language": "en",
+                "Text": "Morning exercise"
+              },
+              {
+                "Language": "it",
+                "Text": "Ginnastica mattutina"
+              },
+              {
+                "Language": "fr",
+                "Text": "Exercices matinaux"
+              },
+              {
+                "Language": "es",
+                "Text": "Ejercicio por la mañana"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "走晨練"
+              },
+              {
+                "Language": "ar",
+                "Text": "ممارسة صباح"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "走晨练"
+              },
+              {
+                "Language": "ja",
+                "Text": "朝の運動"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000028",
             DisplayName: "探朋友",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Besuch bei Freunden" },
-              { Language: "ru", Text: "В гостях у друзей" },
-              { Language: "pt", Text: "Visitando amigos" },
-              { Language: "ko", Text: "친구 방문" },
-              { Language: "yue", Text: "探朋友" },
-              { Language: "en", Text: "Visiting friends" },
-              { Language: "it", Text: "Visitando gli amici" },
-              { Language: "fr", Text: "Visite à des amis" },
-              { Language: "es", Text: "Amigos visitantes" },
-              { Language: "zh-CHT", Text: "看望朋友" },
-              { Language: "ar", Text: "زيارة الأصدقاء" },
-              { Language: "zh-CHS", Text: "看望朋友" },
-              { Language: "ja", Text: "友人を訪問" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Besuch bei Freunden" },
-              { Language: "ru", Text: "В гостях у друзей" },
-              { Language: "pt", Text: "Visitando amigos" },
-              { Language: "ko", Text: "친구 방문" },
-              { Language: "yue", Text: "探朋友" },
-              { Language: "en", Text: "Visiting friends" },
-              { Language: "it", Text: "Visitando gli amici" },
-              { Language: "fr", Text: "Visite à des amis" },
-              { Language: "es", Text: "Amigos visitantes" },
-              { Language: "zh-CHT", Text: "看望朋友" },
-              { Language: "ar", Text: "زيارة الأصدقاء" },
-              { Language: "zh-CHS", Text: "看望朋友" },
-              { Language: "ja", Text: "友人を訪問" }
+              {
+                "Language": "de",
+                "Text": "Besuch bei Freunden"
+              },
+              {
+                "Language": "ru",
+                "Text": "В гостях у друзей"
+              },
+              {
+                "Language": "pt",
+                "Text": "Visitando amigos"
+              },
+              {
+                "Language": "ko",
+                "Text": "친구 방문"
+              },
+              {
+                "Language": "yue",
+                "Text": "探朋友"
+              },
+              {
+                "Language": "en",
+                "Text": "Visiting friends"
+              },
+              {
+                "Language": "it",
+                "Text": "Visitando gli amici"
+              },
+              {
+                "Language": "fr",
+                "Text": "Visite à des amis"
+              },
+              {
+                "Language": "es",
+                "Text": "Amigos visitantes"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "看望朋友"
+              },
+              {
+                "Language": "ar",
+                "Text": "زيارة الأصدقاء"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "看望朋友"
+              },
+              {
+                "Language": "ja",
+                "Text": "友人を訪問"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000029",
             DisplayName: "去街",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Die Straßen" },
-              { Language: "ru", Text: "Улицы" },
-              { Language: "pt", Text: "As ruas" },
-              { Language: "ko", Text: "거리" },
-              { Language: "yue", Text: "去街" },
-              { Language: "en", Text: "The streets" },
-              { Language: "it", Text: "Le strade" },
-              { Language: "fr", Text: "Les rues" },
-              { Language: "es", Text: "Las calles" },
-              { Language: "zh-CHT", Text: "上街" },
-              { Language: "ar", Text: "الشوارع" },
-              { Language: "zh-CHS", Text: "上街" },
-              { Language: "ja", Text: "通り" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Die Straßen" },
-              { Language: "ru", Text: "Улицы" },
-              { Language: "pt", Text: "As ruas" },
-              { Language: "ko", Text: "거리" },
-              { Language: "yue", Text: "去街" },
-              { Language: "en", Text: "The streets" },
-              { Language: "it", Text: "Le strade" },
-              { Language: "fr", Text: "Les rues" },
-              { Language: "es", Text: "Las calles" },
-              { Language: "zh-CHT", Text: "上街" },
-              { Language: "ar", Text: "الشوارع" },
-              { Language: "zh-CHS", Text: "上街" },
-              { Language: "ja", Text: "通り" }
+              {
+                "Language": "de",
+                "Text": "Die Straßen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Улицы"
+              },
+              {
+                "Language": "pt",
+                "Text": "As ruas"
+              },
+              {
+                "Language": "ko",
+                "Text": "거리"
+              },
+              {
+                "Language": "yue",
+                "Text": "去街"
+              },
+              {
+                "Language": "en",
+                "Text": "The streets"
+              },
+              {
+                "Language": "it",
+                "Text": "Le strade"
+              },
+              {
+                "Language": "fr",
+                "Text": "Les rues"
+              },
+              {
+                "Language": "es",
+                "Text": "Las calles"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "上街"
+              },
+              {
+                "Language": "ar",
+                "Text": "الشوارع"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "上街"
+              },
+              {
+                "Language": "ja",
+                "Text": "通り"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000030",
             DisplayName: "打電話",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Rufen Sie" },
-              { Language: "ru", Text: "Вызов" },
-              { Language: "pt", Text: "Chamada" },
-              { Language: "ko", Text: "전화" },
-              { Language: "yue", Text: "打電話" },
-              { Language: "en", Text: "Call" },
-              { Language: "it", Text: "Chiamata" },
-              { Language: "fr", Text: "Appel" },
-              { Language: "es", Text: "Llame al" },
-              { Language: "zh-CHT", Text: "打電話" },
-              { Language: "ar", Text: "المكالمة" },
-              { Language: "zh-CHS", Text: "打电话" },
-              { Language: "ja", Text: "呼び出し" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Rufen Sie" },
-              { Language: "ru", Text: "Вызов" },
-              { Language: "pt", Text: "Chamada" },
-              { Language: "ko", Text: "전화" },
-              { Language: "yue", Text: "打電話" },
-              { Language: "en", Text: "Call" },
-              { Language: "it", Text: "Chiamata" },
-              { Language: "fr", Text: "Appel" },
-              { Language: "es", Text: "Llame al" },
-              { Language: "zh-CHT", Text: "打電話" },
-              { Language: "ar", Text: "المكالمة" },
-              { Language: "zh-CHS", Text: "打电话" },
-              { Language: "ja", Text: "呼び出し" }
+              {
+                "Language": "de",
+                "Text": "Rufen Sie"
+              },
+              {
+                "Language": "ru",
+                "Text": "Вызов"
+              },
+              {
+                "Language": "pt",
+                "Text": "Chamada"
+              },
+              {
+                "Language": "ko",
+                "Text": "전화"
+              },
+              {
+                "Language": "yue",
+                "Text": "打電話"
+              },
+              {
+                "Language": "en",
+                "Text": "Call"
+              },
+              {
+                "Language": "it",
+                "Text": "Chiamata"
+              },
+              {
+                "Language": "fr",
+                "Text": "Appel"
+              },
+              {
+                "Language": "es",
+                "Text": "Llame al"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "打電話"
+              },
+              {
+                "Language": "ar",
+                "Text": "المكالمة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "打电话"
+              },
+              {
+                "Language": "ja",
+                "Text": "呼び出し"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000031",
             DisplayName: "開風扇",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Offenen Ventilator" },
-              { Language: "ru", Text: "Открытый Вентилятор" },
-              { Language: "pt", Text: "Leque aberto" },
-              { Language: "ko", Text: "오픈 팬" },
-              { Language: "yue", Text: "開風扇" },
-              { Language: "en", Text: "Open fan" },
-              { Language: "it", Text: "Ventilatore aperto" },
-              { Language: "fr", Text: "Ventilateur ouvert" },
-              { Language: "es", Text: "Ventilador abierto" },
-              { Language: "zh-CHT", Text: "開風扇" },
-              { Language: "ar", Text: "مروحة مفتوحة" },
-              { Language: "zh-CHS", Text: "开风扇" },
-              { Language: "ja", Text: "開いているファン" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Offenen Ventilator" },
-              { Language: "ru", Text: "Открытый Вентилятор" },
-              { Language: "pt", Text: "Leque aberto" },
-              { Language: "ko", Text: "오픈 팬" },
-              { Language: "yue", Text: "開風扇" },
-              { Language: "en", Text: "Open fan" },
-              { Language: "it", Text: "Ventilatore aperto" },
-              { Language: "fr", Text: "Ventilateur ouvert" },
-              { Language: "es", Text: "Ventilador abierto" },
-              { Language: "zh-CHT", Text: "開風扇" },
-              { Language: "ar", Text: "مروحة مفتوحة" },
-              { Language: "zh-CHS", Text: "开风扇" },
-              { Language: "ja", Text: "開いているファン" }
+              {
+                "Language": "de",
+                "Text": "Offenen Ventilator"
+              },
+              {
+                "Language": "ru",
+                "Text": "Открытый Вентилятор"
+              },
+              {
+                "Language": "pt",
+                "Text": "Leque aberto"
+              },
+              {
+                "Language": "ko",
+                "Text": "오픈 팬"
+              },
+              {
+                "Language": "yue",
+                "Text": "開風扇"
+              },
+              {
+                "Language": "en",
+                "Text": "Open fan"
+              },
+              {
+                "Language": "it",
+                "Text": "Ventilatore aperto"
+              },
+              {
+                "Language": "fr",
+                "Text": "Ventilateur ouvert"
+              },
+              {
+                "Language": "es",
+                "Text": "Ventilador abierto"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "開風扇"
+              },
+              {
+                "Language": "ar",
+                "Text": "مروحة مفتوحة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "开风扇"
+              },
+              {
+                "Language": "ja",
+                "Text": "開いているファン"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000032",
             DisplayName: "扭乾",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Auswringen" },
-              { Language: "ru", Text: "Скрутить" },
-              { Language: "pt", Text: "Torcer o" },
-              { Language: "ko", Text: "짜서" },
-              { Language: "yue", Text: "扭乾" },
-              { Language: "en", Text: "Wring" },
-              { Language: "it", Text: "Strizzare" },
-              { Language: "fr", Text: "Essorer" },
-              { Language: "es", Text: "Saca" },
-              { Language: "zh-CHT", Text: "擰乾" },
-              { Language: "ar", Text: "تفرك" },
-              { Language: "zh-CHS", Text: "拧干" },
-              { Language: "ja", Text: "絞る" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Auswringen" },
-              { Language: "ru", Text: "Скрутить" },
-              { Language: "pt", Text: "Torcer o" },
-              { Language: "ko", Text: "짜서" },
-              { Language: "yue", Text: "扭乾" },
-              { Language: "en", Text: "Wring" },
-              { Language: "it", Text: "Strizzare" },
-              { Language: "fr", Text: "Essorer" },
-              { Language: "es", Text: "Saca" },
-              { Language: "zh-CHT", Text: "擰乾" },
-              { Language: "ar", Text: "تفرك" },
-              { Language: "zh-CHS", Text: "拧干" },
-              { Language: "ja", Text: "絞る" }
+              {
+                "Language": "de",
+                "Text": "Auswringen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Скрутить"
+              },
+              {
+                "Language": "pt",
+                "Text": "Torcer o"
+              },
+              {
+                "Language": "ko",
+                "Text": "짜서"
+              },
+              {
+                "Language": "yue",
+                "Text": "扭乾"
+              },
+              {
+                "Language": "en",
+                "Text": "Wring"
+              },
+              {
+                "Language": "it",
+                "Text": "Strizzare"
+              },
+              {
+                "Language": "fr",
+                "Text": "Essorer"
+              },
+              {
+                "Language": "es",
+                "Text": "Saca"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "擰乾"
+              },
+              {
+                "Language": "ar",
+                "Text": "تفرك"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "拧干"
+              },
+              {
+                "Language": "ja",
+                "Text": "絞る"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000033",
             DisplayName: "聽收音機",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Radio hören" },
-              { Language: "ru", Text: "Слушайте к радио" },
-              { Language: "pt", Text: "Ouvir o rádio" },
-              { Language: "ko", Text: "라디오를 듣으십시오" },
-              { Language: "yue", Text: "聽收音機" },
-              { Language: "en", Text: "Listen to the radio" },
-              { Language: "it", Text: "Ascoltare la radio" },
-              { Language: "fr", Text: "Ecouter la radio" },
-              { Language: "es", Text: "Escuchar la radio" },
-              { Language: "zh-CHT", Text: "聽收音機" },
-              { Language: "ar", Text: "الاستماع إلى الراديو" },
-              { Language: "zh-CHS", Text: "听收音机" },
-              { Language: "ja", Text: "ラジオを聴く" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Radio hören" },
-              { Language: "ru", Text: "Слушайте к радио" },
-              { Language: "pt", Text: "Ouvir o rádio" },
-              { Language: "ko", Text: "라디오를 듣으십시오" },
-              { Language: "yue", Text: "聽收音機" },
-              { Language: "en", Text: "Listen to the radio" },
-              { Language: "it", Text: "Ascoltare la radio" },
-              { Language: "fr", Text: "Ecouter la radio" },
-              { Language: "es", Text: "Escuchar la radio" },
-              { Language: "zh-CHT", Text: "聽收音機" },
-              { Language: "ar", Text: "الاستماع إلى الراديو" },
-              { Language: "zh-CHS", Text: "听收音机" },
-              { Language: "ja", Text: "ラジオを聴く" }
+              {
+                "Language": "de",
+                "Text": "Radio hören"
+              },
+              {
+                "Language": "ru",
+                "Text": "Слушайте к радио"
+              },
+              {
+                "Language": "pt",
+                "Text": "Ouvir o rádio"
+              },
+              {
+                "Language": "ko",
+                "Text": "라디오를 듣으십시오"
+              },
+              {
+                "Language": "yue",
+                "Text": "聽收音機"
+              },
+              {
+                "Language": "en",
+                "Text": "Listen to the radio"
+              },
+              {
+                "Language": "it",
+                "Text": "Ascoltare la radio"
+              },
+              {
+                "Language": "fr",
+                "Text": "Ecouter la radio"
+              },
+              {
+                "Language": "es",
+                "Text": "Escuchar la radio"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "聽收音機"
+              },
+              {
+                "Language": "ar",
+                "Text": "الاستماع إلى الراديو"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "听收音机"
+              },
+              {
+                "Language": "ja",
+                "Text": "ラジオを聴く"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000034",
             DisplayName: "睇電視",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Vor dem Fernseher" },
-              { Language: "ru", Text: "Смотреть телевизор" },
-              { Language: "pt", Text: "Assistindo TV" },
-              { Language: "ko", Text: "TV를 시청" },
-              { Language: "yue", Text: "睇電視" },
-              { Language: "en", Text: "Watching TV" },
-              { Language: "it", Text: "Guardare la TV" },
-              { Language: "fr", Text: "Regarder la télévision" },
-              { Language: "es", Text: "Viendo la televisión" },
-              { Language: "zh-CHT", Text: "看電視" },
-              { Language: "ar", Text: "مشاهدة التلفزيون" },
-              { Language: "zh-CHS", Text: "看电视" },
-              { Language: "ja", Text: "テレビを見てください。" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Vor dem Fernseher" },
-              { Language: "ru", Text: "Смотреть телевизор" },
-              { Language: "pt", Text: "Assistindo TV" },
-              { Language: "ko", Text: "TV를 시청" },
-              { Language: "yue", Text: "睇電視" },
-              { Language: "en", Text: "Watching TV" },
-              { Language: "it", Text: "Guardare la TV" },
-              { Language: "fr", Text: "Regarder la télévision" },
-              { Language: "es", Text: "Viendo la televisión" },
-              { Language: "zh-CHT", Text: "看電視" },
-              { Language: "ar", Text: "مشاهدة التلفزيون" },
-              { Language: "zh-CHS", Text: "看电视" },
-              { Language: "ja", Text: "テレビを見てください。" }
+              {
+                "Language": "de",
+                "Text": "Vor dem Fernseher"
+              },
+              {
+                "Language": "ru",
+                "Text": "Смотреть телевизор"
+              },
+              {
+                "Language": "pt",
+                "Text": "Assistindo TV"
+              },
+              {
+                "Language": "ko",
+                "Text": "TV를 시청"
+              },
+              {
+                "Language": "yue",
+                "Text": "睇電視"
+              },
+              {
+                "Language": "en",
+                "Text": "Watching TV"
+              },
+              {
+                "Language": "it",
+                "Text": "Guardare la TV"
+              },
+              {
+                "Language": "fr",
+                "Text": "Regarder la télévision"
+              },
+              {
+                "Language": "es",
+                "Text": "Viendo la televisión"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "看電視"
+              },
+              {
+                "Language": "ar",
+                "Text": "مشاهدة التلفزيون"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "看电视"
+              },
+              {
+                "Language": "ja",
+                "Text": "テレビを見てください。"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000035",
             DisplayName: "做針灸",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Akupunktur und moxibustion" },
-              { Language: "ru", Text: "Иглоукалывание и прижигание" },
-              { Language: "pt", Text: "Acupuntura e moxabustão" },
-              { Language: "ko", Text: "침술과 뜸" },
-              { Language: "yue", Text: "做針灸" },
-              { Language: "en", Text: "Acupuncture and moxibustion" },
-              { Language: "it", Text: "Agopuntura e moxibustione" },
-              { Language: "fr", Text: "Acupuncture et moxibustion" },
-              { Language: "es", Text: "Acupuntura y moxibustion" },
-              { Language: "zh-CHT", Text: "做針灸" },
-              { Language: "ar", Text: "الوخز بالإبر والكي" },
-              { Language: "zh-CHS", Text: "做针灸" },
-              { Language: "ja", Text: "鍼と灸" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Akupunktur und moxibustion" },
-              { Language: "ru", Text: "Иглоукалывание и прижигание" },
-              { Language: "pt", Text: "Acupuntura e moxabustão" },
-              { Language: "ko", Text: "침술과 뜸" },
-              { Language: "yue", Text: "做針灸" },
-              { Language: "en", Text: "Acupuncture and moxibustion" },
-              { Language: "it", Text: "Agopuntura e moxibustione" },
-              { Language: "fr", Text: "Acupuncture et moxibustion" },
-              { Language: "es", Text: "Acupuntura y moxibustion" },
-              { Language: "zh-CHT", Text: "做針灸" },
-              { Language: "ar", Text: "الوخز بالإبر والكي" },
-              { Language: "zh-CHS", Text: "做针灸" },
-              { Language: "ja", Text: "鍼と灸" }
+              {
+                "Language": "de",
+                "Text": "Akupunktur und moxibustion"
+              },
+              {
+                "Language": "ru",
+                "Text": "Иглоукалывание и прижигание"
+              },
+              {
+                "Language": "pt",
+                "Text": "Acupuntura e moxabustão"
+              },
+              {
+                "Language": "ko",
+                "Text": "침술과 뜸"
+              },
+              {
+                "Language": "yue",
+                "Text": "做針灸"
+              },
+              {
+                "Language": "en",
+                "Text": "Acupuncture and moxibustion"
+              },
+              {
+                "Language": "it",
+                "Text": "Agopuntura e moxibustione"
+              },
+              {
+                "Language": "fr",
+                "Text": "Acupuncture et moxibustion"
+              },
+              {
+                "Language": "es",
+                "Text": "Acupuntura y moxibustion"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "做針灸"
+              },
+              {
+                "Language": "ar",
+                "Text": "الوخز بالإبر والكي"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "做针灸"
+              },
+              {
+                "Language": "ja",
+                "Text": "鍼と灸"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000036",
             DisplayName: "耍太極",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Tai Chi" },
-              { Language: "ru", Text: "Тай-Чи" },
-              { Language: "pt", Text: "Tai Chi" },
-              { Language: "ko", Text: "타이 치" },
-              { Language: "yue", Text: "耍太極" },
-              { Language: "en", Text: "Tai Chi" },
-              { Language: "it", Text: "Tai Chi" },
-              { Language: "fr", Text: "Tai Chi" },
-              { Language: "es", Text: "Tai Chi" },
-              { Language: "zh-CHT", Text: "耍太極" },
-              { Language: "ar", Text: "تاي تشي" },
-              { Language: "zh-CHS", Text: "耍太极" },
-              { Language: "ja", Text: "太極拳" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Tai Chi" },
-              { Language: "ru", Text: "Тай-Чи" },
-              { Language: "pt", Text: "Tai Chi" },
-              { Language: "ko", Text: "타이 치" },
-              { Language: "yue", Text: "耍太極" },
-              { Language: "en", Text: "Tai Chi" },
-              { Language: "it", Text: "Tai Chi" },
-              { Language: "fr", Text: "Tai Chi" },
-              { Language: "es", Text: "Tai Chi" },
-              { Language: "zh-CHT", Text: "耍太極" },
-              { Language: "ar", Text: "تاي تشي" },
-              { Language: "zh-CHS", Text: "耍太极" },
-              { Language: "ja", Text: "太極拳" }
+              {
+                "Language": "de",
+                "Text": "Tai Chi"
+              },
+              {
+                "Language": "ru",
+                "Text": "Тай-Чи"
+              },
+              {
+                "Language": "pt",
+                "Text": "Tai Chi"
+              },
+              {
+                "Language": "ko",
+                "Text": "타이 치"
+              },
+              {
+                "Language": "yue",
+                "Text": "耍太極"
+              },
+              {
+                "Language": "en",
+                "Text": "Tai Chi"
+              },
+              {
+                "Language": "it",
+                "Text": "Tai Chi"
+              },
+              {
+                "Language": "fr",
+                "Text": "Tai Chi"
+              },
+              {
+                "Language": "es",
+                "Text": "Tai Chi"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "耍太極"
+              },
+              {
+                "Language": "ar",
+                "Text": "تاي تشي"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "耍太极"
+              },
+              {
+                "Language": "ja",
+                "Text": "太極拳"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000037",
             DisplayName: "俾錢買嘢",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Dinge für Geld kaufen" },
-              { Language: "ru", Text: "Купить вещи за деньги" },
-              { Language: "pt", Text: "Comprar coisas por dinheiro" },
-              { Language: "ko", Text: "돈에 대 한 것 들을 살" },
-              { Language: "yue", Text: "俾錢買嘢" },
-              { Language: "en", Text: "Buy things for money" },
-              { Language: "it", Text: "Comprare cose per soldi" },
-              { Language: "fr", Text: "Acheter des choses pour l’argent" },
-              { Language: "es", Text: "Comprar cosas para el dinero" },
-              { Language: "zh-CHT", Text: "給錢買東西" },
-              { Language: "ar", Text: "شراء أشياء للمال" },
-              { Language: "zh-CHS", Text: "给钱买东西" },
-              { Language: "ja", Text: "お金のためのものを購入します。" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Dinge für Geld kaufen" },
-              { Language: "ru", Text: "Купить вещи за деньги" },
-              { Language: "pt", Text: "Comprar coisas por dinheiro" },
-              { Language: "ko", Text: "돈에 대 한 것 들을 살" },
-              { Language: "yue", Text: "俾錢買嘢" },
-              { Language: "en", Text: "Buy things for money" },
-              { Language: "it", Text: "Comprare cose per soldi" },
-              { Language: "fr", Text: "Acheter des choses pour l’argent" },
-              { Language: "es", Text: "Comprar cosas para el dinero" },
-              { Language: "zh-CHT", Text: "給錢買東西" },
-              { Language: "ar", Text: "شراء أشياء للمال" },
-              { Language: "zh-CHS", Text: "给钱买东西" },
-              { Language: "ja", Text: "お金のためのものを購入します。" }
+              {
+                "Language": "de",
+                "Text": "Dinge für Geld kaufen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Купить вещи за деньги"
+              },
+              {
+                "Language": "pt",
+                "Text": "Comprar coisas por dinheiro"
+              },
+              {
+                "Language": "ko",
+                "Text": "돈에 대 한 것 들을 살"
+              },
+              {
+                "Language": "yue",
+                "Text": "俾錢買嘢"
+              },
+              {
+                "Language": "en",
+                "Text": "Buy things for money"
+              },
+              {
+                "Language": "it",
+                "Text": "Comprare cose per soldi"
+              },
+              {
+                "Language": "fr",
+                "Text": "Acheter des choses pour l’argent"
+              },
+              {
+                "Language": "es",
+                "Text": "Comprar cosas para el dinero"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "給錢買東西"
+              },
+              {
+                "Language": "ar",
+                "Text": "شراء أشياء للمال"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "给钱买东西"
+              },
+              {
+                "Language": "ja",
+                "Text": "お金のためのものを購入します。"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000038",
             DisplayName: "捉象棋",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Schach" },
-              { Language: "ru", Text: "Шахматы" },
-              { Language: "pt", Text: "Xadrez" },
-              { Language: "ko", Text: "체스" },
-              { Language: "yue", Text: "捉象棋" },
-              { Language: "en", Text: "Chess" },
-              { Language: "it", Text: "Scacchi" },
-              { Language: "fr", Text: "Jeu d’échecs" },
-              { Language: "es", Text: "Ajedrez" },
-              { Language: "zh-CHT", Text: "下象棋" },
-              { Language: "ar", Text: "لعبة الشطرنج" },
-              { Language: "zh-CHS", Text: "下象棋" },
-              { Language: "ja", Text: "チェス" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Schach" },
-              { Language: "ru", Text: "Шахматы" },
-              { Language: "pt", Text: "Xadrez" },
-              { Language: "ko", Text: "체스" },
-              { Language: "yue", Text: "捉象棋" },
-              { Language: "en", Text: "Chess" },
-              { Language: "it", Text: "Scacchi" },
-              { Language: "fr", Text: "Jeu d’échecs" },
-              { Language: "es", Text: "Ajedrez" },
-              { Language: "zh-CHT", Text: "下象棋" },
-              { Language: "ar", Text: "لعبة الشطرنج" },
-              { Language: "zh-CHS", Text: "下象棋" },
-              { Language: "ja", Text: "チェス" }
+              {
+                "Language": "de",
+                "Text": "Schach"
+              },
+              {
+                "Language": "ru",
+                "Text": "Шахматы"
+              },
+              {
+                "Language": "pt",
+                "Text": "Xadrez"
+              },
+              {
+                "Language": "ko",
+                "Text": "체스"
+              },
+              {
+                "Language": "yue",
+                "Text": "捉象棋"
+              },
+              {
+                "Language": "en",
+                "Text": "Chess"
+              },
+              {
+                "Language": "it",
+                "Text": "Scacchi"
+              },
+              {
+                "Language": "fr",
+                "Text": "Jeu d’échecs"
+              },
+              {
+                "Language": "es",
+                "Text": "Ajedrez"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "下象棋"
+              },
+              {
+                "Language": "ar",
+                "Text": "لعبة الشطرنج"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "下象棋"
+              },
+              {
+                "Language": "ja",
+                "Text": "チェス"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000039",
             DisplayName: "去飲茶",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Gehen Sie zum Tee" },
-              { Language: "ru", Text: "Перейти к чаю" },
-              { Language: "pt", Text: "Ir para o chá" },
-              { Language: "ko", Text: "차에가 서" },
-              { Language: "yue", Text: "去飲茶" },
-              { Language: "en", Text: "Go to tea" },
-              { Language: "it", Text: "Vai al tè" },
-              { Language: "fr", Text: "Aller à thé" },
-              { Language: "es", Text: "Ir a tomar el té" },
-              { Language: "zh-CHT", Text: "去飲茶" },
-              { Language: "ar", Text: "الذهاب للشاي" },
-              { Language: "zh-CHS", Text: "去饮茶" },
-              { Language: "ja", Text: "お茶に行く" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Gehen Sie zum Tee" },
-              { Language: "ru", Text: "Перейти к чаю" },
-              { Language: "pt", Text: "Ir para o chá" },
-              { Language: "ko", Text: "차에가 서" },
-              { Language: "yue", Text: "去飲茶" },
-              { Language: "en", Text: "Go to tea" },
-              { Language: "it", Text: "Vai al tè" },
-              { Language: "fr", Text: "Aller à thé" },
-              { Language: "es", Text: "Ir a tomar el té" },
-              { Language: "zh-CHT", Text: "去飲茶" },
-              { Language: "ar", Text: "الذهاب للشاي" },
-              { Language: "zh-CHS", Text: "去饮茶" },
-              { Language: "ja", Text: "お茶に行く" }
+              {
+                "Language": "de",
+                "Text": "Gehen Sie zum Tee"
+              },
+              {
+                "Language": "ru",
+                "Text": "Перейти к чаю"
+              },
+              {
+                "Language": "pt",
+                "Text": "Ir para o chá"
+              },
+              {
+                "Language": "ko",
+                "Text": "차에가 서"
+              },
+              {
+                "Language": "yue",
+                "Text": "去飲茶"
+              },
+              {
+                "Language": "en",
+                "Text": "Go to tea"
+              },
+              {
+                "Language": "it",
+                "Text": "Vai al tè"
+              },
+              {
+                "Language": "fr",
+                "Text": "Aller à thé"
+              },
+              {
+                "Language": "es",
+                "Text": "Ir a tomar el té"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "去飲茶"
+              },
+              {
+                "Language": "ar",
+                "Text": "الذهاب للشاي"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "去饮茶"
+              },
+              {
+                "Language": "ja",
+                "Text": "お茶に行く"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000040",
             DisplayName: "開／關冷氣",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Ein/aus Schalter Klimaanlage" },
-              { Language: "ru", Text: "Вкл/выкл выключателя кондиционера" },
-              {
-                Language: "pt",
-                Text: "Ligar/desligar o interruptor de ar condicionado"
-              },
-              { Language: "ko", Text: "온/오프 스위치 에어컨" },
-              { Language: "yue", Text: "開／關冷氣" },
-              { Language: "en", Text: "On/off switch air conditioning" },
-              {
-                Language: "it",
-                Text: "Aria condizionata interruttore inserita/disinserita"
-              },
-              {
-                Language: "fr",
-                Text: "Marche/arrêt interrupteur de climatisation"
-              },
-              {
-                Language: "es",
-                Text: "Encendido/apagado interruptor aire acondicionado"
-              },
-              { Language: "zh-CHT", Text: "開/關空調" },
-              {
-                Language: "ar",
-                Text: "تشغيل/إيقاف تشغيل التبديل تكييف الهواء"
-              },
-              { Language: "zh-CHS", Text: "开/关空调" },
-              { Language: "ja", Text: "オン/オフ スイッチ、エアコン" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Ein/aus Schalter Klimaanlage" },
-              { Language: "ru", Text: "Вкл/выкл выключателя кондиционера" },
               {
-                Language: "pt",
-                Text: "Ligar/desligar o interruptor de ar condicionado"
-              },
-              { Language: "ko", Text: "온/오프 스위치 에어컨" },
-              { Language: "yue", Text: "開／關冷氣" },
-              { Language: "en", Text: "On/off switch air conditioning" },
-              {
-                Language: "it",
-                Text: "Aria condizionata interruttore inserita/disinserita"
+                "Language": "de",
+                "Text": "Ein/aus Schalter Klimaanlage"
               },
               {
-                Language: "fr",
-                Text: "Marche/arrêt interrupteur de climatisation"
+                "Language": "ru",
+                "Text": "Вкл/выкл выключателя кондиционера"
               },
               {
-                Language: "es",
-                Text: "Encendido/apagado interruptor aire acondicionado"
+                "Language": "pt",
+                "Text": "Ligar/desligar o interruptor de ar condicionado"
               },
-              { Language: "zh-CHT", Text: "開/關空調" },
               {
-                Language: "ar",
-                Text: "تشغيل/إيقاف تشغيل التبديل تكييف الهواء"
+                "Language": "ko",
+                "Text": "온/오프 스위치 에어컨"
               },
-              { Language: "zh-CHS", Text: "开/关空调" },
-              { Language: "ja", Text: "オン/オフ スイッチ、エアコン" }
+              {
+                "Language": "yue",
+                "Text": "開／關冷氣"
+              },
+              {
+                "Language": "en",
+                "Text": "On/off switch air conditioning"
+              },
+              {
+                "Language": "it",
+                "Text": "Aria condizionata interruttore inserita/disinserita"
+              },
+              {
+                "Language": "fr",
+                "Text": "Marche/arrêt interrupteur de climatisation"
+              },
+              {
+                "Language": "es",
+                "Text": "Encendido/apagado interruptor aire acondicionado"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "開/關空調"
+              },
+              {
+                "Language": "ar",
+                "Text": "تشغيل/إيقاف تشغيل التبديل تكييف الهواء"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "开/关空调"
+              },
+              {
+                "Language": "ja",
+                "Text": "オン/オフ スイッチ、エアコン"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Aktion" },
-          { Language: "ru", Text: "Действия" },
-          { Language: "pt", Text: "Ação" },
-          { Language: "ko", Text: "액션" },
-          { Language: "yue", Text: "動作" },
-          { Language: "en", Text: "Action" },
-          { Language: "it", Text: "Azione" },
-          { Language: "fr", Text: "Action" },
-          { Language: "es", Text: "Acción" },
-          { Language: "zh-CHT", Text: "動作" },
-          { Language: "ar", Text: "عمل" },
-          { Language: "zh-CHS", Text: "动作" },
-          { Language: "ja", Text: "アクション" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Aktion" },
-          { Language: "ru", Text: "Действия" },
-          { Language: "pt", Text: "Ação" },
-          { Language: "ko", Text: "액션" },
-          { Language: "yue", Text: "動作" },
-          { Language: "en", Text: "Action" },
-          { Language: "it", Text: "Azione" },
-          { Language: "fr", Text: "Action" },
-          { Language: "es", Text: "Acción" },
-          { Language: "zh-CHT", Text: "動作" },
-          { Language: "ar", Text: "عمل" },
-          { Language: "zh-CHS", Text: "动作" },
-          { Language: "ja", Text: "アクション" }
+          {
+            "Language": "de",
+            "Text": "Aktion"
+          },
+          {
+            "Language": "ru",
+            "Text": "Действия"
+          },
+          {
+            "Language": "pt",
+            "Text": "Ação"
+          },
+          {
+            "Language": "ko",
+            "Text": "액션"
+          },
+          {
+            "Language": "yue",
+            "Text": "動作"
+          },
+          {
+            "Language": "en",
+            "Text": "Action"
+          },
+          {
+            "Language": "it",
+            "Text": "Azione"
+          },
+          {
+            "Language": "fr",
+            "Text": "Action"
+          },
+          {
+            "Language": "es",
+            "Text": "Acción"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "動作"
+          },
+          {
+            "Language": "ar",
+            "Text": "عمل"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "动作"
+          },
+          {
+            "Language": "ja",
+            "Text": "アクション"
+          }
         ]
       },
       {
@@ -1437,407 +2432,707 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000041",
             DisplayName: "肚餓",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Hungrige" },
-              { Language: "ru", Text: "Голодные" },
-              { Language: "pt", Text: "Com fome" },
-              { Language: "ko", Text: "배 고 파" },
-              { Language: "yue", Text: "肚餓" },
-              { Language: "en", Text: "Hungry" },
-              { Language: "it", Text: "Fame" },
-              { Language: "fr", Text: "Faim" },
-              { Language: "es", Text: "Hambre" },
-              { Language: "zh-CHT", Text: "肚子餓" },
-              { Language: "ar", Text: "الجوع" },
-              { Language: "zh-CHS", Text: "肚子饿" },
-              { Language: "ja", Text: "空腹" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Hungrige" },
-              { Language: "ru", Text: "Голодные" },
-              { Language: "pt", Text: "Com fome" },
-              { Language: "ko", Text: "배 고 파" },
-              { Language: "yue", Text: "肚餓" },
-              { Language: "en", Text: "Hungry" },
-              { Language: "it", Text: "Fame" },
-              { Language: "fr", Text: "Faim" },
-              { Language: "es", Text: "Hambre" },
-              { Language: "zh-CHT", Text: "肚子餓" },
-              { Language: "ar", Text: "الجوع" },
-              { Language: "zh-CHS", Text: "肚子饿" },
-              { Language: "ja", Text: "空腹" }
+              {
+                "Language": "de",
+                "Text": "Hungrige"
+              },
+              {
+                "Language": "ru",
+                "Text": "Голодные"
+              },
+              {
+                "Language": "pt",
+                "Text": "Com fome"
+              },
+              {
+                "Language": "ko",
+                "Text": "배 고 파"
+              },
+              {
+                "Language": "yue",
+                "Text": "肚餓"
+              },
+              {
+                "Language": "en",
+                "Text": "Hungry"
+              },
+              {
+                "Language": "it",
+                "Text": "Fame"
+              },
+              {
+                "Language": "fr",
+                "Text": "Faim"
+              },
+              {
+                "Language": "es",
+                "Text": "Hambre"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "肚子餓"
+              },
+              {
+                "Language": "ar",
+                "Text": "الجوع"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "肚子饿"
+              },
+              {
+                "Language": "ja",
+                "Text": "空腹"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000042",
             DisplayName: "口渴",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Durstig" },
-              { Language: "ru", Text: "Жажда" },
-              { Language: "pt", Text: "Com sede" },
-              { Language: "ko", Text: "목말라" },
-              { Language: "yue", Text: "口渴" },
-              { Language: "en", Text: "Thirsty" },
-              { Language: "it", Text: "Assetato" },
-              { Language: "fr", Text: "Soif" },
-              { Language: "es", Text: "Sed" },
-              { Language: "zh-CHT", Text: "口渴" },
-              { Language: "ar", Text: "عطشى" },
-              { Language: "zh-CHS", Text: "口渴" },
-              { Language: "ja", Text: "のどが渇いて" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Durstig" },
-              { Language: "ru", Text: "Жажда" },
-              { Language: "pt", Text: "Com sede" },
-              { Language: "ko", Text: "목말라" },
-              { Language: "yue", Text: "口渴" },
-              { Language: "en", Text: "Thirsty" },
-              { Language: "it", Text: "Assetato" },
-              { Language: "fr", Text: "Soif" },
-              { Language: "es", Text: "Sed" },
-              { Language: "zh-CHT", Text: "口渴" },
-              { Language: "ar", Text: "عطشى" },
-              { Language: "zh-CHS", Text: "口渴" },
-              { Language: "ja", Text: "のどが渇いて" }
+              {
+                "Language": "de",
+                "Text": "Durstig"
+              },
+              {
+                "Language": "ru",
+                "Text": "Жажда"
+              },
+              {
+                "Language": "pt",
+                "Text": "Com sede"
+              },
+              {
+                "Language": "ko",
+                "Text": "목말라"
+              },
+              {
+                "Language": "yue",
+                "Text": "口渴"
+              },
+              {
+                "Language": "en",
+                "Text": "Thirsty"
+              },
+              {
+                "Language": "it",
+                "Text": "Assetato"
+              },
+              {
+                "Language": "fr",
+                "Text": "Soif"
+              },
+              {
+                "Language": "es",
+                "Text": "Sed"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "口渴"
+              },
+              {
+                "Language": "ar",
+                "Text": "عطشى"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "口渴"
+              },
+              {
+                "Language": "ja",
+                "Text": "のどが渇いて"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000043",
             DisplayName: "好開心",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Viel Spaß" },
-              { Language: "ru", Text: "Хорошее развлечение" },
-              { Language: "pt", Text: "Boa diversão" },
-              { Language: "ko", Text: "좋은 재미" },
-              { Language: "yue", Text: "好開心" },
-              { Language: "en", Text: "Good fun" },
-              { Language: "it", Text: "Buon divertimento" },
-              { Language: "fr", Text: "Bon amusement" },
-              { Language: "es", Text: "Buena diversión" },
-              { Language: "zh-CHT", Text: "好開心" },
-              { Language: "ar", Text: "متعة جيدة" },
-              { Language: "zh-CHS", Text: "好开心" },
-              { Language: "ja", Text: "楽しい" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Viel Spaß" },
-              { Language: "ru", Text: "Хорошее развлечение" },
-              { Language: "pt", Text: "Boa diversão" },
-              { Language: "ko", Text: "좋은 재미" },
-              { Language: "yue", Text: "好開心" },
-              { Language: "en", Text: "Good fun" },
-              { Language: "it", Text: "Buon divertimento" },
-              { Language: "fr", Text: "Bon amusement" },
-              { Language: "es", Text: "Buena diversión" },
-              { Language: "zh-CHT", Text: "好開心" },
-              { Language: "ar", Text: "متعة جيدة" },
-              { Language: "zh-CHS", Text: "好开心" },
-              { Language: "ja", Text: "楽しい" }
+              {
+                "Language": "de",
+                "Text": "Viel Spaß"
+              },
+              {
+                "Language": "ru",
+                "Text": "Хорошее развлечение"
+              },
+              {
+                "Language": "pt",
+                "Text": "Boa diversão"
+              },
+              {
+                "Language": "ko",
+                "Text": "좋은 재미"
+              },
+              {
+                "Language": "yue",
+                "Text": "好開心"
+              },
+              {
+                "Language": "en",
+                "Text": "Good fun"
+              },
+              {
+                "Language": "it",
+                "Text": "Buon divertimento"
+              },
+              {
+                "Language": "fr",
+                "Text": "Bon amusement"
+              },
+              {
+                "Language": "es",
+                "Text": "Buena diversión"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "好開心"
+              },
+              {
+                "Language": "ar",
+                "Text": "متعة جيدة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "好开心"
+              },
+              {
+                "Language": "ja",
+                "Text": "楽しい"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000044",
             DisplayName: "好嬲",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Gas" },
-              { Language: "ru", Text: "Газ" },
-              { Language: "pt", Text: "Gás" },
-              { Language: "ko", Text: "가스" },
-              { Language: "yue", Text: "好嬲" },
-              { Language: "en", Text: "Gas" },
-              { Language: "it", Text: "Gas" },
-              { Language: "fr", Text: "Gaz" },
-              { Language: "es", Text: "Gas" },
-              { Language: "zh-CHT", Text: "很氣" },
-              { Language: "ar", Text: "الغاز" },
-              { Language: "zh-CHS", Text: "很气" },
-              { Language: "ja", Text: "ガス" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Gas" },
-              { Language: "ru", Text: "Газ" },
-              { Language: "pt", Text: "Gás" },
-              { Language: "ko", Text: "가스" },
-              { Language: "yue", Text: "好嬲" },
-              { Language: "en", Text: "Gas" },
-              { Language: "it", Text: "Gas" },
-              { Language: "fr", Text: "Gaz" },
-              { Language: "es", Text: "Gas" },
-              { Language: "zh-CHT", Text: "很氣" },
-              { Language: "ar", Text: "الغاز" },
-              { Language: "zh-CHS", Text: "很气" },
-              { Language: "ja", Text: "ガス" }
+              {
+                "Language": "de",
+                "Text": "Gas"
+              },
+              {
+                "Language": "ru",
+                "Text": "Газ"
+              },
+              {
+                "Language": "pt",
+                "Text": "Gás"
+              },
+              {
+                "Language": "ko",
+                "Text": "가스"
+              },
+              {
+                "Language": "yue",
+                "Text": "好嬲"
+              },
+              {
+                "Language": "en",
+                "Text": "Gas"
+              },
+              {
+                "Language": "it",
+                "Text": "Gas"
+              },
+              {
+                "Language": "fr",
+                "Text": "Gaz"
+              },
+              {
+                "Language": "es",
+                "Text": "Gas"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "很氣"
+              },
+              {
+                "Language": "ar",
+                "Text": "الغاز"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "很气"
+              },
+              {
+                "Language": "ja",
+                "Text": "ガス"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000045",
             DisplayName: "好驚",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "So erschrocken" },
-              { Language: "ru", Text: "Так страшно" },
-              { Language: "pt", Text: "Com tanto medo" },
-              { Language: "ko", Text: "그래서 무서 워" },
-              { Language: "yue", Text: "好驚" },
-              { Language: "en", Text: "So scared" },
-              { Language: "it", Text: "Tanta paura" },
-              { Language: "fr", Text: "Tellement peur" },
-              { Language: "es", Text: "Tan asustado" },
-              { Language: "zh-CHT", Text: "好害怕" },
-              { Language: "ar", Text: "خائفة جداً" },
-              { Language: "zh-CHS", Text: "好害怕" },
-              { Language: "ja", Text: "怖いから" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "So erschrocken" },
-              { Language: "ru", Text: "Так страшно" },
-              { Language: "pt", Text: "Com tanto medo" },
-              { Language: "ko", Text: "그래서 무서 워" },
-              { Language: "yue", Text: "好驚" },
-              { Language: "en", Text: "So scared" },
-              { Language: "it", Text: "Tanta paura" },
-              { Language: "fr", Text: "Tellement peur" },
-              { Language: "es", Text: "Tan asustado" },
-              { Language: "zh-CHT", Text: "好害怕" },
-              { Language: "ar", Text: "خائفة جداً" },
-              { Language: "zh-CHS", Text: "好害怕" },
-              { Language: "ja", Text: "怖いから" }
+              {
+                "Language": "de",
+                "Text": "So erschrocken"
+              },
+              {
+                "Language": "ru",
+                "Text": "Так страшно"
+              },
+              {
+                "Language": "pt",
+                "Text": "Com tanto medo"
+              },
+              {
+                "Language": "ko",
+                "Text": "그래서 무서 워"
+              },
+              {
+                "Language": "yue",
+                "Text": "好驚"
+              },
+              {
+                "Language": "en",
+                "Text": "So scared"
+              },
+              {
+                "Language": "it",
+                "Text": "Tanta paura"
+              },
+              {
+                "Language": "fr",
+                "Text": "Tellement peur"
+              },
+              {
+                "Language": "es",
+                "Text": "Tan asustado"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "好害怕"
+              },
+              {
+                "Language": "ar",
+                "Text": "خائفة جداً"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "好害怕"
+              },
+              {
+                "Language": "ja",
+                "Text": "怖いから"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000046",
             DisplayName: "疲倦",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Müde" },
-              { Language: "ru", Text: "Усталость" },
-              { Language: "pt", Text: "Cansado" },
-              { Language: "ko", Text: "피곤" },
-              { Language: "yue", Text: "疲倦" },
-              { Language: "en", Text: "Tired" },
-              { Language: "it", Text: "Stanco" },
-              { Language: "fr", Text: "Fatigué" },
-              { Language: "es", Text: "Cansado" },
-              { Language: "zh-CHT", Text: "疲倦" },
-              { Language: "ar", Text: "متعب" },
-              { Language: "zh-CHS", Text: "疲倦" },
-              { Language: "ja", Text: "疲れています。" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Müde" },
-              { Language: "ru", Text: "Усталость" },
-              { Language: "pt", Text: "Cansado" },
-              { Language: "ko", Text: "피곤" },
-              { Language: "yue", Text: "疲倦" },
-              { Language: "en", Text: "Tired" },
-              { Language: "it", Text: "Stanco" },
-              { Language: "fr", Text: "Fatigué" },
-              { Language: "es", Text: "Cansado" },
-              { Language: "zh-CHT", Text: "疲倦" },
-              { Language: "ar", Text: "متعب" },
-              { Language: "zh-CHS", Text: "疲倦" },
-              { Language: "ja", Text: "疲れています。" }
+              {
+                "Language": "de",
+                "Text": "Müde"
+              },
+              {
+                "Language": "ru",
+                "Text": "Усталость"
+              },
+              {
+                "Language": "pt",
+                "Text": "Cansado"
+              },
+              {
+                "Language": "ko",
+                "Text": "피곤"
+              },
+              {
+                "Language": "yue",
+                "Text": "疲倦"
+              },
+              {
+                "Language": "en",
+                "Text": "Tired"
+              },
+              {
+                "Language": "it",
+                "Text": "Stanco"
+              },
+              {
+                "Language": "fr",
+                "Text": "Fatigué"
+              },
+              {
+                "Language": "es",
+                "Text": "Cansado"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "疲倦"
+              },
+              {
+                "Language": "ar",
+                "Text": "متعب"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "疲倦"
+              },
+              {
+                "Language": "ja",
+                "Text": "疲れています。"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000047",
             DisplayName: "好傷心",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Zu traurig" },
-              { Language: "ru", Text: "Слишком грустно" },
-              { Language: "pt", Text: "Muito triste" },
-              { Language: "ko", Text: "너무 슬픈" },
-              { Language: "yue", Text: "好傷心" },
-              { Language: "en", Text: "Too sad" },
-              { Language: "it", Text: "Troppo triste" },
-              { Language: "fr", Text: "Trop triste" },
-              { Language: "es", Text: "Demasiado triste" },
-              { Language: "zh-CHT", Text: "太傷心了" },
-              { Language: "ar", Text: "حزين جداً" },
-              { Language: "zh-CHS", Text: "太伤心了" },
-              { Language: "ja", Text: "あまりにも悲しい" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Zu traurig" },
-              { Language: "ru", Text: "Слишком грустно" },
-              { Language: "pt", Text: "Muito triste" },
-              { Language: "ko", Text: "너무 슬픈" },
-              { Language: "yue", Text: "好傷心" },
-              { Language: "en", Text: "Too sad" },
-              { Language: "it", Text: "Troppo triste" },
-              { Language: "fr", Text: "Trop triste" },
-              { Language: "es", Text: "Demasiado triste" },
-              { Language: "zh-CHT", Text: "太傷心了" },
-              { Language: "ar", Text: "حزين جداً" },
-              { Language: "zh-CHS", Text: "太伤心了" },
-              { Language: "ja", Text: "あまりにも悲しい" }
+              {
+                "Language": "de",
+                "Text": "Zu traurig"
+              },
+              {
+                "Language": "ru",
+                "Text": "Слишком грустно"
+              },
+              {
+                "Language": "pt",
+                "Text": "Muito triste"
+              },
+              {
+                "Language": "ko",
+                "Text": "너무 슬픈"
+              },
+              {
+                "Language": "yue",
+                "Text": "好傷心"
+              },
+              {
+                "Language": "en",
+                "Text": "Too sad"
+              },
+              {
+                "Language": "it",
+                "Text": "Troppo triste"
+              },
+              {
+                "Language": "fr",
+                "Text": "Trop triste"
+              },
+              {
+                "Language": "es",
+                "Text": "Demasiado triste"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "太傷心了"
+              },
+              {
+                "Language": "ar",
+                "Text": "حزين جداً"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "太伤心了"
+              },
+              {
+                "Language": "ja",
+                "Text": "あまりにも悲しい"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000048",
             DisplayName: "好痛",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Sehr schmerzhaft" },
-              { Language: "ru", Text: "Очень больно" },
-              { Language: "pt", Text: "Muito doloroso" },
-              { Language: "ko", Text: "매우 고통 스러운" },
-              { Language: "yue", Text: "好痛" },
-              { Language: "en", Text: "Very painful" },
-              { Language: "it", Text: "Molto doloroso" },
-              { Language: "fr", Text: "Très douloureux" },
-              { Language: "es", Text: "Muy doloroso" },
-              { Language: "zh-CHT", Text: "很痛" },
-              { Language: "ar", Text: "مؤلمة جداً" },
-              { Language: "zh-CHS", Text: "很痛" },
-              { Language: "ja", Text: "非常に痛みを伴う" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Sehr schmerzhaft" },
-              { Language: "ru", Text: "Очень больно" },
-              { Language: "pt", Text: "Muito doloroso" },
-              { Language: "ko", Text: "매우 고통 스러운" },
-              { Language: "yue", Text: "好痛" },
-              { Language: "en", Text: "Very painful" },
-              { Language: "it", Text: "Molto doloroso" },
-              { Language: "fr", Text: "Très douloureux" },
-              { Language: "es", Text: "Muy doloroso" },
-              { Language: "zh-CHT", Text: "很痛" },
-              { Language: "ar", Text: "مؤلمة جداً" },
-              { Language: "zh-CHS", Text: "很痛" },
-              { Language: "ja", Text: "非常に痛みを伴う" }
+              {
+                "Language": "de",
+                "Text": "Sehr schmerzhaft"
+              },
+              {
+                "Language": "ru",
+                "Text": "Очень больно"
+              },
+              {
+                "Language": "pt",
+                "Text": "Muito doloroso"
+              },
+              {
+                "Language": "ko",
+                "Text": "매우 고통 스러운"
+              },
+              {
+                "Language": "yue",
+                "Text": "好痛"
+              },
+              {
+                "Language": "en",
+                "Text": "Very painful"
+              },
+              {
+                "Language": "it",
+                "Text": "Molto doloroso"
+              },
+              {
+                "Language": "fr",
+                "Text": "Très douloureux"
+              },
+              {
+                "Language": "es",
+                "Text": "Muy doloroso"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "很痛"
+              },
+              {
+                "Language": "ar",
+                "Text": "مؤلمة جداً"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "很痛"
+              },
+              {
+                "Language": "ja",
+                "Text": "非常に痛みを伴う"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000049",
             DisplayName: "好凍",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Es ist kalt" },
-              { Language: "ru", Text: "Это холодно" },
-              { Language: "pt", Text: "Está frio" },
-              { Language: "ko", Text: "그것은 감기" },
-              { Language: "yue", Text: "好凍" },
-              { Language: "en", Text: "It's cold" },
-              { Language: "it", Text: "Fa freddo" },
-              { Language: "fr", Text: "Il fait froid" },
-              { Language: "es", Text: "Es frío" },
-              { Language: "zh-CHT", Text: "好冷" },
-              { Language: "ar", Text: "إنه بارد" },
-              { Language: "zh-CHS", Text: "好冷" },
-              { Language: "ja", Text: "寒いです" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Es ist kalt" },
-              { Language: "ru", Text: "Это холодно" },
-              { Language: "pt", Text: "Está frio" },
-              { Language: "ko", Text: "그것은 감기" },
-              { Language: "yue", Text: "好凍" },
-              { Language: "en", Text: "It's cold" },
-              { Language: "it", Text: "Fa freddo" },
-              { Language: "fr", Text: "Il fait froid" },
-              { Language: "es", Text: "Es frío" },
-              { Language: "zh-CHT", Text: "好冷" },
-              { Language: "ar", Text: "إنه بارد" },
-              { Language: "zh-CHS", Text: "好冷" },
-              { Language: "ja", Text: "寒いです" }
+              {
+                "Language": "de",
+                "Text": "Es ist kalt"
+              },
+              {
+                "Language": "ru",
+                "Text": "Это холодно"
+              },
+              {
+                "Language": "pt",
+                "Text": "Está frio"
+              },
+              {
+                "Language": "ko",
+                "Text": "그것은 감기"
+              },
+              {
+                "Language": "yue",
+                "Text": "好凍"
+              },
+              {
+                "Language": "en",
+                "Text": "It's cold"
+              },
+              {
+                "Language": "it",
+                "Text": "Fa freddo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Il fait froid"
+              },
+              {
+                "Language": "es",
+                "Text": "Es frío"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "好冷"
+              },
+              {
+                "Language": "ar",
+                "Text": "إنه بارد"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "好冷"
+              },
+              {
+                "Language": "ja",
+                "Text": "寒いです"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000050",
             DisplayName: "好熱",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Es ist heiß" },
-              { Language: "ru", Text: "Это горячий" },
-              { Language: "pt", Text: "Está quente" },
-              { Language: "ko", Text: "그것은 뜨거운" },
-              { Language: "yue", Text: "好熱" },
-              { Language: "en", Text: "It's hot" },
-              { Language: "it", Text: "È caldo" },
-              { Language: "fr", Text: "Il fait chaud" },
-              { Language: "es", Text: "Está caliente" },
-              { Language: "zh-CHT", Text: "好熱" },
-              { Language: "ar", Text: "أنها ساخنة" },
-              { Language: "zh-CHS", Text: "好热" },
-              { Language: "ja", Text: "暑いです。" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Es ist heiß" },
-              { Language: "ru", Text: "Это горячий" },
-              { Language: "pt", Text: "Está quente" },
-              { Language: "ko", Text: "그것은 뜨거운" },
-              { Language: "yue", Text: "好熱" },
-              { Language: "en", Text: "It's hot" },
-              { Language: "it", Text: "È caldo" },
-              { Language: "fr", Text: "Il fait chaud" },
-              { Language: "es", Text: "Está caliente" },
-              { Language: "zh-CHT", Text: "好熱" },
-              { Language: "ar", Text: "أنها ساخنة" },
-              { Language: "zh-CHS", Text: "好热" },
-              { Language: "ja", Text: "暑いです。" }
+              {
+                "Language": "de",
+                "Text": "Es ist heiß"
+              },
+              {
+                "Language": "ru",
+                "Text": "Это горячий"
+              },
+              {
+                "Language": "pt",
+                "Text": "Está quente"
+              },
+              {
+                "Language": "ko",
+                "Text": "그것은 뜨거운"
+              },
+              {
+                "Language": "yue",
+                "Text": "好熱"
+              },
+              {
+                "Language": "en",
+                "Text": "It's hot"
+              },
+              {
+                "Language": "it",
+                "Text": "È caldo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Il fait chaud"
+              },
+              {
+                "Language": "es",
+                "Text": "Está caliente"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "好熱"
+              },
+              {
+                "Language": "ar",
+                "Text": "أنها ساخنة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "好热"
+              },
+              {
+                "Language": "ja",
+                "Text": "暑いです。"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000051",
             DisplayName: "唔舒服",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Nicht gut" },
-              { Language: "ru", Text: "Не чувствует себя хорошо" },
-              { Language: "pt", Text: "Não se sente bem" },
-              { Language: "ko", Text: "몸이 안" },
-              { Language: "yue", Text: "唔舒服" },
-              { Language: "en", Text: "Not feeling well" },
-              { Language: "it", Text: "Non si sente bene" },
-              { Language: "fr", Text: "Ne se sentant pas bien" },
-              { Language: "es", Text: "No se siente bien" },
-              { Language: "zh-CHT", Text: "不舒服" },
-              { Language: "ar", Text: "ليس على ما يرام" },
-              { Language: "zh-CHS", Text: "不舒服" },
-              { Language: "ja", Text: "気分が良くないです。" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Nicht gut" },
-              { Language: "ru", Text: "Не чувствует себя хорошо" },
-              { Language: "pt", Text: "Não se sente bem" },
-              { Language: "ko", Text: "몸이 안" },
-              { Language: "yue", Text: "唔舒服" },
-              { Language: "en", Text: "Not feeling well" },
-              { Language: "it", Text: "Non si sente bene" },
-              { Language: "fr", Text: "Ne se sentant pas bien" },
-              { Language: "es", Text: "No se siente bien" },
-              { Language: "zh-CHT", Text: "不舒服" },
-              { Language: "ar", Text: "ليس على ما يرام" },
-              { Language: "zh-CHS", Text: "不舒服" },
-              { Language: "ja", Text: "気分が良くないです。" }
+              {
+                "Language": "de",
+                "Text": "Nicht gut"
+              },
+              {
+                "Language": "ru",
+                "Text": "Не чувствует себя хорошо"
+              },
+              {
+                "Language": "pt",
+                "Text": "Não se sente bem"
+              },
+              {
+                "Language": "ko",
+                "Text": "몸이 안"
+              },
+              {
+                "Language": "yue",
+                "Text": "唔舒服"
+              },
+              {
+                "Language": "en",
+                "Text": "Not feeling well"
+              },
+              {
+                "Language": "it",
+                "Text": "Non si sente bene"
+              },
+              {
+                "Language": "fr",
+                "Text": "Ne se sentant pas bien"
+              },
+              {
+                "Language": "es",
+                "Text": "No se siente bien"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "不舒服"
+              },
+              {
+                "Language": "ar",
+                "Text": "ليس على ما يرام"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "不舒服"
+              },
+              {
+                "Language": "ja",
+                "Text": "気分が良くないです。"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Gefühl" },
-          { Language: "ru", Text: "Чувство" },
-          { Language: "pt", Text: "Sentimento" },
-          { Language: "ko", Text: "느낌" },
-          { Language: "yue", Text: "感覺" },
-          { Language: "en", Text: "Feeling" },
-          { Language: "it", Text: "Sensazione" },
-          { Language: "fr", Text: "Sentiment" },
-          { Language: "es", Text: "Sensación" },
-          { Language: "zh-CHT", Text: "感覺" },
-          { Language: "ar", Text: "شعور" },
-          { Language: "zh-CHS", Text: "感觉" },
-          { Language: "ja", Text: "感じ" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Gefühl" },
-          { Language: "ru", Text: "Чувство" },
-          { Language: "pt", Text: "Sentimento" },
-          { Language: "ko", Text: "느낌" },
-          { Language: "yue", Text: "感覺" },
-          { Language: "en", Text: "Feeling" },
-          { Language: "it", Text: "Sensazione" },
-          { Language: "fr", Text: "Sentiment" },
-          { Language: "es", Text: "Sensación" },
-          { Language: "zh-CHT", Text: "感覺" },
-          { Language: "ar", Text: "شعور" },
-          { Language: "zh-CHS", Text: "感觉" },
-          { Language: "ja", Text: "感じ" }
+          {
+            "Language": "de",
+            "Text": "Gefühl"
+          },
+          {
+            "Language": "ru",
+            "Text": "Чувство"
+          },
+          {
+            "Language": "pt",
+            "Text": "Sentimento"
+          },
+          {
+            "Language": "ko",
+            "Text": "느낌"
+          },
+          {
+            "Language": "yue",
+            "Text": "感覺"
+          },
+          {
+            "Language": "en",
+            "Text": "Feeling"
+          },
+          {
+            "Language": "it",
+            "Text": "Sensazione"
+          },
+          {
+            "Language": "fr",
+            "Text": "Sentiment"
+          },
+          {
+            "Language": "es",
+            "Text": "Sensación"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "感覺"
+          },
+          {
+            "Language": "ar",
+            "Text": "شعور"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "感觉"
+          },
+          {
+            "Language": "ja",
+            "Text": "感じ"
+          }
         ]
       },
       {
@@ -1847,305 +3142,530 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000052",
             DisplayName: "再講一次",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Sage es noch einmal" },
-              { Language: "ru", Text: "Скажем еще раз" },
-              { Language: "pt", Text: "Diga de novo" },
-              { Language: "ko", Text: "다시 말해 봐" },
-              { Language: "yue", Text: "再講一次" },
-              { Language: "en", Text: "Say it again" },
-              { Language: "it", Text: "Dillo di nuovo" },
-              { Language: "fr", Text: "Il répète" },
-              { Language: "es", Text: "Decir otra vez" },
-              { Language: "zh-CHT", Text: "再說一次" },
-              { Language: "ar", Text: "قلها مجددًا" },
-              { Language: "zh-CHS", Text: "再说一次" },
-              { Language: "ja", Text: "もう一度言って下さい" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Sage es noch einmal" },
-              { Language: "ru", Text: "Скажем еще раз" },
-              { Language: "pt", Text: "Diga de novo" },
-              { Language: "ko", Text: "다시 말해 봐" },
-              { Language: "yue", Text: "再講一次" },
-              { Language: "en", Text: "Say it again" },
-              { Language: "it", Text: "Dillo di nuovo" },
-              { Language: "fr", Text: "Il répète" },
-              { Language: "es", Text: "Decir otra vez" },
-              { Language: "zh-CHT", Text: "再說一次" },
-              { Language: "ar", Text: "قلها مجددًا" },
-              { Language: "zh-CHS", Text: "再说一次" },
-              { Language: "ja", Text: "もう一度言って下さい" }
+              {
+                "Language": "de",
+                "Text": "Sage es noch einmal"
+              },
+              {
+                "Language": "ru",
+                "Text": "Скажем еще раз"
+              },
+              {
+                "Language": "pt",
+                "Text": "Diga de novo"
+              },
+              {
+                "Language": "ko",
+                "Text": "다시 말해 봐"
+              },
+              {
+                "Language": "yue",
+                "Text": "再講一次"
+              },
+              {
+                "Language": "en",
+                "Text": "Say it again"
+              },
+              {
+                "Language": "it",
+                "Text": "Dillo di nuovo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Il répète"
+              },
+              {
+                "Language": "es",
+                "Text": "Decir otra vez"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "再說一次"
+              },
+              {
+                "Language": "ar",
+                "Text": "قلها مجددًا"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "再说一次"
+              },
+              {
+                "Language": "ja",
+                "Text": "もう一度言って下さい"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000053",
             DisplayName: "唔該",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Vielen Dank" },
-              { Language: "ru", Text: "Большое спасибо" },
-              { Language: "pt", Text: "Muito obrigado" },
-              { Language: "ko", Text: "정말 고마워요" },
-              { Language: "yue", Text: "唔該" },
-              { Language: "en", Text: "Thanks a lot" },
-              { Language: "it", Text: "Grazie mille" },
-              { Language: "fr", Text: "Merci beaucoup" },
-              { Language: "es", Text: "Muchas gracias" },
-              { Language: "zh-CHT", Text: "多謝" },
-              { Language: "ar", Text: "شكرًا جزيلاً" },
-              { Language: "zh-CHS", Text: "多谢" },
-              { Language: "ja", Text: "どうもありがとうございます" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Vielen Dank" },
-              { Language: "ru", Text: "Большое спасибо" },
-              { Language: "pt", Text: "Muito obrigado" },
-              { Language: "ko", Text: "정말 고마워요" },
-              { Language: "yue", Text: "唔該" },
-              { Language: "en", Text: "Thanks a lot" },
-              { Language: "it", Text: "Grazie mille" },
-              { Language: "fr", Text: "Merci beaucoup" },
-              { Language: "es", Text: "Muchas gracias" },
-              { Language: "zh-CHT", Text: "多謝" },
-              { Language: "ar", Text: "شكرًا جزيلاً" },
-              { Language: "zh-CHS", Text: "多谢" },
-              { Language: "ja", Text: "どうもありがとうございます" }
+              {
+                "Language": "de",
+                "Text": "Vielen Dank"
+              },
+              {
+                "Language": "ru",
+                "Text": "Большое спасибо"
+              },
+              {
+                "Language": "pt",
+                "Text": "Muito obrigado"
+              },
+              {
+                "Language": "ko",
+                "Text": "정말 고마워요"
+              },
+              {
+                "Language": "yue",
+                "Text": "唔該"
+              },
+              {
+                "Language": "en",
+                "Text": "Thanks a lot"
+              },
+              {
+                "Language": "it",
+                "Text": "Grazie mille"
+              },
+              {
+                "Language": "fr",
+                "Text": "Merci beaucoup"
+              },
+              {
+                "Language": "es",
+                "Text": "Muchas gracias"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "多謝"
+              },
+              {
+                "Language": "ar",
+                "Text": "شكرًا جزيلاً"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "多谢"
+              },
+              {
+                "Language": "ja",
+                "Text": "どうもありがとうございます"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000054",
             DisplayName: "早晨",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Guten Tag" },
-              { Language: "ru", Text: "Добрый день" },
-              { Language: "pt", Text: "Bom dia" },
-              { Language: "ko", Text: "좋은 하루" },
-              { Language: "yue", Text: "早晨" },
-              { Language: "en", Text: "Good day" },
-              { Language: "it", Text: "Buona giornata" },
-              { Language: "fr", Text: "Bonne journée" },
-              { Language: "es", Text: "Buenos días" },
-              { Language: "zh-CHT", Text: "日安" },
-              { Language: "ar", Text: "يوم سعيد" },
-              { Language: "zh-CHS", Text: "日安" },
-              { Language: "ja", Text: "こんにちは" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Guten Tag" },
-              { Language: "ru", Text: "Добрый день" },
-              { Language: "pt", Text: "Bom dia" },
-              { Language: "ko", Text: "좋은 하루" },
-              { Language: "yue", Text: "早晨" },
-              { Language: "en", Text: "Good day" },
-              { Language: "it", Text: "Buona giornata" },
-              { Language: "fr", Text: "Bonne journée" },
-              { Language: "es", Text: "Buenos días" },
-              { Language: "zh-CHT", Text: "日安" },
-              { Language: "ar", Text: "يوم سعيد" },
-              { Language: "zh-CHS", Text: "日安" },
-              { Language: "ja", Text: "こんにちは" }
+              {
+                "Language": "de",
+                "Text": "Guten Tag"
+              },
+              {
+                "Language": "ru",
+                "Text": "Добрый день"
+              },
+              {
+                "Language": "pt",
+                "Text": "Bom dia"
+              },
+              {
+                "Language": "ko",
+                "Text": "좋은 하루"
+              },
+              {
+                "Language": "yue",
+                "Text": "早晨"
+              },
+              {
+                "Language": "en",
+                "Text": "Good day"
+              },
+              {
+                "Language": "it",
+                "Text": "Buona giornata"
+              },
+              {
+                "Language": "fr",
+                "Text": "Bonne journée"
+              },
+              {
+                "Language": "es",
+                "Text": "Buenos días"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "日安"
+              },
+              {
+                "Language": "ar",
+                "Text": "يوم سعيد"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "日安"
+              },
+              {
+                "Language": "ja",
+                "Text": "こんにちは"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000055",
             DisplayName: "晚安",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Gute Nacht" },
-              { Language: "ru", Text: "Спокойной ночи" },
-              { Language: "pt", Text: "Boa noite" },
-              { Language: "ko", Text: "잘자" },
-              { Language: "yue", Text: "晚安" },
-              { Language: "en", Text: "Good night" },
-              { Language: "it", Text: "Buona notte" },
-              { Language: "fr", Text: "Bonne nuit" },
-              { Language: "es", Text: "Buenas noches" },
-              { Language: "zh-CHT", Text: "晚安" },
-              { Language: "ar", Text: "طابت ليلتك" },
-              { Language: "zh-CHS", Text: "晚安" },
-              { Language: "ja", Text: "おやすみなさい" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Gute Nacht" },
-              { Language: "ru", Text: "Спокойной ночи" },
-              { Language: "pt", Text: "Boa noite" },
-              { Language: "ko", Text: "잘자" },
-              { Language: "yue", Text: "晚安" },
-              { Language: "en", Text: "Good night" },
-              { Language: "it", Text: "Buona notte" },
-              { Language: "fr", Text: "Bonne nuit" },
-              { Language: "es", Text: "Buenas noches" },
-              { Language: "zh-CHT", Text: "晚安" },
-              { Language: "ar", Text: "طابت ليلتك" },
-              { Language: "zh-CHS", Text: "晚安" },
-              { Language: "ja", Text: "おやすみなさい" }
+              {
+                "Language": "de",
+                "Text": "Gute Nacht"
+              },
+              {
+                "Language": "ru",
+                "Text": "Спокойной ночи"
+              },
+              {
+                "Language": "pt",
+                "Text": "Boa noite"
+              },
+              {
+                "Language": "ko",
+                "Text": "잘자"
+              },
+              {
+                "Language": "yue",
+                "Text": "晚安"
+              },
+              {
+                "Language": "en",
+                "Text": "Good night"
+              },
+              {
+                "Language": "it",
+                "Text": "Buona notte"
+              },
+              {
+                "Language": "fr",
+                "Text": "Bonne nuit"
+              },
+              {
+                "Language": "es",
+                "Text": "Buenas noches"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "晚安"
+              },
+              {
+                "Language": "ar",
+                "Text": "طابت ليلتك"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "晚安"
+              },
+              {
+                "Language": "ja",
+                "Text": "おやすみなさい"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000056",
             DisplayName: "對唔住",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Es tut mir leid" },
-              { Language: "ru", Text: "Извините, пожалуйста" },
-              { Language: "pt", Text: "Desculpa" },
-              { Language: "ko", Text: "미안해" },
-              { Language: "yue", Text: "對唔住" },
-              { Language: "en", Text: "I am sorry" },
-              { Language: "it", Text: "Mi dispiace" },
-              { Language: "fr", Text: "Désolé" },
-              { Language: "es", Text: "Lo siento" },
-              { Language: "zh-CHT", Text: "對不起" },
-              { Language: "ar", Text: "اسف" },
-              { Language: "zh-CHS", Text: "对不起" },
-              { Language: "ja", Text: "ごめんなさい" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Es tut mir leid" },
-              { Language: "ru", Text: "Извините, пожалуйста" },
-              { Language: "pt", Text: "Desculpa" },
-              { Language: "ko", Text: "미안해" },
-              { Language: "yue", Text: "對唔住" },
-              { Language: "en", Text: "I am sorry" },
-              { Language: "it", Text: "Mi dispiace" },
-              { Language: "fr", Text: "Désolé" },
-              { Language: "es", Text: "Lo siento" },
-              { Language: "zh-CHT", Text: "對不起" },
-              { Language: "ar", Text: "اسف" },
-              { Language: "zh-CHS", Text: "对不起" },
-              { Language: "ja", Text: "ごめんなさい" }
+              {
+                "Language": "de",
+                "Text": "Es tut mir leid"
+              },
+              {
+                "Language": "ru",
+                "Text": "Извините, пожалуйста"
+              },
+              {
+                "Language": "pt",
+                "Text": "Desculpa"
+              },
+              {
+                "Language": "ko",
+                "Text": "미안해"
+              },
+              {
+                "Language": "yue",
+                "Text": "對唔住"
+              },
+              {
+                "Language": "en",
+                "Text": "I am sorry"
+              },
+              {
+                "Language": "it",
+                "Text": "Mi dispiace"
+              },
+              {
+                "Language": "fr",
+                "Text": "Désolé"
+              },
+              {
+                "Language": "es",
+                "Text": "Lo siento"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "對不起"
+              },
+              {
+                "Language": "ar",
+                "Text": "اسف"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "对不起"
+              },
+              {
+                "Language": "ja",
+                "Text": "ごめんなさい"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000057",
             DisplayName: "幾多點",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Wie viele Punkte" },
-              { Language: "ru", Text: "Сколько очков" },
-              { Language: "pt", Text: "Quantos pontos" },
-              { Language: "ko", Text: "얼마나 많은 포인트" },
-              { Language: "yue", Text: "幾多點" },
-              { Language: "en", Text: "How many points" },
-              { Language: "it", Text: "Quanti punti" },
-              { Language: "fr", Text: "Combien de points" },
-              { Language: "es", Text: "Cuántos puntos" },
-              { Language: "zh-CHT", Text: "多少點" },
-              { Language: "ar", Text: "كم عدد نقاط" },
-              { Language: "zh-CHS", Text: "多少点" },
-              { Language: "ja", Text: "どのように多くのポイント" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Wie viele Punkte" },
-              { Language: "ru", Text: "Сколько очков" },
-              { Language: "pt", Text: "Quantos pontos" },
-              { Language: "ko", Text: "얼마나 많은 포인트" },
-              { Language: "yue", Text: "幾多點" },
-              { Language: "en", Text: "How many points" },
-              { Language: "it", Text: "Quanti punti" },
-              { Language: "fr", Text: "Combien de points" },
-              { Language: "es", Text: "Cuántos puntos" },
-              { Language: "zh-CHT", Text: "多少點" },
-              { Language: "ar", Text: "كم عدد نقاط" },
-              { Language: "zh-CHS", Text: "多少点" },
-              { Language: "ja", Text: "どのように多くのポイント" }
+              {
+                "Language": "de",
+                "Text": "Wie viele Punkte"
+              },
+              {
+                "Language": "ru",
+                "Text": "Сколько очков"
+              },
+              {
+                "Language": "pt",
+                "Text": "Quantos pontos"
+              },
+              {
+                "Language": "ko",
+                "Text": "얼마나 많은 포인트"
+              },
+              {
+                "Language": "yue",
+                "Text": "幾多點"
+              },
+              {
+                "Language": "en",
+                "Text": "How many points"
+              },
+              {
+                "Language": "it",
+                "Text": "Quanti punti"
+              },
+              {
+                "Language": "fr",
+                "Text": "Combien de points"
+              },
+              {
+                "Language": "es",
+                "Text": "Cuántos puntos"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "多少點"
+              },
+              {
+                "Language": "ar",
+                "Text": "كم عدد نقاط"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "多少点"
+              },
+              {
+                "Language": "ja",
+                "Text": "どのように多くのポイント"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000058",
             DisplayName: "唔好理我",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Lass mich in Ruhe" },
-              { Language: "ru", Text: "Оставь меня в покое" },
-              { Language: "pt", Text: "Deixa-me" },
-              { Language: "ko", Text: "혼자 있고 싶어요" },
-              { Language: "yue", Text: "唔好理我" },
-              { Language: "en", Text: "Leave me alone" },
-              { Language: "it", Text: "Lasciami in pace" },
-              { Language: "fr", Text: "Laisse-moi tranquille" },
-              { Language: "es", Text: "Déjame en paz" },
-              { Language: "zh-CHT", Text: "別理我" },
-              { Language: "ar", Text: "دعني وشأني" },
-              { Language: "zh-CHS", Text: "别理我" },
-              { Language: "ja", Text: "1 人にしてください" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Lass mich in Ruhe" },
-              { Language: "ru", Text: "Оставь меня в покое" },
-              { Language: "pt", Text: "Deixa-me" },
-              { Language: "ko", Text: "혼자 있고 싶어요" },
-              { Language: "yue", Text: "唔好理我" },
-              { Language: "en", Text: "Leave me alone" },
-              { Language: "it", Text: "Lasciami in pace" },
-              { Language: "fr", Text: "Laisse-moi tranquille" },
-              { Language: "es", Text: "Déjame en paz" },
-              { Language: "zh-CHT", Text: "別理我" },
-              { Language: "ar", Text: "دعني وشأني" },
-              { Language: "zh-CHS", Text: "别理我" },
-              { Language: "ja", Text: "1 人にしてください" }
+              {
+                "Language": "de",
+                "Text": "Lass mich in Ruhe"
+              },
+              {
+                "Language": "ru",
+                "Text": "Оставь меня в покое"
+              },
+              {
+                "Language": "pt",
+                "Text": "Deixa-me"
+              },
+              {
+                "Language": "ko",
+                "Text": "혼자 있고 싶어요"
+              },
+              {
+                "Language": "yue",
+                "Text": "唔好理我"
+              },
+              {
+                "Language": "en",
+                "Text": "Leave me alone"
+              },
+              {
+                "Language": "it",
+                "Text": "Lasciami in pace"
+              },
+              {
+                "Language": "fr",
+                "Text": "Laisse-moi tranquille"
+              },
+              {
+                "Language": "es",
+                "Text": "Déjame en paz"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "別理我"
+              },
+              {
+                "Language": "ar",
+                "Text": "دعني وشأني"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "别理我"
+              },
+              {
+                "Language": "ja",
+                "Text": "1 人にしてください"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000059",
             DisplayName: "請等等",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Bitte warten" },
-              { Language: "ru", Text: "Подождите" },
-              { Language: "pt", Text: "Aguarde" },
-              { Language: "ko", Text: "잠시만 기다려 주십시오" },
-              { Language: "yue", Text: "請等等" },
-              { Language: "en", Text: "Please wait" },
-              { Language: "it", Text: "Attendere prego" },
-              { Language: "fr", Text: "Veuillez patienter" },
-              { Language: "es", Text: "Espera" },
-              { Language: "zh-CHT", Text: "請等等" },
-              { Language: "ar", Text: "الرجاء الانتظار" },
-              { Language: "zh-CHS", Text: "请等等" },
-              { Language: "ja", Text: "お待ちください" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Bitte warten" },
-              { Language: "ru", Text: "Подождите" },
-              { Language: "pt", Text: "Aguarde" },
-              { Language: "ko", Text: "잠시만 기다려 주십시오" },
-              { Language: "yue", Text: "請等等" },
-              { Language: "en", Text: "Please wait" },
-              { Language: "it", Text: "Attendere prego" },
-              { Language: "fr", Text: "Veuillez patienter" },
-              { Language: "es", Text: "Espera" },
-              { Language: "zh-CHT", Text: "請等等" },
-              { Language: "ar", Text: "الرجاء الانتظار" },
-              { Language: "zh-CHS", Text: "请等等" },
-              { Language: "ja", Text: "お待ちください" }
+              {
+                "Language": "de",
+                "Text": "Bitte warten"
+              },
+              {
+                "Language": "ru",
+                "Text": "Подождите"
+              },
+              {
+                "Language": "pt",
+                "Text": "Aguarde"
+              },
+              {
+                "Language": "ko",
+                "Text": "잠시만 기다려 주십시오"
+              },
+              {
+                "Language": "yue",
+                "Text": "請等等"
+              },
+              {
+                "Language": "en",
+                "Text": "Please wait"
+              },
+              {
+                "Language": "it",
+                "Text": "Attendere prego"
+              },
+              {
+                "Language": "fr",
+                "Text": "Veuillez patienter"
+              },
+              {
+                "Language": "es",
+                "Text": "Espera"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "請等等"
+              },
+              {
+                "Language": "ar",
+                "Text": "الرجاء الانتظار"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "请等等"
+              },
+              {
+                "Language": "ja",
+                "Text": "お待ちください"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Soziale Netzwerke" },
-          { Language: "ru", Text: "Социальные сети" },
-          { Language: "pt", Text: "Redes sociais" },
-          { Language: "ko", Text: "소셜 네트워킹" },
-          { Language: "yue", Text: "社交" },
-          { Language: "en", Text: "Social networking" },
-          { Language: "it", Text: "Di social networking" },
-          { Language: "fr", Text: "Réseaux sociaux" },
-          { Language: "es", Text: "Redes sociales" },
-          { Language: "zh-CHT", Text: "社交" },
-          { Language: "ar", Text: "الشبكات الاجتماعية" },
-          { Language: "zh-CHS", Text: "社交" },
-          { Language: "ja", Text: "社会のネットワー キング" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Soziale Netzwerke" },
-          { Language: "ru", Text: "Социальные сети" },
-          { Language: "pt", Text: "Redes sociais" },
-          { Language: "ko", Text: "소셜 네트워킹" },
-          { Language: "yue", Text: "社交" },
-          { Language: "en", Text: "Social networking" },
-          { Language: "it", Text: "Di social networking" },
-          { Language: "fr", Text: "Réseaux sociaux" },
-          { Language: "es", Text: "Redes sociales" },
-          { Language: "zh-CHT", Text: "社交" },
-          { Language: "ar", Text: "الشبكات الاجتماعية" },
-          { Language: "zh-CHS", Text: "社交" },
-          { Language: "ja", Text: "社会のネットワー キング" }
+          {
+            "Language": "de",
+            "Text": "Soziale Netzwerke"
+          },
+          {
+            "Language": "ru",
+            "Text": "Социальные сети"
+          },
+          {
+            "Language": "pt",
+            "Text": "Redes sociais"
+          },
+          {
+            "Language": "ko",
+            "Text": "소셜 네트워킹"
+          },
+          {
+            "Language": "yue",
+            "Text": "社交"
+          },
+          {
+            "Language": "en",
+            "Text": "Social networking"
+          },
+          {
+            "Language": "it",
+            "Text": "Di social networking"
+          },
+          {
+            "Language": "fr",
+            "Text": "Réseaux sociaux"
+          },
+          {
+            "Language": "es",
+            "Text": "Redes sociales"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "社交"
+          },
+          {
+            "Language": "ar",
+            "Text": "الشبكات الاجتماعية"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "社交"
+          },
+          {
+            "Language": "ja",
+            "Text": "社会のネットワー キング"
+          }
         ]
       },
       {
@@ -2155,987 +3675,1651 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000060",
             DisplayName: "飯",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Reis" },
-              { Language: "ru", Text: "Райс" },
-              { Language: "pt", Text: "Arroz" },
-              { Language: "ko", Text: "쌀" },
-              { Language: "yue", Text: "飯" },
-              { Language: "en", Text: "Rice" },
-              { Language: "it", Text: "Riso" },
-              { Language: "fr", Text: "Riz" },
-              { Language: "es", Text: "Arroz" },
-              { Language: "zh-CHT", Text: "飯" },
-              { Language: "ar", Text: "الأرز" },
-              { Language: "zh-CHS", Text: "饭" },
-              { Language: "ja", Text: "米" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Reis" },
-              { Language: "ru", Text: "Райс" },
-              { Language: "pt", Text: "Arroz" },
-              { Language: "ko", Text: "쌀" },
-              { Language: "yue", Text: "飯" },
-              { Language: "en", Text: "Rice" },
-              { Language: "it", Text: "Riso" },
-              { Language: "fr", Text: "Riz" },
-              { Language: "es", Text: "Arroz" },
-              { Language: "zh-CHT", Text: "飯" },
-              { Language: "ar", Text: "الأرز" },
-              { Language: "zh-CHS", Text: "饭" },
-              { Language: "ja", Text: "米" }
+              {
+                "Language": "de",
+                "Text": "Reis"
+              },
+              {
+                "Language": "ru",
+                "Text": "Райс"
+              },
+              {
+                "Language": "pt",
+                "Text": "Arroz"
+              },
+              {
+                "Language": "ko",
+                "Text": "쌀"
+              },
+              {
+                "Language": "yue",
+                "Text": "飯"
+              },
+              {
+                "Language": "en",
+                "Text": "Rice"
+              },
+              {
+                "Language": "it",
+                "Text": "Riso"
+              },
+              {
+                "Language": "fr",
+                "Text": "Riz"
+              },
+              {
+                "Language": "es",
+                "Text": "Arroz"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "飯"
+              },
+              {
+                "Language": "ar",
+                "Text": "الأرز"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "饭"
+              },
+              {
+                "Language": "ja",
+                "Text": "米"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000061",
             DisplayName: "麥皮",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Haferflocken" },
-              { Language: "ru", Text: "Овсяная каша" },
-              { Language: "pt", Text: "Farinha de aveia" },
-              { Language: "ko", Text: "오트밀" },
-              { Language: "yue", Text: "麥皮" },
-              { Language: "en", Text: "Oatmeal" },
-              { Language: "it", Text: "Farina d'avena" },
-              { Language: "fr", Text: "Farine d’avoine" },
-              { Language: "es", Text: "Harina de avena" },
-              { Language: "zh-CHT", Text: "麥皮" },
-              { Language: "ar", Text: "دقيق الشوفان" },
-              { Language: "zh-CHS", Text: "麦皮" },
-              { Language: "ja", Text: "オートミール" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Haferflocken" },
-              { Language: "ru", Text: "Овсяная каша" },
-              { Language: "pt", Text: "Farinha de aveia" },
-              { Language: "ko", Text: "오트밀" },
-              { Language: "yue", Text: "麥皮" },
-              { Language: "en", Text: "Oatmeal" },
-              { Language: "it", Text: "Farina d'avena" },
-              { Language: "fr", Text: "Farine d’avoine" },
-              { Language: "es", Text: "Harina de avena" },
-              { Language: "zh-CHT", Text: "麥皮" },
-              { Language: "ar", Text: "دقيق الشوفان" },
-              { Language: "zh-CHS", Text: "麦皮" },
-              { Language: "ja", Text: "オートミール" }
+              {
+                "Language": "de",
+                "Text": "Haferflocken"
+              },
+              {
+                "Language": "ru",
+                "Text": "Овсяная каша"
+              },
+              {
+                "Language": "pt",
+                "Text": "Farinha de aveia"
+              },
+              {
+                "Language": "ko",
+                "Text": "오트밀"
+              },
+              {
+                "Language": "yue",
+                "Text": "麥皮"
+              },
+              {
+                "Language": "en",
+                "Text": "Oatmeal"
+              },
+              {
+                "Language": "it",
+                "Text": "Farina d'avena"
+              },
+              {
+                "Language": "fr",
+                "Text": "Farine d’avoine"
+              },
+              {
+                "Language": "es",
+                "Text": "Harina de avena"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "麥皮"
+              },
+              {
+                "Language": "ar",
+                "Text": "دقيق الشوفان"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "麦皮"
+              },
+              {
+                "Language": "ja",
+                "Text": "オートミール"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000062",
             DisplayName: "飯盒",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Lunch-box" },
-              { Language: "ru", Text: "Ланч бокс" },
-              { Language: "pt", Text: "Caixa de almoço" },
-              { Language: "ko", Text: "점심 상자" },
-              { Language: "yue", Text: "飯盒" },
-              { Language: "en", Text: "Lunch box" },
-              { Language: "it", Text: "Scatola di pranzo" },
-              { Language: "fr", Text: "Boîte à lunch" },
-              { Language: "es", Text: "Caja de almuerzo" },
-              { Language: "zh-CHT", Text: "飯盒" },
-              { Language: "ar", Text: "مربع الغداء" },
-              { Language: "zh-CHS", Text: "饭盒" },
-              { Language: "ja", Text: "ランチ ボックス" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Lunch-box" },
-              { Language: "ru", Text: "Ланч бокс" },
-              { Language: "pt", Text: "Caixa de almoço" },
-              { Language: "ko", Text: "점심 상자" },
-              { Language: "yue", Text: "飯盒" },
-              { Language: "en", Text: "Lunch box" },
-              { Language: "it", Text: "Scatola di pranzo" },
-              { Language: "fr", Text: "Boîte à lunch" },
-              { Language: "es", Text: "Caja de almuerzo" },
-              { Language: "zh-CHT", Text: "飯盒" },
-              { Language: "ar", Text: "مربع الغداء" },
-              { Language: "zh-CHS", Text: "饭盒" },
-              { Language: "ja", Text: "ランチ ボックス" }
+              {
+                "Language": "de",
+                "Text": "Lunch-box"
+              },
+              {
+                "Language": "ru",
+                "Text": "Ланч бокс"
+              },
+              {
+                "Language": "pt",
+                "Text": "Caixa de almoço"
+              },
+              {
+                "Language": "ko",
+                "Text": "점심 상자"
+              },
+              {
+                "Language": "yue",
+                "Text": "飯盒"
+              },
+              {
+                "Language": "en",
+                "Text": "Lunch box"
+              },
+              {
+                "Language": "it",
+                "Text": "Scatola di pranzo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Boîte à lunch"
+              },
+              {
+                "Language": "es",
+                "Text": "Caja de almuerzo"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "飯盒"
+              },
+              {
+                "Language": "ar",
+                "Text": "مربع الغداء"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "饭盒"
+              },
+              {
+                "Language": "ja",
+                "Text": "ランチ ボックス"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000063",
             DisplayName: "粥",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Brei" },
-              { Language: "ru", Text: "Каша" },
-              { Language: "pt", Text: "Mingau" },
-              { Language: "ko", Text: "죽" },
-              { Language: "yue", Text: "粥" },
-              { Language: "en", Text: "Porridge" },
-              { Language: "it", Text: "Porridge" },
-              { Language: "fr", Text: "Gruau" },
-              { Language: "es", Text: "Gachas de avena" },
-              { Language: "zh-CHT", Text: "粥" },
-              { Language: "ar", Text: "عصيدة" },
-              { Language: "zh-CHS", Text: "粥" },
-              { Language: "ja", Text: "お粥" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Brei" },
-              { Language: "ru", Text: "Каша" },
-              { Language: "pt", Text: "Mingau" },
-              { Language: "ko", Text: "죽" },
-              { Language: "yue", Text: "粥" },
-              { Language: "en", Text: "Porridge" },
-              { Language: "it", Text: "Porridge" },
-              { Language: "fr", Text: "Gruau" },
-              { Language: "es", Text: "Gachas de avena" },
-              { Language: "zh-CHT", Text: "粥" },
-              { Language: "ar", Text: "عصيدة" },
-              { Language: "zh-CHS", Text: "粥" },
-              { Language: "ja", Text: "お粥" }
+              {
+                "Language": "de",
+                "Text": "Witz"
+              },
+              {
+                "Language": "ru",
+                "Text": "Шутка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Piada"
+              },
+              {
+                "Language": "ko",
+                "Text": "농담"
+              },
+              {
+                "Language": "yue",
+                "Text": "粥"
+              },
+              {
+                "Language": "en",
+                "Text": "Joke"
+              },
+              {
+                "Language": "it",
+                "Text": "Scherzo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Blague"
+              },
+              {
+                "Language": "es",
+                "Text": "Broma"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "笑話"
+              },
+              {
+                "Language": "ar",
+                "Text": "جوك"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "笑话"
+              },
+              {
+                "Language": "ja",
+                "Text": "冗談"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000064",
             DisplayName: "麵",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Nudeln" },
-              { Language: "ru", Text: "Лапша" },
-              { Language: "pt", Text: "Macarrão" },
-              { Language: "ko", Text: "국수" },
-              { Language: "yue", Text: "麵" },
-              { Language: "en", Text: "Noodles" },
-              { Language: "it", Text: "Tagliatelle" },
-              { Language: "fr", Text: "Nouilles" },
-              { Language: "es", Text: "Fideos" },
-              { Language: "zh-CHT", Text: "面" },
-              { Language: "ar", Text: "الشعرية" },
-              { Language: "zh-CHS", Text: "面" },
-              { Language: "ja", Text: "麺" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Nudeln" },
-              { Language: "ru", Text: "Лапша" },
-              { Language: "pt", Text: "Macarrão" },
-              { Language: "ko", Text: "국수" },
-              { Language: "yue", Text: "麵" },
-              { Language: "en", Text: "Noodles" },
-              { Language: "it", Text: "Tagliatelle" },
-              { Language: "fr", Text: "Nouilles" },
-              { Language: "es", Text: "Fideos" },
-              { Language: "zh-CHT", Text: "面" },
-              { Language: "ar", Text: "الشعرية" },
-              { Language: "zh-CHS", Text: "面" },
-              { Language: "ja", Text: "麺" }
+              {
+                "Language": "de",
+                "Text": "Nudeln"
+              },
+              {
+                "Language": "ru",
+                "Text": "Лапша"
+              },
+              {
+                "Language": "pt",
+                "Text": "Macarrão"
+              },
+              {
+                "Language": "ko",
+                "Text": "국수"
+              },
+              {
+                "Language": "yue",
+                "Text": "麵"
+              },
+              {
+                "Language": "en",
+                "Text": "Noodles"
+              },
+              {
+                "Language": "it",
+                "Text": "Tagliatelle"
+              },
+              {
+                "Language": "fr",
+                "Text": "Nouilles"
+              },
+              {
+                "Language": "es",
+                "Text": "Fideos"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "面"
+              },
+              {
+                "Language": "ar",
+                "Text": "الشعرية"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "面"
+              },
+              {
+                "Language": "ja",
+                "Text": "麺"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000065",
             DisplayName: "通心粉",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Makkaroni" },
-              { Language: "ru", Text: "Макаронные изделия" },
-              { Language: "pt", Text: "Macarrão" },
-              { Language: "ko", Text: "마 카로 니" },
-              { Language: "yue", Text: "通心粉" },
-              { Language: "en", Text: "Macaroni" },
-              { Language: "it", Text: "Maccheroni" },
-              { Language: "fr", Text: "Macaroni" },
-              { Language: "es", Text: "Macarrones" },
-              { Language: "zh-CHT", Text: "通心粉" },
-              { Language: "ar", Text: "معكرونة" },
-              { Language: "zh-CHS", Text: "通心粉" },
-              { Language: "ja", Text: "マカロニ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Makkaroni" },
-              { Language: "ru", Text: "Макаронные изделия" },
-              { Language: "pt", Text: "Macarrão" },
-              { Language: "ko", Text: "마 카로 니" },
-              { Language: "yue", Text: "通心粉" },
-              { Language: "en", Text: "Macaroni" },
-              { Language: "it", Text: "Maccheroni" },
-              { Language: "fr", Text: "Macaroni" },
-              { Language: "es", Text: "Macarrones" },
-              { Language: "zh-CHT", Text: "通心粉" },
-              { Language: "ar", Text: "معكرونة" },
-              { Language: "zh-CHS", Text: "通心粉" },
-              { Language: "ja", Text: "マカロニ" }
+              {
+                "Language": "de",
+                "Text": "Makkaroni"
+              },
+              {
+                "Language": "ru",
+                "Text": "Макаронные изделия"
+              },
+              {
+                "Language": "pt",
+                "Text": "Macarrão"
+              },
+              {
+                "Language": "ko",
+                "Text": "마 카로 니"
+              },
+              {
+                "Language": "yue",
+                "Text": "通心粉"
+              },
+              {
+                "Language": "en",
+                "Text": "Macaroni"
+              },
+              {
+                "Language": "it",
+                "Text": "Maccheroni"
+              },
+              {
+                "Language": "fr",
+                "Text": "Macaroni"
+              },
+              {
+                "Language": "es",
+                "Text": "Macarrones"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "通心粉"
+              },
+              {
+                "Language": "ar",
+                "Text": "معكرونة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "通心粉"
+              },
+              {
+                "Language": "ja",
+                "Text": "マカロニ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000066",
             DisplayName: "饅頭",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Gedämpftes Brötchen" },
-              { Language: "ru", Text: "Пару булочка" },
-              { Language: "pt", Text: "Pão cozido no vapor" },
-              { Language: "ko", Text: "찐된 롤빵" },
-              { Language: "yue", Text: "饅頭" },
-              { Language: "en", Text: "Steamed bun" },
-              { Language: "it", Text: "Panino cotto a vapore" },
-              { Language: "fr", Text: "Petit pain cuit à la vapeur" },
-              { Language: "es", Text: "Pan al vapor" },
-              { Language: "zh-CHT", Text: "饅頭" },
-              { Language: "ar", Text: "كعكة البخار" },
-              { Language: "zh-CHS", Text: "馒头" },
-              { Language: "ja", Text: "蒸しパン" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Gedämpftes Brötchen" },
-              { Language: "ru", Text: "Пару булочка" },
-              { Language: "pt", Text: "Pão cozido no vapor" },
-              { Language: "ko", Text: "찐된 롤빵" },
-              { Language: "yue", Text: "饅頭" },
-              { Language: "en", Text: "Steamed bun" },
-              { Language: "it", Text: "Panino cotto a vapore" },
-              { Language: "fr", Text: "Petit pain cuit à la vapeur" },
-              { Language: "es", Text: "Pan al vapor" },
-              { Language: "zh-CHT", Text: "饅頭" },
-              { Language: "ar", Text: "كعكة البخار" },
-              { Language: "zh-CHS", Text: "馒头" },
-              { Language: "ja", Text: "蒸しパン" }
+              {
+                "Language": "de",
+                "Text": "Gedämpftes Brötchen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Пару булочка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pão cozido no vapor"
+              },
+              {
+                "Language": "ko",
+                "Text": "찐된 롤빵"
+              },
+              {
+                "Language": "yue",
+                "Text": "饅頭"
+              },
+              {
+                "Language": "en",
+                "Text": "Steamed bun"
+              },
+              {
+                "Language": "it",
+                "Text": "Panino cotto a vapore"
+              },
+              {
+                "Language": "fr",
+                "Text": "Petit pain cuit à la vapeur"
+              },
+              {
+                "Language": "es",
+                "Text": "Pan al vapor"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "饅頭"
+              },
+              {
+                "Language": "ar",
+                "Text": "كعكة البخار"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "馒头"
+              },
+              {
+                "Language": "ja",
+                "Text": "蒸しパン"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000067",
             DisplayName: "雲吞",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Won Ton Suppe" },
-              { Language: "ru", Text: "Выиграл тонну суп" },
-              { Language: "pt", Text: "Sopa won ton" },
-              { Language: "ko", Text: "원 톤 스프" },
-              { Language: "yue", Text: "雲吞" },
-              { Language: "en", Text: "Won ton soup" },
-              { Language: "it", Text: "Zuppa di Won ton" },
-              { Language: "fr", Text: "Soupe won ton" },
-              { Language: "es", Text: "Sopa de Won ton" },
-              { Language: "zh-CHT", Text: "餛飩" },
-              { Language: "ar", Text: "شوربة ون طن" },
-              { Language: "zh-CHS", Text: "馄饨" },
-              { Language: "ja", Text: "ワンタン入りスープ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Won Ton Suppe" },
-              { Language: "ru", Text: "Выиграл тонну суп" },
-              { Language: "pt", Text: "Sopa won ton" },
-              { Language: "ko", Text: "원 톤 스프" },
-              { Language: "yue", Text: "雲吞" },
-              { Language: "en", Text: "Won ton soup" },
-              { Language: "it", Text: "Zuppa di Won ton" },
-              { Language: "fr", Text: "Soupe won ton" },
-              { Language: "es", Text: "Sopa de Won ton" },
-              { Language: "zh-CHT", Text: "餛飩" },
-              { Language: "ar", Text: "شوربة ون طن" },
-              { Language: "zh-CHS", Text: "馄饨" },
-              { Language: "ja", Text: "ワンタン入りスープ" }
+              {
+                "Language": "de",
+                "Text": "Won Ton Suppe"
+              },
+              {
+                "Language": "ru",
+                "Text": "Выиграл тонну суп"
+              },
+              {
+                "Language": "pt",
+                "Text": "Sopa won ton"
+              },
+              {
+                "Language": "ko",
+                "Text": "원 톤 스프"
+              },
+              {
+                "Language": "yue",
+                "Text": "雲吞"
+              },
+              {
+                "Language": "en",
+                "Text": "Won ton soup"
+              },
+              {
+                "Language": "it",
+                "Text": "Zuppa di Won ton"
+              },
+              {
+                "Language": "fr",
+                "Text": "Soupe won ton"
+              },
+              {
+                "Language": "es",
+                "Text": "Sopa de Won ton"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "餛飩"
+              },
+              {
+                "Language": "ar",
+                "Text": "شوربة ون طن"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "馄饨"
+              },
+              {
+                "Language": "ja",
+                "Text": "ワンタン入りスープ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000068",
             DisplayName: "麵包",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Brot" },
-              { Language: "ru", Text: "Хлеб" },
-              { Language: "pt", Text: "Pão" },
-              { Language: "ko", Text: "빵" },
-              { Language: "yue", Text: "麵包" },
-              { Language: "en", Text: "Bread" },
-              { Language: "it", Text: "Pane" },
-              { Language: "fr", Text: "Pain" },
-              { Language: "es", Text: "Pan" },
-              { Language: "zh-CHT", Text: "麵包" },
-              { Language: "ar", Text: "الخبز" },
-              { Language: "zh-CHS", Text: "面包" },
-              { Language: "ja", Text: "パン" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Brot" },
-              { Language: "ru", Text: "Хлеб" },
-              { Language: "pt", Text: "Pão" },
-              { Language: "ko", Text: "빵" },
-              { Language: "yue", Text: "麵包" },
-              { Language: "en", Text: "Bread" },
-              { Language: "it", Text: "Pane" },
-              { Language: "fr", Text: "Pain" },
-              { Language: "es", Text: "Pan" },
-              { Language: "zh-CHT", Text: "麵包" },
-              { Language: "ar", Text: "الخبز" },
-              { Language: "zh-CHS", Text: "面包" },
-              { Language: "ja", Text: "パン" }
+              {
+                "Language": "de",
+                "Text": "Brot"
+              },
+              {
+                "Language": "ru",
+                "Text": "Хлеб"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pão"
+              },
+              {
+                "Language": "ko",
+                "Text": "빵"
+              },
+              {
+                "Language": "yue",
+                "Text": "麵包"
+              },
+              {
+                "Language": "en",
+                "Text": "Bread"
+              },
+              {
+                "Language": "it",
+                "Text": "Pane"
+              },
+              {
+                "Language": "fr",
+                "Text": "Pain"
+              },
+              {
+                "Language": "es",
+                "Text": "Pan"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "麵包"
+              },
+              {
+                "Language": "ar",
+                "Text": "الخبز"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "面包"
+              },
+              {
+                "Language": "ja",
+                "Text": "パン"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000069",
             DisplayName: "豆腐",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Tofu" },
-              { Language: "ru", Text: "Тофу" },
-              { Language: "pt", Text: "Tofu" },
-              { Language: "ko", Text: "두 부" },
-              { Language: "yue", Text: "豆腐" },
-              { Language: "en", Text: "Tofu" },
-              { Language: "it", Text: "Tofu" },
-              { Language: "fr", Text: "Tofu" },
-              { Language: "es", Text: "Queso de soja" },
-              { Language: "zh-CHT", Text: "豆腐" },
-              { Language: "ar", Text: "توفو" },
-              { Language: "zh-CHS", Text: "豆腐" },
-              { Language: "ja", Text: "豆腐" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Tofu" },
-              { Language: "ru", Text: "Тофу" },
-              { Language: "pt", Text: "Tofu" },
-              { Language: "ko", Text: "두 부" },
-              { Language: "yue", Text: "豆腐" },
-              { Language: "en", Text: "Tofu" },
-              { Language: "it", Text: "Tofu" },
-              { Language: "fr", Text: "Tofu" },
-              { Language: "es", Text: "Queso de soja" },
-              { Language: "zh-CHT", Text: "豆腐" },
-              { Language: "ar", Text: "توفو" },
-              { Language: "zh-CHS", Text: "豆腐" },
-              { Language: "ja", Text: "豆腐" }
+              {
+                "Language": "de",
+                "Text": "Tofu"
+              },
+              {
+                "Language": "ru",
+                "Text": "Тофу"
+              },
+              {
+                "Language": "pt",
+                "Text": "Tofu"
+              },
+              {
+                "Language": "ko",
+                "Text": "두 부"
+              },
+              {
+                "Language": "yue",
+                "Text": "豆腐"
+              },
+              {
+                "Language": "en",
+                "Text": "Tofu"
+              },
+              {
+                "Language": "it",
+                "Text": "Tofu"
+              },
+              {
+                "Language": "fr",
+                "Text": "Tofu"
+              },
+              {
+                "Language": "es",
+                "Text": "Queso de soja"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "豆腐"
+              },
+              {
+                "Language": "ar",
+                "Text": "توفو"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "豆腐"
+              },
+              {
+                "Language": "ja",
+                "Text": "豆腐"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000070",
             DisplayName: "餅乾",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Keks" },
-              { Language: "ru", Text: "Печенье" },
-              { Language: "pt", Text: "Biscoito" },
-              { Language: "ko", Text: "비스킷" },
-              { Language: "yue", Text: "餅乾" },
-              { Language: "en", Text: "Biscuit" },
-              { Language: "it", Text: "Biscotto" },
-              { Language: "fr", Text: "Biscuit" },
-              { Language: "es", Text: "Galleta" },
-              { Language: "zh-CHT", Text: "餅乾" },
-              { Language: "ar", Text: "بسكويت" },
-              { Language: "zh-CHS", Text: "饼干" },
-              { Language: "ja", Text: "ビスケット" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Keks" },
-              { Language: "ru", Text: "Печенье" },
-              { Language: "pt", Text: "Biscoito" },
-              { Language: "ko", Text: "비스킷" },
-              { Language: "yue", Text: "餅乾" },
-              { Language: "en", Text: "Biscuit" },
-              { Language: "it", Text: "Biscotto" },
-              { Language: "fr", Text: "Biscuit" },
-              { Language: "es", Text: "Galleta" },
-              { Language: "zh-CHT", Text: "餅乾" },
-              { Language: "ar", Text: "بسكويت" },
-              { Language: "zh-CHS", Text: "饼干" },
-              { Language: "ja", Text: "ビスケット" }
+              {
+                "Language": "de",
+                "Text": "Keks"
+              },
+              {
+                "Language": "ru",
+                "Text": "Печенье"
+              },
+              {
+                "Language": "pt",
+                "Text": "Biscoito"
+              },
+              {
+                "Language": "ko",
+                "Text": "비스킷"
+              },
+              {
+                "Language": "yue",
+                "Text": "餅乾"
+              },
+              {
+                "Language": "en",
+                "Text": "Biscuit"
+              },
+              {
+                "Language": "it",
+                "Text": "Biscotto"
+              },
+              {
+                "Language": "fr",
+                "Text": "Biscuit"
+              },
+              {
+                "Language": "es",
+                "Text": "Galleta"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "餅乾"
+              },
+              {
+                "Language": "ar",
+                "Text": "بسكويت"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "饼干"
+              },
+              {
+                "Language": "ja",
+                "Text": "ビスケット"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000071",
             DisplayName: "蛋糕",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Kuchen" },
-              { Language: "ru", Text: "Торт" },
-              { Language: "pt", Text: "Bolo" },
-              { Language: "ko", Text: "케이크" },
-              { Language: "yue", Text: "蛋糕" },
-              { Language: "en", Text: "Cake" },
-              { Language: "it", Text: "Torta" },
-              { Language: "fr", Text: "Gâteau" },
-              { Language: "es", Text: "Pastel" },
-              { Language: "zh-CHT", Text: "蛋糕" },
-              { Language: "ar", Text: "كعكة" },
-              { Language: "zh-CHS", Text: "蛋糕" },
-              { Language: "ja", Text: "ケーキ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Kuchen" },
-              { Language: "ru", Text: "Торт" },
-              { Language: "pt", Text: "Bolo" },
-              { Language: "ko", Text: "케이크" },
-              { Language: "yue", Text: "蛋糕" },
-              { Language: "en", Text: "Cake" },
-              { Language: "it", Text: "Torta" },
-              { Language: "fr", Text: "Gâteau" },
-              { Language: "es", Text: "Pastel" },
-              { Language: "zh-CHT", Text: "蛋糕" },
-              { Language: "ar", Text: "كعكة" },
-              { Language: "zh-CHS", Text: "蛋糕" },
-              { Language: "ja", Text: "ケーキ" }
+              {
+                "Language": "de",
+                "Text": "Kuchen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Торт"
+              },
+              {
+                "Language": "pt",
+                "Text": "Bolo"
+              },
+              {
+                "Language": "ko",
+                "Text": "케이크"
+              },
+              {
+                "Language": "yue",
+                "Text": "蛋糕"
+              },
+              {
+                "Language": "en",
+                "Text": "Cake"
+              },
+              {
+                "Language": "it",
+                "Text": "Torta"
+              },
+              {
+                "Language": "fr",
+                "Text": "Gâteau"
+              },
+              {
+                "Language": "es",
+                "Text": "Pastel"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "蛋糕"
+              },
+              {
+                "Language": "ar",
+                "Text": "كعكة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "蛋糕"
+              },
+              {
+                "Language": "ja",
+                "Text": "ケーキ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000072",
             DisplayName: "豬肉",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Schweinefleisch" },
-              { Language: "ru", Text: "Свинина" },
-              { Language: "pt", Text: "Carne de porco" },
-              { Language: "ko", Text: "돼지고기" },
-              { Language: "yue", Text: "豬肉" },
-              { Language: "en", Text: "Pork" },
-              { Language: "it", Text: "Carne di maiale" },
-              { Language: "fr", Text: "Porc" },
-              { Language: "es", Text: "Carne de cerdo" },
-              { Language: "zh-CHT", Text: "豬肉" },
-              { Language: "ar", Text: "لحم الخنزير" },
-              { Language: "zh-CHS", Text: "猪肉" },
-              { Language: "ja", Text: "豚肉" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Schweinefleisch" },
-              { Language: "ru", Text: "Свинина" },
-              { Language: "pt", Text: "Carne de porco" },
-              { Language: "ko", Text: "돼지고기" },
-              { Language: "yue", Text: "豬肉" },
-              { Language: "en", Text: "Pork" },
-              { Language: "it", Text: "Carne di maiale" },
-              { Language: "fr", Text: "Porc" },
-              { Language: "es", Text: "Carne de cerdo" },
-              { Language: "zh-CHT", Text: "豬肉" },
-              { Language: "ar", Text: "لحم الخنزير" },
-              { Language: "zh-CHS", Text: "猪肉" },
-              { Language: "ja", Text: "豚肉" }
+              {
+                "Language": "de",
+                "Text": "Schweinefleisch"
+              },
+              {
+                "Language": "ru",
+                "Text": "Свинина"
+              },
+              {
+                "Language": "pt",
+                "Text": "Carne de porco"
+              },
+              {
+                "Language": "ko",
+                "Text": "돼지고기"
+              },
+              {
+                "Language": "yue",
+                "Text": "豬肉"
+              },
+              {
+                "Language": "en",
+                "Text": "Pork"
+              },
+              {
+                "Language": "it",
+                "Text": "Carne di maiale"
+              },
+              {
+                "Language": "fr",
+                "Text": "Porc"
+              },
+              {
+                "Language": "es",
+                "Text": "Carne de cerdo"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "豬肉"
+              },
+              {
+                "Language": "ar",
+                "Text": "لحم الخنزير"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "猪肉"
+              },
+              {
+                "Language": "ja",
+                "Text": "豚肉"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000073",
             DisplayName: "牛肉",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Rindfleisch" },
-              { Language: "ru", Text: "Говядина" },
-              { Language: "pt", Text: "Carne de bovino" },
-              { Language: "ko", Text: "쇠고기" },
-              { Language: "yue", Text: "牛肉" },
-              { Language: "en", Text: "Beef" },
-              { Language: "it", Text: "Manzo" },
-              { Language: "fr", Text: "Viande bovine" },
-              { Language: "es", Text: "Carne de res" },
-              { Language: "zh-CHT", Text: "牛肉" },
-              { Language: "ar", Text: "لحوم البقر" },
-              { Language: "zh-CHS", Text: "牛肉" },
-              { Language: "ja", Text: "牛肉" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Rindfleisch" },
-              { Language: "ru", Text: "Говядина" },
-              { Language: "pt", Text: "Carne de bovino" },
-              { Language: "ko", Text: "쇠고기" },
-              { Language: "yue", Text: "牛肉" },
-              { Language: "en", Text: "Beef" },
-              { Language: "it", Text: "Manzo" },
-              { Language: "fr", Text: "Viande bovine" },
-              { Language: "es", Text: "Carne de res" },
-              { Language: "zh-CHT", Text: "牛肉" },
-              { Language: "ar", Text: "لحوم البقر" },
-              { Language: "zh-CHS", Text: "牛肉" },
-              { Language: "ja", Text: "牛肉" }
+              {
+                "Language": "de",
+                "Text": "Rindfleisch"
+              },
+              {
+                "Language": "ru",
+                "Text": "Говядина"
+              },
+              {
+                "Language": "pt",
+                "Text": "Carne de bovino"
+              },
+              {
+                "Language": "ko",
+                "Text": "쇠고기"
+              },
+              {
+                "Language": "yue",
+                "Text": "牛肉"
+              },
+              {
+                "Language": "en",
+                "Text": "Beef"
+              },
+              {
+                "Language": "it",
+                "Text": "Manzo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Viande bovine"
+              },
+              {
+                "Language": "es",
+                "Text": "Carne de res"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "牛肉"
+              },
+              {
+                "Language": "ar",
+                "Text": "لحوم البقر"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "牛肉"
+              },
+              {
+                "Language": "ja",
+                "Text": "牛肉"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000074",
             DisplayName: "雞",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Huhn" },
-              { Language: "ru", Text: "Курица" },
-              { Language: "pt", Text: "Frango" },
-              { Language: "ko", Text: "치킨" },
-              { Language: "yue", Text: "雞" },
-              { Language: "en", Text: "Chicken" },
-              { Language: "it", Text: "Pollo" },
-              { Language: "fr", Text: "Poulet" },
-              { Language: "es", Text: "Pollo" },
-              { Language: "zh-CHT", Text: "雞" },
-              { Language: "ar", Text: "الدجاج" },
-              { Language: "zh-CHS", Text: "鸡" },
-              { Language: "ja", Text: "チキン" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Huhn" },
-              { Language: "ru", Text: "Курица" },
-              { Language: "pt", Text: "Frango" },
-              { Language: "ko", Text: "치킨" },
-              { Language: "yue", Text: "雞" },
-              { Language: "en", Text: "Chicken" },
-              { Language: "it", Text: "Pollo" },
-              { Language: "fr", Text: "Poulet" },
-              { Language: "es", Text: "Pollo" },
-              { Language: "zh-CHT", Text: "雞" },
-              { Language: "ar", Text: "الدجاج" },
-              { Language: "zh-CHS", Text: "鸡" },
-              { Language: "ja", Text: "チキン" }
+              {
+                "Language": "de",
+                "Text": "Huhn"
+              },
+              {
+                "Language": "ru",
+                "Text": "Курица"
+              },
+              {
+                "Language": "pt",
+                "Text": "Frango"
+              },
+              {
+                "Language": "ko",
+                "Text": "치킨"
+              },
+              {
+                "Language": "yue",
+                "Text": "雞"
+              },
+              {
+                "Language": "en",
+                "Text": "Chicken"
+              },
+              {
+                "Language": "it",
+                "Text": "Pollo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Poulet"
+              },
+              {
+                "Language": "es",
+                "Text": "Pollo"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "雞"
+              },
+              {
+                "Language": "ar",
+                "Text": "الدجاج"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "鸡"
+              },
+              {
+                "Language": "ja",
+                "Text": "チキン"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000075",
             DisplayName: "火腿",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Schinken" },
-              { Language: "ru", Text: "Ветчина" },
-              { Language: "pt", Text: "Presunto" },
-              { Language: "ko", Text: "햄" },
-              { Language: "yue", Text: "火腿" },
-              { Language: "en", Text: "Ham" },
-              { Language: "it", Text: "Prosciutto" },
-              { Language: "fr", Text: "Jambon" },
-              { Language: "es", Text: "Jamón" },
-              { Language: "zh-CHT", Text: "火腿" },
-              { Language: "ar", Text: "لحم الخنزير" },
-              { Language: "zh-CHS", Text: "火腿" },
-              { Language: "ja", Text: "ハム" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Schinken" },
-              { Language: "ru", Text: "Ветчина" },
-              { Language: "pt", Text: "Presunto" },
-              { Language: "ko", Text: "햄" },
-              { Language: "yue", Text: "火腿" },
-              { Language: "en", Text: "Ham" },
-              { Language: "it", Text: "Prosciutto" },
-              { Language: "fr", Text: "Jambon" },
-              { Language: "es", Text: "Jamón" },
-              { Language: "zh-CHT", Text: "火腿" },
-              { Language: "ar", Text: "لحم الخنزير" },
-              { Language: "zh-CHS", Text: "火腿" },
-              { Language: "ja", Text: "ハム" }
+              {
+                "Language": "de",
+                "Text": "Schinken"
+              },
+              {
+                "Language": "ru",
+                "Text": "Ветчина"
+              },
+              {
+                "Language": "pt",
+                "Text": "Presunto"
+              },
+              {
+                "Language": "ko",
+                "Text": "햄"
+              },
+              {
+                "Language": "yue",
+                "Text": "火腿"
+              },
+              {
+                "Language": "en",
+                "Text": "Ham"
+              },
+              {
+                "Language": "it",
+                "Text": "Prosciutto"
+              },
+              {
+                "Language": "fr",
+                "Text": "Jambon"
+              },
+              {
+                "Language": "es",
+                "Text": "Jamón"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "火腿"
+              },
+              {
+                "Language": "ar",
+                "Text": "لحم الخنزير"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "火腿"
+              },
+              {
+                "Language": "ja",
+                "Text": "ハム"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000076",
             DisplayName: "香腸",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Wurst aus Schweinefleisch" },
-              { Language: "ru", Text: "Свиная колбаса" },
-              { Language: "pt", Text: "Linguiça de porco" },
-              { Language: "ko", Text: "돼지고기 소시지" },
-              { Language: "yue", Text: "香腸" },
-              { Language: "en", Text: "Pork sausage" },
-              { Language: "it", Text: "Salsiccia di maiale" },
-              { Language: "fr", Text: "Saucisse de porc" },
-              { Language: "es", Text: "Salchicha de cerdo" },
-              { Language: "zh-CHT", Text: "香腸" },
-              { Language: "ar", Text: "نقانق لحم الخنزير" },
-              { Language: "zh-CHS", Text: "香肠" },
-              { Language: "ja", Text: "ポーク ソーセージ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Wurst aus Schweinefleisch" },
-              { Language: "ru", Text: "Свиная колбаса" },
-              { Language: "pt", Text: "Linguiça de porco" },
-              { Language: "ko", Text: "돼지고기 소시지" },
-              { Language: "yue", Text: "香腸" },
-              { Language: "en", Text: "Pork sausage" },
-              { Language: "it", Text: "Salsiccia di maiale" },
-              { Language: "fr", Text: "Saucisse de porc" },
-              { Language: "es", Text: "Salchicha de cerdo" },
-              { Language: "zh-CHT", Text: "香腸" },
-              { Language: "ar", Text: "نقانق لحم الخنزير" },
-              { Language: "zh-CHS", Text: "香肠" },
-              { Language: "ja", Text: "ポーク ソーセージ" }
+              {
+                "Language": "de",
+                "Text": "Wurst aus Schweinefleisch"
+              },
+              {
+                "Language": "ru",
+                "Text": "Свиная колбаса"
+              },
+              {
+                "Language": "pt",
+                "Text": "Linguiça de porco"
+              },
+              {
+                "Language": "ko",
+                "Text": "돼지고기 소시지"
+              },
+              {
+                "Language": "yue",
+                "Text": "香腸"
+              },
+              {
+                "Language": "en",
+                "Text": "Pork sausage"
+              },
+              {
+                "Language": "it",
+                "Text": "Salsiccia di maiale"
+              },
+              {
+                "Language": "fr",
+                "Text": "Saucisse de porc"
+              },
+              {
+                "Language": "es",
+                "Text": "Salchicha de cerdo"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "香腸"
+              },
+              {
+                "Language": "ar",
+                "Text": "نقانق لحم الخنزير"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "香肠"
+              },
+              {
+                "Language": "ja",
+                "Text": "ポーク ソーセージ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000077",
             DisplayName: "叉燒",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Gegrilltes Schweinefleisch" },
-              { Language: "ru", Text: "Barbecued свинина" },
-              { Language: "pt", Text: "Carne de porco assada" },
-              { Language: "ko", Text: "바베 큐 돼지고기" },
-              { Language: "yue", Text: "叉燒" },
-              { Language: "en", Text: "Barbecued pork" },
-              { Language: "it", Text: "Porco arrostito col barbecue" },
-              { Language: "fr", Text: "Porc laqué" },
-              { Language: "es", Text: "Cerdo a la barbacoa" },
-              { Language: "zh-CHT", Text: "叉燒" },
-              { Language: "ar", Text: "لحم الخنزير المشوية." },
-              { Language: "zh-CHS", Text: "叉烧" },
-              { Language: "ja", Text: "チャーシュー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Gegrilltes Schweinefleisch" },
-              { Language: "ru", Text: "Barbecued свинина" },
-              { Language: "pt", Text: "Carne de porco assada" },
-              { Language: "ko", Text: "바베 큐 돼지고기" },
-              { Language: "yue", Text: "叉燒" },
-              { Language: "en", Text: "Barbecued pork" },
-              { Language: "it", Text: "Porco arrostito col barbecue" },
-              { Language: "fr", Text: "Porc laqué" },
-              { Language: "es", Text: "Cerdo a la barbacoa" },
-              { Language: "zh-CHT", Text: "叉燒" },
-              { Language: "ar", Text: "لحم الخنزير المشوية." },
-              { Language: "zh-CHS", Text: "叉烧" },
-              { Language: "ja", Text: "チャーシュー" }
+              {
+                "Language": "de",
+                "Text": "Gegrilltes Schweinefleisch"
+              },
+              {
+                "Language": "ru",
+                "Text": "Barbecued свинина"
+              },
+              {
+                "Language": "pt",
+                "Text": "Carne de porco assada"
+              },
+              {
+                "Language": "ko",
+                "Text": "바베 큐 돼지고기"
+              },
+              {
+                "Language": "yue",
+                "Text": "叉燒"
+              },
+              {
+                "Language": "en",
+                "Text": "Barbecued pork"
+              },
+              {
+                "Language": "it",
+                "Text": "Porco arrostito col barbecue"
+              },
+              {
+                "Language": "fr",
+                "Text": "Porc laqué"
+              },
+              {
+                "Language": "es",
+                "Text": "Cerdo a la barbacoa"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "叉燒"
+              },
+              {
+                "Language": "ar",
+                "Text": "لحم الخنزير المشوية."
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "叉烧"
+              },
+              {
+                "Language": "ja",
+                "Text": "チャーシュー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000078",
             DisplayName: "叉燒包",
-            displayMultipleLanguage: [
-              {
-                Language: "de",
-                Text: "Gedünstet gegrilltes Schweinefleisch Brötchen"
-              },
-              {
-                Language: "ru",
-                Text: "Приготовленная на пару булочка свинины на гриле"
-              },
-              {
-                Language: "pt",
-                Text: "Bolo de carne de porco assada no vapor"
-              },
-              { Language: "ko", Text: "찐된 바베 큐 돼지고기 롤빵" },
-              { Language: "yue", Text: "叉燒包" },
-              { Language: "en", Text: "Steamed barbecued pork bun" },
-              {
-                Language: "it",
-                Text: "Maiale alla brace panino cotto a vapore"
-              },
-              {
-                Language: "fr",
-                Text: "Petit pain cuit à la vapeur porc laqué"
-              },
-              { Language: "es", Text: "Bollo de cerdo a la barbacoa al vapor" },
-              { Language: "zh-CHT", Text: "叉燒包" },
-              { Language: "ar", Text: "كعكة البخار لحم الخنزير المشوية." },
-              { Language: "zh-CHS", Text: "叉烧包" },
-              { Language: "ja", Text: "バーベキュー豚肉饅頭" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
               {
-                Language: "de",
-                Text: "Gedünstet gegrilltes Schweinefleisch Brötchen"
+                "Language": "de",
+                "Text": "Gedünstet gegrilltes Schweinefleisch Brötchen"
               },
               {
-                Language: "ru",
-                Text: "Приготовленная на пару булочка свинины на гриле"
+                "Language": "ru",
+                "Text": "Приготовленная на пару булочка свинины на гриле"
               },
               {
-                Language: "pt",
-                Text: "Bolo de carne de porco assada no vapor"
-              },
-              { Language: "ko", Text: "찐된 바베 큐 돼지고기 롤빵" },
-              { Language: "yue", Text: "叉燒包" },
-              { Language: "en", Text: "Steamed barbecued pork bun" },
-              {
-                Language: "it",
-                Text: "Maiale alla brace panino cotto a vapore"
+                "Language": "pt",
+                "Text": "Bolo de carne de porco assada no vapor"
               },
               {
-                Language: "fr",
-                Text: "Petit pain cuit à la vapeur porc laqué"
+                "Language": "ko",
+                "Text": "찐된 바베 큐 돼지고기 롤빵"
               },
-              { Language: "es", Text: "Bollo de cerdo a la barbacoa al vapor" },
-              { Language: "zh-CHT", Text: "叉燒包" },
-              { Language: "ar", Text: "كعكة البخار لحم الخنزير المشوية." },
-              { Language: "zh-CHS", Text: "叉烧包" },
-              { Language: "ja", Text: "バーベキュー豚肉饅頭" }
+              {
+                "Language": "yue",
+                "Text": "叉燒包"
+              },
+              {
+                "Language": "en",
+                "Text": "Steamed barbecued pork bun"
+              },
+              {
+                "Language": "it",
+                "Text": "Maiale alla brace panino cotto a vapore"
+              },
+              {
+                "Language": "fr",
+                "Text": "Petit pain cuit à la vapeur porc laqué"
+              },
+              {
+                "Language": "es",
+                "Text": "Bollo de cerdo a la barbacoa al vapor"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "叉燒包"
+              },
+              {
+                "Language": "ar",
+                "Text": "كعكة البخار لحم الخنزير المشوية."
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "叉烧包"
+              },
+              {
+                "Language": "ja",
+                "Text": "バーベキュー豚肉饅頭"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000079",
             DisplayName: "蝦餃",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Chinatown" },
-              { Language: "ru", Text: "Креветки пельмени" },
-              { Language: "pt", Text: "Bolinhos de camarão" },
-              { Language: "ko", Text: "새우만 두" },
-              { Language: "yue", Text: "蝦餃" },
-              { Language: "en", Text: "Shrimp dumplings" },
-              { Language: "it", Text: "Gnocchi di gamberi" },
-              { Language: "fr", Text: "Boulettes de crevettes" },
-              { Language: "es", Text: "Albóndigas de camarón" },
-              { Language: "zh-CHT", Text: "蝦餃" },
-              { Language: "ar", Text: "فطائر الجمبري" },
-              { Language: "zh-CHS", Text: "虾饺" },
-              { Language: "ja", Text: "エビ餃子" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Chinatown" },
-              { Language: "ru", Text: "Креветки пельмени" },
-              { Language: "pt", Text: "Bolinhos de camarão" },
-              { Language: "ko", Text: "새우만 두" },
-              { Language: "yue", Text: "蝦餃" },
-              { Language: "en", Text: "Shrimp dumplings" },
-              { Language: "it", Text: "Gnocchi di gamberi" },
-              { Language: "fr", Text: "Boulettes de crevettes" },
-              { Language: "es", Text: "Albóndigas de camarón" },
-              { Language: "zh-CHT", Text: "蝦餃" },
-              { Language: "ar", Text: "فطائر الجمبري" },
-              { Language: "zh-CHS", Text: "虾饺" },
-              { Language: "ja", Text: "エビ餃子" }
+              {
+                "Language": "de",
+                "Text": "Chinatown"
+              },
+              {
+                "Language": "ru",
+                "Text": "Креветки пельмени"
+              },
+              {
+                "Language": "pt",
+                "Text": "Bolinhos de camarão"
+              },
+              {
+                "Language": "ko",
+                "Text": "새우만 두"
+              },
+              {
+                "Language": "yue",
+                "Text": "蝦餃"
+              },
+              {
+                "Language": "en",
+                "Text": "Shrimp dumplings"
+              },
+              {
+                "Language": "it",
+                "Text": "Gnocchi di gamberi"
+              },
+              {
+                "Language": "fr",
+                "Text": "Boulettes de crevettes"
+              },
+              {
+                "Language": "es",
+                "Text": "Albóndigas de camarón"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "蝦餃"
+              },
+              {
+                "Language": "ar",
+                "Text": "فطائر الجمبري"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "虾饺"
+              },
+              {
+                "Language": "ja",
+                "Text": "エビ餃子"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000080",
             DisplayName: "腸粉",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Reisnudel rollt" },
-              { Language: "ru", Text: "Рисовая лапша рулетики" },
-              { Language: "pt", Text: "Rolos de macarrão de arroz" },
-              { Language: "ko", Text: "쌀 국수 롤" },
-              { Language: "yue", Text: "腸粉" },
-              { Language: "en", Text: "Rice noodle rolls" },
-              { Language: "it", Text: "Tagliatella di riso rotoli" },
-              { Language: "fr", Text: "Rouleaux de nouille de riz" },
-              { Language: "es", Text: "Rollitos de fideos de arroz" },
-              { Language: "zh-CHT", Text: "腸粉" },
-              { Language: "ar", Text: "لفات المعكرونة الأرز" },
-              { Language: "zh-CHS", Text: "肠粉" },
-              { Language: "ja", Text: "米麺ロールします。" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Reisnudel rollt" },
-              { Language: "ru", Text: "Рисовая лапша рулетики" },
-              { Language: "pt", Text: "Rolos de macarrão de arroz" },
-              { Language: "ko", Text: "쌀 국수 롤" },
-              { Language: "yue", Text: "腸粉" },
-              { Language: "en", Text: "Rice noodle rolls" },
-              { Language: "it", Text: "Tagliatella di riso rotoli" },
-              { Language: "fr", Text: "Rouleaux de nouille de riz" },
-              { Language: "es", Text: "Rollitos de fideos de arroz" },
-              { Language: "zh-CHT", Text: "腸粉" },
-              { Language: "ar", Text: "لفات المعكرونة الأرز" },
-              { Language: "zh-CHS", Text: "肠粉" },
-              { Language: "ja", Text: "米麺ロールします。" }
+              {
+                "Language": "de",
+                "Text": "Reisnudel rollt"
+              },
+              {
+                "Language": "ru",
+                "Text": "Рисовая лапша рулетики"
+              },
+              {
+                "Language": "pt",
+                "Text": "Rolos de macarrão de arroz"
+              },
+              {
+                "Language": "ko",
+                "Text": "쌀 국수 롤"
+              },
+              {
+                "Language": "yue",
+                "Text": "腸粉"
+              },
+              {
+                "Language": "en",
+                "Text": "Rice noodle rolls"
+              },
+              {
+                "Language": "it",
+                "Text": "Tagliatella di riso rotoli"
+              },
+              {
+                "Language": "fr",
+                "Text": "Rouleaux de nouille de riz"
+              },
+              {
+                "Language": "es",
+                "Text": "Rollitos de fideos de arroz"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "腸粉"
+              },
+              {
+                "Language": "ar",
+                "Text": "لفات المعكرونة الأرز"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "肠粉"
+              },
+              {
+                "Language": "ja",
+                "Text": "米麺ロールします。"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000081",
             DisplayName: "鳳爪",
-            displayMultipleLanguage: [
-              { Language: "de", Text: '"Phoenix Klauen" Hühnerfüße' },
-              { Language: "ru", Text: "«Феникс когти» куриные ноги" },
-              { Language: "pt", Text: "Pés de galinha 'Garras de Phoenix'" },
-              { Language: "ko", Text: "'피닉스 발톱' 닭 발" },
-              { Language: "yue", Text: "鳳爪" },
-              { Language: "en", Text: "' Phoenix claws ' chicken feet" },
-              { Language: "it", Text: "Zampe di gallina 'Artigli Phoenix'" },
-              {
-                Language: "fr",
-                Text: "Pattes de poulet « Griffes de Phoenix »"
-              },
-              { Language: "es", Text: "Pies del pollo 'Garras de Phoenix'" },
-              { Language: "zh-CHT", Text: "鳳爪" },
-              { Language: "ar", Text: "أقدام دجاج 'مخالب طائر الفينيق'" },
-              { Language: "zh-CHS", Text: "凤爪" },
-              { Language: "ja", Text: "「フェニックス爪' 鶏の足" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: '"Phoenix Klauen" Hühnerfüße' },
-              { Language: "ru", Text: "«Феникс когти» куриные ноги" },
-              { Language: "pt", Text: "Pés de galinha 'Garras de Phoenix'" },
-              { Language: "ko", Text: "'피닉스 발톱' 닭 발" },
-              { Language: "yue", Text: "鳳爪" },
-              { Language: "en", Text: "' Phoenix claws ' chicken feet" },
-              { Language: "it", Text: "Zampe di gallina 'Artigli Phoenix'" },
               {
-                Language: "fr",
-                Text: "Pattes de poulet « Griffes de Phoenix »"
+                "Language": "de",
+                "Text": "\"Phoenix Klauen\" Hühnerfüße"
               },
-              { Language: "es", Text: "Pies del pollo 'Garras de Phoenix'" },
-              { Language: "zh-CHT", Text: "鳳爪" },
-              { Language: "ar", Text: "أقدام دجاج 'مخالب طائر الفينيق'" },
-              { Language: "zh-CHS", Text: "凤爪" },
-              { Language: "ja", Text: "「フェニックス爪' 鶏の足" }
+              {
+                "Language": "ru",
+                "Text": "«Феникс когти» куриные ноги"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pés de galinha 'Garras de Phoenix'"
+              },
+              {
+                "Language": "ko",
+                "Text": "'피닉스 발톱' 닭 발"
+              },
+              {
+                "Language": "yue",
+                "Text": "鳳爪"
+              },
+              {
+                "Language": "en",
+                "Text": "' Phoenix claws ' chicken feet"
+              },
+              {
+                "Language": "it",
+                "Text": "Zampe di gallina 'Artigli Phoenix'"
+              },
+              {
+                "Language": "fr",
+                "Text": "Pattes de poulet « Griffes de Phoenix »"
+              },
+              {
+                "Language": "es",
+                "Text": "Pies del pollo 'Garras de Phoenix'"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "鳳爪"
+              },
+              {
+                "Language": "ar",
+                "Text": "أقدام دجاج 'مخالب طائر الفينيق'"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "凤爪"
+              },
+              {
+                "Language": "ja",
+                "Text": "「フェニックス爪' 鶏の足"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000082",
             DisplayName: "燒賣",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Mai" },
-              { Language: "ru", Text: "Май" },
-              { Language: "pt", Text: "Mai" },
-              { Language: "ko", Text: "마이" },
-              { Language: "yue", Text: "燒賣" },
-              { Language: "en", Text: "Mai" },
-              { Language: "it", Text: "Mai" },
-              { Language: "fr", Text: "Mai" },
-              { Language: "es", Text: "Mai" },
-              { Language: "zh-CHT", Text: "燒賣" },
-              { Language: "ar", Text: "مي" },
-              { Language: "zh-CHS", Text: "烧卖" },
-              { Language: "ja", Text: "舞" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Mai" },
-              { Language: "ru", Text: "Май" },
-              { Language: "pt", Text: "Mai" },
-              { Language: "ko", Text: "마이" },
-              { Language: "yue", Text: "燒賣" },
-              { Language: "en", Text: "Mai" },
-              { Language: "it", Text: "Mai" },
-              { Language: "fr", Text: "Mai" },
-              { Language: "es", Text: "Mai" },
-              { Language: "zh-CHT", Text: "燒賣" },
-              { Language: "ar", Text: "مي" },
-              { Language: "zh-CHS", Text: "烧卖" },
-              { Language: "ja", Text: "舞" }
+              {
+                "Language": "de",
+                "Text": "Mai"
+              },
+              {
+                "Language": "ru",
+                "Text": "Май"
+              },
+              {
+                "Language": "pt",
+                "Text": "Mai"
+              },
+              {
+                "Language": "ko",
+                "Text": "마이"
+              },
+              {
+                "Language": "yue",
+                "Text": "燒賣"
+              },
+              {
+                "Language": "en",
+                "Text": "Mai"
+              },
+              {
+                "Language": "it",
+                "Text": "Mai"
+              },
+              {
+                "Language": "fr",
+                "Text": "Mai"
+              },
+              {
+                "Language": "es",
+                "Text": "Mai"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "燒賣"
+              },
+              {
+                "Language": "ar",
+                "Text": "مي"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "烧卖"
+              },
+              {
+                "Language": "ja",
+                "Text": "舞"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000083",
             DisplayName: "牛肉球",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Rindfleisch-Kugel" },
-              { Language: "ru", Text: "Говядина шар" },
-              { Language: "pt", Text: "Bola de carne" },
-              { Language: "ko", Text: "쇠고기 공" },
-              { Language: "yue", Text: "牛肉球" },
-              { Language: "en", Text: "Beef ball" },
-              { Language: "it", Text: "Palla di carne di manzo" },
-              { Language: "fr", Text: "Billes de boeuf" },
-              { Language: "es", Text: "Bola de carne" },
-              { Language: "zh-CHT", Text: "牛肉球" },
-              { Language: "ar", Text: "الكرة لحوم البقر" },
-              { Language: "zh-CHS", Text: "牛肉球" },
-              { Language: "ja", Text: "牛肉団子" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Rindfleisch-Kugel" },
-              { Language: "ru", Text: "Говядина шар" },
-              { Language: "pt", Text: "Bola de carne" },
-              { Language: "ko", Text: "쇠고기 공" },
-              { Language: "yue", Text: "牛肉球" },
-              { Language: "en", Text: "Beef ball" },
-              { Language: "it", Text: "Palla di carne di manzo" },
-              { Language: "fr", Text: "Billes de boeuf" },
-              { Language: "es", Text: "Bola de carne" },
-              { Language: "zh-CHT", Text: "牛肉球" },
-              { Language: "ar", Text: "الكرة لحوم البقر" },
-              { Language: "zh-CHS", Text: "牛肉球" },
-              { Language: "ja", Text: "牛肉団子" }
+              {
+                "Language": "de",
+                "Text": "Rindfleisch-Kugel"
+              },
+              {
+                "Language": "ru",
+                "Text": "Говядина шар"
+              },
+              {
+                "Language": "pt",
+                "Text": "Bola de carne"
+              },
+              {
+                "Language": "ko",
+                "Text": "쇠고기 공"
+              },
+              {
+                "Language": "yue",
+                "Text": "牛肉球"
+              },
+              {
+                "Language": "en",
+                "Text": "Beef ball"
+              },
+              {
+                "Language": "it",
+                "Text": "Palla di carne di manzo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Billes de boeuf"
+              },
+              {
+                "Language": "es",
+                "Text": "Bola de carne"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "牛肉球"
+              },
+              {
+                "Language": "ar",
+                "Text": "الكرة لحوم البقر"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "牛肉球"
+              },
+              {
+                "Language": "ja",
+                "Text": "牛肉団子"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000084",
             DisplayName: "雞蛋",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Ei" },
-              { Language: "ru", Text: "Яйцо" },
-              { Language: "pt", Text: "Ovo" },
-              { Language: "ko", Text: "달걀" },
-              { Language: "yue", Text: "雞蛋" },
-              { Language: "en", Text: "Egg" },
-              { Language: "it", Text: "Uovo" },
-              { Language: "fr", Text: "Oeuf" },
-              { Language: "es", Text: "Huevo" },
-              { Language: "zh-CHT", Text: "雞蛋" },
-              { Language: "ar", Text: "البيض" },
-              { Language: "zh-CHS", Text: "鸡蛋" },
-              { Language: "ja", Text: "卵" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Ei" },
-              { Language: "ru", Text: "Яйцо" },
-              { Language: "pt", Text: "Ovo" },
-              { Language: "ko", Text: "달걀" },
-              { Language: "yue", Text: "雞蛋" },
-              { Language: "en", Text: "Egg" },
-              { Language: "it", Text: "Uovo" },
-              { Language: "fr", Text: "Oeuf" },
-              { Language: "es", Text: "Huevo" },
-              { Language: "zh-CHT", Text: "雞蛋" },
-              { Language: "ar", Text: "البيض" },
-              { Language: "zh-CHS", Text: "鸡蛋" },
-              { Language: "ja", Text: "卵" }
+              {
+                "Language": "de",
+                "Text": "Ei"
+              },
+              {
+                "Language": "ru",
+                "Text": "Яйцо"
+              },
+              {
+                "Language": "pt",
+                "Text": "Ovo"
+              },
+              {
+                "Language": "ko",
+                "Text": "달걀"
+              },
+              {
+                "Language": "yue",
+                "Text": "雞蛋"
+              },
+              {
+                "Language": "en",
+                "Text": "Egg"
+              },
+              {
+                "Language": "it",
+                "Text": "Uovo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Oeuf"
+              },
+              {
+                "Language": "es",
+                "Text": "Huevo"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "雞蛋"
+              },
+              {
+                "Language": "ar",
+                "Text": "البيض"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "鸡蛋"
+              },
+              {
+                "Language": "ja",
+                "Text": "卵"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000085",
             DisplayName: "魚",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Fisch" },
-              { Language: "ru", Text: "Рыба" },
-              { Language: "pt", Text: "Peixe" },
-              { Language: "ko", Text: "물고기" },
-              { Language: "yue", Text: "魚" },
-              { Language: "en", Text: "Fish" },
-              { Language: "it", Text: "Pesce" },
-              { Language: "fr", Text: "Poisson" },
-              { Language: "es", Text: "Pescado" },
-              { Language: "zh-CHT", Text: "魚" },
-              { Language: "ar", Text: "الأسماك" },
-              { Language: "zh-CHS", Text: "鱼" },
-              { Language: "ja", Text: "魚" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Fisch" },
-              { Language: "ru", Text: "Рыба" },
-              { Language: "pt", Text: "Peixe" },
-              { Language: "ko", Text: "물고기" },
-              { Language: "yue", Text: "魚" },
-              { Language: "en", Text: "Fish" },
-              { Language: "it", Text: "Pesce" },
-              { Language: "fr", Text: "Poisson" },
-              { Language: "es", Text: "Pescado" },
-              { Language: "zh-CHT", Text: "魚" },
-              { Language: "ar", Text: "الأسماك" },
-              { Language: "zh-CHS", Text: "鱼" },
-              { Language: "ja", Text: "魚" }
+              {
+                "Language": "de",
+                "Text": "Fisch"
+              },
+              {
+                "Language": "ru",
+                "Text": "Рыба"
+              },
+              {
+                "Language": "pt",
+                "Text": "Peixe"
+              },
+              {
+                "Language": "ko",
+                "Text": "물고기"
+              },
+              {
+                "Language": "yue",
+                "Text": "魚"
+              },
+              {
+                "Language": "en",
+                "Text": "Fish"
+              },
+              {
+                "Language": "it",
+                "Text": "Pesce"
+              },
+              {
+                "Language": "fr",
+                "Text": "Poisson"
+              },
+              {
+                "Language": "es",
+                "Text": "Pescado"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "魚"
+              },
+              {
+                "Language": "ar",
+                "Text": "الأسماك"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "鱼"
+              },
+              {
+                "Language": "ja",
+                "Text": "魚"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000086",
             DisplayName: "罐頭食物",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Konserven" },
-              { Language: "ru", Text: "Консервы" },
-              { Language: "pt", Text: "Comida enlatada" },
-              { Language: "ko", Text: "통조림된 식품" },
-              { Language: "yue", Text: "罐頭食物" },
-              { Language: "en", Text: "Canned food" },
-              { Language: "it", Text: "Conserve alimentari" },
-              { Language: "fr", Text: "Aliments en conserve" },
-              { Language: "es", Text: "Alimentos enlatados" },
-              { Language: "zh-CHT", Text: "罐頭食物" },
-              { Language: "ar", Text: "الأغذية المعلبة" },
-              { Language: "zh-CHS", Text: "罐头食物" },
-              { Language: "ja", Text: "缶詰食品" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Konserven" },
-              { Language: "ru", Text: "Консервы" },
-              { Language: "pt", Text: "Comida enlatada" },
-              { Language: "ko", Text: "통조림된 식품" },
-              { Language: "yue", Text: "罐頭食物" },
-              { Language: "en", Text: "Canned food" },
-              { Language: "it", Text: "Conserve alimentari" },
-              { Language: "fr", Text: "Aliments en conserve" },
-              { Language: "es", Text: "Alimentos enlatados" },
-              { Language: "zh-CHT", Text: "罐頭食物" },
-              { Language: "ar", Text: "الأغذية المعلبة" },
-              { Language: "zh-CHS", Text: "罐头食物" },
-              { Language: "ja", Text: "缶詰食品" }
+              {
+                "Language": "de",
+                "Text": "Konserven"
+              },
+              {
+                "Language": "ru",
+                "Text": "Консервы"
+              },
+              {
+                "Language": "pt",
+                "Text": "Comida enlatada"
+              },
+              {
+                "Language": "ko",
+                "Text": "통조림된 식품"
+              },
+              {
+                "Language": "yue",
+                "Text": "罐頭食物"
+              },
+              {
+                "Language": "en",
+                "Text": "Canned food"
+              },
+              {
+                "Language": "it",
+                "Text": "Conserve alimentari"
+              },
+              {
+                "Language": "fr",
+                "Text": "Aliments en conserve"
+              },
+              {
+                "Language": "es",
+                "Text": "Alimentos enlatados"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "罐頭食物"
+              },
+              {
+                "Language": "ar",
+                "Text": "الأغذية المعلبة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "罐头食物"
+              },
+              {
+                "Language": "ja",
+                "Text": "缶詰食品"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Essen" },
-          { Language: "ru", Text: "Питание" },
-          { Language: "pt", Text: "Comida" },
-          { Language: "ko", Text: "음식" },
-          { Language: "yue", Text: "食物" },
-          { Language: "en", Text: "Food" },
-          { Language: "it", Text: "Cibo" },
-          { Language: "fr", Text: "Alimentaire" },
-          { Language: "es", Text: "Alimentos" },
-          { Language: "zh-CHT", Text: "食物" },
-          { Language: "ar", Text: "المواد الغذائية" },
-          { Language: "zh-CHS", Text: "食物" },
-          { Language: "ja", Text: "食品" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Essen" },
-          { Language: "ru", Text: "Питание" },
-          { Language: "pt", Text: "Comida" },
-          { Language: "ko", Text: "음식" },
-          { Language: "yue", Text: "食物" },
-          { Language: "en", Text: "Food" },
-          { Language: "it", Text: "Cibo" },
-          { Language: "fr", Text: "Alimentaire" },
-          { Language: "es", Text: "Alimentos" },
-          { Language: "zh-CHT", Text: "食物" },
-          { Language: "ar", Text: "المواد الغذائية" },
-          { Language: "zh-CHS", Text: "食物" },
-          { Language: "ja", Text: "食品" }
+          {
+            "Language": "de",
+            "Text": "Essen"
+          },
+          {
+            "Language": "ru",
+            "Text": "Питание"
+          },
+          {
+            "Language": "pt",
+            "Text": "Comida"
+          },
+          {
+            "Language": "ko",
+            "Text": "음식"
+          },
+          {
+            "Language": "yue",
+            "Text": "食物"
+          },
+          {
+            "Language": "en",
+            "Text": "Food"
+          },
+          {
+            "Language": "it",
+            "Text": "Cibo"
+          },
+          {
+            "Language": "fr",
+            "Text": "Alimentaire"
+          },
+          {
+            "Language": "es",
+            "Text": "Alimentos"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "食物"
+          },
+          {
+            "Language": "ar",
+            "Text": "المواد الغذائية"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "食物"
+          },
+          {
+            "Language": "ja",
+            "Text": "食品"
+          }
         ]
       },
       {
@@ -3145,21 +5329,7 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000087",
             DisplayName: "梨",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Birne" },
-              { Language: "ru", Text: "Груша" },
-              { Language: "pt", Text: "Pear" },
-              { Language: "ko", Text: "배" },
-              { Language: "yue", Text: "梨" },
-              { Language: "en", Text: "Pear" },
-              { Language: "it", Text: "corpo a pera" },
-              { Language: "fr", Text: "PEAR" },
-              { Language: "es", Text: "pera" },
-              { Language: "zh-CHT", Text: "梨" },
-              { Language: "ar", Text: "الكمثرى" },
-              { Language: "zh-CHS", Text: "梨" },
-              { Language: "ja", Text: "梨" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Birne" },
               { Language: "ru", Text: "Груша" },
@@ -3179,407 +5349,707 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000088",
             DisplayName: "蘋果",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Apple" },
-              { Language: "ru", Text: "Яблоко" },
-              { Language: "pt", Text: "Apple" },
-              { Language: "ko", Text: "애플" },
-              { Language: "yue", Text: "蘋果" },
-              { Language: "en", Text: "Apple" },
-              { Language: "it", Text: "Apple" },
-              { Language: "fr", Text: "pomme" },
-              { Language: "es", Text: "Apple" },
-              { Language: "zh-CHT", Text: "蘋果" },
-              { Language: "ar", Text: "أبل" },
-              { Language: "zh-CHS", Text: "苹果" },
-              { Language: "ja", Text: "アップル" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Apple" },
-              { Language: "ru", Text: "Яблоко" },
-              { Language: "pt", Text: "Apple" },
-              { Language: "ko", Text: "애플" },
-              { Language: "yue", Text: "蘋果" },
-              { Language: "en", Text: "Apple" },
-              { Language: "it", Text: "Apple" },
-              { Language: "fr", Text: "pomme" },
-              { Language: "es", Text: "Apple" },
-              { Language: "zh-CHT", Text: "蘋果" },
-              { Language: "ar", Text: "أبل" },
-              { Language: "zh-CHS", Text: "苹果" },
-              { Language: "ja", Text: "アップル" }
+              {
+                "Language": "de",
+                "Text": "Apple"
+              },
+              {
+                "Language": "ru",
+                "Text": "Яблоко"
+              },
+              {
+                "Language": "pt",
+                "Text": "Apple"
+              },
+              {
+                "Language": "ko",
+                "Text": "애플"
+              },
+              {
+                "Language": "yue",
+                "Text": "蘋果"
+              },
+              {
+                "Language": "en",
+                "Text": "Apple"
+              },
+              {
+                "Language": "it",
+                "Text": "Apple"
+              },
+              {
+                "Language": "fr",
+                "Text": "pomme"
+              },
+              {
+                "Language": "es",
+                "Text": "Apple"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "蘋果"
+              },
+              {
+                "Language": "ar",
+                "Text": "أبل"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "苹果"
+              },
+              {
+                "Language": "ja",
+                "Text": "アップル"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000089",
             DisplayName: "提子",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Trauben" },
-              { Language: "ru", Text: "Виноград" },
-              { Language: "pt", Text: "Uvas" },
-              { Language: "ko", Text: "포도" },
-              { Language: "yue", Text: "提子" },
-              { Language: "en", Text: "Grapes" },
-              { Language: "it", Text: "Uva" },
-              { Language: "fr", Text: "Raisins" },
-              { Language: "es", Text: "Uvas" },
-              { Language: "zh-CHT", Text: "葡萄" },
-              { Language: "ar", Text: "العنب" },
-              { Language: "zh-CHS", Text: "葡萄" },
-              { Language: "ja", Text: "ブドウ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Trauben" },
-              { Language: "ru", Text: "Виноград" },
-              { Language: "pt", Text: "Uvas" },
-              { Language: "ko", Text: "포도" },
-              { Language: "yue", Text: "提子" },
-              { Language: "en", Text: "Grapes" },
-              { Language: "it", Text: "Uva" },
-              { Language: "fr", Text: "Raisins" },
-              { Language: "es", Text: "Uvas" },
-              { Language: "zh-CHT", Text: "葡萄" },
-              { Language: "ar", Text: "العنب" },
-              { Language: "zh-CHS", Text: "葡萄" },
-              { Language: "ja", Text: "ブドウ" }
+              {
+                "Language": "de",
+                "Text": "Trauben"
+              },
+              {
+                "Language": "ru",
+                "Text": "Виноград"
+              },
+              {
+                "Language": "pt",
+                "Text": "Uvas"
+              },
+              {
+                "Language": "ko",
+                "Text": "포도"
+              },
+              {
+                "Language": "yue",
+                "Text": "提子"
+              },
+              {
+                "Language": "en",
+                "Text": "Grapes"
+              },
+              {
+                "Language": "it",
+                "Text": "Uva"
+              },
+              {
+                "Language": "fr",
+                "Text": "Raisins"
+              },
+              {
+                "Language": "es",
+                "Text": "Uvas"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "葡萄"
+              },
+              {
+                "Language": "ar",
+                "Text": "العنب"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "葡萄"
+              },
+              {
+                "Language": "ja",
+                "Text": "ブドウ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000090",
             DisplayName: "西瓜",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Wassermelone" },
-              { Language: "ru", Text: "Арбуз" },
-              { Language: "pt", Text: "Melancia" },
-              { Language: "ko", Text: "수 박" },
-              { Language: "yue", Text: "西瓜" },
-              { Language: "en", Text: "Watermelon" },
-              { Language: "it", Text: "Anguria" },
-              { Language: "fr", Text: "Melon d’eau" },
-              { Language: "es", Text: "Sandía" },
-              { Language: "zh-CHT", Text: "西瓜" },
-              { Language: "ar", Text: "البطيخ" },
-              { Language: "zh-CHS", Text: "西瓜" },
-              { Language: "ja", Text: "スイカ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Wassermelone" },
-              { Language: "ru", Text: "Арбуз" },
-              { Language: "pt", Text: "Melancia" },
-              { Language: "ko", Text: "수 박" },
-              { Language: "yue", Text: "西瓜" },
-              { Language: "en", Text: "Watermelon" },
-              { Language: "it", Text: "Anguria" },
-              { Language: "fr", Text: "Melon d’eau" },
-              { Language: "es", Text: "Sandía" },
-              { Language: "zh-CHT", Text: "西瓜" },
-              { Language: "ar", Text: "البطيخ" },
-              { Language: "zh-CHS", Text: "西瓜" },
-              { Language: "ja", Text: "スイカ" }
+              {
+                "Language": "de",
+                "Text": "Wassermelone"
+              },
+              {
+                "Language": "ru",
+                "Text": "Арбуз"
+              },
+              {
+                "Language": "pt",
+                "Text": "Melancia"
+              },
+              {
+                "Language": "ko",
+                "Text": "수 박"
+              },
+              {
+                "Language": "yue",
+                "Text": "西瓜"
+              },
+              {
+                "Language": "en",
+                "Text": "Watermelon"
+              },
+              {
+                "Language": "it",
+                "Text": "Anguria"
+              },
+              {
+                "Language": "fr",
+                "Text": "Melon d’eau"
+              },
+              {
+                "Language": "es",
+                "Text": "Sandía"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "西瓜"
+              },
+              {
+                "Language": "ar",
+                "Text": "البطيخ"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "西瓜"
+              },
+              {
+                "Language": "ja",
+                "Text": "スイカ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000091",
             DisplayName: "橙",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Orange" },
-              { Language: "ru", Text: "Оранжевый" },
-              { Language: "pt", Text: "Laranja" },
-              { Language: "ko", Text: "오렌지" },
-              { Language: "yue", Text: "橙" },
-              { Language: "en", Text: "Orange" },
-              { Language: "it", Text: "Orange" },
-              { Language: "fr", Text: "Orange" },
-              { Language: "es", Text: "Naranja" },
-              { Language: "zh-CHT", Text: "橙" },
-              { Language: "ar", Text: "أورانج" },
-              { Language: "zh-CHS", Text: "橙" },
-              { Language: "ja", Text: "オレンジ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Orange" },
-              { Language: "ru", Text: "Оранжевый" },
-              { Language: "pt", Text: "Laranja" },
-              { Language: "ko", Text: "오렌지" },
-              { Language: "yue", Text: "橙" },
-              { Language: "en", Text: "Orange" },
-              { Language: "it", Text: "Orange" },
-              { Language: "fr", Text: "Orange" },
-              { Language: "es", Text: "Naranja" },
-              { Language: "zh-CHT", Text: "橙" },
-              { Language: "ar", Text: "أورانج" },
-              { Language: "zh-CHS", Text: "橙" },
-              { Language: "ja", Text: "オレンジ" }
+              {
+                "Language": "de",
+                "Text": "Orange"
+              },
+              {
+                "Language": "ru",
+                "Text": "Оранжевый"
+              },
+              {
+                "Language": "pt",
+                "Text": "Laranja"
+              },
+              {
+                "Language": "ko",
+                "Text": "오렌지"
+              },
+              {
+                "Language": "yue",
+                "Text": "橙"
+              },
+              {
+                "Language": "en",
+                "Text": "Orange"
+              },
+              {
+                "Language": "it",
+                "Text": "Orange"
+              },
+              {
+                "Language": "fr",
+                "Text": "Orange"
+              },
+              {
+                "Language": "es",
+                "Text": "Naranja"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "橙"
+              },
+              {
+                "Language": "ar",
+                "Text": "أورانج"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "橙"
+              },
+              {
+                "Language": "ja",
+                "Text": "オレンジ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000092",
             DisplayName: "香蕉",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Banane" },
-              { Language: "ru", Text: "Банан" },
-              { Language: "pt", Text: "Banana" },
-              { Language: "ko", Text: "바나나" },
-              { Language: "yue", Text: "香蕉" },
-              { Language: "en", Text: "Banana" },
-              { Language: "it", Text: "Banana" },
-              { Language: "fr", Text: "Banane" },
-              { Language: "es", Text: "Plátano" },
-              { Language: "zh-CHT", Text: "香蕉" },
-              { Language: "ar", Text: "الموز" },
-              { Language: "zh-CHS", Text: "香蕉" },
-              { Language: "ja", Text: "バナナ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Banane" },
-              { Language: "ru", Text: "Банан" },
-              { Language: "pt", Text: "Banana" },
-              { Language: "ko", Text: "바나나" },
-              { Language: "yue", Text: "香蕉" },
-              { Language: "en", Text: "Banana" },
-              { Language: "it", Text: "Banana" },
-              { Language: "fr", Text: "Banane" },
-              { Language: "es", Text: "Plátano" },
-              { Language: "zh-CHT", Text: "香蕉" },
-              { Language: "ar", Text: "الموز" },
-              { Language: "zh-CHS", Text: "香蕉" },
-              { Language: "ja", Text: "バナナ" }
+              {
+                "Language": "de",
+                "Text": "Banane"
+              },
+              {
+                "Language": "ru",
+                "Text": "Банан"
+              },
+              {
+                "Language": "pt",
+                "Text": "Banana"
+              },
+              {
+                "Language": "ko",
+                "Text": "바나나"
+              },
+              {
+                "Language": "yue",
+                "Text": "香蕉"
+              },
+              {
+                "Language": "en",
+                "Text": "Banana"
+              },
+              {
+                "Language": "it",
+                "Text": "Banana"
+              },
+              {
+                "Language": "fr",
+                "Text": "Banane"
+              },
+              {
+                "Language": "es",
+                "Text": "Plátano"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "香蕉"
+              },
+              {
+                "Language": "ar",
+                "Text": "الموز"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "香蕉"
+              },
+              {
+                "Language": "ja",
+                "Text": "バナナ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000093",
             DisplayName: "木瓜",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Papaya" },
-              { Language: "ru", Text: "Папайя" },
-              { Language: "pt", Text: "Mamão" },
-              { Language: "ko", Text: "파파야" },
-              { Language: "yue", Text: "木瓜" },
-              { Language: "en", Text: "Papaya" },
-              { Language: "it", Text: "Papaia" },
-              { Language: "fr", Text: "Papaye" },
-              { Language: "es", Text: "Papaya" },
-              { Language: "zh-CHT", Text: "木瓜" },
-              { Language: "ar", Text: "بابايا" },
-              { Language: "zh-CHS", Text: "木瓜" },
-              { Language: "ja", Text: "パパイヤ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Papaya" },
-              { Language: "ru", Text: "Папайя" },
-              { Language: "pt", Text: "Mamão" },
-              { Language: "ko", Text: "파파야" },
-              { Language: "yue", Text: "木瓜" },
-              { Language: "en", Text: "Papaya" },
-              { Language: "it", Text: "Papaia" },
-              { Language: "fr", Text: "Papaye" },
-              { Language: "es", Text: "Papaya" },
-              { Language: "zh-CHT", Text: "木瓜" },
-              { Language: "ar", Text: "بابايا" },
-              { Language: "zh-CHS", Text: "木瓜" },
-              { Language: "ja", Text: "パパイヤ" }
+              {
+                "Language": "de",
+                "Text": "Papaya"
+              },
+              {
+                "Language": "ru",
+                "Text": "Папайя"
+              },
+              {
+                "Language": "pt",
+                "Text": "Mamão"
+              },
+              {
+                "Language": "ko",
+                "Text": "파파야"
+              },
+              {
+                "Language": "yue",
+                "Text": "木瓜"
+              },
+              {
+                "Language": "en",
+                "Text": "Papaya"
+              },
+              {
+                "Language": "it",
+                "Text": "Papaia"
+              },
+              {
+                "Language": "fr",
+                "Text": "Papaye"
+              },
+              {
+                "Language": "es",
+                "Text": "Papaya"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "木瓜"
+              },
+              {
+                "Language": "ar",
+                "Text": "بابايا"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "木瓜"
+              },
+              {
+                "Language": "ja",
+                "Text": "パパイヤ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000094",
             DisplayName: "芒果",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Mango" },
-              { Language: "ru", Text: "Манго" },
-              { Language: "pt", Text: "Manga" },
-              { Language: "ko", Text: "망고" },
-              { Language: "yue", Text: "芒果" },
-              { Language: "en", Text: "Mango" },
-              { Language: "it", Text: "Mango" },
-              { Language: "fr", Text: "Mangue" },
-              { Language: "es", Text: "Mango" },
-              { Language: "zh-CHT", Text: "芒果" },
-              { Language: "ar", Text: "مانجو" },
-              { Language: "zh-CHS", Text: "芒果" },
-              { Language: "ja", Text: "マンゴー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Mango" },
-              { Language: "ru", Text: "Манго" },
-              { Language: "pt", Text: "Manga" },
-              { Language: "ko", Text: "망고" },
-              { Language: "yue", Text: "芒果" },
-              { Language: "en", Text: "Mango" },
-              { Language: "it", Text: "Mango" },
-              { Language: "fr", Text: "Mangue" },
-              { Language: "es", Text: "Mango" },
-              { Language: "zh-CHT", Text: "芒果" },
-              { Language: "ar", Text: "مانجو" },
-              { Language: "zh-CHS", Text: "芒果" },
-              { Language: "ja", Text: "マンゴー" }
+              {
+                "Language": "de",
+                "Text": "Mango"
+              },
+              {
+                "Language": "ru",
+                "Text": "Манго"
+              },
+              {
+                "Language": "pt",
+                "Text": "Manga"
+              },
+              {
+                "Language": "ko",
+                "Text": "망고"
+              },
+              {
+                "Language": "yue",
+                "Text": "芒果"
+              },
+              {
+                "Language": "en",
+                "Text": "Mango"
+              },
+              {
+                "Language": "it",
+                "Text": "Mango"
+              },
+              {
+                "Language": "fr",
+                "Text": "Mangue"
+              },
+              {
+                "Language": "es",
+                "Text": "Mango"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "芒果"
+              },
+              {
+                "Language": "ar",
+                "Text": "مانجو"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "芒果"
+              },
+              {
+                "Language": "ja",
+                "Text": "マンゴー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000095",
             DisplayName: "火龍果",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Pitaya" },
-              { Language: "ru", Text: "Питайя" },
-              { Language: "pt", Text: "Pitaya" },
-              { Language: "ko", Text: "Pitaya" },
-              { Language: "yue", Text: "火龍果" },
-              { Language: "en", Text: "Pitaya" },
-              { Language: "it", Text: "Pitaya" },
-              { Language: "fr", Text: "Pitaya" },
-              { Language: "es", Text: "Pitaya" },
-              { Language: "zh-CHT", Text: "火龍果" },
-              { Language: "ar", Text: "بيتيا" },
-              { Language: "zh-CHS", Text: "火龙果" },
-              { Language: "ja", Text: "ピタヤ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Pitaya" },
-              { Language: "ru", Text: "Питайя" },
-              { Language: "pt", Text: "Pitaya" },
-              { Language: "ko", Text: "Pitaya" },
-              { Language: "yue", Text: "火龍果" },
-              { Language: "en", Text: "Pitaya" },
-              { Language: "it", Text: "Pitaya" },
-              { Language: "fr", Text: "Pitaya" },
-              { Language: "es", Text: "Pitaya" },
-              { Language: "zh-CHT", Text: "火龍果" },
-              { Language: "ar", Text: "بيتيا" },
-              { Language: "zh-CHS", Text: "火龙果" },
-              { Language: "ja", Text: "ピタヤ" }
+              {
+                "Language": "de",
+                "Text": "Pitaya"
+              },
+              {
+                "Language": "ru",
+                "Text": "Питайя"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pitaya"
+              },
+              {
+                "Language": "ko",
+                "Text": "Pitaya"
+              },
+              {
+                "Language": "yue",
+                "Text": "火龍果"
+              },
+              {
+                "Language": "en",
+                "Text": "Pitaya"
+              },
+              {
+                "Language": "it",
+                "Text": "Pitaya"
+              },
+              {
+                "Language": "fr",
+                "Text": "Pitaya"
+              },
+              {
+                "Language": "es",
+                "Text": "Pitaya"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "火龍果"
+              },
+              {
+                "Language": "ar",
+                "Text": "بيتيا"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "火龙果"
+              },
+              {
+                "Language": "ja",
+                "Text": "ピタヤ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000096",
             DisplayName: "桃",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Pfirsich" },
-              { Language: "ru", Text: "Персик" },
-              { Language: "pt", Text: "Pêssego" },
-              { Language: "ko", Text: "복숭아" },
-              { Language: "yue", Text: "桃" },
-              { Language: "en", Text: "Peach" },
-              { Language: "it", Text: "Peach" },
-              { Language: "fr", Text: "Peach" },
-              { Language: "es", Text: "Melocotón" },
-              { Language: "zh-CHT", Text: "桃" },
-              { Language: "ar", Text: "الخوخ" },
-              { Language: "zh-CHS", Text: "桃" },
-              { Language: "ja", Text: "ピーチ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Pfirsich" },
-              { Language: "ru", Text: "Персик" },
-              { Language: "pt", Text: "Pêssego" },
-              { Language: "ko", Text: "복숭아" },
-              { Language: "yue", Text: "桃" },
-              { Language: "en", Text: "Peach" },
-              { Language: "it", Text: "Peach" },
-              { Language: "fr", Text: "Peach" },
-              { Language: "es", Text: "Melocotón" },
-              { Language: "zh-CHT", Text: "桃" },
-              { Language: "ar", Text: "الخوخ" },
-              { Language: "zh-CHS", Text: "桃" },
-              { Language: "ja", Text: "ピーチ" }
+              {
+                "Language": "de",
+                "Text": "Pfirsich"
+              },
+              {
+                "Language": "ru",
+                "Text": "Персик"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pêssego"
+              },
+              {
+                "Language": "ko",
+                "Text": "복숭아"
+              },
+              {
+                "Language": "yue",
+                "Text": "桃"
+              },
+              {
+                "Language": "en",
+                "Text": "Peach"
+              },
+              {
+                "Language": "it",
+                "Text": "Peach"
+              },
+              {
+                "Language": "fr",
+                "Text": "Peach"
+              },
+              {
+                "Language": "es",
+                "Text": "Melocotón"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "桃"
+              },
+              {
+                "Language": "ar",
+                "Text": "الخوخ"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "桃"
+              },
+              {
+                "Language": "ja",
+                "Text": "ピーチ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000097",
             DisplayName: "奇異果",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Kiwi" },
-              { Language: "ru", Text: "Киви" },
-              { Language: "pt", Text: "Quivi" },
-              { Language: "ko", Text: "키 위" },
-              { Language: "yue", Text: "奇異果" },
-              { Language: "en", Text: "Kiwi" },
-              { Language: "it", Text: "Kiwi" },
-              { Language: "fr", Text: "Kiwi" },
-              { Language: "es", Text: "Kiwi" },
-              { Language: "zh-CHT", Text: "彌猴桃" },
-              { Language: "ar", Text: "كيوي" },
-              { Language: "zh-CHS", Text: "弥猴桃" },
-              { Language: "ja", Text: "キウイ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Kiwi" },
-              { Language: "ru", Text: "Киви" },
-              { Language: "pt", Text: "Quivi" },
-              { Language: "ko", Text: "키 위" },
-              { Language: "yue", Text: "奇異果" },
-              { Language: "en", Text: "Kiwi" },
-              { Language: "it", Text: "Kiwi" },
-              { Language: "fr", Text: "Kiwi" },
-              { Language: "es", Text: "Kiwi" },
-              { Language: "zh-CHT", Text: "彌猴桃" },
-              { Language: "ar", Text: "كيوي" },
-              { Language: "zh-CHS", Text: "弥猴桃" },
-              { Language: "ja", Text: "キウイ" }
+              {
+                "Language": "de",
+                "Text": "Kiwi"
+              },
+              {
+                "Language": "ru",
+                "Text": "Киви"
+              },
+              {
+                "Language": "pt",
+                "Text": "Quivi"
+              },
+              {
+                "Language": "ko",
+                "Text": "키 위"
+              },
+              {
+                "Language": "yue",
+                "Text": "奇異果"
+              },
+              {
+                "Language": "en",
+                "Text": "Kiwi"
+              },
+              {
+                "Language": "it",
+                "Text": "Kiwi"
+              },
+              {
+                "Language": "fr",
+                "Text": "Kiwi"
+              },
+              {
+                "Language": "es",
+                "Text": "Kiwi"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "彌猴桃"
+              },
+              {
+                "Language": "ar",
+                "Text": "كيوي"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "弥猴桃"
+              },
+              {
+                "Language": "ja",
+                "Text": "キウイ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000098",
             DisplayName: "蜜瓜",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Honig-Tau-Melone" },
-              { Language: "ru", Text: "Мед росы дыней" },
-              { Language: "pt", Text: "Melão de orvalho de mel" },
-              { Language: "ko", Text: "허니 듀 멜론" },
-              { Language: "yue", Text: "蜜瓜" },
-              { Language: "en", Text: "Honey dew melon" },
-              { Language: "it", Text: "Melone della rugiada di miele" },
-              { Language: "fr", Text: "Melon de miel rosée" },
-              { Language: "es", Text: "Melón Rocío de miel" },
-              { Language: "zh-CHT", Text: "白蘭瓜" },
-              { Language: "ar", Text: "العسل الندى البطيخ" },
-              { Language: "zh-CHS", Text: "白兰瓜" },
-              { Language: "ja", Text: "ハニーデュー メロン" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Honig-Tau-Melone" },
-              { Language: "ru", Text: "Мед росы дыней" },
-              { Language: "pt", Text: "Melão de orvalho de mel" },
-              { Language: "ko", Text: "허니 듀 멜론" },
-              { Language: "yue", Text: "蜜瓜" },
-              { Language: "en", Text: "Honey dew melon" },
-              { Language: "it", Text: "Melone della rugiada di miele" },
-              { Language: "fr", Text: "Melon de miel rosée" },
-              { Language: "es", Text: "Melón Rocío de miel" },
-              { Language: "zh-CHT", Text: "白蘭瓜" },
-              { Language: "ar", Text: "العسل الندى البطيخ" },
-              { Language: "zh-CHS", Text: "白兰瓜" },
-              { Language: "ja", Text: "ハニーデュー メロン" }
+              {
+                "Language": "de",
+                "Text": "Honig-Tau-Melone"
+              },
+              {
+                "Language": "ru",
+                "Text": "Мед росы дыней"
+              },
+              {
+                "Language": "pt",
+                "Text": "Melão de orvalho de mel"
+              },
+              {
+                "Language": "ko",
+                "Text": "허니 듀 멜론"
+              },
+              {
+                "Language": "yue",
+                "Text": "蜜瓜"
+              },
+              {
+                "Language": "en",
+                "Text": "Honey dew melon"
+              },
+              {
+                "Language": "it",
+                "Text": "Melone della rugiada di miele"
+              },
+              {
+                "Language": "fr",
+                "Text": "Melon de miel rosée"
+              },
+              {
+                "Language": "es",
+                "Text": "Melón Rocío de miel"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "白蘭瓜"
+              },
+              {
+                "Language": "ar",
+                "Text": "العسل الندى البطيخ"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "白兰瓜"
+              },
+              {
+                "Language": "ja",
+                "Text": "ハニーデュー メロン"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Obst" },
-          { Language: "ru", Text: "Фрукты" },
-          { Language: "pt", Text: "Frutas" },
-          { Language: "ko", Text: "과일" },
-          { Language: "yue", Text: "水果" },
-          { Language: "en", Text: "Fruit" },
-          { Language: "it", Text: "Frutta" },
-          { Language: "fr", Text: "Fruits" },
-          { Language: "es", Text: "Fruta" },
-          { Language: "zh-CHT", Text: "水果" },
-          { Language: "ar", Text: "فاكهة" },
-          { Language: "zh-CHS", Text: "水果" },
-          { Language: "ja", Text: "フルーツ" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Obst" },
-          { Language: "ru", Text: "Фрукты" },
-          { Language: "pt", Text: "Frutas" },
-          { Language: "ko", Text: "과일" },
-          { Language: "yue", Text: "水果" },
-          { Language: "en", Text: "Fruit" },
-          { Language: "it", Text: "Frutta" },
-          { Language: "fr", Text: "Fruits" },
-          { Language: "es", Text: "Fruta" },
-          { Language: "zh-CHT", Text: "水果" },
-          { Language: "ar", Text: "فاكهة" },
-          { Language: "zh-CHS", Text: "水果" },
-          { Language: "ja", Text: "フルーツ" }
+          {
+            "Language": "de",
+            "Text": "Obst"
+          },
+          {
+            "Language": "ru",
+            "Text": "Фрукты"
+          },
+          {
+            "Language": "pt",
+            "Text": "Frutas"
+          },
+          {
+            "Language": "ko",
+            "Text": "과일"
+          },
+          {
+            "Language": "yue",
+            "Text": "水果"
+          },
+          {
+            "Language": "en",
+            "Text": "Fruit"
+          },
+          {
+            "Language": "it",
+            "Text": "Frutta"
+          },
+          {
+            "Language": "fr",
+            "Text": "Fruits"
+          },
+          {
+            "Language": "es",
+            "Text": "Fruta"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "水果"
+          },
+          {
+            "Language": "ar",
+            "Text": "فاكهة"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "水果"
+          },
+          {
+            "Language": "ja",
+            "Text": "フルーツ"
+          }
         ]
       },
       {
@@ -3589,713 +6059,1238 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000099",
             DisplayName: "黃芽白",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Gelbe Knospe weiß" },
-              { Language: "ru", Text: "Белый желтый бутон" },
-              { Language: "pt", Text: "Branca de botão amarelo" },
-              { Language: "ko", Text: "옐로우 버드 화이트" },
-              { Language: "yue", Text: "黃芽白" },
-              { Language: "en", Text: "Yellow bud white" },
-              { Language: "it", Text: "Bianco giallo gemma" },
-              { Language: "fr", Text: "Blanc de œuf jaune" },
-              { Language: "es", Text: "Blanco amarillo yema" },
-              { Language: "zh-CHT", Text: "黃芽白" },
-              { Language: "ar", Text: "الأبيض الأصفر برعم" },
-              { Language: "zh-CHS", Text: "黄芽白" },
-              { Language: "ja", Text: "黄色いつぼみホワイト" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Gelbe Knospe weiß" },
-              { Language: "ru", Text: "Белый желтый бутон" },
-              { Language: "pt", Text: "Branca de botão amarelo" },
-              { Language: "ko", Text: "옐로우 버드 화이트" },
-              { Language: "yue", Text: "黃芽白" },
-              { Language: "en", Text: "Yellow bud white" },
-              { Language: "it", Text: "Bianco giallo gemma" },
-              { Language: "fr", Text: "Blanc de œuf jaune" },
-              { Language: "es", Text: "Blanco amarillo yema" },
-              { Language: "zh-CHT", Text: "黃芽白" },
-              { Language: "ar", Text: "الأبيض الأصفر برعم" },
-              { Language: "zh-CHS", Text: "黄芽白" },
-              { Language: "ja", Text: "黄色いつぼみホワイト" }
+              {
+                "Language": "de",
+                "Text": "Gelbe Knospe weiß"
+              },
+              {
+                "Language": "ru",
+                "Text": "Белый желтый бутон"
+              },
+              {
+                "Language": "pt",
+                "Text": "Branca de botão amarelo"
+              },
+              {
+                "Language": "ko",
+                "Text": "옐로우 버드 화이트"
+              },
+              {
+                "Language": "yue",
+                "Text": "黃芽白"
+              },
+              {
+                "Language": "en",
+                "Text": "Yellow bud white"
+              },
+              {
+                "Language": "it",
+                "Text": "Bianco giallo gemma"
+              },
+              {
+                "Language": "fr",
+                "Text": "Blanc de œuf jaune"
+              },
+              {
+                "Language": "es",
+                "Text": "Blanco amarillo yema"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "黃芽白"
+              },
+              {
+                "Language": "ar",
+                "Text": "الأبيض الأصفر برعم"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "黄芽白"
+              },
+              {
+                "Language": "ja",
+                "Text": "黄色いつぼみホワイト"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000100",
             DisplayName: "椰菜花",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Blumenkohl" },
-              { Language: "ru", Text: "Цветная капуста" },
-              { Language: "pt", Text: "Couve-flor" },
-              { Language: "ko", Text: "콜리플라워" },
-              { Language: "yue", Text: "椰菜花" },
-              { Language: "en", Text: "Cauliflower" },
-              { Language: "it", Text: "Cavolfiore" },
-              { Language: "fr", Text: "Chou-fleur" },
-              { Language: "es", Text: "Coliflor" },
-              { Language: "zh-CHT", Text: "菜花" },
-              { Language: "ar", Text: "قرنبيط" },
-              { Language: "zh-CHS", Text: "菜花" },
-              { Language: "ja", Text: "カリフラワー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Blumenkohl" },
-              { Language: "ru", Text: "Цветная капуста" },
-              { Language: "pt", Text: "Couve-flor" },
-              { Language: "ko", Text: "콜리플라워" },
-              { Language: "yue", Text: "椰菜花" },
-              { Language: "en", Text: "Cauliflower" },
-              { Language: "it", Text: "Cavolfiore" },
-              { Language: "fr", Text: "Chou-fleur" },
-              { Language: "es", Text: "Coliflor" },
-              { Language: "zh-CHT", Text: "菜花" },
-              { Language: "ar", Text: "قرنبيط" },
-              { Language: "zh-CHS", Text: "菜花" },
-              { Language: "ja", Text: "カリフラワー" }
+              {
+                "Language": "de",
+                "Text": "Blumenkohl"
+              },
+              {
+                "Language": "ru",
+                "Text": "Цветная капуста"
+              },
+              {
+                "Language": "pt",
+                "Text": "Couve-flor"
+              },
+              {
+                "Language": "ko",
+                "Text": "콜리플라워"
+              },
+              {
+                "Language": "yue",
+                "Text": "椰菜花"
+              },
+              {
+                "Language": "en",
+                "Text": "Cauliflower"
+              },
+              {
+                "Language": "it",
+                "Text": "Cavolfiore"
+              },
+              {
+                "Language": "fr",
+                "Text": "Chou-fleur"
+              },
+              {
+                "Language": "es",
+                "Text": "Coliflor"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "菜花"
+              },
+              {
+                "Language": "ar",
+                "Text": "قرنبيط"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "菜花"
+              },
+              {
+                "Language": "ja",
+                "Text": "カリフラワー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000101",
             DisplayName: "椰菜",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Chinesische blühende Kohl" },
-              { Language: "ru", Text: "Капуста китайская цветением" },
-              { Language: "pt", Text: "Repolho chinês floração" },
-              { Language: "ko", Text: "중국 꽃 양배추" },
-              { Language: "yue", Text: "椰菜" },
-              { Language: "en", Text: "Chinese flowering cabbage" },
-              { Language: "it", Text: "Cavolo di fioritura cinese" },
-              { Language: "fr", Text: "Chou chinois floraison" },
-              { Language: "es", Text: "Repollo chino flores" },
-              { Language: "zh-CHT", Text: "包菜" },
-              { Language: "ar", Text: "الأزهار الصينية الملفوف" },
-              { Language: "zh-CHS", Text: "包菜" },
-              { Language: "ja", Text: "中国開花キャベツ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Chinesische blühende Kohl" },
-              { Language: "ru", Text: "Капуста китайская цветением" },
-              { Language: "pt", Text: "Repolho chinês floração" },
-              { Language: "ko", Text: "중국 꽃 양배추" },
-              { Language: "yue", Text: "椰菜" },
-              { Language: "en", Text: "Chinese flowering cabbage" },
-              { Language: "it", Text: "Cavolo di fioritura cinese" },
-              { Language: "fr", Text: "Chou chinois floraison" },
-              { Language: "es", Text: "Repollo chino flores" },
-              { Language: "zh-CHT", Text: "包菜" },
-              { Language: "ar", Text: "الأزهار الصينية الملفوف" },
-              { Language: "zh-CHS", Text: "包菜" },
-              { Language: "ja", Text: "中国開花キャベツ" }
+              {
+                "Language": "de",
+                "Text": "Chinesische blühende Kohl"
+              },
+              {
+                "Language": "ru",
+                "Text": "Капуста китайская цветением"
+              },
+              {
+                "Language": "pt",
+                "Text": "Repolho chinês floração"
+              },
+              {
+                "Language": "ko",
+                "Text": "중국 꽃 양배추"
+              },
+              {
+                "Language": "yue",
+                "Text": "椰菜"
+              },
+              {
+                "Language": "en",
+                "Text": "Chinese flowering cabbage"
+              },
+              {
+                "Language": "it",
+                "Text": "Cavolo di fioritura cinese"
+              },
+              {
+                "Language": "fr",
+                "Text": "Chou chinois floraison"
+              },
+              {
+                "Language": "es",
+                "Text": "Repollo chino flores"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "包菜"
+              },
+              {
+                "Language": "ar",
+                "Text": "الأزهار الصينية الملفوف"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "包菜"
+              },
+              {
+                "Language": "ja",
+                "Text": "中国開花キャベツ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000102",
             DisplayName: "西蘭花",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Brokkoli" },
-              { Language: "ru", Text: "Брокколи" },
-              { Language: "pt", Text: "Brócolis" },
-              { Language: "ko", Text: "브로콜리" },
-              { Language: "yue", Text: "西蘭花" },
-              { Language: "en", Text: "Broccoli" },
-              { Language: "it", Text: "Broccolo" },
-              { Language: "fr", Text: "Brocoli" },
-              { Language: "es", Text: "Brócoli" },
-              { Language: "zh-CHT", Text: "西蘭花" },
-              { Language: "ar", Text: "قرنبيط" },
-              { Language: "zh-CHS", Text: "西兰花" },
-              { Language: "ja", Text: "ブロッコリー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Brokkoli" },
-              { Language: "ru", Text: "Брокколи" },
-              { Language: "pt", Text: "Brócolis" },
-              { Language: "ko", Text: "브로콜리" },
-              { Language: "yue", Text: "西蘭花" },
-              { Language: "en", Text: "Broccoli" },
-              { Language: "it", Text: "Broccolo" },
-              { Language: "fr", Text: "Brocoli" },
-              { Language: "es", Text: "Brócoli" },
-              { Language: "zh-CHT", Text: "西蘭花" },
-              { Language: "ar", Text: "قرنبيط" },
-              { Language: "zh-CHS", Text: "西兰花" },
-              { Language: "ja", Text: "ブロッコリー" }
+              {
+                "Language": "de",
+                "Text": "Brokkoli"
+              },
+              {
+                "Language": "ru",
+                "Text": "Брокколи"
+              },
+              {
+                "Language": "pt",
+                "Text": "Brócolis"
+              },
+              {
+                "Language": "ko",
+                "Text": "브로콜리"
+              },
+              {
+                "Language": "yue",
+                "Text": "西蘭花"
+              },
+              {
+                "Language": "en",
+                "Text": "Broccoli"
+              },
+              {
+                "Language": "it",
+                "Text": "Broccolo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Brocoli"
+              },
+              {
+                "Language": "es",
+                "Text": "Brócoli"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "西蘭花"
+              },
+              {
+                "Language": "ar",
+                "Text": "قرنبيط"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "西兰花"
+              },
+              {
+                "Language": "ja",
+                "Text": "ブロッコリー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000103",
             DisplayName: "白菜",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Chinesischer weißer Kohl" },
-              { Language: "ru", Text: "Белая китайская капуста" },
-              { Language: "pt", Text: "Repolho chinês branco" },
-              { Language: "ko", Text: "중국 백색 양배추" },
-              { Language: "yue", Text: "白菜" },
-              { Language: "en", Text: "Chinese white cabbage" },
-              { Language: "it", Text: "Cavolo bianco cinese" },
-              { Language: "fr", Text: "Chou chinois blanc" },
-              { Language: "es", Text: "Repollo blanco chino" },
-              { Language: "zh-CHT", Text: "白菜" },
-              { Language: "ar", Text: "الملفوف الأبيض الصيني" },
-              { Language: "zh-CHS", Text: "白菜" },
-              { Language: "ja", Text: "中国白キャベツ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Chinesischer weißer Kohl" },
-              { Language: "ru", Text: "Белая китайская капуста" },
-              { Language: "pt", Text: "Repolho chinês branco" },
-              { Language: "ko", Text: "중국 백색 양배추" },
-              { Language: "yue", Text: "白菜" },
-              { Language: "en", Text: "Chinese white cabbage" },
-              { Language: "it", Text: "Cavolo bianco cinese" },
-              { Language: "fr", Text: "Chou chinois blanc" },
-              { Language: "es", Text: "Repollo blanco chino" },
-              { Language: "zh-CHT", Text: "白菜" },
-              { Language: "ar", Text: "الملفوف الأبيض الصيني" },
-              { Language: "zh-CHS", Text: "白菜" },
-              { Language: "ja", Text: "中国白キャベツ" }
+              {
+                "Language": "de",
+                "Text": "Chinesischer weißer Kohl"
+              },
+              {
+                "Language": "ru",
+                "Text": "Белая китайская капуста"
+              },
+              {
+                "Language": "pt",
+                "Text": "Repolho chinês branco"
+              },
+              {
+                "Language": "ko",
+                "Text": "중국 백색 양배추"
+              },
+              {
+                "Language": "yue",
+                "Text": "白菜"
+              },
+              {
+                "Language": "en",
+                "Text": "Chinese white cabbage"
+              },
+              {
+                "Language": "it",
+                "Text": "Cavolo bianco cinese"
+              },
+              {
+                "Language": "fr",
+                "Text": "Chou chinois blanc"
+              },
+              {
+                "Language": "es",
+                "Text": "Repollo blanco chino"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "白菜"
+              },
+              {
+                "Language": "ar",
+                "Text": "الملفوف الأبيض الصيني"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "白菜"
+              },
+              {
+                "Language": "ja",
+                "Text": "中国白キャベツ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000104",
             DisplayName: "西芹",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Sellerie" },
-              { Language: "ru", Text: "Сельдерей" },
-              { Language: "pt", Text: "Aipo" },
-              { Language: "ko", Text: "셀러리" },
-              { Language: "yue", Text: "西芹" },
-              { Language: "en", Text: "Celery" },
-              { Language: "it", Text: "Sedano" },
-              { Language: "fr", Text: "Céleri" },
-              { Language: "es", Text: "Apio" },
-              { Language: "zh-CHT", Text: "西芹" },
-              { Language: "ar", Text: "الكرفس" },
-              { Language: "zh-CHS", Text: "西芹" },
-              { Language: "ja", Text: "セロリ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Sellerie" },
-              { Language: "ru", Text: "Сельдерей" },
-              { Language: "pt", Text: "Aipo" },
-              { Language: "ko", Text: "셀러리" },
-              { Language: "yue", Text: "西芹" },
-              { Language: "en", Text: "Celery" },
-              { Language: "it", Text: "Sedano" },
-              { Language: "fr", Text: "Céleri" },
-              { Language: "es", Text: "Apio" },
-              { Language: "zh-CHT", Text: "西芹" },
-              { Language: "ar", Text: "الكرفس" },
-              { Language: "zh-CHS", Text: "西芹" },
-              { Language: "ja", Text: "セロリ" }
+              {
+                "Language": "de",
+                "Text": "Sellerie"
+              },
+              {
+                "Language": "ru",
+                "Text": "Сельдерей"
+              },
+              {
+                "Language": "pt",
+                "Text": "Aipo"
+              },
+              {
+                "Language": "ko",
+                "Text": "셀러리"
+              },
+              {
+                "Language": "yue",
+                "Text": "西芹"
+              },
+              {
+                "Language": "en",
+                "Text": "Celery"
+              },
+              {
+                "Language": "it",
+                "Text": "Sedano"
+              },
+              {
+                "Language": "fr",
+                "Text": "Céleri"
+              },
+              {
+                "Language": "es",
+                "Text": "Apio"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "西芹"
+              },
+              {
+                "Language": "ar",
+                "Text": "الكرفس"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "西芹"
+              },
+              {
+                "Language": "ja",
+                "Text": "セロリ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000105",
             DisplayName: "青椒",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Paprika" },
-              { Language: "ru", Text: "Болгарский перец" },
-              { Language: "pt", Text: "Pimenta de sino" },
-              { Language: "ko", Text: "벨 페 퍼" },
-              { Language: "yue", Text: "青椒" },
-              { Language: "en", Text: "Bell Pepper" },
-              { Language: "it", Text: "Peperone dolce" },
-              { Language: "fr", Text: "Bell Pepper" },
-              { Language: "es", Text: "Pimiento" },
-              { Language: "zh-CHT", Text: "青椒" },
-              { Language: "ar", Text: "فلفل" },
-              { Language: "zh-CHS", Text: "青椒" },
-              { Language: "ja", Text: "ピーマン" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Paprika" },
-              { Language: "ru", Text: "Болгарский перец" },
-              { Language: "pt", Text: "Pimenta de sino" },
-              { Language: "ko", Text: "벨 페 퍼" },
-              { Language: "yue", Text: "青椒" },
-              { Language: "en", Text: "Bell Pepper" },
-              { Language: "it", Text: "Peperone dolce" },
-              { Language: "fr", Text: "Bell Pepper" },
-              { Language: "es", Text: "Pimiento" },
-              { Language: "zh-CHT", Text: "青椒" },
-              { Language: "ar", Text: "فلفل" },
-              { Language: "zh-CHS", Text: "青椒" },
-              { Language: "ja", Text: "ピーマン" }
+              {
+                "Language": "de",
+                "Text": "Paprika"
+              },
+              {
+                "Language": "ru",
+                "Text": "Болгарский перец"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pimenta de sino"
+              },
+              {
+                "Language": "ko",
+                "Text": "벨 페 퍼"
+              },
+              {
+                "Language": "yue",
+                "Text": "青椒"
+              },
+              {
+                "Language": "en",
+                "Text": "Bell Pepper"
+              },
+              {
+                "Language": "it",
+                "Text": "Peperone dolce"
+              },
+              {
+                "Language": "fr",
+                "Text": "Bell Pepper"
+              },
+              {
+                "Language": "es",
+                "Text": "Pimiento"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "青椒"
+              },
+              {
+                "Language": "ar",
+                "Text": "فلفل"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "青椒"
+              },
+              {
+                "Language": "ja",
+                "Text": "ピーマン"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000106",
             DisplayName: "冬菇",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Shiitake-Pilz" },
-              { Language: "ru", Text: "Гриб шиитаке" },
-              { Language: "pt", Text: "Cogumelo shiitake" },
-              { Language: "ko", Text: "표고버섯" },
-              { Language: "yue", Text: "冬菇" },
-              { Language: "en", Text: "Shiitake mushroom" },
-              { Language: "it", Text: "Fungo di shiitake" },
-              { Language: "fr", Text: "Champignon Shiitake" },
-              { Language: "es", Text: "Seta de shiitake" },
-              { Language: "zh-CHT", Text: "香菇" },
-              { Language: "ar", Text: "فطر شيتاكي" },
-              { Language: "zh-CHS", Text: "香菇" },
-              { Language: "ja", Text: "椎茸" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Shiitake-Pilz" },
-              { Language: "ru", Text: "Гриб шиитаке" },
-              { Language: "pt", Text: "Cogumelo shiitake" },
-              { Language: "ko", Text: "표고버섯" },
-              { Language: "yue", Text: "冬菇" },
-              { Language: "en", Text: "Shiitake mushroom" },
-              { Language: "it", Text: "Fungo di shiitake" },
-              { Language: "fr", Text: "Champignon Shiitake" },
-              { Language: "es", Text: "Seta de shiitake" },
-              { Language: "zh-CHT", Text: "香菇" },
-              { Language: "ar", Text: "فطر شيتاكي" },
-              { Language: "zh-CHS", Text: "香菇" },
-              { Language: "ja", Text: "椎茸" }
+              {
+                "Language": "de",
+                "Text": "Shiitake-Pilz"
+              },
+              {
+                "Language": "ru",
+                "Text": "Гриб шиитаке"
+              },
+              {
+                "Language": "pt",
+                "Text": "Cogumelo shiitake"
+              },
+              {
+                "Language": "ko",
+                "Text": "표고버섯"
+              },
+              {
+                "Language": "yue",
+                "Text": "冬菇"
+              },
+              {
+                "Language": "en",
+                "Text": "Shiitake mushroom"
+              },
+              {
+                "Language": "it",
+                "Text": "Fungo di shiitake"
+              },
+              {
+                "Language": "fr",
+                "Text": "Champignon Shiitake"
+              },
+              {
+                "Language": "es",
+                "Text": "Seta de shiitake"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "香菇"
+              },
+              {
+                "Language": "ar",
+                "Text": "فطر شيتاكي"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "香菇"
+              },
+              {
+                "Language": "ja",
+                "Text": "椎茸"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000107",
             DisplayName: "粟米",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Mais" },
-              { Language: "ru", Text: "Кукуруза" },
-              { Language: "pt", Text: "Milho" },
-              { Language: "ko", Text: "옥수수" },
-              { Language: "yue", Text: "粟米" },
-              { Language: "en", Text: "Corn" },
-              { Language: "it", Text: "Mais" },
-              { Language: "fr", Text: "Maïs" },
-              { Language: "es", Text: "Maíz" },
-              { Language: "zh-CHT", Text: "玉米" },
-              { Language: "ar", Text: "الذرة" },
-              { Language: "zh-CHS", Text: "玉米" },
-              { Language: "ja", Text: "トウモロコシ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Mais" },
-              { Language: "ru", Text: "Кукуруза" },
-              { Language: "pt", Text: "Milho" },
-              { Language: "ko", Text: "옥수수" },
-              { Language: "yue", Text: "粟米" },
-              { Language: "en", Text: "Corn" },
-              { Language: "it", Text: "Mais" },
-              { Language: "fr", Text: "Maïs" },
-              { Language: "es", Text: "Maíz" },
-              { Language: "zh-CHT", Text: "玉米" },
-              { Language: "ar", Text: "الذرة" },
-              { Language: "zh-CHS", Text: "玉米" },
-              { Language: "ja", Text: "トウモロコシ" }
+              {
+                "Language": "de",
+                "Text": "Mais"
+              },
+              {
+                "Language": "ru",
+                "Text": "Кукуруза"
+              },
+              {
+                "Language": "pt",
+                "Text": "Milho"
+              },
+              {
+                "Language": "ko",
+                "Text": "옥수수"
+              },
+              {
+                "Language": "yue",
+                "Text": "粟米"
+              },
+              {
+                "Language": "en",
+                "Text": "Corn"
+              },
+              {
+                "Language": "it",
+                "Text": "Mais"
+              },
+              {
+                "Language": "fr",
+                "Text": "Maïs"
+              },
+              {
+                "Language": "es",
+                "Text": "Maíz"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "玉米"
+              },
+              {
+                "Language": "ar",
+                "Text": "الذرة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "玉米"
+              },
+              {
+                "Language": "ja",
+                "Text": "トウモロコシ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000108",
             DisplayName: "芽菜仔",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Sprossen-Kinder" },
-              { Language: "ru", Text: "Ростки детей" },
-              { Language: "pt", Text: "Brotos de crianças" },
-              { Language: "ko", Text: "새싹 어린이" },
-              { Language: "yue", Text: "芽菜仔" },
-              { Language: "en", Text: "Sprouts children" },
-              { Language: "it", Text: "Germogli di bambini" },
-              { Language: "fr", Text: "Enfants de choux" },
-              { Language: "es", Text: "Coles de los niños" },
-              { Language: "zh-CHT", Text: "芽菜孩子" },
-              { Language: "ar", Text: "براعم الأطفال" },
-              { Language: "zh-CHS", Text: "芽菜孩子" },
-              { Language: "ja", Text: "子供を芽します。" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Sprossen-Kinder" },
-              { Language: "ru", Text: "Ростки детей" },
-              { Language: "pt", Text: "Brotos de crianças" },
-              { Language: "ko", Text: "새싹 어린이" },
-              { Language: "yue", Text: "芽菜仔" },
-              { Language: "en", Text: "Sprouts children" },
-              { Language: "it", Text: "Germogli di bambini" },
-              { Language: "fr", Text: "Enfants de choux" },
-              { Language: "es", Text: "Coles de los niños" },
-              { Language: "zh-CHT", Text: "芽菜孩子" },
-              { Language: "ar", Text: "براعم الأطفال" },
-              { Language: "zh-CHS", Text: "芽菜孩子" },
-              { Language: "ja", Text: "子供を芽します。" }
+              {
+                "Language": "de",
+                "Text": "Sprossen-Kinder"
+              },
+              {
+                "Language": "ru",
+                "Text": "Ростки детей"
+              },
+              {
+                "Language": "pt",
+                "Text": "Brotos de crianças"
+              },
+              {
+                "Language": "ko",
+                "Text": "새싹 어린이"
+              },
+              {
+                "Language": "yue",
+                "Text": "芽菜仔"
+              },
+              {
+                "Language": "en",
+                "Text": "Sprouts children"
+              },
+              {
+                "Language": "it",
+                "Text": "Germogli di bambini"
+              },
+              {
+                "Language": "fr",
+                "Text": "Enfants de choux"
+              },
+              {
+                "Language": "es",
+                "Text": "Coles de los niños"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "芽菜孩子"
+              },
+              {
+                "Language": "ar",
+                "Text": "براعم الأطفال"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "芽菜孩子"
+              },
+              {
+                "Language": "ja",
+                "Text": "子供を芽します。"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000109",
             DisplayName: "蕃茄",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Tomaten" },
-              { Language: "ru", Text: "Помидор" },
-              { Language: "pt", Text: "Tomate" },
-              { Language: "ko", Text: "토마토" },
-              { Language: "yue", Text: "蕃茄" },
-              { Language: "en", Text: "Tomato" },
-              { Language: "it", Text: "Pomodoro" },
-              { Language: "fr", Text: "Tomate" },
-              { Language: "es", Text: "Tomate" },
-              { Language: "zh-CHT", Text: "蕃茄" },
-              { Language: "ar", Text: "الطماطم" },
-              { Language: "zh-CHS", Text: "蕃茄" },
-              { Language: "ja", Text: "トマト" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Tomaten" },
-              { Language: "ru", Text: "Помидор" },
-              { Language: "pt", Text: "Tomate" },
-              { Language: "ko", Text: "토마토" },
-              { Language: "yue", Text: "蕃茄" },
-              { Language: "en", Text: "Tomato" },
-              { Language: "it", Text: "Pomodoro" },
-              { Language: "fr", Text: "Tomate" },
-              { Language: "es", Text: "Tomate" },
-              { Language: "zh-CHT", Text: "蕃茄" },
-              { Language: "ar", Text: "الطماطم" },
-              { Language: "zh-CHS", Text: "蕃茄" },
-              { Language: "ja", Text: "トマト" }
+              {
+                "Language": "de",
+                "Text": "Tomaten"
+              },
+              {
+                "Language": "ru",
+                "Text": "Помидор"
+              },
+              {
+                "Language": "pt",
+                "Text": "Tomate"
+              },
+              {
+                "Language": "ko",
+                "Text": "토마토"
+              },
+              {
+                "Language": "yue",
+                "Text": "蕃茄"
+              },
+              {
+                "Language": "en",
+                "Text": "Tomato"
+              },
+              {
+                "Language": "it",
+                "Text": "Pomodoro"
+              },
+              {
+                "Language": "fr",
+                "Text": "Tomate"
+              },
+              {
+                "Language": "es",
+                "Text": "Tomate"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "蕃茄"
+              },
+              {
+                "Language": "ar",
+                "Text": "الطماطم"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "蕃茄"
+              },
+              {
+                "Language": "ja",
+                "Text": "トマト"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000110",
             DisplayName: "薯仔",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Kartoffel" },
-              { Language: "ru", Text: "Картофель" },
-              { Language: "pt", Text: "Batata" },
-              { Language: "ko", Text: "감자" },
-              { Language: "yue", Text: "薯仔" },
-              { Language: "en", Text: "Potato" },
-              { Language: "it", Text: "Patata" },
-              { Language: "fr", Text: "Pomme de terre" },
-              { Language: "es", Text: "Papa" },
-              { Language: "zh-CHT", Text: "土豆" },
-              { Language: "ar", Text: "البطاطا" },
-              { Language: "zh-CHS", Text: "土豆" },
-              { Language: "ja", Text: "ジャガイモ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Kartoffel" },
-              { Language: "ru", Text: "Картофель" },
-              { Language: "pt", Text: "Batata" },
-              { Language: "ko", Text: "감자" },
-              { Language: "yue", Text: "薯仔" },
-              { Language: "en", Text: "Potato" },
-              { Language: "it", Text: "Patata" },
-              { Language: "fr", Text: "Pomme de terre" },
-              { Language: "es", Text: "Papa" },
-              { Language: "zh-CHT", Text: "土豆" },
-              { Language: "ar", Text: "البطاطا" },
-              { Language: "zh-CHS", Text: "土豆" },
-              { Language: "ja", Text: "ジャガイモ" }
+              {
+                "Language": "de",
+                "Text": "Kartoffel"
+              },
+              {
+                "Language": "ru",
+                "Text": "Картофель"
+              },
+              {
+                "Language": "pt",
+                "Text": "Batata"
+              },
+              {
+                "Language": "ko",
+                "Text": "감자"
+              },
+              {
+                "Language": "yue",
+                "Text": "薯仔"
+              },
+              {
+                "Language": "en",
+                "Text": "Potato"
+              },
+              {
+                "Language": "it",
+                "Text": "Patata"
+              },
+              {
+                "Language": "fr",
+                "Text": "Pomme de terre"
+              },
+              {
+                "Language": "es",
+                "Text": "Papa"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "土豆"
+              },
+              {
+                "Language": "ar",
+                "Text": "البطاطا"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "土豆"
+              },
+              {
+                "Language": "ja",
+                "Text": "ジャガイモ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000111",
             DisplayName: "矮瓜",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Aubergine" },
-              { Language: "ru", Text: "Баклажан" },
-              { Language: "pt", Text: "Berinjela" },
-              { Language: "ko", Text: "가지" },
-              { Language: "yue", Text: "矮瓜" },
-              { Language: "en", Text: "Eggplant" },
-              { Language: "it", Text: "Melanzane" },
-              { Language: "fr", Text: "Aubergine" },
-              { Language: "es", Text: "Berenjena" },
-              { Language: "zh-CHT", Text: "茄子" },
-              { Language: "ar", Text: "باذنجان" },
-              { Language: "zh-CHS", Text: "茄子" },
-              { Language: "ja", Text: "ナス" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Aubergine" },
-              { Language: "ru", Text: "Баклажан" },
-              { Language: "pt", Text: "Berinjela" },
-              { Language: "ko", Text: "가지" },
-              { Language: "yue", Text: "矮瓜" },
-              { Language: "en", Text: "Eggplant" },
-              { Language: "it", Text: "Melanzane" },
-              { Language: "fr", Text: "Aubergine" },
-              { Language: "es", Text: "Berenjena" },
-              { Language: "zh-CHT", Text: "茄子" },
-              { Language: "ar", Text: "باذنجان" },
-              { Language: "zh-CHS", Text: "茄子" },
-              { Language: "ja", Text: "ナス" }
+              {
+                "Language": "de",
+                "Text": "Aubergine"
+              },
+              {
+                "Language": "ru",
+                "Text": "Баклажан"
+              },
+              {
+                "Language": "pt",
+                "Text": "Berinjela"
+              },
+              {
+                "Language": "ko",
+                "Text": "가지"
+              },
+              {
+                "Language": "yue",
+                "Text": "矮瓜"
+              },
+              {
+                "Language": "en",
+                "Text": "Eggplant"
+              },
+              {
+                "Language": "it",
+                "Text": "Melanzane"
+              },
+              {
+                "Language": "fr",
+                "Text": "Aubergine"
+              },
+              {
+                "Language": "es",
+                "Text": "Berenjena"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "茄子"
+              },
+              {
+                "Language": "ar",
+                "Text": "باذنجان"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "茄子"
+              },
+              {
+                "Language": "ja",
+                "Text": "ナス"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000112",
             DisplayName: "蘿蔔",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Rettich" },
-              { Language: "ru", Text: "Редиска" },
-              { Language: "pt", Text: "Rabanete" },
-              { Language: "ko", Text: "무" },
-              { Language: "yue", Text: "蘿蔔" },
-              { Language: "en", Text: "Radish" },
-              { Language: "it", Text: "Ravanello" },
-              { Language: "fr", Text: "Radis" },
-              { Language: "es", Text: "Rábano" },
-              { Language: "zh-CHT", Text: "蘿蔔" },
-              { Language: "ar", Text: "فجل" },
-              { Language: "zh-CHS", Text: "萝卜" },
-              { Language: "ja", Text: "大根" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Rettich" },
-              { Language: "ru", Text: "Редиска" },
-              { Language: "pt", Text: "Rabanete" },
-              { Language: "ko", Text: "무" },
-              { Language: "yue", Text: "蘿蔔" },
-              { Language: "en", Text: "Radish" },
-              { Language: "it", Text: "Ravanello" },
-              { Language: "fr", Text: "Radis" },
-              { Language: "es", Text: "Rábano" },
-              { Language: "zh-CHT", Text: "蘿蔔" },
-              { Language: "ar", Text: "فجل" },
-              { Language: "zh-CHS", Text: "萝卜" },
-              { Language: "ja", Text: "大根" }
+              {
+                "Language": "de",
+                "Text": "Rettich"
+              },
+              {
+                "Language": "ru",
+                "Text": "Редиска"
+              },
+              {
+                "Language": "pt",
+                "Text": "Rabanete"
+              },
+              {
+                "Language": "ko",
+                "Text": "무"
+              },
+              {
+                "Language": "yue",
+                "Text": "蘿蔔"
+              },
+              {
+                "Language": "en",
+                "Text": "Radish"
+              },
+              {
+                "Language": "it",
+                "Text": "Ravanello"
+              },
+              {
+                "Language": "fr",
+                "Text": "Radis"
+              },
+              {
+                "Language": "es",
+                "Text": "Rábano"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "蘿蔔"
+              },
+              {
+                "Language": "ar",
+                "Text": "فجل"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "萝卜"
+              },
+              {
+                "Language": "ja",
+                "Text": "大根"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000113",
             DisplayName: "蓮藕",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Lotuswurzel" },
-              { Language: "ru", Text: "Корень лотоса" },
-              { Language: "pt", Text: "Raiz de lótus" },
-              { Language: "ko", Text: "연 근" },
-              { Language: "yue", Text: "蓮藕" },
-              { Language: "en", Text: "Lotus root" },
-              { Language: "it", Text: "Radice di loto" },
-              { Language: "fr", Text: "Racine de Lotus" },
-              { Language: "es", Text: "Raíz de loto" },
-              { Language: "zh-CHT", Text: "蓮藕" },
-              { Language: "ar", Text: "جذور اللوتس" },
-              { Language: "zh-CHS", Text: "莲藕" },
-              { Language: "ja", Text: "ロータス ルート" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Lotuswurzel" },
-              { Language: "ru", Text: "Корень лотоса" },
-              { Language: "pt", Text: "Raiz de lótus" },
-              { Language: "ko", Text: "연 근" },
-              { Language: "yue", Text: "蓮藕" },
-              { Language: "en", Text: "Lotus root" },
-              { Language: "it", Text: "Radice di loto" },
-              { Language: "fr", Text: "Racine de Lotus" },
-              { Language: "es", Text: "Raíz de loto" },
-              { Language: "zh-CHT", Text: "蓮藕" },
-              { Language: "ar", Text: "جذور اللوتس" },
-              { Language: "zh-CHS", Text: "莲藕" },
-              { Language: "ja", Text: "ロータス ルート" }
+              {
+                "Language": "de",
+                "Text": "Lotuswurzel"
+              },
+              {
+                "Language": "ru",
+                "Text": "Корень лотоса"
+              },
+              {
+                "Language": "pt",
+                "Text": "Raiz de lótus"
+              },
+              {
+                "Language": "ko",
+                "Text": "연 근"
+              },
+              {
+                "Language": "yue",
+                "Text": "蓮藕"
+              },
+              {
+                "Language": "en",
+                "Text": "Lotus root"
+              },
+              {
+                "Language": "it",
+                "Text": "Radice di loto"
+              },
+              {
+                "Language": "fr",
+                "Text": "Racine de Lotus"
+              },
+              {
+                "Language": "es",
+                "Text": "Raíz de loto"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "蓮藕"
+              },
+              {
+                "Language": "ar",
+                "Text": "جذور اللوتس"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "莲藕"
+              },
+              {
+                "Language": "ja",
+                "Text": "ロータス ルート"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000114",
             DisplayName: "青瓜",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Gurke" },
-              { Language: "ru", Text: "Огурец" },
-              { Language: "pt", Text: "Pepino" },
-              { Language: "ko", Text: "오이" },
-              { Language: "yue", Text: "青瓜" },
-              { Language: "en", Text: "Cucumber" },
-              { Language: "it", Text: "Cetriolo" },
-              { Language: "fr", Text: "Concombre" },
-              { Language: "es", Text: "Pepino" },
-              { Language: "zh-CHT", Text: "黃瓜" },
-              { Language: "ar", Text: "خيار" },
-              { Language: "zh-CHS", Text: "黄瓜" },
-              { Language: "ja", Text: "キュウリ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Gurke" },
-              { Language: "ru", Text: "Огурец" },
-              { Language: "pt", Text: "Pepino" },
-              { Language: "ko", Text: "오이" },
-              { Language: "yue", Text: "青瓜" },
-              { Language: "en", Text: "Cucumber" },
-              { Language: "it", Text: "Cetriolo" },
-              { Language: "fr", Text: "Concombre" },
-              { Language: "es", Text: "Pepino" },
-              { Language: "zh-CHT", Text: "黃瓜" },
-              { Language: "ar", Text: "خيار" },
-              { Language: "zh-CHS", Text: "黄瓜" },
-              { Language: "ja", Text: "キュウリ" }
+              {
+                "Language": "de",
+                "Text": "Gurke"
+              },
+              {
+                "Language": "ru",
+                "Text": "Огурец"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pepino"
+              },
+              {
+                "Language": "ko",
+                "Text": "오이"
+              },
+              {
+                "Language": "yue",
+                "Text": "青瓜"
+              },
+              {
+                "Language": "en",
+                "Text": "Cucumber"
+              },
+              {
+                "Language": "it",
+                "Text": "Cetriolo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Concombre"
+              },
+              {
+                "Language": "es",
+                "Text": "Pepino"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "黃瓜"
+              },
+              {
+                "Language": "ar",
+                "Text": "خيار"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "黄瓜"
+              },
+              {
+                "Language": "ja",
+                "Text": "キュウリ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000115",
             DisplayName: "薑",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Ingwer" },
-              { Language: "ru", Text: "Имбирь" },
-              { Language: "pt", Text: "Ginger" },
-              { Language: "ko", Text: "생강" },
-              { Language: "yue", Text: "薑" },
-              { Language: "en", Text: "Ginger" },
-              { Language: "it", Text: "Ginger" },
-              { Language: "fr", Text: "Gingembre" },
-              { Language: "es", Text: "Jengibre" },
-              { Language: "zh-CHT", Text: "姜" },
-              { Language: "ar", Text: "زنجبيل" },
-              { Language: "zh-CHS", Text: "姜" },
-              { Language: "ja", Text: "ジンジャー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Ingwer" },
-              { Language: "ru", Text: "Имбирь" },
-              { Language: "pt", Text: "Ginger" },
-              { Language: "ko", Text: "생강" },
-              { Language: "yue", Text: "薑" },
-              { Language: "en", Text: "Ginger" },
-              { Language: "it", Text: "Ginger" },
-              { Language: "fr", Text: "Gingembre" },
-              { Language: "es", Text: "Jengibre" },
-              { Language: "zh-CHT", Text: "姜" },
-              { Language: "ar", Text: "زنجبيل" },
-              { Language: "zh-CHS", Text: "姜" },
-              { Language: "ja", Text: "ジンジャー" }
+              {
+                "Language": "de",
+                "Text": "Ingwer"
+              },
+              {
+                "Language": "ru",
+                "Text": "Имбирь"
+              },
+              {
+                "Language": "pt",
+                "Text": "Ginger"
+              },
+              {
+                "Language": "ko",
+                "Text": "생강"
+              },
+              {
+                "Language": "yue",
+                "Text": "薑"
+              },
+              {
+                "Language": "en",
+                "Text": "Ginger"
+              },
+              {
+                "Language": "it",
+                "Text": "Ginger"
+              },
+              {
+                "Language": "fr",
+                "Text": "Gingembre"
+              },
+              {
+                "Language": "es",
+                "Text": "Jengibre"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "姜"
+              },
+              {
+                "Language": "ar",
+                "Text": "زنجبيل"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "姜"
+              },
+              {
+                "Language": "ja",
+                "Text": "ジンジャー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000116",
             DisplayName: "洋蔥",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Zwiebel" },
-              { Language: "ru", Text: "Лук" },
-              { Language: "pt", Text: "Cebola" },
-              { Language: "ko", Text: "양파" },
-              { Language: "yue", Text: "洋蔥" },
-              { Language: "en", Text: "Onion" },
-              { Language: "it", Text: "Cipolla" },
-              { Language: "fr", Text: "Oignon" },
-              { Language: "es", Text: "Cebolla" },
-              { Language: "zh-CHT", Text: "洋蔥" },
-              { Language: "ar", Text: "بصل" },
-              { Language: "zh-CHS", Text: "洋葱" },
-              { Language: "ja", Text: "タマネギ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Zwiebel" },
-              { Language: "ru", Text: "Лук" },
-              { Language: "pt", Text: "Cebola" },
-              { Language: "ko", Text: "양파" },
-              { Language: "yue", Text: "洋蔥" },
-              { Language: "en", Text: "Onion" },
-              { Language: "it", Text: "Cipolla" },
-              { Language: "fr", Text: "Oignon" },
-              { Language: "es", Text: "Cebolla" },
-              { Language: "zh-CHT", Text: "洋蔥" },
-              { Language: "ar", Text: "بصل" },
-              { Language: "zh-CHS", Text: "洋葱" },
-              { Language: "ja", Text: "タマネギ" }
+              {
+                "Language": "de",
+                "Text": "Zwiebel"
+              },
+              {
+                "Language": "ru",
+                "Text": "Лук"
+              },
+              {
+                "Language": "pt",
+                "Text": "Cebola"
+              },
+              {
+                "Language": "ko",
+                "Text": "양파"
+              },
+              {
+                "Language": "yue",
+                "Text": "洋蔥"
+              },
+              {
+                "Language": "en",
+                "Text": "Onion"
+              },
+              {
+                "Language": "it",
+                "Text": "Cipolla"
+              },
+              {
+                "Language": "fr",
+                "Text": "Oignon"
+              },
+              {
+                "Language": "es",
+                "Text": "Cebolla"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "洋蔥"
+              },
+              {
+                "Language": "ar",
+                "Text": "بصل"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "洋葱"
+              },
+              {
+                "Language": "ja",
+                "Text": "タマネギ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000117",
             DisplayName: "蒜頭",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Knoblauch" },
-              { Language: "ru", Text: "Чеснок" },
-              { Language: "pt", Text: "Alho" },
-              { Language: "ko", Text: "마늘" },
-              { Language: "yue", Text: "蒜頭" },
-              { Language: "en", Text: "Garlic" },
-              { Language: "it", Text: "Aglio" },
-              { Language: "fr", Text: "Ail" },
-              { Language: "es", Text: "Ajo" },
-              { Language: "zh-CHT", Text: "蒜頭" },
-              { Language: "ar", Text: "ثوم" },
-              { Language: "zh-CHS", Text: "蒜头" },
-              { Language: "ja", Text: "ニンニク" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Knoblauch" },
-              { Language: "ru", Text: "Чеснок" },
-              { Language: "pt", Text: "Alho" },
-              { Language: "ko", Text: "마늘" },
-              { Language: "yue", Text: "蒜頭" },
-              { Language: "en", Text: "Garlic" },
-              { Language: "it", Text: "Aglio" },
-              { Language: "fr", Text: "Ail" },
-              { Language: "es", Text: "Ajo" },
-              { Language: "zh-CHT", Text: "蒜頭" },
-              { Language: "ar", Text: "ثوم" },
-              { Language: "zh-CHS", Text: "蒜头" },
-              { Language: "ja", Text: "ニンニク" }
+              {
+                "Language": "de",
+                "Text": "Knoblauch"
+              },
+              {
+                "Language": "ru",
+                "Text": "Чеснок"
+              },
+              {
+                "Language": "pt",
+                "Text": "Alho"
+              },
+              {
+                "Language": "ko",
+                "Text": "마늘"
+              },
+              {
+                "Language": "yue",
+                "Text": "蒜頭"
+              },
+              {
+                "Language": "en",
+                "Text": "Garlic"
+              },
+              {
+                "Language": "it",
+                "Text": "Aglio"
+              },
+              {
+                "Language": "fr",
+                "Text": "Ail"
+              },
+              {
+                "Language": "es",
+                "Text": "Ajo"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "蒜頭"
+              },
+              {
+                "Language": "ar",
+                "Text": "ثوم"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "蒜头"
+              },
+              {
+                "Language": "ja",
+                "Text": "ニンニク"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000118",
             DisplayName: "蔥",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Frühlingszwiebeln" },
-              { Language: "ru", Text: "Весенний Лук" },
-              { Language: "pt", Text: "Cebolinhas" },
-              { Language: "ko", Text: "봄 양파" },
-              { Language: "yue", Text: "蔥" },
-              { Language: "en", Text: "Spring onions" },
-              { Language: "it", Text: "Cipollotti" },
-              { Language: "fr", Text: "Oignons de printemps" },
-              { Language: "es", Text: "Cebollas de primavera" },
-              { Language: "zh-CHT", Text: "蔥" },
-              { Language: "ar", Text: "بصل" },
-              { Language: "zh-CHS", Text: "葱" },
-              { Language: "ja", Text: "ばねのタマネギ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Frühlingszwiebeln" },
-              { Language: "ru", Text: "Весенний Лук" },
-              { Language: "pt", Text: "Cebolinhas" },
-              { Language: "ko", Text: "봄 양파" },
-              { Language: "yue", Text: "蔥" },
-              { Language: "en", Text: "Spring onions" },
-              { Language: "it", Text: "Cipollotti" },
-              { Language: "fr", Text: "Oignons de printemps" },
-              { Language: "es", Text: "Cebollas de primavera" },
-              { Language: "zh-CHT", Text: "蔥" },
-              { Language: "ar", Text: "بصل" },
-              { Language: "zh-CHS", Text: "葱" },
-              { Language: "ja", Text: "ばねのタマネギ" }
+              {
+                "Language": "de",
+                "Text": "Frühlingszwiebeln"
+              },
+              {
+                "Language": "ru",
+                "Text": "Весенний Лук"
+              },
+              {
+                "Language": "pt",
+                "Text": "Cebolinhas"
+              },
+              {
+                "Language": "ko",
+                "Text": "봄 양파"
+              },
+              {
+                "Language": "yue",
+                "Text": "蔥"
+              },
+              {
+                "Language": "en",
+                "Text": "Spring onions"
+              },
+              {
+                "Language": "it",
+                "Text": "Cipollotti"
+              },
+              {
+                "Language": "fr",
+                "Text": "Oignons de printemps"
+              },
+              {
+                "Language": "es",
+                "Text": "Cebollas de primavera"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "蔥"
+              },
+              {
+                "Language": "ar",
+                "Text": "بصل"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "葱"
+              },
+              {
+                "Language": "ja",
+                "Text": "ばねのタマネギ"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Gemüse" },
-          { Language: "ru", Text: "Овощной" },
-          { Language: "pt", Text: "Vegetal" },
-          { Language: "ko", Text: "야채" },
-          { Language: "yue", Text: "蔬菜" },
-          { Language: "en", Text: "Vegetable" },
-          { Language: "it", Text: "Vegetale" },
-          { Language: "fr", Text: "Légume" },
-          { Language: "es", Text: "Vegetales" },
-          { Language: "zh-CHT", Text: "蔬菜" },
-          { Language: "ar", Text: "الخضر" },
-          { Language: "zh-CHS", Text: "蔬菜" },
-          { Language: "ja", Text: "野菜" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Gemüse" },
-          { Language: "ru", Text: "Овощной" },
-          { Language: "pt", Text: "Vegetal" },
-          { Language: "ko", Text: "야채" },
-          { Language: "yue", Text: "蔬菜" },
-          { Language: "en", Text: "Vegetable" },
-          { Language: "it", Text: "Vegetale" },
-          { Language: "fr", Text: "Légume" },
-          { Language: "es", Text: "Vegetales" },
-          { Language: "zh-CHT", Text: "蔬菜" },
-          { Language: "ar", Text: "الخضر" },
-          { Language: "zh-CHS", Text: "蔬菜" },
-          { Language: "ja", Text: "野菜" }
+          {
+            "Language": "de",
+            "Text": "Gemüse"
+          },
+          {
+            "Language": "ru",
+            "Text": "Овощной"
+          },
+          {
+            "Language": "pt",
+            "Text": "Vegetal"
+          },
+          {
+            "Language": "ko",
+            "Text": "야채"
+          },
+          {
+            "Language": "yue",
+            "Text": "蔬菜"
+          },
+          {
+            "Language": "en",
+            "Text": "Vegetable"
+          },
+          {
+            "Language": "it",
+            "Text": "Vegetale"
+          },
+          {
+            "Language": "fr",
+            "Text": "Légume"
+          },
+          {
+            "Language": "es",
+            "Text": "Vegetales"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "蔬菜"
+          },
+          {
+            "Language": "ar",
+            "Text": "الخضر"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "蔬菜"
+          },
+          {
+            "Language": "ja",
+            "Text": "野菜"
+          }
         ]
       },
       {
@@ -4305,373 +7300,648 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000119",
             DisplayName: "茶",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Tee" },
-              { Language: "ru", Text: "Чай" },
-              { Language: "pt", Text: "Chá" },
-              { Language: "ko", Text: "차" },
-              { Language: "yue", Text: "茶" },
-              { Language: "en", Text: "Tea" },
-              { Language: "it", Text: "Tè" },
-              { Language: "fr", Text: "Thé" },
-              { Language: "es", Text: "Té" },
-              { Language: "zh-CHT", Text: "茶" },
-              { Language: "ar", Text: "الشاي" },
-              { Language: "zh-CHS", Text: "茶" },
-              { Language: "ja", Text: "紅茶" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Tee" },
-              { Language: "ru", Text: "Чай" },
-              { Language: "pt", Text: "Chá" },
-              { Language: "ko", Text: "차" },
-              { Language: "yue", Text: "茶" },
-              { Language: "en", Text: "Tea" },
-              { Language: "it", Text: "Tè" },
-              { Language: "fr", Text: "Thé" },
-              { Language: "es", Text: "Té" },
-              { Language: "zh-CHT", Text: "茶" },
-              { Language: "ar", Text: "الشاي" },
-              { Language: "zh-CHS", Text: "茶" },
-              { Language: "ja", Text: "紅茶" }
+              {
+                "Language": "de",
+                "Text": "Tee"
+              },
+              {
+                "Language": "ru",
+                "Text": "Чай"
+              },
+              {
+                "Language": "pt",
+                "Text": "Chá"
+              },
+              {
+                "Language": "ko",
+                "Text": "차"
+              },
+              {
+                "Language": "yue",
+                "Text": "茶"
+              },
+              {
+                "Language": "en",
+                "Text": "Tea"
+              },
+              {
+                "Language": "it",
+                "Text": "Tè"
+              },
+              {
+                "Language": "fr",
+                "Text": "Thé"
+              },
+              {
+                "Language": "es",
+                "Text": "Té"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "茶"
+              },
+              {
+                "Language": "ar",
+                "Text": "الشاي"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "茶"
+              },
+              {
+                "Language": "ja",
+                "Text": "紅茶"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000120",
             DisplayName: "牛奶",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Milch" },
-              { Language: "ru", Text: "Молоко" },
-              { Language: "pt", Text: "Leite" },
-              { Language: "ko", Text: "우유" },
-              { Language: "yue", Text: "牛奶" },
-              { Language: "en", Text: "Milk" },
-              { Language: "it", Text: "Latte" },
-              { Language: "fr", Text: "Lait" },
-              { Language: "es", Text: "Leche" },
-              { Language: "zh-CHT", Text: "牛奶" },
-              { Language: "ar", Text: "الحليب" },
-              { Language: "zh-CHS", Text: "牛奶" },
-              { Language: "ja", Text: "ミルク" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Milch" },
-              { Language: "ru", Text: "Молоко" },
-              { Language: "pt", Text: "Leite" },
-              { Language: "ko", Text: "우유" },
-              { Language: "yue", Text: "牛奶" },
-              { Language: "en", Text: "Milk" },
-              { Language: "it", Text: "Latte" },
-              { Language: "fr", Text: "Lait" },
-              { Language: "es", Text: "Leche" },
-              { Language: "zh-CHT", Text: "牛奶" },
-              { Language: "ar", Text: "الحليب" },
-              { Language: "zh-CHS", Text: "牛奶" },
-              { Language: "ja", Text: "ミルク" }
+              {
+                "Language": "de",
+                "Text": "Milch"
+              },
+              {
+                "Language": "ru",
+                "Text": "Молоко"
+              },
+              {
+                "Language": "pt",
+                "Text": "Leite"
+              },
+              {
+                "Language": "ko",
+                "Text": "우유"
+              },
+              {
+                "Language": "yue",
+                "Text": "牛奶"
+              },
+              {
+                "Language": "en",
+                "Text": "Milk"
+              },
+              {
+                "Language": "it",
+                "Text": "Latte"
+              },
+              {
+                "Language": "fr",
+                "Text": "Lait"
+              },
+              {
+                "Language": "es",
+                "Text": "Leche"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "牛奶"
+              },
+              {
+                "Language": "ar",
+                "Text": "الحليب"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "牛奶"
+              },
+              {
+                "Language": "ja",
+                "Text": "ミルク"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000121",
             DisplayName: "湯",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Suppe" },
-              { Language: "ru", Text: "Суп" },
-              { Language: "pt", Text: "Sopa" },
-              { Language: "ko", Text: "수프" },
-              { Language: "yue", Text: "湯" },
-              { Language: "en", Text: "Soup" },
-              { Language: "it", Text: "Zuppa" },
-              { Language: "fr", Text: "Soupe" },
-              { Language: "es", Text: "Sopa" },
-              { Language: "zh-CHT", Text: "湯" },
-              { Language: "ar", Text: "حساء" },
-              { Language: "zh-CHS", Text: "汤" },
-              { Language: "ja", Text: "スープ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Suppe" },
-              { Language: "ru", Text: "Суп" },
-              { Language: "pt", Text: "Sopa" },
-              { Language: "ko", Text: "수프" },
-              { Language: "yue", Text: "湯" },
-              { Language: "en", Text: "Soup" },
-              { Language: "it", Text: "Zuppa" },
-              { Language: "fr", Text: "Soupe" },
-              { Language: "es", Text: "Sopa" },
-              { Language: "zh-CHT", Text: "湯" },
-              { Language: "ar", Text: "حساء" },
-              { Language: "zh-CHS", Text: "汤" },
-              { Language: "ja", Text: "スープ" }
+              {
+                "Language": "de",
+                "Text": "Suppe"
+              },
+              {
+                "Language": "ru",
+                "Text": "Суп"
+              },
+              {
+                "Language": "pt",
+                "Text": "Sopa"
+              },
+              {
+                "Language": "ko",
+                "Text": "수프"
+              },
+              {
+                "Language": "yue",
+                "Text": "湯"
+              },
+              {
+                "Language": "en",
+                "Text": "Soup"
+              },
+              {
+                "Language": "it",
+                "Text": "Zuppa"
+              },
+              {
+                "Language": "fr",
+                "Text": "Soupe"
+              },
+              {
+                "Language": "es",
+                "Text": "Sopa"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "湯"
+              },
+              {
+                "Language": "ar",
+                "Text": "حساء"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "汤"
+              },
+              {
+                "Language": "ja",
+                "Text": "スープ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000122",
             DisplayName: "橙汁",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Orangensaft" },
-              { Language: "ru", Text: "Апельсиновый сок" },
-              { Language: "pt", Text: "Suco de laranja" },
-              { Language: "ko", Text: "오렌지 주스" },
-              { Language: "yue", Text: "橙汁" },
-              { Language: "en", Text: "Orange juice" },
-              { Language: "it", Text: "Succo d'arancia" },
-              { Language: "fr", Text: "Jus d’orange" },
-              { Language: "es", Text: "Jugo de naranja" },
-              { Language: "zh-CHT", Text: "橙汁" },
-              { Language: "ar", Text: "عصير برتقال" },
-              { Language: "zh-CHS", Text: "橙汁" },
-              { Language: "ja", Text: "オレンジ ジュース" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Orangensaft" },
-              { Language: "ru", Text: "Апельсиновый сок" },
-              { Language: "pt", Text: "Suco de laranja" },
-              { Language: "ko", Text: "오렌지 주스" },
-              { Language: "yue", Text: "橙汁" },
-              { Language: "en", Text: "Orange juice" },
-              { Language: "it", Text: "Succo d'arancia" },
-              { Language: "fr", Text: "Jus d’orange" },
-              { Language: "es", Text: "Jugo de naranja" },
-              { Language: "zh-CHT", Text: "橙汁" },
-              { Language: "ar", Text: "عصير برتقال" },
-              { Language: "zh-CHS", Text: "橙汁" },
-              { Language: "ja", Text: "オレンジ ジュース" }
+              {
+                "Language": "de",
+                "Text": "Orangensaft"
+              },
+              {
+                "Language": "ru",
+                "Text": "Апельсиновый сок"
+              },
+              {
+                "Language": "pt",
+                "Text": "Suco de laranja"
+              },
+              {
+                "Language": "ko",
+                "Text": "오렌지 주스"
+              },
+              {
+                "Language": "yue",
+                "Text": "橙汁"
+              },
+              {
+                "Language": "en",
+                "Text": "Orange juice"
+              },
+              {
+                "Language": "it",
+                "Text": "Succo d'arancia"
+              },
+              {
+                "Language": "fr",
+                "Text": "Jus d’orange"
+              },
+              {
+                "Language": "es",
+                "Text": "Jugo de naranja"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "橙汁"
+              },
+              {
+                "Language": "ar",
+                "Text": "عصير برتقال"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "橙汁"
+              },
+              {
+                "Language": "ja",
+                "Text": "オレンジ ジュース"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000123",
             DisplayName: "水",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Wasser" },
-              { Language: "ru", Text: "Вода" },
-              { Language: "pt", Text: "Água" },
-              { Language: "ko", Text: "물" },
-              { Language: "yue", Text: "水" },
-              { Language: "en", Text: "Water" },
-              { Language: "it", Text: "Acqua" },
-              { Language: "fr", Text: "Eau" },
-              { Language: "es", Text: "Agua" },
-              { Language: "zh-CHT", Text: "水" },
-              { Language: "ar", Text: "المياه" },
-              { Language: "zh-CHS", Text: "水" },
-              { Language: "ja", Text: "水" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Wasser" },
-              { Language: "ru", Text: "Вода" },
-              { Language: "pt", Text: "Água" },
-              { Language: "ko", Text: "물" },
-              { Language: "yue", Text: "水" },
-              { Language: "en", Text: "Water" },
-              { Language: "it", Text: "Acqua" },
-              { Language: "fr", Text: "Eau" },
-              { Language: "es", Text: "Agua" },
-              { Language: "zh-CHT", Text: "水" },
-              { Language: "ar", Text: "المياه" },
-              { Language: "zh-CHS", Text: "水" },
-              { Language: "ja", Text: "水" }
+              {
+                "Language": "de",
+                "Text": "Wasser"
+              },
+              {
+                "Language": "ru",
+                "Text": "Вода"
+              },
+              {
+                "Language": "pt",
+                "Text": "Água"
+              },
+              {
+                "Language": "ko",
+                "Text": "물"
+              },
+              {
+                "Language": "yue",
+                "Text": "水"
+              },
+              {
+                "Language": "en",
+                "Text": "Water"
+              },
+              {
+                "Language": "it",
+                "Text": "Acqua"
+              },
+              {
+                "Language": "fr",
+                "Text": "Eau"
+              },
+              {
+                "Language": "es",
+                "Text": "Agua"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "水"
+              },
+              {
+                "Language": "ar",
+                "Text": "المياه"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "水"
+              },
+              {
+                "Language": "ja",
+                "Text": "水"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000124",
             DisplayName: "檸檬茶",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Tee mit Zitrone" },
-              { Language: "ru", Text: "Чай с лимоном" },
-              { Language: "pt", Text: "Chá de limão" },
-              { Language: "ko", Text: "레몬 티" },
-              { Language: "yue", Text: "檸檬茶" },
-              { Language: "en", Text: "Lemon tea" },
-              { Language: "it", Text: "Tè al limone" },
-              { Language: "fr", Text: "Thé au citron" },
-              { Language: "es", Text: "Té de limón" },
-              { Language: "zh-CHT", Text: "檸檬茶" },
-              { Language: "ar", Text: "شاي الليمون" },
-              { Language: "zh-CHS", Text: "柠檬茶" },
-              { Language: "ja", Text: "レモン茶" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Tee mit Zitrone" },
-              { Language: "ru", Text: "Чай с лимоном" },
-              { Language: "pt", Text: "Chá de limão" },
-              { Language: "ko", Text: "레몬 티" },
-              { Language: "yue", Text: "檸檬茶" },
-              { Language: "en", Text: "Lemon tea" },
-              { Language: "it", Text: "Tè al limone" },
-              { Language: "fr", Text: "Thé au citron" },
-              { Language: "es", Text: "Té de limón" },
-              { Language: "zh-CHT", Text: "檸檬茶" },
-              { Language: "ar", Text: "شاي الليمون" },
-              { Language: "zh-CHS", Text: "柠檬茶" },
-              { Language: "ja", Text: "レモン茶" }
+              {
+                "Language": "de",
+                "Text": "Tee mit Zitrone"
+              },
+              {
+                "Language": "ru",
+                "Text": "Чай с лимоном"
+              },
+              {
+                "Language": "pt",
+                "Text": "Chá de limão"
+              },
+              {
+                "Language": "ko",
+                "Text": "레몬 티"
+              },
+              {
+                "Language": "yue",
+                "Text": "檸檬茶"
+              },
+              {
+                "Language": "en",
+                "Text": "Lemon tea"
+              },
+              {
+                "Language": "it",
+                "Text": "Tè al limone"
+              },
+              {
+                "Language": "fr",
+                "Text": "Thé au citron"
+              },
+              {
+                "Language": "es",
+                "Text": "Té de limón"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "檸檬茶"
+              },
+              {
+                "Language": "ar",
+                "Text": "شاي الليمون"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "柠檬茶"
+              },
+              {
+                "Language": "ja",
+                "Text": "レモン茶"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000125",
             DisplayName: "維他奶",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Vitasoy" },
-              { Language: "ru", Text: "VITASOY" },
-              { Language: "pt", Text: "Vitasoy" },
-              { Language: "ko", Text: "Vitasoy" },
-              { Language: "yue", Text: "維他奶" },
-              { Language: "en", Text: "Vitasoy" },
-              { Language: "it", Text: "Vitasoy" },
-              { Language: "fr", Text: "Vitasoy" },
-              { Language: "es", Text: "VITASOY" },
-              { Language: "zh-CHT", Text: "維他奶" },
-              { Language: "ar", Text: "فيتاسوي" },
-              { Language: "zh-CHS", Text: "维他奶" },
-              { Language: "ja", Text: "Vitasoy" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Vitasoy" },
-              { Language: "ru", Text: "VITASOY" },
-              { Language: "pt", Text: "Vitasoy" },
-              { Language: "ko", Text: "Vitasoy" },
-              { Language: "yue", Text: "維他奶" },
-              { Language: "en", Text: "Vitasoy" },
-              { Language: "it", Text: "Vitasoy" },
-              { Language: "fr", Text: "Vitasoy" },
-              { Language: "es", Text: "VITASOY" },
-              { Language: "zh-CHT", Text: "維他奶" },
-              { Language: "ar", Text: "فيتاسوي" },
-              { Language: "zh-CHS", Text: "维他奶" },
-              { Language: "ja", Text: "Vitasoy" }
+              {
+                "Language": "de",
+                "Text": "Vitasoy"
+              },
+              {
+                "Language": "ru",
+                "Text": "VITASOY"
+              },
+              {
+                "Language": "pt",
+                "Text": "Vitasoy"
+              },
+              {
+                "Language": "ko",
+                "Text": "Vitasoy"
+              },
+              {
+                "Language": "yue",
+                "Text": "維他奶"
+              },
+              {
+                "Language": "en",
+                "Text": "Vitasoy"
+              },
+              {
+                "Language": "it",
+                "Text": "Vitasoy"
+              },
+              {
+                "Language": "fr",
+                "Text": "Vitasoy"
+              },
+              {
+                "Language": "es",
+                "Text": "VITASOY"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "維他奶"
+              },
+              {
+                "Language": "ar",
+                "Text": "فيتاسوي"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "维他奶"
+              },
+              {
+                "Language": "ja",
+                "Text": "Vitasoy"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000126",
             DisplayName: "汽水",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Alkoholfreies Getränk" },
-              { Language: "ru", Text: "Безалкогольный напиток" },
-              { Language: "pt", Text: "Refrigerante" },
-              { Language: "ko", Text: "청량 음료" },
-              { Language: "yue", Text: "汽水" },
-              { Language: "en", Text: "Soft drink" },
-              { Language: "it", Text: "Bevanda analcolica" },
-              { Language: "fr", Text: "Boisson non alcoolisée" },
-              { Language: "es", Text: "Bebida suave" },
-              { Language: "zh-CHT", Text: "汽水" },
-              { Language: "ar", Text: "المشروبات الغازية" },
-              { Language: "zh-CHS", Text: "汽水" },
-              { Language: "ja", Text: "ソフトド リンク" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Alkoholfreies Getränk" },
-              { Language: "ru", Text: "Безалкогольный напиток" },
-              { Language: "pt", Text: "Refrigerante" },
-              { Language: "ko", Text: "청량 음료" },
-              { Language: "yue", Text: "汽水" },
-              { Language: "en", Text: "Soft drink" },
-              { Language: "it", Text: "Bevanda analcolica" },
-              { Language: "fr", Text: "Boisson non alcoolisée" },
-              { Language: "es", Text: "Bebida suave" },
-              { Language: "zh-CHT", Text: "汽水" },
-              { Language: "ar", Text: "المشروبات الغازية" },
-              { Language: "zh-CHS", Text: "汽水" },
-              { Language: "ja", Text: "ソフトド リンク" }
+              {
+                "Language": "de",
+                "Text": "Alkoholfreies Getränk"
+              },
+              {
+                "Language": "ru",
+                "Text": "Безалкогольный напиток"
+              },
+              {
+                "Language": "pt",
+                "Text": "Refrigerante"
+              },
+              {
+                "Language": "ko",
+                "Text": "청량 음료"
+              },
+              {
+                "Language": "yue",
+                "Text": "汽水"
+              },
+              {
+                "Language": "en",
+                "Text": "Soft drink"
+              },
+              {
+                "Language": "it",
+                "Text": "Bevanda analcolica"
+              },
+              {
+                "Language": "fr",
+                "Text": "Boisson non alcoolisée"
+              },
+              {
+                "Language": "es",
+                "Text": "Bebida suave"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "汽水"
+              },
+              {
+                "Language": "ar",
+                "Text": "المشروبات الغازية"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "汽水"
+              },
+              {
+                "Language": "ja",
+                "Text": "ソフトド リンク"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000127",
             DisplayName: "益力多",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Yakult" },
-              { Language: "ru", Text: "Якулт" },
-              { Language: "pt", Text: "Yakult" },
-              { Language: "ko", Text: "야쿠르트" },
-              { Language: "yue", Text: "益力多" },
-              { Language: "en", Text: "Yakult" },
-              { Language: "it", Text: "Yakult" },
-              { Language: "fr", Text: "Yakult" },
-              { Language: "es", Text: "Yakult" },
-              { Language: "zh-CHT", Text: "益力多" },
-              { Language: "ar", Text: "ياكولت" },
-              { Language: "zh-CHS", Text: "益力多" },
-              { Language: "ja", Text: "東京ヤクルト" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Yakult" },
-              { Language: "ru", Text: "Якулт" },
-              { Language: "pt", Text: "Yakult" },
-              { Language: "ko", Text: "야쿠르트" },
-              { Language: "yue", Text: "益力多" },
-              { Language: "en", Text: "Yakult" },
-              { Language: "it", Text: "Yakult" },
-              { Language: "fr", Text: "Yakult" },
-              { Language: "es", Text: "Yakult" },
-              { Language: "zh-CHT", Text: "益力多" },
-              { Language: "ar", Text: "ياكولت" },
-              { Language: "zh-CHS", Text: "益力多" },
-              { Language: "ja", Text: "東京ヤクルト" }
+              {
+                "Language": "de",
+                "Text": "Yakult"
+              },
+              {
+                "Language": "ru",
+                "Text": "Якулт"
+              },
+              {
+                "Language": "pt",
+                "Text": "Yakult"
+              },
+              {
+                "Language": "ko",
+                "Text": "야쿠르트"
+              },
+              {
+                "Language": "yue",
+                "Text": "益力多"
+              },
+              {
+                "Language": "en",
+                "Text": "Yakult"
+              },
+              {
+                "Language": "it",
+                "Text": "Yakult"
+              },
+              {
+                "Language": "fr",
+                "Text": "Yakult"
+              },
+              {
+                "Language": "es",
+                "Text": "Yakult"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "益力多"
+              },
+              {
+                "Language": "ar",
+                "Text": "ياكولت"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "益力多"
+              },
+              {
+                "Language": "ja",
+                "Text": "東京ヤクルト"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000128",
             DisplayName: "奶茶",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Tee mit Milch" },
-              { Language: "ru", Text: "Чай с молоком" },
-              { Language: "pt", Text: "Chá com leite" },
-              { Language: "ko", Text: "우유 차" },
-              { Language: "yue", Text: "奶茶" },
-              { Language: "en", Text: "Tea with milk" },
-              { Language: "it", Text: "Tè con latte" },
-              { Language: "fr", Text: "Thé au lait" },
-              { Language: "es", Text: "Té con leche" },
-              { Language: "zh-CHT", Text: "奶茶" },
-              { Language: "ar", Text: "الشاي مع الحليب" },
-              { Language: "zh-CHS", Text: "奶茶" },
-              { Language: "ja", Text: "ミルク入り紅茶" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Tee mit Milch" },
-              { Language: "ru", Text: "Чай с молоком" },
-              { Language: "pt", Text: "Chá com leite" },
-              { Language: "ko", Text: "우유 차" },
-              { Language: "yue", Text: "奶茶" },
-              { Language: "en", Text: "Tea with milk" },
-              { Language: "it", Text: "Tè con latte" },
-              { Language: "fr", Text: "Thé au lait" },
-              { Language: "es", Text: "Té con leche" },
-              { Language: "zh-CHT", Text: "奶茶" },
-              { Language: "ar", Text: "الشاي مع الحليب" },
-              { Language: "zh-CHS", Text: "奶茶" },
-              { Language: "ja", Text: "ミルク入り紅茶" }
+              {
+                "Language": "de",
+                "Text": "Tee mit Milch"
+              },
+              {
+                "Language": "ru",
+                "Text": "Чай с молоком"
+              },
+              {
+                "Language": "pt",
+                "Text": "Chá com leite"
+              },
+              {
+                "Language": "ko",
+                "Text": "우유 차"
+              },
+              {
+                "Language": "yue",
+                "Text": "奶茶"
+              },
+              {
+                "Language": "en",
+                "Text": "Tea with milk"
+              },
+              {
+                "Language": "it",
+                "Text": "Tè con latte"
+              },
+              {
+                "Language": "fr",
+                "Text": "Thé au lait"
+              },
+              {
+                "Language": "es",
+                "Text": "Té con leche"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "奶茶"
+              },
+              {
+                "Language": "ar",
+                "Text": "الشاي مع الحليب"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "奶茶"
+              },
+              {
+                "Language": "ja",
+                "Text": "ミルク入り紅茶"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Getränke" },
-          { Language: "ru", Text: "Напитки" },
-          { Language: "pt", Text: "Bebidas" },
-          { Language: "ko", Text: "음료" },
-          { Language: "yue", Text: "飲品" },
-          { Language: "en", Text: "Drinks" },
-          { Language: "it", Text: "Bevande" },
-          { Language: "fr", Text: "Boissons" },
-          { Language: "es", Text: "Bebidas" },
-          { Language: "zh-CHT", Text: "飲品" },
-          { Language: "ar", Text: "المشروبات" },
-          { Language: "zh-CHS", Text: "饮品" },
-          { Language: "ja", Text: "ドリンク" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Getränke" },
-          { Language: "ru", Text: "Напитки" },
-          { Language: "pt", Text: "Bebidas" },
-          { Language: "ko", Text: "음료" },
-          { Language: "yue", Text: "飲品" },
-          { Language: "en", Text: "Drinks" },
-          { Language: "it", Text: "Bevande" },
-          { Language: "fr", Text: "Boissons" },
-          { Language: "es", Text: "Bebidas" },
-          { Language: "zh-CHT", Text: "飲品" },
-          { Language: "ar", Text: "المشروبات" },
-          { Language: "zh-CHS", Text: "饮品" },
-          { Language: "ja", Text: "ドリンク" }
+          {
+            "Language": "de",
+            "Text": "Getränke"
+          },
+          {
+            "Language": "ru",
+            "Text": "Напитки"
+          },
+          {
+            "Language": "pt",
+            "Text": "Bebidas"
+          },
+          {
+            "Language": "ko",
+            "Text": "음료"
+          },
+          {
+            "Language": "yue",
+            "Text": "飲品"
+          },
+          {
+            "Language": "en",
+            "Text": "Drinks"
+          },
+          {
+            "Language": "it",
+            "Text": "Bevande"
+          },
+          {
+            "Language": "fr",
+            "Text": "Boissons"
+          },
+          {
+            "Language": "es",
+            "Text": "Bebidas"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "飲品"
+          },
+          {
+            "Language": "ar",
+            "Text": "المشروبات"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "饮品"
+          },
+          {
+            "Language": "ja",
+            "Text": "ドリンク"
+          }
         ]
       },
       {
@@ -4681,543 +7951,943 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000129",
             DisplayName: "心口痛",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Epigastrische Schmerzen" },
-              { Language: "ru", Text: "Боль в эпигастральной области" },
-              { Language: "pt", Text: "Dor epigástrica" },
-              { Language: "ko", Text: "상 복 부 통증" },
-              { Language: "yue", Text: "心口痛" },
-              { Language: "en", Text: "Epigastric pain" },
-              { Language: "it", Text: "Dolore epigastrico" },
-              { Language: "fr", Text: "Douleur épigastrique" },
-              { Language: "es", Text: "Dolor epigástrico" },
-              { Language: "zh-CHT", Text: "心口痛" },
-              { Language: "ar", Text: "ألم شرسوفي" },
-              { Language: "zh-CHS", Text: "心口痛" },
-              { Language: "ja", Text: "心窩部痛" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Epigastrische Schmerzen" },
-              { Language: "ru", Text: "Боль в эпигастральной области" },
-              { Language: "pt", Text: "Dor epigástrica" },
-              { Language: "ko", Text: "상 복 부 통증" },
-              { Language: "yue", Text: "心口痛" },
-              { Language: "en", Text: "Epigastric pain" },
-              { Language: "it", Text: "Dolore epigastrico" },
-              { Language: "fr", Text: "Douleur épigastrique" },
-              { Language: "es", Text: "Dolor epigástrico" },
-              { Language: "zh-CHT", Text: "心口痛" },
-              { Language: "ar", Text: "ألم شرسوفي" },
-              { Language: "zh-CHS", Text: "心口痛" },
-              { Language: "ja", Text: "心窩部痛" }
+              {
+                "Language": "de",
+                "Text": "Epigastrische Schmerzen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Боль в эпигастральной области"
+              },
+              {
+                "Language": "pt",
+                "Text": "Dor epigástrica"
+              },
+              {
+                "Language": "ko",
+                "Text": "상 복 부 통증"
+              },
+              {
+                "Language": "yue",
+                "Text": "心口痛"
+              },
+              {
+                "Language": "en",
+                "Text": "Epigastric pain"
+              },
+              {
+                "Language": "it",
+                "Text": "Dolore epigastrico"
+              },
+              {
+                "Language": "fr",
+                "Text": "Douleur épigastrique"
+              },
+              {
+                "Language": "es",
+                "Text": "Dolor epigástrico"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "心口痛"
+              },
+              {
+                "Language": "ar",
+                "Text": "ألم شرسوفي"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "心口痛"
+              },
+              {
+                "Language": "ja",
+                "Text": "心窩部痛"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000130",
             DisplayName: "肚痾",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Durchfall" },
-              { Language: "ru", Text: "Диарея" },
-              { Language: "pt", Text: "Diarreia" },
-              { Language: "ko", Text: "설사" },
-              { Language: "yue", Text: "肚痾" },
-              { Language: "en", Text: "Diarrhoea" },
-              { Language: "it", Text: "Diarrea" },
-              { Language: "fr", Text: "Diarrhées" },
-              { Language: "es", Text: "Diarrea" },
-              { Language: "zh-CHT", Text: "拉稀" },
-              { Language: "ar", Text: "الإسهال" },
-              { Language: "zh-CHS", Text: "拉稀" },
-              { Language: "ja", Text: "下痢" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Durchfall" },
-              { Language: "ru", Text: "Диарея" },
-              { Language: "pt", Text: "Diarreia" },
-              { Language: "ko", Text: "설사" },
-              { Language: "yue", Text: "肚痾" },
-              { Language: "en", Text: "Diarrhoea" },
-              { Language: "it", Text: "Diarrea" },
-              { Language: "fr", Text: "Diarrhées" },
-              { Language: "es", Text: "Diarrea" },
-              { Language: "zh-CHT", Text: "拉稀" },
-              { Language: "ar", Text: "الإسهال" },
-              { Language: "zh-CHS", Text: "拉稀" },
-              { Language: "ja", Text: "下痢" }
+              {
+                "Language": "de",
+                "Text": "Durchfall"
+              },
+              {
+                "Language": "ru",
+                "Text": "Диарея"
+              },
+              {
+                "Language": "pt",
+                "Text": "Diarreia"
+              },
+              {
+                "Language": "ko",
+                "Text": "설사"
+              },
+              {
+                "Language": "yue",
+                "Text": "肚痾"
+              },
+              {
+                "Language": "en",
+                "Text": "Diarrhoea"
+              },
+              {
+                "Language": "it",
+                "Text": "Diarrea"
+              },
+              {
+                "Language": "fr",
+                "Text": "Diarrhées"
+              },
+              {
+                "Language": "es",
+                "Text": "Diarrea"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "拉稀"
+              },
+              {
+                "Language": "ar",
+                "Text": "الإسهال"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "拉稀"
+              },
+              {
+                "Language": "ja",
+                "Text": "下痢"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000131",
             DisplayName: "嘔",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Erbrechen" },
-              { Language: "ru", Text: "Рвота" },
-              { Language: "pt", Text: "Vômitos" },
-              { Language: "ko", Text: "구 토" },
-              { Language: "yue", Text: "嘔" },
-              { Language: "en", Text: "Vomiting" },
-              { Language: "it", Text: "Vomito" },
-              { Language: "fr", Text: "Vomissements" },
-              { Language: "es", Text: "Vómitos" },
-              { Language: "zh-CHT", Text: "嘔吐" },
-              { Language: "ar", Text: "قيء" },
-              { Language: "zh-CHS", Text: "呕吐" },
-              { Language: "ja", Text: "嘔吐" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Erbrechen" },
-              { Language: "ru", Text: "Рвота" },
-              { Language: "pt", Text: "Vômitos" },
-              { Language: "ko", Text: "구 토" },
-              { Language: "yue", Text: "嘔" },
-              { Language: "en", Text: "Vomiting" },
-              { Language: "it", Text: "Vomito" },
-              { Language: "fr", Text: "Vomissements" },
-              { Language: "es", Text: "Vómitos" },
-              { Language: "zh-CHT", Text: "嘔吐" },
-              { Language: "ar", Text: "قيء" },
-              { Language: "zh-CHS", Text: "呕吐" },
-              { Language: "ja", Text: "嘔吐" }
+              {
+                "Language": "de",
+                "Text": "Erbrechen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Рвота"
+              },
+              {
+                "Language": "pt",
+                "Text": "Vômitos"
+              },
+              {
+                "Language": "ko",
+                "Text": "구 토"
+              },
+              {
+                "Language": "yue",
+                "Text": "嘔"
+              },
+              {
+                "Language": "en",
+                "Text": "Vomiting"
+              },
+              {
+                "Language": "it",
+                "Text": "Vomito"
+              },
+              {
+                "Language": "fr",
+                "Text": "Vomissements"
+              },
+              {
+                "Language": "es",
+                "Text": "Vómitos"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "嘔吐"
+              },
+              {
+                "Language": "ar",
+                "Text": "قيء"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "呕吐"
+              },
+              {
+                "Language": "ja",
+                "Text": "嘔吐"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000132",
             DisplayName: "頭痛",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Kopfschmerzen" },
-              { Language: "ru", Text: "Головная боль" },
-              { Language: "pt", Text: "Dor de cabeça" },
-              { Language: "ko", Text: "두통" },
-              { Language: "yue", Text: "頭痛" },
-              { Language: "en", Text: "Headache" },
-              { Language: "it", Text: "Mal di testa" },
-              { Language: "fr", Text: "Maux de tête" },
-              { Language: "es", Text: "Dolor de cabeza" },
-              { Language: "zh-CHT", Text: "頭痛" },
-              { Language: "ar", Text: "صداع" },
-              { Language: "zh-CHS", Text: "头痛" },
-              { Language: "ja", Text: "頭痛の種" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Kopfschmerzen" },
-              { Language: "ru", Text: "Головная боль" },
-              { Language: "pt", Text: "Dor de cabeça" },
-              { Language: "ko", Text: "두통" },
-              { Language: "yue", Text: "頭痛" },
-              { Language: "en", Text: "Headache" },
-              { Language: "it", Text: "Mal di testa" },
-              { Language: "fr", Text: "Maux de tête" },
-              { Language: "es", Text: "Dolor de cabeza" },
-              { Language: "zh-CHT", Text: "頭痛" },
-              { Language: "ar", Text: "صداع" },
-              { Language: "zh-CHS", Text: "头痛" },
-              { Language: "ja", Text: "頭痛の種" }
+              {
+                "Language": "de",
+                "Text": "Kopfschmerzen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Головная боль"
+              },
+              {
+                "Language": "pt",
+                "Text": "Dor de cabeça"
+              },
+              {
+                "Language": "ko",
+                "Text": "두통"
+              },
+              {
+                "Language": "yue",
+                "Text": "頭痛"
+              },
+              {
+                "Language": "en",
+                "Text": "Headache"
+              },
+              {
+                "Language": "it",
+                "Text": "Mal di testa"
+              },
+              {
+                "Language": "fr",
+                "Text": "Maux de tête"
+              },
+              {
+                "Language": "es",
+                "Text": "Dolor de cabeza"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "頭痛"
+              },
+              {
+                "Language": "ar",
+                "Text": "صداع"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "头痛"
+              },
+              {
+                "Language": "ja",
+                "Text": "頭痛の種"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000133",
             DisplayName: "食唔到",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Essen Sie weniger" },
-              { Language: "ru", Text: "Ешьте меньше" },
-              { Language: "pt", Text: "Comer menos" },
-              { Language: "ko", Text: "덜 먹으십시오" },
-              { Language: "yue", Text: "食唔到" },
-              { Language: "en", Text: "Eat less" },
-              { Language: "it", Text: "Mangiare di meno" },
-              { Language: "fr", Text: "Manger moins" },
-              { Language: "es", Text: "Comer menos" },
-              { Language: "zh-CHT", Text: "吃不到" },
-              { Language: "ar", Text: "تآكل أقل" },
-              { Language: "zh-CHS", Text: "吃不到" },
-              { Language: "ja", Text: "食べる量を減らす" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Essen Sie weniger" },
-              { Language: "ru", Text: "Ешьте меньше" },
-              { Language: "pt", Text: "Comer menos" },
-              { Language: "ko", Text: "덜 먹으십시오" },
-              { Language: "yue", Text: "食唔到" },
-              { Language: "en", Text: "Eat less" },
-              { Language: "it", Text: "Mangiare di meno" },
-              { Language: "fr", Text: "Manger moins" },
-              { Language: "es", Text: "Comer menos" },
-              { Language: "zh-CHT", Text: "吃不到" },
-              { Language: "ar", Text: "تآكل أقل" },
-              { Language: "zh-CHS", Text: "吃不到" },
-              { Language: "ja", Text: "食べる量を減らす" }
+              {
+                "Language": "de",
+                "Text": "Essen Sie weniger"
+              },
+              {
+                "Language": "ru",
+                "Text": "Ешьте меньше"
+              },
+              {
+                "Language": "pt",
+                "Text": "Comer menos"
+              },
+              {
+                "Language": "ko",
+                "Text": "덜 먹으십시오"
+              },
+              {
+                "Language": "yue",
+                "Text": "食唔到"
+              },
+              {
+                "Language": "en",
+                "Text": "Eat less"
+              },
+              {
+                "Language": "it",
+                "Text": "Mangiare di meno"
+              },
+              {
+                "Language": "fr",
+                "Text": "Manger moins"
+              },
+              {
+                "Language": "es",
+                "Text": "Comer menos"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "吃不到"
+              },
+              {
+                "Language": "ar",
+                "Text": "تآكل أقل"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "吃不到"
+              },
+              {
+                "Language": "ja",
+                "Text": "食べる量を減らす"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000134",
             DisplayName: "肚痛",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Magenschmerzen" },
-              { Language: "ru", Text: "Боль в животе" },
-              { Language: "pt", Text: "Dor de estômago" },
-              { Language: "ko", Text: "복 통" },
-              { Language: "yue", Text: "肚痛" },
-              { Language: "en", Text: "Stomach pain" },
-              { Language: "it", Text: "Mal di stomaco" },
-              { Language: "fr", Text: "Douleurs à l’estomac" },
-              { Language: "es", Text: "Dolor de estómago" },
-              { Language: "zh-CHT", Text: "肚子痛" },
-              { Language: "ar", Text: "الأم في المعدة" },
-              { Language: "zh-CHS", Text: "肚子痛" },
-              { Language: "ja", Text: "胃の痛み" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Magenschmerzen" },
-              { Language: "ru", Text: "Боль в животе" },
-              { Language: "pt", Text: "Dor de estômago" },
-              { Language: "ko", Text: "복 통" },
-              { Language: "yue", Text: "肚痛" },
-              { Language: "en", Text: "Stomach pain" },
-              { Language: "it", Text: "Mal di stomaco" },
-              { Language: "fr", Text: "Douleurs à l’estomac" },
-              { Language: "es", Text: "Dolor de estómago" },
-              { Language: "zh-CHT", Text: "肚子痛" },
-              { Language: "ar", Text: "الأم في المعدة" },
-              { Language: "zh-CHS", Text: "肚子痛" },
-              { Language: "ja", Text: "胃の痛み" }
+              {
+                "Language": "de",
+                "Text": "Magenschmerzen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Боль в животе"
+              },
+              {
+                "Language": "pt",
+                "Text": "Dor de estômago"
+              },
+              {
+                "Language": "ko",
+                "Text": "복 통"
+              },
+              {
+                "Language": "yue",
+                "Text": "肚痛"
+              },
+              {
+                "Language": "en",
+                "Text": "Stomach pain"
+              },
+              {
+                "Language": "it",
+                "Text": "Mal di stomaco"
+              },
+              {
+                "Language": "fr",
+                "Text": "Douleurs à l’estomac"
+              },
+              {
+                "Language": "es",
+                "Text": "Dolor de estómago"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "肚子痛"
+              },
+              {
+                "Language": "ar",
+                "Text": "الأم في المعدة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "肚子痛"
+              },
+              {
+                "Language": "ja",
+                "Text": "胃の痛み"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000135",
             DisplayName: "頭暈",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Dizzy" },
-              { Language: "ru", Text: "Кружится голова" },
-              { Language: "pt", Text: "Tonto" },
-              { Language: "ko", Text: "현기증" },
-              { Language: "yue", Text: "頭暈" },
-              { Language: "en", Text: "Dizzy" },
-              { Language: "it", Text: "Dizzy" },
-              { Language: "fr", Text: "Dizzy" },
-              { Language: "es", Text: "Mareado" },
-              { Language: "zh-CHT", Text: "頭暈" },
-              { Language: "ar", Text: "دوار" },
-              { Language: "zh-CHS", Text: "头晕" },
-              { Language: "ja", Text: "めまいがします。" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Dizzy" },
-              { Language: "ru", Text: "Кружится голова" },
-              { Language: "pt", Text: "Tonto" },
-              { Language: "ko", Text: "현기증" },
-              { Language: "yue", Text: "頭暈" },
-              { Language: "en", Text: "Dizzy" },
-              { Language: "it", Text: "Dizzy" },
-              { Language: "fr", Text: "Dizzy" },
-              { Language: "es", Text: "Mareado" },
-              { Language: "zh-CHT", Text: "頭暈" },
-              { Language: "ar", Text: "دوار" },
-              { Language: "zh-CHS", Text: "头晕" },
-              { Language: "ja", Text: "めまいがします。" }
+              {
+                "Language": "de",
+                "Text": "Dizzy"
+              },
+              {
+                "Language": "ru",
+                "Text": "Кружится голова"
+              },
+              {
+                "Language": "pt",
+                "Text": "Tonto"
+              },
+              {
+                "Language": "ko",
+                "Text": "현기증"
+              },
+              {
+                "Language": "yue",
+                "Text": "頭暈"
+              },
+              {
+                "Language": "en",
+                "Text": "Dizzy"
+              },
+              {
+                "Language": "it",
+                "Text": "Dizzy"
+              },
+              {
+                "Language": "fr",
+                "Text": "Dizzy"
+              },
+              {
+                "Language": "es",
+                "Text": "Mareado"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "頭暈"
+              },
+              {
+                "Language": "ar",
+                "Text": "دوار"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "头晕"
+              },
+              {
+                "Language": "ja",
+                "Text": "めまいがします。"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000136",
             DisplayName: "發燒",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Fieber" },
-              { Language: "ru", Text: "Лихорадка" },
-              { Language: "pt", Text: "Febre" },
-              { Language: "ko", Text: "발열" },
-              { Language: "yue", Text: "發燒" },
-              { Language: "en", Text: "Fever" },
-              { Language: "it", Text: "Febbre" },
-              { Language: "fr", Text: "Fièvre" },
-              { Language: "es", Text: "Fiebre" },
-              { Language: "zh-CHT", Text: "發燒" },
-              { Language: "ar", Text: "حمى" },
-              { Language: "zh-CHS", Text: "发烧" },
-              { Language: "ja", Text: "発熱" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Fieber" },
-              { Language: "ru", Text: "Лихорадка" },
-              { Language: "pt", Text: "Febre" },
-              { Language: "ko", Text: "발열" },
-              { Language: "yue", Text: "發燒" },
-              { Language: "en", Text: "Fever" },
-              { Language: "it", Text: "Febbre" },
-              { Language: "fr", Text: "Fièvre" },
-              { Language: "es", Text: "Fiebre" },
-              { Language: "zh-CHT", Text: "發燒" },
-              { Language: "ar", Text: "حمى" },
-              { Language: "zh-CHS", Text: "发烧" },
-              { Language: "ja", Text: "発熱" }
+              {
+                "Language": "de",
+                "Text": "Fieber"
+              },
+              {
+                "Language": "ru",
+                "Text": "Лихорадка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Febre"
+              },
+              {
+                "Language": "ko",
+                "Text": "발열"
+              },
+              {
+                "Language": "yue",
+                "Text": "發燒"
+              },
+              {
+                "Language": "en",
+                "Text": "Fever"
+              },
+              {
+                "Language": "it",
+                "Text": "Febbre"
+              },
+              {
+                "Language": "fr",
+                "Text": "Fièvre"
+              },
+              {
+                "Language": "es",
+                "Text": "Fiebre"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "發燒"
+              },
+              {
+                "Language": "ar",
+                "Text": "حمى"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "发烧"
+              },
+              {
+                "Language": "ja",
+                "Text": "発熱"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000137",
             DisplayName: "傷風",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Grippe" },
-              { Language: "ru", Text: "Грипп" },
-              { Language: "pt", Text: "Gripe" },
-              { Language: "ko", Text: "독감" },
-              { Language: "yue", Text: "傷風" },
-              { Language: "en", Text: "Flu" },
-              { Language: "it", Text: "Influenza" },
-              { Language: "fr", Text: "Grippe" },
-              { Language: "es", Text: "Gripe" },
-              { Language: "zh-CHT", Text: "感冒" },
-              { Language: "ar", Text: "إنفلونزا" },
-              { Language: "zh-CHS", Text: "感冒" },
-              { Language: "ja", Text: "インフルエンザ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Grippe" },
-              { Language: "ru", Text: "Грипп" },
-              { Language: "pt", Text: "Gripe" },
-              { Language: "ko", Text: "독감" },
-              { Language: "yue", Text: "傷風" },
-              { Language: "en", Text: "Flu" },
-              { Language: "it", Text: "Influenza" },
-              { Language: "fr", Text: "Grippe" },
-              { Language: "es", Text: "Gripe" },
-              { Language: "zh-CHT", Text: "感冒" },
-              { Language: "ar", Text: "إنفلونزا" },
-              { Language: "zh-CHS", Text: "感冒" },
-              { Language: "ja", Text: "インフルエンザ" }
+              {
+                "Language": "de",
+                "Text": "Grippe"
+              },
+              {
+                "Language": "ru",
+                "Text": "Грипп"
+              },
+              {
+                "Language": "pt",
+                "Text": "Gripe"
+              },
+              {
+                "Language": "ko",
+                "Text": "독감"
+              },
+              {
+                "Language": "yue",
+                "Text": "傷風"
+              },
+              {
+                "Language": "en",
+                "Text": "Flu"
+              },
+              {
+                "Language": "it",
+                "Text": "Influenza"
+              },
+              {
+                "Language": "fr",
+                "Text": "Grippe"
+              },
+              {
+                "Language": "es",
+                "Text": "Gripe"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "感冒"
+              },
+              {
+                "Language": "ar",
+                "Text": "إنفلونزا"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "感冒"
+              },
+              {
+                "Language": "ja",
+                "Text": "インフルエンザ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000138",
             DisplayName: "便秘",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Verstopfung" },
-              { Language: "ru", Text: "Запор" },
-              { Language: "pt", Text: "Prisão de ventre" },
-              { Language: "ko", Text: "변 비" },
-              { Language: "yue", Text: "便秘" },
-              { Language: "en", Text: "Constipation" },
-              { Language: "it", Text: "Costipazione" },
-              { Language: "fr", Text: "Constipation" },
-              { Language: "es", Text: "Estreñimiento" },
-              { Language: "zh-CHT", Text: "便秘" },
-              { Language: "ar", Text: "الإمساك" },
-              { Language: "zh-CHS", Text: "便秘" },
-              { Language: "ja", Text: "便秘" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Verstopfung" },
-              { Language: "ru", Text: "Запор" },
-              { Language: "pt", Text: "Prisão de ventre" },
-              { Language: "ko", Text: "변 비" },
-              { Language: "yue", Text: "便秘" },
-              { Language: "en", Text: "Constipation" },
-              { Language: "it", Text: "Costipazione" },
-              { Language: "fr", Text: "Constipation" },
-              { Language: "es", Text: "Estreñimiento" },
-              { Language: "zh-CHT", Text: "便秘" },
-              { Language: "ar", Text: "الإمساك" },
-              { Language: "zh-CHS", Text: "便秘" },
-              { Language: "ja", Text: "便秘" }
+              {
+                "Language": "de",
+                "Text": "Verstopfung"
+              },
+              {
+                "Language": "ru",
+                "Text": "Запор"
+              },
+              {
+                "Language": "pt",
+                "Text": "Prisão de ventre"
+              },
+              {
+                "Language": "ko",
+                "Text": "변 비"
+              },
+              {
+                "Language": "yue",
+                "Text": "便秘"
+              },
+              {
+                "Language": "en",
+                "Text": "Constipation"
+              },
+              {
+                "Language": "it",
+                "Text": "Costipazione"
+              },
+              {
+                "Language": "fr",
+                "Text": "Constipation"
+              },
+              {
+                "Language": "es",
+                "Text": "Estreñimiento"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "便秘"
+              },
+              {
+                "Language": "ar",
+                "Text": "الإمساك"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "便秘"
+              },
+              {
+                "Language": "ja",
+                "Text": "便秘"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000139",
             DisplayName: "坐到痛",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Sitzen Schmerzen" },
-              { Language: "ru", Text: "Боль сидя" },
-              { Language: "pt", Text: "Sessão dor" },
-              { Language: "ko", Text: "앉아 통증" },
-              { Language: "yue", Text: "坐到痛" },
-              { Language: "en", Text: "Sitting pain" },
-              { Language: "it", Text: "Dolore di seduta" },
-              { Language: "fr", Text: "Douleur de la séance" },
-              { Language: "es", Text: "Sienta dolor" },
-              { Language: "zh-CHT", Text: "坐到痛" },
-              { Language: "ar", Text: "ألم الجلوس" },
-              { Language: "zh-CHS", Text: "坐到痛" },
-              { Language: "ja", Text: "座っている痛み" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Sitzen Schmerzen" },
-              { Language: "ru", Text: "Боль сидя" },
-              { Language: "pt", Text: "Sessão dor" },
-              { Language: "ko", Text: "앉아 통증" },
-              { Language: "yue", Text: "坐到痛" },
-              { Language: "en", Text: "Sitting pain" },
-              { Language: "it", Text: "Dolore di seduta" },
-              { Language: "fr", Text: "Douleur de la séance" },
-              { Language: "es", Text: "Sienta dolor" },
-              { Language: "zh-CHT", Text: "坐到痛" },
-              { Language: "ar", Text: "ألم الجلوس" },
-              { Language: "zh-CHS", Text: "坐到痛" },
-              { Language: "ja", Text: "座っている痛み" }
+              {
+                "Language": "de",
+                "Text": "Sitzen Schmerzen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Боль сидя"
+              },
+              {
+                "Language": "pt",
+                "Text": "Sessão dor"
+              },
+              {
+                "Language": "ko",
+                "Text": "앉아 통증"
+              },
+              {
+                "Language": "yue",
+                "Text": "坐到痛"
+              },
+              {
+                "Language": "en",
+                "Text": "Sitting pain"
+              },
+              {
+                "Language": "it",
+                "Text": "Dolore di seduta"
+              },
+              {
+                "Language": "fr",
+                "Text": "Douleur de la séance"
+              },
+              {
+                "Language": "es",
+                "Text": "Sienta dolor"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "坐到痛"
+              },
+              {
+                "Language": "ar",
+                "Text": "ألم الجلوس"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "坐到痛"
+              },
+              {
+                "Language": "ja",
+                "Text": "座っている痛み"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000140",
             DisplayName: "喉嚨痛",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Halsschmerzen" },
-              { Language: "ru", Text: "Боль в горле" },
-              { Language: "pt", Text: "Dor de garganta" },
-              { Language: "ko", Text: "목의 통증" },
-              { Language: "yue", Text: "喉嚨痛" },
-              { Language: "en", Text: "Sore throat" },
-              { Language: "it", Text: "Mal di gola" },
-              { Language: "fr", Text: "Mal de gorge" },
-              { Language: "es", Text: "Dolor de garganta" },
-              { Language: "zh-CHT", Text: "喉嚨痛" },
-              { Language: "ar", Text: "التهاب في الحلق" },
-              { Language: "zh-CHS", Text: "喉咙痛" },
-              { Language: "ja", Text: "喉の痛み" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Halsschmerzen" },
-              { Language: "ru", Text: "Боль в горле" },
-              { Language: "pt", Text: "Dor de garganta" },
-              { Language: "ko", Text: "목의 통증" },
-              { Language: "yue", Text: "喉嚨痛" },
-              { Language: "en", Text: "Sore throat" },
-              { Language: "it", Text: "Mal di gola" },
-              { Language: "fr", Text: "Mal de gorge" },
-              { Language: "es", Text: "Dolor de garganta" },
-              { Language: "zh-CHT", Text: "喉嚨痛" },
-              { Language: "ar", Text: "التهاب في الحلق" },
-              { Language: "zh-CHS", Text: "喉咙痛" },
-              { Language: "ja", Text: "喉の痛み" }
+              {
+                "Language": "de",
+                "Text": "Halsschmerzen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Боль в горле"
+              },
+              {
+                "Language": "pt",
+                "Text": "Dor de garganta"
+              },
+              {
+                "Language": "ko",
+                "Text": "목의 통증"
+              },
+              {
+                "Language": "yue",
+                "Text": "喉嚨痛"
+              },
+              {
+                "Language": "en",
+                "Text": "Sore throat"
+              },
+              {
+                "Language": "it",
+                "Text": "Mal di gola"
+              },
+              {
+                "Language": "fr",
+                "Text": "Mal de gorge"
+              },
+              {
+                "Language": "es",
+                "Text": "Dolor de garganta"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "喉嚨痛"
+              },
+              {
+                "Language": "ar",
+                "Text": "التهاب في الحلق"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "喉咙痛"
+              },
+              {
+                "Language": "ja",
+                "Text": "喉の痛み"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000141",
             DisplayName: "牙痛",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Zahnschmerzen" },
-              { Language: "ru", Text: "Зубной боли" },
-              { Language: "pt", Text: "Dor de dente" },
-              { Language: "ko", Text: "치 통" },
-              { Language: "yue", Text: "牙痛" },
-              { Language: "en", Text: "Toothache" },
-              { Language: "it", Text: "Mal di denti" },
-              { Language: "fr", Text: "Mal de dents" },
-              { Language: "es", Text: "Dolor de muelas" },
-              { Language: "zh-CHT", Text: "牙痛" },
-              { Language: "ar", Text: "ألم في الأسنان" },
-              { Language: "zh-CHS", Text: "牙痛" },
-              { Language: "ja", Text: "歯痛" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Zahnschmerzen" },
-              { Language: "ru", Text: "Зубной боли" },
-              { Language: "pt", Text: "Dor de dente" },
-              { Language: "ko", Text: "치 통" },
-              { Language: "yue", Text: "牙痛" },
-              { Language: "en", Text: "Toothache" },
-              { Language: "it", Text: "Mal di denti" },
-              { Language: "fr", Text: "Mal de dents" },
-              { Language: "es", Text: "Dolor de muelas" },
-              { Language: "zh-CHT", Text: "牙痛" },
-              { Language: "ar", Text: "ألم في الأسنان" },
-              { Language: "zh-CHS", Text: "牙痛" },
-              { Language: "ja", Text: "歯痛" }
+              {
+                "Language": "de",
+                "Text": "Zahnschmerzen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Зубной боли"
+              },
+              {
+                "Language": "pt",
+                "Text": "Dor de dente"
+              },
+              {
+                "Language": "ko",
+                "Text": "치 통"
+              },
+              {
+                "Language": "yue",
+                "Text": "牙痛"
+              },
+              {
+                "Language": "en",
+                "Text": "Toothache"
+              },
+              {
+                "Language": "it",
+                "Text": "Mal di denti"
+              },
+              {
+                "Language": "fr",
+                "Text": "Mal de dents"
+              },
+              {
+                "Language": "es",
+                "Text": "Dolor de muelas"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "牙痛"
+              },
+              {
+                "Language": "ar",
+                "Text": "ألم في الأسنان"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "牙痛"
+              },
+              {
+                "Language": "ja",
+                "Text": "歯痛"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000142",
             DisplayName: "血壓高",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Hoher Blutdruck" },
-              { Language: "ru", Text: "Высокое кровяное давление" },
-              { Language: "pt", Text: "Pressão arterial elevada" },
-              { Language: "ko", Text: "높은 혈압" },
-              { Language: "yue", Text: "血壓高" },
-              { Language: "en", Text: "High blood pressure" },
-              { Language: "it", Text: "Alta pressione sanguigna" },
-              { Language: "fr", Text: "Hypertension artérielle" },
-              { Language: "es", Text: "Presión arterial alta" },
-              { Language: "zh-CHT", Text: "血壓高" },
-              { Language: "ar", Text: "ارتفاع ضغط الدم" },
-              { Language: "zh-CHS", Text: "血压高" },
-              { Language: "ja", Text: "高血圧" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Hoher Blutdruck" },
-              { Language: "ru", Text: "Высокое кровяное давление" },
-              { Language: "pt", Text: "Pressão arterial elevada" },
-              { Language: "ko", Text: "높은 혈압" },
-              { Language: "yue", Text: "血壓高" },
-              { Language: "en", Text: "High blood pressure" },
-              { Language: "it", Text: "Alta pressione sanguigna" },
-              { Language: "fr", Text: "Hypertension artérielle" },
-              { Language: "es", Text: "Presión arterial alta" },
-              { Language: "zh-CHT", Text: "血壓高" },
-              { Language: "ar", Text: "ارتفاع ضغط الدم" },
-              { Language: "zh-CHS", Text: "血压高" },
-              { Language: "ja", Text: "高血圧" }
+              {
+                "Language": "de",
+                "Text": "Hoher Blutdruck"
+              },
+              {
+                "Language": "ru",
+                "Text": "Высокое кровяное давление"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pressão arterial elevada"
+              },
+              {
+                "Language": "ko",
+                "Text": "높은 혈압"
+              },
+              {
+                "Language": "yue",
+                "Text": "血壓高"
+              },
+              {
+                "Language": "en",
+                "Text": "High blood pressure"
+              },
+              {
+                "Language": "it",
+                "Text": "Alta pressione sanguigna"
+              },
+              {
+                "Language": "fr",
+                "Text": "Hypertension artérielle"
+              },
+              {
+                "Language": "es",
+                "Text": "Presión arterial alta"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "血壓高"
+              },
+              {
+                "Language": "ar",
+                "Text": "ارتفاع ضغط الدم"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "血压高"
+              },
+              {
+                "Language": "ja",
+                "Text": "高血圧"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000143",
             DisplayName: "氣喘",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Asthma" },
-              { Language: "ru", Text: "Астма" },
-              { Language: "pt", Text: "Asma" },
-              { Language: "ko", Text: "천식" },
-              { Language: "yue", Text: "氣喘" },
-              { Language: "en", Text: "Asthma" },
-              { Language: "it", Text: "Asma" },
-              { Language: "fr", Text: "Asthme" },
-              { Language: "es", Text: "Asma" },
-              { Language: "zh-CHT", Text: "氣喘" },
-              { Language: "ar", Text: "الربو" },
-              { Language: "zh-CHS", Text: "气喘" },
-              { Language: "ja", Text: "喘息" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Asthma" },
-              { Language: "ru", Text: "Астма" },
-              { Language: "pt", Text: "Asma" },
-              { Language: "ko", Text: "천식" },
-              { Language: "yue", Text: "氣喘" },
-              { Language: "en", Text: "Asthma" },
-              { Language: "it", Text: "Asma" },
-              { Language: "fr", Text: "Asthme" },
-              { Language: "es", Text: "Asma" },
-              { Language: "zh-CHT", Text: "氣喘" },
-              { Language: "ar", Text: "الربو" },
-              { Language: "zh-CHS", Text: "气喘" },
-              { Language: "ja", Text: "喘息" }
+              {
+                "Language": "de",
+                "Text": "Asthma"
+              },
+              {
+                "Language": "ru",
+                "Text": "Астма"
+              },
+              {
+                "Language": "pt",
+                "Text": "Asma"
+              },
+              {
+                "Language": "ko",
+                "Text": "천식"
+              },
+              {
+                "Language": "yue",
+                "Text": "氣喘"
+              },
+              {
+                "Language": "en",
+                "Text": "Asthma"
+              },
+              {
+                "Language": "it",
+                "Text": "Asma"
+              },
+              {
+                "Language": "fr",
+                "Text": "Asthme"
+              },
+              {
+                "Language": "es",
+                "Text": "Asma"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "氣喘"
+              },
+              {
+                "Language": "ar",
+                "Text": "الربو"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "气喘"
+              },
+              {
+                "Language": "ja",
+                "Text": "喘息"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Einen Arzt aufsuchen" },
-          { Language: "ru", Text: "Обратитесь к врачу" },
-          { Language: "pt", Text: "Consulte um médico" },
-          { Language: "ko", Text: "의사를 참조 하십시오" },
-          { Language: "yue", Text: "睇醫生" },
-          { Language: "en", Text: "See a doctor" },
-          { Language: "it", Text: "Consultare un medico" },
-          { Language: "fr", Text: "Consulter un médecin" },
-          { Language: "es", Text: "Ver a un médico" },
-          { Language: "zh-CHT", Text: "看病" },
-          { Language: "ar", Text: "راجع الطبيب" },
-          { Language: "zh-CHS", Text: "看病" },
-          { Language: "ja", Text: "医師を診察します。" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Einen Arzt aufsuchen" },
-          { Language: "ru", Text: "Обратитесь к врачу" },
-          { Language: "pt", Text: "Consulte um médico" },
-          { Language: "ko", Text: "의사를 참조 하십시오" },
-          { Language: "yue", Text: "睇醫生" },
-          { Language: "en", Text: "See a doctor" },
-          { Language: "it", Text: "Consultare un medico" },
-          { Language: "fr", Text: "Consulter un médecin" },
-          { Language: "es", Text: "Ver a un médico" },
-          { Language: "zh-CHT", Text: "看病" },
-          { Language: "ar", Text: "راجع الطبيب" },
-          { Language: "zh-CHS", Text: "看病" },
-          { Language: "ja", Text: "医師を診察します。" }
+          {
+            "Language": "de",
+            "Text": "Einen Arzt aufsuchen"
+          },
+          {
+            "Language": "ru",
+            "Text": "Обратитесь к врачу"
+          },
+          {
+            "Language": "pt",
+            "Text": "Consulte um médico"
+          },
+          {
+            "Language": "ko",
+            "Text": "의사를 참조 하십시오"
+          },
+          {
+            "Language": "yue",
+            "Text": "睇醫生"
+          },
+          {
+            "Language": "en",
+            "Text": "See a doctor"
+          },
+          {
+            "Language": "it",
+            "Text": "Consultare un medico"
+          },
+          {
+            "Language": "fr",
+            "Text": "Consulter un médecin"
+          },
+          {
+            "Language": "es",
+            "Text": "Ver a un médico"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "看病"
+          },
+          {
+            "Language": "ar",
+            "Text": "راجع الطبيب"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "看病"
+          },
+          {
+            "Language": "ja",
+            "Text": "医師を診察します。"
+          }
         ]
       },
       {
@@ -5227,373 +8897,648 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000144",
             DisplayName: "職業治療",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Ergotherapie" },
-              { Language: "ru", Text: "Эрготерапия" },
-              { Language: "pt", Text: "Terapia ocupacional" },
-              { Language: "ko", Text: "작업 요법" },
-              { Language: "yue", Text: "職業治療" },
-              { Language: "en", Text: "Occupational therapy" },
-              { Language: "it", Text: "Terapia occupazionale" },
-              { Language: "fr", Text: "Ergothérapie" },
-              { Language: "es", Text: "Terapia ocupacional" },
-              { Language: "zh-CHT", Text: "職業治療" },
-              { Language: "ar", Text: "العلاج المهني" },
-              { Language: "zh-CHS", Text: "职业治疗" },
-              { Language: "ja", Text: "作業療法" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Ergotherapie" },
-              { Language: "ru", Text: "Эрготерапия" },
-              { Language: "pt", Text: "Terapia ocupacional" },
-              { Language: "ko", Text: "작업 요법" },
-              { Language: "yue", Text: "職業治療" },
-              { Language: "en", Text: "Occupational therapy" },
-              { Language: "it", Text: "Terapia occupazionale" },
-              { Language: "fr", Text: "Ergothérapie" },
-              { Language: "es", Text: "Terapia ocupacional" },
-              { Language: "zh-CHT", Text: "職業治療" },
-              { Language: "ar", Text: "العلاج المهني" },
-              { Language: "zh-CHS", Text: "职业治疗" },
-              { Language: "ja", Text: "作業療法" }
+              {
+                "Language": "de",
+                "Text": "Ergotherapie"
+              },
+              {
+                "Language": "ru",
+                "Text": "Эрготерапия"
+              },
+              {
+                "Language": "pt",
+                "Text": "Terapia ocupacional"
+              },
+              {
+                "Language": "ko",
+                "Text": "작업 요법"
+              },
+              {
+                "Language": "yue",
+                "Text": "職業治療"
+              },
+              {
+                "Language": "en",
+                "Text": "Occupational therapy"
+              },
+              {
+                "Language": "it",
+                "Text": "Terapia occupazionale"
+              },
+              {
+                "Language": "fr",
+                "Text": "Ergothérapie"
+              },
+              {
+                "Language": "es",
+                "Text": "Terapia ocupacional"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "職業治療"
+              },
+              {
+                "Language": "ar",
+                "Text": "العلاج المهني"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "职业治疗"
+              },
+              {
+                "Language": "ja",
+                "Text": "作業療法"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000145",
             DisplayName: "物理治療",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Physikalische Therapie" },
-              { Language: "ru", Text: "Физическая терапия" },
-              { Language: "pt", Text: "Terapia física" },
-              { Language: "ko", Text: "물리 치료" },
-              { Language: "yue", Text: "物理治療" },
-              { Language: "en", Text: "Physical therapy" },
-              { Language: "it", Text: "Terapia fisica" },
-              { Language: "fr", Text: "Thérapie physique" },
-              { Language: "es", Text: "Terapia física" },
-              { Language: "zh-CHT", Text: "物理治療" },
-              { Language: "ar", Text: "العلاج الطبيعي" },
-              { Language: "zh-CHS", Text: "物理治疗" },
-              { Language: "ja", Text: "理学療法" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Physikalische Therapie" },
-              { Language: "ru", Text: "Физическая терапия" },
-              { Language: "pt", Text: "Terapia física" },
-              { Language: "ko", Text: "물리 치료" },
-              { Language: "yue", Text: "物理治療" },
-              { Language: "en", Text: "Physical therapy" },
-              { Language: "it", Text: "Terapia fisica" },
-              { Language: "fr", Text: "Thérapie physique" },
-              { Language: "es", Text: "Terapia física" },
-              { Language: "zh-CHT", Text: "物理治療" },
-              { Language: "ar", Text: "العلاج الطبيعي" },
-              { Language: "zh-CHS", Text: "物理治疗" },
-              { Language: "ja", Text: "理学療法" }
+              {
+                "Language": "de",
+                "Text": "Physikalische Therapie"
+              },
+              {
+                "Language": "ru",
+                "Text": "Физическая терапия"
+              },
+              {
+                "Language": "pt",
+                "Text": "Terapia física"
+              },
+              {
+                "Language": "ko",
+                "Text": "물리 치료"
+              },
+              {
+                "Language": "yue",
+                "Text": "物理治療"
+              },
+              {
+                "Language": "en",
+                "Text": "Physical therapy"
+              },
+              {
+                "Language": "it",
+                "Text": "Terapia fisica"
+              },
+              {
+                "Language": "fr",
+                "Text": "Thérapie physique"
+              },
+              {
+                "Language": "es",
+                "Text": "Terapia física"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "物理治療"
+              },
+              {
+                "Language": "ar",
+                "Text": "العلاج الطبيعي"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "物理治疗"
+              },
+              {
+                "Language": "ja",
+                "Text": "理学療法"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000146",
             DisplayName: "醫院",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Das Krankenhaus" },
-              { Language: "ru", Text: "Больница" },
-              { Language: "pt", Text: "O hospital" },
-              { Language: "ko", Text: "병원" },
-              { Language: "yue", Text: "醫院" },
-              { Language: "en", Text: "The hospital" },
-              { Language: "it", Text: "L'ospedale" },
-              { Language: "fr", Text: "L’hôpital" },
-              { Language: "es", Text: "El hospital" },
-              { Language: "zh-CHT", Text: "醫院" },
-              { Language: "ar", Text: "المستشفى" },
-              { Language: "zh-CHS", Text: "医院" },
-              { Language: "ja", Text: "病院" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Das Krankenhaus" },
-              { Language: "ru", Text: "Больница" },
-              { Language: "pt", Text: "O hospital" },
-              { Language: "ko", Text: "병원" },
-              { Language: "yue", Text: "醫院" },
-              { Language: "en", Text: "The hospital" },
-              { Language: "it", Text: "L'ospedale" },
-              { Language: "fr", Text: "L’hôpital" },
-              { Language: "es", Text: "El hospital" },
-              { Language: "zh-CHT", Text: "醫院" },
-              { Language: "ar", Text: "المستشفى" },
-              { Language: "zh-CHS", Text: "医院" },
-              { Language: "ja", Text: "病院" }
+              {
+                "Language": "de",
+                "Text": "Das Krankenhaus"
+              },
+              {
+                "Language": "ru",
+                "Text": "Больница"
+              },
+              {
+                "Language": "pt",
+                "Text": "O hospital"
+              },
+              {
+                "Language": "ko",
+                "Text": "병원"
+              },
+              {
+                "Language": "yue",
+                "Text": "醫院"
+              },
+              {
+                "Language": "en",
+                "Text": "The hospital"
+              },
+              {
+                "Language": "it",
+                "Text": "L'ospedale"
+              },
+              {
+                "Language": "fr",
+                "Text": "L’hôpital"
+              },
+              {
+                "Language": "es",
+                "Text": "El hospital"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "醫院"
+              },
+              {
+                "Language": "ar",
+                "Text": "المستشفى"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "医院"
+              },
+              {
+                "Language": "ja",
+                "Text": "病院"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000147",
             DisplayName: "言語治療",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Logopädische Praxis" },
-              { Language: "ru", Text: "Терапия речи" },
-              { Language: "pt", Text: "Terapia da fala" },
-              { Language: "ko", Text: "음성 치료" },
-              { Language: "yue", Text: "言語治療" },
-              { Language: "en", Text: "Speech therapy" },
-              { Language: "it", Text: "Logopedia" },
-              { Language: "fr", Text: "Orthophonie" },
-              { Language: "es", Text: "Terapia del habla" },
-              { Language: "zh-CHT", Text: "言語治療" },
-              { Language: "ar", Text: "علاج النطق" },
-              { Language: "zh-CHS", Text: "言语治疗" },
-              { Language: "ja", Text: "スピーチセラピー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Logopädische Praxis" },
-              { Language: "ru", Text: "Терапия речи" },
-              { Language: "pt", Text: "Terapia da fala" },
-              { Language: "ko", Text: "음성 치료" },
-              { Language: "yue", Text: "言語治療" },
-              { Language: "en", Text: "Speech therapy" },
-              { Language: "it", Text: "Logopedia" },
-              { Language: "fr", Text: "Orthophonie" },
-              { Language: "es", Text: "Terapia del habla" },
-              { Language: "zh-CHT", Text: "言語治療" },
-              { Language: "ar", Text: "علاج النطق" },
-              { Language: "zh-CHS", Text: "言语治疗" },
-              { Language: "ja", Text: "スピーチセラピー" }
+              {
+                "Language": "de",
+                "Text": "Logopädische Praxis"
+              },
+              {
+                "Language": "ru",
+                "Text": "Терапия речи"
+              },
+              {
+                "Language": "pt",
+                "Text": "Terapia da fala"
+              },
+              {
+                "Language": "ko",
+                "Text": "음성 치료"
+              },
+              {
+                "Language": "yue",
+                "Text": "言語治療"
+              },
+              {
+                "Language": "en",
+                "Text": "Speech therapy"
+              },
+              {
+                "Language": "it",
+                "Text": "Logopedia"
+              },
+              {
+                "Language": "fr",
+                "Text": "Orthophonie"
+              },
+              {
+                "Language": "es",
+                "Text": "Terapia del habla"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "言語治療"
+              },
+              {
+                "Language": "ar",
+                "Text": "علاج النطق"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "言语治疗"
+              },
+              {
+                "Language": "ja",
+                "Text": "スピーチセラピー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000148",
             DisplayName: "超級市場",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Super-Markt" },
-              { Language: "ru", Text: "Супер рынок" },
-              { Language: "pt", Text: "Super mercado" },
-              { Language: "ko", Text: "최고 시장" },
-              { Language: "yue", Text: "超級市場" },
-              { Language: "en", Text: "Super market" },
-              { Language: "it", Text: "Super mercato" },
-              { Language: "fr", Text: "Super marché" },
-              { Language: "es", Text: "Super mercado" },
-              { Language: "zh-CHT", Text: "超級市場" },
-              { Language: "ar", Text: "سوبر ماركت" },
-              { Language: "zh-CHS", Text: "超级市场" },
-              { Language: "ja", Text: "スーパー マーケット" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Super-Markt" },
-              { Language: "ru", Text: "Супер рынок" },
-              { Language: "pt", Text: "Super mercado" },
-              { Language: "ko", Text: "최고 시장" },
-              { Language: "yue", Text: "超級市場" },
-              { Language: "en", Text: "Super market" },
-              { Language: "it", Text: "Super mercato" },
-              { Language: "fr", Text: "Super marché" },
-              { Language: "es", Text: "Super mercado" },
-              { Language: "zh-CHT", Text: "超級市場" },
-              { Language: "ar", Text: "سوبر ماركت" },
-              { Language: "zh-CHS", Text: "超级市场" },
-              { Language: "ja", Text: "スーパー マーケット" }
+              {
+                "Language": "de",
+                "Text": "Super-Markt"
+              },
+              {
+                "Language": "ru",
+                "Text": "Супер рынок"
+              },
+              {
+                "Language": "pt",
+                "Text": "Super mercado"
+              },
+              {
+                "Language": "ko",
+                "Text": "최고 시장"
+              },
+              {
+                "Language": "yue",
+                "Text": "超級市場"
+              },
+              {
+                "Language": "en",
+                "Text": "Super market"
+              },
+              {
+                "Language": "it",
+                "Text": "Super mercato"
+              },
+              {
+                "Language": "fr",
+                "Text": "Super marché"
+              },
+              {
+                "Language": "es",
+                "Text": "Super mercado"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "超級市場"
+              },
+              {
+                "Language": "ar",
+                "Text": "سوبر ماركت"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "超级市场"
+              },
+              {
+                "Language": "ja",
+                "Text": "スーパー マーケット"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000149",
             DisplayName: "公園",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Öffentliche Gärten" },
-              { Language: "ru", Text: "Общественные парки" },
-              { Language: "pt", Text: "Jardins públicos" },
-              { Language: "ko", Text: "공공 정원" },
-              { Language: "yue", Text: "公園" },
-              { Language: "en", Text: "Public gardens" },
-              { Language: "it", Text: "Giardini pubblici" },
-              { Language: "fr", Text: "Jardins publics" },
-              { Language: "es", Text: "Jardines públicos" },
-              { Language: "zh-CHT", Text: "公園" },
-              { Language: "ar", Text: "الحدائق العامة" },
-              { Language: "zh-CHS", Text: "公园" },
-              { Language: "ja", Text: "公共の庭園" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Öffentliche Gärten" },
-              { Language: "ru", Text: "Общественные парки" },
-              { Language: "pt", Text: "Jardins públicos" },
-              { Language: "ko", Text: "공공 정원" },
-              { Language: "yue", Text: "公園" },
-              { Language: "en", Text: "Public gardens" },
-              { Language: "it", Text: "Giardini pubblici" },
-              { Language: "fr", Text: "Jardins publics" },
-              { Language: "es", Text: "Jardines públicos" },
-              { Language: "zh-CHT", Text: "公園" },
-              { Language: "ar", Text: "الحدائق العامة" },
-              { Language: "zh-CHS", Text: "公园" },
-              { Language: "ja", Text: "公共の庭園" }
+              {
+                "Language": "de",
+                "Text": "Öffentliche Gärten"
+              },
+              {
+                "Language": "ru",
+                "Text": "Общественные парки"
+              },
+              {
+                "Language": "pt",
+                "Text": "Jardins públicos"
+              },
+              {
+                "Language": "ko",
+                "Text": "공공 정원"
+              },
+              {
+                "Language": "yue",
+                "Text": "公園"
+              },
+              {
+                "Language": "en",
+                "Text": "Public gardens"
+              },
+              {
+                "Language": "it",
+                "Text": "Giardini pubblici"
+              },
+              {
+                "Language": "fr",
+                "Text": "Jardins publics"
+              },
+              {
+                "Language": "es",
+                "Text": "Jardines públicos"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "公園"
+              },
+              {
+                "Language": "ar",
+                "Text": "الحدائق العامة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "公园"
+              },
+              {
+                "Language": "ja",
+                "Text": "公共の庭園"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000150",
             DisplayName: "商場",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Einkaufszentrum" },
-              { Language: "ru", Text: "Торговый центр" },
-              { Language: "pt", Text: "Centro comercial" },
-              { Language: "ko", Text: "쇼핑 센터" },
-              { Language: "yue", Text: "商場" },
-              { Language: "en", Text: "Shopping Centre" },
-              { Language: "it", Text: "Centro commerciale" },
-              { Language: "fr", Text: "Centre commercial" },
-              { Language: "es", Text: "Centro comercial" },
-              { Language: "zh-CHT", Text: "商場" },
-              { Language: "ar", Text: "مركز تسوق" },
-              { Language: "zh-CHS", Text: "商场" },
-              { Language: "ja", Text: "ショッピング センター" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Einkaufszentrum" },
-              { Language: "ru", Text: "Торговый центр" },
-              { Language: "pt", Text: "Centro comercial" },
-              { Language: "ko", Text: "쇼핑 센터" },
-              { Language: "yue", Text: "商場" },
-              { Language: "en", Text: "Shopping Centre" },
-              { Language: "it", Text: "Centro commerciale" },
-              { Language: "fr", Text: "Centre commercial" },
-              { Language: "es", Text: "Centro comercial" },
-              { Language: "zh-CHT", Text: "商場" },
-              { Language: "ar", Text: "مركز تسوق" },
-              { Language: "zh-CHS", Text: "商场" },
-              { Language: "ja", Text: "ショッピング センター" }
+              {
+                "Language": "de",
+                "Text": "Einkaufszentrum"
+              },
+              {
+                "Language": "ru",
+                "Text": "Торговый центр"
+              },
+              {
+                "Language": "pt",
+                "Text": "Centro comercial"
+              },
+              {
+                "Language": "ko",
+                "Text": "쇼핑 센터"
+              },
+              {
+                "Language": "yue",
+                "Text": "商場"
+              },
+              {
+                "Language": "en",
+                "Text": "Shopping Centre"
+              },
+              {
+                "Language": "it",
+                "Text": "Centro commerciale"
+              },
+              {
+                "Language": "fr",
+                "Text": "Centre commercial"
+              },
+              {
+                "Language": "es",
+                "Text": "Centro comercial"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "商場"
+              },
+              {
+                "Language": "ar",
+                "Text": "مركز تسوق"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "商场"
+              },
+              {
+                "Language": "ja",
+                "Text": "ショッピング センター"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000151",
             DisplayName: "屋企",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Haus" },
-              { Language: "ru", Text: "Главная" },
-              { Language: "pt", Text: "Casa" },
-              { Language: "ko", Text: "홈" },
-              { Language: "yue", Text: "屋企" },
-              { Language: "en", Text: "Home" },
-              { Language: "it", Text: "Casa" },
-              { Language: "fr", Text: "Accueil" },
-              { Language: "es", Text: "Página de inicio" },
-              { Language: "zh-CHT", Text: "家裡" },
-              { Language: "ar", Text: "الصفحة الرئيسية" },
-              { Language: "zh-CHS", Text: "家里" },
-              { Language: "ja", Text: "ホーム" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Haus" },
-              { Language: "ru", Text: "Главная" },
-              { Language: "pt", Text: "Casa" },
-              { Language: "ko", Text: "홈" },
-              { Language: "yue", Text: "屋企" },
-              { Language: "en", Text: "Home" },
-              { Language: "it", Text: "Casa" },
-              { Language: "fr", Text: "Accueil" },
-              { Language: "es", Text: "Página de inicio" },
-              { Language: "zh-CHT", Text: "家裡" },
-              { Language: "ar", Text: "الصفحة الرئيسية" },
-              { Language: "zh-CHS", Text: "家里" },
-              { Language: "ja", Text: "ホーム" }
+              {
+                "Language": "de",
+                "Text": "Haus"
+              },
+              {
+                "Language": "ru",
+                "Text": "Главная"
+              },
+              {
+                "Language": "pt",
+                "Text": "Casa"
+              },
+              {
+                "Language": "ko",
+                "Text": "홈"
+              },
+              {
+                "Language": "yue",
+                "Text": "屋企"
+              },
+              {
+                "Language": "en",
+                "Text": "Home"
+              },
+              {
+                "Language": "it",
+                "Text": "Casa"
+              },
+              {
+                "Language": "fr",
+                "Text": "Accueil"
+              },
+              {
+                "Language": "es",
+                "Text": "Página de inicio"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "家裡"
+              },
+              {
+                "Language": "ar",
+                "Text": "الصفحة الرئيسية"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "家里"
+              },
+              {
+                "Language": "ja",
+                "Text": "ホーム"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000152",
             DisplayName: "銀行",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Bank" },
-              { Language: "ru", Text: "Банк" },
-              { Language: "pt", Text: "Banco" },
-              { Language: "ko", Text: "은행" },
-              { Language: "yue", Text: "銀行" },
-              { Language: "en", Text: "Bank" },
-              { Language: "it", Text: "Banca" },
-              { Language: "fr", Text: "Banque" },
-              { Language: "es", Text: "Banco" },
-              { Language: "zh-CHT", Text: "銀行" },
-              { Language: "ar", Text: "مصرف" },
-              { Language: "zh-CHS", Text: "银行" },
-              { Language: "ja", Text: "銀行" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Bank" },
-              { Language: "ru", Text: "Банк" },
-              { Language: "pt", Text: "Banco" },
-              { Language: "ko", Text: "은행" },
-              { Language: "yue", Text: "銀行" },
-              { Language: "en", Text: "Bank" },
-              { Language: "it", Text: "Banca" },
-              { Language: "fr", Text: "Banque" },
-              { Language: "es", Text: "Banco" },
-              { Language: "zh-CHT", Text: "銀行" },
-              { Language: "ar", Text: "مصرف" },
-              { Language: "zh-CHS", Text: "银行" },
-              { Language: "ja", Text: "銀行" }
+              {
+                "Language": "de",
+                "Text": "Bank"
+              },
+              {
+                "Language": "ru",
+                "Text": "Банк"
+              },
+              {
+                "Language": "pt",
+                "Text": "Banco"
+              },
+              {
+                "Language": "ko",
+                "Text": "은행"
+              },
+              {
+                "Language": "yue",
+                "Text": "銀行"
+              },
+              {
+                "Language": "en",
+                "Text": "Bank"
+              },
+              {
+                "Language": "it",
+                "Text": "Banca"
+              },
+              {
+                "Language": "fr",
+                "Text": "Banque"
+              },
+              {
+                "Language": "es",
+                "Text": "Banco"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "銀行"
+              },
+              {
+                "Language": "ar",
+                "Text": "مصرف"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "银行"
+              },
+              {
+                "Language": "ja",
+                "Text": "銀行"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000153",
             DisplayName: "街市",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Straßenmarkt" },
-              { Language: "ru", Text: "Уличный рынок" },
-              { Language: "pt", Text: "Rua do mercado" },
-              { Language: "ko", Text: "거리 시장" },
-              { Language: "yue", Text: "街市" },
-              { Language: "en", Text: "Street market" },
-              { Language: "it", Text: "Mercato di strada" },
-              { Language: "fr", Text: "Marché de rue" },
-              { Language: "es", Text: "Mercado de la calle" },
-              { Language: "zh-CHT", Text: "街市" },
-              { Language: "ar", Text: "شارع السوق" },
-              { Language: "zh-CHS", Text: "街市" },
-              { Language: "ja", Text: "ストリート マーケット" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Straßenmarkt" },
-              { Language: "ru", Text: "Уличный рынок" },
-              { Language: "pt", Text: "Rua do mercado" },
-              { Language: "ko", Text: "거리 시장" },
-              { Language: "yue", Text: "街市" },
-              { Language: "en", Text: "Street market" },
-              { Language: "it", Text: "Mercato di strada" },
-              { Language: "fr", Text: "Marché de rue" },
-              { Language: "es", Text: "Mercado de la calle" },
-              { Language: "zh-CHT", Text: "街市" },
-              { Language: "ar", Text: "شارع السوق" },
-              { Language: "zh-CHS", Text: "街市" },
-              { Language: "ja", Text: "ストリート マーケット" }
+              {
+                "Language": "de",
+                "Text": "Straßenmarkt"
+              },
+              {
+                "Language": "ru",
+                "Text": "Уличный рынок"
+              },
+              {
+                "Language": "pt",
+                "Text": "Rua do mercado"
+              },
+              {
+                "Language": "ko",
+                "Text": "거리 시장"
+              },
+              {
+                "Language": "yue",
+                "Text": "街市"
+              },
+              {
+                "Language": "en",
+                "Text": "Street market"
+              },
+              {
+                "Language": "it",
+                "Text": "Mercato di strada"
+              },
+              {
+                "Language": "fr",
+                "Text": "Marché de rue"
+              },
+              {
+                "Language": "es",
+                "Text": "Mercado de la calle"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "街市"
+              },
+              {
+                "Language": "ar",
+                "Text": "شارع السوق"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "街市"
+              },
+              {
+                "Language": "ja",
+                "Text": "ストリート マーケット"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Lokale" },
-          { Language: "ru", Text: "Местные" },
-          { Language: "pt", Text: "Local" },
-          { Language: "ko", Text: "지역" },
-          { Language: "yue", Text: "地方" },
-          { Language: "en", Text: "Local" },
-          { Language: "it", Text: "Locale" },
-          { Language: "fr", Text: "Local" },
-          { Language: "es", Text: "Local" },
-          { Language: "zh-CHT", Text: "地方" },
-          { Language: "ar", Text: "المحلية" },
-          { Language: "zh-CHS", Text: "地方" },
-          { Language: "ja", Text: "ローカル" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Lokale" },
-          { Language: "ru", Text: "Местные" },
-          { Language: "pt", Text: "Local" },
-          { Language: "ko", Text: "지역" },
-          { Language: "yue", Text: "地方" },
-          { Language: "en", Text: "Local" },
-          { Language: "it", Text: "Locale" },
-          { Language: "fr", Text: "Local" },
-          { Language: "es", Text: "Local" },
-          { Language: "zh-CHT", Text: "地方" },
-          { Language: "ar", Text: "المحلية" },
-          { Language: "zh-CHS", Text: "地方" },
-          { Language: "ja", Text: "ローカル" }
+          {
+            "Language": "de",
+            "Text": "Lokale"
+          },
+          {
+            "Language": "ru",
+            "Text": "Местные"
+          },
+          {
+            "Language": "pt",
+            "Text": "Local"
+          },
+          {
+            "Language": "ko",
+            "Text": "지역"
+          },
+          {
+            "Language": "yue",
+            "Text": "地方"
+          },
+          {
+            "Language": "en",
+            "Text": "Local"
+          },
+          {
+            "Language": "it",
+            "Text": "Locale"
+          },
+          {
+            "Language": "fr",
+            "Text": "Local"
+          },
+          {
+            "Language": "es",
+            "Text": "Local"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "地方"
+          },
+          {
+            "Language": "ar",
+            "Text": "المحلية"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "地方"
+          },
+          {
+            "Language": "ja",
+            "Text": "ローカル"
+          }
         ]
       },
       {
@@ -5603,883 +9548,1533 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000154",
             DisplayName: "假牙",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Falsche Zähne" },
-              { Language: "ru", Text: "Вставные зубы" },
-              { Language: "pt", Text: "Dentes postiços" },
-              { Language: "ko", Text: "틀니" },
-              { Language: "yue", Text: "假牙" },
-              { Language: "en", Text: "False teeth" },
-              { Language: "it", Text: "Denti falsi" },
-              { Language: "fr", Text: "Fausses dents" },
-              { Language: "es", Text: "Dentadura postiza" },
-              { Language: "zh-CHT", Text: "假牙" },
-              { Language: "ar", Text: "أسنان اصطناعية" },
-              { Language: "zh-CHS", Text: "假牙" },
-              { Language: "ja", Text: "入れ歯" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Falsche Zähne" },
-              { Language: "ru", Text: "Вставные зубы" },
-              { Language: "pt", Text: "Dentes postiços" },
-              { Language: "ko", Text: "틀니" },
-              { Language: "yue", Text: "假牙" },
-              { Language: "en", Text: "False teeth" },
-              { Language: "it", Text: "Denti falsi" },
-              { Language: "fr", Text: "Fausses dents" },
-              { Language: "es", Text: "Dentadura postiza" },
-              { Language: "zh-CHT", Text: "假牙" },
-              { Language: "ar", Text: "أسنان اصطناعية" },
-              { Language: "zh-CHS", Text: "假牙" },
-              { Language: "ja", Text: "入れ歯" }
+              {
+                "Language": "de",
+                "Text": "Falsche Zähne"
+              },
+              {
+                "Language": "ru",
+                "Text": "Вставные зубы"
+              },
+              {
+                "Language": "pt",
+                "Text": "Dentes postiços"
+              },
+              {
+                "Language": "ko",
+                "Text": "틀니"
+              },
+              {
+                "Language": "yue",
+                "Text": "假牙"
+              },
+              {
+                "Language": "en",
+                "Text": "False teeth"
+              },
+              {
+                "Language": "it",
+                "Text": "Denti falsi"
+              },
+              {
+                "Language": "fr",
+                "Text": "Fausses dents"
+              },
+              {
+                "Language": "es",
+                "Text": "Dentadura postiza"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "假牙"
+              },
+              {
+                "Language": "ar",
+                "Text": "أسنان اصطناعية"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "假牙"
+              },
+              {
+                "Language": "ja",
+                "Text": "入れ歯"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000155",
             DisplayName: "首飾",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Schmuck" },
-              { Language: "ru", Text: "Ювелирные изделия" },
-              { Language: "pt", Text: "Joias" },
-              { Language: "ko", Text: "보석" },
-              { Language: "yue", Text: "首飾" },
-              { Language: "en", Text: "Jewellery" },
-              { Language: "it", Text: "Gioielli" },
-              { Language: "fr", Text: "Bijoux" },
-              { Language: "es", Text: "Joyería" },
-              { Language: "zh-CHT", Text: "首飾" },
-              { Language: "ar", Text: "مجوهرات" },
-              { Language: "zh-CHS", Text: "首饰" },
-              { Language: "ja", Text: "ジュエリー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Schmuck" },
-              { Language: "ru", Text: "Ювелирные изделия" },
-              { Language: "pt", Text: "Joias" },
-              { Language: "ko", Text: "보석" },
-              { Language: "yue", Text: "首飾" },
-              { Language: "en", Text: "Jewellery" },
-              { Language: "it", Text: "Gioielli" },
-              { Language: "fr", Text: "Bijoux" },
-              { Language: "es", Text: "Joyería" },
-              { Language: "zh-CHT", Text: "首飾" },
-              { Language: "ar", Text: "مجوهرات" },
-              { Language: "zh-CHS", Text: "首饰" },
-              { Language: "ja", Text: "ジュエリー" }
+              {
+                "Language": "de",
+                "Text": "Schmuck"
+              },
+              {
+                "Language": "ru",
+                "Text": "Ювелирные изделия"
+              },
+              {
+                "Language": "pt",
+                "Text": "Joias"
+              },
+              {
+                "Language": "ko",
+                "Text": "보석"
+              },
+              {
+                "Language": "yue",
+                "Text": "首飾"
+              },
+              {
+                "Language": "en",
+                "Text": "Jewellery"
+              },
+              {
+                "Language": "it",
+                "Text": "Gioielli"
+              },
+              {
+                "Language": "fr",
+                "Text": "Bijoux"
+              },
+              {
+                "Language": "es",
+                "Text": "Joyería"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "首飾"
+              },
+              {
+                "Language": "ar",
+                "Text": "مجوهرات"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "首饰"
+              },
+              {
+                "Language": "ja",
+                "Text": "ジュエリー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000156",
             DisplayName: "手錶",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Uhr" },
-              { Language: "ru", Text: "Часы" },
-              { Language: "pt", Text: "Relógio" },
-              { Language: "ko", Text: "시계" },
-              { Language: "yue", Text: "手錶" },
-              { Language: "en", Text: "Watch" },
-              { Language: "it", Text: "Orologio" },
-              { Language: "fr", Text: "Montre" },
-              { Language: "es", Text: "Reloj" },
-              { Language: "zh-CHT", Text: "手錶" },
-              { Language: "ar", Text: "مشاهدة" },
-              { Language: "zh-CHS", Text: "手表" },
-              { Language: "ja", Text: "時計" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Uhr" },
-              { Language: "ru", Text: "Часы" },
-              { Language: "pt", Text: "Relógio" },
-              { Language: "ko", Text: "시계" },
-              { Language: "yue", Text: "手錶" },
-              { Language: "en", Text: "Watch" },
-              { Language: "it", Text: "Orologio" },
-              { Language: "fr", Text: "Montre" },
-              { Language: "es", Text: "Reloj" },
-              { Language: "zh-CHT", Text: "手錶" },
-              { Language: "ar", Text: "مشاهدة" },
-              { Language: "zh-CHS", Text: "手表" },
-              { Language: "ja", Text: "時計" }
+              {
+                "Language": "de",
+                "Text": "Uhr"
+              },
+              {
+                "Language": "ru",
+                "Text": "Часы"
+              },
+              {
+                "Language": "pt",
+                "Text": "Relógio"
+              },
+              {
+                "Language": "ko",
+                "Text": "시계"
+              },
+              {
+                "Language": "yue",
+                "Text": "手錶"
+              },
+              {
+                "Language": "en",
+                "Text": "Watch"
+              },
+              {
+                "Language": "it",
+                "Text": "Orologio"
+              },
+              {
+                "Language": "fr",
+                "Text": "Montre"
+              },
+              {
+                "Language": "es",
+                "Text": "Reloj"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "手錶"
+              },
+              {
+                "Language": "ar",
+                "Text": "مشاهدة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "手表"
+              },
+              {
+                "Language": "ja",
+                "Text": "時計"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000157",
             DisplayName: "廁紙",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "WC-Papier" },
-              { Language: "ru", Text: "Туалетная бумага" },
-              { Language: "pt", Text: "Papel higiênico" },
-              { Language: "ko", Text: "화장지" },
-              { Language: "yue", Text: "廁紙" },
-              { Language: "en", Text: "Toilet paper" },
-              { Language: "it", Text: "Carta igienica" },
-              { Language: "fr", Text: "Papier hygiénique" },
-              { Language: "es", Text: "Papel higiénico" },
-              { Language: "zh-CHT", Text: "衛生紙" },
-              { Language: "ar", Text: "ورق التواليت" },
-              { Language: "zh-CHS", Text: "卫生纸" },
-              { Language: "ja", Text: "トイレット ペーパー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "WC-Papier" },
-              { Language: "ru", Text: "Туалетная бумага" },
-              { Language: "pt", Text: "Papel higiênico" },
-              { Language: "ko", Text: "화장지" },
-              { Language: "yue", Text: "廁紙" },
-              { Language: "en", Text: "Toilet paper" },
-              { Language: "it", Text: "Carta igienica" },
-              { Language: "fr", Text: "Papier hygiénique" },
-              { Language: "es", Text: "Papel higiénico" },
-              { Language: "zh-CHT", Text: "衛生紙" },
-              { Language: "ar", Text: "ورق التواليت" },
-              { Language: "zh-CHS", Text: "卫生纸" },
-              { Language: "ja", Text: "トイレット ペーパー" }
+              {
+                "Language": "de",
+                "Text": "WC-Papier"
+              },
+              {
+                "Language": "ru",
+                "Text": "Туалетная бумага"
+              },
+              {
+                "Language": "pt",
+                "Text": "Papel higiênico"
+              },
+              {
+                "Language": "ko",
+                "Text": "화장지"
+              },
+              {
+                "Language": "yue",
+                "Text": "廁紙"
+              },
+              {
+                "Language": "en",
+                "Text": "Toilet paper"
+              },
+              {
+                "Language": "it",
+                "Text": "Carta igienica"
+              },
+              {
+                "Language": "fr",
+                "Text": "Papier hygiénique"
+              },
+              {
+                "Language": "es",
+                "Text": "Papel higiénico"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "衛生紙"
+              },
+              {
+                "Language": "ar",
+                "Text": "ورق التواليت"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "卫生纸"
+              },
+              {
+                "Language": "ja",
+                "Text": "トイレット ペーパー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000158",
             DisplayName: "眼鏡",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Brille" },
-              { Language: "ru", Text: "Очки" },
-              { Language: "pt", Text: "Óculos" },
-              { Language: "ko", Text: "안경" },
-              { Language: "yue", Text: "眼鏡" },
-              { Language: "en", Text: "Glasses" },
-              { Language: "it", Text: "Occhiali" },
-              { Language: "fr", Text: "Lunettes" },
-              { Language: "es", Text: "Gafas" },
-              { Language: "zh-CHT", Text: "眼鏡" },
-              { Language: "ar", Text: "نظارات" },
-              { Language: "zh-CHS", Text: "眼镜" },
-              { Language: "ja", Text: "メガネ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Brille" },
-              { Language: "ru", Text: "Очки" },
-              { Language: "pt", Text: "Óculos" },
-              { Language: "ko", Text: "안경" },
-              { Language: "yue", Text: "眼鏡" },
-              { Language: "en", Text: "Glasses" },
-              { Language: "it", Text: "Occhiali" },
-              { Language: "fr", Text: "Lunettes" },
-              { Language: "es", Text: "Gafas" },
-              { Language: "zh-CHT", Text: "眼鏡" },
-              { Language: "ar", Text: "نظارات" },
-              { Language: "zh-CHS", Text: "眼镜" },
-              { Language: "ja", Text: "メガネ" }
+              {
+                "Language": "de",
+                "Text": "Brille"
+              },
+              {
+                "Language": "ru",
+                "Text": "Очки"
+              },
+              {
+                "Language": "pt",
+                "Text": "Óculos"
+              },
+              {
+                "Language": "ko",
+                "Text": "안경"
+              },
+              {
+                "Language": "yue",
+                "Text": "眼鏡"
+              },
+              {
+                "Language": "en",
+                "Text": "Glasses"
+              },
+              {
+                "Language": "it",
+                "Text": "Occhiali"
+              },
+              {
+                "Language": "fr",
+                "Text": "Lunettes"
+              },
+              {
+                "Language": "es",
+                "Text": "Gafas"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "眼鏡"
+              },
+              {
+                "Language": "ar",
+                "Text": "نظارات"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "眼镜"
+              },
+              {
+                "Language": "ja",
+                "Text": "メガネ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000159",
             DisplayName: "助聽器",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Hörgerät" },
-              { Language: "ru", Text: "Слуховой аппарат" },
-              { Language: "pt", Text: "Aparelho auditivo" },
-              { Language: "ko", Text: "청력 보조" },
-              { Language: "yue", Text: "助聽器" },
-              { Language: "en", Text: "Hearing aid" },
-              { Language: "it", Text: "Apparecchio acustico" },
-              { Language: "fr", Text: "Prothèse auditive" },
-              { Language: "es", Text: "Prótesis de oído" },
-              { Language: "zh-CHT", Text: "助聽器" },
-              { Language: "ar", Text: "السمع" },
-              { Language: "zh-CHS", Text: "助听器" },
-              { Language: "ja", Text: "補聴器" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Hörgerät" },
-              { Language: "ru", Text: "Слуховой аппарат" },
-              { Language: "pt", Text: "Aparelho auditivo" },
-              { Language: "ko", Text: "청력 보조" },
-              { Language: "yue", Text: "助聽器" },
-              { Language: "en", Text: "Hearing aid" },
-              { Language: "it", Text: "Apparecchio acustico" },
-              { Language: "fr", Text: "Prothèse auditive" },
-              { Language: "es", Text: "Prótesis de oído" },
-              { Language: "zh-CHT", Text: "助聽器" },
-              { Language: "ar", Text: "السمع" },
-              { Language: "zh-CHS", Text: "助听器" },
-              { Language: "ja", Text: "補聴器" }
+              {
+                "Language": "de",
+                "Text": "Hörgerät"
+              },
+              {
+                "Language": "ru",
+                "Text": "Слуховой аппарат"
+              },
+              {
+                "Language": "pt",
+                "Text": "Aparelho auditivo"
+              },
+              {
+                "Language": "ko",
+                "Text": "청력 보조"
+              },
+              {
+                "Language": "yue",
+                "Text": "助聽器"
+              },
+              {
+                "Language": "en",
+                "Text": "Hearing aid"
+              },
+              {
+                "Language": "it",
+                "Text": "Apparecchio acustico"
+              },
+              {
+                "Language": "fr",
+                "Text": "Prothèse auditive"
+              },
+              {
+                "Language": "es",
+                "Text": "Prótesis de oído"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "助聽器"
+              },
+              {
+                "Language": "ar",
+                "Text": "السمع"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "助听器"
+              },
+              {
+                "Language": "ja",
+                "Text": "補聴器"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000160",
             DisplayName: "鏡",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Spiegel" },
-              { Language: "ru", Text: "Зеркало" },
-              { Language: "pt", Text: "Espelho" },
-              { Language: "ko", Text: "미러" },
-              { Language: "yue", Text: "鏡" },
-              { Language: "en", Text: "Mirror" },
-              { Language: "it", Text: "Specchio" },
-              { Language: "fr", Text: "Miroir" },
-              { Language: "es", Text: "Espejo" },
-              { Language: "zh-CHT", Text: "鏡" },
-              { Language: "ar", Text: "مرآة" },
-              { Language: "zh-CHS", Text: "镜" },
-              { Language: "ja", Text: "ミラー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Spiegel" },
-              { Language: "ru", Text: "Зеркало" },
-              { Language: "pt", Text: "Espelho" },
-              { Language: "ko", Text: "미러" },
-              { Language: "yue", Text: "鏡" },
-              { Language: "en", Text: "Mirror" },
-              { Language: "it", Text: "Specchio" },
-              { Language: "fr", Text: "Miroir" },
-              { Language: "es", Text: "Espejo" },
-              { Language: "zh-CHT", Text: "鏡" },
-              { Language: "ar", Text: "مرآة" },
-              { Language: "zh-CHS", Text: "镜" },
-              { Language: "ja", Text: "ミラー" }
+              {
+                "Language": "de",
+                "Text": "Spiegel"
+              },
+              {
+                "Language": "ru",
+                "Text": "Зеркало"
+              },
+              {
+                "Language": "pt",
+                "Text": "Espelho"
+              },
+              {
+                "Language": "ko",
+                "Text": "미러"
+              },
+              {
+                "Language": "yue",
+                "Text": "鏡"
+              },
+              {
+                "Language": "en",
+                "Text": "Mirror"
+              },
+              {
+                "Language": "it",
+                "Text": "Specchio"
+              },
+              {
+                "Language": "fr",
+                "Text": "Miroir"
+              },
+              {
+                "Language": "es",
+                "Text": "Espejo"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "鏡"
+              },
+              {
+                "Language": "ar",
+                "Text": "مرآة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "镜"
+              },
+              {
+                "Language": "ja",
+                "Text": "ミラー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000161",
             DisplayName: "潤膚露",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Bodylotion" },
-              { Language: "ru", Text: "Лосьон для тела" },
-              { Language: "pt", Text: "Loção para o corpo" },
-              { Language: "ko", Text: "바디 로션" },
-              { Language: "yue", Text: "潤膚露" },
-              { Language: "en", Text: "Body lotion" },
-              { Language: "it", Text: "Lozione per il corpo" },
-              { Language: "fr", Text: "Lotion pour le corps" },
-              { Language: "es", Text: "Loción del cuerpo" },
-              { Language: "zh-CHT", Text: "潤膚露" },
-              { Language: "ar", Text: "لوسيون الجسم" },
-              { Language: "zh-CHS", Text: "润肤露" },
-              { Language: "ja", Text: "ボディ ローション" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Bodylotion" },
-              { Language: "ru", Text: "Лосьон для тела" },
-              { Language: "pt", Text: "Loção para o corpo" },
-              { Language: "ko", Text: "바디 로션" },
-              { Language: "yue", Text: "潤膚露" },
-              { Language: "en", Text: "Body lotion" },
-              { Language: "it", Text: "Lozione per il corpo" },
-              { Language: "fr", Text: "Lotion pour le corps" },
-              { Language: "es", Text: "Loción del cuerpo" },
-              { Language: "zh-CHT", Text: "潤膚露" },
-              { Language: "ar", Text: "لوسيون الجسم" },
-              { Language: "zh-CHS", Text: "润肤露" },
-              { Language: "ja", Text: "ボディ ローション" }
+              {
+                "Language": "de",
+                "Text": "Bodylotion"
+              },
+              {
+                "Language": "ru",
+                "Text": "Лосьон для тела"
+              },
+              {
+                "Language": "pt",
+                "Text": "Loção para o corpo"
+              },
+              {
+                "Language": "ko",
+                "Text": "바디 로션"
+              },
+              {
+                "Language": "yue",
+                "Text": "潤膚露"
+              },
+              {
+                "Language": "en",
+                "Text": "Body lotion"
+              },
+              {
+                "Language": "it",
+                "Text": "Lozione per il corpo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Lotion pour le corps"
+              },
+              {
+                "Language": "es",
+                "Text": "Loción del cuerpo"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "潤膚露"
+              },
+              {
+                "Language": "ar",
+                "Text": "لوسيون الجسم"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "润肤露"
+              },
+              {
+                "Language": "ja",
+                "Text": "ボディ ローション"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000162",
             DisplayName: "風筒",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Luftschlauch" },
-              { Language: "ru", Text: "Воздушная трубка" },
-              { Language: "pt", Text: "Tubo de ar" },
-              { Language: "ko", Text: "공기 튜브" },
-              { Language: "yue", Text: "風筒" },
-              { Language: "en", Text: "Air tube" },
-              { Language: "it", Text: "Tubo aria" },
-              { Language: "fr", Text: "Tuyau d’air" },
-              { Language: "es", Text: "Tubo de aire" },
-              { Language: "zh-CHT", Text: "風筒" },
-              { Language: "ar", Text: "أنبوب الهواء" },
-              { Language: "zh-CHS", Text: "风筒" },
-              { Language: "ja", Text: "空気管" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Luftschlauch" },
-              { Language: "ru", Text: "Воздушная трубка" },
-              { Language: "pt", Text: "Tubo de ar" },
-              { Language: "ko", Text: "공기 튜브" },
-              { Language: "yue", Text: "風筒" },
-              { Language: "en", Text: "Air tube" },
-              { Language: "it", Text: "Tubo aria" },
-              { Language: "fr", Text: "Tuyau d’air" },
-              { Language: "es", Text: "Tubo de aire" },
-              { Language: "zh-CHT", Text: "風筒" },
-              { Language: "ar", Text: "أنبوب الهواء" },
-              { Language: "zh-CHS", Text: "风筒" },
-              { Language: "ja", Text: "空気管" }
+              {
+                "Language": "de",
+                "Text": "Luftschlauch"
+              },
+              {
+                "Language": "ru",
+                "Text": "Воздушная трубка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Tubo de ar"
+              },
+              {
+                "Language": "ko",
+                "Text": "공기 튜브"
+              },
+              {
+                "Language": "yue",
+                "Text": "風筒"
+              },
+              {
+                "Language": "en",
+                "Text": "Air tube"
+              },
+              {
+                "Language": "it",
+                "Text": "Tubo aria"
+              },
+              {
+                "Language": "fr",
+                "Text": "Tuyau d’air"
+              },
+              {
+                "Language": "es",
+                "Text": "Tubo de aire"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "風筒"
+              },
+              {
+                "Language": "ar",
+                "Text": "أنبوب الهواء"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "风筒"
+              },
+              {
+                "Language": "ja",
+                "Text": "空気管"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000163",
             DisplayName: "牙膏／牙刷",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Zahnpasta/Zahnbürste" },
-              { Language: "ru", Text: "Зубная паста/зубная щетка" },
-              { Language: "pt", Text: "Pasta de dente/escova de dentes" },
-              { Language: "ko", Text: "치약/칫 솔" },
-              { Language: "yue", Text: "牙膏／牙刷" },
-              { Language: "en", Text: "Toothpaste/toothbrush" },
-              { Language: "it", Text: "Dentifricio/spazzolino da denti" },
-              { Language: "fr", Text: "Dentifrice/brosse à dents" },
-              { Language: "es", Text: "Cepillo de dientes/pasta dental" },
-              { Language: "zh-CHT", Text: "牙膏/牙刷" },
-              { Language: "ar", Text: "معجون الأسنان/فرشاة الأسنان" },
-              { Language: "zh-CHS", Text: "牙膏/牙刷" },
-              { Language: "ja", Text: "歯磨き/歯ブラシ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Zahnpasta/Zahnbürste" },
-              { Language: "ru", Text: "Зубная паста/зубная щетка" },
-              { Language: "pt", Text: "Pasta de dente/escova de dentes" },
-              { Language: "ko", Text: "치약/칫 솔" },
-              { Language: "yue", Text: "牙膏／牙刷" },
-              { Language: "en", Text: "Toothpaste/toothbrush" },
-              { Language: "it", Text: "Dentifricio/spazzolino da denti" },
-              { Language: "fr", Text: "Dentifrice/brosse à dents" },
-              { Language: "es", Text: "Cepillo de dientes/pasta dental" },
-              { Language: "zh-CHT", Text: "牙膏/牙刷" },
-              { Language: "ar", Text: "معجون الأسنان/فرشاة الأسنان" },
-              { Language: "zh-CHS", Text: "牙膏/牙刷" },
-              { Language: "ja", Text: "歯磨き/歯ブラシ" }
+              {
+                "Language": "de",
+                "Text": "Zahnpasta/Zahnbürste"
+              },
+              {
+                "Language": "ru",
+                "Text": "Зубная паста/зубная щетка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pasta de dente/escova de dentes"
+              },
+              {
+                "Language": "ko",
+                "Text": "치약/칫 솔"
+              },
+              {
+                "Language": "yue",
+                "Text": "牙膏／牙刷"
+              },
+              {
+                "Language": "en",
+                "Text": "Toothpaste/toothbrush"
+              },
+              {
+                "Language": "it",
+                "Text": "Dentifricio/spazzolino da denti"
+              },
+              {
+                "Language": "fr",
+                "Text": "Dentifrice/brosse à dents"
+              },
+              {
+                "Language": "es",
+                "Text": "Cepillo de dientes/pasta dental"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "牙膏/牙刷"
+              },
+              {
+                "Language": "ar",
+                "Text": "معجون الأسنان/فرشاة الأسنان"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "牙膏/牙刷"
+              },
+              {
+                "Language": "ja",
+                "Text": "歯磨き/歯ブラシ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000164",
             DisplayName: "梳",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Buchse" },
-              { Language: "ru", Text: "Розетка" },
-              { Language: "pt", Text: "Soquete" },
-              { Language: "ko", Text: "소켓" },
-              { Language: "yue", Text: "梳" },
-              { Language: "en", Text: "Socket" },
-              { Language: "it", Text: "Presa di corrente" },
-              { Language: "fr", Text: "Prise de courant" },
-              { Language: "es", Text: "Toma de corriente" },
-              { Language: "zh-CHT", Text: "插座" },
-              { Language: "ar", Text: "مأخذ التوصيل" },
-              { Language: "zh-CHS", Text: "插座" },
-              { Language: "ja", Text: "ソケット" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Buchse" },
-              { Language: "ru", Text: "Розетка" },
-              { Language: "pt", Text: "Soquete" },
-              { Language: "ko", Text: "소켓" },
-              { Language: "yue", Text: "梳" },
-              { Language: "en", Text: "Socket" },
-              { Language: "it", Text: "Presa di corrente" },
-              { Language: "fr", Text: "Prise de courant" },
-              { Language: "es", Text: "Toma de corriente" },
-              { Language: "zh-CHT", Text: "插座" },
-              { Language: "ar", Text: "مأخذ التوصيل" },
-              { Language: "zh-CHS", Text: "插座" },
-              { Language: "ja", Text: "ソケット" }
+              {
+                "Language": "de",
+                "Text": "Buchse"
+              },
+              {
+                "Language": "ru",
+                "Text": "Розетка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Soquete"
+              },
+              {
+                "Language": "ko",
+                "Text": "소켓"
+              },
+              {
+                "Language": "yue",
+                "Text": "梳"
+              },
+              {
+                "Language": "en",
+                "Text": "Socket"
+              },
+              {
+                "Language": "it",
+                "Text": "Presa di corrente"
+              },
+              {
+                "Language": "fr",
+                "Text": "Prise de courant"
+              },
+              {
+                "Language": "es",
+                "Text": "Toma de corriente"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "插座"
+              },
+              {
+                "Language": "ar",
+                "Text": "مأخذ التوصيل"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "插座"
+              },
+              {
+                "Language": "ja",
+                "Text": "ソケット"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000165",
             DisplayName: "毛巾",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Waschlappen" },
-              { Language: "ru", Text: "Вымойте ткань" },
-              { Language: "pt", Text: "Lavar a roupa" },
-              { Language: "ko", Text: "워시 헝겊" },
-              { Language: "yue", Text: "毛巾" },
-              { Language: "en", Text: "Wash cloth" },
-              { Language: "it", Text: "Panno della lavata" },
-              { Language: "fr", Text: "Gant de toilette" },
-              { Language: "es", Text: "Paño de la colada" },
-              { Language: "zh-CHT", Text: "毛巾" },
-              { Language: "ar", Text: "يغسل القماش" },
-              { Language: "zh-CHS", Text: "毛巾" },
-              { Language: "ja", Text: "洗浄布" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Waschlappen" },
-              { Language: "ru", Text: "Вымойте ткань" },
-              { Language: "pt", Text: "Lavar a roupa" },
-              { Language: "ko", Text: "워시 헝겊" },
-              { Language: "yue", Text: "毛巾" },
-              { Language: "en", Text: "Wash cloth" },
-              { Language: "it", Text: "Panno della lavata" },
-              { Language: "fr", Text: "Gant de toilette" },
-              { Language: "es", Text: "Paño de la colada" },
-              { Language: "zh-CHT", Text: "毛巾" },
-              { Language: "ar", Text: "يغسل القماش" },
-              { Language: "zh-CHS", Text: "毛巾" },
-              { Language: "ja", Text: "洗浄布" }
+              {
+                "Language": "de",
+                "Text": "Waschlappen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Вымойте ткань"
+              },
+              {
+                "Language": "pt",
+                "Text": "Lavar a roupa"
+              },
+              {
+                "Language": "ko",
+                "Text": "워시 헝겊"
+              },
+              {
+                "Language": "yue",
+                "Text": "毛巾"
+              },
+              {
+                "Language": "en",
+                "Text": "Wash cloth"
+              },
+              {
+                "Language": "it",
+                "Text": "Panno della lavata"
+              },
+              {
+                "Language": "fr",
+                "Text": "Gant de toilette"
+              },
+              {
+                "Language": "es",
+                "Text": "Paño de la colada"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "毛巾"
+              },
+              {
+                "Language": "ar",
+                "Text": "يغسل القماش"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "毛巾"
+              },
+              {
+                "Language": "ja",
+                "Text": "洗浄布"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000166",
             DisplayName: "飲管",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Strohhalm trinken" },
-              { Language: "ru", Text: "Питьевой соломы" },
-              { Language: "pt", Text: "Canudo" },
-              { Language: "ko", Text: "빨 대를 마시면" },
-              { Language: "yue", Text: "飲管" },
-              { Language: "en", Text: "Drinking straw" },
-              { Language: "it", Text: "Cannuccia" },
-              { Language: "fr", Text: "Consommation de paille" },
-              { Language: "es", Text: "Paja de beber" },
-              { Language: "zh-CHT", Text: "吸管" },
-              { Language: "ar", Text: "ماصة شرب" },
-              { Language: "zh-CHS", Text: "吸管" },
-              { Language: "ja", Text: "ストロー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Strohhalm trinken" },
-              { Language: "ru", Text: "Питьевой соломы" },
-              { Language: "pt", Text: "Canudo" },
-              { Language: "ko", Text: "빨 대를 마시면" },
-              { Language: "yue", Text: "飲管" },
-              { Language: "en", Text: "Drinking straw" },
-              { Language: "it", Text: "Cannuccia" },
-              { Language: "fr", Text: "Consommation de paille" },
-              { Language: "es", Text: "Paja de beber" },
-              { Language: "zh-CHT", Text: "吸管" },
-              { Language: "ar", Text: "ماصة شرب" },
-              { Language: "zh-CHS", Text: "吸管" },
-              { Language: "ja", Text: "ストロー" }
+              {
+                "Language": "de",
+                "Text": "Strohhalm trinken"
+              },
+              {
+                "Language": "ru",
+                "Text": "Питьевой соломы"
+              },
+              {
+                "Language": "pt",
+                "Text": "Canudo"
+              },
+              {
+                "Language": "ko",
+                "Text": "빨 대를 마시면"
+              },
+              {
+                "Language": "yue",
+                "Text": "飲管"
+              },
+              {
+                "Language": "en",
+                "Text": "Drinking straw"
+              },
+              {
+                "Language": "it",
+                "Text": "Cannuccia"
+              },
+              {
+                "Language": "fr",
+                "Text": "Consommation de paille"
+              },
+              {
+                "Language": "es",
+                "Text": "Paja de beber"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "吸管"
+              },
+              {
+                "Language": "ar",
+                "Text": "ماصة شرب"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "吸管"
+              },
+              {
+                "Language": "ja",
+                "Text": "ストロー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000167",
             DisplayName: "凝固粉",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Erstarrung Pulver" },
-              { Language: "ru", Text: "Затвердевание порошок" },
-              { Language: "pt", Text: "Pó de solidificação" },
-              { Language: "ko", Text: "응고 분말" },
-              { Language: "yue", Text: "凝固粉" },
-              { Language: "en", Text: "Solidification powder" },
-              { Language: "it", Text: "Polvere di solidificazione" },
-              { Language: "fr", Text: "Poudre de solidification" },
-              { Language: "es", Text: "Polvo de solidificación" },
-              { Language: "zh-CHT", Text: "凝固粉" },
-              { Language: "ar", Text: "مسحوق التجميد" },
-              { Language: "zh-CHS", Text: "凝固粉" },
-              { Language: "ja", Text: "凝固粉末" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Erstarrung Pulver" },
-              { Language: "ru", Text: "Затвердевание порошок" },
-              { Language: "pt", Text: "Pó de solidificação" },
-              { Language: "ko", Text: "응고 분말" },
-              { Language: "yue", Text: "凝固粉" },
-              { Language: "en", Text: "Solidification powder" },
-              { Language: "it", Text: "Polvere di solidificazione" },
-              { Language: "fr", Text: "Poudre de solidification" },
-              { Language: "es", Text: "Polvo de solidificación" },
-              { Language: "zh-CHT", Text: "凝固粉" },
-              { Language: "ar", Text: "مسحوق التجميد" },
-              { Language: "zh-CHS", Text: "凝固粉" },
-              { Language: "ja", Text: "凝固粉末" }
+              {
+                "Language": "de",
+                "Text": "Erstarrung Pulver"
+              },
+              {
+                "Language": "ru",
+                "Text": "Затвердевание порошок"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pó de solidificação"
+              },
+              {
+                "Language": "ko",
+                "Text": "응고 분말"
+              },
+              {
+                "Language": "yue",
+                "Text": "凝固粉"
+              },
+              {
+                "Language": "en",
+                "Text": "Solidification powder"
+              },
+              {
+                "Language": "it",
+                "Text": "Polvere di solidificazione"
+              },
+              {
+                "Language": "fr",
+                "Text": "Poudre de solidification"
+              },
+              {
+                "Language": "es",
+                "Text": "Polvo de solidificación"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "凝固粉"
+              },
+              {
+                "Language": "ar",
+                "Text": "مسحوق التجميد"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "凝固粉"
+              },
+              {
+                "Language": "ja",
+                "Text": "凝固粉末"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000168",
             DisplayName: "匙羹",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Kleiner Löffel" },
-              { Language: "ru", Text: "Небольшая ложка" },
-              { Language: "pt", Text: "Colher pequena" },
-              { Language: "ko", Text: "작은 스푼" },
-              { Language: "yue", Text: "匙羹" },
-              { Language: "en", Text: "Small spoon" },
-              { Language: "it", Text: "Piccolo cucchiaio" },
-              { Language: "fr", Text: "Petite cuillère" },
-              { Language: "es", Text: "Cuchara pequeña" },
-              { Language: "zh-CHT", Text: "小勺子" },
-              { Language: "ar", Text: "ملعقة صغيرة" },
-              { Language: "zh-CHS", Text: "小勺子" },
-              { Language: "ja", Text: "小さいスプーン" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Kleiner Löffel" },
-              { Language: "ru", Text: "Небольшая ложка" },
-              { Language: "pt", Text: "Colher pequena" },
-              { Language: "ko", Text: "작은 스푼" },
-              { Language: "yue", Text: "匙羹" },
-              { Language: "en", Text: "Small spoon" },
-              { Language: "it", Text: "Piccolo cucchiaio" },
-              { Language: "fr", Text: "Petite cuillère" },
-              { Language: "es", Text: "Cuchara pequeña" },
-              { Language: "zh-CHT", Text: "小勺子" },
-              { Language: "ar", Text: "ملعقة صغيرة" },
-              { Language: "zh-CHS", Text: "小勺子" },
-              { Language: "ja", Text: "小さいスプーン" }
+              {
+                "Language": "de",
+                "Text": "Kleiner Löffel"
+              },
+              {
+                "Language": "ru",
+                "Text": "Небольшая ложка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Colher pequena"
+              },
+              {
+                "Language": "ko",
+                "Text": "작은 스푼"
+              },
+              {
+                "Language": "yue",
+                "Text": "匙羹"
+              },
+              {
+                "Language": "en",
+                "Text": "Small spoon"
+              },
+              {
+                "Language": "it",
+                "Text": "Piccolo cucchiaio"
+              },
+              {
+                "Language": "fr",
+                "Text": "Petite cuillère"
+              },
+              {
+                "Language": "es",
+                "Text": "Cuchara pequeña"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "小勺子"
+              },
+              {
+                "Language": "ar",
+                "Text": "ملعقة صغيرة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "小勺子"
+              },
+              {
+                "Language": "ja",
+                "Text": "小さいスプーン"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000169",
             DisplayName: "筷子",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Ess-Stäbchen" },
-              { Language: "ru", Text: "Палочки для еды" },
-              { Language: "pt", Text: "Pauzinhos" },
-              { Language: "ko", Text: "젓가락" },
-              { Language: "yue", Text: "筷子" },
-              { Language: "en", Text: "Chopsticks" },
-              { Language: "it", Text: "Bacchette" },
-              { Language: "fr", Text: "Baguettes" },
-              { Language: "es", Text: "Palillos" },
-              { Language: "zh-CHT", Text: "筷子" },
-              { Language: "ar", Text: "عيدان الطعام" },
-              { Language: "zh-CHS", Text: "筷子" },
-              { Language: "ja", Text: "箸" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Ess-Stäbchen" },
-              { Language: "ru", Text: "Палочки для еды" },
-              { Language: "pt", Text: "Pauzinhos" },
-              { Language: "ko", Text: "젓가락" },
-              { Language: "yue", Text: "筷子" },
-              { Language: "en", Text: "Chopsticks" },
-              { Language: "it", Text: "Bacchette" },
-              { Language: "fr", Text: "Baguettes" },
-              { Language: "es", Text: "Palillos" },
-              { Language: "zh-CHT", Text: "筷子" },
-              { Language: "ar", Text: "عيدان الطعام" },
-              { Language: "zh-CHS", Text: "筷子" },
-              { Language: "ja", Text: "箸" }
+              {
+                "Language": "de",
+                "Text": "Ess-Stäbchen"
+              },
+              {
+                "Language": "ru",
+                "Text": "Палочки для еды"
+              },
+              {
+                "Language": "pt",
+                "Text": "Pauzinhos"
+              },
+              {
+                "Language": "ko",
+                "Text": "젓가락"
+              },
+              {
+                "Language": "yue",
+                "Text": "筷子"
+              },
+              {
+                "Language": "en",
+                "Text": "Chopsticks"
+              },
+              {
+                "Language": "it",
+                "Text": "Bacchette"
+              },
+              {
+                "Language": "fr",
+                "Text": "Baguettes"
+              },
+              {
+                "Language": "es",
+                "Text": "Palillos"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "筷子"
+              },
+              {
+                "Language": "ar",
+                "Text": "عيدان الطعام"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "筷子"
+              },
+              {
+                "Language": "ja",
+                "Text": "箸"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000170",
             DisplayName: "藥油",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Pflanzliche Öle" },
-              { Language: "ru", Text: "Травяные масла" },
-              { Language: "pt", Text: "Óleos de ervas" },
-              { Language: "ko", Text: "허브 오일" },
-              { Language: "yue", Text: "藥油" },
-              { Language: "en", Text: "Herbal oils" },
-              { Language: "it", Text: "Oli vegetali" },
-              { Language: "fr", Text: "Huiles à base de plantes" },
-              { Language: "es", Text: "Aceites de hierbas" },
-              { Language: "zh-CHT", Text: "藥油" },
-              { Language: "ar", Text: "الزيوت العشبية" },
-              { Language: "zh-CHS", Text: "药油" },
-              { Language: "ja", Text: "ハーブオイル" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Pflanzliche Öle" },
-              { Language: "ru", Text: "Травяные масла" },
-              { Language: "pt", Text: "Óleos de ervas" },
-              { Language: "ko", Text: "허브 오일" },
-              { Language: "yue", Text: "藥油" },
-              { Language: "en", Text: "Herbal oils" },
-              { Language: "it", Text: "Oli vegetali" },
-              { Language: "fr", Text: "Huiles à base de plantes" },
-              { Language: "es", Text: "Aceites de hierbas" },
-              { Language: "zh-CHT", Text: "藥油" },
-              { Language: "ar", Text: "الزيوت العشبية" },
-              { Language: "zh-CHS", Text: "药油" },
-              { Language: "ja", Text: "ハーブオイル" }
+              {
+                "Language": "de",
+                "Text": "Pflanzliche Öle"
+              },
+              {
+                "Language": "ru",
+                "Text": "Травяные масла"
+              },
+              {
+                "Language": "pt",
+                "Text": "Óleos de ervas"
+              },
+              {
+                "Language": "ko",
+                "Text": "허브 오일"
+              },
+              {
+                "Language": "yue",
+                "Text": "藥油"
+              },
+              {
+                "Language": "en",
+                "Text": "Herbal oils"
+              },
+              {
+                "Language": "it",
+                "Text": "Oli vegetali"
+              },
+              {
+                "Language": "fr",
+                "Text": "Huiles à base de plantes"
+              },
+              {
+                "Language": "es",
+                "Text": "Aceites de hierbas"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "藥油"
+              },
+              {
+                "Language": "ar",
+                "Text": "الزيوت العشبية"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "药油"
+              },
+              {
+                "Language": "ja",
+                "Text": "ハーブオイル"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000171",
             DisplayName: "膠布",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Wundpflaster" },
-              { Language: "ru", Text: "Лейкопластырь" },
-              { Language: "pt", Text: "Emplastro adesivo" },
-              { Language: "ko", Text: "접착 석고" },
-              { Language: "yue", Text: "膠布" },
-              { Language: "en", Text: "Adhesive plaster" },
-              { Language: "it", Text: "Cerotto adesivo" },
-              { Language: "fr", Text: "Sparadrap" },
-              { Language: "es", Text: "Emplasto adhesivo" },
-              { Language: "zh-CHT", Text: "膠布" },
-              { Language: "ar", Text: "الجص لاصقة" },
-              { Language: "zh-CHS", Text: "胶布" },
-              { Language: "ja", Text: "絆創膏" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Wundpflaster" },
-              { Language: "ru", Text: "Лейкопластырь" },
-              { Language: "pt", Text: "Emplastro adesivo" },
-              { Language: "ko", Text: "접착 석고" },
-              { Language: "yue", Text: "膠布" },
-              { Language: "en", Text: "Adhesive plaster" },
-              { Language: "it", Text: "Cerotto adesivo" },
-              { Language: "fr", Text: "Sparadrap" },
-              { Language: "es", Text: "Emplasto adhesivo" },
-              { Language: "zh-CHT", Text: "膠布" },
-              { Language: "ar", Text: "الجص لاصقة" },
-              { Language: "zh-CHS", Text: "胶布" },
-              { Language: "ja", Text: "絆創膏" }
+              {
+                "Language": "de",
+                "Text": "Wundpflaster"
+              },
+              {
+                "Language": "ru",
+                "Text": "Лейкопластырь"
+              },
+              {
+                "Language": "pt",
+                "Text": "Emplastro adesivo"
+              },
+              {
+                "Language": "ko",
+                "Text": "접착 석고"
+              },
+              {
+                "Language": "yue",
+                "Text": "膠布"
+              },
+              {
+                "Language": "en",
+                "Text": "Adhesive plaster"
+              },
+              {
+                "Language": "it",
+                "Text": "Cerotto adesivo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Sparadrap"
+              },
+              {
+                "Language": "es",
+                "Text": "Emplasto adhesivo"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "膠布"
+              },
+              {
+                "Language": "ar",
+                "Text": "الجص لاصقة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "胶布"
+              },
+              {
+                "Language": "ja",
+                "Text": "絆創膏"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000172",
             DisplayName: "手袋",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Handtasche" },
-              { Language: "ru", Text: "Сумочка" },
-              { Language: "pt", Text: "Bolsa" },
-              { Language: "ko", Text: "핸드백" },
-              { Language: "yue", Text: "手袋" },
-              { Language: "en", Text: "Handbag" },
-              { Language: "it", Text: "Borsa" },
-              { Language: "fr", Text: "Sac à main" },
-              { Language: "es", Text: "Bolso" },
-              { Language: "zh-CHT", Text: "手袋" },
-              { Language: "ar", Text: "حقيبة يد" },
-              { Language: "zh-CHS", Text: "手袋" },
-              { Language: "ja", Text: "ハンドバッグ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Handtasche" },
-              { Language: "ru", Text: "Сумочка" },
-              { Language: "pt", Text: "Bolsa" },
-              { Language: "ko", Text: "핸드백" },
-              { Language: "yue", Text: "手袋" },
-              { Language: "en", Text: "Handbag" },
-              { Language: "it", Text: "Borsa" },
-              { Language: "fr", Text: "Sac à main" },
-              { Language: "es", Text: "Bolso" },
-              { Language: "zh-CHT", Text: "手袋" },
-              { Language: "ar", Text: "حقيبة يد" },
-              { Language: "zh-CHS", Text: "手袋" },
-              { Language: "ja", Text: "ハンドバッグ" }
+              {
+                "Language": "de",
+                "Text": "Handtasche"
+              },
+              {
+                "Language": "ru",
+                "Text": "Сумочка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Bolsa"
+              },
+              {
+                "Language": "ko",
+                "Text": "핸드백"
+              },
+              {
+                "Language": "yue",
+                "Text": "手袋"
+              },
+              {
+                "Language": "en",
+                "Text": "Handbag"
+              },
+              {
+                "Language": "it",
+                "Text": "Borsa"
+              },
+              {
+                "Language": "fr",
+                "Text": "Sac à main"
+              },
+              {
+                "Language": "es",
+                "Text": "Bolso"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "手袋"
+              },
+              {
+                "Language": "ar",
+                "Text": "حقيبة يد"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "手袋"
+              },
+              {
+                "Language": "ja",
+                "Text": "ハンドバッグ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000173",
             DisplayName: "銀包",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Geldbörse" },
-              { Language: "ru", Text: "Кошелек" },
-              { Language: "pt", Text: "Bolsa" },
-              { Language: "ko", Text: "지갑" },
-              { Language: "yue", Text: "銀包" },
-              { Language: "en", Text: "Purse" },
-              { Language: "it", Text: "Borsa" },
-              { Language: "fr", Text: "Sac à main" },
-              { Language: "es", Text: "Monedero" },
-              { Language: "zh-CHT", Text: "錢包" },
-              { Language: "ar", Text: "محفظة" },
-              { Language: "zh-CHS", Text: "钱包" },
-              { Language: "ja", Text: "財布" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Geldbörse" },
-              { Language: "ru", Text: "Кошелек" },
-              { Language: "pt", Text: "Bolsa" },
-              { Language: "ko", Text: "지갑" },
-              { Language: "yue", Text: "銀包" },
-              { Language: "en", Text: "Purse" },
-              { Language: "it", Text: "Borsa" },
-              { Language: "fr", Text: "Sac à main" },
-              { Language: "es", Text: "Monedero" },
-              { Language: "zh-CHT", Text: "錢包" },
-              { Language: "ar", Text: "محفظة" },
-              { Language: "zh-CHS", Text: "钱包" },
-              { Language: "ja", Text: "財布" }
+              {
+                "Language": "de",
+                "Text": "Geldbörse"
+              },
+              {
+                "Language": "ru",
+                "Text": "Кошелек"
+              },
+              {
+                "Language": "pt",
+                "Text": "Bolsa"
+              },
+              {
+                "Language": "ko",
+                "Text": "지갑"
+              },
+              {
+                "Language": "yue",
+                "Text": "銀包"
+              },
+              {
+                "Language": "en",
+                "Text": "Purse"
+              },
+              {
+                "Language": "it",
+                "Text": "Borsa"
+              },
+              {
+                "Language": "fr",
+                "Text": "Sac à main"
+              },
+              {
+                "Language": "es",
+                "Text": "Monedero"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "錢包"
+              },
+              {
+                "Language": "ar",
+                "Text": "محفظة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "钱包"
+              },
+              {
+                "Language": "ja",
+                "Text": "財布"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000174",
             DisplayName: "八達通",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Krake" },
-              { Language: "ru", Text: "Осьминог" },
-              { Language: "pt", Text: "Polvo" },
-              { Language: "ko", Text: "문 어" },
-              { Language: "yue", Text: "八達通" },
-              { Language: "en", Text: "Octopus" },
-              { Language: "it", Text: "Polpo" },
-              { Language: "fr", Text: "Poulpe" },
-              { Language: "es", Text: "Octopus" },
-              { Language: "zh-CHT", Text: "八達通" },
-              { Language: "ar", Text: "الأخطبوط" },
-              { Language: "zh-CHS", Text: "八达通" },
-              { Language: "ja", Text: "タコ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Krake" },
-              { Language: "ru", Text: "Осьминог" },
-              { Language: "pt", Text: "Polvo" },
-              { Language: "ko", Text: "문 어" },
-              { Language: "yue", Text: "八達通" },
-              { Language: "en", Text: "Octopus" },
-              { Language: "it", Text: "Polpo" },
-              { Language: "fr", Text: "Poulpe" },
-              { Language: "es", Text: "Octopus" },
-              { Language: "zh-CHT", Text: "八達通" },
-              { Language: "ar", Text: "الأخطبوط" },
-              { Language: "zh-CHS", Text: "八达通" },
-              { Language: "ja", Text: "タコ" }
+              {
+                "Language": "de",
+                "Text": "Krake"
+              },
+              {
+                "Language": "ru",
+                "Text": "Осьминог"
+              },
+              {
+                "Language": "pt",
+                "Text": "Polvo"
+              },
+              {
+                "Language": "ko",
+                "Text": "문 어"
+              },
+              {
+                "Language": "yue",
+                "Text": "八達通"
+              },
+              {
+                "Language": "en",
+                "Text": "Octopus"
+              },
+              {
+                "Language": "it",
+                "Text": "Polpo"
+              },
+              {
+                "Language": "fr",
+                "Text": "Poulpe"
+              },
+              {
+                "Language": "es",
+                "Text": "Octopus"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "八達通"
+              },
+              {
+                "Language": "ar",
+                "Text": "الأخطبوط"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "八达通"
+              },
+              {
+                "Language": "ja",
+                "Text": "タコ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000175",
             DisplayName: "鎖匙",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Schlüsselanhänger" },
-              { Language: "ru", Text: "Брелоки" },
-              { Language: "pt", Text: "Chaveiros" },
-              { Language: "ko", Text: "키 링" },
-              { Language: "yue", Text: "鎖匙" },
-              { Language: "en", Text: "Key rings" },
-              { Language: "it", Text: "Portachiavi" },
-              { Language: "fr", Text: "Porte-clés" },
-              { Language: "es", Text: "Llaveros" },
-              { Language: "zh-CHT", Text: "鎖匙" },
-              { Language: "ar", Text: "مفتاح الخواتم" },
-              { Language: "zh-CHS", Text: "锁匙" },
-              { Language: "ja", Text: "キー リング" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Schlüsselanhänger" },
-              { Language: "ru", Text: "Брелоки" },
-              { Language: "pt", Text: "Chaveiros" },
-              { Language: "ko", Text: "키 링" },
-              { Language: "yue", Text: "鎖匙" },
-              { Language: "en", Text: "Key rings" },
-              { Language: "it", Text: "Portachiavi" },
-              { Language: "fr", Text: "Porte-clés" },
-              { Language: "es", Text: "Llaveros" },
-              { Language: "zh-CHT", Text: "鎖匙" },
-              { Language: "ar", Text: "مفتاح الخواتم" },
-              { Language: "zh-CHS", Text: "锁匙" },
-              { Language: "ja", Text: "キー リング" }
+              {
+                "Language": "de",
+                "Text": "Schlüsselanhänger"
+              },
+              {
+                "Language": "ru",
+                "Text": "Брелоки"
+              },
+              {
+                "Language": "pt",
+                "Text": "Chaveiros"
+              },
+              {
+                "Language": "ko",
+                "Text": "키 링"
+              },
+              {
+                "Language": "yue",
+                "Text": "鎖匙"
+              },
+              {
+                "Language": "en",
+                "Text": "Key rings"
+              },
+              {
+                "Language": "it",
+                "Text": "Portachiavi"
+              },
+              {
+                "Language": "fr",
+                "Text": "Porte-clés"
+              },
+              {
+                "Language": "es",
+                "Text": "Llaveros"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "鎖匙"
+              },
+              {
+                "Language": "ar",
+                "Text": "مفتاح الخواتم"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "锁匙"
+              },
+              {
+                "Language": "ja",
+                "Text": "キー リング"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000176",
             DisplayName: "筆",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Stift" },
-              { Language: "ru", Text: "Ручка" },
-              { Language: "pt", Text: "Caneta" },
-              { Language: "ko", Text: "펜" },
-              { Language: "yue", Text: "筆" },
-              { Language: "en", Text: "Pen" },
-              { Language: "it", Text: "Penna" },
-              { Language: "fr", Text: "Stylo" },
-              { Language: "es", Text: "Pluma" },
-              { Language: "zh-CHT", Text: "筆" },
-              { Language: "ar", Text: "القلم" },
-              { Language: "zh-CHS", Text: "笔" },
-              { Language: "ja", Text: "ペン" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Stift" },
-              { Language: "ru", Text: "Ручка" },
-              { Language: "pt", Text: "Caneta" },
-              { Language: "ko", Text: "펜" },
-              { Language: "yue", Text: "筆" },
-              { Language: "en", Text: "Pen" },
-              { Language: "it", Text: "Penna" },
-              { Language: "fr", Text: "Stylo" },
-              { Language: "es", Text: "Pluma" },
-              { Language: "zh-CHT", Text: "筆" },
-              { Language: "ar", Text: "القلم" },
-              { Language: "zh-CHS", Text: "笔" },
-              { Language: "ja", Text: "ペン" }
+              {
+                "Language": "de",
+                "Text": "Stift"
+              },
+              {
+                "Language": "ru",
+                "Text": "Ручка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Caneta"
+              },
+              {
+                "Language": "ko",
+                "Text": "펜"
+              },
+              {
+                "Language": "yue",
+                "Text": "筆"
+              },
+              {
+                "Language": "en",
+                "Text": "Pen"
+              },
+              {
+                "Language": "it",
+                "Text": "Penna"
+              },
+              {
+                "Language": "fr",
+                "Text": "Stylo"
+              },
+              {
+                "Language": "es",
+                "Text": "Pluma"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "筆"
+              },
+              {
+                "Language": "ar",
+                "Text": "القلم"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "笔"
+              },
+              {
+                "Language": "ja",
+                "Text": "ペン"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000177",
             DisplayName: "身分證",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Identitätskarte" },
-              { Language: "ru", Text: "Удостоверение личности" },
-              { Language: "pt", Text: "Bilhete de identidade" },
-              { Language: "ko", Text: "신분 카드" },
-              { Language: "yue", Text: "身分證" },
-              { Language: "en", Text: "Identity card" },
-              { Language: "it", Text: "Carta d'identità" },
-              { Language: "fr", Text: "Carte d’identité" },
-              { Language: "es", Text: "Tarjeta de identidad" },
-              { Language: "zh-CHT", Text: "身分證" },
-              { Language: "ar", Text: "بطاقة الهوية" },
-              { Language: "zh-CHS", Text: "身分证" },
-              { Language: "ja", Text: "Id カード" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Identitätskarte" },
-              { Language: "ru", Text: "Удостоверение личности" },
-              { Language: "pt", Text: "Bilhete de identidade" },
-              { Language: "ko", Text: "신분 카드" },
-              { Language: "yue", Text: "身分證" },
-              { Language: "en", Text: "Identity card" },
-              { Language: "it", Text: "Carta d'identità" },
-              { Language: "fr", Text: "Carte d’identité" },
-              { Language: "es", Text: "Tarjeta de identidad" },
-              { Language: "zh-CHT", Text: "身分證" },
-              { Language: "ar", Text: "بطاقة الهوية" },
-              { Language: "zh-CHS", Text: "身分证" },
-              { Language: "ja", Text: "Id カード" }
+              {
+                "Language": "de",
+                "Text": "Identitätskarte"
+              },
+              {
+                "Language": "ru",
+                "Text": "Удостоверение личности"
+              },
+              {
+                "Language": "pt",
+                "Text": "Bilhete de identidade"
+              },
+              {
+                "Language": "ko",
+                "Text": "신분 카드"
+              },
+              {
+                "Language": "yue",
+                "Text": "身分證"
+              },
+              {
+                "Language": "en",
+                "Text": "Identity card"
+              },
+              {
+                "Language": "it",
+                "Text": "Carta d'identità"
+              },
+              {
+                "Language": "fr",
+                "Text": "Carte d’identité"
+              },
+              {
+                "Language": "es",
+                "Text": "Tarjeta de identidad"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "身分證"
+              },
+              {
+                "Language": "ar",
+                "Text": "بطاقة الهوية"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "身分证"
+              },
+              {
+                "Language": "ja",
+                "Text": "Id カード"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000178",
             DisplayName: "銀行存摺",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Bankbuch" },
-              { Language: "ru", Text: "Книга банка" },
-              { Language: "pt", Text: "Livro de banco" },
-              { Language: "ko", Text: "은행도 서" },
-              { Language: "yue", Text: "銀行存摺" },
-              { Language: "en", Text: "Bank book" },
-              { Language: "it", Text: "Libretto di banca" },
-              { Language: "fr", Text: "Livre de banque" },
-              { Language: "es", Text: "Libro de Banco" },
-              { Language: "zh-CHT", Text: "銀行存摺" },
-              { Language: "ar", Text: "كتاب البنك" },
-              { Language: "zh-CHS", Text: "银行存折" },
-              { Language: "ja", Text: "預金通帳" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Bankbuch" },
-              { Language: "ru", Text: "Книга банка" },
-              { Language: "pt", Text: "Livro de banco" },
-              { Language: "ko", Text: "은행도 서" },
-              { Language: "yue", Text: "銀行存摺" },
-              { Language: "en", Text: "Bank book" },
-              { Language: "it", Text: "Libretto di banca" },
-              { Language: "fr", Text: "Livre de banque" },
-              { Language: "es", Text: "Libro de Banco" },
-              { Language: "zh-CHT", Text: "銀行存摺" },
-              { Language: "ar", Text: "كتاب البنك" },
-              { Language: "zh-CHS", Text: "银行存折" },
-              { Language: "ja", Text: "預金通帳" }
+              {
+                "Language": "de",
+                "Text": "Bankbuch"
+              },
+              {
+                "Language": "ru",
+                "Text": "Книга банка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Livro de banco"
+              },
+              {
+                "Language": "ko",
+                "Text": "은행도 서"
+              },
+              {
+                "Language": "yue",
+                "Text": "銀行存摺"
+              },
+              {
+                "Language": "en",
+                "Text": "Bank book"
+              },
+              {
+                "Language": "it",
+                "Text": "Libretto di banca"
+              },
+              {
+                "Language": "fr",
+                "Text": "Livre de banque"
+              },
+              {
+                "Language": "es",
+                "Text": "Libro de Banco"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "銀行存摺"
+              },
+              {
+                "Language": "ar",
+                "Text": "كتاب البنك"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "银行存折"
+              },
+              {
+                "Language": "ja",
+                "Text": "預金通帳"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Dinge des täglichen Bedarfs" },
-          { Language: "ru", Text: "Ежедневные необходимости" },
-          { Language: "pt", Text: "Necessidades diárias" },
-          { Language: "ko", Text: "일용품" },
-          { Language: "yue", Text: "日用品" },
-          { Language: "en", Text: "Daily necessities" },
-          { Language: "it", Text: "Oggetti di uso quotidiani" },
-          { Language: "fr", Text: "Nécessités quotidiennes" },
-          { Language: "es", Text: "Necesidades diarias" },
-          { Language: "zh-CHT", Text: "日用品" },
-          { Language: "ar", Text: "الضروريات اليومية" },
-          { Language: "zh-CHS", Text: "日用品" },
-          { Language: "ja", Text: "生活必需品" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Dinge des täglichen Bedarfs" },
-          { Language: "ru", Text: "Ежедневные необходимости" },
-          { Language: "pt", Text: "Necessidades diárias" },
-          { Language: "ko", Text: "일용품" },
-          { Language: "yue", Text: "日用品" },
-          { Language: "en", Text: "Daily necessities" },
-          { Language: "it", Text: "Oggetti di uso quotidiani" },
-          { Language: "fr", Text: "Nécessités quotidiennes" },
-          { Language: "es", Text: "Necesidades diarias" },
-          { Language: "zh-CHT", Text: "日用品" },
-          { Language: "ar", Text: "الضروريات اليومية" },
-          { Language: "zh-CHS", Text: "日用品" },
-          { Language: "ja", Text: "生活必需品" }
+          {
+            "Language": "de",
+            "Text": "Dinge des täglichen Bedarfs"
+          },
+          {
+            "Language": "ru",
+            "Text": "Ежедневные необходимости"
+          },
+          {
+            "Language": "pt",
+            "Text": "Necessidades diárias"
+          },
+          {
+            "Language": "ko",
+            "Text": "일용품"
+          },
+          {
+            "Language": "yue",
+            "Text": "日用品"
+          },
+          {
+            "Language": "en",
+            "Text": "Daily necessities"
+          },
+          {
+            "Language": "it",
+            "Text": "Oggetti di uso quotidiani"
+          },
+          {
+            "Language": "fr",
+            "Text": "Nécessités quotidiennes"
+          },
+          {
+            "Language": "es",
+            "Text": "Necesidades diarias"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "日用品"
+          },
+          {
+            "Language": "ar",
+            "Text": "الضروريات اليومية"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "日用品"
+          },
+          {
+            "Language": "ja",
+            "Text": "生活必需品"
+          }
         ]
       },
       {
@@ -6489,373 +11084,648 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000179",
             DisplayName: "拖鞋",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Hausschuhe" },
-              { Language: "ru", Text: "Тапочки" },
-              { Language: "pt", Text: "Chinelos" },
-              { Language: "ko", Text: "슬리퍼" },
-              { Language: "yue", Text: "拖鞋" },
-              { Language: "en", Text: "Slippers" },
-              { Language: "it", Text: "Pantofole" },
-              { Language: "fr", Text: "Pantoufles" },
-              { Language: "es", Text: "Zapatillas" },
-              { Language: "zh-CHT", Text: "拖鞋" },
-              { Language: "ar", Text: "نعال" },
-              { Language: "zh-CHS", Text: "拖鞋" },
-              { Language: "ja", Text: "スリッパ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Hausschuhe" },
-              { Language: "ru", Text: "Тапочки" },
-              { Language: "pt", Text: "Chinelos" },
-              { Language: "ko", Text: "슬리퍼" },
-              { Language: "yue", Text: "拖鞋" },
-              { Language: "en", Text: "Slippers" },
-              { Language: "it", Text: "Pantofole" },
-              { Language: "fr", Text: "Pantoufles" },
-              { Language: "es", Text: "Zapatillas" },
-              { Language: "zh-CHT", Text: "拖鞋" },
-              { Language: "ar", Text: "نعال" },
-              { Language: "zh-CHS", Text: "拖鞋" },
-              { Language: "ja", Text: "スリッパ" }
+              {
+                "Language": "de",
+                "Text": "Hausschuhe"
+              },
+              {
+                "Language": "ru",
+                "Text": "Тапочки"
+              },
+              {
+                "Language": "pt",
+                "Text": "Chinelos"
+              },
+              {
+                "Language": "ko",
+                "Text": "슬리퍼"
+              },
+              {
+                "Language": "yue",
+                "Text": "拖鞋"
+              },
+              {
+                "Language": "en",
+                "Text": "Slippers"
+              },
+              {
+                "Language": "it",
+                "Text": "Pantofole"
+              },
+              {
+                "Language": "fr",
+                "Text": "Pantoufles"
+              },
+              {
+                "Language": "es",
+                "Text": "Zapatillas"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "拖鞋"
+              },
+              {
+                "Language": "ar",
+                "Text": "نعال"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "拖鞋"
+              },
+              {
+                "Language": "ja",
+                "Text": "スリッパ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000180",
             DisplayName: "尿片",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Windel" },
-              { Language: "ru", Text: "Пеленки" },
-              { Language: "pt", Text: "Fralda" },
-              { Language: "ko", Text: "기저귀" },
-              { Language: "yue", Text: "尿片" },
-              { Language: "en", Text: "Diaper" },
-              { Language: "it", Text: "Pannolino" },
-              { Language: "fr", Text: "Couche-culotte" },
-              { Language: "es", Text: "Pañal" },
-              { Language: "zh-CHT", Text: "尿布" },
-              { Language: "ar", Text: "حفاضات" },
-              { Language: "zh-CHS", Text: "尿布" },
-              { Language: "ja", Text: "おむつ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Windel" },
-              { Language: "ru", Text: "Пеленки" },
-              { Language: "pt", Text: "Fralda" },
-              { Language: "ko", Text: "기저귀" },
-              { Language: "yue", Text: "尿片" },
-              { Language: "en", Text: "Diaper" },
-              { Language: "it", Text: "Pannolino" },
-              { Language: "fr", Text: "Couche-culotte" },
-              { Language: "es", Text: "Pañal" },
-              { Language: "zh-CHT", Text: "尿布" },
-              { Language: "ar", Text: "حفاضات" },
-              { Language: "zh-CHS", Text: "尿布" },
-              { Language: "ja", Text: "おむつ" }
+              {
+                "Language": "de",
+                "Text": "Windel"
+              },
+              {
+                "Language": "ru",
+                "Text": "Пеленки"
+              },
+              {
+                "Language": "pt",
+                "Text": "Fralda"
+              },
+              {
+                "Language": "ko",
+                "Text": "기저귀"
+              },
+              {
+                "Language": "yue",
+                "Text": "尿片"
+              },
+              {
+                "Language": "en",
+                "Text": "Diaper"
+              },
+              {
+                "Language": "it",
+                "Text": "Pannolino"
+              },
+              {
+                "Language": "fr",
+                "Text": "Couche-culotte"
+              },
+              {
+                "Language": "es",
+                "Text": "Pañal"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "尿布"
+              },
+              {
+                "Language": "ar",
+                "Text": "حفاضات"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "尿布"
+              },
+              {
+                "Language": "ja",
+                "Text": "おむつ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000181",
             DisplayName: "裙",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Rock" },
-              { Language: "ru", Text: "Юбка" },
-              { Language: "pt", Text: "Saia" },
-              { Language: "ko", Text: "치마" },
-              { Language: "yue", Text: "裙" },
-              { Language: "en", Text: "Skirt" },
-              { Language: "it", Text: "Gonna" },
-              { Language: "fr", Text: "Jupe" },
-              { Language: "es", Text: "Falda" },
-              { Language: "zh-CHT", Text: "裙子" },
-              { Language: "ar", Text: "تنورة" },
-              { Language: "zh-CHS", Text: "裙子" },
-              { Language: "ja", Text: "スカート" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Rock" },
-              { Language: "ru", Text: "Юбка" },
-              { Language: "pt", Text: "Saia" },
-              { Language: "ko", Text: "치마" },
-              { Language: "yue", Text: "裙" },
-              { Language: "en", Text: "Skirt" },
-              { Language: "it", Text: "Gonna" },
-              { Language: "fr", Text: "Jupe" },
-              { Language: "es", Text: "Falda" },
-              { Language: "zh-CHT", Text: "裙子" },
-              { Language: "ar", Text: "تنورة" },
-              { Language: "zh-CHS", Text: "裙子" },
-              { Language: "ja", Text: "スカート" }
+              {
+                "Language": "de",
+                "Text": "Rock"
+              },
+              {
+                "Language": "ru",
+                "Text": "Юбка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Saia"
+              },
+              {
+                "Language": "ko",
+                "Text": "치마"
+              },
+              {
+                "Language": "yue",
+                "Text": "裙"
+              },
+              {
+                "Language": "en",
+                "Text": "Skirt"
+              },
+              {
+                "Language": "it",
+                "Text": "Gonna"
+              },
+              {
+                "Language": "fr",
+                "Text": "Jupe"
+              },
+              {
+                "Language": "es",
+                "Text": "Falda"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "裙子"
+              },
+              {
+                "Language": "ar",
+                "Text": "تنورة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "裙子"
+              },
+              {
+                "Language": "ja",
+                "Text": "スカート"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000182",
             DisplayName: "褲",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Hose" },
-              { Language: "ru", Text: "Брюки" },
-              { Language: "pt", Text: "Calças" },
-              { Language: "ko", Text: "바지" },
-              { Language: "yue", Text: "褲" },
-              { Language: "en", Text: "Pants" },
-              { Language: "it", Text: "Pantaloni" },
-              { Language: "fr", Text: "Jeans/Pantalons" },
-              { Language: "es", Text: "Pantalones" },
-              { Language: "zh-CHT", Text: "褲" },
-              { Language: "ar", Text: "السراويل" },
-              { Language: "zh-CHS", Text: "裤" },
-              { Language: "ja", Text: "パンツ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Hose" },
-              { Language: "ru", Text: "Брюки" },
-              { Language: "pt", Text: "Calças" },
-              { Language: "ko", Text: "바지" },
-              { Language: "yue", Text: "褲" },
-              { Language: "en", Text: "Pants" },
-              { Language: "it", Text: "Pantaloni" },
-              { Language: "fr", Text: "Jeans/Pantalons" },
-              { Language: "es", Text: "Pantalones" },
-              { Language: "zh-CHT", Text: "褲" },
-              { Language: "ar", Text: "السراويل" },
-              { Language: "zh-CHS", Text: "裤" },
-              { Language: "ja", Text: "パンツ" }
+              {
+                "Language": "de",
+                "Text": "Hose"
+              },
+              {
+                "Language": "ru",
+                "Text": "Брюки"
+              },
+              {
+                "Language": "pt",
+                "Text": "Calças"
+              },
+              {
+                "Language": "ko",
+                "Text": "바지"
+              },
+              {
+                "Language": "yue",
+                "Text": "褲"
+              },
+              {
+                "Language": "en",
+                "Text": "Pants"
+              },
+              {
+                "Language": "it",
+                "Text": "Pantaloni"
+              },
+              {
+                "Language": "fr",
+                "Text": "Jeans/Pantalons"
+              },
+              {
+                "Language": "es",
+                "Text": "Pantalones"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "褲"
+              },
+              {
+                "Language": "ar",
+                "Text": "السراويل"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "裤"
+              },
+              {
+                "Language": "ja",
+                "Text": "パンツ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000183",
             DisplayName: "鞋",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Schuhe" },
-              { Language: "ru", Text: "Обувь" },
-              { Language: "pt", Text: "Sapatos" },
-              { Language: "ko", Text: "신발" },
-              { Language: "yue", Text: "鞋" },
-              { Language: "en", Text: "Shoes" },
-              { Language: "it", Text: "Scarpe" },
-              { Language: "fr", Text: "Chaussures" },
-              { Language: "es", Text: "Zapatos" },
-              { Language: "zh-CHT", Text: "鞋子" },
-              { Language: "ar", Text: "أحذية" },
-              { Language: "zh-CHS", Text: "鞋子" },
-              { Language: "ja", Text: "靴" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Schuhe" },
-              { Language: "ru", Text: "Обувь" },
-              { Language: "pt", Text: "Sapatos" },
-              { Language: "ko", Text: "신발" },
-              { Language: "yue", Text: "鞋" },
-              { Language: "en", Text: "Shoes" },
-              { Language: "it", Text: "Scarpe" },
-              { Language: "fr", Text: "Chaussures" },
-              { Language: "es", Text: "Zapatos" },
-              { Language: "zh-CHT", Text: "鞋子" },
-              { Language: "ar", Text: "أحذية" },
-              { Language: "zh-CHS", Text: "鞋子" },
-              { Language: "ja", Text: "靴" }
+              {
+                "Language": "de",
+                "Text": "Schuhe"
+              },
+              {
+                "Language": "ru",
+                "Text": "Обувь"
+              },
+              {
+                "Language": "pt",
+                "Text": "Sapatos"
+              },
+              {
+                "Language": "ko",
+                "Text": "신발"
+              },
+              {
+                "Language": "yue",
+                "Text": "鞋"
+              },
+              {
+                "Language": "en",
+                "Text": "Shoes"
+              },
+              {
+                "Language": "it",
+                "Text": "Scarpe"
+              },
+              {
+                "Language": "fr",
+                "Text": "Chaussures"
+              },
+              {
+                "Language": "es",
+                "Text": "Zapatos"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "鞋子"
+              },
+              {
+                "Language": "ar",
+                "Text": "أحذية"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "鞋子"
+              },
+              {
+                "Language": "ja",
+                "Text": "靴"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000184",
             DisplayName: "襪",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Socke" },
-              { Language: "ru", Text: "Носок" },
-              { Language: "pt", Text: "Meia" },
-              { Language: "ko", Text: "양말" },
-              { Language: "yue", Text: "襪" },
-              { Language: "en", Text: "Sock" },
-              { Language: "it", Text: "Calzino" },
-              { Language: "fr", Text: "Chaussette" },
-              { Language: "es", Text: "Calcetín" },
-              { Language: "zh-CHT", Text: "襪子" },
-              { Language: "ar", Text: "جورب" },
-              { Language: "zh-CHS", Text: "袜子" },
-              { Language: "ja", Text: "靴下" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Socke" },
-              { Language: "ru", Text: "Носок" },
-              { Language: "pt", Text: "Meia" },
-              { Language: "ko", Text: "양말" },
-              { Language: "yue", Text: "襪" },
-              { Language: "en", Text: "Sock" },
-              { Language: "it", Text: "Calzino" },
-              { Language: "fr", Text: "Chaussette" },
-              { Language: "es", Text: "Calcetín" },
-              { Language: "zh-CHT", Text: "襪子" },
-              { Language: "ar", Text: "جورب" },
-              { Language: "zh-CHS", Text: "袜子" },
-              { Language: "ja", Text: "靴下" }
+              {
+                "Language": "de",
+                "Text": "Socke"
+              },
+              {
+                "Language": "ru",
+                "Text": "Носок"
+              },
+              {
+                "Language": "pt",
+                "Text": "Meia"
+              },
+              {
+                "Language": "ko",
+                "Text": "양말"
+              },
+              {
+                "Language": "yue",
+                "Text": "襪"
+              },
+              {
+                "Language": "en",
+                "Text": "Sock"
+              },
+              {
+                "Language": "it",
+                "Text": "Calzino"
+              },
+              {
+                "Language": "fr",
+                "Text": "Chaussette"
+              },
+              {
+                "Language": "es",
+                "Text": "Calcetín"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "襪子"
+              },
+              {
+                "Language": "ar",
+                "Text": "جورب"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "袜子"
+              },
+              {
+                "Language": "ja",
+                "Text": "靴下"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000185",
             DisplayName: "褸",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Jacke" },
-              { Language: "ru", Text: "Куртка" },
-              { Language: "pt", Text: "Jaqueta" },
-              { Language: "ko", Text: "자 켓" },
-              { Language: "yue", Text: "褸" },
-              { Language: "en", Text: "Jacket" },
-              { Language: "it", Text: "Giacca" },
-              { Language: "fr", Text: "Veste" },
-              { Language: "es", Text: "Chaqueta" },
-              { Language: "zh-CHT", Text: "外套" },
-              { Language: "ar", Text: "سترة" },
-              { Language: "zh-CHS", Text: "外套" },
-              { Language: "ja", Text: "ジャケット" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Jacke" },
-              { Language: "ru", Text: "Куртка" },
-              { Language: "pt", Text: "Jaqueta" },
-              { Language: "ko", Text: "자 켓" },
-              { Language: "yue", Text: "褸" },
-              { Language: "en", Text: "Jacket" },
-              { Language: "it", Text: "Giacca" },
-              { Language: "fr", Text: "Veste" },
-              { Language: "es", Text: "Chaqueta" },
-              { Language: "zh-CHT", Text: "外套" },
-              { Language: "ar", Text: "سترة" },
-              { Language: "zh-CHS", Text: "外套" },
-              { Language: "ja", Text: "ジャケット" }
+              {
+                "Language": "de",
+                "Text": "Jacke"
+              },
+              {
+                "Language": "ru",
+                "Text": "Куртка"
+              },
+              {
+                "Language": "pt",
+                "Text": "Jaqueta"
+              },
+              {
+                "Language": "ko",
+                "Text": "자 켓"
+              },
+              {
+                "Language": "yue",
+                "Text": "褸"
+              },
+              {
+                "Language": "en",
+                "Text": "Jacket"
+              },
+              {
+                "Language": "it",
+                "Text": "Giacca"
+              },
+              {
+                "Language": "fr",
+                "Text": "Veste"
+              },
+              {
+                "Language": "es",
+                "Text": "Chaqueta"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "外套"
+              },
+              {
+                "Language": "ar",
+                "Text": "سترة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "外套"
+              },
+              {
+                "Language": "ja",
+                "Text": "ジャケット"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000186",
             DisplayName: "頸巾",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Schal" },
-              { Language: "ru", Text: "Шарф" },
-              { Language: "pt", Text: "Cachecol" },
-              { Language: "ko", Text: "스카프" },
-              { Language: "yue", Text: "頸巾" },
-              { Language: "en", Text: "Scarf" },
-              { Language: "it", Text: "Sciarpa" },
-              { Language: "fr", Text: "Écharpe" },
-              { Language: "es", Text: "Bufanda de" },
-              { Language: "zh-CHT", Text: "圍巾" },
-              { Language: "ar", Text: "وشاح" },
-              { Language: "zh-CHS", Text: "围巾" },
-              { Language: "ja", Text: "スカーフ" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Schal" },
-              { Language: "ru", Text: "Шарф" },
-              { Language: "pt", Text: "Cachecol" },
-              { Language: "ko", Text: "스카프" },
-              { Language: "yue", Text: "頸巾" },
-              { Language: "en", Text: "Scarf" },
-              { Language: "it", Text: "Sciarpa" },
-              { Language: "fr", Text: "Écharpe" },
-              { Language: "es", Text: "Bufanda de" },
-              { Language: "zh-CHT", Text: "圍巾" },
-              { Language: "ar", Text: "وشاح" },
-              { Language: "zh-CHS", Text: "围巾" },
-              { Language: "ja", Text: "スカーフ" }
+              {
+                "Language": "de",
+                "Text": "Schal"
+              },
+              {
+                "Language": "ru",
+                "Text": "Шарф"
+              },
+              {
+                "Language": "pt",
+                "Text": "Cachecol"
+              },
+              {
+                "Language": "ko",
+                "Text": "스카프"
+              },
+              {
+                "Language": "yue",
+                "Text": "頸巾"
+              },
+              {
+                "Language": "en",
+                "Text": "Scarf"
+              },
+              {
+                "Language": "it",
+                "Text": "Sciarpa"
+              },
+              {
+                "Language": "fr",
+                "Text": "Écharpe"
+              },
+              {
+                "Language": "es",
+                "Text": "Bufanda de"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "圍巾"
+              },
+              {
+                "Language": "ar",
+                "Text": "وشاح"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "围巾"
+              },
+              {
+                "Language": "ja",
+                "Text": "スカーフ"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000187",
             DisplayName: "內衣",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Unterwäsche" },
-              { Language: "ru", Text: "Нижнее белье" },
-              { Language: "pt", Text: "Roupa interior" },
-              { Language: "ko", Text: "속옷" },
-              { Language: "yue", Text: "內衣" },
-              { Language: "en", Text: "Underwear" },
-              { Language: "it", Text: "Biancheria intima" },
-              { Language: "fr", Text: "Sous-vêtements" },
-              { Language: "es", Text: "Ropa interior" },
-              { Language: "zh-CHT", Text: "內衣" },
-              { Language: "ar", Text: "الملابس الداخلية" },
-              { Language: "zh-CHS", Text: "内衣" },
-              { Language: "ja", Text: "下着" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Unterwäsche" },
-              { Language: "ru", Text: "Нижнее белье" },
-              { Language: "pt", Text: "Roupa interior" },
-              { Language: "ko", Text: "속옷" },
-              { Language: "yue", Text: "內衣" },
-              { Language: "en", Text: "Underwear" },
-              { Language: "it", Text: "Biancheria intima" },
-              { Language: "fr", Text: "Sous-vêtements" },
-              { Language: "es", Text: "Ropa interior" },
-              { Language: "zh-CHT", Text: "內衣" },
-              { Language: "ar", Text: "الملابس الداخلية" },
-              { Language: "zh-CHS", Text: "内衣" },
-              { Language: "ja", Text: "下着" }
+              {
+                "Language": "de",
+                "Text": "Unterwäsche"
+              },
+              {
+                "Language": "ru",
+                "Text": "Нижнее белье"
+              },
+              {
+                "Language": "pt",
+                "Text": "Roupa interior"
+              },
+              {
+                "Language": "ko",
+                "Text": "속옷"
+              },
+              {
+                "Language": "yue",
+                "Text": "內衣"
+              },
+              {
+                "Language": "en",
+                "Text": "Underwear"
+              },
+              {
+                "Language": "it",
+                "Text": "Biancheria intima"
+              },
+              {
+                "Language": "fr",
+                "Text": "Sous-vêtements"
+              },
+              {
+                "Language": "es",
+                "Text": "Ropa interior"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "內衣"
+              },
+              {
+                "Language": "ar",
+                "Text": "الملابس الداخلية"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "内衣"
+              },
+              {
+                "Language": "ja",
+                "Text": "下着"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000188",
             DisplayName: "帽",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Hut" },
-              { Language: "ru", Text: "Шляпа" },
-              { Language: "pt", Text: "Chapéu" },
-              { Language: "ko", Text: "모자" },
-              { Language: "yue", Text: "帽" },
-              { Language: "en", Text: "Hat" },
-              { Language: "it", Text: "Cappello" },
-              { Language: "fr", Text: "Chapeau" },
-              { Language: "es", Text: "Sombrero" },
-              { Language: "zh-CHT", Text: "帽子" },
-              { Language: "ar", Text: "هات" },
-              { Language: "zh-CHS", Text: "帽子" },
-              { Language: "ja", Text: "帽子" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Hut" },
-              { Language: "ru", Text: "Шляпа" },
-              { Language: "pt", Text: "Chapéu" },
-              { Language: "ko", Text: "모자" },
-              { Language: "yue", Text: "帽" },
-              { Language: "en", Text: "Hat" },
-              { Language: "it", Text: "Cappello" },
-              { Language: "fr", Text: "Chapeau" },
-              { Language: "es", Text: "Sombrero" },
-              { Language: "zh-CHT", Text: "帽子" },
-              { Language: "ar", Text: "هات" },
-              { Language: "zh-CHS", Text: "帽子" },
-              { Language: "ja", Text: "帽子" }
+              {
+                "Language": "de",
+                "Text": "Hut"
+              },
+              {
+                "Language": "ru",
+                "Text": "Шляпа"
+              },
+              {
+                "Language": "pt",
+                "Text": "Chapéu"
+              },
+              {
+                "Language": "ko",
+                "Text": "모자"
+              },
+              {
+                "Language": "yue",
+                "Text": "帽"
+              },
+              {
+                "Language": "en",
+                "Text": "Hat"
+              },
+              {
+                "Language": "it",
+                "Text": "Cappello"
+              },
+              {
+                "Language": "fr",
+                "Text": "Chapeau"
+              },
+              {
+                "Language": "es",
+                "Text": "Sombrero"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "帽子"
+              },
+              {
+                "Language": "ar",
+                "Text": "هات"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "帽子"
+              },
+              {
+                "Language": "ja",
+                "Text": "帽子"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Kleidung" },
-          { Language: "ru", Text: "Одежда" },
-          { Language: "pt", Text: "Vestuário" },
-          { Language: "ko", Text: "의류" },
-          { Language: "yue", Text: "衣物" },
-          { Language: "en", Text: "Clothing" },
-          { Language: "it", Text: "Abbigliamento" },
-          { Language: "fr", Text: "Vêtements" },
-          { Language: "es", Text: "Ropa" },
-          { Language: "zh-CHT", Text: "衣物" },
-          { Language: "ar", Text: "ملابس" },
-          { Language: "zh-CHS", Text: "衣物" },
-          { Language: "ja", Text: "衣料品" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Kleidung" },
-          { Language: "ru", Text: "Одежда" },
-          { Language: "pt", Text: "Vestuário" },
-          { Language: "ko", Text: "의류" },
-          { Language: "yue", Text: "衣物" },
-          { Language: "en", Text: "Clothing" },
-          { Language: "it", Text: "Abbigliamento" },
-          { Language: "fr", Text: "Vêtements" },
-          { Language: "es", Text: "Ropa" },
-          { Language: "zh-CHT", Text: "衣物" },
-          { Language: "ar", Text: "ملابس" },
-          { Language: "zh-CHS", Text: "衣物" },
-          { Language: "ja", Text: "衣料品" }
+          {
+            "Language": "de",
+            "Text": "Kleidung"
+          },
+          {
+            "Language": "ru",
+            "Text": "Одежда"
+          },
+          {
+            "Language": "pt",
+            "Text": "Vestuário"
+          },
+          {
+            "Language": "ko",
+            "Text": "의류"
+          },
+          {
+            "Language": "yue",
+            "Text": "衣物"
+          },
+          {
+            "Language": "en",
+            "Text": "Clothing"
+          },
+          {
+            "Language": "it",
+            "Text": "Abbigliamento"
+          },
+          {
+            "Language": "fr",
+            "Text": "Vêtements"
+          },
+          {
+            "Language": "es",
+            "Text": "Ropa"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "衣物"
+          },
+          {
+            "Language": "ar",
+            "Text": "ملابس"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "衣物"
+          },
+          {
+            "Language": "ja",
+            "Text": "衣料品"
+          }
         ]
       },
       {
@@ -6865,373 +11735,648 @@ function getSampleUserProfile() {
           {
             ID: "00000000-0000-0000-0003-000000000189",
             DisplayName: "護士",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Krankenschwester" },
-              { Language: "ru", Text: "Медсестра" },
-              { Language: "pt", Text: "Enfermeira" },
-              { Language: "ko", Text: "간호사" },
-              { Language: "yue", Text: "護士" },
-              { Language: "en", Text: "Nurse" },
-              { Language: "it", Text: "Infermiera" },
-              { Language: "fr", Text: "Infirmière" },
-              { Language: "es", Text: "Enfermera" },
-              { Language: "zh-CHT", Text: "護士" },
-              { Language: "ar", Text: "ممرضة" },
-              { Language: "zh-CHS", Text: "护士" },
-              { Language: "ja", Text: "看護師" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Krankenschwester" },
-              { Language: "ru", Text: "Медсестра" },
-              { Language: "pt", Text: "Enfermeira" },
-              { Language: "ko", Text: "간호사" },
-              { Language: "yue", Text: "護士" },
-              { Language: "en", Text: "Nurse" },
-              { Language: "it", Text: "Infermiera" },
-              { Language: "fr", Text: "Infirmière" },
-              { Language: "es", Text: "Enfermera" },
-              { Language: "zh-CHT", Text: "護士" },
-              { Language: "ar", Text: "ممرضة" },
-              { Language: "zh-CHS", Text: "护士" },
-              { Language: "ja", Text: "看護師" }
+              {
+                "Language": "de",
+                "Text": "Krankenschwester"
+              },
+              {
+                "Language": "ru",
+                "Text": "Медсестра"
+              },
+              {
+                "Language": "pt",
+                "Text": "Enfermeira"
+              },
+              {
+                "Language": "ko",
+                "Text": "간호사"
+              },
+              {
+                "Language": "yue",
+                "Text": "護士"
+              },
+              {
+                "Language": "en",
+                "Text": "Nurse"
+              },
+              {
+                "Language": "it",
+                "Text": "Infermiera"
+              },
+              {
+                "Language": "fr",
+                "Text": "Infirmière"
+              },
+              {
+                "Language": "es",
+                "Text": "Enfermera"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "護士"
+              },
+              {
+                "Language": "ar",
+                "Text": "ممرضة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "护士"
+              },
+              {
+                "Language": "ja",
+                "Text": "看護師"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000190",
             DisplayName: "醫生",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Arzt" },
-              { Language: "ru", Text: "Доктор" },
-              { Language: "pt", Text: "Médico" },
-              { Language: "ko", Text: "의사" },
-              { Language: "yue", Text: "醫生" },
-              { Language: "en", Text: "Doctor" },
-              { Language: "it", Text: "Medico" },
-              { Language: "fr", Text: "Médecin" },
-              { Language: "es", Text: "Médico" },
-              { Language: "zh-CHT", Text: "醫生" },
-              { Language: "ar", Text: "طبيب" },
-              { Language: "zh-CHS", Text: "医生" },
-              { Language: "ja", Text: "医師" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Arzt" },
-              { Language: "ru", Text: "Доктор" },
-              { Language: "pt", Text: "Médico" },
-              { Language: "ko", Text: "의사" },
-              { Language: "yue", Text: "醫生" },
-              { Language: "en", Text: "Doctor" },
-              { Language: "it", Text: "Medico" },
-              { Language: "fr", Text: "Médecin" },
-              { Language: "es", Text: "Médico" },
-              { Language: "zh-CHT", Text: "醫生" },
-              { Language: "ar", Text: "طبيب" },
-              { Language: "zh-CHS", Text: "医生" },
-              { Language: "ja", Text: "医師" }
+              {
+                "Language": "de",
+                "Text": "Arzt"
+              },
+              {
+                "Language": "ru",
+                "Text": "Доктор"
+              },
+              {
+                "Language": "pt",
+                "Text": "Médico"
+              },
+              {
+                "Language": "ko",
+                "Text": "의사"
+              },
+              {
+                "Language": "yue",
+                "Text": "醫生"
+              },
+              {
+                "Language": "en",
+                "Text": "Doctor"
+              },
+              {
+                "Language": "it",
+                "Text": "Medico"
+              },
+              {
+                "Language": "fr",
+                "Text": "Médecin"
+              },
+              {
+                "Language": "es",
+                "Text": "Médico"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "醫生"
+              },
+              {
+                "Language": "ar",
+                "Text": "طبيب"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "医生"
+              },
+              {
+                "Language": "ja",
+                "Text": "医師"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000191",
             DisplayName: "社工",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Sozialarbeiter" },
-              { Language: "ru", Text: "Социальный работник" },
-              { Language: "pt", Text: "Assistente social" },
-              { Language: "ko", Text: "사회 복지사" },
-              { Language: "yue", Text: "社工" },
-              { Language: "en", Text: "Social worker" },
-              { Language: "it", Text: "Assistente sociale" },
-              { Language: "fr", Text: "Travailleur social" },
-              { Language: "es", Text: "Trabajador social" },
-              { Language: "zh-CHT", Text: "社工" },
-              { Language: "ar", Text: "أخصائية اجتماعية" },
-              { Language: "zh-CHS", Text: "社工" },
-              { Language: "ja", Text: "ソーシャル ワーカー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Sozialarbeiter" },
-              { Language: "ru", Text: "Социальный работник" },
-              { Language: "pt", Text: "Assistente social" },
-              { Language: "ko", Text: "사회 복지사" },
-              { Language: "yue", Text: "社工" },
-              { Language: "en", Text: "Social worker" },
-              { Language: "it", Text: "Assistente sociale" },
-              { Language: "fr", Text: "Travailleur social" },
-              { Language: "es", Text: "Trabajador social" },
-              { Language: "zh-CHT", Text: "社工" },
-              { Language: "ar", Text: "أخصائية اجتماعية" },
-              { Language: "zh-CHS", Text: "社工" },
-              { Language: "ja", Text: "ソーシャル ワーカー" }
+              {
+                "Language": "de",
+                "Text": "Sozialarbeiter"
+              },
+              {
+                "Language": "ru",
+                "Text": "Социальный работник"
+              },
+              {
+                "Language": "pt",
+                "Text": "Assistente social"
+              },
+              {
+                "Language": "ko",
+                "Text": "사회 복지사"
+              },
+              {
+                "Language": "yue",
+                "Text": "社工"
+              },
+              {
+                "Language": "en",
+                "Text": "Social worker"
+              },
+              {
+                "Language": "it",
+                "Text": "Assistente sociale"
+              },
+              {
+                "Language": "fr",
+                "Text": "Travailleur social"
+              },
+              {
+                "Language": "es",
+                "Text": "Trabajador social"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "社工"
+              },
+              {
+                "Language": "ar",
+                "Text": "أخصائية اجتماعية"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "社工"
+              },
+              {
+                "Language": "ja",
+                "Text": "ソーシャル ワーカー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000192",
             DisplayName: "營養師",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Ernährungsberater" },
-              { Language: "ru", Text: "Диетолог" },
-              { Language: "pt", Text: "Nutricionista" },
-              { Language: "ko", Text: "영양사" },
-              { Language: "yue", Text: "營養師" },
-              { Language: "en", Text: "Dietitian" },
-              { Language: "it", Text: "Dietista" },
-              { Language: "fr", Text: "Diététiste" },
-              { Language: "es", Text: "Dietista" },
-              { Language: "zh-CHT", Text: "營養師" },
-              { Language: "ar", Text: "أخصائي التغذية" },
-              { Language: "zh-CHS", Text: "营养师" },
-              { Language: "ja", Text: "栄養士" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Ernährungsberater" },
-              { Language: "ru", Text: "Диетолог" },
-              { Language: "pt", Text: "Nutricionista" },
-              { Language: "ko", Text: "영양사" },
-              { Language: "yue", Text: "營養師" },
-              { Language: "en", Text: "Dietitian" },
-              { Language: "it", Text: "Dietista" },
-              { Language: "fr", Text: "Diététiste" },
-              { Language: "es", Text: "Dietista" },
-              { Language: "zh-CHT", Text: "營養師" },
-              { Language: "ar", Text: "أخصائي التغذية" },
-              { Language: "zh-CHS", Text: "营养师" },
-              { Language: "ja", Text: "栄養士" }
+              {
+                "Language": "de",
+                "Text": "Ernährungsberater"
+              },
+              {
+                "Language": "ru",
+                "Text": "Диетолог"
+              },
+              {
+                "Language": "pt",
+                "Text": "Nutricionista"
+              },
+              {
+                "Language": "ko",
+                "Text": "영양사"
+              },
+              {
+                "Language": "yue",
+                "Text": "營養師"
+              },
+              {
+                "Language": "en",
+                "Text": "Dietitian"
+              },
+              {
+                "Language": "it",
+                "Text": "Dietista"
+              },
+              {
+                "Language": "fr",
+                "Text": "Diététiste"
+              },
+              {
+                "Language": "es",
+                "Text": "Dietista"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "營養師"
+              },
+              {
+                "Language": "ar",
+                "Text": "أخصائي التغذية"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "营养师"
+              },
+              {
+                "Language": "ja",
+                "Text": "栄養士"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000193",
             DisplayName: "眼科醫生",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Augenarzt" },
-              { Language: "ru", Text: "Окулист" },
-              { Language: "pt", Text: "Optometrista" },
-              { Language: "ko", Text: "검 안" },
-              { Language: "yue", Text: "眼科醫生" },
-              { Language: "en", Text: "Optometrist" },
-              { Language: "it", Text: "Optometrista" },
-              { Language: "fr", Text: "Optométriste" },
-              { Language: "es", Text: "Optometrista" },
-              { Language: "zh-CHT", Text: "眼科醫生" },
-              { Language: "ar", Text: "طبيب العيون" },
-              { Language: "zh-CHS", Text: "眼科医生" },
-              { Language: "ja", Text: "検眼医" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Augenarzt" },
-              { Language: "ru", Text: "Окулист" },
-              { Language: "pt", Text: "Optometrista" },
-              { Language: "ko", Text: "검 안" },
-              { Language: "yue", Text: "眼科醫生" },
-              { Language: "en", Text: "Optometrist" },
-              { Language: "it", Text: "Optometrista" },
-              { Language: "fr", Text: "Optométriste" },
-              { Language: "es", Text: "Optometrista" },
-              { Language: "zh-CHT", Text: "眼科醫生" },
-              { Language: "ar", Text: "طبيب العيون" },
-              { Language: "zh-CHS", Text: "眼科医生" },
-              { Language: "ja", Text: "検眼医" }
+              {
+                "Language": "de",
+                "Text": "Augenarzt"
+              },
+              {
+                "Language": "ru",
+                "Text": "Окулист"
+              },
+              {
+                "Language": "pt",
+                "Text": "Optometrista"
+              },
+              {
+                "Language": "ko",
+                "Text": "검 안"
+              },
+              {
+                "Language": "yue",
+                "Text": "眼科醫生"
+              },
+              {
+                "Language": "en",
+                "Text": "Optometrist"
+              },
+              {
+                "Language": "it",
+                "Text": "Optometrista"
+              },
+              {
+                "Language": "fr",
+                "Text": "Optométriste"
+              },
+              {
+                "Language": "es",
+                "Text": "Optometrista"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "眼科醫生"
+              },
+              {
+                "Language": "ar",
+                "Text": "طبيب العيون"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "眼科医生"
+              },
+              {
+                "Language": "ja",
+                "Text": "検眼医"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000194",
             DisplayName: "中醫",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Chinesische Medizin Arzt" },
-              { Language: "ru", Text: "Доктор китайской медицины" },
-              { Language: "pt", Text: "Médico de medicina chinesa" },
-              { Language: "ko", Text: "중국 의학 의사" },
-              { Language: "yue", Text: "中醫" },
-              { Language: "en", Text: "Chinese medicine doctor" },
-              { Language: "it", Text: "Medico della medicina cinese" },
-              { Language: "fr", Text: "Médecin de médecine chinoise" },
-              { Language: "es", Text: "Doctor de Medicina China" },
-              { Language: "zh-CHT", Text: "中醫" },
-              { Language: "ar", Text: "دكتوراه في الطب الصيني" },
-              { Language: "zh-CHS", Text: "中医" },
-              { Language: "ja", Text: "中国医学の医師" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Chinesische Medizin Arzt" },
-              { Language: "ru", Text: "Доктор китайской медицины" },
-              { Language: "pt", Text: "Médico de medicina chinesa" },
-              { Language: "ko", Text: "중국 의학 의사" },
-              { Language: "yue", Text: "中醫" },
-              { Language: "en", Text: "Chinese medicine doctor" },
-              { Language: "it", Text: "Medico della medicina cinese" },
-              { Language: "fr", Text: "Médecin de médecine chinoise" },
-              { Language: "es", Text: "Doctor de Medicina China" },
-              { Language: "zh-CHT", Text: "中醫" },
-              { Language: "ar", Text: "دكتوراه في الطب الصيني" },
-              { Language: "zh-CHS", Text: "中医" },
-              { Language: "ja", Text: "中国医学の医師" }
+              {
+                "Language": "de",
+                "Text": "Chinesische Medizin Arzt"
+              },
+              {
+                "Language": "ru",
+                "Text": "Доктор китайской медицины"
+              },
+              {
+                "Language": "pt",
+                "Text": "Médico de medicina chinesa"
+              },
+              {
+                "Language": "ko",
+                "Text": "중국 의학 의사"
+              },
+              {
+                "Language": "yue",
+                "Text": "中醫"
+              },
+              {
+                "Language": "en",
+                "Text": "Chinese medicine doctor"
+              },
+              {
+                "Language": "it",
+                "Text": "Medico della medicina cinese"
+              },
+              {
+                "Language": "fr",
+                "Text": "Médecin de médecine chinoise"
+              },
+              {
+                "Language": "es",
+                "Text": "Doctor de Medicina China"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "中醫"
+              },
+              {
+                "Language": "ar",
+                "Text": "دكتوراه في الطب الصيني"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "中医"
+              },
+              {
+                "Language": "ja",
+                "Text": "中国医学の医師"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000195",
             DisplayName: "家務助理",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Hausangestellte" },
-              { Language: "ru", Text: "Домашней прислуги" },
-              { Language: "pt", Text: "Auxiliar doméstica" },
-              { Language: "ko", Text: "국내 도우미" },
-              { Language: "yue", Text: "家務助理" },
-              { Language: "en", Text: "Domestic helper" },
-              { Language: "it", Text: "Collaboratrice domestica" },
-              { Language: "fr", Text: "Domestique" },
-              { Language: "es", Text: "Auxiliar doméstico" },
-              { Language: "zh-CHT", Text: "家務助理" },
-              { Language: "ar", Text: "مدبرة منزل" },
-              { Language: "zh-CHS", Text: "家务助理" },
-              { Language: "ja", Text: "国内のヘルパー" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Hausangestellte" },
-              { Language: "ru", Text: "Домашней прислуги" },
-              { Language: "pt", Text: "Auxiliar doméstica" },
-              { Language: "ko", Text: "국내 도우미" },
-              { Language: "yue", Text: "家務助理" },
-              { Language: "en", Text: "Domestic helper" },
-              { Language: "it", Text: "Collaboratrice domestica" },
-              { Language: "fr", Text: "Domestique" },
-              { Language: "es", Text: "Auxiliar doméstico" },
-              { Language: "zh-CHT", Text: "家務助理" },
-              { Language: "ar", Text: "مدبرة منزل" },
-              { Language: "zh-CHS", Text: "家务助理" },
-              { Language: "ja", Text: "国内のヘルパー" }
+              {
+                "Language": "de",
+                "Text": "Hausangestellte"
+              },
+              {
+                "Language": "ru",
+                "Text": "Домашней прислуги"
+              },
+              {
+                "Language": "pt",
+                "Text": "Auxiliar doméstica"
+              },
+              {
+                "Language": "ko",
+                "Text": "국내 도우미"
+              },
+              {
+                "Language": "yue",
+                "Text": "家務助理"
+              },
+              {
+                "Language": "en",
+                "Text": "Domestic helper"
+              },
+              {
+                "Language": "it",
+                "Text": "Collaboratrice domestica"
+              },
+              {
+                "Language": "fr",
+                "Text": "Domestique"
+              },
+              {
+                "Language": "es",
+                "Text": "Auxiliar doméstico"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "家務助理"
+              },
+              {
+                "Language": "ar",
+                "Text": "مدبرة منزل"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "家务助理"
+              },
+              {
+                "Language": "ja",
+                "Text": "国内のヘルパー"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000196",
             DisplayName: "警察",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Die Polizei" },
-              { Language: "ru", Text: "Полиция" },
-              { Language: "pt", Text: "A polícia" },
-              { Language: "ko", Text: "경찰" },
-              { Language: "yue", Text: "警察" },
-              { Language: "en", Text: "The police" },
-              { Language: "it", Text: "La polizia" },
-              { Language: "fr", Text: "La police" },
-              { Language: "es", Text: "La policía" },
-              { Language: "zh-CHT", Text: "員警" },
-              { Language: "ar", Text: "الشرطة" },
-              { Language: "zh-CHS", Text: "警察" },
-              { Language: "ja", Text: "警察" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Die Polizei" },
-              { Language: "ru", Text: "Полиция" },
-              { Language: "pt", Text: "A polícia" },
-              { Language: "ko", Text: "경찰" },
-              { Language: "yue", Text: "警察" },
-              { Language: "en", Text: "The police" },
-              { Language: "it", Text: "La polizia" },
-              { Language: "fr", Text: "La police" },
-              { Language: "es", Text: "La policía" },
-              { Language: "zh-CHT", Text: "員警" },
-              { Language: "ar", Text: "الشرطة" },
-              { Language: "zh-CHS", Text: "警察" },
-              { Language: "ja", Text: "警察" }
+              {
+                "Language": "de",
+                "Text": "Die Polizei"
+              },
+              {
+                "Language": "ru",
+                "Text": "Полиция"
+              },
+              {
+                "Language": "pt",
+                "Text": "A polícia"
+              },
+              {
+                "Language": "ko",
+                "Text": "경찰"
+              },
+              {
+                "Language": "yue",
+                "Text": "警察"
+              },
+              {
+                "Language": "en",
+                "Text": "The police"
+              },
+              {
+                "Language": "it",
+                "Text": "La polizia"
+              },
+              {
+                "Language": "fr",
+                "Text": "La police"
+              },
+              {
+                "Language": "es",
+                "Text": "La policía"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "員警"
+              },
+              {
+                "Language": "ar",
+                "Text": "الشرطة"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "警察"
+              },
+              {
+                "Language": "ja",
+                "Text": "警察"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000197",
             DisplayName: "朋友",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Freund" },
-              { Language: "ru", Text: "Друг" },
-              { Language: "pt", Text: "Amigo" },
-              { Language: "ko", Text: "친구" },
-              { Language: "yue", Text: "朋友" },
-              { Language: "en", Text: "Friend" },
-              { Language: "it", Text: "Amico" },
-              { Language: "fr", Text: "Ami (e)" },
-              { Language: "es", Text: "Amigo" },
-              { Language: "zh-CHT", Text: "朋友" },
-              { Language: "ar", Text: "صديق" },
-              { Language: "zh-CHS", Text: "朋友" },
-              { Language: "ja", Text: "友人" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Freund" },
-              { Language: "ru", Text: "Друг" },
-              { Language: "pt", Text: "Amigo" },
-              { Language: "ko", Text: "친구" },
-              { Language: "yue", Text: "朋友" },
-              { Language: "en", Text: "Friend" },
-              { Language: "it", Text: "Amico" },
-              { Language: "fr", Text: "Ami (e)" },
-              { Language: "es", Text: "Amigo" },
-              { Language: "zh-CHT", Text: "朋友" },
-              { Language: "ar", Text: "صديق" },
-              { Language: "zh-CHS", Text: "朋友" },
-              { Language: "ja", Text: "友人" }
+              {
+                "Language": "de",
+                "Text": "Freund"
+              },
+              {
+                "Language": "ru",
+                "Text": "Друг"
+              },
+              {
+                "Language": "pt",
+                "Text": "Amigo"
+              },
+              {
+                "Language": "ko",
+                "Text": "친구"
+              },
+              {
+                "Language": "yue",
+                "Text": "朋友"
+              },
+              {
+                "Language": "en",
+                "Text": "Friend"
+              },
+              {
+                "Language": "it",
+                "Text": "Amico"
+              },
+              {
+                "Language": "fr",
+                "Text": "Ami (e)"
+              },
+              {
+                "Language": "es",
+                "Text": "Amigo"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "朋友"
+              },
+              {
+                "Language": "ar",
+                "Text": "صديق"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "朋友"
+              },
+              {
+                "Language": "ja",
+                "Text": "友人"
+              }
             ]
           },
           {
             ID: "00000000-0000-0000-0003-000000000198",
             DisplayName: "牙醫",
-            displayMultipleLanguage: [
-              { Language: "de", Text: "Zahnarzt" },
-              { Language: "ru", Text: "Стоматолог" },
-              { Language: "pt", Text: "Dentista" },
-              { Language: "ko", Text: "치과 의사" },
-              { Language: "yue", Text: "牙醫" },
-              { Language: "en", Text: "Dentist" },
-              { Language: "it", Text: "Dentista" },
-              { Language: "fr", Text: "Dentiste" },
-              { Language: "es", Text: "Dentista" },
-              { Language: "zh-CHT", Text: "牙醫" },
-              { Language: "ar", Text: "طبيب أسنان" },
-              { Language: "zh-CHS", Text: "牙医" },
-              { Language: "ja", Text: "歯科医" }
-            ],
+            DisplayNameLanguage: "yue",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Zahnarzt" },
-              { Language: "ru", Text: "Стоматолог" },
-              { Language: "pt", Text: "Dentista" },
-              { Language: "ko", Text: "치과 의사" },
-              { Language: "yue", Text: "牙醫" },
-              { Language: "en", Text: "Dentist" },
-              { Language: "it", Text: "Dentista" },
-              { Language: "fr", Text: "Dentiste" },
-              { Language: "es", Text: "Dentista" },
-              { Language: "zh-CHT", Text: "牙醫" },
-              { Language: "ar", Text: "طبيب أسنان" },
-              { Language: "zh-CHS", Text: "牙医" },
-              { Language: "ja", Text: "歯科医" }
+              {
+                "Language": "de",
+                "Text": "Zahnarzt"
+              },
+              {
+                "Language": "ru",
+                "Text": "Стоматолог"
+              },
+              {
+                "Language": "pt",
+                "Text": "Dentista"
+              },
+              {
+                "Language": "ko",
+                "Text": "치과 의사"
+              },
+              {
+                "Language": "yue",
+                "Text": "牙醫"
+              },
+              {
+                "Language": "en",
+                "Text": "Dentist"
+              },
+              {
+                "Language": "it",
+                "Text": "Dentista"
+              },
+              {
+                "Language": "fr",
+                "Text": "Dentiste"
+              },
+              {
+                "Language": "es",
+                "Text": "Dentista"
+              },
+              {
+                "Language": "zh-CHT",
+                "Text": "牙醫"
+              },
+              {
+                "Language": "ar",
+                "Text": "طبيب أسنان"
+              },
+              {
+                "Language": "zh-CHS",
+                "Text": "牙医"
+              },
+              {
+                "Language": "ja",
+                "Text": "歯科医"
+              }
             ]
           }
         ],
-        displayMultipleLanguage: [
-          { Language: "de", Text: "Zeichen" },
-          { Language: "ru", Text: "Персонажи" },
-          { Language: "pt", Text: "Personagens" },
-          { Language: "ko", Text: "문자" },
-          { Language: "yue", Text: "人物" },
-          { Language: "en", Text: "Characters" },
-          { Language: "it", Text: "Caratteri" },
-          { Language: "fr", Text: "Caractères" },
-          { Language: "es", Text: "Personajes" },
-          { Language: "zh-CHT", Text: "人物" },
-          { Language: "ar", Text: "الأحرف" },
-          { Language: "zh-CHS", Text: "人物" },
-          { Language: "ja", Text: "文字" }
-        ],
+        DisplayNameLanguage: "yue",
         DisplayMultipleLanguage: [
-          { Language: "de", Text: "Zeichen" },
-          { Language: "ru", Text: "Персонажи" },
-          { Language: "pt", Text: "Personagens" },
-          { Language: "ko", Text: "문자" },
-          { Language: "yue", Text: "人物" },
-          { Language: "en", Text: "Characters" },
-          { Language: "it", Text: "Caratteri" },
-          { Language: "fr", Text: "Caractères" },
-          { Language: "es", Text: "Personajes" },
-          { Language: "zh-CHT", Text: "人物" },
-          { Language: "ar", Text: "الأحرف" },
-          { Language: "zh-CHS", Text: "人物" },
-          { Language: "ja", Text: "文字" }
+          {
+            "Language": "de",
+            "Text": "Zeichen"
+          },
+          {
+            "Language": "ru",
+            "Text": "Персонажи"
+          },
+          {
+            "Language": "pt",
+            "Text": "Personagens"
+          },
+          {
+            "Language": "ko",
+            "Text": "문자"
+          },
+          {
+            "Language": "yue",
+            "Text": "人物"
+          },
+          {
+            "Language": "en",
+            "Text": "Characters"
+          },
+          {
+            "Language": "it",
+            "Text": "Caratteri"
+          },
+          {
+            "Language": "fr",
+            "Text": "Caractères"
+          },
+          {
+            "Language": "es",
+            "Text": "Personajes"
+          },
+          {
+            "Language": "zh-CHT",
+            "Text": "人物"
+          },
+          {
+            "Language": "ar",
+            "Text": "الأحرف"
+          },
+          {
+            "Language": "zh-CHS",
+            "Text": "人物"
+          },
+          {
+            "Language": "ja",
+            "Text": "文字"
+          }
         ]
       }
     ],
