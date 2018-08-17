@@ -2,11 +2,14 @@
 /* global console */
 angular
   .module("starter.controllers", [])
-  .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService, VoiceModelService) {
+  .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService, VoiceModelService, AppearanceService) {
     $scope.$on("$ionicView.enter", function (e) {
       $scope.deviceInfomation = GlobalVariable.DeviceInformation;
-      $scope.itemNormalFontSize = GlobalVariable.Appearance.itemNormalFontSize;
-      $scope.itemNormalPicSize = GlobalVariable.Appearance.itemNormalPicSize;
+      $scope.appearanceConfig = AppearanceService.getLatest();
+      //$scope.appearanceConfig = AppearanceService.getDefault();
+      $scope.itemNormalFontSize = $scope.appearanceConfig.itemNormalFontSize;
+      $scope.itemNormalPicSize = $scope.appearanceConfig.itemNormalPicSize;
+      $scope.itemNormalPicWidth = $scope.appearanceConfig.itemNormalPicWidth;
       //alert($scope.deviceInfomation.DeviceWidth + " " + $scope.deviceInfomation.DeviceHeight);
       $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
       $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
@@ -333,7 +336,7 @@ angular
       };
     };
   })
-  .controller("SettingCtrl", function ($scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService, VoiceModelService) {
+  .controller("SettingCtrl", function ($scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService, VoiceModelService, AppearanceService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
@@ -343,6 +346,7 @@ angular
     $scope.selectedSpeechLanguage;
     $scope.selectedSpeechGender;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Setting", $scope.currentDisplayLanguage);
+    $scope.itemNumber = parseInt(100 / $scope.itemNormalPicWidth);
 
     $scope.onSelectedDisplayLanguageChanged = function () {
       console.log("display language:" + $scope.selectedDisplayLanguage);
@@ -388,15 +392,21 @@ angular
       }
     };
     $scope.onItemNormalFontSizeChanged = function () {
-      GlobalVariable.Appearance.itemNormalFontSize = $scope.itemNormalFontSize;
+      $scope.appearanceConfig.itemNormalFontSize = $scope.itemNormalFontSize;
     };
     $scope.onItemNormalPicSizeChanged = function () {
-      GlobalVariable.Appearance.itemNormalPicSize = $scope.itemNormalPicSize;
+      $scope.appearanceConfig.itemNormalPicSize = $scope.itemNormalPicSize;
+    };
+    $scope.onItemNormalPicWidthChanged = function () {
+      $scope.itemNumber = parseInt(100 / $scope.itemNormalPicWidth);
+      console.log("Item number in one line: " + $scope.itemNumber);
+      $scope.appearanceConfig.itemNormalPicWidth = parseInt(100 / $scope.itemNumber);
     };
     $scope.onConfirmAppearanceButtonClicked = function () {
       setTimeout(function () {
         $state.go("app.setting", {}, { reload: true });
         $ionicSideMenuDelegate.toggleLeft();
+        AppearanceService.saveLocal($scope.appearanceConfig);
       }, 500);
     };
     $scope.onConfirmResetUserprofileButtonClicked = function () {

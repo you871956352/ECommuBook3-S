@@ -48,11 +48,25 @@
 	    </md-card-title>
 
       <md-card-content>
-        <span class="md-title">{{subMenuProfileObject.PicSize}}</span>
-        <md-slider ng-model="itemNormalPicSize" min="180" max="240" ng-change="onItemNormalPicSizeChanged()"></md-slider>
         <span class="md-title">{{subMenuProfileObject.FontSize}}</span>
         <md-slider ng-model="itemNormalFontSize" min="12" max="108" ng-change="onItemNormalFontSizeChanged()"></md-slider>
-        <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px;">{{subMenuProfileObject.Example}}</span>
+        <span class="md-title">{{subMenuProfileObject.PicSize}}</span>
+        <md-slider ng-model="itemNormalPicSize" min="180" max="240" ng-change="onItemNormalPicSizeChanged()"></md-slider>
+        <span class="md-title">{{subMenuProfileObject.PicWidth}}</span>
+        <md-slider ng-model="itemNormalPicWidth" min="10" max="50" ng-change="onItemNormalPicWidthChanged()"></md-slider>
+        <span class="md-title">{{subMenuProfileObject.PicNumber}} : {{itemNumber}}</span>
+        <md-card>
+          <md-card-content>
+            <div style="float:left;width:{{itemNormalPicWidth}}%">
+              <div style="text-align:center;border:1px black dashed; height:{{itemNormalPicSize}}px">
+                <img class='itemImage' src='img/sample.png' />
+                <div>
+                  <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;">{{subMenuProfileObject.Example}}</span>
+                </div>
+              </div>
+            </div>
+          </md-card-content>
+        </md-card>
         <md-button class="md-raised" ng-click=onConfirmAppearanceButtonClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
       </md-card-content>
 	</md-card>

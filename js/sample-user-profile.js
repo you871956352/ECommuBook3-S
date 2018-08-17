@@ -8397,19 +8397,53 @@ function getSampleMenuProfile() {
           {
             OperationType: "PicSize",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Bildgröße" },
-              { Language: "ru", Text: "Размер изображения" },
-              { Language: "pt", Text: "Tamanho da imagem" },
-              { Language: "ko", Text: "사진 크기" },
-              { Language: "yue", Text: "圖大小" },
-              { Language: "en", Text: "Picture Size" },
-              { Language: "it", Text: "Dimensioni dell'immagine" },
-              { Language: "fr", Text: "Taille de l’image" },
-              { Language: "es", Text: "Tamaño de la imagen" },
-              { Language: "zh-CHT", Text: "圖片大小" },
-              { Language: "ar", Text: "حجم الصورة" },
-              { Language: "zh-CHS", Text: "图片大小" },
-              { Language: "ja", Text: "画像のサイズ" }]
+              {"Language":"de","Text":"Bild-Länge"},
+              {"Language":"ru","Text":"Длина фотография"},
+              {"Language":"pt","Text":"Imagens de comprimento"},
+              {"Language":"ko","Text":"그림 길이"},
+              {"Language":"yue","Text":"圖長度"},
+              {"Language":"en","Text":"Picture length"},
+              {"Language":"it","Text":"Foto di lunghezza"},
+              {"Language":"fr","Text":"Longueur de la photo"},
+              {"Language":"es","Text":"Longitud de la imagen"},
+              {"Language":"zh-CHT","Text":"圖片長度"},
+              {"Language":"ar","Text":"طول الصورة"},
+              {"Language":"zh-CHS","Text":"图片长度"},
+              {"Language":"ja","Text":"画像の長さ"}]
+          },
+          {
+            OperationType: "PicWidth",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Bildbreite"},
+              {"Language":"ru","Text":"Ширина рисунка"},
+              {"Language":"pt","Text":"Largura da imagem"},
+              {"Language":"ko","Text":"그림 너비"},
+              {"Language":"yue","Text":"圖寬度"},
+              {"Language":"en","Text":"Picture width"},
+              {"Language":"it","Text":"Larghezza dell'immagine"},
+              {"Language":"fr","Text":"Largeur d’image"},
+              {"Language":"es","Text":"Ancho de imagen"},
+              {"Language":"zh-CHT","Text":"圖片寬度"},
+              {"Language":"ar","Text":"عرض الصورة"},
+              {"Language":"zh-CHS","Text":"图片宽度"},
+              {"Language":"ja","Text":"画像の幅"}]
+          },
+          {
+            OperationType: "PicNumber",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Bild-Menge pro Zeile"},
+              {"Language":"ru","Text":"Количество фото в строке"},
+              {"Language":"pt","Text":"Quantidade de imagens por linha"},
+              {"Language":"ko","Text":"한 줄 사진 수량"},
+              {"Language":"yue","Text":"每行圖數量"},
+              {"Language":"en","Text":"Picture quantity per line"},
+              {"Language":"it","Text":"Quantità di foto per riga"},
+              {"Language":"fr","Text":"Quantité de photo par ligne"},
+              {"Language":"es","Text":"Cantidad de imagen por línea"},
+              {"Language":"zh-CHT","Text":"每行圖片數量"},
+              {"Language":"ar","Text":"صورة كمية لكل خط"},
+              {"Language":"zh-CHS","Text":"每行图片数量"},
+              {"Language":"ja","Text":"行ごとの画像量"}]
           },
           {
             OperationType: "Example",
@@ -8791,30 +8825,11 @@ function getSampleVoiceModel(){
   return json;
 }
 
-/*function getDefaultUserConfig() {
+function getDefaultUserConfig() {
   json = {
-    CategoryGridLineNumber: 3
+    itemNormalFontSize: parseInt((window.screen.width + window.screen.height) / 65),
+    itemNormalPicSize: parseInt((window.screen.width + window.screen.height) / 6.5),
+    itemNormalPicWidth: 33
   };
-}*/
-
-function getSampleCompleteSentence(){
-  json = {
-      "ID": "0000",
-      "DisplayName": "You have completed all sentences",
-      "DisplayMultipleLanguage": [
-        {"Language":"de","Text":"Sie haben alle Sätze abgeschlossen."},
-        {"Language":"ru","Text":"Вы завершили все приговоры"},
-        {"Language":"pt","Text":"Você concluiu todas as frases"},
-        {"Language":"ko","Text":"모든 문장이 완료"},
-        {"Language":"yue","Text":"你已經完成了所有的句子"},
-        {"Language":"en","Text":"You have completed all sentences"},
-        {"Language":"it","Text":"Aver completato tutte le frasi"},
-        {"Language":"fr","Text":"Vous avez terminé toutes les peines"},
-        {"Language":"es","Text":"Has completado todas las penas"},
-        {"Language":"zh-CHT","Text":"你已經完成了所有的句子"},
-        {"Language":"ar","Text":"لقد أتممت جميع الأحكام الصادرة"},
-        {"Language":"zh-CHS","Text":"你已经完成了所有的句子"},
-        {"Language":"ja","Text":"すべての文章を完了しています。"}]
-    };
   return json;
 }
