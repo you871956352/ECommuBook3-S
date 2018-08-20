@@ -50,6 +50,7 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/setting.tmpl.html",
+            controller: "SettingCtrl"
           }
         }
       })

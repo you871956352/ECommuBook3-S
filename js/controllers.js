@@ -346,7 +346,14 @@ angular
     $scope.selectedSpeechGender;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Setting", $scope.currentDisplayLanguage);
     $scope.itemNumber = parseInt(100 / $scope.itemNormalPicWidth);
-
+    $scope.$on("$ionicView.enter", function() {
+      console.log("Lock toggle.");
+      $ionicSideMenuDelegate.canDragContent(false);
+    });
+    $scope.$on('$ionicView.leave', function() {
+      console.log("Free lock.");
+      $ionicSideMenuDelegate.canDragContent(true);
+    });
     $scope.onSelectedDisplayLanguageChanged = function () {
       console.log("display language:" + $scope.selectedDisplayLanguage);
       $scope.speechLanguageListOption = [];
@@ -391,29 +398,23 @@ angular
       }
     };
     $scope.lockToggle = function () {
-      console.log("Slider: lock toggle.");
+      console.log("Lock toggle.");
       $ionicSideMenuDelegate.canDragContent(false);
     };
     $scope.freeToggle = function () {
-      console.log("Slider: free toggle.");
-      $ionicSideMenuDelegate.canDragContent(true);
-    }
-    $scope.onItemNormalFontSizeChanged = function () {
-      $scope.appearanceConfig.itemNormalFontSize = $scope.itemNormalFontSize;
-      console.log("Slider: free toggle.");
       $ionicSideMenuDelegate.canDragContent(true);
     };
+    $scope.onItemNormalFontSizeChanged = function () {
+      $scope.appearanceConfig.itemNormalFontSize = $scope.itemNormalFontSize;
+    };
     $scope.onItemNormalPicSizeChanged = function () {
-      $scope.appearanceConfig.itemNormalPicSize = $scope.itemNormalPicSize;
-      console.log("Slider: free toggle.");
-      $ionicSideMenuDelegate.canDragContent(true);
+      var picLength = parseInt($scope.itemNormalPicSize * 10);
+      console.log("ItemNormalPicSize: " + picLength);
+      $scope.appearanceConfig.itemNormalPicSize = picLength;
     };
     $scope.onItemNormalPicWidthChanged = function () {
       $scope.itemNumber = parseInt(100 / $scope.itemNormalPicWidth);
-      console.log("Item number in one line: " + $scope.itemNumber);
       $scope.appearanceConfig.itemNormalPicWidth = parseInt(100 / $scope.itemNumber);
-      console.log("Slider: free toggle.");
-      $ionicSideMenuDelegate.canDragContent(true);
     };
     $scope.onConfirmAppearanceButtonClicked = function () {
       setTimeout(function () {
