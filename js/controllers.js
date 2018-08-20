@@ -390,16 +390,30 @@ angular
         });
       }
     };
+    $scope.lockToggle = function () {
+      console.log("Slider: lock toggle.");
+      $ionicSideMenuDelegate.canDragContent(false);
+    };
+    $scope.freeToggle = function () {
+      console.log("Slider: free toggle.");
+      $ionicSideMenuDelegate.canDragContent(true);
+    }
     $scope.onItemNormalFontSizeChanged = function () {
       $scope.appearanceConfig.itemNormalFontSize = $scope.itemNormalFontSize;
+      console.log("Slider: free toggle.");
+      $ionicSideMenuDelegate.canDragContent(true);
     };
     $scope.onItemNormalPicSizeChanged = function () {
       $scope.appearanceConfig.itemNormalPicSize = $scope.itemNormalPicSize;
+      console.log("Slider: free toggle.");
+      $ionicSideMenuDelegate.canDragContent(true);
     };
     $scope.onItemNormalPicWidthChanged = function () {
       $scope.itemNumber = parseInt(100 / $scope.itemNormalPicWidth);
       console.log("Item number in one line: " + $scope.itemNumber);
       $scope.appearanceConfig.itemNormalPicWidth = parseInt(100 / $scope.itemNumber);
+      console.log("Slider: free toggle.");
+      $ionicSideMenuDelegate.canDragContent(true);
     };
     $scope.onConfirmAppearanceButtonClicked = function () {
       setTimeout(function () {
