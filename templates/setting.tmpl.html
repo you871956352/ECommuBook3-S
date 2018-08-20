@@ -46,14 +46,13 @@
           <span class="md-headline">{{subMenuProfileObject.Appearance}}</span>
 	      </md-card-title-text>
 	    </md-card-title>
-
       <md-card-content>
         <span class="md-title">{{subMenuProfileObject.FontSize}}</span>
-        <md-slider ng-model="itemNormalFontSize" min="12" max="60" ng-change="onItemNormalFontSizeChanged()"></md-slider>
+        <md-slider md-discrete ng-model="itemNormalFontSize" min="12" max="60" ng-change="onItemNormalFontSizeChanged()" ng-mousedown="lockToggle()" ng-mouseup="freeToggle()"></md-slider>
         <span class="md-title">{{subMenuProfileObject.PicSize}}</span>
-        <md-slider ng-model="itemNormalPicSize" min="150" max="300" ng-change="onItemNormalPicSizeChanged()"></md-slider>
+        <md-slider md-discrete ng-model="itemNormalPicSize" min="150" max="300" ng-change="onItemNormalPicSizeChanged()" ng-mousedown="lockToggle()" ng-mouseup="freeToggle()"></md-slider>
         <span class="md-title">{{subMenuProfileObject.PicWidth}}</span>
-        <md-slider ng-model="itemNormalPicWidth" min="10" max="50" ng-change="onItemNormalPicWidthChanged()"></md-slider>
+        <md-slider md-discrete ng-model="itemNormalPicWidth" min="10" max="50" ng-change="onItemNormalPicWidthChanged()" ng-mousedown="lockToggle()" ng-mouseup="freeToggle()"></md-slider>
         <span class="md-title">{{subMenuProfileObject.PicNumber}} : {{itemNumber}}</span>
         <md-card>
           <md-card-content>
