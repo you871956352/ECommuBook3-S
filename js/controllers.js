@@ -921,8 +921,13 @@ angular
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Poem", $scope.currentDisplayLanguage);
     $scope.practiceContents = PracticeService.practiceListToTargetLanguage(PracticeService.getPracticeObject("Poem").PoemBook, $scope.currentDisplayLanguage);
     $scope.isMenu = true;
+    $scope.selectPoemObject;
     $scope.onPoemClick = function (ev, content) {
+      $scope.selectPoemObject = content;
       $scope.isMenu = false;
+    };
+    $scope.backToMenu = function () {
+      $scope.isMenu = true;
     };
   })
   .controller("PronunciationCtrl", function ($scope, UserProfileService) {

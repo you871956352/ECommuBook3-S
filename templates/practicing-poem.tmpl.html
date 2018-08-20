@@ -13,12 +13,27 @@
         </md-card>
         <md-card>
           <md-card-content ng-repeat="content in practiceContents" ng-click="onPoemClick($event, content)">
-            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{content.Title}}</span>
+            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">
+              {{content.Title}}
+              <span style="float: right"> {{content.Author}} </span>
+            </span>
           </md-card-content>
         </md-card>
       </div>
       <div ng-hide= "isMenu">
-        2333
+        <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <div class="md-headline" layout-align="center center" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
+                {{selectPoemObject.Title}} ({{selectPoemObject.Author}})
+                <md-button class="md-raised" ng-click="backToMenu()" style="float: right">Back</md-button>
+              </div>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-content ng-repeat="content in selectPoemObject.Content">
+            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{content}}</span>
+          </md-card-content>
+        </md-card>
       </div>
     </div>
   </ion-content>
