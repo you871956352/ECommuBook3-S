@@ -14015,3 +14015,82 @@ function getDefaultUserConfig() {
   };
   return json;
 }
+
+function getSamplePracticeContent() {
+  json = {
+    PracticeTypes: [
+      {
+        PracticeType: "Poem",
+        PracticeObject: {
+          PoemBook: [
+            {
+              Index: "0001",
+              DisplayName: "枫桥夜泊",
+              DisplayNameLanguage: "zh-CHS",
+              Content: [
+                {
+                  Language: "zh-CHS",
+                  Title: "枫桥夜泊",
+                  Author: "张继",
+                  Text: [
+                    "月落乌啼霜满天，",
+                    "江枫渔火对愁眠。",
+                    "姑苏城外寒山寺，",
+                    "夜半钟声到客船。"
+                  ]
+                },
+                {
+                  Language: "yue",
+                  Title: "楓橋夜泊",
+                  Author: "張繼",
+                  Text: [
+                    "月落烏啼霜滿天，",
+                    "江楓漁火對愁眠。",
+                    "姑蘇城外寒山寺，",
+                    "夜半鐘聲到客船。"
+                  ]
+                }
+              ]
+            },
+            {
+              Index: "0002",
+              DisplayName: "涼州詞",
+              DisplayNameLanguage: "yue",
+              Content: [
+                {
+                  Language: "zh-CHS",
+                  Title: "凉州词",
+                  Author: "王翰",
+                  Text: [
+                    "葡萄美酒夜光杯，",
+                    "欲饮琵琶马上催。",
+                    "醉卧沙场君莫笑，",
+                    "古来征战几人回？"
+                  ]
+                },
+                {
+                  Language: "yue",
+                  Title: "涼州詞",
+                  Author: "王翰",
+                  Text: [
+                    "葡萄美酒夜光杯，",
+                    "欲飲琵琶馬上催。",
+                    "醉臥沙場君莫笑，",
+                    "古來征戰幾人回？"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        PracticeType: "Pronunciation",
+        PracticeObject: {
+
+        }
+      }
+    ]
+  };
+  return json;
+}

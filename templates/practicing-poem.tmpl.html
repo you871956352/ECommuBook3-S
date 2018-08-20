@@ -1,15 +1,25 @@
 <ion-view cache-view="false" view-title="{{menuProfileTitle.Poem}}">
   <ion-content>
     <div class="container-fluid" ng-controller="PoemCtrl" ng-cloak>
-      <md-card>
-        <md-card-title>
-          <md-card-title-text>
-            <div layout="row" layout-align="center">
-              <span class="md-headline" layout-align="center center" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">{{menuProfileTitle.Poem}}</span>
-            </div>
-          </md-card-title-text>
-        </md-card-title>
-      </md-card>
+      <div ng-show= "isMenu">
+        <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <div layout="row" layout-align="center">
+                <span class="md-headline" layout-align="center center" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">{{menuProfileTitle.Poem}}</span>
+              </div>
+            </md-card-title-text>
+          </md-card-title>
+        </md-card>
+        <md-card>
+          <md-card-content ng-repeat="content in practiceContents" ng-click="onPoemClick($event, content)">
+            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{content.Title}}</span>
+          </md-card-content>
+        </md-card>
+      </div>
+      <div ng-hide= "isMenu">
+        2333
+      </div>
     </div>
   </ion-content>
 </ion-view>

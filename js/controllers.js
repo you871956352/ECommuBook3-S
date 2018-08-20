@@ -916,10 +916,15 @@ angular
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Practicing", $scope.currentDisplayLanguage);
   })
-  .controller("PoemCtrl", function ($scope, UserProfileService) {
+  .controller("PoemCtrl", function ($scope, UserProfileService, PracticeService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Poem", $scope.currentDisplayLanguage);
+    $scope.practiceContents = PracticeService.practiceListToTargetLanguage(PracticeService.getPracticeObject("Poem").PoemBook, $scope.currentDisplayLanguage);
+    $scope.isMenu = true;
+    $scope.onPoemClick = function (ev, content) {
+      $scope.isMenu = false;
+    };
   })
   .controller("PronunciationCtrl", function ($scope, UserProfileService) {
     $scope.userProfile = UserProfileService.getLatest();

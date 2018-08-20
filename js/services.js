@@ -772,6 +772,70 @@ myModule.factory("AppearanceService", function($localStorage) { //Store User Pre
     },
     saveLocal: function(newAppearanceConfig) {
       $localStorage.AppearanceConfig = newAppearanceConfig;
+    },
+  };
+});
+
+myModule.factory("PracticeService", function ($localStorage) {
+  return {
+    getLatest: function () {
+      /*var self = this;
+      if ($localStorage.PracticeBook) {
+        console.log("Read user's PracticeBook from LocalStorage.");
+      }
+      else {
+        console.log("No PracticeBook in LocalStorage. Read sample PracticeBook.");
+        self.saveLocal(self.getDefault());
+      }
+      return $localStorage.PracticeBook;*/
+      return this.getDefault();
+    },
+    getDefault: function () {
+      return getSamplePracticeContent();
+    },
+    saveLocal: function (newPracticeBook) {
+      $localStorage.PracticeBook = newPracticeBook;
+    },
+    getPracticeObject: function (objectName) {
+      var practiceTypes = this.getLatest().PracticeTypes;
+      for (var i = 0; i < practiceTypes.length; i++) {
+        if (practiceTypes[i].PracticeType == objectName) {
+          return practiceTypes[i].PracticeObject;
+        }
+      }
+    },
+    practiceListToTargetLanguage(targetObject, targetLanguage) {
+      var returnObject = [];
+      for (var i = 0; i < targetObject.length; i++) {
+        if (targetObject[i].Content.length != 0) {
+          var returnContentObject = {};
+          returnContentObject.Index = targetObject[i].Index;
+          var flag = false;
+          for (var j = 0; j < targetObject[i].Content.length; j++) {
+            if (targetObject[i].Content[j].Language == targetLanguage) {
+              returnContentObject.Title = targetObject[i].Content[j].Title;
+              returnContentObject.Author = targetObject[i].Content[j].Author;
+              returnContentObject.Content = targetObject[i].Content[j].Text;
+              flag = true;
+              break;
+            }
+          }
+          if (flag == false) {
+            for (var j = 0; j < targetObject[i].Content.length; j++) {
+              if (targetObject[i].Content[j].Language == targetObject[i].DisplayNameLanguage) {
+                returnContentObject.Title = targetObject[i].Content[j].Title;
+                returnContentObject.Author = targetObject[i].Content[j].Author;
+                returnContentObject.Content = targetObject[i].Content[j].Text;
+                break;
+              }
+            }
+          }
+          returnObject.push(returnContentObject);
+        } else {
+
+        }
+      }
+      return returnObject;
     }
   };
 });
