@@ -14114,7 +14114,7 @@ function getSamplePracticeContent() {
             },
             {
               Index: "0002",
-              PracticeName: "测试",
+              PracticeName: "样品",
               Language: "zh-CHS",
               Content: [
                 { Text: "这是一个测试的句子", HightLight: [1, 4, 6] },
@@ -14123,7 +14123,7 @@ function getSamplePracticeContent() {
             },
             {
               Index: "0003",
-              PracticeName: "測試",
+              PracticeName: "樣品",
               Language: "yue",
               Content: [
                 { Text: "這是壹個測試的句子", HightLight: [1, 4, 6] },

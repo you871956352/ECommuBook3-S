@@ -779,7 +779,7 @@ myModule.factory("AppearanceService", function($localStorage) { //Store User Pre
 myModule.factory("PracticeService", function ($localStorage) {
   return {
     getLatest: function () {
-      /*var self = this;
+      var self = this;
       if ($localStorage.PracticeBook) {
         console.log("Read user's PracticeBook from LocalStorage.");
       }
@@ -787,8 +787,7 @@ myModule.factory("PracticeService", function ($localStorage) {
         console.log("No PracticeBook in LocalStorage. Read sample PracticeBook.");
         self.saveLocal(self.getDefault());
       }
-      return $localStorage.PracticeBook;*/
-      return this.getDefault();
+      return $localStorage.PracticeBook;
     },
     getDefault: function () {
       return getSamplePracticeContent();
