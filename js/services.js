@@ -779,7 +779,7 @@ myModule.factory("AppearanceService", function($localStorage) { //Store User Pre
 myModule.factory("PracticeService", function ($localStorage) {
   return {
     getLatest: function () {
-      /*var self = this;
+      var self = this;
       if ($localStorage.PracticeBook) {
         console.log("Read user's PracticeBook from LocalStorage.");
       }
@@ -787,8 +787,7 @@ myModule.factory("PracticeService", function ($localStorage) {
         console.log("No PracticeBook in LocalStorage. Read sample PracticeBook.");
         self.saveLocal(self.getDefault());
       }
-      return $localStorage.PracticeBook;*/
-      return this.getDefault();
+      return $localStorage.PracticeBook;
     },
     getDefault: function () {
       return getSamplePracticeContent();
@@ -804,7 +803,7 @@ myModule.factory("PracticeService", function ($localStorage) {
         }
       }
     },
-    practiceListToTargetLanguage(targetObject, targetLanguage) {
+    peomListToTargetLanguage(targetObject, targetLanguage) {
       var returnObject = [];
       for (var i = 0; i < targetObject.length; i++) {
         if (targetObject[i].Content.length != 0) {
@@ -836,7 +835,16 @@ myModule.factory("PracticeService", function ($localStorage) {
         }
       }
       return returnObject;
-    }
+    },
+    pronunciationListToTargetLanguage(targetObject, targetLanguage) {
+      var returnObject = [];
+      for (var i = 0; i < targetObject.length; i++) {
+        if (targetObject[i].Language == targetLanguage) {
+          returnObject.push(targetObject[i]);
+        }
+      }
+      return returnObject;
+    },
   };
 });
 
