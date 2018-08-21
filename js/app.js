@@ -133,6 +133,15 @@ angular
             templateUrl: "templates/practicing-pronunciation.tmpl.html",
           }
         }
+      })
+      .state("app.login", {
+        url: "/login",
+        views: {
+          menuContent: {
+            templateUrl: "templates/login.html",
+            controller: 'LoginCtrl'
+          }
+        }
       });
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise("/app/welcome");

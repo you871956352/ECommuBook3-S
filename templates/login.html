@@ -1,0 +1,26 @@
+<ion-view view-title="Login" name="login-view">
+  <ion-content class="padding">
+    <md-card>
+      <md-card-title>
+        <md-card-title-text>
+          <div layout="row" layout-align="center">
+            <span class="md-headline" layout-align="center center" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">LOG IN</span>
+          </div>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+        <div layout="column" layout-align="space-around center" class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="Username" ng-model="data.username">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password">
+          </label>
+          <div>
+            <button class="button button-block button-calm" ng-click="login()">Login</button>
+          </div>
+        </div>
+      </md-card-content>
+    </md-card>
+  </ion-content>
+</ion-view>

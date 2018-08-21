@@ -1,7 +1,8 @@
 function getSampleUserProfile() {
   json = {
     ID: "00000000-0000-0000-0001-000000000000",
-    Password: "00000",
+    Password: "-1",
+    Email:"Default",
     DisplayName: "試用者",
     Categories: [
       {
@@ -14093,7 +14094,7 @@ function getSamplePracticeContent() {
               PracticeName: "G_GW",
               Content: [
                 {
-                  Label: "G",                                
+                  Label: "G",
                   Text: [
                     { TextContent: "九因歌", HightLight: [0] },
                     { TextContent: "走狗", HightLight: [1] },
@@ -14102,7 +14103,7 @@ function getSamplePracticeContent() {
                     { TextContent: "舊歷年", HightLight: [0] },
                     { TextContent: "今天", HightLight: [0] },
                     { TextContent: "黃金", HightLight: [1] },
-                    { TextContent: "感情", HightLight: [0] },                   
+                    { TextContent: "感情", HightLight: [0] },
                   ]
                 },
                 {
@@ -14115,7 +14116,7 @@ function getSamplePracticeContent() {
                     { TextContent: "鬼畫符", HightLight: [0] },
                     { TextContent: "桂花", HightLight: [0] },
                     { TextContent: "貴重", HightLight: [0] },
-                    { TextContent: "衣櫃", HightLight: [1] },     
+                    { TextContent: "衣櫃", HightLight: [1] },
                   ]
                 }
               ]
