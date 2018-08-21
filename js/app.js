@@ -134,6 +134,14 @@ angular
           }
         }
       })
+      .state("app.face", {
+        url: "/practicing/face",
+        views: {
+          menuContent: {
+            templateUrl: "templates/practicing-face.tmpl.html",
+          }
+        }
+      })
       .state("app.login", {
         url: "/login",
         views: {

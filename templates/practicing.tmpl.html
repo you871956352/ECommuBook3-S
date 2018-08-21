@@ -22,10 +22,22 @@
                   </div>
                 </div>
               </ion-item>
-              <ion-item href="#/app/practicing/pronunciation">            
+              <ion-item href="#/app/practicing/pronunciation">
                 <div layout="column" layout-align="center center">
                   <img src="img/icons/Pronunciation.png" class="centerImage" />
                   <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Pronunciation' && isShowDisplayName.checked">
+                    <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+                      <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
+                    </div>
+                  </div>
+                </div>
+              </ion-item>
+            </div>
+            <div layout="row" layout-align="space-around center">
+              <ion-item item-content href="#/app/practicing/face">
+                <div layout="column" layout-align="center center">
+                  <img src="img/icons/Poem.png" class="centerImage" />
+                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Poem' && isShowDisplayName.checked">
                     <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                       <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
                     </div>

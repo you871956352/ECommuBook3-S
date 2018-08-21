@@ -985,6 +985,36 @@ angular
       MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Pronunciation_" + $scope.selectPronunciationObject.Index + "_Content_" + $scope.currentReadingWordIndex + ".mp3");
     };
   })
+  .controller("FaceCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia) {
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Poem", $scope.currentDisplayLanguage);
+    $scope.practiceContents = PracticeService.peomListToTargetLanguage(PracticeService.getPracticeObject("Poem").PoemBook, $scope.currentDisplayLanguage);
+    $scope.isMenu = true;
+    $scope.selectPoemObject;
+    $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.currentDisplayLanguage);
+    $scope.onPoemClick = function (ev, content) {
+      $scope.selectPoemObject = content;
+      $scope.isMenu = false;
+      $scope.DefaultSpeakerObject = GlobalVariable.GetDefaultSpeakerForDisplayLanguage($scope.currentDisplayLanguage);
+      var targetDirectory = GlobalVariable.LocalCacheDirectory();
+      var audioID = "Poem_" + $scope.selectPoemObject.Index + "_Title";
+      LocalCacheService.downloadAudioToLocal(targetDirectory, "bing", $scope.DefaultSpeakerObject.targetSpeechLanguage, $scope.DefaultSpeakerObject.targetSpeechGender, $scope.selectPoemObject.Title + "," + $scope.selectPoemObject.Author, audioID);
+      for (var i = 0; i < $scope.selectPoemObject.Content.length; i++) {
+        var audioID = "Poem_" + $scope.selectPoemObject.Index + "_Content_" + i;
+        LocalCacheService.downloadAudioToLocal(targetDirectory, "bing", $scope.DefaultSpeakerObject.targetSpeechLanguage, $scope.DefaultSpeakerObject.targetSpeechGender, $scope.selectPoemObject.Content[i], audioID);
+      }
+    };
+    $scope.backToMenu = function () {
+      $scope.isMenu = true;
+    };
+    $scope.onPoemContentClick = function (ev, index) {
+      MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Poem_" + $scope.selectPoemObject.Index + "_Content_" + index + ".mp3");
+    };
+    $scope.onPoemTitleClick = function (ev) {
+      MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Poem_" + $scope.selectPoemObject.Index + "_Title.mp3");
+    };
+  })
   .controller('LoginCtrl', function($scope, UserProfileService, $ionicPopup, $state) {
       $scope.data = {};
       $scope.login = function() {
