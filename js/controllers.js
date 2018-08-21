@@ -796,13 +796,13 @@ angular
       }
     };
   })
-  .controller("ShareCtrl", function ($scope, $http, UserProfileService, ShareCategoryService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
+  .controller("ShareCtrl", function ($scope, $http, UserProfileService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.shareCategory = ShareCategoryService.getShareCategory();
+    $scope.shareCategory = UserProfileService.getShareCategory();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Download", $scope.currentDisplayLanguage);
     $scope.refreshOnlineResource = function () {
       console.log("Start to download online resources");
-      $scope.shareCategory = ShareCategoryService.getShareCategory();
+      $scope.shareCategory = UserProfileService.getShareCategory();
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       LocalCacheService.prepareShareCategory($scope.shareCategory);
@@ -839,7 +839,7 @@ angular
         $mdDialog.cancel();
       };
       $scope.getOnlineResource = function (ev) {
-        $scope.categoryCloneContent = ShareCategoryService.getOnlineCloneContent($scope.selectedCategoryId);
+        $scope.categoryCloneContent = UserProfileService.getShareCategoryOnlineCloneContent($scope.selectedCategoryId);
       };
       $scope.downloadToLocal = function (ev) {
         var url = ServerPathVariable.GetAddCategoryToUserProfilePath($scope.userProfile.ID, $scope.selectedCategoryId);

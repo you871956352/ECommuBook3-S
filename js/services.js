@@ -286,6 +286,20 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       }
       return returnObject;
     },
+    getShareCategory: function () {
+      console.log("Read shareCategory online.");
+      $http.get(ServerPathVariable.GetSharePath()).then(function (data) {
+        $localStorage.shareCategory = data.data;
+      });
+      return $localStorage.shareCategory;
+    },
+    getShareCategoryOnlineCloneContent: function (categoryID) {
+      console.log("Read shareCategory clone content online.");
+      $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryID)).then(function (data) {
+        $localStorage.shareCloneContent = data.data;
+      });
+      return $localStorage.shareCloneContent;
+    },
   };
 });
 
@@ -533,28 +547,6 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
             self.checkDelete(refresh);
           }
         }, 1000); //delay 2 seconds
-    }
-  };
-});
-
-myModule.factory("ShareCategoryService", function ($http, $localStorage) { //Store User Prefile
-  return {
-    getOnline: function () {
-      console.log("Read shareCategory online.");
-      $http.get(ServerPathVariable.GetSharePath()).then(function (data) {
-        $localStorage.shareCategory = data.data;
-      });
-    },
-    getShareCategory: function () {
-      this.getOnline();
-      return $localStorage.shareCategory;
-    },
-    getOnlineCloneContent: function (categoryID) {
-      console.log("Read shareCategory clone content online.");
-      $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryID)).then(function (data) {
-        $localStorage.shareCloneContent = data.data;
-      });
-      return $localStorage.shareCloneContent;
     }
   };
 });
