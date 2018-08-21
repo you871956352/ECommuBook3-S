@@ -319,7 +319,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       $cordovaFile.createDir(targetDirectory, speechProvider + "/" + speechLanguageCode, false);
       $cordovaFile.createDir(targetDirectory, speechProvider + "/" + speechLanguageCode + "/" + speechGender, false);
       var self = this;
-      var targetName = "audio/" + speechProvider + "/" + speechLanguageCode + "/" + speechGender + "/" + audioID +  ".mp3";
+      var targetName = "audio/" + speechProvider + "/" + speechLanguageCode + "/" + speechGender + "/" + audioID + ".mp3";
       var a = $cordovaFile.checkFile(targetDirectory, targetName).then(
         function (success) { //file exist
           GlobalCacheVariable.FileCheck.AddExistAudioFile();

@@ -107,12 +107,9 @@ var GlobalVariable = new function () { //User to store some global variable
   this.GetLocalAudioDirectory = function (userProfile) {
     return this.LocalCacheDirectory() + "audio/bing/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER + "/";
   };
-  this.GetLocalAudioDirectoryByInput = function (targetSpeechLanguage, targetSpeechGender) {
-    return this.LocalCacheDirectory() + "audio/bing/" + targetSpeechLanguage + "/" + targetSpeechGender + "/";
-  };
   this.GetLocalAudioDirectoryByDisplayLanguage = function (targetDisplayLanguage) {
     var LanguageObject = this.GetDefaultSpeakerForDisplayLanguage(targetDisplayLanguage);
-    return this.GetLocalAudioDirectoryByInput(LanguageObject.targetSpeechLanguage, LanguageObject.targetSpeechGender);
+    return this.LocalCacheDirectory() + "audio/bing/" + LanguageObject.targetSpeechLanguage + "/" + LanguageObject.targetSpeechGender + "/";
   };
   this.GetDefaultSpeakerForDisplayLanguage = function (targetDisplayLanguage) {
     var targetSpeechLanguage, targetSpeechGender;

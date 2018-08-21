@@ -14087,7 +14087,40 @@ function getSamplePracticeContent() {
       {
         PracticeType: "Pronunciation",
         PracticeObject: {
-
+          PronuciationWordList: [
+            {
+              Index: "0001",
+              PracticeName: "G_GW",
+              Content: [
+                {
+                  Label: "G",                                
+                  Text: [
+                    { TextContent: "九因歌", HightLight: [0] },
+                    { TextContent: "走狗", HightLight: [1] },
+                    { TextContent: "足夠", HightLight: [1] },
+                    { TextContent: "機構", HightLight: [1] },
+                    { TextContent: "舊歷年", HightLight: [0] },
+                    { TextContent: "今天", HightLight: [0] },
+                    { TextContent: "黃金", HightLight: [1] },
+                    { TextContent: "感情", HightLight: [0] },                   
+                  ]
+                },
+                {
+                  Label: "GW",
+                  Text: [
+                    { TextContent: "歸家", HightLight: [0,1] },
+                    { TextContent: "海龜", HightLight: [1] },
+                    { TextContent: "三步不出閨門", HightLight: [4] },
+                    { TextContent: "電車軌", HightLight: [2] },
+                    { TextContent: "鬼畫符", HightLight: [0] },
+                    { TextContent: "桂花", HightLight: [0] },
+                    { TextContent: "貴重", HightLight: [0] },
+                    { TextContent: "衣櫃", HightLight: [1] },     
+                  ]
+                }
+              ]
+            }
+          ]
         }
       }
     ]
