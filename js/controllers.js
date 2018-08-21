@@ -346,6 +346,7 @@ angular
     $scope.selectedSpeechGender;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Setting", $scope.currentDisplayLanguage);
     $scope.itemNumber = parseInt(100 / $scope.itemNormalPicWidth);
+    $scope.itemNormalPicLength = parseInt($scope.itemNormalPicSize / 10);
     $scope.$on("$ionicView.enter", function() {
       console.log("Lock toggle.");
       $ionicSideMenuDelegate.canDragContent(false);
@@ -397,19 +398,11 @@ angular
         });
       }
     };
-    $scope.lockToggle = function () {
-      console.log("Lock toggle.");
-      $ionicSideMenuDelegate.canDragContent(false);
-    };
-    $scope.freeToggle = function () {
-      $ionicSideMenuDelegate.canDragContent(true);
-    };
     $scope.onItemNormalFontSizeChanged = function () {
       $scope.appearanceConfig.itemNormalFontSize = $scope.itemNormalFontSize;
     };
     $scope.onItemNormalPicSizeChanged = function () {
-      var picLength = parseInt($scope.itemNormalPicSize * 10);
-      console.log("ItemNormalPicSize: " + picLength);
+      var picLength = parseInt($scope.itemNormalPicLength * 10);
       $scope.appearanceConfig.itemNormalPicSize = picLength;
     };
     $scope.onItemNormalPicWidthChanged = function () {
@@ -866,11 +859,24 @@ angular
       }
     }
   })
-  .controller("UserInfoCtrl", function ($scope,UserProfileService){
+  .controller("UserInfoCtrl", function ($scope,UserProfileService,$cordovaCapture){
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.SpeechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.GenderList = GlobalVariable.GenderList;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
+    $scope.videoCapture = function () {
+      options = {
+        limit: 1
+      };
+      $cordovaCapture.captureVideo(options).then(
+        function (videoData) {
+          console.log("get video success: " + videoData[0].fullPath);
+          $scope.videoSrc = videoData[0].fullPath;
+        },
+        function (err) {
+          console.log("get video fail" + JSON.stringify(err));
+        });
+    };
   })
   .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$cordovaNetwork,$http,$state,UserProfileService,VoiceRecordService,VoiceModelService){
     var id = UserProfileService.getLatest().ID;
