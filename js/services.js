@@ -286,6 +286,10 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       }
       return returnObject;
     },
+    loginUser: function(name, pw) {
+      var userProfile = this.getLatest();
+        return userProfile;
+    },
   };
 });
 
@@ -846,28 +850,4 @@ myModule.factory("PracticeService", function ($localStorage) {
       return returnObject;
     },
   };
-});
-
-myModule.factory('LoginService', function($q) {
-    return {
-        loginUser: function(name, pw) {
-            var deferred = $q.defer();
-            var promise = deferred.promise;
-
-            if (name == 'user' && pw == 'secret') {
-                deferred.resolve('Welcome ' + name + '!');
-            } else {
-                deferred.reject('Wrong credentials.');
-            }
-            promise.success = function(fn) {
-                promise.then(fn);
-                return promise;
-            }
-            promise.error = function(fn) {
-                promise.then(null, fn);
-                return promise;
-            }
-            return promise;
-        }
-    };
 });
