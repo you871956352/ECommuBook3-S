@@ -25,13 +25,13 @@
           <md-card-title>
             <md-card-title-text>
               <div class="md-headline" layout-align="center center" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
-                {{selectPoemObject.Title}} ({{selectPoemObject.Author}})
+                <div ng-click="onPoemTitleClick($event)">{{selectPoemObject.Title}} ({{selectPoemObject.Author}})</div>
                 <md-button class="md-raised" ng-click="backToMenu()" style="float: right">Back</md-button>
               </div>
             </md-card-title-text>
           </md-card-title>
           <md-card-content ng-repeat="content in selectPoemObject.Content">
-            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{content}}</span>
+            <div style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px" ng-click="onPoemContentClick($event, $index)">{{content}}</div>
           </md-card-content>
         </md-card>
       </div>
