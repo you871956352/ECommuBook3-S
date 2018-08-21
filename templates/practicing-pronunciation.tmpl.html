@@ -1,15 +1,45 @@
 <ion-view cache-view="false" view-title="{{menuProfileTitle.Pronunciation}}">
   <ion-content>
     <div class="container-fluid" ng-controller="PronunciationCtrl" ng-cloak>
-      <md-card>
-        <md-card-title>
-          <md-card-title-text>
-            <div layout="row" layout-align="center">
-              <span class="md-headline" layout-align="center center" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">{{menuProfileTitle.Pronunciation}}</span>
+      <div ng-show="isMenu">
+        <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <div layout="row" layout-align="center">
+                <span class="md-headline" layout-align="center center" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">{{menuProfileTitle.Pronunciation}}</span>
+              </div>
+            </md-card-title-text>
+          </md-card-title>
+        </md-card>
+        <md-card>
+          <md-card-content ng-repeat="content in practiceContents" ng-click="onPronunciationClick($event, content)">
+            <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">
+              {{content.PracticeName}}
+            </span>
+          </md-card-content>
+        </md-card>
+      </div>
+      <div ng-hide="isMenu">
+        <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <div class="md-headline" layout-align="center center" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
+                <div>{{selectPronunciationObject.PracticeName}} <md-button class="md-raised" ng-click="backToMenu()" style="float: right">Back</md-button></div>
+              </div>
+            </md-card-title-text>
+          </md-card-title>
+        </md-card>
+        <md-card>
+          <md-card-content ng-model="selectPronunciationObject">
+            <div layout="row" layout-align="center center" style="font-size:{{itemNormalFontSize * 1.5}}px;line-height:{{itemNormalFontSize * 1.5}}px;height:{{itemNormalFontSize * 6}}px" ng-click="onPoemContentClick($event)">
+              <span>{{selectPronunciationObject.Content[currentReadingWordIndex].Text}}</span>
             </div>
-          </md-card-title-text>
-        </md-card-title>
-      </md-card>
+            <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
+              <span style="float:right" ng-click="toNextWord()">Next</span>
+            </div>
+          </md-card-content>
+        </md-card>
+      </div>
     </div>
   </ion-content>
 </ion-view>

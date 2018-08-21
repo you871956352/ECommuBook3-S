@@ -926,7 +926,7 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Poem", $scope.currentDisplayLanguage);
-    $scope.practiceContents = PracticeService.practiceListToTargetLanguage(PracticeService.getPracticeObject("Poem").PoemBook, $scope.currentDisplayLanguage);
+    $scope.practiceContents = PracticeService.peomListToTargetLanguage(PracticeService.getPracticeObject("Poem").PoemBook, $scope.currentDisplayLanguage);
     $scope.isMenu = true;
     $scope.selectPoemObject;
     $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.currentDisplayLanguage);
@@ -952,10 +952,36 @@ angular
       MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Poem_" + $scope.selectPoemObject.Index + "_Title.mp3");
     };
   })
-  .controller("PronunciationCtrl", function ($scope, UserProfileService, PracticeService) {
+  .controller("PronunciationCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Pronunciation", $scope.currentDisplayLanguage);
-    $scope.practiceContents = PracticeService.getPracticeObject("Pronunciation").PronuciationWordList;
-    alert(JSON.stringify($scope.practiceContents));
+    $scope.practiceContents = PracticeService.pronunciationListToTargetLanguage(PracticeService.getPracticeObject("Pronunciation").PronuciationWordList, $scope.currentDisplayLanguage);
+    $scope.selectPronunciationObject;
+    $scope.currentReadingWordIndex = 0;
+    $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.currentDisplayLanguage);
+    $scope.isMenu = true;
+    $scope.onPronunciationClick = function (ev, content) {
+      $scope.selectPronunciationObject = content;
+      $scope.isMenu = false;
+      var targetDirectory = GlobalVariable.LocalCacheDirectory();
+      for (var i = 0; i < $scope.selectPronunciationObject.Content.length; i++) {
+        var audioID = "Pronunciation_" + $scope.selectPronunciationObject.Index + "_Content_" + i;
+        LocalCacheService.downloadAudioToLocal(targetDirectory, "bing", $scope.userProfile.SPEECH_LANGUAGE_CODE, $scope.userProfile.SPEECH_GENDER, $scope.selectPronunciationObject.Content[i].Text, audioID);
+      }
+    };
+    $scope.backToMenu = function () {
+      $scope.isMenu = true;
+    };
+    $scope.toNextWord = function () {
+      if ($scope.currentReadingWordIndex < $scope.selectPronunciationObject.Content.length - 1) {
+        $scope.currentReadingWordIndex = $scope.currentReadingWordIndex + 1;
+      }
+      else if ($scope.currentReadingWordIndex == $scope.selectPronunciationObject.Content.length - 1){
+        $scope.currentReadingWordIndex = 0;
+      }
+    };
+    $scope.onPoemContentClick = function (ev) {
+      MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Pronunciation_" + $scope.selectPronunciationObject.Index + "_Content_" + $scope.currentReadingWordIndex + ".mp3");
+    };
   })

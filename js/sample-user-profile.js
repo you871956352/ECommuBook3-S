@@ -14017,6 +14017,7 @@ function getDefaultUserConfig() {
 }
 
 function getSamplePracticeContent() {
+  //TODO: For "Index" attribute in this function, can also use guid(), need to do more discussion
   json = {
     PracticeTypes: [
       {
@@ -14091,33 +14092,42 @@ function getSamplePracticeContent() {
             {
               Index: "0001",
               PracticeName: "G_GW",
+              Language: "yue",
               Content: [
-                {
-                  Label: "G",                                
-                  Text: [
-                    { TextContent: "九因歌", HightLight: [0] },
-                    { TextContent: "走狗", HightLight: [1] },
-                    { TextContent: "足夠", HightLight: [1] },
-                    { TextContent: "機構", HightLight: [1] },
-                    { TextContent: "舊歷年", HightLight: [0] },
-                    { TextContent: "今天", HightLight: [0] },
-                    { TextContent: "黃金", HightLight: [1] },
-                    { TextContent: "感情", HightLight: [0] },                   
-                  ]
-                },
-                {
-                  Label: "GW",
-                  Text: [
-                    { TextContent: "歸家", HightLight: [0,1] },
-                    { TextContent: "海龜", HightLight: [1] },
-                    { TextContent: "三步不出閨門", HightLight: [4] },
-                    { TextContent: "電車軌", HightLight: [2] },
-                    { TextContent: "鬼畫符", HightLight: [0] },
-                    { TextContent: "桂花", HightLight: [0] },
-                    { TextContent: "貴重", HightLight: [0] },
-                    { TextContent: "衣櫃", HightLight: [1] },     
-                  ]
-                }
+                { Text: "九因歌", Label: "G", HightLight: [0] },
+                { Text: "走狗", Label: "G", HightLight: [1] },
+                { Text: "足夠", Label: "G", HightLight: [1] },
+                { Text: "機構", Label: "G", HightLight: [1] },
+                { Text: "舊歷年", Label: "G", HightLight: [0] },
+                { Text: "今天", Label: "G", HightLight: [0] },
+                { Text: "黃金", Label: "G", HightLight: [1] },
+                { Text: "感情", Label: "G", HightLight: [0] },                   
+                { Text: "歸家", Label: "GW", HightLight: [0,1] },
+                { Text: "海龜", Label: "GW", HightLight: [1] },
+                { Text: "三步不出閨門", Label: "GW", HightLight: [4] },
+                { Text: "電車軌", Label: "GW", HightLight: [2] },
+                { Text: "鬼畫符", Label: "GW", HightLight: [0] },
+                { Text: "桂花", Label: "GW", HightLight: [0] },
+                { Text: "貴重", Label: "GW", HightLight: [0] },
+                { Text: "衣櫃", Label: "GW", HightLight: [1] },
+              ]
+            },
+            {
+              Index: "0002",
+              PracticeName: "测试",
+              Language: "zh-CHS",
+              Content: [
+                { Text: "这是一个测试的句子", HightLight: [1, 4, 6] },
+                { Text: "仅此而已，之后把这句话删掉就完事了", HightLight: [0,2,3,7,8,9] },
+              ]
+            },
+            {
+              Index: "0003",
+              PracticeName: "測試",
+              Language: "yue",
+              Content: [
+                { Text: "這是壹個測試的句子", HightLight: [1, 4, 6] },
+                { Text: "僅此而已，之後把這句話刪掉就完事了", HightLight: [0, 2, 3, 7, 8, 9] },
               ]
             }
           ]

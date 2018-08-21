@@ -804,7 +804,7 @@ myModule.factory("PracticeService", function ($localStorage) {
         }
       }
     },
-    practiceListToTargetLanguage(targetObject, targetLanguage) {
+    peomListToTargetLanguage(targetObject, targetLanguage) {
       var returnObject = [];
       for (var i = 0; i < targetObject.length; i++) {
         if (targetObject[i].Content.length != 0) {
@@ -836,6 +836,15 @@ myModule.factory("PracticeService", function ($localStorage) {
         }
       }
       return returnObject;
-    }
+    },
+    pronunciationListToTargetLanguage(targetObject, targetLanguage) {
+      var returnObject = [];
+      for (var i = 0; i < targetObject.length; i++) {
+        if (targetObject[i].Language == targetLanguage) {
+          returnObject.push(targetObject[i]);
+        }
+      }
+      return returnObject;
+    },
   };
 });
