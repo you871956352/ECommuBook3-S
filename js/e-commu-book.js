@@ -30,6 +30,12 @@ var ServerPathVariable = new function () { //User to store server return path
   this.PostWordList = function () {
     return (this.hostname + this.path + "search/wordList/post");
   };
+  this.PostUserRegister = function () {
+    return (this.hostname + this.path + "user/register");
+  };
+  this.PostUserLogin = function () {
+    return (this.hostname + this.path + "user/register");
+  };
   this.GetUserProfileCloneItemPath = function (userUuid) {
     return (this.hostname + this.path + "userProfile/" + userUuid + '/' + '/cloneItem');
   };

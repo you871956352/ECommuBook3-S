@@ -957,12 +957,12 @@ angular
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Pronunciation", $scope.currentDisplayLanguage);
     $scope.practiceContents = PracticeService.pronunciationListToTargetLanguage(PracticeService.getPracticeObject("Pronunciation").PronuciationWordList, $scope.currentDisplayLanguage);
-    $scope.selectPronunciationObject;
-    $scope.currentReadingWordIndex = 0;
+    $scope.selectPronunciationObject;  
     $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.currentDisplayLanguage);
     $scope.isMenu = true;
     $scope.onPronunciationClick = function (ev, content) {
       $scope.selectPronunciationObject = content;
+      $scope.currentReadingWordIndex = 0;
       $scope.isMenu = false;
       var targetDirectory = GlobalVariable.LocalCacheDirectory();
       for (var i = 0; i < $scope.selectPronunciationObject.Content.length; i++) {
@@ -1016,15 +1016,15 @@ angular
     };
   })
   .controller('LoginCtrl', function($scope, UserProfileService, $ionicPopup, $state) {
-      $scope.data = {};
-      $scope.login = function() {
-        UserProfileService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-          $state.go('app.welcome');
-        }).error(function(data) {
-          var alertPopup = $ionicPopup.alert({
-            title: 'Login failed!',
-            template: 'Please check your credentials!'
-          });
+    $scope.data = {};
+    $scope.login = function() {
+      UserProfileService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
+        $state.go('app.welcome');
+      }).error(function(data) {
+        var alertPopup = $ionicPopup.alert({
+          title: 'Login failed!',
+          template: 'Please check your credentials!'
         });
-      }
+      });
+    }
   })
