@@ -13992,6 +13992,26 @@ function getSampleMenuProfile() {
         SubPage: [
 
         ]
+      },
+      {
+        OperationType: "FacialPractice",
+        DisplayMultipleLanguage: [
+          {"Language":"de","Text":"Gesichts-Praxis"},
+          {"Language":"ru","Text":"Лица практика"},
+          {"Language":"pt","Text":"Prática facial"},
+          {"Language":"ko","Text":"페이셜 연습"},
+          {"Language":"yue","Text":"面部練習"},
+          {"Language":"en","Text":"Facial Practice"},
+          {"Language":"it","Text":"Pratica del viso"},
+          {"Language":"fr","Text":"Pratique du visage"},
+          {"Language":"es","Text":"Prácticas faciales"},
+          {"Language":"zh-CHT","Text":"面部練習"},
+          {"Language":"ar","Text":"الممارسة الوجه"},
+          {"Language":"zh-CHS","Text":"面部练习"},
+          {"Language":"ja","Text":"顔練習"}],
+        SubPage: [
+
+        ]
       }
     ]
   };
@@ -14129,6 +14149,45 @@ function getSamplePracticeContent() {
               Content: [
                 { Text: "這是壹個測試的句子", HightLight: [1, 4, 6] },
                 { Text: "僅此而已，之後把這句話刪掉就完事了", HightLight: [0, 2, 3, 7, 8, 9] },
+              ]
+            }
+          ]
+        }
+      },
+      {
+        PracticeType: "FacialMuscle",
+        PracticeObject: {
+          FacialMusclePracticeList: [
+            {
+              Index: "0001",
+              PracticeName: "做鬼臉",
+              Language: "yue",
+              Source: "practice001.mp4",
+              Hint: [
+                {
+                  Language: "yue",
+                  Text: "請做鬼臉並盡量將嘴角拉開"
+                },
+                {
+                  Language: "zh-CHS",
+                  Text: "请做鬼脸并尽量将嘴角拉开"
+                }
+              ]
+            },
+            {
+              Index: "0002",
+              PracticeName: "鼓氣",
+              Language: "yue",
+              Source: "practice002.mp4",
+              Hint:[
+                {
+                  Language: "yue",
+                  Text: "請用力用口皷氣"
+                },
+                {
+                  Language: "zh-CHS",
+                  Text: "请用力用嘴鼓气"
+                }
               ]
             }
           ]

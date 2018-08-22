@@ -792,7 +792,7 @@ myModule.factory("PracticeService", function ($localStorage) {
       $localStorage.PracticeBook = newPracticeBook;
     },
     getPracticeObject: function (objectName) {
-      var practiceTypes = this.getLatest().PracticeTypes;
+      var practiceTypes = this.getDefault().PracticeTypes;
       for (var i = 0; i < practiceTypes.length; i++) {
         if (practiceTypes[i].PracticeType == objectName) {
           return practiceTypes[i].PracticeObject;
@@ -837,6 +837,36 @@ myModule.factory("PracticeService", function ($localStorage) {
       for (var i = 0; i < targetObject.length; i++) {
         if (targetObject[i].Language == targetLanguage) {
           returnObject.push(targetObject[i]);
+        }
+      }
+      return returnObject;
+    },
+    facialPracticeListToTargetLanguage(targetObject, targetLanguage){
+      var returnObject = [];
+      for (var i = 0; i < targetObject.length; i++) {
+        if (targetObject[i].Hint.length != 0) {
+          var returnContentObject = {};
+          returnContentObject.Index = targetObject[i].Index;
+          returnContentObject.PracticeName = targetObject[i].PracticeName;
+          returnContentObject.Language = targetObject[i].Language;
+          returnContentObject.Source = targetObject[i].Source;
+          var flag = false;
+          for (var j = 0; j < targetObject[i].Hint.length; j++) {
+            if (targetObject[i].Hint[j].Language == targetLanguage) {
+              returnContentObject.Hint = targetObject[i].Hint[j].Text;
+              flag = true;
+              break;
+            }
+          }
+          if (flag == false) {
+            for (var j = 0; j < targetObject[i].Hint.length; j++) {
+              if (targetObject[i].Hint[j].Language == targetObject[i].Language) {
+                returnContentObject.Hint = targetObject[i].Hint[j].Text;
+                break;
+              }
+            }
+          }
+          returnObject.push(returnContentObject);
         }
       }
       return returnObject;

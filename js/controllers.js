@@ -957,7 +957,7 @@ angular
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Pronunciation", $scope.currentDisplayLanguage);
     $scope.practiceContents = PracticeService.pronunciationListToTargetLanguage(PracticeService.getPracticeObject("Pronunciation").PronuciationWordList, $scope.currentDisplayLanguage);
-    $scope.selectPronunciationObject;  
+    $scope.selectPronunciationObject;
     $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.currentDisplayLanguage);
     $scope.isMenu = true;
     $scope.onPronunciationClick = function (ev, content) {
@@ -985,34 +985,34 @@ angular
       MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Pronunciation_" + $scope.selectPronunciationObject.Index + "_Content_" + $scope.currentReadingWordIndex + ".mp3");
     };
   })
-  .controller("FaceCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia) {
+  .controller("FaceCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia,$cordovaCapture) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Poem", $scope.currentDisplayLanguage);
-    $scope.practiceContents = PracticeService.peomListToTargetLanguage(PracticeService.getPracticeObject("Poem").PoemBook, $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("FacialPractice", $scope.currentDisplayLanguage);
+    $scope.practiceContents = PracticeService.facialPracticeListToTargetLanguage(PracticeService.getPracticeObject("FacialMuscle").FacialMusclePracticeList, $scope.currentDisplayLanguage);
+    $scope.selectFacialPracticeObject;
     $scope.isMenu = true;
-    $scope.selectPoemObject;
-    $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.currentDisplayLanguage);
-    $scope.onPoemClick = function (ev, content) {
-      $scope.selectPoemObject = content;
+    $scope.halfDeviceWidth = parseInt(window.screen.width / 2 * 0.8);
+    $scope.onFacialPracticeClick = function (ev, content) {
+      $scope.selectFacialPracticeObject = content;
       $scope.isMenu = false;
-      $scope.DefaultSpeakerObject = GlobalVariable.GetDefaultSpeakerForDisplayLanguage($scope.currentDisplayLanguage);
-      var targetDirectory = GlobalVariable.LocalCacheDirectory();
-      var audioID = "Poem_" + $scope.selectPoemObject.Index + "_Title";
-      LocalCacheService.downloadAudioToLocal(targetDirectory, "bing", $scope.DefaultSpeakerObject.targetSpeechLanguage, $scope.DefaultSpeakerObject.targetSpeechGender, $scope.selectPoemObject.Title + "," + $scope.selectPoemObject.Author, audioID);
-      for (var i = 0; i < $scope.selectPoemObject.Content.length; i++) {
-        var audioID = "Poem_" + $scope.selectPoemObject.Index + "_Content_" + i;
-        LocalCacheService.downloadAudioToLocal(targetDirectory, "bing", $scope.DefaultSpeakerObject.targetSpeechLanguage, $scope.DefaultSpeakerObject.targetSpeechGender, $scope.selectPoemObject.Content[i], audioID);
-      }
+      $scope.sampleVideoSrc = "img/"+content.Source;
     };
     $scope.backToMenu = function () {
       $scope.isMenu = true;
     };
-    $scope.onPoemContentClick = function (ev, index) {
-      MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Poem_" + $scope.selectPoemObject.Index + "_Content_" + index + ".mp3");
-    };
-    $scope.onPoemTitleClick = function (ev) {
-      MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Poem_" + $scope.selectPoemObject.Index + "_Title.mp3");
+    $scope.videoCapture = function () {
+      options = {
+        limit: 1
+      };
+      $cordovaCapture.captureVideo(options).then(
+        function (videoData) {
+          console.log("get video success: " + videoData[0].fullPath);
+          $scope.practiceVideoSrc = videoData[0].fullPath;
+        },
+        function (err) {
+          console.log("get video fail" + JSON.stringify(err));
+        });
     };
   })
   .controller('LoginCtrl', function($scope, UserProfileService, $ionicPopup, $state) {
