@@ -34,7 +34,7 @@ var ServerPathVariable = new function () { //User to store server return path
     return (this.hostname + this.path + "user/register");
   };
   this.PostUserLogin = function () {
-    return (this.hostname + this.path + "user/register");
+    return (this.hostname + this.path + "user/login");
   };
   this.GetUserProfileCloneItemPath = function (userUuid) {
     return (this.hostname + this.path + "userProfile/" + userUuid + '/' + '/cloneItem');

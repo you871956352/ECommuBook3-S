@@ -147,7 +147,6 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/login.html",
-            controller: 'LoginCtrl'
           }
         }
       });

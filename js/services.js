@@ -286,9 +286,14 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       }
       return returnObject;
     },
-    loginUser: function(name, pw) {
-      var userProfile = this.getLatest();
-        return userProfile;
+    loginUser: function (UserProfile, email, passWord) {
+      //alert(UserProfile.ID + " " + email + " " + passWord);
+      var Indata = { "uuid": UserProfile.ID, "email": email, "password": passWord };
+      $http({ url: ServerPathVariable.PostUserLogin(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
+        alert(JSON.stringify( data.data));
+      }, function (data, status, headers, config) {
+        alert("error");
+      });
     },
     getShareCategory: function () {
       console.log("Read shareCategory online.");

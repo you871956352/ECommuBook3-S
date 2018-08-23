@@ -985,7 +985,7 @@ angular
       MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Pronunciation_" + $scope.selectPronunciationObject.Index + "_Content_" + $scope.currentReadingWordIndex + ".mp3");
     };
   })
-  .controller("FaceCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia,$cordovaCapture) {
+  .controller("FaceCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia, $cordovaCapture) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("FacialPractice", $scope.currentDisplayLanguage);
@@ -1015,16 +1015,13 @@ angular
         });
     };
   })
-  .controller('LoginCtrl', function($scope, UserProfileService, $ionicPopup, $state) {
-    $scope.data = {};
-    $scope.login = function() {
-      UserProfileService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-        $state.go('app.welcome');
-      }).error(function(data) {
-        var alertPopup = $ionicPopup.alert({
-          title: 'Login failed!',
-          template: 'Please check your credentials!'
-        });
-      });
+  .controller("LoginCtrl", function ($scope, UserProfileService, $state) {
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserLogin", $scope.currentDisplayLanguage);
+    $scope.Username = "";
+    $scope.Password = "";
+    $scope.userLogin = function () {
+      UserProfileService.loginUser($scope.userProfile, $scope.Username, $scope.Password);
     }
   })
