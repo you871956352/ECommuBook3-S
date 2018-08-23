@@ -341,6 +341,10 @@ angular
     $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.speechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.genderList = GlobalVariable.GenderList;
+    $scope.appearanceConfig = AppearanceService.getLatest();
+    $scope.itemNormalFontSize = $scope.appearanceConfig.itemNormalFontSize;
+    $scope.itemNormalPicSize = $scope.appearanceConfig.itemNormalPicSize;
+    $scope.itemNormalPicWidth = $scope.appearanceConfig.itemNormalPicWidth;
     $scope.selectedDisplayLanguage;
     $scope.selectedSpeechLanguage;
     $scope.selectedSpeechGender;
@@ -993,6 +997,12 @@ angular
     $scope.selectFacialPracticeObject;
     $scope.isMenu = true;
     $scope.halfDeviceWidth = parseInt(window.screen.width / 2 * 0.8);
+    //Sample marks.
+    $scope.returnMark = [];
+    $scope.returnMark.Total = 8.0;
+    $scope.returnMark.Detail = 7.0;
+    $scope.returnMark.Accuracy = 9.0;
+
     $scope.onFacialPracticeClick = function (ev, content) {
       $scope.selectFacialPracticeObject = content;
       $scope.isMenu = false;
@@ -1000,6 +1010,8 @@ angular
     };
     $scope.backToMenu = function () {
       $scope.isMenu = true;
+      $scope.sampleVideoSrc = "";
+      $scope.practiceVideoSrc = "";
     };
     $scope.videoCapture = function () {
       options = {
@@ -1013,6 +1025,9 @@ angular
         function (err) {
           console.log("get video fail" + JSON.stringify(err));
         });
+    };
+    $scope.uploadVideo = function () {
+
     };
   })
   .controller('LoginCtrl', function($scope, UserProfileService, $ionicPopup, $state) {

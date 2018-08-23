@@ -24,7 +24,7 @@
           <md-card-title>
             <md-card-title-text>
               <div class="md-headline" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
-                <div>{{selectFacialPracticeObject.PracticeName}} <md-button class="md-raised" ng-click="backToMenu()" style="float: right">Back</md-button></div>
+                <div>{{selectFacialPracticeObject.PracticeName}} <md-button class="md-raised" ng-click="backToMenu()" style="float: right">{{subMenuProfileGeneral.Back}}</md-button></div>
               </div>
             </md-card-title-text>
           </md-card-title>
@@ -40,16 +40,33 @@
         </md-card>
         <md-card>
           <md-card-content>
-            <div layout="row" layout-align="space-around">
-              <div layout="column" layout-align="space-around center">
-                <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">演示</div>
+            <div layout="column" layout-align="space-between">
+              <div layout="row" layout-align="space-around center">
+                <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;font-weight: bold;">{{subMenuProfileObject.Demonstrate}}</div>
+                <md-button class="md-raised" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;" ng-click="videoCapture()">{{subMenuProfileGeneral.Practice}}</md-button>
+              </div>
+              <div layout="row" layout-align="space-around center">
                 <video controls src={{sampleVideoSrc}} width={{halfDeviceWidth}} type='video/mp4'></video>
-              </div>
-              <div layout="column" layout-align="space-around center">
-                <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">练习</div>
                 <video controls src={{practiceVideoSrc}} width={{halfDeviceWidth}} type='video/mp4'></video>
-                <md-button ng-click="videoCapture()">Test</md-button>
               </div>
+            </div>
+          </md-card-content>
+        </md-card>
+        <md-card>
+          <md-card-title>
+            <div layout="row" layout-align="center center">
+              <md-button class="md-raised" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;" ng-click="uploadVideo()">{{subMenuProfileObject.Upload}}</md-button>
+            </div>
+          </md-card-title>
+          <md-card-content>
+            <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
+              总评分：{{returnMark.Total}}
+            </div>
+            <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
+              精密度: {{returnMark.Detail}}
+            </div>
+            <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
+              准确度: {{returnMark.Accuracy}}
             </div>
           </md-card-content>
         </md-card>
