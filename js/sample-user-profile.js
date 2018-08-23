@@ -1,8 +1,8 @@
 function getSampleUserProfile() {
   json = {
-    ID: "00000000-0000-0000-0001-000000000000",
-    Password: "-1",
-    Email:"Default",
+    ID: "00000000-0000-0000-0002-000000000000",
+    Password: "",
+    Email:"",
     DisplayName: "試用者",
     Categories: [
       {
@@ -14060,6 +14060,59 @@ function getSampleMenuProfile() {
               {"Language":"ar","Text":"الممارسة"},
               {"Language":"zh-CHS","Text":"练习"},
               {"Language":"ja","Text":"練習"}]
+          }
+        ]
+      },
+      {
+        OperationType: "UserLogin",
+        DisplayMultipleLanguage: [
+          { "Language": "de", "Text": "Login" },
+          { "Language": "ru", "Text": "Логин" },
+          { "Language": "pt", "Text": "Login" },
+          { "Language": "ko", "Text": "로그인" },
+          { "Language": "yue", "Text": "登錄" },
+          { "Language": "en", "Text": "Login" },
+          { "Language": "it", "Text": "Account di accesso" },
+          { "Language": "fr", "Text": "Ouverture de session" },
+          { "Language": "es", "Text": "Inicio de sesión" },
+          { "Language": "zh-CHT", "Text": "登錄" },
+          { "Language": "ar", "Text": "تسجيل الدخول" },
+          { "Language": "zh-CHS", "Text": "登录" },
+          { "Language": "ja", "Text": "ログイン" }],
+        SubPage: [
+          {
+            OperationType: "UserName",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Benutzername" },
+              { "Language": "ru", "Text": "Имя пользователя" },
+              { "Language": "pt", "Text": "Nome de usuário" },
+              { "Language": "ko", "Text": "사용자 이름" },
+              { "Language": "yue", "Text": "用戶名" },
+              { "Language": "en", "Text": "User Name" },
+              { "Language": "it", "Text": "Nome utente" },
+              { "Language": "fr", "Text": "Nom d’utilisateur" },
+              { "Language": "es", "Text": "Nombre de usuario" },
+              { "Language": "zh-CHT", "Text": "使用者名" },
+              { "Language": "ar", "Text": "اسم المستخدم" },
+              { "Language": "zh-CHS", "Text": "用户名" },
+              { "Language": "ja", "Text": "ユーザー名" }]
+          },
+          {
+            OperationType: "Password",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Passwort" },
+              { "Language": "ru", "Text": "Пароль" },
+              { "Language": "pt", "Text": "Senha" },
+              { "Language": "ko", "Text": "암호" },
+              { "Language": "yue", "Text": "密碼" },
+              { "Language": "en", "Text": "Password" },
+              { "Language": "it", "Text": "Password" },
+              { "Language": "fr", "Text": "Mot de passe" },
+              { "Language": "es", "Text": "Contraseña" },
+              { "Language": "zh-CHT", "Text": "密碼" },
+              { "Language": "ar", "Text": "كلمة المرور" },
+              { "Language": "zh-CHS", "Text": "密码" },
+              { "Language": "ja", "Text": "パスワード" }]
           }
         ]
       }
