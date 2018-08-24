@@ -12785,6 +12785,23 @@ function getSampleMenuProfile() {
               {"Language":"ar","Text":"فشل الاتصال بالخادم"},
               {"Language":"zh-CHS","Text":"无法连接到服务器"},
               {"Language":"ja","Text":"サーバーへの接続に失敗します。"}]
+          },
+          {
+            OperationType: "Back",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Zurück"},
+              {"Language":"ru","Text":"Назад"},
+              {"Language":"pt","Text":"Voltar"},
+              {"Language":"ko","Text":"뒤로"},
+              {"Language":"yue","Text":"返回"},
+              {"Language":"en","Text":"Back"},
+              {"Language":"it","Text":"Indietro"},
+              {"Language":"fr","Text":"Précédent"},
+              {"Language":"es","Text":"Atrás"},
+              {"Language":"zh-CHT","Text":"返回"},
+              {"Language":"ar","Text":"مرة أخرى"},
+              {"Language":"zh-CHS","Text":"返回"},
+              {"Language":"ja","Text":"戻る"}]
           }
         ]
       },
@@ -14009,7 +14026,40 @@ function getSampleMenuProfile() {
           {"Language":"zh-CHS","Text":"面部练习"},
           {"Language":"ja","Text":"顔練習"}],
         SubPage: [
-
+          {
+            OperationType: "Demonstrate",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Zeigen"},
+              {"Language":"ru","Text":"Демонстрации"},
+              {"Language":"pt","Text":"Demonstrar"},
+              {"Language":"ko","Text":"설명"},
+              {"Language":"yue","Text":"演示"},
+              {"Language":"en","Text":"Demonstrate"},
+              {"Language":"it","Text":"Dimostrare"},
+              {"Language":"fr","Text":"Démontrer"},
+              {"Language":"es","Text":"Demostrar"},
+              {"Language":"zh-CHT","Text":"演示"},
+              {"Language":"ar","Text":"إظهار"},
+              {"Language":"zh-CHS","Text":"演示"},
+              {"Language":"ja","Text":"示す"}]
+          },
+          {
+            OperationType: "Practice",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Praxis"},
+              {"Language":"ru","Text":"Практика"},
+              {"Language":"pt","Text":"Prática"},
+              {"Language":"ko","Text":"연습"},
+              {"Language":"yue","Text":"練習"},
+              {"Language":"en","Text":"Practice"},
+              {"Language":"it","Text":"Pratica"},
+              {"Language":"fr","Text":"Pratique"},
+              {"Language":"es","Text":"Práctica"},
+              {"Language":"zh-CHT","Text":"練習"},
+              {"Language":"ar","Text":"الممارسة"},
+              {"Language":"zh-CHS","Text":"练习"},
+              {"Language":"ja","Text":"練習"}]
+          }
         ]
       },
       {
