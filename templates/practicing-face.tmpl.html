@@ -43,7 +43,7 @@
             <div layout="column" layout-align="space-between">
               <div layout="row" layout-align="space-around center">
                 <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;font-weight: bold;">{{subMenuProfileObject.Demonstrate}}</div>
-                <md-button class="md-raised" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;" ng-click="videoCapture()">{{subMenuProfileGeneral.Practice}}</md-button>
+                <md-button class="md-raised" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;" ng-click="videoCapture()">{{subMenuProfileObject.Practice}}</md-button>
               </div>
               <div layout="row" layout-align="space-around center">
                 <video controls src={{sampleVideoSrc}} width={{halfDeviceWidth}} type='video/mp4'></video>
@@ -55,18 +55,18 @@
         <md-card>
           <md-card-title>
             <div layout="row" layout-align="center center">
-              <md-button class="md-raised" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;" ng-click="uploadVideo()">{{subMenuProfileObject.Upload}}</md-button>
+              <md-button class="md-raised" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;" ng-click="uploadVideo()">{{subMenuProfileGeneral.Upload}}</md-button>
             </div>
           </md-card-title>
           <md-card-content>
             <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
-              总评分：{{returnMark.Total}}
+              {{subMenuProfileGeneral.TotalScore}} : {{returnMark.Total}}
             </div>
             <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
-              精密度: {{returnMark.Detail}}
+              {{subMenuProfileGeneral.Precision}} : {{returnMark.Precision}}
             </div>
             <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
-              准确度: {{returnMark.Accuracy}}
+              {{subMenuProfileGeneral.Accuracy}} : {{returnMark.Accuracy}}
             </div>
           </md-card-content>
         </md-card>

@@ -12802,6 +12802,57 @@ function getSampleMenuProfile() {
               {"Language":"ar","Text":"مرة أخرى"},
               {"Language":"zh-CHS","Text":"返回"},
               {"Language":"ja","Text":"戻る"}]
+          },
+          {
+            OperationType: "TotalScore",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Gesamt-Score"},
+              {"Language":"ru","Text":"Общая оценка"},
+              {"Language":"pt","Text":"Pontuação total"},
+              {"Language":"ko","Text":"총 점수"},
+              {"Language":"yue","Text":"總評分"},
+              {"Language":"en","Text":"Total Score"},
+              {"Language":"it","Text":"Punteggio totale"},
+              {"Language":"fr","Text":"Total de points accumulés"},
+              {"Language":"es","Text":"Puntuación total"},
+              {"Language":"zh-CHT","Text":"總評分"},
+              {"Language":"ar","Text":"مجموع نقاط"},
+              {"Language":"zh-CHS","Text":"总评分"},
+              {"Language":"ja","Text":"合計スコア"}]
+          },
+          {
+            OperationType: "Precision",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Präzision"},
+              {"Language":"ru","Text":"Точность"},
+              {"Language":"pt","Text":"Precisão"},
+              {"Language":"ko","Text":"정밀"},
+              {"Language":"yue","Text":"精密度"},
+              {"Language":"en","Text":"Precision"},
+              {"Language":"it","Text":"Precisione"},
+              {"Language":"fr","Text":"Precision"},
+              {"Language":"es","Text":"Precisión"},
+              {"Language":"zh-CHT","Text":"精密度"},
+              {"Language":"ar","Text":"الدقة"},
+              {"Language":"zh-CHS","Text":"精密度"},
+              {"Language":"ja","Text":"精度"}]
+          },
+          {
+            OperationType: "Accuracy",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Genauigkeit"},
+              {"Language":"ru","Text":"Точность"},
+              {"Language":"pt","Text":"Precisão"},
+              {"Language":"ko","Text":"정확도"},
+              {"Language":"yue","Text":"準確度"},
+              {"Language":"en","Text":"Accuracy"},
+              {"Language":"it","Text":"Precisione"},
+              {"Language":"fr","Text":"Précision"},
+              {"Language":"es","Text":"Precisión"},
+              {"Language":"zh-CHT","Text":"準確度"},
+              {"Language":"ar","Text":"دقة"},
+              {"Language":"zh-CHS","Text":"准确度"},
+              {"Language":"ja","Text":"精度"}]
           }
         ]
       },
