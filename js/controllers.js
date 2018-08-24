@@ -1030,7 +1030,7 @@ angular
 
     };
   })
-  .controller("LoginCtrl", function ($scope, UserProfileService, $state) {
+  .controller("LoginCtrl", function ($scope, UserProfileService, $state, $http) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserLogin", $scope.currentDisplayLanguage);
@@ -1038,10 +1038,48 @@ angular
     $scope.Username = "";
     $scope.Password = "";
     $scope.userLogin = function () {
-      UserProfileService.userLogin($scope.userProfile, $scope.Username, $scope.Password);
+      if ($scope.Username == "") {
+        alert("Please Enter Email");
+        return;
+      }
+      if ($scope.Password == "") {
+        alert("Please Enter Password");
+        return;
+      }
+      var Indata = { "uuid": $scope.userProfile.ID, "email": $scope.Username, "password": $scope.Password };
+      $http({ url: ServerPathVariable.PostUserLogin(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
+        if (data.data.code == "Success") {
+          //Go to other page
+          alert("Login Success");
+        } else if (data.data.code == "Fail" && data.data.message == "Email Address not found") {
+          alert("Email Address not found");
+        } else if (data.data.code == "Fail" && data.data.message == "Wrong Password") {
+          alert("Wrong Password");
+        }
+      }, function (data, status, headers, config) {
+        config.log("Login With Server Error");
+      });
     };
     $scope.userRegister = function () {
-      UserProfileService.userRegister($scope.userProfile, $scope.Username, $scope.Password);
+      if ($scope.Username == "") {
+        alert("Please Enter Email");
+        return;
+      }
+      if ($scope.Password == "") {
+        alert("Please Enter Password");
+        return;
+      }
+      var Indata = { "uuid": $scope.userProfile.ID, "email": $scope.Username, "password": $scope.Password };
+      $http({ url: ServerPathVariable.PostUserRegister(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
+        if (data.data.code == "Success") {
+          alert("Register Success");
+          $scope.IsLogin = !$scope.IsLogin;
+        } else if (data.data.code == "Fail" && data.data.message == "This Email Address is Used") {
+          alert("This Email Address is Used");
+        }
+      }, function (data, status, headers, config) {
+        config.log("Register With Server Error");
+      });
     };
     $scope.changeState = function () {
       $scope.IsLogin = !$scope.IsLogin;
