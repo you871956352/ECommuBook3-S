@@ -926,7 +926,7 @@ angular
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Practicing", $scope.currentDisplayLanguage);
   })
-  .controller("PoemCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia) {
+  .controller("PoemCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia, VoiceRecordService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Poem", $scope.currentDisplayLanguage);
@@ -934,6 +934,38 @@ angular
     $scope.isMenu = true;
     $scope.selectPoemObject;
     $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.currentDisplayLanguage);
+
+    $scope.RecordState = $scope.subMenuProfileGeneral.Start;
+    $scope.isRecorded = false;
+    //Sample marks.
+    $scope.returnMark = [];
+    $scope.returnMark.Total = 8.0;
+    $scope.returnMark.Precision = 7.0;
+    $scope.returnMark.Accuracy = 9.0;
+    if (window.cordova && window.cordova.file && window.audioinput) {
+      console.log("Enable Voice Record Listener...");
+      window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
+      window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
+    }
+    $scope.checkRecord = function () {
+      VoiceRecordService.checkRecord();
+    };
+    $scope.uploadRecord = function () {
+
+    };
+    $scope.recordOperation = function () {
+      if ($scope.RecordState == $scope.subMenuProfileGeneral.Start) {
+        $scope.isRecorded = false;
+        $scope.RecordState = $scope.subMenuProfileGeneral.Stop;
+        VoiceRecordService.startCapture();
+      }
+      else if ($scope.RecordState == $scope.subMenuProfileGeneral.Stop) {
+        $scope.RecordState = $scope.subMenuProfileGeneral.Start;
+        VoiceRecordService.stopCapture("poemTemp");
+        $scope.isRecorded = true;
+      }
+    };
+
     $scope.onPoemClick = function (ev, content) {
       $scope.selectPoemObject = content;
       $scope.isMenu = false;
@@ -948,6 +980,7 @@ angular
     };
     $scope.backToMenu = function () {
       $scope.isMenu = true;
+      $scope.isRecorded = false;
     };
     $scope.onPoemContentClick = function (ev, index) {
       MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Poem_" + $scope.selectPoemObject.Index + "_Content_" + index + ".mp3");
@@ -956,7 +989,7 @@ angular
       MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Poem_" + $scope.selectPoemObject.Index + "_Title.mp3");
     };
   })
-  .controller("PronunciationCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia) {
+  .controller("PronunciationCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia,VoiceRecordService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Pronunciation", $scope.currentDisplayLanguage);
@@ -964,6 +997,38 @@ angular
     $scope.selectPronunciationObject;
     $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.currentDisplayLanguage);
     $scope.isMenu = true;
+
+    $scope.RecordState = $scope.subMenuProfileGeneral.Start;
+    $scope.isRecorded = false;
+    //Sample marks.
+    $scope.returnMark = [];
+    $scope.returnMark.Total = 8.0;
+    $scope.returnMark.Precision = 7.0;
+    $scope.returnMark.Accuracy = 9.0;
+    if (window.cordova && window.cordova.file && window.audioinput) {
+      console.log("Enable Voice Record Listener...");
+      window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
+      window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
+    }
+    $scope.checkRecord = function () {
+      VoiceRecordService.checkRecord();
+    };
+    $scope.uploadRecord = function () {
+
+    };
+    $scope.recordOperation = function () {
+      if ($scope.RecordState == $scope.subMenuProfileGeneral.Start) {
+        $scope.isRecorded = false;
+        $scope.RecordState = $scope.subMenuProfileGeneral.Stop;
+        VoiceRecordService.startCapture();
+      }
+      else if ($scope.RecordState == $scope.subMenuProfileGeneral.Stop) {
+        $scope.RecordState = $scope.subMenuProfileGeneral.Start;
+        VoiceRecordService.stopCapture("pronunciationTemp");
+        $scope.isRecorded = true;
+      }
+    };
+
     $scope.onPronunciationClick = function (ev, content) {
       $scope.selectPronunciationObject = content;
       $scope.currentReadingWordIndex = 0;
@@ -1000,7 +1065,7 @@ angular
     //Sample marks.
     $scope.returnMark = [];
     $scope.returnMark.Total = 8.0;
-    $scope.returnMark.Detail = 7.0;
+    $scope.returnMark.Precision = 7.0;
     $scope.returnMark.Accuracy = 9.0;
 
     $scope.onFacialPracticeClick = function (ev, content) {

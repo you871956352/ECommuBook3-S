@@ -26,12 +26,31 @@
             <md-card-title-text>
               <div class="md-headline" layout-align="center center" style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
                 <div ng-click="onPoemTitleClick($event)">{{selectPoemObject.Title}} ({{selectPoemObject.Author}})</div>
-                <md-button class="md-raised" ng-click="backToMenu()" style="float: right">Back</md-button>
+                <md-button class="md-raised" ng-click="backToMenu()" style="float: right">{{subMenuProfileGeneral.Back}}</md-button>
               </div>
             </md-card-title-text>
           </md-card-title>
           <md-card-content ng-repeat="content in selectPoemObject.Content">
             <div style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px" ng-click="onPoemContentClick($event, $index)">{{content}}</div>
+          </md-card-content>
+        </md-card>
+
+        <md-card>
+          <md-card-title>
+            <md-button class="md-raised" ng-click=recordOperation()>{{RecordState}}</md-button>
+            <md-button class="md-raised" ng-click=checkRecord() ng-disabled="!isRecorded">{{subMenuProfileGeneral.Check}}</md-button>
+            <md-button class="md-raised" ng-click=uploadRecord() ng-disabled="!isRecorded">{{subMenuProfileGeneral.Upload}}</md-button>
+          </md-card-title>
+          <md-card-content>
+            <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
+              {{subMenuProfileGeneral.TotalScore}} : {{returnMark.Total}}
+            </div>
+            <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
+              {{subMenuProfileGeneral.Precision}} : {{returnMark.Precision}}
+            </div>
+            <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
+              {{subMenuProfileGeneral.Accuracy}} : {{returnMark.Accuracy}}
+            </div>
           </md-card-content>
         </md-card>
       </div>
