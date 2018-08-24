@@ -816,9 +816,10 @@ angular
       targetScope.enableView = false;
       targetScope.selectedCategoryId = categoryId;
       targetScope.selectedCategoryName = "";
+      targetScope.DisplayLanguage = $scope.currentDisplayLanguage;
       for (var i = 0; i < $scope.shareCategory.categories.length; i++) {
         if ($scope.shareCategory.categories[i].ID == categoryId) {
-          targetScope.selectedCategoryName = UtilityFunction.getObjectTranslation($scope.shareCategory.categories[i], $scope.currentDisplayLanguage);
+          targetScope.selectedCategory = $scope.shareCategory.categories[i];
           break;
         }
       }
@@ -832,13 +833,17 @@ angular
         fullscreen: false, // Only for -xs, -sm breakpoints.
         onComplete: function () {
           $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryId)).then(function (data) {
-            targetScope.categoryCloneContent = data.data;
+            var cloneCategory = data.data;
+            targetScope.categoryCloneContent = cloneCategory;
+            LocalCacheService.prepareCloneCategory(cloneCategory);
+            //LocalCacheService.ckeckDownloadImage(targetScope);
             targetScope.enableView = true;
           });
         }
       });;
     };
     function viewShareController($scope, $mdDialog, $ionicSideMenuDelegate, $http) {
+      $scope.selectedCategoryName = UtilityFunction.getObjectTranslation($scope.selectedCategory, $scope.DisplayLanguage);
       $scope.cancel = function () {
         $mdDialog.cancel();
       };
@@ -862,25 +867,15 @@ angular
         };
       }
     }
+    function () {
+
+    }
   })
   .controller("UserInfoCtrl", function ($scope,UserProfileService,$cordovaCapture){
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.SpeechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.GenderList = GlobalVariable.GenderList;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
-    $scope.videoCapture = function () {
-      options = {
-        limit: 1
-      };
-      $cordovaCapture.captureVideo(options).then(
-        function (videoData) {
-          console.log("get video success: " + videoData[0].fullPath);
-          $scope.videoSrc = videoData[0].fullPath;
-        },
-        function (err) {
-          console.log("get video fail" + JSON.stringify(err));
-        });
-    };
   })
   .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$cordovaNetwork,$http,$state,UserProfileService,VoiceRecordService,VoiceModelService){
     var id = UserProfileService.getLatest().ID;

@@ -389,6 +389,19 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       }
       self.checkDownload();
     },
+    prepareCloneCategory: function (cloneCategory) {
+      var idList = [];
+      var targetDirectory = GlobalVariable.LocalCacheDirectory();
+      for (var j = 0; j < cloneCategory.Items.length; j++) {
+        var item = cloneCategory.Items[j];
+        idList.push(item.ID);
+      }
+      GlobalCacheVariable.FileCheck.SetTotalImageFile(idList.length);
+      for (var i = 0; i < idList.length; i++) {
+        console.log("Download clone image:" + idList[i]);
+        this.downloadImageToLocal(targetDirectory, ("images/" + idList[i] + ".jpg"), idList[i]);
+      }
+    },
     prepareCache: function (userProfile, trueReload) {
       if (trueReload == undefined) {
         trueReload = false;
@@ -542,6 +555,15 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
             self.checkDownload(reload);
           }
         }, 1000); //delay 2 seconds
+    },
+    ckeckDownloadImage: function (targetScope) {
+      setTimeout(function() {
+        if (GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
+          targetScope.enableView = true;
+        }else{
+          this.ckeckDownloadImage();
+        }
+      }, 1000);
     },
     checkDelete: function(refreshAll){
       var self = this;
