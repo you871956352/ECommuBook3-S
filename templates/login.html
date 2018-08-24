@@ -1,11 +1,11 @@
-<ion-view view-title="{{menuProfileTitle.UserLogin}}" name="login-view" >
+<ion-view name="login-view" >
   <ion-content class="padding">
     <div ng-controller="LoginCtrl" ng-cloak>
-      <md-card>
+      <md-card ng-show="IsLogin">
         <md-card-title>
           <md-card-title-text>
             <div layout="row" layout-align="center">
-              <span class="md-headline" layout-align="center center" style="font-size:25px;line-height:25px;">Login</span>
+              <span class="md-headline" layout-align="center center" style="font-size:25px;line-height:25px;">{{menuProfileTitle.UserLogin}}</span>
             </div>
           </md-card-title-text>
         </md-card-title>
@@ -19,6 +19,34 @@
             </label>
             <div>
               <md-button class="button button-block button-calm" ng-click="userLogin()">{{menuProfileTitle.UserLogin}}</md-button>
+            </div>
+            <div ng-click="changeState()">
+              <span style="float:right">{{subMenuProfileObject.Register}}</span>
+            </div>
+          </div>
+        </md-card-content>
+      </md-card>
+      <md-card ng-hide="IsLogin">
+        <md-card-title>
+          <md-card-title-text>
+            <div layout="row" layout-align="center">
+              <span class="md-headline" layout-align="center center" style="font-size:25px;line-height:25px;">{{subMenuProfileObject.Register}}</span>
+            </div>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <div layout="column" layout-align="space-around" class="list list-inset">
+            <label class="item item-input">
+              <input type="text" placeholder="{{subMenuProfileObject.UserName}}" ng-model="Username">
+            </label>
+            <label class="item item-input">
+              <input type="password" placeholder="{{subMenuProfileObject.Password}}" ng-model="Password">
+            </label>
+            <div>
+              <md-button class="button button-block button-calm" ng-click="userRegister()">{{subMenuProfileObject.Register}}</md-button>
+            </div>
+            <div ng-click="changeState()">
+              <span style="float:right">{{menuProfileTitle.UserLogin}}</span>
             </div>
           </div>
         </md-card-content>
