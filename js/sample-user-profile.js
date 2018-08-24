@@ -1,7 +1,6 @@
 function getSampleUserProfile() {
   json = {
     ID: "00000000-0000-0000-0002-000000000000",
-    Password: "",
     Email:"",
     DisplayName: "試用者",
     Categories: [
@@ -14134,19 +14133,19 @@ function getSampleMenuProfile() {
           {
             OperationType: "UserName",
             DisplayMultipleLanguage: [
-              { "Language": "de", "Text": "Benutzername" },
-              { "Language": "ru", "Text": "Имя пользователя" },
-              { "Language": "pt", "Text": "Nome de usuário" },
-              { "Language": "ko", "Text": "사용자 이름" },
-              { "Language": "yue", "Text": "用戶名" },
-              { "Language": "en", "Text": "User Name" },
-              { "Language": "it", "Text": "Nome utente" },
-              { "Language": "fr", "Text": "Nom d’utilisateur" },
-              { "Language": "es", "Text": "Nombre de usuario" },
-              { "Language": "zh-CHT", "Text": "使用者名" },
-              { "Language": "ar", "Text": "اسم المستخدم" },
-              { "Language": "zh-CHS", "Text": "用户名" },
-              { "Language": "ja", "Text": "ユーザー名" }]
+              { "Language": "de", "Text": "E-Mail" },
+              { "Language": "ru", "Text": "Отправить по электронной почте" },
+              { "Language": "pt", "Text": "Email" },
+              { "Language": "ko", "Text": "메일 주소" },
+              { "Language": "yue", "Text": "電子郵件" },
+              { "Language": "en", "Text": "Email" },
+              { "Language": "it", "Text": "Posta elettronica" },
+              { "Language": "fr", "Text": "Messagerie" },
+              { "Language": "es", "Text": "Correo electrónico" },
+              { "Language": "zh-CHT", "Text": "電子郵件" },
+              { "Language": "ar", "Text": "البريد الإلكتروني" },
+              { "Language": "zh-CHS", "Text": "电子邮件" },
+              { "Language": "ja", "Text": "電子メール" }]
           },
           {
             OperationType: "Password",
@@ -14164,6 +14163,23 @@ function getSampleMenuProfile() {
               { "Language": "ar", "Text": "كلمة المرور" },
               { "Language": "zh-CHS", "Text": "密码" },
               { "Language": "ja", "Text": "パスワード" }]
+          },
+          {
+            OperationType: "Register",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Registrieren Sie sich" },
+              { "Language": "ru", "Text": "Зарегистрироваться" },
+              { "Language": "pt", "Text": "Registre-se" },
+              { "Language": "ko", "Text": "등록" },
+              { "Language": "yue", "Text": "註冊" },
+              { "Language": "en", "Text": "Register" },
+              { "Language": "it", "Text": "Registro" },
+              { "Language": "fr", "Text": "S’inscrire" },
+              { "Language": "es", "Text": "Registro" },
+              { "Language": "zh-CHT", "Text": "註冊" },
+              { "Language": "ar", "Text": "سجل" },
+              { "Language": "zh-CHS", "Text": "注册" },
+              { "Language": "ja", "Text": "登録" }]
           }
         ]
       }

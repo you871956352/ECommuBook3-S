@@ -286,11 +286,18 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       }
       return returnObject;
     },
-    loginUser: function (UserProfile, email, passWord) {
-      //alert(UserProfile.ID + " " + email + " " + passWord);
+    userLogin: function (UserProfile, email, passWord) {
       var Indata = { "uuid": UserProfile.ID, "email": email, "password": passWord };
       $http({ url: ServerPathVariable.PostUserLogin(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
         alert(JSON.stringify( data.data));
+      }, function (data, status, headers, config) {
+        alert("error");
+      });
+    },
+    userRegister: function (UserProfile, email, passWord) {
+      var Indata = { "uuid": UserProfile.ID, "email": email, "password": passWord };
+      $http({ url: ServerPathVariable.PostUserRegister(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
+        alert(JSON.stringify(data.data));
       }, function (data, status, headers, config) {
         alert("error");
       });

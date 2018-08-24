@@ -1099,9 +1099,16 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserLogin", $scope.currentDisplayLanguage);
+    $scope.IsLogin = true;
     $scope.Username = "";
     $scope.Password = "";
     $scope.userLogin = function () {
-      UserProfileService.loginUser($scope.userProfile, $scope.Username, $scope.Password);
-    }
+      UserProfileService.userLogin($scope.userProfile, $scope.Username, $scope.Password);
+    };
+    $scope.userRegister = function () {
+      UserProfileService.userRegister($scope.userProfile, $scope.Username, $scope.Password);
+    };
+    $scope.changeState = function () {
+      $scope.IsLogin = !$scope.IsLogin;
+    };
   })
