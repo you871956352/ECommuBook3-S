@@ -1096,7 +1096,7 @@ angular
 
     };
   })
-  .controller("LoginCtrl", function ($scope, UserProfileService, $state, $http) {
+  .controller("LoginCtrl", function ($scope, UserProfileService, $state, $http, $mdDialog, $ionicSideMenuDelegate, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserLogin", $scope.currentDisplayLanguage);
@@ -1115,9 +1115,13 @@ angular
       var Indata = { "uuid": $scope.userProfile.ID, "email": $scope.Username, "password": $scope.Password };
       $http({ url: ServerPathVariable.PostUserLogin(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
         if (data.data.code == "Success") {
-          $scope.userProfile.Email = $scope.Username;
-          UserProfileService.saveLocal($scope.userProfile);
-          $state.go("app.welcome", {}, { reload: true });
+          var uuid = data.data.message;
+          GlobalVariable.DownloadProgress.Reset();
+          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+          UserProfileService.getOnline(uuid, function () {
+            LocalCacheService.prepareCache(UserProfileService.getLatest());
+            $state.go("app.welcome", {}, { reload: true });
+          });
         }
         else if (data.data.code == "Fail" && data.data.message == "Email Address not found") {
           alert($scope.subMenuProfileObject.AlertEmailNotFound);
