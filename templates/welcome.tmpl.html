@@ -12,7 +12,7 @@
         <md-card-content>
           <ion-list>
             <div layout="row" layout-align="space-around center">
-              <ion-item item-content href="#/app/userInformation">
+              <ion-item href="#/app/userInformation" ng-hide="testMode">
                 <div layout="column" layout-align="center center">
                   <img src="img/icons/User.png" class="centerImage" />
                   <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'UserInformation' && isShowDisplayName.checked">
@@ -22,7 +22,7 @@
                   </div>
                 </div>
               </ion-item>
-              <ion-item href="#/app/search">
+              <ion-item href="#/app/search" ng-hide="testMode">
                 <div layout="column" layout-align="center center">
                   <img src="img/icons/Search.png" class="centerImage"/>
                   <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Search' && isShowDisplayName.checked">
@@ -78,7 +78,7 @@
               </ion-item>
             </div>
             <div layout="row" layout-align="space-around center">
-              <ion-item href="#/app/practicing" style="max-width:50%">
+              <ion-item href="#/app/practicing" style="max-width:50%" ng-hide="testMode">
                 <div layout="column" layout-align="center center">
                   <img src="img/icons/Practice.png" class="centerImage" />
                   <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Practicing' && isShowDisplayName.checked">
