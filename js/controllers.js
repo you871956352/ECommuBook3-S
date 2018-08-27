@@ -866,10 +866,7 @@ angular
           console.log("Server is not avaliable: " + response);
         };
       }
-    }
-    function () {
-
-    }
+    };
   })
   .controller("UserInfoCtrl", function ($scope,UserProfileService,$cordovaCapture){
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
@@ -1099,43 +1096,42 @@ angular
     $scope.Password = "";
     $scope.userLogin = function () {
       if ($scope.Username == "") {
-        alert("Please Enter Email");
+        alert($scope.subMenuProfileObject.AlertEnterEmail);
         return;
       }
       if ($scope.Password == "") {
-        alert("Please Enter Password");
+        alert($scope.subMenuProfileObject.AlertEnterPassword);
         return;
       }
       var Indata = { "uuid": $scope.userProfile.ID, "email": $scope.Username, "password": $scope.Password };
       $http({ url: ServerPathVariable.PostUserLogin(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
         if (data.data.code == "Success") {
-          //Go to other page
-          alert("Login Success");
+          $state.go("app.welcome", {}, { reload: true });
         } else if (data.data.code == "Fail" && data.data.message == "Email Address not found") {
-          alert("Email Address not found");
+          alert($scope.subMenuProfileObject.AlertEmailNotFound);
         } else if (data.data.code == "Fail" && data.data.message == "Wrong Password") {
-          alert("Wrong Password");
+          alert($scope.subMenuProfileObject.AlertWrongPassword);
         }
       }, function (data, status, headers, config) {
-        config.log("Login With Server Error");
+        config.log("Register With Server Error");
       });
     };
     $scope.userRegister = function () {
       if ($scope.Username == "") {
-        alert("Please Enter Email");
+        alert($scope.subMenuProfileObject.AlertEnterEmail);
         return;
       }
       if ($scope.Password == "") {
-        alert("Please Enter Password");
+        alert($scope.subMenuProfileObject.AlertEnterPassword);
         return;
       }
       var Indata = { "uuid": $scope.userProfile.ID, "email": $scope.Username, "password": $scope.Password };
       $http({ url: ServerPathVariable.PostUserRegister(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
         if (data.data.code == "Success") {
-          alert("Register Success");
+          alert($scope.subMenuProfileObject.RegisterSuccess);
           $scope.IsLogin = !$scope.IsLogin;
         } else if (data.data.code == "Fail" && data.data.message == "This Email Address is Used") {
-          alert("This Email Address is Used");
+          alert($scope.subMenuProfileObject.AlertEmailExist);
         }
       }, function (data, status, headers, config) {
         config.log("Register With Server Error");
