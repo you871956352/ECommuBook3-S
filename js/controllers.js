@@ -1114,9 +1114,11 @@ angular
           $scope.userProfile.Email = $scope.Username;
           UserProfileService.saveLocal($scope.userProfile);
           $state.go("app.welcome", {}, { reload: true });
-        } else if (data.data.code == "Fail" && data.data.message == "Email Address not found") {
+        }
+        else if (data.data.code == "Fail" && data.data.message == "Email Address not found") {
           alert($scope.subMenuProfileObject.AlertEmailNotFound);
-        } else if (data.data.code == "Fail" && data.data.message == "Wrong Password") {
+        }
+        else if (data.data.code == "Fail" && data.data.message == "Wrong Password") {
           alert($scope.subMenuProfileObject.AlertWrongPassword);
         }
       }, function (data, status, headers, config) {
@@ -1137,7 +1139,11 @@ angular
         if (data.data.code == "Success") {
           alert($scope.subMenuProfileObject.RegisterSuccess);
           $scope.IsLogin = !$scope.IsLogin;
-        } else if (data.data.code == "Fail" && data.data.message == "This Email Address is Used") {
+        }
+        else if (data.data.code == "Fail" && data.data.message == "This Email Address is Used") {
+          alert($scope.subMenuProfileObject.AlertEmailExist);
+        }
+        else if (data.data.code == "Fail" && data.data.message == "This username had already done registration") {
           alert($scope.subMenuProfileObject.AlertEmailExist);
         }
       }, function (data, status, headers, config) {

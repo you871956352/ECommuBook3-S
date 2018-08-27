@@ -14301,6 +14301,23 @@ function getSampleMenuProfile() {
               { "Language": "ja", "Text": "パスワードが間違っています。" }]
           },
           {
+            OperationType: "AlertAlreadyRegister",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Dieser Benutzername hatte bereits getan, Registrierung" },
+              { "Language": "ru", "Text": "Это имя пользователя уже сделали регистрации" },
+              { "Language": "pt", "Text": "Este nome de utilizador já tinha registro" },
+              { "Language": "ko", "Text": "이 사용자 이름 등록을 이미 완료 했다" },
+              { "Language": "yue", "Text": "呢個用戶名有註冊過" },
+              { "Language": "en", "Text": "This username had already done registration" },
+              { "Language": "it", "Text": "Questo nome utente aveva già fatto la registrazione" },
+              { "Language": "fr", "Text": "Ce nom d’utilisateur l’avait déjà fait d’inscription" },
+              { "Language": "es", "Text": "Nombre de usuario ya había hecho el registro" },
+              { "Language": "zh-CHT", "Text": "這個使用者名已經註冊過了" },
+              { "Language": "ar", "Text": "اسم المستخدم هذا قد فعلت التسجيل" },
+              { "Language": "zh-CHS", "Text": "这个用户名已经注册过了" },
+              { "Language": "ja", "Text": "このユーザー名は既に登録を行っていた" }]
+          },
+          {
             OperationType: "LoginSuccess",
             DisplayMultipleLanguage: [
               { "Language": "de", "Text": "Login erfolgreich" },
