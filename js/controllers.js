@@ -33,7 +33,10 @@ angular
           window.localStorage.setItem("loggedIn", 1);
           GlobalVariable.DownloadProgress.Reset();
           LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-          LocalCacheService.prepareCache($scope.userProfile, true);
+          UserProfileService.postToServerCallback(function () {
+            console.log("Post to Server When First Login");
+            LocalCacheService.prepareCache($scope.userProfile, true);       
+          });
         }
       }
     });
@@ -569,6 +572,7 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Menu", $scope.currentDisplayLanguage);
+    $scope.currentYear = (new Date()).getFullYear();
   })
   .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
     $scope.userProfile = UserProfileService.getLatest();
