@@ -2,7 +2,7 @@ function getSampleUserProfile() {
   json = {
     ID: "00000000-0000-0000-0002-000000000000",
     Email:"",
-    DisplayName: "試用者",
+    DisplayName: "Guest",
     Categories: [
       {
         ID: "00000000-0000-0000-0000-000000000001",
@@ -14180,6 +14180,125 @@ function getSampleMenuProfile() {
               { "Language": "ar", "Text": "سجل" },
               { "Language": "zh-CHS", "Text": "注册" },
               { "Language": "ja", "Text": "登録" }]
+          },
+          {
+            OperationType: "AlertEnterEmail",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Bitte geben Sie E-Mail" },
+              { "Language": "ru", "Text": "Пожалуйста, введите Email" },
+              { "Language": "pt", "Text": "Por favor digite o E-mail" },
+              { "Language": "ko", "Text": "이메일을 입력 해 주시기 바랍니다" },
+              { "Language": "yue", "Text": "請輸入電子郵件" },
+              { "Language": "en", "Text": "Please Enter Email" },
+              { "Language": "it", "Text": "Inserisci indirizzo Email" },
+              { "Language": "fr", "Text": "S’il vous plaît entrer Email" },
+              { "Language": "es", "Text": "Por favor ingrese el correo electrónico" },
+              { "Language": "zh-CHT", "Text": "請輸入電子郵件" },
+              { "Language": "ar", "Text": "الرجاء إدخال البريد الإلكتروني" },
+              { "Language": "zh-CHS", "Text": "请输入电子邮件" },
+              { "Language": "ja", "Text": "メール アドレスを入力してください。" }]
+          },
+          {
+            OperationType: "AlertEnterPassword",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Bitte geben Sie Passwort" },
+              { "Language": "ru", "Text": "Пожалуйста, введите пароль" },
+              { "Language": "pt", "Text": "Por favor digite a senha" },
+              { "Language": "ko", "Text": "비밀 번호를 입력 해 주시기 바랍니다" },
+              { "Language": "yue", "Text": "请输入密码" },
+              { "Language": "en", "Text": "Please Enter Password" },
+              { "Language": "it", "Text": "Inserisci la Password" },
+              { "Language": "fr", "Text": "Veuillez entrer le mot de passe" },
+              { "Language": "es", "Text": "Por favor introduzca la contraseña" },
+              { "Language": "zh-CHT", "Text": "請輸入密碼" },
+              { "Language": "ar", "Text": "الرجاء إدخال كلمة المرور" },
+              { "Language": "zh-CHS", "Text": "请输入密码" },
+              { "Language": "ja", "Text": "パスワードを入力してください。" }]
+          },
+          {
+            OperationType: "AlertEmailNotFound",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "E-Mail-Adresse wurde nicht gefunden." },
+              { "Language": "ru", "Text": "Адрес электронной почты не найден" },
+              { "Language": "pt", "Text": "Endereço de e-mail não encontrado" },
+              { "Language": "ko", "Text": "이메일 주소를 찾을 수 없습니다." },
+              { "Language": "yue", "Text": "未搵到電子郵件地址" },
+              { "Language": "en", "Text": "Email Address not Found" },
+              { "Language": "it", "Text": "Indirizzo e-mail non trovato" },
+              { "Language": "fr", "Text": "Adresse email non trouvé" },
+              { "Language": "es", "Text": "Dirección de correo electrónico no encontrado" },
+              { "Language": "zh-CHT", "Text": "未找到電子郵件地址" },
+              { "Language": "ar", "Text": "لم يتم العثور على عنوان البريد الإلكتروني" },
+              { "Language": "zh-CHS", "Text": "未找到电子邮件地址" },
+              { "Language": "ja", "Text": "電子メール アドレスが見つかりません" }]
+          },
+          {
+            OperationType: "AlertEmailExist",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Diese e-Mail-Adresse wird bereits verwendet" },
+              { "Language": "ru", "Text": "Этот адрес электронной почты уже используется" },
+              { "Language": "pt", "Text": "Este endereço de E-mail já está sendo usado" },
+              { "Language": "ko", "Text": "이 이메일 주소가 이미 사용" },
+              { "Language": "yue", "Text": "此電子郵件地址已經被使用" },
+              { "Language": "en", "Text": "This Email Address is already Used" },
+              { "Language": "it", "Text": "Questo indirizzo E-mail è già utilizzato" },
+              { "Language": "fr", "Text": "Cette adresse E-mail est déjà utilisée" },
+              { "Language": "es", "Text": "Ya se utiliza esta dirección de correo electrónico" },
+              { "Language": "zh-CHT", "Text": "此電子郵件地址已被使用" },
+              { "Language": "ar", "Text": "عنوان البريد الإلكتروني هذا قيد الاستخدام بالفعل" },
+              { "Language": "zh-CHS", "Text": "此电子邮件地址已被使用" },
+              { "Language": "ja", "Text": "このメール アドレスは既に使用されています。" }]
+          },
+          {
+            OperationType: "AlertWrongPassword",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Falsches Passwort" },
+              { "Language": "ru", "Text": "Неправильный пароль" },
+              { "Language": "pt", "Text": "Senha errada" },
+              { "Language": "ko", "Text": "잘못 된 암호" },
+              { "Language": "yue", "Text": "密碼錯誤" },
+              { "Language": "en", "Text": "Wrong Password" },
+              { "Language": "it", "Text": "Password errata" },
+              { "Language": "fr", "Text": "Mot de passe erroné" },
+              { "Language": "es", "Text": "Contraseña incorrecta" },
+              { "Language": "zh-CHT", "Text": "密碼錯誤" },
+              { "Language": "ar", "Text": "كلمة مرور خاطئة" },
+              { "Language": "zh-CHS", "Text": "密码错误" },
+              { "Language": "ja", "Text": "パスワードが間違っています。" }]
+          },
+          {
+            OperationType: "LoginSuccess",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Login erfolgreich" },
+              { "Language": "ru", "Text": "Успешный вход" },
+              { "Language": "pt", "Text": "Sucesso de logon" },
+              { "Language": "ko", "Text": "로그인 성공" },
+              { "Language": "yue", "Text": "登錄成功" },
+              { "Language": "en", "Text": "Login Success" },
+              { "Language": "it", "Text": "Successo di login" },
+              { "Language": "fr", "Text": "Succès de l’ouverture de session" },
+              { "Language": "es", "Text": "Éxito de inicio de sesión" },
+              { "Language": "zh-CHT", "Text": "登錄成功" },
+              { "Language": "ar", "Text": "نجاح تسجيل الدخول" },
+              { "Language": "zh-CHS", "Text": "登录成功" },
+              { "Language": "ja", "Text": "ログインの成功" }]
+          },
+          {
+            OperationType: "RegisterSuccess",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Register-Erfolg" },
+              { "Language": "ru", "Text": "Успех Регистра" },
+              { "Language": "pt", "Text": "Registo de sucesso" },
+              { "Language": "ko", "Text": "등록 성공" },
+              { "Language": "yue", "Text": "註冊成功" },
+              { "Language": "en", "Text": "Register Success" },
+              { "Language": "it", "Text": "Registro di successo" },
+              { "Language": "fr", "Text": "S’inscrire à succès" },
+              { "Language": "es", "Text": "Registro de éxito" },
+              { "Language": "zh-CHT", "Text": "註冊成功" },
+              { "Language": "ar", "Text": "سجل النجاح" },
+              { "Language": "zh-CHS", "Text": "注册成功" },
+              { "Language": "ja", "Text": "登録成功" }]
           }
         ]
       }
