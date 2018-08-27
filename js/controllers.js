@@ -873,6 +873,11 @@ angular
     $scope.SpeechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.GenderList = GlobalVariable.GenderList;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserInformation", $scope.currentDisplayLanguage);
+    if ($scope.userProfile.Email != "" && $scope.userProfile.Email != undefined) {
+      $scope.isBinded = true;
+    } else {
+      $scope.isBinded = false;
+    }
   })
   .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$cordovaNetwork,$http,$state,UserProfileService,VoiceRecordService,VoiceModelService){
     var id = UserProfileService.getLatest().ID;
@@ -1106,6 +1111,8 @@ angular
       var Indata = { "uuid": $scope.userProfile.ID, "email": $scope.Username, "password": $scope.Password };
       $http({ url: ServerPathVariable.PostUserLogin(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
         if (data.data.code == "Success") {
+          $scope.userProfile.Email = $scope.Username;
+          UserProfileService.saveLocal($scope.userProfile);
           $state.go("app.welcome", {}, { reload: true });
         } else if (data.data.code == "Fail" && data.data.message == "Email Address not found") {
           alert($scope.subMenuProfileObject.AlertEmailNotFound);

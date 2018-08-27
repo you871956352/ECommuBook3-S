@@ -9,6 +9,7 @@
         </md-card-title>
         <md-card-content>
           <h1 class="md-title">{{subMenuProfileGeneral.UserID}}: {{userProfile.ID}}</h1>
+          <h1 class="md-title" ng-show="isBinded">{{subMenuProfileGeneral.UserEmail}}: {{userProfile.Email}}</h1>
           <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
             {{subMenuProfileGeneral.DisplayLanguage}}: {{displayLanguage.name}}
           </h1>
@@ -20,6 +21,17 @@
           </h1>
         </md-card-content>
       </md-card>
+      <md-card ng-hide="isBinded">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{menuProfileTitle.UserLogin}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <h1 class="md-title">{{subMenuProfileObject.NoticeLogin}}</h1>
+          <md-button class="md-raised" ui-sref="app.login">{{menuProfileTitle.UserLogin}}</md-button>
+        </md-card-content>
+    </md-card>
       <md-card>
     	    <md-card-title>
     	      <md-card-title-text>

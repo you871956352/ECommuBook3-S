@@ -12413,6 +12413,23 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "ユーザー ID"}]
           },
           {
+            OperationType: "UserEmail",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "E-Mail" },
+              { "Language": "ru", "Text": "Отправить по электронной почте" },
+              { "Language": "pt", "Text": "Email" },
+              { "Language": "ko", "Text": "메일 주소" },
+              { "Language": "yue", "Text": "電子郵件" },
+              { "Language": "en", "Text": "Email" },
+              { "Language": "it", "Text": "Posta elettronica" },
+              { "Language": "fr", "Text": "Messagerie" },
+              { "Language": "es", "Text": "Correo electrónico" },
+              { "Language": "zh-CHT", "Text": "電子郵件" },
+              { "Language": "ar", "Text": "البريد الإلكتروني" },
+              { "Language": "zh-CHS", "Text": "电子邮件" },
+              { "Language": "ja", "Text": "電子メール" }]
+          },
+          {
             OperationType: "DisplayLanguage",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Display-Sprache" },
@@ -13910,6 +13927,23 @@ function getSampleMenuProfile() {
               {"Language":"ar","Text":"هذه الدالة بحاجة لتسجيل صوتك وتدريب نموذج صوت"},
               {"Language":"zh-CHS","Text":"这个功能需要记录你的声音和训练声音模型。"},
               {"Language":"ja","Text":"この関数は、あなたの声を記録し、音声モデルを学習する必要があります。"}]
+          },
+          {
+            OperationType: "NoticeLogin",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Bitte verbindlich Ihre e-Mail-Adresse mit Ihrem Konto" },
+              { "Language": "ru", "Text": "Пожалуйста привязки вашу электронную почту с вашего счета" },
+              { "Language": "pt", "Text": "Ligação por favor seu email com sua conta" },
+              { "Language": "ko", "Text": "하시기 바랍니다 귀하의 이메일 계정으로 바인딩" },
+              { "Language": "yue", "Text": "請將您的電子郵件與您的帳戶绑定" },
+              { "Language": "en", "Text": "Please binding your email with your account" },
+              { "Language": "it", "Text": "Vincolanti per favore il tuo indirizzo email con il tuo account" },
+              { "Language": "fr", "Text": "Contraignant s’il vous plaît votre email avec votre compte" },
+              { "Language": "es", "Text": "Enlace por favor su correo electrónico con su cuenta" },
+              { "Language": "zh-CHT", "Text": "請將您的電子郵件與您的帳戶綁定" },
+              { "Language": "ar", "Text": "الرجاء ربط البريد الإلكتروني الخاص بك مع الحساب الخاص بك" },
+              { "Language": "zh-CHS", "Text": "请将您的电子邮件与您的帐户绑定" },
+              { "Language": "ja", "Text": "くださいあなたのアカウントにあなたのメール アドレスをバインド" }]
           }
         ]
       },
