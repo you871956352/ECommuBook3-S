@@ -35,7 +35,7 @@ angular
           LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
           UserProfileService.postToServerCallback(function () {
             console.log("Post to Server When First Login");
-            LocalCacheService.prepareCache($scope.userProfile, true);       
+            LocalCacheService.prepareCache($scope.userProfile, true);
           });
         }
       }
@@ -830,24 +830,21 @@ angular
           break;
         }
       }
-      $mdDialog.show({
-        controller: viewShareController,
-        templateUrl: "templates/popup-viewShare.tmpl.html",
-        parent: angular.element(document.body),
-        targetEvent: ev,
-        clickOutsideToClose: true,
-        scope: targetScope,
-        fullscreen: false, // Only for -xs, -sm breakpoints.
-        onComplete: function () {
-          $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryId)).then(function (data) {
-            var cloneCategory = data.data;
-            targetScope.categoryCloneContent = cloneCategory;
-            LocalCacheService.prepareCloneCategory(cloneCategory);
-            //LocalCacheService.ckeckDownloadImage(targetScope);
-            targetScope.enableView = true;
-          });
-        }
-      });;
+      $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryId)).then(function (data) {
+        var cloneCategory = data.data;
+        targetScope.categoryCloneContent = cloneCategory;
+        LocalCacheService.prepareCloneCategory(cloneCategory);
+        targetScope.enableView = true;
+        $mdDialog.show({
+          controller: viewShareController,
+          templateUrl: "templates/popup-viewShare.tmpl.html",
+          parent: angular.element(document.body),
+          targetEvent: ev,
+          clickOutsideToClose: true,
+          scope: targetScope,
+          fullscreen: false // Only for -xs, -sm breakpoints.
+        });
+      });
     };
     function viewShareController($scope, $mdDialog, $ionicSideMenuDelegate, $http) {
       $scope.selectedCategoryName = UtilityFunction.getObjectTranslation($scope.selectedCategory, $scope.DisplayLanguage);

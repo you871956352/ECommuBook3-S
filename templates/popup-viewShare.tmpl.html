@@ -21,7 +21,7 @@
         <md-card-content ng-show="enableView">
           <div ng-repeat="item in categoryCloneContent.Items" style="float:left;width:{{itemNormalPicWidth}}%">
             <div style="text-align:center;border:1px black dashed;height:{{itemNormalPicSize}}px;">
-              <img class='itemImage' src='{{ImagePath}}/{{item.ID}}.jpg' />
+              <img class='itemImage' ng-src='{{ImagePath}}/{{item.ID}}.jpg' />
               <div ng-repeat="translation in item.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                 <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;line-height: {{itemNormalFontSize}}px;">{{translation.Text}}</span>
               </div>
