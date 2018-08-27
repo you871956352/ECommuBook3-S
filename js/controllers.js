@@ -21,7 +21,7 @@ angular
         $rootScope.isShowDisplayName = { checked: true };
       }
       if (typeof $rootScope.testMode == 'undefined') {
-        $rootScope.testMode = true;
+        $rootScope.testMode = { checked: true };
       }
       console.log("Language Selected:" + $scope.currentDisplayLanguage + "/" + $scope.userProfile.SPEECH_LANGUAGE_CODE + "/" + $scope.userProfile.SPEECH_GENDER);
       if (window.localStorage.getItem("loggedIn") != 1) {
