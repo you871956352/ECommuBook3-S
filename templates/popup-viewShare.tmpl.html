@@ -23,14 +23,17 @@
             <div style="text-align:center;border:1px black dashed;height:{{itemNormalPicSize}}px;">
               <img class='itemImage' src='{{ImagePath}}/{{item.ID}}.jpg' />
               <div ng-repeat="translation in item.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-                <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;">{{translation.Text}}</span>
+                <span class='itemNormalText' style="font-size : {{itemNormalFontSize}}px;line-height: {{itemNormalFontSize}}px;">{{translation.Text}}</span>
               </div>
             </div>
           </div>
-          <md-button ng-click="downloadToLocal($event);">{{subMenuProfileObject.PageTitle}}</md-button>
         </md-card-content>
       </md-card>
-
+      <md-card>
+        <md-card-title>
+          <md-button ng-click="downloadToLocal($event);">{{subMenuProfileObject.PageTitle}}</md-button>
+        </md-card-title>
+      </md-card>
     </md-dialog-content>
   </form>
 </md-dialog>
