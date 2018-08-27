@@ -24,7 +24,7 @@
               </ion-item>
               <ion-item href="#/app/search">
                 <div layout="column" layout-align="center center">
-                  <img src="img/icons/Search.png" class="centerImage"/>
+                  <img src="img/icons/Search.png" class="centerImage" />
                   <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Search' && isShowDisplayName.checked">
                     <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                       <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
@@ -46,7 +46,7 @@
               </ion-item>
               <ion-item href="#/app/share">
                 <div layout="column" layout-align="center center">
-                  <img src="img/icons/Download.png" class="centerImage"/>
+                  <img src="img/icons/Download.png" class="centerImage" />
                   <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Download' && isShowDisplayName.checked">
                     <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                       <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
@@ -68,7 +68,7 @@
               </ion-item>
               <ion-item item-content href="#/app/setting">
                 <div layout="column" layout-align="center center">
-                  <img src="img/icons/Setting.png" class="centerImage"/>
+                  <img src="img/icons/Setting.png" class="centerImage" />
                   <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Setting' && isShowDisplayName.checked">
                     <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                       <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
@@ -91,6 +91,16 @@
             </div>
           </ion-list>
         </md-card-content>
+      </md-card>
+        <md-card-content>
+          <div style="text-align: center;">
+            <span style="font-style:italic;color:mediumslateblue;width:100%">
+              Copyright© {{currentYear}}. All rights reserved. The Chinese University of Hong Kong.
+            </span>
+          </div>         
+        </md-card-content>
+      <md-card>
+
       </md-card>
     </div>
   </ion-content>
