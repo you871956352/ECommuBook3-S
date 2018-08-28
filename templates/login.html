@@ -12,10 +12,10 @@
         <md-card-content>
           <div layout="column" layout-align="space-around" class="list list-inset">
             <label class="item item-input">
-              <input type="text" placeholder="{{subMenuProfileObject.UserName}}" ng-model="Username">
+              <input type="text" placeholder="{{subMenuProfileObject.UserName}}" ng-model="Username" ng-pattern="" />
             </label>
             <label class="item item-input">
-              <input type="password" placeholder="{{subMenuProfileObject.Password}}" ng-model="Password">
+              <input type="password" placeholder="{{subMenuProfileObject.Password}}" ng-model="Password"/>
             </label>
             <div>
               <md-button class="button button-block button-calm" ng-click="userLogin()">{{menuProfileTitle.UserLogin}}</md-button>

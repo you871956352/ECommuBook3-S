@@ -293,6 +293,20 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       });
       return $localStorage.shareCategory;
     },
+    getLatestInfoList: function (shareCategory) {
+      if ($localStorage.shareInfoList) {
+        console.log("Read shareInfoList from LocalStorage.");
+      }
+      else {
+        console.log("No shareInfoList in LocalStorage. Create sample shareInfoList.");
+        var list = [];
+        for (var i = 0; i < shareCategory.categories.length; i++) {
+          list.push(true);
+        }
+        $localStorage.shareInfoList = list;
+      }
+      return $localStorage.shareInfoList;
+    },
     getShareCategoryOnlineCloneContent: function (categoryID) {
       console.log("Read shareCategory clone content online.");
       $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryID)).then(function (data) {
@@ -364,7 +378,6 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       for (var i = 0; i < shareCategory.categories.length; i++) {
         idList.push(shareCategory.categories[i].ID);
       }
-      GlobalVariable.DownloadProgress.Reset();
       var targetDirectory = GlobalVariable.LocalCacheDirectory();
       $cordovaFile.createDir(targetDirectory, "images", false);
       GlobalCacheVariable.FileCheck.SetTotalImageFile(idList.length);
@@ -373,7 +386,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       }
       self.checkDownload();
     },
-    prepareCloneCategory: function (cloneCategory) {
+    prepareCloneCategory: function (cloneCategory, successCallback) {
       var idList = [];
       var targetDirectory = GlobalVariable.LocalCacheDirectory();
       for (var j = 0; j < cloneCategory.Items.length; j++) {
@@ -383,10 +396,10 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       GlobalCacheVariable.FileCheck.Reset();
       GlobalCacheVariable.FileCheck.SetTotalImageFile(idList.length);
       for (var i = 0; i < idList.length; i++) {
-        console.log("Download clone image:" + idList[i]);
+        console.log("Prepare clone image:" + idList[i]);
         this.downloadImageToLocal(targetDirectory, ("images/" + idList[i] + ".jpg"), idList[i]);
       }
-      //this.checkDownload(false);
+      this.checkShareCallback(successCallback);
     },
     prepareCache: function (userProfile, trueReload) {
       if (trueReload == undefined) {
@@ -541,6 +554,20 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
             self.checkDownload(reload);
           }
         }, 1000); //delay 2 seconds
+    },
+    checkShareCallback:function (successCallback) {
+      var self = this;
+        setTimeout(function() {
+          console.log("Check Image File static:" + GlobalCacheVariable.FileCheck.ExistImageFile +  "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
+          if (GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
+            if (typeof successCallback == "function") {
+              console.log("Image downloaded,pop up the dialog.");
+              successCallback();
+            }
+          }else{
+            self.checkShareCallback(successCallback);
+          }
+        }, 100);
     },
     checkDelete: function(refreshAll){
       var self = this;

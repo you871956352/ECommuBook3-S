@@ -58,7 +58,7 @@ var ServerPathVariable = new function () { //User to store server return path
     return this.GetSharePath() + "/" + categoryID;
   };
   this.GetShareCategoryClonePath = function (categoryID) {
-    return this.hostname + this.path + "category/" + categoryID + "/clone";
+    return this.hostname + this.path + "category/" + categoryID + "/detail";
   };
   this.GetAddCategoryToUserProfilePath = function (userId, categoryID) {
     return this.hostname + this.path + "userProfile/" + userId + "/addCategory/" + categoryID;
