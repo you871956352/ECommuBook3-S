@@ -14,11 +14,11 @@
       <md-card>
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline"> {{subMenuProfileObject.WordItems}} <md-button ng-click="getOnlineResource($event);">{{subMenuProfileGeneral.GetButton}}</md-button> </span>
+            <span class="md-headline"> {{subMenuProfileObject.WordItems}} </span>
           </md-card-title-text>
         </md-card-title>
 
-        <md-card-content ng-show="enableView">
+        <md-card-content>
           <div ng-repeat="item in categoryCloneContent.Items" style="float:left;width:{{itemNormalPicWidth}}%">
             <div style="text-align:center;border:1px black dashed;height:{{itemNormalPicSize}}px;">
               <img class='itemImage' ng-src='{{ImagePath}}/{{item.ID}}.jpg' />

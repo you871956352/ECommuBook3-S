@@ -259,36 +259,31 @@ angular
         GlobalVariable.DownloadProgress.Reset();
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
         var userProfile = UserProfileService.getLatest();
-        var newItem = { ID: $scope.uuid, DisplayName: $scope.itemName, DisplayNameLanguage: $scope.inputLanguage, DisplayMultipleLanguage: [] };
-        var url = ServerPathVariable.getTranslationsPath($scope.inputLanguage, newItem.DisplayName);
-        $http({ url: url, method: "GET" }).then(function (data) {
-          newItem.DisplayMultipleLanguage = data.data;
-          console.log("New Item: " + JSON.stringify(newItem));
-          var categoryIndex = UtilityFunction.getCategoryIndexById(UserProfileService.getLatest(), $scope.selectedCategoryId);
-          if (categoryIndex == -1) {
-            return;
-          }
-          userProfile.Categories[categoryIndex].Items.push(newItem);
-          UserProfileService.saveLocal(userProfile);
-          UserProfileService.postToServerCallback(function () {
-            var filePath = $scope.selectedImageUrl;
-            var server = ServerPathVariable.GetPostImagePath();
-            var options = new FileUploadOptions();
-            options.fileKey = "file";
-            options.fileName = filePath.substr(filePath.lastIndexOf("/") + 1);
-            options.mimeType = "image/jpeg";
-            options.httpMethod = "POST";
-            options.params = { uuid: newItem.ID };
-            $cordovaFileTransfer.upload(server, filePath, options).then(
-              function (result) {
-                var userProfile = UserProfileService.getLatest();
-                UserProfileService.getOnline(userProfile.ID, function () {
-                  LocalCacheService.prepareCache(UserProfileService.getLatest());
-                  console.log("Add Item Success" + JSON.stringify(result));
-                });
-              }
-            );
-          });
+        var newItem = { ID: $scope.uuid, DisplayName: $scope.itemName, DisplayNameLanguage: $scope.inputLanguage };
+        var categoryIndex = UtilityFunction.getCategoryIndexById(UserProfileService.getLatest(), $scope.selectedCategoryId);
+        if (categoryIndex == -1) {
+          return;
+        }
+        userProfile.Categories[categoryIndex].Items.push(newItem);
+        UserProfileService.saveLocal(userProfile);
+        UserProfileService.postToServerCallback(function () {
+          var filePath = $scope.selectedImageUrl;
+          var server = ServerPathVariable.GetPostImagePath();
+          var options = new FileUploadOptions();
+          options.fileKey = "file";
+          options.fileName = filePath.substr(filePath.lastIndexOf("/") + 1);
+          options.mimeType = "image/jpeg";
+          options.httpMethod = "POST";
+          options.params = { uuid: newItem.ID };
+          $cordovaFileTransfer.upload(server, filePath, options).then(
+            function (result) {
+              var userProfile = UserProfileService.getLatest();
+              UserProfileService.getOnline(userProfile.ID, function () {
+                LocalCacheService.prepareCache(UserProfileService.getLatest());
+                console.log("Add Item Success" + JSON.stringify(result));
+              });
+            }
+          );
         });
       };
       $scope.onTakeImageButtonClicked = function (mode) {
@@ -536,35 +531,28 @@ angular
       newCategory.ID = $scope.uuid;
       newCategory.DisplayName = $scope.categoryName;
       newCategory.DisplayNameLanguage = $scope.inputLanguage;
-      newCategory.DisplayMultipleLanguage = [];
-      $http({ url: ServerPathVariable.getTranslationsPath($scope.inputLanguage, newCategory.DisplayName), method: "GET" }).then(function (data) {
-        newCategory.DisplayMultipleLanguage = data.data;
-        $scope.userProfile.Categories.push(newCategory);
-        UserProfileService.saveLocal($scope.userProfile);
-        UserProfileService.postToServerCallback(function () {
-          var filePath = $scope.selectedImageUrl;
-          var options = new FileUploadOptions();
-          options.fileKey = "file";
-          options.fileName = filePath.substr(filePath.lastIndexOf("/") + 1);
-          options.mimeType = "image/jpeg";
-          options.httpMethod = "POST";
-          options.params = { uuid: newCategory.ID };
-          console.log("Category Option: " + JSON.stringify(options));
-          $cordovaFileTransfer.upload(ServerPathVariable.GetPostImagePath(), filePath, options).then(
-            function (result) {
-              UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
-                LocalCacheService.prepareCache(UserProfileService.getLatest());
-              });
-            },
-            function (err) { // Error
-              console.log("Image upload Error: " + JSON.stringify(err));
-            },
-            function (progress) { }
-          );
-        });
-      }, function errorCallback(response) {
-        alert($scope.subMenuProfileGeneral.ServerWarning);
-        console.log("Error callback:" + response);
+      $scope.userProfile.Categories.push(newCategory);
+      UserProfileService.saveLocal($scope.userProfile);
+      UserProfileService.postToServerCallback(function () {
+        var filePath = $scope.selectedImageUrl;
+        var options = new FileUploadOptions();
+        options.fileKey = "file";
+        options.fileName = filePath.substr(filePath.lastIndexOf("/") + 1);
+        options.mimeType = "image/jpeg";
+        options.httpMethod = "POST";
+        options.params = { uuid: newCategory.ID };
+        console.log("Category Option: " + JSON.stringify(options));
+        $cordovaFileTransfer.upload(ServerPathVariable.GetPostImagePath(), filePath, options).then(
+          function (result) {
+            UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
+              LocalCacheService.prepareCache(UserProfileService.getLatest());
+            });
+          },
+          function (err) { // Error
+            console.log("Image upload Error: " + JSON.stringify(err));
+          },
+          function (progress) { }
+        );
       });
     };
   })
@@ -573,7 +561,6 @@ angular
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Menu", $scope.currentDisplayLanguage);
     $scope.currentYear = new Date().getFullYear();
-    console.log($scope.currentYear);
   })
   .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
     $scope.userProfile = UserProfileService.getLatest();
@@ -811,20 +798,18 @@ angular
   .controller("ShareCtrl", function ($scope, $http, UserProfileService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     //$scope.selectedIndex;
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.shareCategory = UserProfileService.getShareCategory();
+    $scope.shareCategory = UserProfileService.getLatestShareCategory();
     //$scope.getLatestInfoList = UserProfileService.getLatestInfoList($scope.shareCategory);
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Download", $scope.currentDisplayLanguage);
     $scope.refreshOnlineResource = function () {
       console.log("Start to download online resources");
-      $scope.shareCategory = UserProfileService.getShareCategory();
-      $scope.getLatestInfoList = UserProfileService.getLatestInfoList($scope.shareCategory);
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-      LocalCacheService.prepareShareCategory($scope.shareCategory);
+      UserProfileService.getShareCategory();
+      //$scope.getLatestInfoList = UserProfileService.getLatestInfoList($scope.shareCategory);
     };
     $scope.onItemClickedDownload = function (ev, categoryId) {
       var targetScope = $scope.$new();
-      targetScope.enableView = false;
       targetScope.selectedCategoryId = categoryId;
       targetScope.selectedCategoryName = "";
       targetScope.DisplayLanguage = $scope.currentDisplayLanguage;
@@ -837,11 +822,10 @@ angular
       }
       //if($scope.getLatestInfoList[$scope.selectedIndex] == true){
         console.log("No img in local storage, get them online.");
-        $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryId)).then(function (data) {
+        $http.get(ServerPathVariable.GetShareCategoryDetailPath(categoryId)).then(function (data) {
           var cloneCategory = data.data;
           targetScope.categoryCloneContent = cloneCategory;
           LocalCacheService.prepareCloneCategory(cloneCategory,function () {
-            targetScope.enableView = true;
             $mdDialog.show({
               controller: viewShareController,
               templateUrl: "templates/popup-viewShare.tmpl.html",
@@ -855,10 +839,9 @@ angular
         });
       /*} else {
         console.log("Local images exits");
-        $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryId)).then(function (data) {
+        $http.get(ServerPathVariable.GetShareCategoryDetailPath(categoryId)).then(function (data) {
           var cloneCategory = data.data;
           targetScope.categoryCloneContent = cloneCategory;
-          targetScope.enableView = true;
           $mdDialog.show({
             controller: viewShareController,
             templateUrl: "templates/popup-viewShare.tmpl.html",
@@ -875,9 +858,6 @@ angular
       $scope.selectedCategoryName = UtilityFunction.getObjectTranslation($scope.selectedCategory, $scope.DisplayLanguage);
       $scope.cancel = function () {
         $mdDialog.cancel();
-      };
-      $scope.getOnlineResource = function (ev) {
-        $scope.categoryCloneContent = UserProfileService.getShareCategoryOnlineCloneContent($scope.selectedCategoryId);
       };
       $scope.downloadToLocal = function (ev) {
         var url = ServerPathVariable.GetAddCategoryToUserProfilePath($scope.userProfile.ID, $scope.selectedCategoryId);

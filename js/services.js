@@ -286,12 +286,23 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       }
       return returnObject;
     },
+    getLatestShareCategory: function () {
+      if ($localStorage.shareCategory) {
+        console.log("Read shareCategory from LocalStorage.");
+      }
+      else {
+        console.log("No shareCategory in LocalStorage.Set empty.");
+        $localStorage.shareCategory = {"categories":[]};
+      }
+      return $localStorage.shareCategory;
+    },
     getShareCategory: function () {
       console.log("Read shareCategory online.");
       $http.get(ServerPathVariable.GetSharePath()).then(function (data) {
-        $localStorage.shareCategory = data.data;
+        var shareCategory = data.data;
+        $localStorage.shareCategory = shareCategory;
+        LocalCacheService.prepareShareCategory(shareCategory);
       });
-      return $localStorage.shareCategory;
     },
     getLatestInfoList: function (shareCategory) {
       if ($localStorage.shareInfoList) {
@@ -306,13 +317,6 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
         $localStorage.shareInfoList = list;
       }
       return $localStorage.shareInfoList;
-    },
-    getShareCategoryOnlineCloneContent: function (categoryID) {
-      console.log("Read shareCategory clone content online.");
-      $http.get(ServerPathVariable.GetShareCategoryClonePath(categoryID)).then(function (data) {
-        $localStorage.shareCloneContent = data.data;
-      });
-      return $localStorage.shareCloneContent;
     },
   };
 });
@@ -371,7 +375,6 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
     },
     prepareShareCategory: function(shareCategory) {
       console.log("Start Prepare share category Cache");
-      var self = this;
       GlobalCacheVariable.FileCheck.Reset();
       //image cache
       var idList = [];
@@ -382,9 +385,9 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       $cordovaFile.createDir(targetDirectory, "images", false);
       GlobalCacheVariable.FileCheck.SetTotalImageFile(idList.length);
       for (var i = 0; i < idList.length; i++) {
-        self.downloadImageToLocal(targetDirectory, ("images/" + idList[i] + ".jpg"), idList[i]);
+        this.downloadImageToLocal(targetDirectory, ("images/" + idList[i] + ".jpg"), idList[i]);
       }
-      self.checkDownload();
+      this.checkDownload();
     },
     prepareCloneCategory: function (cloneCategory, successCallback) {
       var idList = [];
@@ -396,7 +399,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       GlobalCacheVariable.FileCheck.Reset();
       GlobalCacheVariable.FileCheck.SetTotalImageFile(idList.length);
       for (var i = 0; i < idList.length; i++) {
-        console.log("Prepare clone image:" + idList[i]);
+        console.log("Check clone image:" + idList[i]);
         this.downloadImageToLocal(targetDirectory, ("images/" + idList[i] + ".jpg"), idList[i]);
       }
       this.checkShareCallback(successCallback);
