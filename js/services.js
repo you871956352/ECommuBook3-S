@@ -300,23 +300,10 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
       console.log("Read shareCategory online.");
       $http.get(ServerPathVariable.GetSharePath()).then(function (data) {
         var shareCategory = data.data;
+        console.log("Share Category Content:" + JSON.stringify(shareCategory));
         $localStorage.shareCategory = shareCategory;
         LocalCacheService.prepareShareCategory(shareCategory);
       });
-    },
-    getLatestInfoList: function (shareCategory) {
-      if ($localStorage.shareInfoList) {
-        console.log("Read shareInfoList from LocalStorage.");
-      }
-      else {
-        console.log("No shareInfoList in LocalStorage. Create sample shareInfoList.");
-        var list = [];
-        for (var i = 0; i < shareCategory.categories.length; i++) {
-          list.push(true);
-        }
-        $localStorage.shareInfoList = list;
-      }
-      return $localStorage.shareInfoList;
     },
   };
 });

@@ -796,71 +796,39 @@ angular
     };
   })
   .controller("ShareCtrl", function ($scope, $http, UserProfileService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
-    //$scope.selectedIndex;
     $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = UserProfileService.getLatestShareCategory();
-    //$scope.getLatestInfoList = UserProfileService.getLatestInfoList($scope.shareCategory);
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Download", $scope.currentDisplayLanguage);
     $scope.refreshOnlineResource = function () {
       console.log("Start to download online resources");
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       UserProfileService.getShareCategory();
-      //$scope.getLatestInfoList = UserProfileService.getLatestInfoList($scope.shareCategory);
     };
-    $scope.onItemClickedDownload = function (ev, categoryId) {
+    $scope.onItemClickedDownload = function (ev, category) {
       var targetScope = $scope.$new();
-      targetScope.selectedCategoryId = categoryId;
-      targetScope.selectedCategoryName = "";
+      targetScope.categoryCloneContent = category;
       targetScope.DisplayLanguage = $scope.currentDisplayLanguage;
-      for (var i = 0; i < $scope.shareCategory.categories.length; i++) {
-        if ($scope.shareCategory.categories[i].ID == categoryId) {
-          targetScope.selectedCategory = $scope.shareCategory.categories[i];
-          //$scope.selectedIndex = i;
-          break;
-        }
-      }
-      //if($scope.getLatestInfoList[$scope.selectedIndex] == true){
-        console.log("No img in local storage, get them online.");
-        $http.get(ServerPathVariable.GetShareCategoryDetailPath(categoryId)).then(function (data) {
-          var cloneCategory = data.data;
-          targetScope.categoryCloneContent = cloneCategory;
-          LocalCacheService.prepareCloneCategory(cloneCategory,function () {
-            $mdDialog.show({
-              controller: viewShareController,
-              templateUrl: "templates/popup-viewShare.tmpl.html",
-              parent: angular.element(document.body),
-              targetEvent: ev,
-              clickOutsideToClose: true,
-              scope: targetScope,
-              fullscreen: false // Only for -xs, -sm breakpoints.
-            });
-          });
+
+      LocalCacheService.prepareCloneCategory(category,function () {
+        $mdDialog.show({
+          controller: viewShareController,
+          templateUrl: "templates/popup-viewShare.tmpl.html",
+          parent: angular.element(document.body),
+          targetEvent: ev,
+          clickOutsideToClose: true,
+          scope: targetScope,
+          fullscreen: false
         });
-      /*} else {
-        console.log("Local images exits");
-        $http.get(ServerPathVariable.GetShareCategoryDetailPath(categoryId)).then(function (data) {
-          var cloneCategory = data.data;
-          targetScope.categoryCloneContent = cloneCategory;
-          $mdDialog.show({
-            controller: viewShareController,
-            templateUrl: "templates/popup-viewShare.tmpl.html",
-            parent: angular.element(document.body),
-            targetEvent: ev,
-            clickOutsideToClose: true,
-            scope: targetScope,
-            fullscreen: false // Only for -xs, -sm breakpoints.
-          });
-        });
-      }*/
+      });
     };
     function viewShareController($scope, $mdDialog, $ionicSideMenuDelegate, $http) {
-      $scope.selectedCategoryName = UtilityFunction.getObjectTranslation($scope.selectedCategory, $scope.DisplayLanguage);
+      $scope.selectedCategoryName = UtilityFunction.getObjectTranslation($scope.categoryCloneContent, $scope.DisplayLanguage);
       $scope.cancel = function () {
         $mdDialog.cancel();
       };
       $scope.downloadToLocal = function (ev) {
-        var url = ServerPathVariable.GetAddCategoryToUserProfilePath($scope.userProfile.ID, $scope.selectedCategoryId);
+        var url = ServerPathVariable.GetAddCategoryToUserProfilePath($scope.userProfile.ID, $scope.categoryCloneContent.ID);
         console.log("Add category to user, Access Server url: " + url);
         GlobalVariable.DownloadProgress.Reset();
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
