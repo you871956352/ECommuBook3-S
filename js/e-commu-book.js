@@ -39,6 +39,9 @@ var ServerPathVariable = new function () { //User to store server return path
   this.PostUserFeedback = function () {
     return (this.hostname + this.path + "log/feedback");
   };
+  this.PostLog = function () {
+    return (this.hostname + this.path + "log/uploadLog");
+  };
   this.GetUserProfileCloneItemPath = function (userUuid) {
     return (this.hostname + this.path + "userProfile/" + userUuid + '/' + '/cloneItem');
   };
@@ -72,6 +75,7 @@ var ServerPathVariable = new function () { //User to store server return path
 };
 
 var GlobalVariable = new function () { //User to store some global variable
+  this.GlobalUserID = "";
   this.DeviceInformation = new function () {
     this.DeviceWidth = window.screen.width;
     this.DeviceHeight = window.screen.height;

@@ -14794,3 +14794,25 @@ function getSamplePracticeContent() {
   };
   return json;
 }
+
+function getSampleLogContent() {
+  json = {
+    "ID": "",
+    "DeviceID": "",
+    "DeviceType": "",
+    "SoftwarePlatform": "",
+    "SoftwareVersion": "",
+    "Config": {
+      "displayLanguage": "",
+      "speechLanguage": "",
+      "speechGender": "",
+      "fontSize": 0,
+      "picLength": 0,
+      "picWidth": 0
+    },
+    "Operations": [
+
+    ]
+  };
+  return json;
+}

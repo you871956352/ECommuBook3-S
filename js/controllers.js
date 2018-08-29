@@ -2,7 +2,7 @@
 /* global console */
 angular
   .module("starter.controllers", [])
-  .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService, VoiceModelService, AppearanceService) {
+  .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService, VoiceModelService, AppearanceService, LogService) {
     $scope.$on("$ionicView.enter", function (e) {
       $scope.deviceInfomation = GlobalVariable.DeviceInformation;
       $scope.appearanceConfig = AppearanceService.getLatest();
@@ -40,6 +40,7 @@ angular
         }
       }
     });
+    LogService.postLog();
     $scope.onCategoryClicked = function (categoryId) {
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + categoryId + ".mp3");
     };
@@ -561,6 +562,7 @@ angular
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Menu", $scope.currentDisplayLanguage);
     $scope.currentYear = new Date().getFullYear();
+
   })
   .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
     $scope.userProfile = UserProfileService.getLatest();
