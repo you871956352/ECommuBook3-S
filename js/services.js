@@ -905,6 +905,7 @@ myModule.factory("PracticeService", function ($localStorage) {
 myModule.factory("LogService", function ($localStorage, $http, UserProfileService, AppearanceService) {
   return {
     getLog: function () {
+      //This function will clear $localStorage, so be careful just call it once
       var logProfile = getSampleLogContent();
       var userProfile = UserProfileService.getLatest();
       var appearance = AppearanceService.getLatest();
@@ -919,13 +920,21 @@ myModule.factory("LogService", function ($localStorage, $http, UserProfileServic
       logProfile.DeviceType = device.model;
       logProfile.SoftwarePlatform = device.platform;
       logProfile.SoftwareVersion = device.version;
+
+      logProfile.Operations = $localStorage.LogOperationList;
+      $localStorage.LogOperationList = [];
       return logProfile;
     },
-    generateLog: function () {
-
+    generateLog: function (OperationType, OperationContent, OperationTarget) {
+      var LogOperation = {};
+      LogOperation.operationType = OperationType;
+      LogOperation.operationContent = OperationContent;
+      LogOperation.operationTarget = OperationTarget;
+      LogOperation.datetime = UtilityFunction.getCurremtTime();
+      LogOperation.location = "";
+      $localStorage.LogOperationList.push(LogOperation);
     },
     postLog: function () {
-      alert(JSON.stringify(this.getLog()));
       $http.post(ServerPathVariable.PostLog(), this.getLog())
         .success(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
           console.log("post log success:" + JSON.stringify(data));

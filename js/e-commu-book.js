@@ -509,6 +509,11 @@ var UtilityFunction = new function () {
       .replace(".", " ")
       .replace(",", " ");
   };
+  this.getCurremtTime = function () {
+    var currentDate = new Date();
+    var returnString = currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate() + " " + currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
+    return returnString;
+  };
   this.guid = function () {
     function s4() {
       return Math.floor((1 + Math.random()) * 0x10000)

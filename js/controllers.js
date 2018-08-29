@@ -43,9 +43,10 @@ angular
     LogService.postLog();
     $scope.onCategoryClicked = function (categoryId) {
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + categoryId + ".mp3");
+      LogService.generateLog("view", "category", categoryId);
     };
   })
-  .controller("CategoryCtrl", function ($scope, $stateParams, $state, $mdDialog, $ionicSideMenuDelegate, $cordovaMedia, UserProfileService, $http, LocalCacheService, $cordovaNetwork) {
+  .controller("CategoryCtrl", function ($scope, LogService, $stateParams, $state, $mdDialog, $ionicSideMenuDelegate, $cordovaMedia, UserProfileService, $http, LocalCacheService, $cordovaNetwork) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("CategoryGrid", $scope.currentDisplayLanguage);
     $scope.categoryId = $stateParams.categoryId;
@@ -65,6 +66,7 @@ angular
         .ok($scope.subMenuProfileGeneral.ConfirmButton)
         .cancel($scope.subMenuProfileGeneral.CancelButton);
       $mdDialog.show(confirmDialog).then(function () {
+        LogService.generateLog("share", "category", categoryID);
         $http.get(ServerPathVariable.GetUploadSharePath(categoryID)).then(function (data) {
           alert($scope.subMenuProfileObject.SuccessAlert);
         });
@@ -77,8 +79,8 @@ angular
         .targetEvent(event)
         .ok($scope.subMenuProfileGeneral.ConfirmButton)
         .cancel($scope.subMenuProfileGeneral.CancelButton);
-
       $mdDialog.show(confirmDialog).then(function () {
+        LogService.generateLog("reorder", "category", $scope.categoryId);
         var newUserProfile = UserProfileService.setTargetCategoryTop($scope.userProfile, $scope.categoryId);
         UserProfileService.saveLocal(newUserProfile);
         UserProfileService.postToServerCallback(function () {
@@ -94,6 +96,7 @@ angular
         .ok($scope.subMenuProfileGeneral.ConfirmButton)
         .cancel($scope.subMenuProfileGeneral.CancelButton);
       $mdDialog.show(confirmDialog).then(function () {
+        LogService.generateLog("delete", "category", categoryID);
         var returnObject = UserProfileService.deleteCategory($scope.userProfile, categoryID);
         var newUserProfile = returnObject.UserProfile;
         var idList = returnObject.idList;
@@ -115,6 +118,7 @@ angular
       $scope.showEditCard = !$scope.showEditCard;
     };
     $scope.showEnlargeItemPopup = function (ev, itemId) {
+      LogService.generateLog("view", "item", itemId);
       var targetScope = $scope.$new();
       targetScope.selectItemObject = UtilityFunction.getObjectById($scope.userProfile, itemId);
       targetScope.displayLanguageList = GlobalVariable.DisplayLanguageList;
@@ -145,6 +149,7 @@ angular
         MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + $scope.selectItemObject.ID + ".mp3");
       };
       $scope.reorderAddTopItem = function (ev) {
+        LogService.generateLog("reorder", "item", $scope.selectItemObject.ID);
         var newUserProfile = UserProfileService.setTargetItemTop($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID);
         UserProfileService.saveLocal(newUserProfile);
         UserProfileService.postToServerCallback(function () {
@@ -158,8 +163,8 @@ angular
           .targetEvent(event)
           .ok($scope.subMenuProfileGeneral.ConfirmButton)
           .cancel($scope.subMenuProfileGeneral.CancelButton);
-
         $mdDialog.show(confirmDialog).then(function () {
+          LogService.generateLog("delete", "item", itemID);
           var newUserProfile = UserProfileService.deleteItem($scope.userProfile, categoryID, itemID);
           GlobalCacheVariable.DeleteCheck.Reset();
           GlobalCacheVariable.DeleteCheck.SetFileToDelete(2);
@@ -173,6 +178,7 @@ angular
         });
       }
       $scope.popupLanguageChange = function () {
+        LogService.generateLog("changeLanguage", "item", $scope.selectItemObject.ID);
         $scope.selectedItemName = UtilityFunction.getObjectTranslation($scope.selectItemObject, $scope.selectedDisplayLanguage);
         if ($scope.selectedDisplayLanguage == $scope.currentDisplayLanguage) {
           $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
@@ -191,7 +197,8 @@ angular
         else {
           var returnObject = UserProfileService.editTargetItem($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID, $scope.selectedDisplayLanguage, $scope.EditNewText);
           var newUserProfile = returnObject.UserProfile;
-          if (returnObject.Type == "DisplayName") {
+          LogService.generateLog("edit", "item", $scope.selectItemObject.ID);
+          if (returnObject.Type == "DisplayName") {        
             GlobalVariable.DownloadProgress.Reset();
             LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
             LocalCacheService.deleteLocalAudioAllLanguage($scope.userProfile, $scope.selectItemObject.ID);
@@ -257,6 +264,7 @@ angular
           alert($scope.subMenuProfileGeneral.ImageWaring);
           return;
         }
+        LogService.generateLog("add", "item", $scope.uuid);
         GlobalVariable.DownloadProgress.Reset();
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
         var userProfile = UserProfileService.getLatest();
@@ -337,7 +345,7 @@ angular
       };
     };
   })
-  .controller("SettingCtrl", function ($scope, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService, VoiceModelService, AppearanceService) {
+  .controller("SettingCtrl", function ($scope, LogService, $mdDialog, $ionicSideMenuDelegate, $state, $location, $cordovaNetwork, UserProfileService, LocalCacheService, VoiceModelService, AppearanceService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
@@ -460,7 +468,7 @@ angular
       });
     }
   })
-  .controller("AddCategoryCtrl", function ($scope, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
+  .controller("AddCategoryCtrl", function ($scope, LogService, $cordovaCamera, $cordovaFileTransfer, $mdDialog, $http, $ionicSideMenuDelegate, $cordovaNetwork, $ionicHistory, UserProfileService, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("AddCategory", $scope.currentDisplayLanguage);
     $scope.uuid = UtilityFunction.guid();
@@ -524,6 +532,7 @@ angular
         alert($scope.subMenuProfileGeneral.ImageWaring);
         return;
       }
+      LogService.generateLog("add", "category", $scope.uuid);
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       console.log("new guid:" + $scope.uuid + "displayname:" + $scope.categoryName + "inputLanguage:" + $scope.inputLanguage);
@@ -557,14 +566,14 @@ angular
       });
     };
   })
-  .controller("WelcomeCtrl", function ($scope, UserProfileService) {
+  .controller("WelcomeCtrl", function ($scope, LogService, UserProfileService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Menu", $scope.currentDisplayLanguage);
     $scope.currentYear = new Date().getFullYear();
 
   })
-  .controller("SentenceCtrl", function ($scope, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
+  .controller("SentenceCtrl", function ($scope, LogService, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
     $scope.inputAdd = "";
@@ -729,7 +738,7 @@ angular
       };
     };
   })
-  .controller("SearchCtrl", function ($scope, $state, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
+  .controller("SearchCtrl", function ($scope, LogService, $state, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
     $scope.userProfile = UserProfileService.getLatest();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Search", $scope.currentDisplayLanguage);
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
@@ -797,7 +806,7 @@ angular
       }
     };
   })
-  .controller("ShareCtrl", function ($scope, $http, UserProfileService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
+  .controller("ShareCtrl", function ($scope, LogService, $http, UserProfileService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = UserProfileService.getLatestShareCategory();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Download", $scope.currentDisplayLanguage);
@@ -847,7 +856,7 @@ angular
       }
     };
   })
-  .controller("UserInfoCtrl", function ($scope,UserProfileService,$cordovaCapture){
+  .controller("UserInfoCtrl", function ($scope, LogService, UserProfileService, $cordovaCapture){
     $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.SpeechLanguageList = GlobalVariable.SpeechLanguageList;
     $scope.GenderList = GlobalVariable.GenderList;
@@ -858,7 +867,7 @@ angular
       $scope.isBinded = false;
     }
   })
-  .controller("VoiceModelCtrl", function ($scope, $cordovaFileTransfer,$cordovaMedia,$cordovaNetwork,$http,$state,UserProfileService,VoiceRecordService,VoiceModelService){
+  .controller("VoiceModelCtrl", function ($scope, LogService, $cordovaFileTransfer,$cordovaMedia,$cordovaNetwork,$http,$state,UserProfileService,VoiceRecordService,VoiceModelService){
     var id = UserProfileService.getLatest().ID;
     $scope.voiceModel = VoiceModelService.getLatest(id);
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("VoiceModelInformation", $scope.currentDisplayLanguage);
@@ -897,12 +906,12 @@ angular
     window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
     window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
   })
-  .controller("PracticingCtrl", function ($scope, UserProfileService) {
+  .controller("PracticingCtrl", function ($scope, LogService, UserProfileService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Practicing", $scope.currentDisplayLanguage);
   })
-  .controller("PoemCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia, VoiceRecordService) {
+  .controller("PoemCtrl", function ($scope, LogService, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia, VoiceRecordService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Poem", $scope.currentDisplayLanguage);
@@ -965,7 +974,7 @@ angular
       MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Poem_" + $scope.selectPoemObject.Index + "_Title.mp3");
     };
   })
-  .controller("PronunciationCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia,VoiceRecordService) {
+  .controller("PronunciationCtrl", function ($scope, LogService, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia,VoiceRecordService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Pronunciation", $scope.currentDisplayLanguage);
@@ -1030,7 +1039,7 @@ angular
       MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + "Pronunciation_" + $scope.selectPronunciationObject.Index + "_Content_" + $scope.currentReadingWordIndex + ".mp3");
     };
   })
-  .controller("FaceCtrl", function ($scope, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia, $cordovaCapture) {
+  .controller("FaceCtrl", function ($scope, LogService, UserProfileService, PracticeService, LocalCacheService, $cordovaMedia, $cordovaCapture) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("FacialPractice", $scope.currentDisplayLanguage);
@@ -1071,7 +1080,7 @@ angular
 
     };
   })
-  .controller("LoginCtrl", function ($scope, UserProfileService, $state, $http, $mdDialog, $ionicSideMenuDelegate, LocalCacheService) {
+  .controller("LoginCtrl", function ($scope, LogService, UserProfileService, $state, $http, $mdDialog, $ionicSideMenuDelegate, LocalCacheService) {
     $scope.userProfile = UserProfileService.getLatest();
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserLogin", $scope.currentDisplayLanguage);
@@ -1137,7 +1146,7 @@ angular
       $scope.IsLogin = !$scope.IsLogin;
     };
   })
-  .controller("AboutUsCtrl",function ($scope,$mdDialog,$http,$cordovaNetwork,UserProfileService) {
+  .controller("AboutUsCtrl", function ($scope, LogService, $mdDialog,$http,$cordovaNetwork,UserProfileService) {
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("AboutUs", $scope.currentDisplayLanguage);
     $scope.feedBack = function (ev) {
       var targetScope = $scope.$new();

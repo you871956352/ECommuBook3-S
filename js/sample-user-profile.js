@@ -14811,7 +14811,6 @@ function getSampleLogContent() {
       "picWidth": 0
     },
     "Operations": [
-
     ]
   };
   return json;
