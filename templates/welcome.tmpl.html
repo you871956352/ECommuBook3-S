@@ -11,7 +11,7 @@
         </md-card-title>
         <md-card-content>
           <ion-list>
-            <div layout="row" layout-align="space-around center" ng-if="testMode.checked">
+            <div layout="row" layout-align="space-around center">
               <ion-item href="#/app/userInformation">
                 <div layout="column" layout-align="center center">
                   <img src="img/icons/User.png" class="centerImage" />
@@ -22,10 +22,10 @@
                   </div>
                 </div>
               </ion-item>
-              <ion-item href="#/app/search">
+              <ion-item item-content href="#/app/setting">
                 <div layout="column" layout-align="center center">
-                  <img src="img/icons/Search.png" class="centerImage" />
-                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Search' && isShowDisplayName.checked">
+                  <img src="img/icons/Setting.png" class="centerImage" />
+                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Setting' && isShowDisplayName.checked">
                     <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                       <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
                     </div>
@@ -66,10 +66,10 @@
                   </div>
                 </div>
               </ion-item>
-              <ion-item item-content href="#/app/setting">
+              <ion-item href="#/app/aboutUs">
                 <div layout="column" layout-align="center center">
-                  <img src="img/icons/Setting.png" class="centerImage" />
-                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Setting' && isShowDisplayName.checked">
+                  <img src="img/icons/Sentence.png" class="centerImage" />
+                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'AboutUs' && isShowDisplayName.checked">
                     <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                       <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
                     </div>
@@ -78,10 +78,20 @@
               </ion-item>
             </div>
             <div layout="row" layout-align="space-around center" ng-if="testMode.checked">
-              <ion-item href="#/app/practicing" style="max-width:50%">
+              <ion-item href="#/app/practicing">
                 <div layout="column" layout-align="center center">
                   <img src="img/icons/Practice.png" class="centerImage" />
                   <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Practicing' && isShowDisplayName.checked">
+                    <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+                      <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
+                    </div>
+                  </div>
+                </div>
+              </ion-item>
+              <ion-item href="#/app/search">
+                <div layout="column" layout-align="center center">
+                  <img src="img/icons/Search.png" class="centerImage" />
+                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Search' && isShowDisplayName.checked">
                     <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                       <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
                     </div>

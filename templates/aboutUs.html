@@ -1,0 +1,27 @@
+<ion-view cache-view="false" view-title={{menuProfileTitle.AboutUs}}>
+  <ion-content>
+    <div ng-controller="AboutUsCtrl" class="md-padding" ng-cloak>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <h1 class="md-headline">{{subMenuProfileObject.DeveloperInformation}}</h1>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p class="md-title">{{subMenuProfileObject.DeveloperOrganization}} : </p>
+        </md-card-content>
+      </md-card>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <h1 class="md-headline">{{subMenuProfileObject.UserFeedback}}</h1>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p class="md-title">{{subMenuProfileObject.FeedbackNotice}}</p>
+          <md-button class="md-raised" ng-click=feedBack($event)>{{subMenuProfileObject.Feedback}}</md-button>
+        </md-card-content>
+    </md-card>
+    </div>
+  </ion-content>
+</ion-view>

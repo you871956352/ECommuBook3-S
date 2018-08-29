@@ -110,6 +110,14 @@ angular
           }
         }
       })
+      .state("app.aboutUs", {
+        url: "/aboutUs",
+        views: {
+          menuContent: {
+            templateUrl: "templates/aboutUs.html",
+          }
+        }
+      })
       .state("app.practicing", {
         url: "/practicing",
         views: {

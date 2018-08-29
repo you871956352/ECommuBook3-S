@@ -21,7 +21,7 @@ angular
         $rootScope.isShowDisplayName = { checked: true };
       }
       if (typeof $rootScope.testMode == 'undefined') {
-        $rootScope.testMode = { checked: true };
+        $rootScope.testMode = { checked: false };
       }
       console.log("Language Selected:" + $scope.currentDisplayLanguage + "/" + $scope.userProfile.SPEECH_LANGUAGE_CODE + "/" + $scope.userProfile.SPEECH_GENDER);
       if (window.localStorage.getItem("loggedIn") != 1) {
@@ -1134,4 +1134,53 @@ angular
     $scope.changeState = function () {
       $scope.IsLogin = !$scope.IsLogin;
     };
+  })
+  .controller("AboutUsCtrl",function ($scope,$mdDialog,$http,$cordovaNetwork,UserProfileService) {
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("AboutUs", $scope.currentDisplayLanguage);
+    $scope.feedBack = function (ev) {
+      var targetScope = $scope.$new();
+      targetScope.uid = $scope.userProfile.ID;
+      var FeedbackTypeList = GlobalVariable.FeedbackTypeList;
+      var FeedbackTypeTranlationList = [$scope.subMenuProfileObject.GeneralProblem, $scope.subMenuProfileObject.BugReport,$scope.subMenuProfileObject.Suggestion,$scope.subMenuProfileObject.QuestionAboutApp];
+      for(var i = 0;i < FeedbackTypeList.length;i ++){
+        FeedbackTypeList[i].name = FeedbackTypeTranlationList[i];
+      }
+      console.log(FeedbackTypeList);
+      targetScope.feedBackList = FeedbackTypeList ;
+      targetScope.FeedbackSuccess = $scope.subMenuProfileObject.FeedbackSuccess;
+      $mdDialog.show({
+        controller: DialogController,
+        templateUrl: "templates/popup-feedBack.html",
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        scope: targetScope,
+        fullscreen: false
+      });
+    };
+    function DialogController($scope, $mdDialog) {
+      $scope.cancel = function () {
+        $mdDialog.cancel();
+      };
+      $scope.uploadFeedback = function () {
+        if ($cordovaNetwork.isOffline()) {
+          alert($scope.subMenuProfileGeneral.NetworkWarning);
+          return;
+        } else if (typeof $scope.feedBackType == "undefined" || $scope.categoryName == "") {
+          alert($scope.subMenuProfileObject.FeedbackTypeWarning);
+          return;
+        } else if (typeof $scope.feedBackText == "undefined" || $scope.feedBackText == "") {
+          alert($scope.subMenuProfileObject.FeedbackTextWarning);
+          return;
+        }
+        var feedbackData = { "uuid": $scope.uid, "type": $scope.feedBackType, "content": $scope.feedBackText };
+        console.log(feedbackData);
+        $http({ url: ServerPathVariable.PostUserFeedback(), method: "POST", params: feedbackData }).then(function (data, status, headers, config) {
+          $mdDialog.cancel();
+          alert($scope.FeedbackSuccess);
+        }, function (data, status, headers, config) {
+          console.log("Upload Feedback With Server Error");
+        });
+      };
+    }
   })

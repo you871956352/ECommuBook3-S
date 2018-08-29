@@ -1,0 +1,35 @@
+<md-dialog>
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools" style="text-align: center;">
+        <div style="text-align: center;" ng-if="isShowDisplayName.checked">{{subMenuProfileObject.UserFeedback}}</div>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <md-card>
+        <md-card-content>
+          <div layout="column" layout-align="space-between">
+            <md-input-container style="width: 30%;">
+              <label>{{subMenuProfileObject.FeedbackType}}</label>
+              <md-select ng-model="feedBackType">
+                <md-option ng-value="feedBack.value" ng-repeat="feedBack in feedBackList">{{feedBack.name}}</md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container>
+              <label>{{subMenuProfileObject.FeedbackContent}}</label>
+              <textarea ng-model="feedBackText" rows="3"></textarea>
+            </md-input-container>
+
+            <md-button class="md-raised" ng-click="uploadFeedback()" style="width: 20%;">{{subMenuProfileGeneral.ConfirmButton}}</md-button>
+          </div>
+        </md-card-content>
+      </md-card>
+    </md-dialog-content>
+  </form>
+</md-dialog>

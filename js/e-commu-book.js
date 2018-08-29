@@ -36,6 +36,9 @@ var ServerPathVariable = new function () { //User to store server return path
   this.PostUserLogin = function () {
     return (this.hostname + this.path + "user/login");
   };
+  this.PostUserFeedback = function () {
+    return (this.hostname + this.path + "log/feedback");
+  };
   this.GetUserProfileCloneItemPath = function (userUuid) {
     return (this.hostname + this.path + "userProfile/" + userUuid + '/' + '/cloneItem');
   };
@@ -199,6 +202,12 @@ var GlobalVariable = new function () { //User to store some global variable
     { name: "女", value: "female", language: "zh-TW"},
     { name: "男", value: "male", language: "zh-TW"},
     { name: "女", value: "female", language: "ko-KR"}
+  ];
+  this.FeedbackTypeList = [
+    { value: "GeneralProblem" },
+    { value: "BugReport" },
+    { value: "Suggestion" },
+    { value: "QuestionAboutApp" }
   ];
   this.currentConstructSentence = "";
   this.searchPopup = new function () {
