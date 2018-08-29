@@ -22,10 +22,10 @@
                   </div>
                 </div>
               </ion-item>
-              <ion-item item-content href="#/app/setting">
+              <ion-item href="#/app/sentence">
                 <div layout="column" layout-align="center center">
-                  <img src="img/icons/Setting.png" class="centerImage" />
-                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Setting' && isShowDisplayName.checked">
+                  <img src="img/icons/Sentence.png" class="centerImage" />
+                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Sentence' && isShowDisplayName.checked">
                     <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                       <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
                     </div>
@@ -46,8 +46,8 @@
               </ion-item>
               <ion-item href="#/app/share">
                 <div layout="column" layout-align="center center">
-                  <img src="img/icons/Download.png" class="centerImage" />
-                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Download' && isShowDisplayName.checked">
+                  <img src="img/icons/ShareContent.png" class="centerImage" />
+                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'ShareContent' && isShowDisplayName.checked">
                     <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                       <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
                     </div>
@@ -56,10 +56,10 @@
               </ion-item>
             </div>
             <div layout="row" layout-align="space-around center">
-              <ion-item href="#/app/sentence">
+              <ion-item href="#/app/setting">
                 <div layout="column" layout-align="center center">
-                  <img src="img/icons/Sentence.png" class="centerImage" />
-                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Sentence' && isShowDisplayName.checked">
+                  <img src="img/icons/Setting.png" class="centerImage" />
+                  <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'Setting' && isShowDisplayName.checked">
                     <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                       <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
                     </div>
@@ -68,7 +68,7 @@
               </ion-item>
               <ion-item href="#/app/aboutUs">
                 <div layout="column" layout-align="center center">
-                  <img src="img/icons/Sentence.png" class="centerImage" />
+                  <img src="img/icons/AboutUs.png" class="centerImage" />
                   <div ng-repeat="operation in menuProfile.Operations" ng-if="operation.OperationType == 'AboutUs' && isShowDisplayName.checked">
                     <div ng-repeat="translation in operation.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
                       <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>

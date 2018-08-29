@@ -14,12 +14,14 @@
       <md-card>
         <md-card-content>
           <div layout="column" layout-align="space-between">
-            <md-input-container style="width: 30%;">
-              <label>{{subMenuProfileObject.FeedbackType}}</label>
-              <md-select ng-model="feedBackType">
-                <md-option ng-value="feedBack.value" ng-repeat="feedBack in feedBackList">{{feedBack.name}}</md-option>
-              </md-select>
-            </md-input-container>
+            <div layout = "row" layout-align="start">
+              <md-input-container style="min-width: 20%;">
+                <label>{{subMenuProfileObject.FeedbackType}}</label>
+                <md-select ng-model="feedBackType">
+                  <md-option ng-value="feedBack.value" ng-repeat="feedBack in feedBackList">{{feedBack.name}}</md-option>
+                </md-select>
+              </md-input-container>
+            </div>
 
             <md-input-container>
               <label>{{subMenuProfileObject.FeedbackContent}}</label>

@@ -809,7 +809,7 @@ angular
   .controller("ShareCtrl", function ($scope, LogService, $http, UserProfileService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
     $scope.userProfile = UserProfileService.getLatest();
     $scope.shareCategory = UserProfileService.getLatestShareCategory();
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Download", $scope.currentDisplayLanguage);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("ShareContent", $scope.currentDisplayLanguage);
     $scope.refreshOnlineResource = function () {
       console.log("Start to download online resources");
       GlobalVariable.DownloadProgress.Reset();
