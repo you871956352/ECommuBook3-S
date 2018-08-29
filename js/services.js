@@ -901,3 +901,38 @@ myModule.factory("PracticeService", function ($localStorage) {
     },
   };
 });
+
+myModule.factory("LogService", function ($localStorage, $http, UserProfileService, AppearanceService) {
+  return {
+    getLog: function () {
+      var logProfile = getSampleLogContent();
+      var userProfile = UserProfileService.getLatest();
+      var appearance = AppearanceService.getLatest();
+      logProfile.ID = userProfile.ID;
+      logProfile.Config.displayLanguage = userProfile.DISPLAY_LANGUAGE;
+      logProfile.Config.speechLanguage = userProfile.SPEECH_LANGUAGE_CODE;
+      logProfile.Config.speechGender = userProfile.SPEECH_GENDER;
+      logProfile.Config.fontSize = appearance.itemNormalFontSize;
+      logProfile.Config.picLength = appearance.itemNormalPicSize;
+      logProfile.Config.picWidth = appearance.itemNormalPicWidth;
+      logProfile.DeviceID = device.uuid;
+      logProfile.DeviceType = device.model;
+      logProfile.SoftwarePlatform = device.platform;
+      logProfile.SoftwareVersion = device.version;
+      return logProfile;
+    },
+    generateLog: function () {
+
+    },
+    postLog: function () {
+      alert(JSON.stringify(this.getLog()));
+      $http.post(ServerPathVariable.PostLog(), this.getLog())
+        .success(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
+          console.log("post log success:" + JSON.stringify(data));
+        })
+        .error(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
+          console.log("post log error :" + JSON.stringify(data));
+        });
+    },
+  };
+});
