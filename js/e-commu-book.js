@@ -528,23 +528,42 @@ var UtilityFunction = new function () {
   };
   this.getSampleCompleteSentence = function () {
     json = {
-        "ID": "0000",
-        "DisplayName": "You have completed all sentences",
-        "DisplayMultipleLanguage": [
-          {"Language":"de","Text":"Sie haben alle Sätze abgeschlossen."},
-          {"Language":"ru","Text":"Вы завершили все приговоры"},
-          {"Language":"pt","Text":"Você concluiu todas as frases"},
-          {"Language":"ko","Text":"모든 문장이 완료"},
-          {"Language":"yue","Text":"你已經完成了所有的句子"},
-          {"Language":"en","Text":"You have completed all sentences"},
-          {"Language":"it","Text":"Aver completato tutte le frasi"},
-          {"Language":"fr","Text":"Vous avez terminé toutes les peines"},
-          {"Language":"es","Text":"Has completado todas las penas"},
-          {"Language":"zh-CHT","Text":"你已經完成了所有的句子"},
-          {"Language":"ar","Text":"لقد أتممت جميع الأحكام الصادرة"},
-          {"Language":"zh-CHS","Text":"你已经完成了所有的句子"},
-          {"Language":"ja","Text":"すべての文章を完了しています。"}]
-      };
+      "ID": "0000",
+      "DisplayName": "You have completed all sentences",
+      "DisplayMultipleLanguage": [
+        { "Language": "de", "Text": "Sie haben alle Sätze abgeschlossen." },
+        { "Language": "ru", "Text": "Вы завершили все приговоры" },
+        { "Language": "pt", "Text": "Você concluiu todas as frases" },
+        { "Language": "ko", "Text": "모든 문장이 완료" },
+        { "Language": "yue", "Text": "你已經完成了所有的句子" },
+        { "Language": "en", "Text": "You have completed all sentences" },
+        { "Language": "it", "Text": "Aver completato tutte le frasi" },
+        { "Language": "fr", "Text": "Vous avez terminé toutes les peines" },
+        { "Language": "es", "Text": "Has completado todas las penas" },
+        { "Language": "zh-CHT", "Text": "你已經完成了所有的句子" },
+        { "Language": "ar", "Text": "لقد أتممت جميع الأحكام الصادرة" },
+        { "Language": "zh-CHS", "Text": "你已经完成了所有的句子" },
+        { "Language": "ja", "Text": "すべての文章を完了しています。" }]
+    };
     return json;
+  };
+  this.getAboutUsDiscription = function (targetLanguage) {
+    if (targetLanguage == "zh-CHS") {
+      var dis = "此软件由香港中文大学何鸿燊海量数据决策分析研究中心, 协同香港中文大学系统工程学系人机交互实验室共同开发. ";
+      dis = dis + "同样感谢医院管理局的帮助. 欲获得更多信息, 请联系我们开发人员.";
+      return dis;
+    }
+    else if (targetLanguage == "zh-CHT" || targetLanguage == "yue") {
+      var dis = "此軟件由香港中文大學何鴻燊海量數據決策分析研究中心，協同香港中文大學系統工程學系人機交互實驗室共同開發. ";
+      dis = dis + "同樣感謝醫院管理局的幫助. 欲獲得更多信息, 請聯系我們開發人員.";
+      return dis;
+    }
+    else {
+      var dis = "This application is jointly developed by Stanley Ho Big Data Decision Analytics Research Center,";
+      dis = dis + "The Chinese University of Hong Kong and Human - Computer Communications Laboratory, Department of Systems Engineering and Engineering Management,The Chinese University of Hong Kong.";
+      dis = dis + " We also thank the help and suggestion from Hospital Authority.For more information, please feel free to let us know."
+      return dis;
+    }
+
   }
 };

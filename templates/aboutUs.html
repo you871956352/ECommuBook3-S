@@ -4,16 +4,6 @@
       <md-card>
         <md-card-title>
           <md-card-title-text>
-            <h1 class="md-headline">{{subMenuProfileObject.DeveloperInformation}}</h1>
-          </md-card-title-text>
-        </md-card-title>
-        <md-card-content>
-          <p class="md-title">{{subMenuProfileObject.DeveloperOrganization}} : </p>
-        </md-card-content>
-      </md-card>
-      <md-card>
-        <md-card-title>
-          <md-card-title-text>
             <h1 class="md-headline">{{subMenuProfileObject.UserFeedback}}</h1>
           </md-card-title-text>
         </md-card-title>
@@ -21,7 +11,36 @@
           <p class="md-title">{{subMenuProfileObject.FeedbackNotice}}</p>
           <md-button class="md-raised" ng-click=feedBack($event)>{{subMenuProfileObject.Feedback}}</md-button>
         </md-card-content>
-    </md-card>
+      </md-card>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <h1 class="md-headline">{{subMenuProfileObject.DeveloperInformation}}</h1>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <div style="font-size:15px">
+            <span>{{textDiscription}}</span>
+          </div>
+          <h1>
+            <span class="md-title">{{subMenuProfileGeneral.UserEmail}}:</span>
+            <span class="md-title" style="text-decoration:underline;color:cornflowerblue"> ecommubk@se.cuhk.edu.hk </span>
+          </h1>
+          <h1>
+            <span class="md-title"> Award: HKICT 2018 Silver Award </span>
+          </h1>
+          <img src="img/Award.png"/>
+          <h1></h1>
+          <div style="text-align: center;">
+            <span style="font-style:italic;color:mediumslateblue;width:100%">
+              Copyright© {{currentYear}}. All rights reserved.
+            </span>
+            <span style="font-style:italic;color:mediumslateblue;width:100%">
+              The Chinese University of Hong Kong.
+            </span>
+          </div>
+        </md-card-content>
+      </md-card>
     </div>
   </ion-content>
 </ion-view>

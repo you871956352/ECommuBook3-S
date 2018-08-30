@@ -584,7 +584,6 @@ angular
     $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Menu", $scope.currentDisplayLanguage);
     $scope.currentYear = new Date().getFullYear();
-
   })
   .controller("SentenceCtrl", function ($scope, LogService, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
     $scope.userProfile = UserProfileService.getLatest();
@@ -1161,6 +1160,8 @@ angular
   })
   .controller("AboutUsCtrl", function ($scope, LogService, $mdDialog,$http,$cordovaNetwork,UserProfileService) {
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("AboutUs", $scope.currentDisplayLanguage);
+    $scope.textDiscription = UtilityFunction.getAboutUsDiscription($scope.currentDisplayLanguage);
+    $scope.currentYear = new Date().getFullYear();
     $scope.feedBack = function (ev) {
       var targetScope = $scope.$new();
       targetScope.uid = $scope.userProfile.ID;
