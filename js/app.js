@@ -42,6 +42,7 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/category-grid.html",
+            controller: "CategoryCtrl"
           }
         }
       })
