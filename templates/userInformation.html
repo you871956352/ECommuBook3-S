@@ -8,6 +8,7 @@
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
+          <h1 class="md-title">{{subMenuProfileGeneral.Nickname}}: {{userProfile.DisplayName}}</h1>
           <h1 class="md-title">{{subMenuProfileGeneral.UserID}}: {{userProfile.ID}}</h1>
           <h1 class="md-title" ng-show="isBinded">{{subMenuProfileGeneral.UserEmail}}: {{userProfile.Email}}</h1>
           <h1 class="md-title" ng-repeat="displayLanguage in DisplayLanguageList" ng-if="displayLanguage.value == userProfile.DISPLAY_LANGUAGE">
