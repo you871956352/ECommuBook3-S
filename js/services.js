@@ -129,6 +129,7 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
             for (var j = 0; j < UserProfile.Categories[i].Items.length; j++) {
               if (UserProfile.Categories[i].Items[j].ID == ItemID) {
                 UserProfile.Categories[i].Items[j].DisplayName = targetText;
+                UserProfile.Categories[i].Items[j].DisplayNameLanguage = targetLanguage;
                 for (var k = 0; k < UserProfile.Categories[i].Items[j].DisplayMultipleLanguage.length; k++) {
                   if (UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Language == targetLanguage) {
                     UserProfile.Categories[i].Items[j].DisplayMultipleLanguage[k].Text = targetText;

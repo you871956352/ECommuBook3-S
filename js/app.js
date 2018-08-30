@@ -29,7 +29,7 @@ angular
       }
     });
   })
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
     $stateProvider
       .state("app", {
         url: "/app",
@@ -42,6 +42,7 @@ angular
         views: {
           menuContent: {
             templateUrl: "templates/category-grid.html",
+            controller: "CategoryCtrl"
           }
         }
       })
@@ -160,4 +161,5 @@ angular
       });
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise("/app/welcome");
+    $ionicConfigProvider.views.swipeBackEnabled(false);
   });
