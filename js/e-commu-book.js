@@ -1,6 +1,6 @@
 var ServerPathVariable = new function () { //User to store server return path
   this.hostname = "http://sepc155.se.cuhk.edu.hk:8080/";
-  this.path = "ECommuBook2.0/";
+  this.path = "ECommuBook2-ver1.0/";
   this.GetBingAudioPath = function (speechLanguageCode, speechGender, text) {
     text = text.replace("/", " ");
     return (this.hostname + this.path + "audio/bing/" + speechLanguageCode + "/" + speechGender + "/" + text + ".mp3");

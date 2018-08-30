@@ -935,7 +935,8 @@ myModule.factory("LogService", function ($localStorage, $http, UserProfileServic
       $localStorage.LogOperationList.push(LogOperation);
     },
     postLog: function () {
-      $http.post(ServerPathVariable.PostLog(), this.getLog())
+      var Log = this.getLog();
+      $http.post(ServerPathVariable.PostLog(), Log)
         .success(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
           console.log("post log success:" + JSON.stringify(data));
         })
