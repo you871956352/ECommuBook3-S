@@ -31,11 +31,17 @@ angular
         }
         else {
           window.localStorage.setItem("loggedIn", 1);
+          LocalCacheService.clearAllCache();
           GlobalVariable.DownloadProgress.Reset();
           LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+          var userProfile = UserProfileService.getDefault();
+          userProfile.ID = UtilityFunction.guid();
+          UserProfileService.saveLocal(userProfile);
           UserProfileService.postToServerCallback(function () {
-            console.log("Post to Server When First Login");
-            LocalCacheService.prepareCache($scope.userProfile, true);
+            console.log('Init: reset userProfile and uploaded. UserID: ' + userProfile.ID);
+            UserProfileService.cloneItem(userProfile.ID, function () {
+              LocalCacheService.prepareCache(UserProfileService.getLatest(), true);
+            });
           });
         }
       }
@@ -446,10 +452,17 @@ angular
         LocalCacheService.clearAllCache();
         GlobalVariable.DownloadProgress.Reset();
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+        var newID = UtilityFunction.guid();
         var userProfile = UserProfileService.getDefault();
-        var id = UtilityFunction.guid();
-        userProfile.ID = id;
-        var voiceModel = VoiceModelService.getDefault(id);
+        if ($scope.userProfile.Email != "") {
+          userProfile.ID = $scope.userProfile.ID;
+          userProfile.Email = $scope.userProfile.Email;
+          userProfile.DisplayName = $scope.userProfile.DisplayName;
+        }
+        else {
+          userProfile.ID = newID;
+        }
+        var voiceModel = VoiceModelService.getDefault(newID);
         UserProfileService.saveLocal(userProfile);
         VoiceModelService.saveLocal(voiceModel);
 
@@ -1088,7 +1101,7 @@ angular
     $scope.Username = "";
     $scope.Password = "";
     $scope.userLogin = function () {
-      if ($scope.Username == "") {
+      if (UtilityFunction.validateEmail($scope.Username) == false) {     
         alert($scope.subMenuProfileObject.AlertEnterEmail);
         return;
       }
@@ -1118,7 +1131,7 @@ angular
       });
     };
     $scope.userRegister = function () {
-      if ($scope.Username == "") {
+      if (UtilityFunction.validateEmail($scope.Username) == false) {
         alert($scope.subMenuProfileObject.AlertEnterEmail);
         return;
       }

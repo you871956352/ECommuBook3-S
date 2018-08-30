@@ -12413,6 +12413,23 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "ユーザー ID"}]
           },
           {
+            OperationType: "Nickname",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Spitznamen" },
+              { "Language": "ru", "Text": "Прозвище" },
+              { "Language": "pt", "Text": "Alcunha" },
+              { "Language": "ko", "Text": "닉네임" },
+              { "Language": "yue", "Text": "暱稱" },
+              { "Language": "en", "Text": "Nickname" },
+              { "Language": "it", "Text": "Nickname" },
+              { "Language": "fr", "Text": "Pseudo" },
+              { "Language": "es", "Text": "Apodo de" },
+              { "Language": "zh-CHT", "Text": "昵稱" },
+              { "Language": "ar", "Text": "الاسم المستعار" },
+              { "Language": "zh-CHS", "Text": "昵称" },
+              { "Language": "ja", "Text": "ニックネーム" }]
+          },
+          {
             OperationType: "UserEmail",
             DisplayMultipleLanguage: [
               { "Language": "de", "Text": "E-Mail" },
@@ -14475,19 +14492,19 @@ function getSampleMenuProfile() {
           {
             OperationType: "AlertEnterEmail",
             DisplayMultipleLanguage: [
-              { "Language": "de", "Text": "Bitte geben Sie E-Mail" },
-              { "Language": "ru", "Text": "Пожалуйста, введите Email" },
-              { "Language": "pt", "Text": "Por favor digite o E-mail" },
-              { "Language": "ko", "Text": "이메일을 입력 해 주시기 바랍니다" },
-              { "Language": "yue", "Text": "請輸入電子郵件" },
-              { "Language": "en", "Text": "Please Enter Email" },
-              { "Language": "it", "Text": "Inserisci indirizzo Email" },
-              { "Language": "fr", "Text": "S’il vous plaît entrer Email" },
-              { "Language": "es", "Text": "Por favor ingrese el correo electrónico" },
-              { "Language": "zh-CHT", "Text": "請輸入電子郵件" },
-              { "Language": "ar", "Text": "الرجاء إدخال البريد الإلكتروني" },
-              { "Language": "zh-CHS", "Text": "请输入电子邮件" },
-              { "Language": "ja", "Text": "メール アドレスを入力してください。" }]
+              { "Language": "de", "Text": "Bitte geben Sie eine gültige Email Adresse" },
+              { "Language": "ru", "Text": "Пожалуйста, введите действительный адрес электронной почты" },
+              { "Language": "pt", "Text": "Por favor insira um Email válido" },
+              { "Language": "ko", "Text": "유효한 이메일을 입력 해 주세요" },
+              { "Language": "yue", "Text": "請輸入有效的電子郵件" },
+              { "Language": "en", "Text": "Please Input a Valid Email" },
+              { "Language": "it", "Text": "Si prega di inserire un indirizzo Email valido" },
+              { "Language": "fr", "Text": "Veuillez entrer une adresse Email valide" },
+              { "Language": "es", "Text": "Por favor ingrese un Email válido" },
+              { "Language": "zh-CHT", "Text": "請輸入有效的電子郵件" },
+              { "Language": "ar", "Text": "الرجاء إدخال بريد إلكتروني صحيح" },
+              { "Language": "zh-CHS", "Text": "请输入有效的电子邮件" },
+              { "Language": "ja", "Text": "有効な電子メールを入力してください。" }]
           },
           {
             OperationType: "AlertEnterPassword",
