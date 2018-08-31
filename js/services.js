@@ -937,7 +937,7 @@ myModule.factory("LogService", function ($localStorage, $http, UserProfileServic
       LogOperation.operationTarget = OperationTarget;
       LogOperation.datetime = UtilityFunction.getCurremtTime();
       LogOperation.location = "";
-      $localStorage.LogOperationList.push(LogOperation);
+      //$localStorage.LogOperationList.push(LogOperation);
     },
     postLog: function () {
       var Log = this.getLog();
