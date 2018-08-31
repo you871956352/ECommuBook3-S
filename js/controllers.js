@@ -12,7 +12,8 @@ angular
       $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
       $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
       $scope.userProfile = UserProfileService.getLatest();
-      $scope.voiceModel = VoiceModelService.getLatest($scope.userProfile.ID); 
+      $scope.voiceModel = VoiceModelService.getLatest($scope.userProfile.ID);
+      $scope.menuProfile = UserProfileService.getMenuProfile();
       $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
       $scope.subMenuProfileGeneral = UserProfileService.getMenuProfileSubObjectWithInputLanguage("General", $scope.currentDisplayLanguage);
       $scope.menuProfileTitle = UserProfileService.getMenuProfileOperation($scope.currentDisplayLanguage);
@@ -22,6 +23,7 @@ angular
       if (typeof $rootScope.testMode == 'undefined') {
         $rootScope.testMode = { checked: false };
       }
+      console.log("Language Selected:" + $scope.currentDisplayLanguage + "/" + $scope.userProfile.SPEECH_LANGUAGE_CODE + "/" + $scope.userProfile.SPEECH_GENDER);
     });
     if (window.localStorage.getItem("loggedIn") != 1) {
       if ($cordovaNetwork.isOffline()) {
@@ -46,8 +48,6 @@ angular
         });
       }
     }
-    $scope.menuProfile = UserProfileService.getMenuProfile();
-    console.log("Language Selected:" + $scope.currentDisplayLanguage + "/" + $scope.userProfile.SPEECH_LANGUAGE_CODE + "/" + $scope.userProfile.SPEECH_GENDER);
     LogService.postLog();
     $scope.onCategoryClicked = function (categoryId) {
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + categoryId + ".mp3");

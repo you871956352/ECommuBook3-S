@@ -191,7 +191,6 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
         console("Target Item Not Exist");
         return UserProfile;
       }
-      //alert(targetCategoryIndex + " " +  targetItemIndex);
       UserProfile.Categories[targetCategoryIndex].Items.splice(targetItemIndex, 1);
       return UserProfile;
     },
@@ -309,7 +308,7 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
   };
 });
 
-myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $cordovaFileTransfer,$state) { //Used for store user audio and image
+myModule.factory("LocalCacheService", function ($cordovaFile, $cordovaFileTransfer, $state) { //Used for store user audio and image
   return {
     downloadImageToLocal: function (targetDirectory, targetName, itemId) {
       $cordovaFile.createDir(targetDirectory, "images", false);
@@ -364,7 +363,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
     prepareShareCategory: function(shareCategory) {
       console.log("Start Prepare share category Cache");
       GlobalCacheVariable.FileCheck.Reset();
-      //image cache
+
       var idList = [];
       for (var i = 0; i < shareCategory.categories.length; i++) {
         idList.push(shareCategory.categories[i].ID);
@@ -399,7 +398,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       console.log("Start prepare cache");
       var self = this;
       GlobalCacheVariable.FileCheck.Reset();
-      //image cache
+
       var idList = [];
       for (var i = 0; i < userProfile.Categories.length; i++) {
         var category = userProfile.Categories[i];
@@ -415,7 +414,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       for (var i = 0; i < idList.length; i++) {
         self.downloadImageToLocal(targetDirectory, ("images/" + idList[i] + ".jpg"), idList[i]);
       }
-      // audio cache
+
       var displayTextList = [];
       var audioIDList = [];
       for (var i = 0; i < userProfile.Categories.length; i++) {
@@ -449,8 +448,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
         function(result) {
           $cordovaFile.checkFile(targetDirectory, targetName).then(
             function (exist) {
-              console.log("Check file fail: Image still exist");
-              console.log("TargetDirectory: " + targetDirectory + ", TargetName:" + targetName);
+              console.log("Check file fail: Image still exist: TargetDirectory: " + targetDirectory + ", TargetName:" + targetName);
             },
             function(remove) {
               GlobalCacheVariable.DeleteCheck.AddDeletedFile();
@@ -472,8 +470,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
         function(result) {
           $cordovaFile.checkFile(targetDirectory, targetName).then(
             function (exist) {
-              console.log("Check file fail: audio still exist");
-              console.log("TargetDirectory: " + targetDirectory + ", TargetName:" + targetName);
+              console.log("Check file fail: audio still exist: TargetDirectory: " + targetDirectory + ", TargetName:" + targetName);
             },
             function(remove) {
               GlobalCacheVariable.DeleteCheck.AddDeletedFile();
@@ -591,7 +588,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
   };
 });
 
-myModule.factory("VoiceRecordService", function ($http, $cordovaMedia, $cordovaNetwork, $cordovaFileTransfer) {
+myModule.factory("VoiceRecordService", function ($http, $cordovaMedia, $cordovaFileTransfer) {
   var captureCfg = {}, audioDataBuffer = [];
   var timerInterVal, timerGenerateSimulatedData, recordingPath;
   var objectURL = null, totalReceivedData = 0;
