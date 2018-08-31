@@ -392,9 +392,9 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       }
       this.checkShareCallback(successCallback);
     },
-    prepareCache: function (userProfile, trueReload) {
-      if (trueReload == undefined) {
-        trueReload = false;
+    prepareCache: function (userProfile, option) {
+      if (option == undefined) {
+        option = false;
       }
       console.log("Start prepare cache");
       var self = this;
@@ -436,7 +436,7 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
       for (var i = 0; i < audioIDList.length; i++) {
         self.downloadAudioToLocal(targetDirectory, "bing", userProfile.SPEECH_LANGUAGE_CODE, userProfile.SPEECH_GENDER, displayTextList[i], audioIDList[i]);
       }
-      self.checkDownload(trueReload);
+      self.checkDownload(option);
     },
     deleteCache: function (userProfile, targetID) {
       this.deleteLocalImage(targetID);
@@ -530,9 +530,9 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
         }
       );
     },
-    checkDownload: function(trueReload){
+    checkDownload: function(option){
       var self = this;
-      var reload = trueReload;
+      var optionType = option;
         setTimeout(function() {
           console.log("Check Audio File static:" + GlobalCacheVariable.FileCheck.ExistAudioFile +  "/" + GlobalCacheVariable.FileCheck.TotalAudioFile);
           console.log("Check Image File static:" + GlobalCacheVariable.FileCheck.ExistImageFile +  "/" + GlobalCacheVariable.FileCheck.TotalImageFile);
@@ -540,9 +540,16 @@ myModule.factory("LocalCacheService", function ($ionicPlatform, $cordovaFile, $c
             GlobalCacheVariable.FileCheck.ExistImageFile >= GlobalCacheVariable.FileCheck.TotalImageFile) {
             GlobalVariable.DownloadProgress.IsNoDownload = 1;
             console.log("Download complete, refresh the page.");
-            if(reload == true){ window.location.reload(true); } else { $state.reload(); }
+            if(typeof optionType == "function"){
+              $state.reload();
+              option();
+            }else if(optionType == true) {
+              window.location.reload(true);
+            }else{
+              $state.reload();
+            }
           }else{
-            self.checkDownload(reload);
+            self.checkDownload(optionType);
           }
         }, 1000); //delay 2 seconds
     },

@@ -24,28 +24,30 @@ angular
         $rootScope.testMode = { checked: false };
       }
       console.log("Language Selected:" + $scope.currentDisplayLanguage + "/" + $scope.userProfile.SPEECH_LANGUAGE_CODE + "/" + $scope.userProfile.SPEECH_GENDER);
-      if (window.localStorage.getItem("loggedIn") != 1) {
-        if ($cordovaNetwork.isOffline()) {
-          alert($scope.subMenuProfileGeneral.NetworkWarning);
-          return;
-        }
-        else {
-          window.localStorage.setItem("loggedIn", 1);
-          LocalCacheService.clearAllCache();
-          GlobalVariable.DownloadProgress.Reset();
-          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-          var userProfile = UserProfileService.getDefault();
-          userProfile.ID = UtilityFunction.guid();
-          UserProfileService.saveLocal(userProfile);
-          UserProfileService.postToServerCallback(function () {
-            console.log('Init: reset userProfile and uploaded. UserID: ' + userProfile.ID);
-            UserProfileService.cloneItem(userProfile.ID, function () {
-              LocalCacheService.prepareCache(UserProfileService.getLatest(), true);
+    });
+    if (window.localStorage.getItem("loggedIn") != 1) {
+      if ($cordovaNetwork.isOffline()) {
+        alert($scope.subMenuProfileGeneral.NetworkWarning);
+        return;
+      }
+      else {
+        window.localStorage.setItem("loggedIn", 1);
+        LocalCacheService.clearAllCache();
+        GlobalVariable.DownloadProgress.Reset();
+        LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+        var userProfile = UserProfileService.getDefault();
+        userProfile.ID = UtilityFunction.guid();
+        UserProfileService.saveLocal(userProfile);
+        UserProfileService.postToServerCallback(function () {
+          console.log('Init: reset userProfile and uploaded. UserID: ' + userProfile.ID);
+          UserProfileService.cloneItem(userProfile.ID, function () {
+            LocalCacheService.prepareCache(UserProfileService.getLatest(),function () {
+              $ionicSideMenuDelegate.toggleLeft();
             });
           });
-        }
+        });
       }
-    });
+    }
     LogService.postLog();
     $scope.onCategoryClicked = function (categoryId) {
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + categoryId + ".mp3");
@@ -204,7 +206,7 @@ angular
           var returnObject = UserProfileService.editTargetItem($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID, $scope.selectedDisplayLanguage, $scope.EditNewText);
           var newUserProfile = returnObject.UserProfile;
           LogService.generateLog("edit", "item", $scope.selectItemObject.ID);
-          if (returnObject.Type == "DisplayName") {        
+          if (returnObject.Type == "DisplayName") {
             GlobalVariable.DownloadProgress.Reset();
             LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
             LocalCacheService.deleteLocalAudioAllLanguage($scope.userProfile, $scope.selectItemObject.ID);
@@ -1100,7 +1102,7 @@ angular
     $scope.Username = "";
     $scope.Password = "";
     $scope.userLogin = function () {
-      if (UtilityFunction.validateEmail($scope.Username) == false) {     
+      if (UtilityFunction.validateEmail($scope.Username) == false) {
         alert($scope.subMenuProfileObject.AlertEnterEmail);
         return;
       }
