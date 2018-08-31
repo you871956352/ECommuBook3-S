@@ -11,31 +11,37 @@
 	    </md-card-title>
 
 	    <md-card-content>
-        <span class="md-title">{{subMenuProfileGeneral.DisplayLanguage}}</span>
-		    <div layout="row">
-		      <md-input-container>
-		        <md-select ng-model="selectedDisplayLanguage" ng-change="onSelectedDisplayLanguageChanged()">
-		            <md-option ng-value="displayLanguage.value" ng-repeat="displayLanguage in displayLanguageList">{{displayLanguage.name}}</md-option>
-		        </md-select>
-		      </md-input-container>
-		    </div>
+      <div>
+          <span class="md-title">{{subMenuProfileGeneral.DisplayLanguage}}</span>
+  		    <span>
+  		      <md-input-container>
+  		        <md-select ng-model="selectedDisplayLanguage" ng-change="onSelectedDisplayLanguageChanged()">
+  		            <md-option ng-value="displayLanguage.value" ng-repeat="displayLanguage in displayLanguageList">{{displayLanguage.name}}</md-option>
+  		        </md-select>
+  		      </md-input-container>
+  		    </span>
+      </div>
+      <div>
         <span class="md-title">{{subMenuProfileGeneral.SpeechLanguage}}</span>
-		    <div layout="row">
+		    <span>
 		      <md-input-container>
 		        <md-select ng-model="selectedSpeechLanguage" ng-change="onSelectedSpeechLanguageChanged()">
 		            <md-option ng-value="speechLanguage.value" ng-repeat="speechLanguage in speechLanguageListOption">{{speechLanguage.name}}</md-option>
 		        </md-select>
 		      </md-input-container>
-		    </div>
+		    </span>
+      </div>
+      <div>
         <span class="md-title">{{subMenuProfileGeneral.SpeakerGender}}</span>
-		    <div layout="row">
+		    <span>
 		      <md-input-container>
 		        <md-select ng-model="selectedSpeechGender" ng-change="onSelectedSpeechGenderChanged()">
 		            <md-option ng-value="speechGender.value" ng-repeat="speechGender in speechGenderOptions">{{speechGender.name}}</md-option>
 		        </md-select>
 		      </md-input-container>
-		    </div>
-        <md-button class="md-raised" ng-click=onConfirmLanguageButtonClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
+		    </span>
+      </div>
+      <md-button class="md-raised" ng-click=onConfirmLanguageButtonClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
 
 	    </md-card-content>
 	</md-card>

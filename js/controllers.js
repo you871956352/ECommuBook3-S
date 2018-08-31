@@ -570,7 +570,9 @@ angular
         $cordovaFileTransfer.upload(ServerPathVariable.GetPostImagePath(), filePath, options).then(
           function (result) {
             UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
-              LocalCacheService.prepareCache(UserProfileService.getLatest());
+              LocalCacheService.prepareCache(UserProfileService.getLatest(),function () {
+                $ionicSideMenuDelegate.toggleLeft();
+              });
             });
           },
           function (err) { // Error
@@ -861,7 +863,9 @@ angular
           console.log("Request send to server success, start to sync server data...");
           UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
             console.log("Get updated user profile from server success, start to download files");
-            LocalCacheService.prepareCache(UserProfileService.getLatest());
+            LocalCacheService.prepareCache(UserProfileService.getLatest(),function () {
+              $ionicSideMenuDelegate.toggleLeft();
+            });
           });
         }),function errorCallback(response) {
           alert($scope.subMenuProfileGeneral.ServerWarning);
@@ -1117,7 +1121,9 @@ angular
           GlobalVariable.DownloadProgress.Reset();
           LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
           UserProfileService.getOnline(uuid, function () {
-            LocalCacheService.prepareCache(UserProfileService.getLatest());
+            LocalCacheService.prepareCache(UserProfileService.getLatest(),function () {
+              $ionicSideMenuDelegate.toggleLeft();
+            });
             $state.go("app.welcome", {}, { reload: true });
           });
         }

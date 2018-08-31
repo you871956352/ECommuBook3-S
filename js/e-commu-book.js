@@ -307,7 +307,8 @@ var LoadingDialog = new function () {
 
       if (($scope.downloaded == $scope.total && $scope.total > 0) || GlobalVariable.DownloadProgress.IsNoDownload == 1) {
         clearInterval(loop);
-        setTimeout(function () { $scope.hide(); }, 2500);
+        setTimeout(function () { $scope.hide(); }, 100);
+        //$scope.hide();
       }
     }, 500);
   };
