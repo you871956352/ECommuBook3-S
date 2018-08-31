@@ -12396,6 +12396,23 @@ function getSampleMenuProfile() {
         OperationType: "General",
         SubPage: [
           {
+            OperationType: "Download",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Download"},
+              {"Language":"ru","Text":"Скачать"},
+              {"Language":"pt","Text":"Baixar"},
+              {"Language":"ko","Text":"다운로드"},
+              {"Language":"yue","Text":"下載"},
+              {"Language":"en","Text":"Download"},
+              {"Language":"it","Text":"Scarica"},
+              {"Language":"fr","Text":"Télécharger"},
+              {"Language":"es","Text":"Descargar"},
+              {"Language":"zh-CHT","Text":"下載"},
+              {"Language":"ar","Text":"تحميل"},
+              {"Language":"zh-CHS","Text":"下载"},
+              {"Language":"ja","Text":"ダウンロード"}]
+          },
+          {
             OperationType: "UserID",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Benutzer-ID"},
