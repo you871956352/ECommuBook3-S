@@ -51,7 +51,7 @@ angular
     LogService.postLog();
     $scope.onCategoryClicked = function (categoryId) {
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + categoryId + ".mp3");
-      LogService.generateLog("view", "category", categoryId);
+      //LogService.generateLog("view", "category", categoryId);
     };
   })
   .controller("CategoryCtrl", function ($scope, LogService, $stateParams, $state, $mdDialog, $ionicSideMenuDelegate, $cordovaMedia, UserProfileService, $http, LocalCacheService, $cordovaNetwork) {
@@ -74,7 +74,7 @@ angular
         .ok($scope.subMenuProfileGeneral.ConfirmButton)
         .cancel($scope.subMenuProfileGeneral.CancelButton);
       $mdDialog.show(confirmDialog).then(function () {
-        LogService.generateLog("share", "category", categoryID);
+        //LogService.generateLog("share", "category", categoryID);
         $http.get(ServerPathVariable.GetUploadSharePath(categoryID)).then(function (data) {
           alert($scope.subMenuProfileObject.SuccessAlert);
         });
@@ -88,7 +88,7 @@ angular
         .ok($scope.subMenuProfileGeneral.ConfirmButton)
         .cancel($scope.subMenuProfileGeneral.CancelButton);
       $mdDialog.show(confirmDialog).then(function () {
-        LogService.generateLog("reorder", "category", $scope.categoryId);
+        //LogService.generateLog("reorder", "category", $scope.categoryId);
         var newUserProfile = UserProfileService.setTargetCategoryTop($scope.userProfile, $scope.categoryId);
         UserProfileService.saveLocal(newUserProfile);
         UserProfileService.postToServerCallback(function () {
@@ -104,7 +104,7 @@ angular
         .ok($scope.subMenuProfileGeneral.ConfirmButton)
         .cancel($scope.subMenuProfileGeneral.CancelButton);
       $mdDialog.show(confirmDialog).then(function () {
-        LogService.generateLog("delete", "category", categoryID);
+        //LogService.generateLog("delete", "category", categoryID);
         var returnObject = UserProfileService.deleteCategory($scope.userProfile, categoryID);
         var newUserProfile = returnObject.UserProfile;
         var idList = returnObject.idList;
@@ -126,7 +126,7 @@ angular
       $scope.showEditCard = !$scope.showEditCard;
     };
     $scope.showEnlargeItemPopup = function (ev, itemId) {
-      LogService.generateLog("view", "item", itemId);
+      //LogService.generateLog("view", "item", itemId);
       var targetScope = $scope.$new();
       targetScope.selectItemObject = UtilityFunction.getObjectById($scope.userProfile, itemId);
       targetScope.displayLanguageList = GlobalVariable.DisplayLanguageList;
@@ -157,7 +157,7 @@ angular
         MediaPlayer.play($cordovaMedia, $scope.AudioDirectory + $scope.selectItemObject.ID + ".mp3");
       };
       $scope.reorderAddTopItem = function (ev) {
-        LogService.generateLog("reorder", "item", $scope.selectItemObject.ID);
+        //LogService.generateLog("reorder", "item", $scope.selectItemObject.ID);
         var newUserProfile = UserProfileService.setTargetItemTop($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID);
         UserProfileService.saveLocal(newUserProfile);
         UserProfileService.postToServerCallback(function () {
@@ -172,7 +172,7 @@ angular
           .ok($scope.subMenuProfileGeneral.ConfirmButton)
           .cancel($scope.subMenuProfileGeneral.CancelButton);
         $mdDialog.show(confirmDialog).then(function () {
-          LogService.generateLog("delete", "item", itemID);
+          //LogService.generateLog("delete", "item", itemID);
           var newUserProfile = UserProfileService.deleteItem($scope.userProfile, categoryID, itemID);
           GlobalCacheVariable.DeleteCheck.Reset();
           GlobalCacheVariable.DeleteCheck.SetFileToDelete(2);
@@ -186,7 +186,7 @@ angular
         });
       }
       $scope.popupLanguageChange = function () {
-        LogService.generateLog("changeLanguage", "item", $scope.selectItemObject.ID);
+        //LogService.generateLog("changeLanguage", "item", $scope.selectItemObject.ID);
         $scope.selectedItemName = UtilityFunction.getObjectTranslation($scope.selectItemObject, $scope.selectedDisplayLanguage);
         if ($scope.selectedDisplayLanguage == $scope.currentDisplayLanguage) {
           $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
@@ -205,7 +205,7 @@ angular
         else {
           var returnObject = UserProfileService.editTargetItem($scope.userProfile, $scope.categoryId, $scope.selectItemObject.ID, $scope.selectedDisplayLanguage, $scope.EditNewText);
           var newUserProfile = returnObject.UserProfile;
-          LogService.generateLog("edit", "item", $scope.selectItemObject.ID);
+          //LogService.generateLog("edit", "item", $scope.selectItemObject.ID);
           if (returnObject.Type == "DisplayName") {
             GlobalVariable.DownloadProgress.Reset();
             LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
@@ -272,7 +272,7 @@ angular
           alert($scope.subMenuProfileGeneral.ImageWaring);
           return;
         }
-        LogService.generateLog("add", "item", $scope.uuid);
+        //LogService.generateLog("add", "item", $scope.uuid);
         GlobalVariable.DownloadProgress.Reset();
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
         var userProfile = UserProfileService.getLatest();
@@ -547,7 +547,7 @@ angular
         alert($scope.subMenuProfileGeneral.ImageWaring);
         return;
       }
-      LogService.generateLog("add", "category", $scope.uuid);
+      //LogService.generateLog("add", "category", $scope.uuid);
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
       console.log("new guid:" + $scope.uuid + "displayname:" + $scope.categoryName + "inputLanguage:" + $scope.inputLanguage);
