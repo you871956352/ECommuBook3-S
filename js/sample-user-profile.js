@@ -12396,6 +12396,23 @@ function getSampleMenuProfile() {
         OperationType: "General",
         SubPage: [
           {
+            OperationType: "Homepage",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Startseite" },
+              { "Language": "ru", "Text": "Домашняя страница" },
+              { "Language": "pt", "Text": "Página inicial" },
+              { "Language": "ko", "Text": "홈 페이지" },
+              { "Language": "yue", "Text": "主頁" },
+              { "Language": "en", "Text": "Homepage" },
+              { "Language": "it", "Text": "Homepage" },
+              { "Language": "fr", "Text": "Page d’accueil" },
+              { "Language": "es", "Text": "Página de inicio" },
+              { "Language": "zh-CHT", "Text": "主頁" },
+              { "Language": "ar", "Text": "الصفحة الرئيسية" },
+              { "Language": "zh-CHS", "Text": "主页" },
+              { "Language": "ja", "Text": "ホーム ページ" }]
+          },
+          {
             OperationType: "Download",
             DisplayMultipleLanguage: [
               {"Language":"de","Text":"Download"},
