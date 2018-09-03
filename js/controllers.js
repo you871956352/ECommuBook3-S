@@ -559,9 +559,13 @@ angular
   })
   .controller("SentenceCtrl", function ($scope, LogService, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
     $scope.userProfile = UserProfileService.getLatest();
+    $scope.enableEdit = false;
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
     $scope.inputAdd = "";
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Sentence", $scope.currentDisplayLanguage);
+    $scope.enableEditTog = function () {
+      $scope.enableEdit = !$scope.enableEdit;
+    };
     $scope.onSentenceClick = function (ev, sentence) {
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + sentence.ID + ".mp3");
       var targetScope = $scope.$new();
