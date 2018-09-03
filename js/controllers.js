@@ -2,9 +2,8 @@
 /* global console */
 angular
   .module("starter.controllers", [])
-  .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $ionicModal, $timeout, $localStorage, $http, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService, VoiceModelService, AppearanceService, LogService) {
+  .controller("AppCtrl", function ($rootScope, $scope, $mdDialog, $ionicSideMenuDelegate, $localStorage, $cordovaMedia, $cordovaNetwork, UserProfileService, LocalCacheService, AppearanceService, LogService) {
     $scope.$on("$ionicView.enter", function (e) {
-      $scope.deviceInfomation = GlobalVariable.DeviceInformation;
       $scope.appearanceConfig = AppearanceService.getLatest();
       $scope.itemNormalFontSize = $scope.appearanceConfig.itemNormalFontSize;
       $scope.itemNormalPicSize = $scope.appearanceConfig.itemNormalPicSize;
@@ -12,7 +11,6 @@ angular
       $scope.ImagePath = GlobalVariable.LocalCacheDirectory() + "images/";
       $scope.AudioPath = GlobalVariable.LocalCacheDirectory() + "audio/";
       $scope.userProfile = UserProfileService.getLatest();
-      $scope.voiceModel = VoiceModelService.getLatest($scope.userProfile.ID);
       $scope.menuProfile = UserProfileService.getMenuProfile();
       $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
       $scope.subMenuProfileGeneral = UserProfileService.getMenuProfileSubObjectWithInputLanguage("General", $scope.currentDisplayLanguage);
@@ -23,7 +21,6 @@ angular
       if (typeof $rootScope.testMode == 'undefined') {
         $rootScope.testMode = { checked: false };
       }
-      console.log("Language Selected:" + $scope.currentDisplayLanguage + "/" + $scope.userProfile.SPEECH_LANGUAGE_CODE + "/" + $scope.userProfile.SPEECH_GENDER);
     });
     if (window.localStorage.getItem("loggedIn") != 1) {
       if ($cordovaNetwork.isOffline()) {
@@ -39,8 +36,8 @@ angular
         userProfile.ID = UtilityFunction.guid();
         UserProfileService.saveLocal(userProfile);
         UserProfileService.postToServerCallback(function () {
-          console.log('Init: reset userProfile and uploaded. UserID: ' + userProfile.ID);
           UserProfileService.cloneItem(userProfile.ID, function () {
+            console.log('Init: reset userProfile and uploaded. UserID: ' + userProfile.ID);
             LocalCacheService.prepareCache(UserProfileService.getLatest(),function () {
               $ionicSideMenuDelegate.toggleLeft();
             });
@@ -109,7 +106,6 @@ angular
         var idList = returnObject.idList;
         GlobalCacheVariable.DeleteCheck.Reset();
         GlobalCacheVariable.DeleteCheck.SetFileToDelete(idList.length * 2);
-        console.log("File to delete: " + GlobalCacheVariable.DeleteCheck.FileToDelete + "idList length: " + idList.length);
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate, true);
         $scope.userProfile = newUserProfile;
         UserProfileService.saveLocal($scope.userProfile);
@@ -159,6 +155,7 @@ angular
         UserProfileService.postToServerCallback(function () {
           console.log("Post to Server After Reorder Item Success");
         });
+        $mdDialog.cancel();
       };
       $scope.deleteThisItem = function (categoryID, itemID) {
         var confirmDialog = $mdDialog.confirm()
@@ -366,15 +363,12 @@ angular
     $scope.itemNumber = parseInt(100 / $scope.itemNormalPicWidth);
     $scope.itemNormalPicLength = parseInt($scope.itemNormalPicSize / 10);
     $scope.$on("$ionicView.enter", function() {
-      console.log("Lock toggle.");
       $ionicSideMenuDelegate.canDragContent(false);
     });
     $scope.$on('$ionicView.leave', function() {
-      console.log("Free lock.");
       $ionicSideMenuDelegate.canDragContent(true);
     });
     $scope.onSelectedDisplayLanguageChanged = function () {
-      console.log("display language:" + $scope.selectedDisplayLanguage);
       $scope.speechLanguageListOption = [];
       for (var i = 0; i < $scope.speechLanguageList.length; i++) {
         var speechLanguage = $scope.speechLanguageList[i];
@@ -384,7 +378,6 @@ angular
       }
     };
     $scope.onSelectedSpeechLanguageChanged = function () {
-      console.log("speech language:" + $scope.selectedSpeechLanguage);
       $scope.speechGenderOptions = [];
       for (var i = 0; i < $scope.genderList.length; i++) {
         var gender = $scope.genderList[i];
@@ -393,27 +386,23 @@ angular
         }
       }
     };
-    $scope.onSelectedSpeechGenderChanged = function () {
-      console.log("gender:" + $scope.selectedSpeechGender);
-    };
     $scope.onConfirmLanguageButtonClicked = function () {
       if ($cordovaNetwork.isOffline()) {
         alert($scope.subMenuProfileGeneral.NetworkWarning);
         return;
       }
-      console.log($scope.selectedDisplayLanguage + "/" + $scope.selectedSpeechLanguage + "/" + $scope.selectedSpeechGender);
       if ($scope.selectedDisplayLanguage && $scope.selectedSpeechLanguage && $scope.selectedSpeechGender) {
         LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-        var userProfile = UserProfileService.getLatest();
-        userProfile.DISPLAY_LANGUAGE = $scope.selectedDisplayLanguage;
-        userProfile.SPEECH_LANGUAGE_CODE = $scope.selectedSpeechLanguage;
-        userProfile.SPEECH_GENDER = $scope.selectedSpeechGender;
-        console.log("Language Selected:" + userProfile.DISPLAY_LANGUAGE + "/" + userProfile.SPEECH_LANGUAGE_CODE + "/" + userProfile.SPEECH_GENDER);
-        UserProfileService.saveLocal(userProfile);
-        LocalCacheService.prepareCache(userProfile, true);
+        $scope.userProfile.DISPLAY_LANGUAGE = $scope.selectedDisplayLanguage;
+        $scope.userProfile.SPEECH_LANGUAGE_CODE = $scope.selectedSpeechLanguage;
+        $scope.userProfile.SPEECH_GENDER = $scope.selectedSpeechGender;
+        UserProfileService.saveLocal($scope.userProfile);
+        LocalCacheService.prepareCache($scope.userProfile, true);
         UserProfileService.postToServerCallback(function () {
           console.log("Post to Server when onConfirmLanguageButtonClicked ");
         });
+      } else {
+        alert(subMenuProfileObject.SettingLanguageAlert);
       }
     };
     $scope.onItemNormalFontSizeChanged = function () {
@@ -463,8 +452,7 @@ angular
         var voiceModel = VoiceModelService.getDefault(newID);
         UserProfileService.saveLocal(userProfile);
         VoiceModelService.saveLocal(voiceModel);
-
-        VoiceModelService.postToServerCallback(voiceModel,function () {
+        VoiceModelService.postToServerCallback(voiceModel, function () {
           console.log('Setting: reset voiceModel and uploaded. UserID: ' + userProfile.ID);
           VoiceModelService.getOnline(id);
         });
@@ -474,8 +462,6 @@ angular
             LocalCacheService.prepareCache(UserProfileService.getLatest(), true);
           });
         });
-      }, function () {
-        console.log("User decide to quit reset.");
       });
     }
   })
@@ -546,8 +532,6 @@ angular
       LogService.generateLog("add", "category", $scope.uuid);
       GlobalVariable.DownloadProgress.Reset();
       LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-      console.log("new guid:" + $scope.uuid + "displayname:" + $scope.categoryName + "inputLanguage:" + $scope.inputLanguage);
-
       var newCategory = {};
       newCategory.ID = $scope.uuid;
       newCategory.DisplayName = $scope.categoryName;
@@ -562,7 +546,6 @@ angular
         options.mimeType = "image/jpeg";
         options.httpMethod = "POST";
         options.params = { uuid: newCategory.ID };
-        console.log("Category Option: " + JSON.stringify(options));
         $cordovaFileTransfer.upload(ServerPathVariable.GetPostImagePath(), filePath, options).then(
           function (result) {
             UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
@@ -570,18 +553,12 @@ angular
                 $ionicSideMenuDelegate.toggleLeft();
               });
             });
-          },
-          function (err) { // Error
-            console.log("Image upload Error: " + JSON.stringify(err));
-          },
-          function (progress) { }
-        );
+          });
       });
     };
   })
   .controller("WelcomeCtrl", function ($scope, LogService, UserProfileService) {
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Menu", $scope.currentDisplayLanguage);
     $scope.currentYear = new Date().getFullYear();
   })
@@ -591,7 +568,6 @@ angular
     $scope.inputAdd = "";
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Sentence", $scope.currentDisplayLanguage);
     $scope.onSentenceClick = function (ev, sentence) {
-      console.log("Select Sentence:" + sentence.ID + " " + sentence.DisplayName + " " + sentence.DisplayNameLanguage);
       MediaPlayer.play($cordovaMedia, GlobalVariable.GetLocalAudioDirectory($scope.userProfile) + sentence.ID + ".mp3");
       var targetScope = $scope.$new();
       targetScope.sentenceObject = sentence;
@@ -661,9 +637,8 @@ angular
       var newUserProfile = UserProfileService.addSentence($scope.userProfile, $scope.currentConstructSentence, $scope.currentDisplayLanguage);
       UserProfileService.saveLocal(newUserProfile);
       UserProfileService.postToServerCallback(function () {
-        console.log("Post to Server After Add Sentence");
         UserProfileService.getOnline(UserProfileService.getLatest().ID, function () {
-          console.log("Get sentence detail online");
+          console.log("Upload Sentence Success");
           $scope.userProfile = UserProfileService.getLatest();
           LocalCacheService.prepareCache(UserProfileService.getLatest());
         });
@@ -705,11 +680,9 @@ angular
       $scope.popupLanguageChange = function () {
         $scope.Title = UtilityFunction.getObjectTranslation($scope.sentenceObject, $scope.selectedDisplayLanguage);
         if ($scope.selectedDisplayLanguage == $scope.currentDisplayLanguage) {
-          console.log("Return back to current Display Language...");
           $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectory($scope.userProfile);
         }
         else {
-          console.log("Auto Create Target Language Speaker...");
           $scope.AudioDirectory = GlobalVariable.GetLocalAudioDirectoryByDisplayLanguage($scope.selectedDisplayLanguage);
           $scope.DefaultSpeakerObject = GlobalVariable.GetDefaultSpeakerForDisplayLanguage($scope.selectedDisplayLanguage);
           var targetDirectory = GlobalVariable.LocalCacheDirectory();
@@ -748,74 +721,6 @@ angular
           console.log("Post to Server After Reorder Sentence");
         });
       };
-    };
-  })
-  .controller("SearchCtrl", function ($scope, LogService, $state, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService){
-    $scope.userProfile = UserProfileService.getLatest();
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Search", $scope.currentDisplayLanguage);
-    $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
-    $scope.RecordState = $scope.subMenuProfileGeneral.Start;
-    $scope.isShowResult = false;
-    $scope.isRecorded = false;
-    $scope.resultWords = [];
-    $scope.resultObjects = [];
-    $scope.maxResultWordsDisplay = 10;
-    $scope.CategoryRange = UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "Category");
-    $scope.CategoryName = $scope.CategoryRange[0];
-    if (window.cordova && window.cordova.file && window.audioinput) {
-      console.log("Enable Voice Record Listener...");
-      window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
-      window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
-    }
-    $scope.checkRecord = function () {
-      VoiceRecordService.checkRecord();
-    };
-    $scope.uploadRecord = function () {
-      var searchRangeList;
-      if ($scope.CategoryName == "All") {
-        searchRangeList = { "Type": "All", "SearchRange": UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "All") };
-      }
-      else {
-        var targetObject = UtilityFunction.getObjectByTranslationText($scope.userProfile, $scope.CategoryName, $scope.currentDisplayLanguage);
-        searchRangeList = { "Type": "Item", "SearchRange": UtilityFunction.getWordListByObject(targetObject.object, $scope.currentDisplayLanguage, "Item") };
-      }
-      VoiceRecordService.uploadRecordSearch($scope.userProfile.ID, searchRangeList);
-      $http.get(ServerPathVariable.GetSearchResultPath($scope.userProfile.ID))
-        .then(function (data) {
-          $scope.resultWords = data.data.ResultWordList;
-          $scope.isShowResult = true;
-          for (var i = 0; i < $scope.resultWords.length; i++) {
-            var targetIDObject = UtilityFunction.getObjectByTranslationText($scope.userProfile, $scope.resultWords[i], $scope.currentDisplayLanguage);
-            if (targetIDObject.type != "undefined") {
-              $scope.resultObjects[i] = targetIDObject;
-            }
-            if (targetIDObject.type == "item") {
-              $scope.resultObjects[i].parent = UtilityFunction.findCategoryObjectByItemID($scope.userProfile, targetIDObject.object.ID);
-            }
-          }
-      });
-    };
-    $scope.searchRecording = function (ev) {
-      if ($scope.RecordState == $scope.subMenuProfileGeneral.Start) {
-        $scope.isRecorded = false;
-        $scope.RecordState = $scope.subMenuProfileGeneral.Stop;
-        VoiceRecordService.startCapture();
-      }
-      else if ($scope.RecordState == $scope.subMenuProfileGeneral.Stop) {
-        $scope.RecordState = $scope.subMenuProfileGeneral.Start;
-        VoiceRecordService.stopCapture("searchTemp");
-        $scope.isRecorded = true;
-      }
-    };
-    $scope.resultGuide = function (resultObject) {
-      if (resultObject.type == "item") {
-        GlobalVariable.searchPopup.isSearch = true;
-        GlobalVariable.searchPopup.popupID = resultObject.object.ID;
-      }
-      else if (resultObject.type == "sentence") {
-        GlobalVariable.searchPopup.isSearch = true;
-        GlobalVariable.searchPopup.targetObject = UtilityFunction.getObjectById($scope.userProfile, resultObject.object.ID);
-      }
     };
   })
   .controller("ShareCtrl", function ($scope, LogService, $http, UserProfileService, LocalCacheService, $mdDialog, $ionicSideMenuDelegate, $http) { //Share Ctrl, for user downloading
@@ -881,44 +786,124 @@ angular
       $scope.isBinded = false;
     }
   })
-  .controller("VoiceModelCtrl", function ($scope, LogService, $cordovaFileTransfer,$cordovaMedia,$cordovaNetwork,$http,$state,UserProfileService,VoiceRecordService,VoiceModelService){
-    var id = UserProfileService.getLatest().ID;
-    $scope.voiceModel = VoiceModelService.getLatest(id);
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("VoiceModelInformation", $scope.currentDisplayLanguage);
-    $scope.recordingSentence = UtilityFunction.getFirstUnrecordedSentence($scope.voiceModel);
-    $scope.collectedVoice = UtilityFunction.getRecordedVoiceCount($scope.voiceModel);
-    $scope.totalVoice = $scope.voiceModel.TotalSentence;
-    if($scope.collectedVoice >= $scope.totalVoice){$scope.CollectionStatusText = "Completed";} else {$scope.CollectionStatusText = "UnCompleted";}
-    $scope.ModelStatusText = $scope.voiceModel.ModelStatus;
-    if($scope.CollectionStatusText == "Completed"){$scope.collectionStatus = false;} else {$scope.collectionStatus = true;}
-    if($scope.ModelStatusText == "Completed"){$scope.modelStatus = false;} else {$scope.modelStatus = true;}
-
-    $scope.checkStart = false; $scope.checkStop = true; $scope.checkStatus = true; $scope.checkUpload = true;
-    $scope.gifDisplay = false;
-    $scope.start = function () { VoiceRecordService.startCapture(); $scope.checkStart = true;$scope.checkStop = false;$scope.gifDisplay = true;};
-    $scope.stop = function () {
-      VoiceRecordService.stopCapture(id);
-      $scope.checkStart = false; $scope.checkStop = true; $scope.checkStatus = false; $scope.gifDisplay = false;
-      if($scope.collectionStatus == true){ $scope.checkUpload = false; }
-    };
-    $scope.check = function () { VoiceRecordService.checkRecord(); }
-    $scope.upload = function () {
-      if ($cordovaNetwork.isOffline()) {
-        alert($scope.subMenuProfileGeneral.NetworkWarning);
+  .controller("LoginCtrl", function ($scope, LogService, UserProfileService, $state, $http, $mdDialog, $ionicSideMenuDelegate, LocalCacheService) {
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserLogin", $scope.currentDisplayLanguage);
+    $scope.IsLogin = true;
+    $scope.Username = "";
+    $scope.Password = "";
+    $scope.userLogin = function () {
+      if (UtilityFunction.validateEmail($scope.Username) == false) {
+        alert($scope.subMenuProfileObject.AlertEnterEmail);
         return;
       }
-      VoiceRecordService.uploadRecordVC(id,$scope.recordingSentence.ID,function () {
-        console.log("Upload recording VC to server");
-        var newVoiceModel = VoiceModelService.changeRecordingStatus($scope.voiceModel,$scope.recordingSentence.ID);
-        VoiceModelService.postToServerCallback(newVoiceModel,function () {
-          VoiceModelService.getOnline(id,function () {
-            window.location.reload(true);
+      if ($scope.Password == "") {
+        alert($scope.subMenuProfileObject.AlertEnterPassword);
+        return;
+      }
+      var Indata = { "uuid": $scope.userProfile.ID, "email": $scope.Username, "password": $scope.Password };
+      $http({ url: ServerPathVariable.PostUserLogin(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
+        if (data.data.code == "Success") {
+          var uuid = data.data.message;
+          GlobalVariable.DownloadProgress.Reset();
+          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
+          UserProfileService.getOnline(uuid, function () {
+            LocalCacheService.prepareCache(UserProfileService.getLatest(), function () {
+              $ionicSideMenuDelegate.toggleLeft();
+            });
+            $state.go("app.welcome", {}, { reload: true });
           });
-        });
+        }
+        else if (data.data.code == "Fail" && data.data.message == "Email Address not found") {
+          alert($scope.subMenuProfileObject.AlertEmailNotFound);
+        }
+        else if (data.data.code == "Fail" && data.data.message == "Wrong Password") {
+          alert($scope.subMenuProfileObject.AlertWrongPassword);
+        }
+      }, function (data, status, headers, config) {
+        config.log("Register With Server Error");
       });
+    };
+    $scope.userRegister = function () {
+      if (UtilityFunction.validateEmail($scope.Username) == false) {
+        alert($scope.subMenuProfileObject.AlertEnterEmail);
+        return;
+      }
+      if ($scope.Password == "") {
+        alert($scope.subMenuProfileObject.AlertEnterPassword);
+        return;
+      }
+      var Indata = { "uuid": $scope.userProfile.ID, "email": $scope.Username, "password": $scope.Password };
+      $http({ url: ServerPathVariable.PostUserRegister(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
+        if (data.data.code == "Success") {
+          alert($scope.subMenuProfileObject.RegisterSuccess);
+          $scope.IsLogin = !$scope.IsLogin;
+        }
+        else if (data.data.code == "Fail" && data.data.message == "This Email Address is Used") {
+          alert($scope.subMenuProfileObject.AlertEmailExist);
+        }
+        else if (data.data.code == "Fail" && data.data.message == "This username had already done registration") {
+          alert($scope.subMenuProfileObject.AlertEmailExist);
+        }
+      }, function (data, status, headers, config) {
+        config.log("Register With Server Error");
+      });
+    };
+    $scope.changeState = function () {
+      $scope.IsLogin = !$scope.IsLogin;
+    };
+  })
+  .controller("AboutUsCtrl", function ($scope, LogService, $mdDialog, $http, $cordovaNetwork, UserProfileService) {
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("AboutUs", $scope.currentDisplayLanguage);
+    $scope.textDiscription = UtilityFunction.getAboutUsDiscription($scope.currentDisplayLanguage);
+    $scope.currentYear = new Date().getFullYear();
+    $scope.feedBack = function (ev) {
+      var targetScope = $scope.$new();
+      targetScope.uid = $scope.userProfile.ID;
+      var FeedbackTypeList = GlobalVariable.FeedbackTypeList;
+      var FeedbackTypeTranlationList = [$scope.subMenuProfileObject.GeneralProblem, $scope.subMenuProfileObject.BugReport, $scope.subMenuProfileObject.Suggestion, $scope.subMenuProfileObject.QuestionAboutApp];
+      for (var i = 0; i < FeedbackTypeList.length; i++) {
+        FeedbackTypeList[i].name = FeedbackTypeTranlationList[i];
+      }
+      console.log(FeedbackTypeList);
+      targetScope.feedBackList = FeedbackTypeList;
+      targetScope.FeedbackSuccess = $scope.subMenuProfileObject.FeedbackSuccess;
+      $mdDialog.show({
+        controller: DialogController,
+        templateUrl: "templates/popup-feedBack.html",
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true,
+        scope: targetScope,
+        fullscreen: false
+      });
+    };
+    function DialogController($scope, $mdDialog) {
+      $scope.cancel = function () {
+        $mdDialog.cancel();
+      };
+      $scope.uploadFeedback = function () {
+        if ($cordovaNetwork.isOffline()) {
+          alert($scope.subMenuProfileGeneral.NetworkWarning);
+          return;
+        } else if (typeof $scope.feedBackType == "undefined" || $scope.categoryName == "") {
+          alert($scope.subMenuProfileObject.FeedbackTypeWarning);
+          return;
+        } else if (typeof $scope.feedBackText == "undefined" || $scope.feedBackText == "") {
+          alert($scope.subMenuProfileObject.FeedbackTextWarning);
+          return;
+        }
+        var feedbackData = { "uuid": $scope.uid, "type": $scope.feedBackType, "content": $scope.feedBackText };
+        console.log(feedbackData);
+        $http({ url: ServerPathVariable.PostUserFeedback(), method: "POST", params: feedbackData }).then(function (data, status, headers, config) {
+          $mdDialog.cancel();
+          alert($scope.FeedbackSuccess);
+        }, function (data, status, headers, config) {
+          console.log("Upload Feedback With Server Error");
+        });
+      };
     }
-    window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
-    window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
   })
   .controller("PracticingCtrl", function ($scope, LogService, UserProfileService) {
     $scope.userProfile = UserProfileService.getLatest();
@@ -1094,122 +1079,110 @@ angular
 
     };
   })
-  .controller("LoginCtrl", function ($scope, LogService, UserProfileService, $state, $http, $mdDialog, $ionicSideMenuDelegate, LocalCacheService) {
+  .controller("SearchCtrl", function ($scope, LogService, $state, UserProfileService, $http, $cordovaMedia, $cordovaFileTransfer, VoiceRecordService) {
     $scope.userProfile = UserProfileService.getLatest();
-    $scope.currentDisplayLanguage = $scope.userProfile.DISPLAY_LANGUAGE;
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("UserLogin", $scope.currentDisplayLanguage);
-    $scope.IsLogin = true;
-    $scope.Username = "";
-    $scope.Password = "";
-    $scope.userLogin = function () {
-      if (UtilityFunction.validateEmail($scope.Username) == false) {
-        alert($scope.subMenuProfileObject.AlertEnterEmail);
-        return;
-      }
-      if ($scope.Password == "") {
-        alert($scope.subMenuProfileObject.AlertEnterPassword);
-        return;
-      }
-      var Indata = { "uuid": $scope.userProfile.ID, "email": $scope.Username, "password": $scope.Password };
-      $http({ url: ServerPathVariable.PostUserLogin(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
-        if (data.data.code == "Success") {
-          var uuid = data.data.message;
-          GlobalVariable.DownloadProgress.Reset();
-          LoadingDialog.showLoadingPopup($mdDialog, $ionicSideMenuDelegate);
-          UserProfileService.getOnline(uuid, function () {
-            LocalCacheService.prepareCache(UserProfileService.getLatest(),function () {
-              $ionicSideMenuDelegate.toggleLeft();
-            });
-            $state.go("app.welcome", {}, { reload: true });
-          });
-        }
-        else if (data.data.code == "Fail" && data.data.message == "Email Address not found") {
-          alert($scope.subMenuProfileObject.AlertEmailNotFound);
-        }
-        else if (data.data.code == "Fail" && data.data.message == "Wrong Password") {
-          alert($scope.subMenuProfileObject.AlertWrongPassword);
-        }
-      }, function (data, status, headers, config) {
-        config.log("Register With Server Error");
-      });
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Search", $scope.currentDisplayLanguage);
+    $scope.DisplayLanguageList = GlobalVariable.DisplayLanguageList;
+    $scope.RecordState = $scope.subMenuProfileGeneral.Start;
+    $scope.isShowResult = false;
+    $scope.isRecorded = false;
+    $scope.resultWords = [];
+    $scope.resultObjects = [];
+    $scope.maxResultWordsDisplay = 10;
+    $scope.CategoryRange = UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "Category");
+    $scope.CategoryName = $scope.CategoryRange[0];
+    if (window.cordova && window.cordova.file && window.audioinput) {
+      console.log("Enable Voice Record Listener...");
+      window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
+      window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
+    }
+    $scope.checkRecord = function () {
+      VoiceRecordService.checkRecord();
     };
-    $scope.userRegister = function () {
-      if (UtilityFunction.validateEmail($scope.Username) == false) {
-        alert($scope.subMenuProfileObject.AlertEnterEmail);
-        return;
+    $scope.uploadRecord = function () {
+      var searchRangeList;
+      if ($scope.CategoryName == "All") {
+        searchRangeList = { "Type": "All", "SearchRange": UtilityFunction.getWordListByObject($scope.userProfile, $scope.currentDisplayLanguage, "All") };
       }
-      if ($scope.Password == "") {
-        alert($scope.subMenuProfileObject.AlertEnterPassword);
-        return;
+      else {
+        var targetObject = UtilityFunction.getObjectByTranslationText($scope.userProfile, $scope.CategoryName, $scope.currentDisplayLanguage);
+        searchRangeList = { "Type": "Item", "SearchRange": UtilityFunction.getWordListByObject(targetObject.object, $scope.currentDisplayLanguage, "Item") };
       }
-      var Indata = { "uuid": $scope.userProfile.ID, "email": $scope.Username, "password": $scope.Password };
-      $http({ url: ServerPathVariable.PostUserRegister(), method: "POST", params: Indata }).then(function (data, status, headers, config) {
-        if (data.data.code == "Success") {
-          alert($scope.subMenuProfileObject.RegisterSuccess);
-          $scope.IsLogin = !$scope.IsLogin;
-        }
-        else if (data.data.code == "Fail" && data.data.message == "This Email Address is Used") {
-          alert($scope.subMenuProfileObject.AlertEmailExist);
-        }
-        else if (data.data.code == "Fail" && data.data.message == "This username had already done registration") {
-          alert($scope.subMenuProfileObject.AlertEmailExist);
-        }
-      }, function (data, status, headers, config) {
-        config.log("Register With Server Error");
-      });
+      VoiceRecordService.uploadRecordSearch($scope.userProfile.ID, searchRangeList);
+      $http.get(ServerPathVariable.GetSearchResultPath($scope.userProfile.ID))
+        .then(function (data) {
+          $scope.resultWords = data.data.ResultWordList;
+          $scope.isShowResult = true;
+          for (var i = 0; i < $scope.resultWords.length; i++) {
+            var targetIDObject = UtilityFunction.getObjectByTranslationText($scope.userProfile, $scope.resultWords[i], $scope.currentDisplayLanguage);
+            if (targetIDObject.type != "undefined") {
+              $scope.resultObjects[i] = targetIDObject;
+            }
+            if (targetIDObject.type == "item") {
+              $scope.resultObjects[i].parent = UtilityFunction.findCategoryObjectByItemID($scope.userProfile, targetIDObject.object.ID);
+            }
+          }
+        });
     };
-    $scope.changeState = function () {
-      $scope.IsLogin = !$scope.IsLogin;
+    $scope.searchRecording = function (ev) {
+      if ($scope.RecordState == $scope.subMenuProfileGeneral.Start) {
+        $scope.isRecorded = false;
+        $scope.RecordState = $scope.subMenuProfileGeneral.Stop;
+        VoiceRecordService.startCapture();
+      }
+      else if ($scope.RecordState == $scope.subMenuProfileGeneral.Stop) {
+        $scope.RecordState = $scope.subMenuProfileGeneral.Start;
+        VoiceRecordService.stopCapture("searchTemp");
+        $scope.isRecorded = true;
+      }
+    };
+    $scope.resultGuide = function (resultObject) {
+      if (resultObject.type == "item") {
+        GlobalVariable.searchPopup.isSearch = true;
+        GlobalVariable.searchPopup.popupID = resultObject.object.ID;
+      }
+      else if (resultObject.type == "sentence") {
+        GlobalVariable.searchPopup.isSearch = true;
+        GlobalVariable.searchPopup.targetObject = UtilityFunction.getObjectById($scope.userProfile, resultObject.object.ID);
+      }
     };
   })
-  .controller("AboutUsCtrl", function ($scope, LogService, $mdDialog,$http,$cordovaNetwork,UserProfileService) {
-    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("AboutUs", $scope.currentDisplayLanguage);
-    $scope.textDiscription = UtilityFunction.getAboutUsDiscription($scope.currentDisplayLanguage);
-    $scope.currentYear = new Date().getFullYear();
-    $scope.feedBack = function (ev) {
-      var targetScope = $scope.$new();
-      targetScope.uid = $scope.userProfile.ID;
-      var FeedbackTypeList = GlobalVariable.FeedbackTypeList;
-      var FeedbackTypeTranlationList = [$scope.subMenuProfileObject.GeneralProblem, $scope.subMenuProfileObject.BugReport,$scope.subMenuProfileObject.Suggestion,$scope.subMenuProfileObject.QuestionAboutApp];
-      for(var i = 0;i < FeedbackTypeList.length;i ++){
-        FeedbackTypeList[i].name = FeedbackTypeTranlationList[i];
-      }
-      console.log(FeedbackTypeList);
-      targetScope.feedBackList = FeedbackTypeList ;
-      targetScope.FeedbackSuccess = $scope.subMenuProfileObject.FeedbackSuccess;
-      $mdDialog.show({
-        controller: DialogController,
-        templateUrl: "templates/popup-feedBack.html",
-        parent: angular.element(document.body),
-        targetEvent: ev,
-        clickOutsideToClose: true,
-        scope: targetScope,
-        fullscreen: false
-      });
+  .controller("VoiceModelCtrl", function ($scope, LogService, $cordovaFileTransfer, $cordovaMedia, $cordovaNetwork, $http, $state, UserProfileService, VoiceRecordService, VoiceModelService) {
+    $scope.userProfile = UserProfileService.getLatest();
+    $scope.voiceModel = VoiceModelService.getLatest($scope.userProfile.ID);
+    $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("VoiceModelInformation", $scope.currentDisplayLanguage);
+    $scope.recordingSentence = UtilityFunction.getFirstUnrecordedSentence($scope.voiceModel);
+    $scope.collectedVoice = UtilityFunction.getRecordedVoiceCount($scope.voiceModel);
+    $scope.totalVoice = $scope.voiceModel.TotalSentence;
+    if ($scope.collectedVoice >= $scope.totalVoice) { $scope.CollectionStatusText = "Completed"; } else { $scope.CollectionStatusText = "UnCompleted"; }
+    $scope.ModelStatusText = $scope.voiceModel.ModelStatus;
+    if ($scope.CollectionStatusText == "Completed") { $scope.collectionStatus = false; } else { $scope.collectionStatus = true; }
+    if ($scope.ModelStatusText == "Completed") { $scope.modelStatus = false; } else { $scope.modelStatus = true; }
+
+    $scope.checkStart = false; $scope.checkStop = true; $scope.checkStatus = true; $scope.checkUpload = true;
+    $scope.gifDisplay = false;
+    $scope.start = function () { VoiceRecordService.startCapture(); $scope.checkStart = true; $scope.checkStop = false; $scope.gifDisplay = true; };
+    $scope.stop = function () {
+      VoiceRecordService.stopCapture(id);
+      $scope.checkStart = false; $scope.checkStop = true; $scope.checkStatus = false; $scope.gifDisplay = false;
+      if ($scope.collectionStatus == true) { $scope.checkUpload = false; }
     };
-    function DialogController($scope, $mdDialog) {
-      $scope.cancel = function () {
-        $mdDialog.cancel();
-      };
-      $scope.uploadFeedback = function () {
-        if ($cordovaNetwork.isOffline()) {
-          alert($scope.subMenuProfileGeneral.NetworkWarning);
-          return;
-        } else if (typeof $scope.feedBackType == "undefined" || $scope.categoryName == "") {
-          alert($scope.subMenuProfileObject.FeedbackTypeWarning);
-          return;
-        } else if (typeof $scope.feedBackText == "undefined" || $scope.feedBackText == "") {
-          alert($scope.subMenuProfileObject.FeedbackTextWarning);
-          return;
-        }
-        var feedbackData = { "uuid": $scope.uid, "type": $scope.feedBackType, "content": $scope.feedBackText };
-        console.log(feedbackData);
-        $http({ url: ServerPathVariable.PostUserFeedback(), method: "POST", params: feedbackData }).then(function (data, status, headers, config) {
-          $mdDialog.cancel();
-          alert($scope.FeedbackSuccess);
-        }, function (data, status, headers, config) {
-          console.log("Upload Feedback With Server Error");
+    $scope.check = function () { VoiceRecordService.checkRecord(); }
+    $scope.upload = function () {
+      if ($cordovaNetwork.isOffline()) {
+        alert($scope.subMenuProfileGeneral.NetworkWarning);
+        return;
+      }
+      VoiceRecordService.uploadRecordVC(id, $scope.recordingSentence.ID, function () {
+        console.log("Upload recording VC to server");
+        var newVoiceModel = VoiceModelService.changeRecordingStatus($scope.voiceModel, $scope.recordingSentence.ID);
+        VoiceModelService.postToServerCallback(newVoiceModel, function () {
+          VoiceModelService.getOnline(id, function () {
+            window.location.reload(true);
+          });
         });
-      };
+      });
     }
+    window.addEventListener('audioinput', VoiceRecordService.onAudioInputCapture, false);
+    window.addEventListener('audioinputerror', VoiceRecordService.onAudioInputError, false);
   })

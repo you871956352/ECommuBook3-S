@@ -1,96 +1,94 @@
 <ion-view view-title={{menuProfileTitle.Setting}}>
   <ion-content>
-<div ng-controller="SettingCtrl" class="md-padding" ng-cloak>
-  <div>
-
-	<md-card>
-	    <md-card-title>
-	      <md-card-title-text>
-          <span class="md-headline">{{subMenuProfileObject.LanguageSetting}}</span>
-	      </md-card-title-text>
-	    </md-card-title>
-
-	    <md-card-content>
+    <div ng-controller="SettingCtrl" class="md-padding" ng-cloak>
       <div>
-          <span class="md-title">{{subMenuProfileGeneral.DisplayLanguage}}</span>
-  		    <span>
-  		      <md-input-container>
-  		        <md-select ng-model="selectedDisplayLanguage" ng-change="onSelectedDisplayLanguageChanged()">
-  		            <md-option ng-value="displayLanguage.value" ng-repeat="displayLanguage in displayLanguageList">{{displayLanguage.name}}</md-option>
-  		        </md-select>
-  		      </md-input-container>
-  		    </span>
-      </div>
-      <div>
-        <span class="md-title">{{subMenuProfileGeneral.SpeechLanguage}}</span>
-		    <span>
-		      <md-input-container>
-		        <md-select ng-model="selectedSpeechLanguage" ng-change="onSelectedSpeechLanguageChanged()">
-		            <md-option ng-value="speechLanguage.value" ng-repeat="speechLanguage in speechLanguageListOption">{{speechLanguage.name}}</md-option>
-		        </md-select>
-		      </md-input-container>
-		    </span>
-      </div>
-      <div>
-        <span class="md-title">{{subMenuProfileGeneral.SpeakerGender}}</span>
-		    <span>
-		      <md-input-container>
-		        <md-select ng-model="selectedSpeechGender" ng-change="onSelectedSpeechGenderChanged()">
-		            <md-option ng-value="speechGender.value" ng-repeat="speechGender in speechGenderOptions">{{speechGender.name}}</md-option>
-		        </md-select>
-		      </md-input-container>
-		    </span>
-      </div>
-      <md-button class="md-raised" ng-click=onConfirmLanguageButtonClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
+	    <md-card>
+	      <md-card-title>
+	        <md-card-title-text>
+            <span class="md-headline">{{subMenuProfileObject.LanguageSetting}}</span>
+	        </md-card-title-text>
+	      </md-card-title>
 
-	    </md-card-content>
-	</md-card>
+	      <md-card-content>
+          <div>
+            <span class="md-title">{{subMenuProfileGeneral.DisplayLanguage}}</span>
+  		      <span>
+  		        <md-input-container>
+  		          <md-select ng-model="selectedDisplayLanguage" ng-change="onSelectedDisplayLanguageChanged()">
+  		              <md-option ng-value="displayLanguage.value" ng-repeat="displayLanguage in displayLanguageList">{{displayLanguage.name}}</md-option>
+  		          </md-select>
+  		        </md-input-container>
+  		      </span>
+          </div>
+          <div ng-show ="selectedDisplayLanguage != undefined">
+            <span class="md-title">{{subMenuProfileGeneral.SpeechLanguage}}</span>
+		        <span>
+		          <md-input-container>
+		            <md-select ng-model="selectedSpeechLanguage" ng-change="onSelectedSpeechLanguageChanged()">
+		                <md-option ng-value="speechLanguage.value" ng-repeat="speechLanguage in speechLanguageListOption">{{speechLanguage.name}}</md-option>
+		            </md-select>
+		          </md-input-container>
+		        </span>
+          </div>
+          <div ng-show ="selectedSpeechLanguage != undefined">
+            <span class="md-title">{{subMenuProfileGeneral.SpeakerGender}}</span>
+		        <span>
+		          <md-input-container>
+		            <md-select ng-model="selectedSpeechGender">
+		                <md-option ng-value="speechGender.value" ng-repeat="speechGender in speechGenderOptions">{{speechGender.name}}</md-option>
+		            </md-select>
+		          </md-input-container>
+		        </span>
+          </div>
+          <md-button class="md-raised" ng-click=onConfirmLanguageButtonClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
+	      </md-card-content>
+	    </md-card>
 
-	<md-card>
-	    <md-card-title>
-	      <md-card-title-text>
-          <span class="md-headline">{{subMenuProfileObject.Appearance}}</span>
-	      </md-card-title-text>
-	    </md-card-title>
-      <md-card-content>
-        <span class="md-title">{{subMenuProfileObject.FontSize}}</span>
-        <md-slider md-discrete ng-model="itemNormalFontSize" min="10" max="60" ng-change="onItemNormalFontSizeChanged()"></md-slider>
-        <span class="md-title">{{subMenuProfileObject.PicSize}}</span>
-        <md-slider md-discrete ng-model="itemNormalPicLength" min="10" max="40" ng-change="onItemNormalPicSizeChanged()"></md-slider>
-        <span class="md-title">{{subMenuProfileObject.PicWidth}}</span>
-        <md-slider md-discrete ng-model="itemNormalPicWidth" min="10" max="50" ng-change="onItemNormalPicWidthChanged()"></md-slider>
-        <span class="md-title">{{subMenuProfileObject.PicNumber}} : {{itemNumber}}</span>
-        <md-card>
+	    <md-card>
+	        <md-card-title>
+	          <md-card-title-text>
+              <span class="md-headline">{{subMenuProfileObject.Appearance}}</span>
+	          </md-card-title-text>
+	        </md-card-title>
           <md-card-content>
-            <div style="float:left;width:{{itemNormalPicWidth}}%">
-              <div style="text-align:center;border:1px black dashed; height:{{appearanceConfig.itemNormalPicSize}}px">
-                <img class='itemImage' src='img/sample.png' />
-                <div>
-                  <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">{{subMenuProfileObject.Example}}</span>
+            <span class="md-title">{{subMenuProfileObject.FontSize}}</span>
+            <md-slider md-discrete ng-model="itemNormalFontSize" min="10" max="60" ng-change="onItemNormalFontSizeChanged()"></md-slider>
+            <span class="md-title">{{subMenuProfileObject.PicSize}}</span>
+            <md-slider md-discrete ng-model="itemNormalPicLength" min="10" max="40" ng-change="onItemNormalPicSizeChanged()"></md-slider>
+            <span class="md-title">{{subMenuProfileObject.PicWidth}}</span>
+            <md-slider md-discrete ng-model="itemNormalPicWidth" min="10" max="50" ng-change="onItemNormalPicWidthChanged()"></md-slider>
+            <span class="md-title">{{subMenuProfileObject.PicNumber}} : {{itemNumber}}</span>
+            <md-card>
+              <md-card-content>
+                <div style="float:left;width:{{itemNormalPicWidth}}%">
+                  <div style="text-align:center;border:1px black dashed; height:{{appearanceConfig.itemNormalPicSize}}px">
+                    <img class='itemImage' src='img/sample.png' />
+                    <div>
+                      <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">{{subMenuProfileObject.Example}}</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </md-card-content>
+            </md-card>
+            <md-button class="md-raised" ng-click=onConfirmAppearanceButtonClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
           </md-card-content>
-        </md-card>
-        <md-button class="md-raised" ng-click=onConfirmAppearanceButtonClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
-      </md-card-content>
-	</md-card>
+	    </md-card>
 
-	<md-card>
-	    <md-card-title>
-	      <md-card-title-text>
-          <span class="md-headline">{{subMenuProfileObject.ResetApp}}</span>
-	      </md-card-title-text>
-	    </md-card-title>
+	    <md-card>
+	        <md-card-title>
+	          <md-card-title-text>
+              <span class="md-headline">{{subMenuProfileObject.ResetApp}}</span>
+	          </md-card-title-text>
+	        </md-card-title>
 
-	    <md-card-content>
-        <md-button class="md-raised" ng-click=onConfirmResetUserprofileButtonClicked()>{{subMenuProfileObject.ResetConfirm}}</md-button>
-	    </md-card-content>
-	</md-card>
+	        <md-card-content>
+            <md-button class="md-raised" ng-click=onConfirmResetUserprofileButtonClicked()>{{subMenuProfileObject.ResetConfirm}}</md-button>
+	        </md-card-content>
+	    </md-card>
 
 
-  </div>
-</div>
+      </div>
+    </div>
 
   </ion-content>
 </ion-view>
