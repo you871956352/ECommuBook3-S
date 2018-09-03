@@ -55,6 +55,8 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("CategoryGrid", $scope.currentDisplayLanguage);
     $scope.categoryId = $stateParams.categoryId;
+    $scope.btnFont = parseInt(window.screen.width / 30);
+    console.log("Bottom button font size: "+ $scope.btnFont);
     for (var i = 0; i < $scope.userProfile.Categories.length; i++) {
       if ($scope.userProfile.Categories[i].ID == $stateParams.categoryId) {
         $scope.category = $scope.userProfile.Categories[i];
@@ -559,8 +561,8 @@ angular
   })
   .controller("WelcomeCtrl", function ($scope, LogService, UserProfileService) {
     $scope.userProfile = UserProfileService.getLatest();
+    $scope.footerFont = parseInt(window.screen.width / 40);
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Menu", $scope.currentDisplayLanguage);
-    $scope.currentYear = new Date().getFullYear();
   })
   .controller("SentenceCtrl", function ($scope, LogService, $http, UserProfileService, $mdDialog, $cordovaMedia, $ionicSideMenuDelegate, LocalCacheService) { //For Construct Sentence
     $scope.userProfile = UserProfileService.getLatest();
@@ -857,7 +859,7 @@ angular
   .controller("AboutUsCtrl", function ($scope, LogService, $mdDialog, $http, $cordovaNetwork, UserProfileService) {
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("AboutUs", $scope.currentDisplayLanguage);
     $scope.textDiscription = UtilityFunction.getAboutUsDiscription($scope.currentDisplayLanguage);
-    $scope.currentYear = new Date().getFullYear();
+    $scope.footerFont = parseInt(window.screen.width / 40);
     $scope.feedBack = function (ev) {
       var targetScope = $scope.$new();
       targetScope.uid = $scope.userProfile.ID;

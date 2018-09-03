@@ -1,6 +1,6 @@
 <ion-view cache-view="false" view-title={{menuProfileTitle.Menu}}>
-  <ion-content>
-    <div ng-controller="WelcomeCtrl" class="md-padding" ng-cloak>
+  <div ng-controller="WelcomeCtrl" class="md-padding" ng-cloak>
+    <ion-content>
       <md-card>
         <md-card-title>
           <md-card-title-text>
@@ -102,14 +102,11 @@
           </ion-list>
         </md-card-content>
       </md-card>
-      <div style="text-align: center;">
-        <span style="font-style:italic;color:mediumslateblue;width:100%">
-          Copyright© {{currentYear}}.  The Chinese University of Hong Kong.
-        </span>
-        <span style="font-style:italic;color:mediumslateblue;width:100%">
-          All rights reserved.
-        </span>
+    </ion-content>
+    <ion-footer-bar align-title = "center">
+      <div  class="title" style="font-style:italic;color:mediumslateblue;font-size:{{footerFont}}px;">
+      Copyright© 2018.  The Chinese University of Hong Kong.All rights reserved.
       </div>
-    </div>
-  </ion-content>
+    </ion-footer-bar>
+  </div>
 </ion-view>
