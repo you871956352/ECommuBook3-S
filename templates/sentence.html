@@ -1,15 +1,23 @@
 <ion-view cache-view="false" view-title="{{menuProfileTitle.Sentence}}">
-  <ion-content>
-    <div id="grid-container" class="container-fluid" ng-controller="SentenceCtrl" ng-cloak>
-      <md-card>
+
+  <div id="grid-container" class="container-fluid" ng-controller="SentenceCtrl" ng-cloak>
+    <ion-content>
+      <md-card ng-if="userProfile.Sentences.length != 0">
         <md-card-content ng-repeat="sentence in userProfile.Sentences" ng-click="onSentenceClick($event, sentence)">
           <div ng-repeat="translation in sentence.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
             <span style="line-height:{{itemNormalFontSize}}px;font-size:{{itemNormalFontSize}}px">{{translation.Text}} </span>
           </div>
         </md-card-content>
       </md-card>
+      <md-card ng-if="userProfile.Sentences.length == 0" ng-show="!enableEdit">
+        <md-card-content>
+          <div layout="row" layout-align="center center" style="font-size:{{itemNormalFontSize * 2}}px;line-height: {{itemNormalFontSize * 2}}px;">
+            <md-button class="md-raised btn1" ng-click="enableEditTog()">{{subMenuProfileObject.AddSentence}}</md-button>
+          </div>
+        </md-card-content>
+      </md-card>
 
-      <md-card>
+      <md-card ng-show="enableEdit">
         <md-card-title>
           <span class="md-headline">{{subMenuProfileObject.AddSentence}}</span><span flex></span>
           <md-button class="button button-icon ion-backspace" ng-click=sentenceBackSpace()> </md-button>
@@ -27,7 +35,7 @@
         </md-card-content>
       </md-card>
 
-      <md-card>
+      <md-card ng-show="enableEdit">
         <md-card-title>
           <span>{{subMenuProfileObject.SelectAdd}}</span>
         </md-card-title>
@@ -46,8 +54,12 @@
           </div>
         </md-card-content>
       </md-card>
+    </ion-content>
 
-
-    </div>
-  </ion-content>
+    <ion-footer-bar>
+      <div style="font-size:{{itemNormalFontSize}}px;line-height:{{itemNormalFontSize}}px;">
+        <md-button class="md-raised btn1" ng-click="enableEditTog()">{{subMenuProfileObject.AddSentence}}</md-button>
+      </div>
+    </ion-footer-bar>
+  </div>
 </ion-view>
