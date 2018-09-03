@@ -13638,36 +13638,36 @@ function getSampleMenuProfile() {
           {
             OperationType: "PicSize",
             DisplayMultipleLanguage: [
-              {"Language":"de","Text":"Bild-Länge"},
-              {"Language":"ru","Text":"Длина фотография"},
-              {"Language":"pt","Text":"Imagens de comprimento"},
-              {"Language":"ko","Text":"그림 길이"},
-              {"Language":"yue","Text":"圖長度"},
-              {"Language":"en","Text":"Picture length"},
-              {"Language":"it","Text":"Foto di lunghezza"},
-              {"Language":"fr","Text":"Longueur de la photo"},
-              {"Language":"es","Text":"Longitud de la imagen"},
-              {"Language":"zh-CHT","Text":"圖片長度"},
-              {"Language":"ar","Text":"طول الصورة"},
-              {"Language":"zh-CHS","Text":"图片长度"},
-              {"Language":"ja","Text":"画像の長さ"}]
+              { "Language": "de", "Text": "Bild Rahmenhöhe" },
+              { "Language": "ru", "Text": "Высота границы рисунка" },
+              { "Language": "pt", "Text": "Altura de borda de imagens" },
+              { "Language": "ko", "Text": "그림 테두리 높이" },
+              { "Language": "yue", "Text": "圖邊框高度" },
+              { "Language": "en", "Text": "Picture Border Height" },
+              { "Language": "it", "Text": "Altezza del bordo foto" },
+              { "Language": "fr", "Text": "Hauteur de bordure d’image" },
+              { "Language": "es", "Text": "Altura de borde de imagen" },
+              { "Language": "zh-CHT", "Text": "圖片邊框高度" },
+              { "Language": "ar", "Text": "ارتفاع حدود الصورة" },
+              { "Language": "zh-CHS", "Text": "图片边框高度" },
+              { "Language": "ja", "Text": "画像の境界線の高さ" }]
           },
           {
             OperationType: "PicWidth",
             DisplayMultipleLanguage: [
-              {"Language":"de","Text":"Bildbreite"},
-              {"Language":"ru","Text":"Ширина рисунка"},
-              {"Language":"pt","Text":"Largura da imagem"},
-              {"Language":"ko","Text":"그림 너비"},
-              {"Language":"yue","Text":"圖寬度"},
-              {"Language":"en","Text":"Picture width"},
-              {"Language":"it","Text":"Larghezza dell'immagine"},
-              {"Language":"fr","Text":"Largeur d’image"},
-              {"Language":"es","Text":"Ancho de imagen"},
-              {"Language":"zh-CHT","Text":"圖片寬度"},
-              {"Language":"ar","Text":"عرض الصورة"},
-              {"Language":"zh-CHS","Text":"图片宽度"},
-              {"Language":"ja","Text":"画像の幅"}]
+              { "Language": "de", "Text": "Horizontale Bildbreite" },
+              { "Language": "ru", "Text": "Горизонтальной ширина рисунка" },
+              { "Language": "pt", "Text": "Imagens de largura Horizontal" },
+              { "Language": "ko", "Text": "그림 가로 너비" },
+              { "Language": "yue", "Text": "圖水平寬度" },
+              { "Language": "en", "Text": "Picture Horizontal Width" },
+              { "Language": "it", "Text": "Larghezza orizzontale foto" },
+              { "Language": "fr", "Text": "Largeur d’image horizontale" },
+              { "Language": "es", "Text": "Ancho Horizontal de la imagen" },
+              { "Language": "zh-CHT", "Text": "圖片水準寬度" },
+              { "Language": "ar", "Text": "صورة العرض الأفقية" },
+              { "Language": "zh-CHS", "Text": "图片水平宽度" },
+              { "Language": "ja", "Text": "画像の横幅" }]
           },
           {
             OperationType: "PicNumber",
@@ -13753,6 +13753,23 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "سيتم إعادة تعيين كافة إعدادات شخصية" },
               { Language: "zh-CHS", Text: "将重置所有个人设置" },
               { Language: "ja", Text: "すべての個人設定がリセットされます。" }]
+          },
+          {
+            OperationType: "SettingLanguageAlert",
+            DisplayMultipleLanguage: [
+              { "Language": "de", "Text": "Wählen Sie bitte alle Informationen" },
+              { "Language": "ru", "Text": "Пожалуйста, выберите всю информацию" },
+              { "Language": "pt", "Text": "Por favor, selecione todas as informações" },
+              { "Language": "ko", "Text": "모든 정보를 선택 하십시오" },
+              { "Language": "yue", "Text": "請選擇所有信息" },
+              { "Language": "en", "Text": "Please Select All Information" },
+              { "Language": "it", "Text": "Si prega di selezionare tutte le informazioni" },
+              { "Language": "fr", "Text": "Veuillez sélectionner toutes les informations" },
+              { "Language": "es", "Text": "Por favor, seleccione toda la información" },
+              { "Language": "zh-CHT", "Text": "請選擇所有資訊" },
+              { "Language": "ar", "Text": "الرجاء تحديد كافة المعلومات" },
+              { "Language": "zh-CHS", "Text": "请选择所有信息" },
+              { "Language": "ja", "Text": "すべての情報を選択してください。" }]
           }
         ]
       },
