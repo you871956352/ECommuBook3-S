@@ -15,17 +15,17 @@
         <md-card-content ng-if="category.Items.length == 0">
           <div layout="row" layout-align="center center" style="font-size:{{itemNormalFontSize * 2}}px;line-height: {{itemNormalFontSize * 2}}px;">
             <md-button class="md-raised btn1" ng-click="addItemButtonClick($event)">{{subMenuProfileObject.AddItem}}</md-button>
-          </div>    
+          </div>
         </md-card-content>
       </md-card>
     </ion-content>
 
-    <ion-footer-bar>
-      <md-button class="md-raised btn1" ng-click="reorderAddTopCategory($event, category.ID)">{{subMenuProfileObject.SetTopButton}}</md-button>
-      <md-button class="md-raised btn1" ng-click="addItemButtonClick($event)">{{subMenuProfileObject.AddItem}}</md-button>
-      <md-button class="md-raised btn1" ng-click="shareCategory($event, category.ID)">{{subMenuProfileObject.ShareButton}}</md-button>
-      <span flex></span>
-      <md-button class="md-raised btn1" ng-click="deleteThisCategory($event, category.ID)">{{subMenuProfileObject.DeleteCategory}}</md-button>
+    <ion-footer-bar style="min-height:8%;">
+          <md-button style="min-width:20%;font-size:{{btnFont}}px;" class="md-raised" ng-click="reorderAddTopCategory($event, category.ID)">{{subMenuProfileObject.SetTopButton}}</md-button>
+          <md-button style="min-width:20%;font-size:{{btnFont}}px;" class="md-raised" ng-click="addItemButtonClick($event)">{{subMenuProfileObject.AddItem}}</md-button>
+          <md-button style="min-width:20%;font-size:{{btnFont}}px;" class="md-raised" ng-click="shareCategory($event, category.ID)">{{subMenuProfileObject.ShareButton}}</md-button>
+          <span flex></span>
+          <md-button style="min-width:20%;font-size:{{btnFont}}px;" class="md-raised" ng-click="deleteThisCategory($event, category.ID)">{{subMenuProfileObject.DeleteCategory}}</md-button>
     </ion-footer-bar>
   </div>
 </ion-view>
