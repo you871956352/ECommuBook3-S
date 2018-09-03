@@ -13006,7 +13006,7 @@ function getSampleMenuProfile() {
               { Language: "pt", Text: "Conjunto para Top" },
               { Language: "ko", Text: "상단으로 설정" },
               { Language: "yue", Text: "設置為頂部" },
-              { Language: "en", Text: "Set to Top" },
+              { Language: "en", Text: "Set Top" },
               { Language: "it", Text: "Impostare su Top" },
               { Language: "fr", Text: "La valeur haut" },
               { Language: "es", Text: "Establece en la parte superior" },
