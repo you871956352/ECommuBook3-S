@@ -15,11 +15,11 @@
         <img style="width: 50%" src="{{ImagePath}}/{{selectedCategoryId}}.jpg" />
         <div style="float:right">
           <md-button class="md-raised" ng-click=onAddItemConfirmClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
-        </div>    
+        </div>
         <div layout="row">
           <md-input-container style="width: 40%">
             <label>{{subMenuProfileGeneral.ItemName}}</label>
-            <input type="text" ng-model="itemName" required />
+            <input ng-model="itemName" required />
           </md-input-container>
           <md-input-container style="width: 40%; float:right">
             <label>{{subMenuProfileGeneral.TargetLanguage}}</label>

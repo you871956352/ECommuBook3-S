@@ -58,7 +58,6 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("CategoryGrid", $scope.currentDisplayLanguage);
     $scope.categoryId = $stateParams.categoryId;
-    $scope.showEditCard = false;
     for (var i = 0; i < $scope.userProfile.Categories.length; i++) {
       if ($scope.userProfile.Categories[i].ID == $stateParams.categoryId) {
         $scope.category = $scope.userProfile.Categories[i];
@@ -121,9 +120,6 @@ angular
           LocalCacheService.checkDelete(true);
         });
       });
-    }
-    $scope.enableEditCategoryTog = function () {
-      $scope.showEditCard = !$scope.showEditCard;
     };
     $scope.showEnlargeItemPopup = function (ev, itemId) {
       LogService.generateLog("view", "item", itemId);
