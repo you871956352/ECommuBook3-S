@@ -1,26 +1,31 @@
 <ion-view cache-view="false" view-title="{{categoryDisplayName}}">
   <div id="grid-container" class="container-fluid" ng-controller="CategoryCtrl" ng-cloak>
     <ion-content>
-        <md-card>
-          <md-card-content ng-model="category.Items">
-            <div ng-repeat="item in category.Items" style="float:left;width:{{itemNormalPicWidth}}%">
-              <div ng-click="showEnlargeItemPopup($event, item.ID);" style="text-align:center;border:1px black dashed; height:{{itemNormalPicSize}}px">
-                <img class='itemImage' src='{{ImagePath}}/{{item.ID}}.jpg' />
-                <div ng-repeat="translation in item.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
-                  <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;line-height: {{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">{{translation.Text}}</span>
-                </div>
+      <md-card>
+        <md-card-content ng-model="category.Items" ng-if="category.Items.length != 0">
+          <div ng-repeat="item in category.Items" style="float:left;width:{{itemNormalPicWidth}}%">
+            <div ng-click="showEnlargeItemPopup($event, item.ID);" style="text-align:center;border:1px black dashed; height:{{itemNormalPicSize}}px">
+              <img class='itemImage' src='{{ImagePath}}/{{item.ID}}.jpg' />
+              <div ng-repeat="translation in item.DisplayMultipleLanguage" ng-if="translation.Language == userProfile.DISPLAY_LANGUAGE">
+                <span class='itemNormalText' style="font-size:{{itemNormalFontSize}}px;line-height: {{itemNormalFontSize}}px;" ng-if="isShowDisplayName.checked">{{translation.Text}}</span>
               </div>
             </div>
-          </md-card-content>
-        </md-card>
+          </div>
+        </md-card-content>
+        <md-card-content ng-if="category.Items.length == 0">
+          <div layout="row" layout-align="center center" style="font-size:{{itemNormalFontSize * 2}}px;line-height: {{itemNormalFontSize * 2}}px;">
+            <md-button class="md-raised btn1" ng-click="addItemButtonClick($event)">{{subMenuProfileObject.AddItem}}</md-button>
+          </div>    
+        </md-card-content>
+      </md-card>
     </ion-content>
 
     <ion-footer-bar>
-          <md-button class="md-raised btn1" ng-click="reorderAddTopCategory($event, category.ID)">{{subMenuProfileObject.SetTopButton}}</md-button>
-          <md-button class="md-raised btn1" ng-click="addItemButtonClick($event)">{{subMenuProfileObject.AddItem}}</md-button>
-          <md-button class="md-raised btn1" ng-click="shareCategory($event, category.ID)">{{subMenuProfileObject.ShareButton}}</md-button>
-          <span flex></span>
-          <md-button class="md-raised btn1" ng-click="deleteThisCategory($event, category.ID)">{{subMenuProfileObject.DeleteCategory}}</md-button>
+      <md-button class="md-raised btn1" ng-click="reorderAddTopCategory($event, category.ID)">{{subMenuProfileObject.SetTopButton}}</md-button>
+      <md-button class="md-raised btn1" ng-click="addItemButtonClick($event)">{{subMenuProfileObject.AddItem}}</md-button>
+      <md-button class="md-raised btn1" ng-click="shareCategory($event, category.ID)">{{subMenuProfileObject.ShareButton}}</md-button>
+      <span flex></span>
+      <md-button class="md-raised btn1" ng-click="deleteThisCategory($event, category.ID)">{{subMenuProfileObject.DeleteCategory}}</md-button>
     </ion-footer-bar>
   </div>
 </ion-view>

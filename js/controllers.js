@@ -416,13 +416,6 @@ angular
       $scope.itemNumber = parseInt(100 / $scope.itemNormalPicWidth);
       $scope.appearanceConfig.itemNormalPicWidth = parseInt(100 / $scope.itemNumber);
     };
-    $scope.onConfirmAppearanceButtonClicked = function () {
-      setTimeout(function () {
-        $state.go("app.setting", {}, { reload: true });
-        $ionicSideMenuDelegate.toggleLeft();
-        AppearanceService.saveLocal($scope.appearanceConfig);
-      }, 500);
-    };
     $scope.onConfirmResetUserprofileButtonClicked = function () {
       if ($cordovaNetwork.isOffline()) {
         alert($scope.subMenuProfileGeneral.NetworkWarning);
