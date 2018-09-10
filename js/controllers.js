@@ -562,6 +562,7 @@ angular
     $scope.enableEdit = false;
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
     $scope.inputAdd = "";
+    $scope.btnFont = parseInt(window.screen.width / 30);
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Sentence", $scope.currentDisplayLanguage);
     $scope.enableEditTog = function () {
       $scope.enableEdit = !$scope.enableEdit;
