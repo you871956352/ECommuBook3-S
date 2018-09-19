@@ -13,18 +13,9 @@
     <md-card>
       <md-card-content>
         <div layout="column">
-          <span class="md-title">{{subMenuProfileGeneral.ItemName}}: </span>
-          <div layout = "row" layout-align="start">
-            <md-input-container style="width: 40%">
-              <label>{{subMenuProfileGeneral.ItemNameNotice}}</label>
-              <input ng-model="itemName" required />
-            </md-input-container>
-          </div>
-        </div>
-        <div layout="column">
           <span class="md-title">{{subMenuProfileGeneral.TargetLanguage}}: </span>
           <div layout = "row" layout-align="start">
-            <md-input-container style="width: 40%; float:right">
+            <md-input-container style="min-width: 40%">
               <label>{{subMenuProfileGeneral.TargetLanguageNotice}}</label>
               <md-select ng-model="inputLanguage" required>
                 <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
@@ -32,7 +23,15 @@
             </md-input-container>
           </div>
         </div>
-
+        <div layout="column">
+          <span class="md-title">{{subMenuProfileGeneral.ItemName}}: </span>
+          <div layout = "row" layout-align="start">
+            <md-input-container style="min-width: 40%">
+              <label>{{subMenuProfileGeneral.ItemNameNotice}}</label>
+              <input ng-model="itemName" required />
+            </md-input-container>
+          </div>
+        </div>
         <div layout="column" style="margin-top: 5%;">
           <span class="md-title">{{subMenuProfileObject.ItemImage}}: </span>
           <div layout="row" style="margin-top: 2%;">

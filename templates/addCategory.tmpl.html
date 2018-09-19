@@ -10,22 +10,22 @@
 
           <md-card-content>
             <div layout="column">
-              <span class="md-title">{{subMenuProfileGeneral.CategoryName}}: </span>
-              <div layout = "row" layout-align="start">
-                <md-input-container>
-                  <label>{{subMenuProfileGeneral.CategoryNameNotice}}</label>
-                  <input ng-model="categoryName" required/>
-                </md-input-container>
-              </div>
-            </div>
-            <div layout="column">
               <span class="md-title">{{subMenuProfileGeneral.TargetLanguage}}: </span>
               <div layout = "row" layout-align="start">
-                <md-input-container>
+                <md-input-container style="min-width:40%">
                   <label>{{subMenuProfileGeneral.TargetLanguageNotice}}</label>
                   <md-select ng-model="inputLanguage" required>
                     <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
                   </md-select>
+                </md-input-container>
+              </div>
+            </div>
+            <div layout="column">
+              <span class="md-title">{{subMenuProfileGeneral.CategoryName}}: </span>
+              <div layout = "row" layout-align="start">
+                <md-input-container style="min-width:40%">
+                  <label>{{subMenuProfileGeneral.CategoryNameNotice}}</label>
+                  <input ng-model="categoryName" required/>
                 </md-input-container>
               </div>
             </div>

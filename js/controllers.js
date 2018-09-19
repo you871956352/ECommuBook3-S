@@ -464,7 +464,7 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("AddCategory", $scope.currentDisplayLanguage);
     $scope.uuid = UtilityFunction.guid();
-    $scope.inputLanguage = "";
+    $scope.inputLanguage = $scope.currentDisplayLanguage;
     $scope.selectedImageUrl = "";
     $scope.inputLanguageList = GlobalVariable.DisplayLanguageList;
     $scope.onTakeImageButtonClicked = function (mode) {
@@ -585,6 +585,7 @@ angular
         //Ok: Do nothing
       }, function (targetText) {
         if (targetText != undefined) {
+          $scope.enableEdit = true;
           $scope.currentConstructSentence = targetText;
           GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
         }
