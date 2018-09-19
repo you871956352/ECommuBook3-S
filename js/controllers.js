@@ -671,7 +671,7 @@ angular
       $scope.displayLanguageList = GlobalVariable.DisplayLanguageList;
       $scope.selectedDisplayLanguage = $scope.currentDisplayLanguage;
       $scope.cancel = function () {
-        $mdDialog.cancel("");
+        $mdDialog.cancel();
       };
       $scope.enableEditTog = function () {
         $scope.enableEdit = !$scope.enableEdit;
