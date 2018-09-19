@@ -97,7 +97,7 @@ angular
     $scope.deleteThisCategory = function (event, categoryID) {
       var confirmDialog = $mdDialog.confirm()
         .title($scope.subMenuProfileGeneral.Notification)
-        .textContent($scope.subMenuProfileObject.DeleteWarning1 + "? " + $scope.subMenuProfileObject.DeleteWarning2)
+        .textContent($scope.subMenuProfileObject.DeleteWarning1 + "?")
         .targetEvent(event)
         .ok($scope.subMenuProfileGeneral.ConfirmButton)
         .cancel($scope.subMenuProfileGeneral.CancelButton);
@@ -561,7 +561,7 @@ angular
     $scope.userProfile = UserProfileService.getLatest();
     $scope.enableEdit = false;
     $scope.currentConstructSentence = GlobalVariable.currentConstructSentence;
-    $scope.inputAdd = "";
+    $scope.data = {'inputAdd' : ""};
     $scope.btnFont = parseInt(window.screen.width / 30);
     $scope.subMenuProfileObject = UserProfileService.getMenuProfileSubObjectWithInputLanguage("Sentence", $scope.currentDisplayLanguage);
     $scope.enableEditTog = function () {
@@ -591,7 +591,8 @@ angular
       });
     };
     $scope.sentenceAdd = function () {
-      $scope.currentConstructSentence = $scope.currentConstructSentence + $scope.inputAdd;
+      console.log("Add sentence:" + $scope.currentConstructSentence + $scope.data.inputAdd);
+      $scope.currentConstructSentence = $scope.currentConstructSentence + $scope.data.inputAdd;
       GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
     };
     $scope.sentenceBackSpace = function () {
@@ -622,7 +623,7 @@ angular
         //Ok: Do nothing
       }, function (targetText) {
         if (targetText != undefined) {
-          $scope.currentConstructSentence = $scope.currentConstructSentence + targetText;
+          $scope.currentConstructSentence = $scope.currentConstructSentence + targetText + " ";
           GlobalVariable.currentConstructSentence = $scope.currentConstructSentence;
         }
       });

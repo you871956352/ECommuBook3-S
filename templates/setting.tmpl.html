@@ -10,7 +10,7 @@
 
 	      <md-card-content>
           <div>
-            <span class="md-title">{{subMenuProfileGeneral.DisplayLanguage}}</span>
+            <span class="md-title">{{subMenuProfileGeneral.DisplayLanguage}}: </span>
   		      <span>
   		        <md-input-container>
   		          <md-select ng-model="selectedDisplayLanguage" ng-change="onSelectedDisplayLanguageChanged()">
@@ -20,7 +20,7 @@
   		      </span>
           </div>
           <div ng-show ="selectedDisplayLanguage != undefined">
-            <span class="md-title">{{subMenuProfileGeneral.SpeechLanguage}}</span>
+            <span class="md-title">{{subMenuProfileGeneral.SpeechLanguage}}: </span>
 		        <span>
 		          <md-input-container>
 		            <md-select ng-model="selectedSpeechLanguage" ng-change="onSelectedSpeechLanguageChanged()">
@@ -30,7 +30,7 @@
 		        </span>
           </div>
           <div ng-show ="selectedSpeechLanguage != undefined">
-            <span class="md-title">{{subMenuProfileGeneral.SpeakerGender}}</span>
+            <span class="md-title">{{subMenuProfileGeneral.SpeakerGender}}: </span>
 		        <span>
 		          <md-input-container>
 		            <md-select ng-model="selectedSpeechGender">
@@ -51,15 +51,15 @@
 	      </md-card-title>
         <md-card-content>
           <div class="md-title">
-            <span >{{subMenuProfileObject.FontSize}}</span>
+            <span >{{subMenuProfileObject.FontSize}}: </span>
             <md-slider md-discrete ng-model="itemNormalFontSize" min="10" max="60" ng-change="onItemNormalFontSizeChanged()"></md-slider>
           </div>
           <div class="md-title">
-            <span>{{subMenuProfileObject.PicSize}}</span>
+            <span>{{subMenuProfileObject.PicSize}}: </span>
             <md-slider md-discrete ng-model="itemNormalPicLength" min="10" max="40" ng-change="onItemNormalPicSizeChanged()"></md-slider>
           </div>
           <div class="md-title">
-            <span>{{subMenuProfileObject.PicWidth}}</span>
+            <span>{{subMenuProfileObject.PicWidth}}: </span>
             <md-slider md-discrete ng-model="itemNormalPicWidth" min="10" max="50" ng-change="onItemNormalPicWidthChanged()"></md-slider>
           </div>
           <span class="md-title">{{subMenuProfileObject.PicNumber}} : {{itemNumber}}</span>

@@ -1,6 +1,6 @@
 <ion-view cache-view="false" view-title= {{menuProfileTitle.AddCategory}}>
   <ion-content>
-    <div ng-controller="AddCategoryCtrl" class="md-padding" ng-cloak> <div>
+    <div ng-controller="AddCategoryCtrl" class="md-padding" ng-cloak>
         <md-card>
           <md-card-title>
             <md-card-title-text>
@@ -9,31 +9,43 @@
           </md-card-title>
 
           <md-card-content>
-            <div layout="row">
-              <md-input-container>
-                <label>{{subMenuProfileGeneral.CategoryName}}</label>
-                <input ng-model="categoryName" required/>
-              </md-input-container>
-
-              <md-input-container>
-                <label>{{subMenuProfileGeneral.TargetLanguage}}</label>
-                <md-select ng-model="inputLanguage" required>
-                  <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
-                </md-select>
-              </md-input-container>
+            <div layout="column">
+              <span class="md-title">{{subMenuProfileGeneral.CategoryName}}: </span>
+              <div layout = "row" layout-align="start">
+                <md-input-container>
+                  <label>{{subMenuProfileGeneral.CategoryNameNotice}}</label>
+                  <input ng-model="categoryName" required/>
+                </md-input-container>
+              </div>
             </div>
-            <div layout="row">
-              <md-button class="md-raised" ng-click='onTakeImageButtonClicked("camera")'>{{subMenuProfileGeneral.CameraImage}}</md-button>
-              <md-button class="md-raised" ng-click='onTakeImageButtonClicked("album")'>{{subMenuProfileGeneral.AlbumImage}}</md-button>
+            <div layout="column">
+              <span class="md-title">{{subMenuProfileGeneral.TargetLanguage}}: </span>
+              <div layout = "row" layout-align="start">
+                <md-input-container>
+                  <label>{{subMenuProfileGeneral.TargetLanguageNotice}}</label>
+                  <md-select ng-model="inputLanguage" required>
+                    <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
+                  </md-select>
+                </md-input-container>
+              </div>
             </div>
-            <img class ="addDeleteImagePreview" id='myImage'/>
-            <div layout="row">
-              <md-button class="md-raised" ng-click=onAddCategoryConfirmClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
+            <div layout="column" style="margin-top: 5%;">
+              <span class="md-title">{{subMenuProfileObject.CategoryImage}}: </span>
+              <div layout="row" style="margin-top: 2%;">
+                <div layout="column">
+                  <md-button class="md-raised" ng-click='onTakeImageButtonClicked("camera")'>{{subMenuProfileGeneral.CameraImage}}: </md-button>
+                  <md-button class="md-raised" ng-click='onTakeImageButtonClicked("album")'>{{subMenuProfileGeneral.AlbumImage}}: </md-button>
+                </div>
+                <div layout="column">
+                  <img class ="addDeleteImagePreview" id='myImage'/>
+                </div>
+              </div>
+              <div layout="row" style="margin-top: 10%;">
+                <md-button class="md-raised" ng-click=onAddCategoryConfirmClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
+              </div>
             </div>
           </md-card-content>
         </md-card>
-
-      </div>
     </div>
   </ion-content>
 </ion-view>

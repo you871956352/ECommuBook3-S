@@ -12568,19 +12568,19 @@ function getSampleMenuProfile() {
           {
             OperationType: "GetButton",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Holen Sie sich jetzt" },
-              { Language: "ru", Text: "Получить сейчас" },
-              { Language: "pt", Text: "Obter agora" },
-              { Language: "ko", Text: "지금" },
-              { Language: "yue", Text: "立即獲取" },
-              { Language: "en", Text: "Get Now" },
-              { Language: "it", Text: "Installa adesso" },
-              { Language: "fr", Text: "Téléchargez dès maintenant" },
-              { Language: "es", Text: "¡Ahora" },
-              { Language: "zh-CHT", Text: "立即獲取" },
-              { Language: "ar", Text: "يحصل الآن" },
-              { Language: "zh-CHS", Text: "立即获取" },
-              { Language: "ja", Text: "今すぐ入手します。" }]
+              {"Language":"de","Text":"Erhalten Sie neueste Beiträge"},
+              {"Language":"ru","Text":"Получить последние записи"},
+              {"Language":"pt","Text":"Obter as entradas mais recentes"},
+              {"Language":"ko","Text":"최신 항목"},
+              {"Language":"yue","Text":"獲取最新項目"},
+              {"Language":"en","Text":"Get Latest Entries"},
+              {"Language":"it","Text":"Ottenere le voci più recenti"},
+              {"Language":"fr","Text":"Obtenir les dernières entrées"},
+              {"Language":"es","Text":"Recibir nuevas entradas"},
+              {"Language":"zh-CHT","Text":"獲取最新項目"},
+              {"Language":"ar","Text":"الحصول على أحدث إدخالات"},
+              {"Language":"zh-CHS","Text":"获取最新项目"},
+              {"Language":"ja","Text":"最新のエントリを取得します。"}]
           },
           {
             OperationType: "Notification",
@@ -12617,6 +12617,23 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "カテゴリ名" }]
           },
           {
+            OperationType: "CategoryNameNotice",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Bitte Eingabe Kategorienamen"},
+              {"Language":"ru","Text":"Пожалуйста имя входного категории"},
+              {"Language":"pt","Text":"Por favor o nome da categoria de entrada"},
+              {"Language":"ko","Text":"입력된 범주 이름을 하시기 바랍니다"},
+              {"Language":"yue","Text":"請輸入類別名稱"},
+              {"Language":"en","Text":"Please Input Category Name"},
+              {"Language":"it","Text":"Si prega di nome categoria Input"},
+              {"Language":"fr","Text":"S’il vous plaît le nom de la catégorie d’entrée"},
+              {"Language":"es","Text":"Por favor nombre de la categoría de entrada"},
+              {"Language":"zh-CHT","Text":"請輸入類別名稱"},
+              {"Language":"ar","Text":"الرجاء اسم الفئة الإدخال"},
+              {"Language":"zh-CHS","Text":"请输入类别名称"},
+              {"Language":"ja","Text":"入力カテゴリ名をしてください。"}]
+          },
+          {
             OperationType: "ItemName",
             DisplayMultipleLanguage: [
               { Language: "de", Text: "Elementnamen" },
@@ -12632,6 +12649,23 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "اسم العنصر" },
               { Language: "zh-CHS", Text: "项目名称" },
               { Language: "ja", Text: "アイテム名" }]
+          },
+          {
+            OperationType: "ItemNameNotice",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Bitte Eingabe Artikelbezeichnung"},
+              {"Language":"ru","Text":"Имя входного элемента, пожалуйста"},
+              {"Language":"pt","Text":"Por favor o nome do Item de entrada"},
+              {"Language":"ko","Text":"입력된 항목 이름을 하시기 바랍니다"},
+              {"Language":"yue","Text":"請輸入項目名稱"},
+              {"Language":"en","Text":"Please Input Item Name"},
+              {"Language":"it","Text":"Si prega di nome elemento di Input"},
+              {"Language":"fr","Text":"S’il vous plaît le nom de l’élément d’entrée"},
+              {"Language":"es","Text":"Por favor nombre del elemento de entrada"},
+              {"Language":"zh-CHT","Text":"請輸入專案名稱"},
+              {"Language":"ar","Text":"الرجاء اسم عنصر الإدخال"},
+              {"Language":"zh-CHS","Text":"请输入项目名称"},
+              {"Language":"ja","Text":"入力項目名をしてください。"}]
           },
           {
             OperationType: "TargetName",
@@ -12668,38 +12702,55 @@ function getSampleMenuProfile() {
               { Language: "ja", Text: "ターゲット言語" }]
           },
           {
+            OperationType: "TargetLanguageNotice",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Bitte wählen Sie die Zielsprache"},
+              {"Language":"ru","Text":"Пожалуйста, выберите язык перевода"},
+              {"Language":"pt","Text":"Por favor, selecione o idioma de destino"},
+              {"Language":"ko","Text":"대상 언어를 선택 하십시오"},
+              {"Language":"yue","Text":"請選擇目標語言"},
+              {"Language":"en","Text":"Please Select Target Language"},
+              {"Language":"it","Text":"Si prega di selezionare lingua di destinazione"},
+              {"Language":"fr","Text":"S’il vous plaît sélectionnez langue cible"},
+              {"Language":"es","Text":"Por favor seleccione Idioma"},
+              {"Language":"zh-CHT","Text":"請選擇目的語言"},
+              {"Language":"ar","Text":"الرجاء تحديد اللغة المستهدفة"},
+              {"Language":"zh-CHS","Text":"请选择目标语言"},
+              {"Language":"ja","Text":"ターゲット言語を選択してください。"}]
+          },
+          {
             OperationType: "CameraImage",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Kamerabild" },
-              { Language: "ru", Text: "Изображение с камеры" },
-              { Language: "pt", Text: "Imagem de câmera" },
-              { Language: "ko", Text: "카메라 이미지" },
-              { Language: "yue", Text: "相機圖像" },
-              { Language: "en", Text: "Camera Image" },
-              { Language: "it", Text: "Immagine della telecamera" },
-              { Language: "fr", Text: "Image de la caméra" },
-              { Language: "es", Text: "Imagen de la cámara" },
-              { Language: "zh-CHT", Text: "相機圖像" },
-              { Language: "ar", Text: "صورة الكاميرا" },
-              { Language: "zh-CHS", Text: "相机图像" },
-              { Language: "ja", Text: "カメラ画像" }]
+              {"Language":"de","Text":"von Kamera"},
+              {"Language":"ru","Text":"камеры"},
+              {"Language":"pt","Text":"pela câmera"},
+              {"Language":"ko","Text":"카메라에 의해"},
+              {"Language":"yue","Text":"經相機"},
+              {"Language":"en","Text":"by camera"},
+              {"Language":"it","Text":"da fotocamera"},
+              {"Language":"fr","Text":"par caméra"},
+              {"Language":"es","Text":"por la cámara de"},
+              {"Language":"zh-CHT","Text":"經相機"},
+              {"Language":"ar","Text":"بالكاميرا"},
+              {"Language":"zh-CHS","Text":"经相机"},
+              {"Language":"ja","Text":"カメラで"}]
           },
           {
             OperationType: "AlbumImage",
             DisplayMultipleLanguage: [
-              { Language: "de", Text: "Albumbild" },
-              { Language: "ru", Text: "Обложка альбома" },
-              { Language: "pt", Text: "Imagem do álbum" },
-              { Language: "ko", Text: "앨범 이미지" },
-              { Language: "yue", Text: "相冊圖像" },
-              { Language: "en", Text: "Album Image" },
-              { Language: "it", Text: "Immagine dell'album" },
-              { Language: "fr", Text: "Image de l’album" },
-              { Language: "es", Text: "Imagen álbum" },
-              { Language: "zh-CHT", Text: "相冊圖像" },
-              { Language: "ar", Text: "ألبوم الصور" },
-              { Language: "zh-CHS", Text: "相册图像" },
-              { Language: "ja", Text: "アルバムのイメージ" }]
+              {"Language":"de","Text":"Vom album"},
+              {"Language":"ru","Text":"По альбому"},
+              {"Language":"pt","Text":"Por álbum"},
+              {"Language":"ko","Text":"앨범에 의해"},
+              {"Language":"yue","Text":"經相冊"},
+              {"Language":"en","Text":"By album"},
+              {"Language":"it","Text":"Per album"},
+              {"Language":"fr","Text":"Par album"},
+              {"Language":"es","Text":"Por álbum"},
+              {"Language":"zh-CHT","Text":"經相冊"},
+              {"Language":"ar","Text":"حسب الألبوم"},
+              {"Language":"zh-CHS","Text":"经相册"},
+              {"Language":"ja","Text":"アルバム別"}]
           },
           {
             OperationType: "Start",
@@ -12977,6 +13028,25 @@ function getSampleMenuProfile() {
           { Language: "zh-CHS", Text: "添加类别" },
           { Language: "ja", Text: "カテゴリを追加します。" }
         ],
+        SubPage: [
+          {
+            OperationType: "CategoryImage",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Neue Kategorie Bild"},
+              {"Language":"ru","Text":"Новая категория изображения"},
+              {"Language":"pt","Text":"Nova categoria de imagem"},
+              {"Language":"ko","Text":"새로운 카테고리 이미지"},
+              {"Language":"yue","Text":"新增類別圖像"},
+              {"Language":"en","Text":"New category Image"},
+              {"Language":"it","Text":"Nuova categoria immagine"},
+              {"Language":"fr","Text":"Nouvelle catégorie Image"},
+              {"Language":"es","Text":"Nueva categoría de imagen"},
+              {"Language":"zh-CHT","Text":"新增類別圖像"},
+              {"Language":"ar","Text":"فئة جديدة من الصورة"},
+              {"Language":"zh-CHS","Text":"新增类别图像"},
+              {"Language":"ja","Text":"新しいカテゴリ画像"}]
+          }
+        ]
       },
       {
         OperationType: "CategoryGrid",
@@ -13152,23 +13222,6 @@ function getSampleMenuProfile() {
               { "Language": "ja", "Text": "このカテゴリを削除するよろしい" }]
           },
           {
-            OperationType: "DeleteWarning2",
-            DisplayMultipleLanguage: [
-              { "Language": "de", "Text": "Nach dieser Kategorie gelöscht wird, werden alle Informationen Verlust" },
-              { "Language": "ru", "Text": "После удаления этой категории, вся информация будет потеря" },
-              { "Language": "pt", "Text": "Depois desta categoria é excluída, todas as informações será perda" },
-              { "Language": "ko", "Text": "이 범주를 삭제 한 후 모든 정보는 손실" },
-              { "Language": "yue", "Text": "刪除此類別之後, 所有信息都將賴" },
-              { "Language": "en", "Text": "After this category is deleted, all information will loss" },
-              { "Language": "it", "Text": "Dopo l'eliminazione di questa categoria, tutte le informazioni saranno perdita" },
-              { "Language": "fr", "Text": "Une fois cette catégorie est supprimée, toutes les informations seront perte" },
-              { "Language": "es", "Text": "Después de esta categoría es eliminada, toda la información será pérdida" },
-              { "Language": "zh-CHT", "Text": "刪除此類別後, 所有資訊都將丟失" },
-              { "Language": "ar", "Text": "بعد أن يتم حذف هذه الفئة، جميع المعلومات سيتم فقدان" },
-              { "Language": "zh-CHS", "Text": "删除此类别后, 所有信息都将丢失" },
-              { "Language": "ja", "Text": "このカテゴリを削除すると、すべての情報が損失" }]
-          },
-          {
             OperationType: "DeleteItem",
             DisplayMultipleLanguage: [
               { "Language": "de", "Text": "Element löschen" },
@@ -13235,6 +13288,23 @@ function getSampleMenuProfile() {
               { Language: "ar", Text: "إضافة عنصر" },
               { Language: "zh-CHS", Text: "添加项目" },
               { Language: "ja", Text: "項目を追加します。" }]
+          },
+          {
+            OperationType: "ItemImage",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Neue Artikelbild"},
+              {"Language":"ru","Text":"Новый элемент изображения"},
+              {"Language":"pt","Text":"Nova imagem do Item"},
+              {"Language":"ko","Text":"새 항목 이미지"},
+              {"Language":"yue","Text":"新增項目圖像"},
+              {"Language":"en","Text":"New Item Image"},
+              {"Language":"it","Text":"Nuovo elemento immagine"},
+              {"Language":"fr","Text":"Nouvelle Image de l’élément"},
+              {"Language":"es","Text":"Nueva imagen de artículo"},
+              {"Language":"zh-CHT","Text":"新增專案圖像"},
+              {"Language":"ar","Text":"صورة عنصر جديد"},
+              {"Language":"zh-CHS","Text":"新增项目图像"},
+              {"Language":"ja","Text":"新しいアイテム画像"}]
           },
           {
             OperationType: "EditWarning",
@@ -13356,6 +13426,23 @@ function getSampleMenuProfile() {
               { "Language": "ar", "Text": "المحتوى على الإنترنت" },
               { "Language": "zh-CHS", "Text": "在线内容" },
               { "Language": "ja", "Text": "オンライン コンテンツ" }]
+          },
+          {
+            OperationType: "DownloadEntry",
+            DisplayMultipleLanguage: [
+              {"Language":"de","Text":"Diesen Artikel herunterladen"},
+              {"Language":"ru","Text":"Скачать этот пункт"},
+              {"Language":"pt","Text":"Baixar este item"},
+              {"Language":"ko","Text":"이 항목을 다운로드"},
+              {"Language":"yue","Text":"下載此項目"},
+              {"Language":"en","Text":"Download this item"},
+              {"Language":"it","Text":"Scarica questo elemento"},
+              {"Language":"fr","Text":"Télécharger cet article"},
+              {"Language":"es","Text":"Descargar este artículo"},
+              {"Language":"zh-CHT","Text":"下載此專案"},
+              {"Language":"ar","Text":"تنزيل هذا العنصر"},
+              {"Language":"zh-CHS","Text":"下载此项目"},
+              {"Language":"ja","Text":"このアイテムをダウンロードします。"}]
           },
           {
             OperationType: "WordItems",
@@ -13744,7 +13831,7 @@ function getSampleMenuProfile() {
               { Language: "ru", Text: "Подтвердить сброс" },
               { Language: "pt", Text: "Confirme o Reset" },
               { Language: "ko", Text: "리셋 확인" },
-              { Language: "yue", Text: "確認復位" },
+              { Language: "yue", Text: "確認重設" },
               { Language: "en", Text: "Confirm Reset" },
               { Language: "it", Text: "Confermare il Reset" },
               { Language: "fr", Text: "Confirmez la réinitialisation" },
@@ -14296,7 +14383,7 @@ function getSampleMenuProfile() {
               { "Language": "ru", "Text": "Загрузка данных, пожалуйста, подождите" },
               { "Language": "pt", "Text": "Carregando dados, aguarde" },
               { "Language": "ko", "Text": "데이터 로드, 기다려 주세요" },
-              { "Language": "yue", "Text": "加载緊數據, 請稍候" },
+              { "Language": "yue", "Text": "數據加載中, 請稍候" },
               { "Language": "en", "Text": "Loading Data, Please Wait" },
               { "Language": "it", "Text": "Caricamento dati, attendere prego" },
               { "Language": "fr", "Text": "Chargement des données, veuillez patienter" },

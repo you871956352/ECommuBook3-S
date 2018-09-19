@@ -12,29 +12,42 @@
   <md-dialog-content>
     <md-card>
       <md-card-content>
-        <img style="width: 50%" src="{{ImagePath}}/{{selectedCategoryId}}.jpg" />
-        <div style="float:right">
-          <md-button class="md-raised" ng-click=onAddItemConfirmClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
+        <div layout="column">
+          <span class="md-title">{{subMenuProfileGeneral.ItemName}}: </span>
+          <div layout = "row" layout-align="start">
+            <md-input-container style="width: 40%">
+              <label>{{subMenuProfileGeneral.ItemNameNotice}}</label>
+              <input ng-model="itemName" required />
+            </md-input-container>
+          </div>
         </div>
-        <div layout="row">
-          <md-input-container style="width: 40%">
-            <label>{{subMenuProfileGeneral.ItemName}}</label>
-            <input ng-model="itemName" required />
-          </md-input-container>
-          <md-input-container style="width: 40%; float:right">
-            <label>{{subMenuProfileGeneral.TargetLanguage}}</label>
-            <md-select ng-model="inputLanguage" required>
-              <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
-            </md-select>
-          </md-input-container>
+        <div layout="column">
+          <span class="md-title">{{subMenuProfileGeneral.TargetLanguage}}: </span>
+          <div layout = "row" layout-align="start">
+            <md-input-container style="width: 40%; float:right">
+              <label>{{subMenuProfileGeneral.TargetLanguageNotice}}</label>
+              <md-select ng-model="inputLanguage" required>
+                <md-option ng-value="inputLanguage.value" ng-repeat="inputLanguage in inputLanguageList">{{inputLanguage.name}}</md-option>
+              </md-select>
+            </md-input-container>
+          </div>
         </div>
-      </md-card-content>
-      <md-card-content>
-        <div layout="row">
-          <md-button class="md-raised" ng-click='onTakeImageButtonClicked("camera")'>{{subMenuProfileGeneral.CameraImage}}</md-button>
-          <md-button class="md-raised" ng-click='onTakeImageButtonClicked("album")'>{{subMenuProfileGeneral.AlbumImage}}</md-button>
+
+        <div layout="column" style="margin-top: 5%;">
+          <span class="md-title">{{subMenuProfileObject.ItemImage}}: </span>
+          <div layout="row" style="margin-top: 2%;">
+            <div layout="column">
+              <md-button class="md-raised" ng-click='onTakeImageButtonClicked("camera")'>{{subMenuProfileGeneral.CameraImage}}: </md-button>
+              <md-button class="md-raised" ng-click='onTakeImageButtonClicked("album")'>{{subMenuProfileGeneral.AlbumImage}}: </md-button>
+            </div>
+            <div layout="column">
+              <img style="width: 50%" id='myImage' />
+            </div>
+          </div>
+          <div layout="row" style="margin-top: 10%;">
+            <md-button class="md-raised" ng-click=onAddItemConfirmClicked()>{{subMenuProfileGeneral.ConfirmButton}}</md-button>
+          </div>
         </div>
-        <img style="width: 50%" id='myImage' />
       </md-card-content>
     </md-card>
   </md-dialog-content>
