@@ -18,7 +18,6 @@ angular
     "ngStorage",
     "starter.controllers",
     "starter.services",
-    "as.sortable",
     "ngMaterial",
     "ngDialog"
   ])
