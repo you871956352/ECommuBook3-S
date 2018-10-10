@@ -28,16 +28,20 @@ myModule.factory("UserProfileService", function($http, $localStorage, LocalCache
     },
     cloneItem: function(userUuid, completeCallback) { //for reset initial state
       $http.get(ServerPathVariable.GetUserProfileCloneItemPath(userUuid)).then(function(data) {
+        console.log("Clone success:" + JSON.stringify(data));
         $localStorage.userProfile = data.data;
         if (typeof completeCallback == "function") {
           completeCallback();
         }
+      }).catch(function(error) {
+        console.log("Error status: " + error.status);
+        console.log("Error: " + error.error);
       });
     },
     postToServerCallback: function(successCallback) {
       $http.post(ServerPathVariable.PostUserProfilePath(), this.getLatest())
         .success(function (data, status, headers, config) { // called asynchronously if an error occurs or server returns response with an error status.
-          console.log("post userprofile success:" + JSON.stringify(data));
+          console.log("Post userprofile success:" + JSON.stringify(data));
           if (typeof successCallback == "function") {
             successCallback();
           }

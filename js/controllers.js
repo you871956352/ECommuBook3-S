@@ -36,8 +36,8 @@ angular
         userProfile.ID = UtilityFunction.guid();
         UserProfileService.saveLocal(userProfile);
         UserProfileService.postToServerCallback(function () {
+          console.log('Init: reset userProfile and uploaded. UserID: ' + userProfile.ID);
           UserProfileService.cloneItem(userProfile.ID, function () {
-            console.log('Init: reset userProfile and uploaded. UserID: ' + userProfile.ID);
             LocalCacheService.prepareCache(UserProfileService.getLatest(),function () {
               $ionicSideMenuDelegate.toggleLeft();
             });

@@ -43,7 +43,7 @@ var ServerPathVariable = new function () { //User to store server return path
     return (this.hostname + this.path + "log/uploadLog");
   };
   this.GetUserProfileCloneItemPath = function (userUuid) {
-    return (this.hostname + this.path + "userProfile/" + userUuid + '/' + '/cloneItem');
+    return (this.hostname + this.path + "userProfile/" + userUuid + "/cloneItem");
   };
   this.GetUserProfilePath = function (userUuid) {
     return (this.hostname + this.path + "userProfile/" + userUuid);
